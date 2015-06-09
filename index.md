@@ -1,4 +1,4 @@
-![ConnectBook Logo](assets/ConnectBook.png)
+<center>![ConnectBook Logo](assets/ConnectBook.png)</center>
 
 # Getting Started
 
@@ -59,32 +59,32 @@
 * [Prior topics][obsolete]
 
 
-[blast]: tutorials/tutorial-blast
-[cp2k]: tutorials/tutorial-cp2k
-[dagman-namd]: tutorials/tutorial-dagman-namd
-[error101]: tutorials/tutorial-error101
-[exitcode]: tutorials/tutorial-exitcode
-[htcondor-transfer]: tutorials/tutorial-htcondor-transfer
-[namd]: tutorials/tutorial-namd
-[nelle-nemo]: tutorials/tutorial-nelle-nemo
-[oasis-parrot]: tutorials/tutorial-oasis-parrot
-[octave]: tutorials/tutorial-octave
-[pegasus]: tutorials/tutorial-pegasus
-[pegasus-namd]: tutorials/tutorial-pegasus-namd
-[pegasus-vina]: tutorials/tutorial-pegasus-vina
-[photodemo]: tutorials/tutorial-photodemo
-[quickstart]: tutorials/tutorial-quickstart
-[R]: tutorials/tutorial-R
-[root]: tutorials/tutorial-root
-[scaling]: tutorials/tutorial-scaling
-[scaling-up-resources]: tutorials/tutorial-scaling-up-resources
-[ScalingUp-R]: tutorials/tutorial-ScalingUp-R
-[software]: tutorials/tutorial-software
-[stash-chirp]: tutorials/tutorial-stash-chirp
-[stash-http]: tutorials/tutorial-stash-http
-[stash-namd]: tutorials/tutorial-stash-namd
-[swift]: tutorials/tutorial-swift
-[vina-autodock]: tutorials/tutorial-VinaAutodock
+[blast]: tutorials/tutorial-blast/README.md
+[cp2k]: tutorials/tutorial-cp2k/README.md
+[dagman-namd]: tutorials/tutorial-dagman-namd/README.md
+[error101]: tutorials/tutorial-error101/README.md
+[exitcode]: tutorials/tutorial-exitcode/README.md
+[htcondor-transfer]: tutorials/tutorial-htcondor-transfer/README.md
+[namd]: tutorials/tutorial-namd/README.md
+[nelle-nemo]: tutorials/tutorial-nelle-nemo/README.md
+[oasis-parrot]: tutorials/tutorial-oasis-parrot/README.md
+[octave]: tutorials/tutorial-octave/README.md
+[pegasus]: tutorials/tutorial-pegasus/README.md
+[pegasus-namd]: tutorials/tutorial-pegasus-namd/README.md
+[pegasus-vina]: tutorials/tutorial-pegasus-vina/README.md
+[photodemo]: tutorials/tutorial-photodemo/README.md
+[quickstart]: tutorials/tutorial-quickstart/README.md
+[R]: tutorials/tutorial-R/README.md
+[root]: tutorials/tutorial-root/README.md
+[scaling]: tutorials/tutorial-scaling/README.md
+[scaling-up-resources]: tutorials/tutorial-scaling-up-resources/README.md
+[ScalingUp-R]: tutorials/tutorial-ScalingUp-R/README.md
+[software]: tutorials/tutorial-software/README.md
+[stash-chirp]: tutorials/tutorial-stash-chirp/README.md
+[stash-http]: tutorials/tutorial-stash-http/README.md
+[stash-namd]: tutorials/tutorial-stash-namd/README.md
+[swift]: tutorials/tutorial-swift/README.md
+[vina-autodock]: tutorials/tutorial-VinaAutodock/README.md
 
 [DAGMan]: needed
 [Pegasus]: needed
