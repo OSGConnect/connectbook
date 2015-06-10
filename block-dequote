@@ -1,0 +1,25 @@
+#!/bin/sh
+#
+# Transforms github-style block quotes into plain Markdown block quotes.
+#
+
+dequote () {
+	awk '
+		BEGIN { block = 0; }
+		block && /^```/ { block = 0; next; }
+		!block && /^```/ { block = 1; next; }
+		block { print "\t" $0; next; }
+		{ print; }
+	' "$1" >tmp &&
+	mv -f tmp "$1"
+}
+
+if [ $# -eq 0 ]; then
+	while read file; do
+		dequote "$file"
+	done
+else
+	for file in "$@"; do
+		dequote "$file"
+	done
+fi
