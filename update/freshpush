@@ -48,6 +48,8 @@ class main(object):
 			'solution_article': {
 				'title': title,
 				'description': html,
+				'art_type': 1,
+				'status': 2,
 			},
 			'tags': {},
 		}
