@@ -6,92 +6,121 @@ import sys
 import markdown
 import requests
 import re
-
-# freshdesk api key is read from a file that is not git-controlled
-apifp = open(os.path.join(os.path.dirname(sys.argv[0]), 'apikey.txt'), 'r')
-apikey = apifp.read().strip()
-apifp.close()
-
+import ConfigParser
 
 def tohtml(md):
 	return markdown.markdown(md.decode('utf-8'))
 
 
-def send(title, html, uri=None, endpoint=None, category=None, folder=None, article=None):
-	if not uri:
-		if not endpoint:
-			raise ValueError, 'uri or endpoint is required'
+class main(object):
 
-		if category and folder and article:
-			# update existing
-			path = ['solution', 'categories', category,
-			        'folders', folder, 'articles', article]
+	def send(self, title, html, uri=None, endpoint=None, category=None, folder=None, article=None):
+		if not uri:
+			if not endpoint:
+				raise ValueError, 'uri or endpoint is required'
 
-		elif category and folder:
-			# update existing
-			path = ['solution', 'categories', category,
-			        'folders', folder, 'articles']
+			if category and folder and article:
+				# update existing
+				path = ['solution', 'categories', category,
+				        'folders', folder, 'articles', article]
 
-		else:
-			raise ValueError, 'at least category and folder are required'
+			elif category and folder:
+				# update existing
+				path = ['solution', 'categories', category,
+				        'folders', folder, 'articles']
 
-		uri = endpoint + '/'.join([str(x) for x in path])
+			else:
+				raise ValueError, 'at least category and folder are required'
 
-	if not uri.endswith('.json'):
-		uri += '.json'
+			uri = endpoint + '/'.join([str(x) for x in path])
 
-	headers = {
-		'Content-type': 'application/json',
-	}
+		if not uri.endswith('.json'):
+			uri += '.json'
 
-	data = {
-		'solution_article': {
-			'title': title,
-			'description': html,
-		},
-		'tags': {},
-	}
+		headers = {
+			'Content-type': 'application/json',
+		}
 
-	sys.stdout.write('Sending %s...' % title)
-	r = requests.put(uri,
-	                 data=json.dumps(data),
-	                 auth=requests.auth.HTTPBasicAuth(apikey, ''),
-	                 headers=headers)
-	sys.stdout.write('%d\n' % r.status_code)
+		data = {
+			'solution_article': {
+				'title': title,
+				'description': html,
+			},
+			'tags': {},
+		}
+
+		sys.stdout.write('Sending %s...' % title)
+		r = requests.put(uri,
+		                 data=json.dumps(data),
+		                 auth=requests.auth.HTTPBasicAuth(self.apikey, ''),
+		                 headers=headers)
+		sys.stdout.write('%d\n' % r.status_code)
 
 
-def readmap(file):
-	mappings = []
-	fp = open(file, 'r')
-	for line in fp:
-		match, mapto = line.strip().split()
-		mappings.append([re.compile(match, re.I), mapto])
-	fp.close()
-	return mappings
-
-def mapfilename(file):
-	mapfile = os.path.join(os.path.dirname(sys.argv[0]), 'articles.map')
-	mappings = readmap(mapfile)
-	for r, mapto in mappings:
-		m = r.match(file)
-		if m:
-			return m.expand(mapto)
-	return None
-
-def main(args):
-	for file in args:
-		uri = mapfilename(file)
-		if uri is None:
-			print 'no uri mapped for %s' % file
-			continue
+	def readmap(file):
+		mappings = []
 		fp = open(file, 'r')
-		data = fp.read()
+		for line in fp:
+			match, mapto = line.strip().split()
+			mappings.append([re.compile(match, re.I), mapto])
 		fp.close()
-		headlines = filter(lambda line: line.startswith('#'), data.split('\n'))
-		title = headlines[0].strip('#').strip()
+		return mappings
 
-		send(title, tohtml(data), uri)
+	def mapfilename(file):
+		mapfile = os.path.join(os.path.dirname(sys.argv[0]), 'articles.map')
+		mappings = readmap(mapfile)
+		for r, mapto in mappings:
+			m = r.match(file)
+			if m:
+				return m.expand(mapto)
+		return None
+
+	def __call__(self, args):
+		os.chdir(os.path.dirname(sys.argv[0]))
+		cfg = ConfigParser.RawConfigParser()
+		cfg.read(os.path.basename(sys.argv[0]) + '.ini')
+		if cfg.has_section('include'):
+			for option, value in cfg.items('include'):
+				cfg.read(value) or cfg.read(option)
+
+		self.apikey = cfg.get('api', 'apikey')
+
+		mapping = []
+		for option, value in cfg.items('filemap'):
+			mapping.append([re.compile(option, re.I), value])
+
+		def mapfile(f):
+			for r, value in mapping:
+				if r.search(f):
+					return value
+			return None
+
+		for file in args:
+			path = mapfile(file)
+			if path is None:
+				print 'no mapping for', file
+				continue
+
+			category, folder, article = path.split('/')
+			if cfg.has_option('categories', category):
+				category = cfg.get('categories', category)
+			if cfg.has_option('folders', folder):
+				folder = cfg.get('folders', folder)
+			if cfg.has_option('articles', article):
+				folder = cfg.get('articles', article)
+
+			uri = cfg.get('api', 'uri') % locals()
+			if uri is None:
+				print 'no uri mapped for %s' % file
+				continue
+			fp = open(file, 'r')
+			data = fp.read()
+			fp.close()
+			headlines = filter(lambda line: line.startswith('#'), data.split('\n'))
+			title = headlines[0].strip('#').strip()
+
+			self.send(title, tohtml(data), uri)
 
 
 if __name__ == '__main__':
-	sys.exit(main(sys.argv[1:]))
+	sys.exit(main()(sys.argv[1:]))
