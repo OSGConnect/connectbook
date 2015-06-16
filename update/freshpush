@@ -9,7 +9,10 @@ import re
 import ConfigParser
 
 def tohtml(md):
-	return markdown.markdown(md.decode('utf-8'))
+	html = markdown.markdown(md.decode('utf-8'))
+	if html == '':
+		html = '<p/>'
+	return html
 
 
 class main(object):
@@ -55,6 +58,8 @@ class main(object):
 		                 auth=requests.auth.HTTPBasicAuth(self.apikey, ''),
 		                 headers=headers)
 		sys.stdout.write('%d\n' % r.status_code)
+		#if r.status_code != 200:
+		#	sys.stdout.write(str(r.headers))
 
 
 	def readmap(file):
@@ -116,7 +121,10 @@ class main(object):
 			data = fp.read()
 			fp.close()
 			headlines = filter(lambda line: line.startswith('#'), data.split('\n'))
-			title = headlines[0].strip('#').strip()
+			if headlines:
+				title = headlines[0].strip('#').strip()
+			else:
+				title = os.path.basename(file).replace('.md', '').replace('-', ' ')
 
 			self.send(title, tohtml(data), uri)
 
