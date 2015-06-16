@@ -1,4 +1,7 @@
-# Background
+# Start a Project with OSG Connect
+
+Background
+----------
 
 Projects in OSG are the means by which work by individual research groups is
 organized, resources granted access, and usage accounted for.  We use OSG
@@ -7,10 +10,11 @@ and provide accounting.   Below is the process by which **principal
 investigators or their delegates** create and manage projects within OSG
 Connect.
 
-# Contact
+Contact
+-------
 
 To start a project in OSG Connect, visit <https://osgconnect.net/newproject>.
-You will be asked to provide the following information:
+ You will be asked to provide the following information:
 
 -   Your name
 
