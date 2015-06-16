@@ -76,9 +76,8 @@ class main(object):
 		return None
 
 	def __call__(self, args):
-		os.chdir(os.path.dirname(sys.argv[0]))
 		cfg = ConfigParser.RawConfigParser()
-		cfg.read(os.path.basename(sys.argv[0]) + '.ini')
+		cfg.read(sys.argv[0] + '.ini')
 		if cfg.has_section('include'):
 			for option, value in cfg.items('include'):
 				cfg.read(value) or cfg.read(option)
