@@ -1,0 +1,97 @@
+#!/usr/bin/env python
+
+import json
+import os
+import sys
+import markdown
+import requests
+import re
+
+# freshdesk api key is read from a file that is not git-controlled
+apifp = open(os.path.join(os.path.dirname(sys.argv[0]), 'apikey.txt'), 'r')
+apikey = apifp.read().strip()
+apifp.close()
+
+
+def tohtml(md):
+	return markdown.markdown(md.decode('utf-8'))
+
+
+def send(title, html, uri=None, endpoint=None, category=None, folder=None, article=None):
+	if not uri:
+		if not endpoint:
+			raise ValueError, 'uri or endpoint is required'
+
+		if category and folder and article:
+			# update existing
+			path = ['solution', 'categories', category,
+			        'folders', folder, 'articles', article]
+
+		elif category and folder:
+			# update existing
+			path = ['solution', 'categories', category,
+			        'folders', folder, 'articles']
+
+		else:
+			raise ValueError, 'at least category and folder are required'
+
+		uri = endpoint + '/'.join([str(x) for x in path])
+
+	if not uri.endswith('.json'):
+		uri += '.json'
+
+	headers = {
+		'Content-type': 'application/json',
+	}
+
+	data = {
+		'solution_article': {
+			'title': title,
+			'description': html,
+		},
+		'tags': {},
+	}
+
+	sys.stdout.write('Sending %s...' % title)
+	r = requests.put(uri,
+	                 data=json.dumps(data),
+	                 auth=requests.auth.HTTPBasicAuth(apikey, ''),
+	                 headers=headers)
+	sys.stdout.write('%d\n' % r.status_code)
+
+
+def readmap(file):
+	mappings = []
+	fp = open(file, 'r')
+	for line in fp:
+		match, mapto = line.strip().split()
+		mappings.append([re.compile(match, re.I), mapto])
+	fp.close()
+	return mappings
+
+def mapfilename(file):
+	mapfile = os.path.join(os.path.dirname(sys.argv[0]), 'articles.map')
+	mappings = readmap(mapfile)
+	for r, mapto in mappings:
+		m = r.match(file)
+		if m:
+			return m.expand(mapto)
+	return None
+
+def main(args):
+	for file in args:
+		uri = mapfilename(file)
+		if uri is None:
+			print 'no uri mapped for %s' % file
+			continue
+		fp = open(file, 'r')
+		data = fp.read()
+		fp.close()
+		headlines = filter(lambda line: line.startswith('#'), data.split('\n'))
+		title = headlines[0].strip('#').strip()
+
+		send(title, tohtml(data), uri)
+
+
+if __name__ == '__main__':
+	sys.exit(main(sys.argv[1:]))
