@@ -105,7 +105,13 @@ class main(object):
 				print 'no mapping for', file
 				continue
 
-			category, folder, article = path.split('/')
+			try:
+				category, folder, article = path.split('/')
+			except ValueError:
+				category = 0
+				folder = 0
+				article = path
+
 			if cfg.has_option('categories', category):
 				category = cfg.get('categories', category)
 			if cfg.has_option('folders', folder):
