@@ -8,10 +8,13 @@ import requests
 import re
 import ConfigParser
 
-def tohtml(md, comment=None):
+def tohtml(md, comment=None, alt=None):
 	html = markdown.markdown(md.decode('utf-8'))
 	if html == '':
-		html = '<p/>'
+		if alt:
+			html = '<p>' + alt + '</p>'
+		else:
+			html = '<p/>'
 	if comment:
 		html = '<!-- ' + comment + ' -->' + html
 	return html
@@ -140,11 +143,15 @@ class main(object):
 			if headlines:
 				title = headlines[0].strip('#').strip()
 			else:
-				title = os.path.basename(fn).replace('.md', '').replace('-', ' ')
+				title = os.path.basename(fn).replace('.md', '').replace('-', ' ') + ' *'
 
 			origin = os.path.join(os.path.basename(os.getcwd()), fn)
 			origin = 'sourced from ' + origin
-			self.send(title, tohtml(data, comment=origin), uri, fn=fn)
+			url = os.path.join(cfg.get('github', 'base'), fn)
+			link = 'This document has not been created. Please <a href="' + url + '">edit ' + \
+			       'the source</a> to create it.'
+			html = tohtml(data, comment=origin, alt=link)
+			self.send(title, html, uri, fn=fn)
 
 
 if __name__ == '__main__':
