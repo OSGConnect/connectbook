@@ -8,10 +8,12 @@ import requests
 import re
 import ConfigParser
 
-def tohtml(md):
+def tohtml(md, comment=None):
 	html = markdown.markdown(md.decode('utf-8'))
 	if html == '':
 		html = '<p/>'
+	if comment:
+		html = '<!-- ' + comment + ' -->' + html
 	return html
 
 
@@ -137,7 +139,9 @@ class main(object):
 			else:
 				title = os.path.basename(file).replace('.md', '').replace('-', ' ')
 
-			self.send(title, tohtml(data), uri, fn=file)
+			origin = os.path.join(os.path.basename(os.getcwd()), file)
+			origin = 'sourced from ' + origin
+			self.send(title, tohtml(data, comment=origin), uri, fn=file)
 
 
 if __name__ == '__main__':
