@@ -17,7 +17,7 @@ def tohtml(md):
 
 class main(object):
 
-	def send(self, title, html, uri=None, endpoint=None, category=None, folder=None, article=None):
+	def send(self, title, html, uri=None, endpoint=None, category=None, folder=None, article=None, fn=''):
 		if not uri:
 			if not endpoint:
 				raise ValueError, 'uri or endpoint is required'
@@ -54,7 +54,7 @@ class main(object):
 			'tags': {},
 		}
 
-		sys.stdout.write('Sending %s...' % title)
+		sys.stdout.write('Sending %s (%s)...' % (title, fn))
 		r = requests.put(uri,
 		                 data=json.dumps(data),
 		                 auth=requests.auth.HTTPBasicAuth(self.apikey, ''),
@@ -77,7 +77,7 @@ class main(object):
 		mapfile = os.path.join(os.path.dirname(sys.argv[0]), 'articles.map')
 		mappings = readmap(mapfile)
 		for r, mapto in mappings:
-			m = r.match(file)
+			m = r.search(file)
 			if m:
 				return m.expand(mapto)
 		return None
@@ -93,11 +93,14 @@ class main(object):
 
 		mapping = []
 		for option, value in cfg.items('filemap'):
-			mapping.append([re.compile(option, re.I), value])
+			#mapping.append([re.compile(option, re.I), value])
+			mapping.append([option, value])
 
 		def mapfile(f):
 			for r, value in mapping:
-				if r.search(f):
+				#if r.search(f):
+				#	return value
+				if f.lower().endswith(r.lower()):
 					return value
 			return None
 
@@ -110,8 +113,8 @@ class main(object):
 			try:
 				category, folder, article = path.split('/')
 			except ValueError:
-				category = 0
-				folder = 0
+				category = '0'
+				folder = '0'
 				article = path
 
 			if cfg.has_option('categories', category):
@@ -134,7 +137,7 @@ class main(object):
 			else:
 				title = os.path.basename(file).replace('.md', '').replace('-', ' ')
 
-			self.send(title, tohtml(data), uri)
+			self.send(title, tohtml(data), uri, fn=file)
 
 
 if __name__ == '__main__':

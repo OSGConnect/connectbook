@@ -10,6 +10,10 @@ git checkout master
 git pull origin master
 git submodule foreach git pull origin master
 
-for file in "$@"; do
+#for file in "$@"; do
+#	$(dirname $0)/freshpush $(pwd)/$file
+#done
+
+find . -name \*.md -print | while read file; do
 	$(dirname $0)/freshpush $(pwd)/$file
 done
