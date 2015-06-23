@@ -8,7 +8,7 @@ echo files: "$@"
 
 git checkout master
 git pull origin master
-git submodule foreach git pull
+git submodule foreach git pull origin master
 
 for file in "$@"; do
 	$(dirname $0)/freshpush $(pwd)/$file
