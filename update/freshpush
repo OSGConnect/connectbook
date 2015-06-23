@@ -7,16 +7,21 @@ import markdown
 import requests
 import re
 import ConfigParser
+import time
 
-def tohtml(md, comment=None, alt=None):
+def tohtml(md, url=None, fn=None, alt=None):
 	html = markdown.markdown(md.decode('utf-8'))
 	if html == '':
 		if alt:
 			html = '<p>' + alt + '</p>'
 		else:
 			html = '<p/>'
-	if comment:
-		html = '<!-- ' + comment + ' -->' + html
+	else:
+		date = time.strftime('on %b %d, %Y at %H:%M')
+		html += '\n<p>&nbsp;</p>'
+		html += '<p><small>This page was updated %s from <a href="%s">%s</a>.</small></p>' % \
+		        (date, url, fn)
+
 	return html
 
 
@@ -147,10 +152,10 @@ class main(object):
 
 			origin = os.path.join(os.path.basename(os.getcwd()), fn)
 			origin = 'sourced from ' + origin
-			url = os.path.join(cfg.get('github', 'base'), fn)
-			link = 'This document has not been created. Please <a href="' + url + '">edit ' + \
-			       'the source</a> to create it.'
-			html = tohtml(data, comment=origin, alt=link)
+			url = os.environ['upstream'] + '/blob/master/' + os.environ['relpath']
+			alt = 'This document has not been created. Please <a href="' + url + '">edit ' + \
+			      'the source</a> to create it.'
+			html = tohtml(data, fn=fn, url=url, alt=alt)
 			self.send(title, html, uri, fn=fn)
 
 
