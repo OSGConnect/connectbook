@@ -107,9 +107,12 @@ class main(object):
 			return None
 
 		for file in args:
-			path = mapfile(file)
+			fn = file.replace(os.getcwd(), '')
+			fn = fn.lstrip('/')
+
+			path = mapfile(fn)
 			if path is None:
-				print 'no mapping for', file
+				print 'no mapping for', fn
 				continue
 
 			try:
@@ -128,7 +131,7 @@ class main(object):
 
 			uri = cfg.get('api', 'uri') % locals()
 			if uri is None:
-				print 'no uri mapped for %s' % file
+				print 'no uri mapped for %s' % fn
 				continue
 			fp = open(file, 'r')
 			data = fp.read()
@@ -137,11 +140,11 @@ class main(object):
 			if headlines:
 				title = headlines[0].strip('#').strip()
 			else:
-				title = os.path.basename(file).replace('.md', '').replace('-', ' ')
+				title = os.path.basename(fn).replace('.md', '').replace('-', ' ')
 
-			origin = os.path.join(os.path.basename(os.getcwd()), file)
+			origin = os.path.join(os.path.basename(os.getcwd()), fn)
 			origin = 'sourced from ' + origin
-			self.send(title, tohtml(data, comment=origin), uri, fn=file)
+			self.send(title, tohtml(data, comment=origin), uri, fn=fn)
 
 
 if __name__ == '__main__':
