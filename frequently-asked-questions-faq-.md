@@ -1,5 +1,5 @@
 ###Getting Started
-*Who is eligible to become the user of OSG Connect?*
+**Who is eligible to become the user of OSG Connect?**
 
 Any researcher having an affiliation with a U.S. institution (college, university, national laboratory or research foundation) whose science application can benefit from distributed high-throughput computing resources is eligible to use OSG Connect.
 
