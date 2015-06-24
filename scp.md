@@ -16,15 +16,15 @@ user\@[machine:/path/to/file](<http://machine/path/to/file>).
 
 First, log in using your OSG Connect user id (username): 
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-$ ssh username@login.osgconnect.net
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+    $ ssh username@login.osgconnect.net
+
 
 Once logged in, change to the data directory, a link from your home area:
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-$ cd ~/data
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+    $ cd ~/data
+
 
 This directory is area on the Stash data server that you can use to store files
 and directories. It functions just like any other UNIX directory although it has
@@ -32,25 +32,25 @@ additional functions that we'll go over shortly. 
 
 Let's create a file:
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-$ echo "Hello world" > my_hello_world
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+    $ echo "Hello world" > my_hello_world
+
 
 Now copy the file just created from Stash to our local system (Desktop or
 laptop):
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-$ scp username@login.osgconnect.net:~/data/my_hello_world .
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+    $ scp username@login.osgconnect.net:~/data/my_hello_world .
+
 
 As you can see, `scp` uses similar syntax to the `cp` command. To copy
 directories using `scp`, you'll just pass the (recursive) `-r `option to it. 
 
 For example:
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-$ scp -r username@login.osgconnect.net:~/data/my-directory .
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+    $ scp -r username@login.osgconnect.net:~/data/my-directory .
+
 
 More Information
 ----------------
