@@ -39,7 +39,7 @@ We look forward to hearing from you!
 
 Warm regards,
 
-![Rob Gardner](https://raw.githubusercontent.com/OSGConnect/connectbook/master/assets/rob.jpg)
+![Rob Gardner](https://raw.githubusercontent.com/OSGConnect/connectbook/master/assets/rob-signature.jpg)
 
 [Rob Gardner](<https://www.linkedin.com/in/robertwgardner>)  
 
