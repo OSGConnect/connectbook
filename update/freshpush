@@ -115,7 +115,8 @@ class main(object):
 			return None
 
 		for file in args:
-			fn = file.replace(os.getcwd(), '')
+			fn = os.path.normpath(file)
+			fn = fn.replace(os.getcwd(), '')
 			fn = fn.lstrip('/')
 
 			path = mapfile(fn)
