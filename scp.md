@@ -1,4 +1,4 @@
-[title]: - "Transferring files to login.osgconnect.net using scp"
+[title]: - "Using scp to transfer files"
 
 Background
 ----------
