@@ -52,7 +52,7 @@ Using the Globus Online Command Line Interface
 ----------------------------------------------
 
 You can also use the Globus Online CLI via ssh
-\<your-user-name\>\@[cli.globusonline.org](<http://cli.globusonline.org/>). More
+<your-user-name>@cli.globusonline.org. More
 instructions on using the Globus Online CLI are
 here: <https://www.globusonline.org/usingcli/>.
 
@@ -61,7 +61,7 @@ here: <https://www.globusonline.org/usingcli/>.
 Using the Globus CLI from login.osgconnect.net
 ----------------------------------------------
 
-When logging into [login.osgconnect.net](<http://login.osgconnect.net/>), if you
+When logging into `login.osgconnect.net]`, if you
 use the \`ssh -A\` flag, then you will be able to login
 from [login.osgconnect.net](<http://login.osgconnect.net/>) to [cli.globusonline.org](<http://cli.globusonline.org/>).
  This would be useful to run transfer scripts
