@@ -1,4 +1,8 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2.7
+
+# Python 2.7 is required because we want Markdown tables, which appear to
+# be available only in releases of python-markdown that don't run under
+# Python 2.7.
 
 import json
 import os
@@ -10,7 +14,9 @@ import ConfigParser
 import time
 
 def tohtml(md, url=None, fn=None, alt=None):
-	html = markdown.markdown(md.decode('utf-8'))
+	html = markdown.markdown(md.decode('utf-8'),
+	                         extensions=['markdown.extensions.tables'])
+
 	if html == '':
 		if alt:
 			html = '<p>' + alt + '</p>'

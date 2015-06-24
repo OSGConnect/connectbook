@@ -33,7 +33,6 @@ may see them uppercased in some reporting/accounting software.
 The first step in registration is to create a user account and *bind* it to
 other identity information. After that you will enroll in a project group.
 
-Icon
 
 Once you've enrolled in a group, you'll have the requisite rights to log in to
 the submit node for the OSG Connect job scheduler, or to transfer data in and
@@ -83,8 +82,6 @@ a Globus account, click **Already a member? Sign In** to sign in now. Otherwis
 provide your name, email address, and a username and password to register a new
 account. Your OSG Connect identity will piggyback from here.
 
- 
-
 | **Using InCommon/CILogon**                     | **Using Globus Online ID (existing)**                             | **Using Globus Online (new)**                |
 |------------------------------------------------|-------------------------------------------------------------------|----------------------------------------------|
 | Click **Proceed**.                             | Click **Sign Up with Globus**, then **Already a member? Sign In** | Click **Sign Up with Globus**.               |
@@ -92,7 +89,6 @@ account. Your OSG Connect identity will piggyback from here.
 | Perform authentication at your institution.    | ↓                                                                 | Await validation email, use link to confirm. |
 | Go to the **Link accounts **workflow.          | Go to the **Join group **workflow.                                | Go to the **Join group **workflow.           |
 
- 
 
 Link accounts
 -------------

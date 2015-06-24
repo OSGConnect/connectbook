@@ -26,7 +26,7 @@ git checkout master
 git pull origin master
 git submodule foreach git pull origin master
 
-generator | while read file; do
+generator "$@" | while read file; do
 	dir=$(dirname "$file")
 	upstream=$(cd "$dir"; git config --get remote.origin.url | sed -e 's/.git$//')
 	relpath=$(cd "$dir"; git ls-files --full-name $(basename "$file"))
