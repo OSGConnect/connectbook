@@ -12,7 +12,7 @@ Steps
 
 To transfer a file using `scp`, you'll need to run `scp` with the source and
 destination.  Files on remote systems are indicated using
-user\@[machine:/path/to/file](<http://machine/path/to/file>).
+`user@machine:/path/to/file`.
 
 First, log in using your OSG Connect user id (username): 
 
