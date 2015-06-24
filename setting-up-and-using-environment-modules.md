@@ -2,8 +2,8 @@
 [title]: - "Accessing Software using Distributed Enivonrment Modules"
  
 
-Introduction
-------------
+# Accessing Software using Distributed Enivonrment Modules
+## Introduction
 
 This page covers use of the module command in the OSG computing environment.  
 
@@ -127,8 +127,7 @@ For example:
 
 Finally, `module help` will give you more detailed information.
 
-Submit file changes
--------------------
+## Submit file changes
 
 Not all resources available through OSG Connect support OASIS and distributed environment modules.  In order to make
 sure that the jobs you submit run on resources that do support distributed environment modules, you will need to add
@@ -136,8 +135,7 @@ the following condition to the requirements in your condor  job submission file.
 
 (HAS_CVMFS_oasis_opensciencegrid_org =?= TRUE)
 
-Available Software
-------------------
+## Available Software
 
 A list of currently installed software is available here. 
 
