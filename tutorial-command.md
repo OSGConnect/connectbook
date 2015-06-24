@@ -15,10 +15,10 @@ From the OSG Connect login host
 ([login.osgconnect.net](<http://login.osgconnect.net/>)), the following tutorial
 commands are available:
 
-  $ tutorial
-  $ tutorial list
-  $ tutorial info <tutorial-name>
-  $ tutorial <tutorial-name>
+	$ tutorial
+	$ tutorial list
+	$ tutorial info <tutorial-name>
+	$ tutorial <tutorial-name>
 
 Install and setup a tutorial
 ----------------------------
@@ -27,7 +27,7 @@ On the OSG Connect login host
 ([login.osgconnect.net](<http://login.osgconnect.net/>)), create a directory, cd
 to it, and invoke the command:
 
-  $ tutorial <tutorial-name>
+	$ tutorial <tutorial-name>
 
 Available tutorials
 -------------------
