@@ -14,7 +14,7 @@ Use `module avail` to see available software applications and libraries:
 
 	$ module avail
 	
-	------------------ /cvmfs/oasis.opensciencegrid.org/osg/modules/modulefiles/Core ------------------
+	------------- /cvmfs/oasis.opensciencegrid.org/osg/modules/modulefiles/Core -----------
    	MUMmer3.23/3.23           gcc/4.6.4                pcre/8.35
    	OpenBUGS/3.2.3     (D)    gcc/4.9.2         (D)    pegasus/4.4.2-image_tools
    	R/3.1.1                   geos/3.4.2               poppler/0.24.1
