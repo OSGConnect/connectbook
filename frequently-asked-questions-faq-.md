@@ -19,7 +19,7 @@ The available software are listed here.
 For example, we load NAMD software:
 
 
-    $ source /cvmfs/oasis.opensciencegrid.org/osg/modules/lmod/5.6.2/init/bash
+    $ source /cvmfs/oasis.opensciencegrid.org/osg/modules/lmod/current/init/bash
     $ module load namd
 
 See the section "Using the Software Modules" for details.
