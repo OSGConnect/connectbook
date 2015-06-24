@@ -118,6 +118,7 @@ class main(object):
 			fn = os.path.normpath(file)
 			fn = fn.replace(os.getcwd(), '')
 			fn = fn.lstrip('/')
+			title = None
 
 			path = mapfile(fn)
 			if path is None:
@@ -145,10 +146,25 @@ class main(object):
 			fp = open(file, 'r')
 			data = fp.read()
 			fp.close()
-			headlines = filter(lambda line: line.startswith('#'), data.split('\n'))
-			if headlines:
-				title = headlines[0].strip('#').strip()
-			else:
+
+			lines = data.split('\n')
+
+			# Three ways to derive a title
+			if not title:
+				# find lines line this:
+				# [title]: - "title of document here"
+				for line in lines:
+					if line.startswith('[title]:'):
+						off = line.find('"')
+						title = line[off:].strip().strip('"')
+						break
+
+			if not title:
+				headlines = filter(lambda line: line.startswith('#'), lines)
+				if headlines:
+					title = headlines[0].strip('#').strip()
+
+			if not title:
 				title = os.path.basename(fn).replace('.md', '').replace('-', ' ') + ' *'
 
 			origin = os.path.join(os.path.basename(os.getcwd()), fn)
