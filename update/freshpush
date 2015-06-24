@@ -167,6 +167,9 @@ class main(object):
 			if not title:
 				title = os.path.basename(fn).replace('.md', '').replace('-', ' ') + ' *'
 
+			# temporary: mark the docs from github
+			title = '[github] ' + title
+
 			origin = os.path.join(os.path.basename(os.getcwd()), fn)
 			origin = 'sourced from ' + origin
 			url = os.environ['upstream'] + '/blob/master/' + os.environ['relpath']
