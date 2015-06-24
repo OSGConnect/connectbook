@@ -1,8 +1,8 @@
 
-[title]: - "Accessing Software using Distributed Enivonrment Modules"
+[title]: - "Accessing Software using Distributed Environment Modules"
  
 
-# Accessing Software using Distributed Enivonrment Modules
+# Accessing Software using Distributed Environment Modules
 ## Introduction
 
 This page covers use of the module command in the OSG computing environment.  
