@@ -39,11 +39,11 @@ We look forward to hearing from you!
 
 Warm regards,
 
-![Rob Gardner](https://raw.githubusercontent.com/OSGConnect/connectbook/master/assets/rob-signature.jpg)
+<img src="https://raw.githubusercontent.com/OSGConnect/connectbook/master/assets/rob-signature.jpg" style="width: 8em;" alt="Rob Gardner">
 
 [Rob Gardner](<https://www.linkedin.com/in/robertwgardner>)  
 
 
 OSG User Support and Campus Grids Area Coordinator
 
-[\@rwg](<https://twitter.com/rwg>)
+[@rwg](<https://twitter.com/rwg>)
