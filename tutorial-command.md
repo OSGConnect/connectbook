@@ -35,7 +35,7 @@ Available tutorials
 The OSG Connect login host (**login.osgconnect.net**) has the examples
 pre-installed.  To see what is available:
 
-
+```
   $ tutorial list
   Currently available tutorials:
   R ..................... Estimate Pi using the R programming language
@@ -64,3 +64,4 @@ pre-installed.  To see what is available:
   
   
   Enter "tutorial name-of-tutorial" to clone and try out a tutorial.
+```
