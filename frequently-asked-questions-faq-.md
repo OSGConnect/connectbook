@@ -22,7 +22,7 @@ For example, we load NAMD software:
     $ source /cvmfs/oasis.opensciencegrid.org/osg/modules/lmod/current/init/bash
     $ module load namd
 
-See the section "Using the Software Modules" for details.
+See the section "Accessing Software using Distributed Environment Modules" for details.
  
 **Are there any restrictions on installing commercial softwares?**
 
