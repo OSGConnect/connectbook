@@ -3,7 +3,7 @@
 Overview
 --------
 
-Stash (http://stash.osgconnect.net/) is a temporary data storage solution for your data workflow to accelerate access to cycles.  Use Stash to pre-stage job input datasets or write output files when they in aggregate they exceed more than what can be comfortably handled out of your home directory (e.g. on the login01.osgconnect.net host).   This will vary depending on the job type, but typically this occurs in the range of a few hundred megabytes to gigabytes. You can retrieve your job output from Stash at a later time, transferring the data wherever you store your precious datasets.
+Stash (http://stash.osgconnect.net/) is a temporary data storage solution for your data workflow.  Use Stash to pre-stage job input datasets or write output files when they in aggregate they exceed more than what can be comfortably handled out of your home directory (e.g. on the login01.osgconnect.net host).   This will vary depending on the job type, but typically this occurs in the range of a few hundred megabytes to gigabytes. You can retrieve your job output from Stash at a later time, transferring the data wherever you store your precious datasets.
 
 Usage
 -----
