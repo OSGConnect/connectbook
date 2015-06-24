@@ -59,9 +59,9 @@ ProjectName in HTCondor 
 The chosen ProjectName in HTCondor for jobs from this project have the
 convention: 
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
 +ProjectName="ProjectName"
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
 
 The submit files must include this directive or the jobs will not be submitted
 by OSG Connect. (If it is incorrect, `condor-submit` will give you a useful
