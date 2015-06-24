@@ -6,7 +6,7 @@ OSG Connect tutorials on Github
 All of the OSG Connect examples are available on
 Github: [tutorials-on-github.com](<https://github.com/CI-Connect>).   These
 tutorials are tested regularly and should just work.  If you find a problem,
-please send a report to connect-support\@opensciencegrid.org.
+please send a report to user-support@opensciencegrid.org.
 
 Tutorial commands
 -----------------
@@ -15,10 +15,10 @@ From the OSG Connect login host
 ([login.osgconnect.net](<http://login.osgconnect.net/>)), the following tutorial
 commands are available:
 
-  $ tutorial
-  $ tutorial list
-  $ tutorial info <tutorial-name>
-  $ tutorial <tutorial-name>
+	$ tutorial
+	$ tutorial list
+	$ tutorial info <tutorial-name>
+	$ tutorial <tutorial-name>
 
 Install and setup a tutorial
 ----------------------------
@@ -27,7 +27,7 @@ On the OSG Connect login host
 ([login.osgconnect.net](<http://login.osgconnect.net/>)), create a directory, cd
 to it, and invoke the command:
 
-  $ tutorial <tutorial-name>
+	$ tutorial <tutorial-name>
 
 Available tutorials
 -------------------
@@ -35,7 +35,7 @@ Available tutorials
 The OSG Connect login host (**login.osgconnect.net**) has the examples
 pre-installed.  To see what is available:
 
-
+```
   $ tutorial list
   Currently available tutorials:
   R ..................... Estimate Pi using the R programming language
@@ -64,3 +64,4 @@ pre-installed.  To see what is available:
   
   
   Enter "tutorial name-of-tutorial" to clone and try out a tutorial.
+```
