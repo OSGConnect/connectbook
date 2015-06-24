@@ -1,6 +1,9 @@
+#!/bin/sh
 
-exec >&${LOGFD}
-exec 2>&${LOGFD}
+[ -n "$LOGFD" ] && {
+	exec >&${LOGFD}
+	exec 2>&${LOGFD}
+}
 
 echo child pid: $$
 echo dir: $(pwd)
