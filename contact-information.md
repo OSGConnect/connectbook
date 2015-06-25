@@ -1,6 +1,6 @@
 
 
-For Media Contact, or general questions about OSG please email: [osg-contact@opensciencegrid.org(mailto:osg-contact@opensciencegrid.org)
+For Media Contact, or general questions about OSG please email: [osg-contact@opensciencegrid.org](mailto:osg-contact@opensciencegrid.org)
 
 For OSG support, operational issues please email: [goc@opensciencegrid.org](mailto: goc@opensciencegrid.org) 
 
