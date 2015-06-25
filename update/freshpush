@@ -196,7 +196,7 @@ class main(object):
 				title = gettitle(fn, lines, article=article)
 
 				# temporary: mark the docs from github
-				title = '[github] ' + title
+				#title = '[github] ' + title
 
 				self.send(title, html, uri, fn=fn, article=article)
 
