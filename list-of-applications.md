@@ -13,8 +13,8 @@
 * **qhull** (version 2012) &mdash; qhull libraries provide functions for computing convex hull.
 * **glpk** (version 4.54) &mdash; glpk is the GNU's linear programming took kit.
 * **gnuplot** (version 4.6.5) &mdash; Gnuplot is an application for generating plots.
-* **matlab runtime libraries (compiled) (version 2013) &mdash; Matlab is a high-level language and interactive environment for numerical computation
-* **matlab runtime libraries (compiled) (version 2014) &mdash; Matlab is a high-level language and interactive environment for numerical computation
+* **matlab** runtime libraries (compiled) (version 2013) &mdash; Matlab is a high-level language and interactive environment for numerical computation
+* **matlab** runtime libraries (compiled) (version 2014) &mdash; Matlab is a high-level language and interactive environment for numerical computation
 * **siesta** (version 3.2) &mdash; SIESTA performs efficient electronic structure calculations of molecules and solids.
 * **udunits** (version 2.2.17) &mdash; UDUNITS package supports units of physical quantities.
 * **CDO** (version 1.6.4) &mdash; CDO is a collection of command line Operators to manipulate and analyse Climate and NWP model Data.
