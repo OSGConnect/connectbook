@@ -4,9 +4,9 @@ OSG Connect tutorials on Github
 -------------------------------
 
 All of the OSG Connect examples are available on
-[Github](<https://github.com/OSGConnect/>).   These
-tutorials are tested regularly and should just work.  If you find a problem,
-please send a report to user-support@opensciencegrid.org.
+[Github](<https://github.com/OSGConnect/>).  These
+tutorials are tested regularly and should just work. If you find a problem,
+please send a report to [user-support@opensciencegrid.org](mailto:user-support@opensciencegrid.org).
 
 Tutorial commands
 -----------------
@@ -31,7 +31,7 @@ Available tutorials
 -------------------
 
 The OSG Connect login host (**login.osgconnect.net**) has the examples
-pre-installed.  To see what is available:
+pre-installed. To see what is available:
 
 
 	$ tutorial list
