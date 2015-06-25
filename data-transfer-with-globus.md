@@ -61,8 +61,8 @@ here: <https://www.globusonline.org/usingcli/>.
 Using the Globus CLI from login.osgconnect.net
 ----------------------------------------------
 
-When logging into `login.osgconnect.net]`, if you use the `ssh -A`
-flag, then you will be able to login from `login.osgconnect.net
+When logging into `login.osgconnect.net`, if you use the `ssh -A`
+flag, then you will be able to login from `login.osgconnect.net`
 to `cli.globusonline.org`.   This would be useful to run transfer
 scripts on `login.osgconnect.net`. Check the Globus command line
 interface from your terminal.
