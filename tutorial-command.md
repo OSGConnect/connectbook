@@ -4,15 +4,14 @@ OSG Connect tutorials on Github
 -------------------------------
 
 All of the OSG Connect examples are available on
-Github: [tutorials-on-github.com](<https://github.com/CI-Connect>).   These
+Github: [tutorials-on-github.com](<https://github.com/OSGConnect/>).   These
 tutorials are tested regularly and should just work.  If you find a problem,
 please send a report to user-support@opensciencegrid.org.
 
 Tutorial commands
 -----------------
 
-From the OSG Connect login host
-([login.osgconnect.net](<http://login.osgconnect.net/>)), the following tutorial
+From the OSG Connect login host **login.osgconnect.net**, the following tutorial
 commands are available:
 
 	$ tutorial
@@ -23,8 +22,7 @@ commands are available:
 Install and setup a tutorial
 ----------------------------
 
-On the OSG Connect login host
-([login.osgconnect.net](<http://login.osgconnect.net/>)), create a directory, cd
+On the OSG Connect login host **login.osgconnect.net**, create a directory, cd
 to it, and invoke the command:
 
 	$ tutorial <tutorial-name>
