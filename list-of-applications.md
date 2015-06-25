@@ -64,9 +64,9 @@
 
 ## Software Libraries, Languages, and Tools
 * **Python 2.7** (version 2.7) &mdash; Interpreter for the python programming language
-* **Modules for Python 2.7** (version all-pkgs) &mdash; Only available after python 2.7 module loaded
+* **Modules for Python 2.7**  &mdash; Available as all-pkgs and only available after python 2.7 module loaded
 * **Python 3.4** (version 3.4) &mdash; Interpreter for the python programming language
-* **Modules for Python 3.4** (version all-pkgs) &mdash; Only available after python 3.4 module loaded
+* **Modules for Python 3.4**  &mdash; Available as all-pkgs and only available after python 3.4 module loaded
 * **cmake** (version 3) &mdash; CMake is a cross platform make utility
 * **ectools** (version trunk) &mdash; Ectools is a set of tools for correcting long read assembly data
 * **gcc** (version 4.6.2 / 4.6.4 / 4.9.2) &mdash; GCC is a set of compilers for c
