@@ -83,7 +83,7 @@ For example:
 
 	$ module avail
 	
-	----------- /cvmfs/oasis.opensciencegrid.org/osg/modules/modulefiles/Core ---------------
+	---- /cvmfs/oasis.opensciencegrid.org/osg/modules/modulefiles/Core -----
    	atlas      fftw/fftw-3.3.4-gromacs    lapack              lmod/5.6.2 (D)    
    	blast      gromacs/4.6.5              lmod/SiteHook       namd/2.9          
    	blender    jpeg                       lmod/SitePackage    python/2.7 (D)
