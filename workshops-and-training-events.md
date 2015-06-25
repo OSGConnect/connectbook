@@ -2,8 +2,10 @@
 
 We offer training and tutorials for the scientists and researchers. As part of our training service we are offering an extended Software Carpentry workshop which augments instruction on basic Linux tools and programming with tutorials on using distributed high throughput computing workflows. These workshops are run by the OSG staff and instructors from Software Carpentry.
 
+
 ##Upcoming Event
 [OSG User School 2015](https://twiki.opensciencegrid.org/bin/view/Education/OSGUserSchool2015)
+
  
 ##Past Events
 *[Open Science Grid Mini-Workshop at University of Chicago, April 9th 2015](http://swc-osg-workshop.github.io/MiniOSG-2015-04-09-UChicago/index.html)
