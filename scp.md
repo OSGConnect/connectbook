@@ -3,15 +3,15 @@
 Background
 ----------
 
-We can transfer files to the OSG Connect login host using the Unix `scp command.
- Note scp `is a counterpart to the secure shell command, ssh, that allows for
-secure, encrypted file transfers between systems using your ssh credentials.
+We can transfer files to the OSG Connect login host using the Unix `scp` command. Note scp is a counterpart 
+to the secure shell command, ssh, that allows for secure, encrypted file transfers between systems using your 
+ssh credentials.
 
 Steps
 -----
 
-To transfer a file using `scp`, you'll need to run `scp` with the source and
-destination.  Files on remote systems are indicated using
+To transfer a file using `scp`, you'll need to run `scp` with the source and
+destination. Files on remote systems are indicated using
 `user@machine:/path/to/file`.
 
 First, log in using your OSG Connect user id (username): 
@@ -43,8 +43,8 @@ laptop):
     $ scp username@login.osgconnect.net:~/data/my_hello_world .
 
 
-As you can see, `scp` uses similar syntax to the `cp` command. To copy
-directories using `scp`, you'll just pass the (recursive) `-r `option to it. 
+As you can see, `scp` uses similar syntax to the `cp` command. To copy
+directories using `scp`, you'll just pass the (recursive) `-r` option to it. 
 
 For example:
 
