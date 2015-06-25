@@ -1,6 +1,6 @@
 [title]: - "Frequent Asked Questions"
 
-###Getting Started
+##Getting Started
 **Who is eligible to become the user of OSG Connect?**
 
 Any researcher having an affiliation with a U.S. institution (college, university, national laboratory or research foundation) whose science application can benefit from distributed high-throughput computing resources is eligible to use OSG Connect.
@@ -9,7 +9,7 @@ Any researcher having an affiliation with a U.S. institution (college, universit
 
 Please follow the steps outlined in the Sign Up process. 
 
-###Software
+##Software
 **What software packages are available?**
 
 The available software are listed here. 
@@ -33,7 +33,7 @@ We only maintain open source software. At present, we do not have or support com
 
 Yes. Please contact  support@opensciencegrid.org
 
-###Running Jobs
+##Running Jobs
 **What type of computation is a good match or NOT a good match on OSG Connect?**
 
 It is important for the user to carefully check the computational requirements. Please refer the section on "Best practices - Computation" for full detail.
@@ -50,7 +50,7 @@ Jobs are submitted via HTCondor schedular. Please refer the "QuickStart" or User
 
 Please refer the section on "Best practices - Computation" for more details.
 
-###Data Storage and Transfer
+##Data Storage and Transfer
 **What is the best way to process large volume of data?**
 
 Use the "stash"  storage to  process large data. Please refer the section "Data Solutions" for more details. 
@@ -68,7 +68,7 @@ Scientific workflow management systems help to deal with computations or data ma
 
 DAGMan, Pegasus and Swift.
 
-###Workshops and Training
+##Workshops and Training
 *Do you plan to offer training sessions and workshop?*
 
 We plan to offer workshops for the researchers on multiple locations. Please check our events page for further information about the workshop dates and venue. 
