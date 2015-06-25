@@ -1,5 +1,6 @@
 [title]: - "Using the Connect Client"
 
+# Table of Contents
 [TOC]
 
 # User Guide 
@@ -7,34 +8,32 @@
 ## Connect Client commands
 
 For a list of available commands, enter `connect` from the command line:
-```
-$ connect 
-This is Connect Client v0.3-1-g59c218.
-usage: connect [opts] <subcommand> [args]
-       connect [opts] dag <dagfile>
-       connect [opts] history <condor_history arguments>
-       connect [opts] list [-v]
-       connect [opts] modules 
-       connect [opts] pull [-v|--verbose] [-w|--where] [repository-dir]
-       connect [opts] push [-v|--verbose] [-w|--where] [repository-dir]
-       connect [opts] q <condor_q arguments>
-       connect [opts] revoke 
-       connect [opts] rm <condor_rm arguments>
-       connect [opts] run <condor_run arguments>
-       connect [opts] setup [--replace-keys] [--update-keys] [servername]
-       connect [opts] shell [command]
-       connect [opts] status <condor_status arguments>
-       connect [opts] submit <submitfile>
-       connect [opts] sync [-v|--verbose] [-w|--where] [repository-dir]
-       connect [opts] test  
-       connect [opts] wait <condor_wait arguments>
-
-opts:
-    -s|--server hostname       set connect server name
-    -u|--user username         set connect server user name
-    -r|--remote directory      set connect server directory name
-    -v|--verbose               show additional information
-```
+	$ connect 
+	This is Connect Client v0.3-1-g59c218.
+	usage: connect [opts] <subcommand> [args]
+	       connect [opts] dag <dagfile>
+	       connect [opts] history <condor_history arguments>
+	       connect [opts] list [-v]
+	       connect [opts] modules 
+	       connect [opts] pull [-v|--verbose] [-w|--where] [repository-dir]
+	       connect [opts] push [-v|--verbose] [-w|--where] [repository-dir]
+	       connect [opts] q <condor_q arguments>
+	       connect [opts] revoke 
+	       connect [opts] rm <condor_rm arguments>
+	       connect [opts] run <condor_run arguments>
+	       connect [opts] setup [--replace-keys] [--update-keys] [servername]
+	       connect [opts] shell [command]
+	       connect [opts] status <condor_status arguments>
+	       connect [opts] submit <submitfile>
+	       connect [opts] sync [-v|--verbose] [-w|--where] [repository-dir]
+	       connect [opts] test  
+	       connect [opts] wait <condor_wait arguments>
+	
+	opts:
+	    -s|--server hostname       set connect server name
+	    -u|--user username         set connect server user name
+	    -r|--remote directory      set connect server directory name
+	    -v|--verbose               show additional information
 
 To run any of these commands, just enter `connect [opts] [command name]`.
 
