@@ -19,7 +19,7 @@
 * **udunits** (version 2.2.17) &mdash; UDUNITS package supports units of physical quantities.
 * **CDO** (version 1.6.4) &mdash; CDO is a collection of command line Operators to manipulate and analyse Climate and NWP model Data.
 
-## Chemistry and Bio-Chemistry
+## Chemistry and Biochemistry
 * **GAMESS** (version 5/1/2013) &mdash; GAMESS is a general ab initio quantum chemistry package.
 * **NAMD** (version 2.9) &mdash; NAMD 2.9. Molecular dynamics simulator.
 * **gromacs** (version 4.6.5) &mdash; Gromacs molecular dynamics simulator. Requires fftw/fftw-3.3.4-gromacs
