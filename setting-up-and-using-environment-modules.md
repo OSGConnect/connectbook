@@ -14,7 +14,7 @@ Use `module avail` to see available software applications and libraries:
 
 	$ module avail
 	
-	------------- /cvmfs/oasis.opensciencegrid.org/osg/modules/modulefiles/Core -----------
+	------- /cvmfs/oasis.opensciencegrid.org/osg/modules/modulefiles/Core -----
    	MUMmer3.23/3.23           gcc/4.6.4                pcre/8.35
    	OpenBUGS/3.2.3     (D)    gcc/4.9.2         (D)    pegasus/4.4.2-image_tools
    	R/3.1.1                   geos/3.4.2               poppler/0.24.1
@@ -97,10 +97,10 @@ For example:
 	$ module load python/2.7
 	$ module avail
 
-	------------------ /cvmfs/oasis.opensciencegrid.org/osg/modules/modulefiles/python/2.7.7 -------------------
+	------------ /cvmfs/oasis.opensciencegrid.org/osg/modules/modulefiles/python/2.7.7 -------------
    	all-pkgs
 
-	---------------------- /cvmfs/oasis.opensciencegrid.org/osg/modules/modulefiles/Core -----------------------
+	--------------- /cvmfs/oasis.opensciencegrid.org/osg/modules/modulefiles/Core ----------------
    	atlas      fftw/fftw-3.3.4-gromacs    lapack              lmod/5.6.2 (D)    python/3.4
    	blast      gromacs/4.6.5              lmod/SiteHook       namd/2.9          settarg/5.6.2
    	blender    jpeg                       lmod/SitePackage    python/2.7 (D)
