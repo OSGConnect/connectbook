@@ -1,5 +1,7 @@
 [title]: - "Software modules catalog"
 
+[TOC]
+
 ## Physics and Engineering
 * **LAMMPS** (version 2) &mdash; LAMMPS is a classical molecular dynamics code.
 * **CP2K** (version 2.5.1) &mdash; CP2K is the state-of-the-art method for accurate atomistic simulations.
