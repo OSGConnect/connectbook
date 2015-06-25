@@ -1,4 +1,4 @@
-[title]:- "Acknowledging Open Science Grid"
+[title]:- "Acknowledging the Open Science Grid"
 
 Whenever you make use of Open Science Grid resources, services or tools, we would be grateful to have you acknowledge OSG in your presentations and publications. For example, you can add in your acknowledgement section: This research was done using resources provided by the Open Science Grid. 
 
