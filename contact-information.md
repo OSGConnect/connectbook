@@ -4,7 +4,7 @@ For Media Contact, or general questions about OSG please email: [osg-contact@ope
 
 For OSG support, operational issues please email: [goc@opensciencegrid.org](mailto: goc@opensciencegrid.org) 
 
-For OSG policies, executive information please email:[Frank Würthwein](mailto:Frank Würthwein) (OSG Executive Director)
+For OSG policies, executive information please email:[Frank Würthwein](mailto:fkw@ucsd.edu) (OSG Executive Director)
 
 
 For assistance or questions, please email the OSG User Support team  at [user-support@opensciencegrid.org](mailto:user-support@opensciencegrid.org)
