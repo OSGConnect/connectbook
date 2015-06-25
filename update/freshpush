@@ -70,7 +70,7 @@ class main(object):
 			'tags': {},
 		}
 
-		sys.stdout.write('Sending %s (%s)...' % (title, fn))
+		sys.stdout.write('Sending %s (%s) to %s...' % (title, fn, article))
 		r = requests.put(uri,
 		                 data=json.dumps(data),
 		                 auth=requests.auth.HTTPBasicAuth(self.apikey, ''),
@@ -117,8 +117,32 @@ class main(object):
 				#if r.search(f):
 				#	return value
 				if f.lower().endswith(r.lower()):
-					return value
-			return None
+					return [x.strip() for x in value.split(',')]
+			return []
+
+		def gettitle(fn, lines, article=None):
+			# Four ways to derive a title
+			if article:
+				# find lines like this:
+				# [title]: articlenumber "title of document here"
+				for line in lines:
+					if line.startswith('[title]: %s' % str(article)):
+						off = line.find('"')
+						return line[off:].strip().strip('"')
+
+			# find lines like this:
+			# [title]: - "title of document here"
+			for line in lines:
+				if line.startswith('[title]:'):
+					off = line.find('"')
+					return line[off:].strip().strip('"')
+
+			headlines = filter(lambda line: line.startswith('#'), lines)
+			if headlines:
+				return headlines[0].strip('#').strip()
+
+			# fallback
+			return os.path.basename(fn).replace('.md', '').replace('-', ' ') + ' *'
 
 		for file in args:
 			fn = os.path.normpath(file)
@@ -126,72 +150,54 @@ class main(object):
 			fn = fn.lstrip('/')
 			title = None
 
-			path = mapfile(fn)
-			if path is None:
+			paths = mapfile(fn)
+			if not paths:
 				print 'no mapping for', fn
 				continue
 
-			try:
-				category, folder, article = path.split('/')
-			except ValueError:
-				category = '0'
-				folder = '0'
-				article = path
-
-			if cfg.has_option('categories', category):
-				category = cfg.get('categories', category)
-			if cfg.has_option('folders', folder):
-				folder = cfg.get('folders', folder)
-			if cfg.has_option('articles', article):
-				article = cfg.get('articles', article)
-
-			uri = cfg.get('api', 'uri') % locals()
-			if uri is None:
-				print 'no uri mapped for %s' % fn
-				continue
+			# read content and parse out title
 			fp = open(file, 'r')
 			data = fp.read()
 			fp.close()
 
-			lines = data.split('\n')
-
-			# Four ways to derive a title
-			if not title:
-				# find lines line this:
-				# [title]: articlenumber "title of document here"
-				for line in lines:
-					if line.startswith('[title]: %s' % article):
-						off = line.find('"')
-						title = line[off:].strip().strip('"')
-						break
-
-			if not title:
-				# find lines line this:
-				# [title]: - "title of document here"
-				for line in lines:
-					if line.startswith('[title]:'):
-						off = line.find('"')
-						title = line[off:].strip().strip('"')
-						break
-
-			if not title:
-				headlines = filter(lambda line: line.startswith('#'), lines)
-				if headlines:
-					title = headlines[0].strip('#').strip()
-
-			if not title:
-				title = os.path.basename(fn).replace('.md', '').replace('-', ' ') + ' *'
-
-			# temporary: mark the docs from github
-			title = '[github] ' + title
-
+			# derive the source info and github link
 			origin = os.path.join(os.path.basename(os.getcwd()), fn)
 			origin = 'sourced from ' + origin
 			url = os.environ['upstream'] + '/blob/master/' + os.environ['relpath']
 			alt = 'This document has not been created. Please <a href="' + url + '">edit ' + \
 			      'the source</a> to create it.'
+
+			# then generate HTML
+			lines = data.split('\n')
 			html = tohtml(data, fn=fn, url=url, alt=alt)
-			self.send(title, html, uri, fn=fn)
+
+			# Post the html once for each path
+			for path in paths:
+				try:
+					category, folder, article = path.split('/')
+				except ValueError:
+					category = '0'
+					folder = '0'
+					article = path
+
+				if cfg.has_option('categories', category):
+					category = cfg.get('categories', category)
+				if cfg.has_option('folders', folder):
+					folder = cfg.get('folders', folder)
+				if cfg.has_option('articles', article):
+					article = cfg.get('articles', article)
+
+				uri = cfg.get('api', 'uri') % locals()
+				if uri is None:
+					print 'no uri mapped for %s' % fn
+					continue
+
+				title = gettitle(fn, lines, article=article)
+
+				# temporary: mark the docs from github
+				title = '[github] ' + title
+
+				self.send(title, html, uri, fn=fn, article=article)
 
 
 if __name__ == '__main__':
