@@ -3,8 +3,8 @@
 Background
 ----------
 
-We can transfer files to the OSG Connect login host using the Unix `scp` command. Note scp is a counterpart 
-to the secure shell command, ssh, that allows for secure, encrypted file transfers between systems using your 
+We can transfer files to the OSG Connect login host using the Unix `scp` command. Note `scp` is a counterpart 
+to the secure shell command,`ssh`, that allows for secure, encrypted file transfers between systems using your 
 ssh credentials.
 
 Steps
