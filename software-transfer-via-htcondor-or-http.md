@@ -19,7 +19,7 @@ software files, that the **PATH** (folders where executables can be found) may b
 
 ## Starting Up
 
-First  login to login.osgconnect.net. Then, to create a working directory, run `tutorial software`.  
+First  login to `login.osgconnect.net`. Then, to create a working directory, run `tutorial software`.  
 Then make sure that you have a public directory exported via Web. This directory should have been created for you 
 and be accessible at an URL like https://stash.osgconnect.net/+user/ where "user" is your user name on OSG Connect :
 
@@ -27,13 +27,13 @@ and be accessible at an URL like https://stash.osgconnect.net/+user/ where "user
 
 ## Distributing Applications Using Stash and HTTP
 
-This example is very similar to the one in Access Stash remotely from your job using HTTP.  You will be preparing the 
+This example is very similar to the one in **Access Stash remotely from your job using HTTP** page.  You will be preparing the 
 input files for the job, including an executable, and transferring them via HTTP. When you are transferring an executable 
 instead of data you have to pay attention because Web servers or commands like wget frequently change the file permissions 
 and this can cause the job to fail. To make sure that your program is executable either set manually the permission on the 
 transferred file (chmod +x filename) or transfer a tar bundle and uncompress it.
 
-Prepare the file bundle in your public html space (~/data/public):
+Prepare the file bundle in your public html space (`~/data/public`):
 
 	$ ls -al ~/data/public/
 	...
@@ -51,7 +51,7 @@ Prepare the file bundle in your public html space (~/data/public):
 	tar xzf words.tar.gz
 	cat random_words | ./distribution
 
-Here is the submit file. Note that HTCondor allows to specify an URL as input file and it will download it for you. Substitute your user name for marco in the transfer_input_files line:
+Here is the submit file. Note that HTCondor allows to specify an URL as input file and it will download it for you. Substitute your user name for marco in the `transfer_input_files` line:
 
 	########################
 	# Submit description file for short test program using http transfer
