@@ -14,8 +14,9 @@ import ConfigParser
 import time
 
 def tohtml(md, url=None, fn=None, alt=None):
-	html = markdown.markdown(md.decode('utf-8'),
-	                         extensions=['markdown.extensions.tables'])
+	extensions=['markdown.extensions.tables',
+	            'markdown.extensions.toc']
+	html = markdown.markdown(md.decode('utf-8'), extensions=extensions)
 
 	if html == '':
 		if alt:
