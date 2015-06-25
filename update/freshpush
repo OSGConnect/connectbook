@@ -65,7 +65,7 @@ class main(object):
 				'title': title,
 				'description': html,
 				'art_type': 1,
-				'status': 2,
+				#don't change status#'status': 2,
 			},
 			'tags': {},
 		}
