@@ -10,7 +10,7 @@ errors, one may have to run the gosync command by hand.
     $ gosync
 
 ## gosync command 
-
+```
     $ /usr/local/gosync --help
 gosync ERROR: option --help not recognized
     usage: gosync [-u|--user=api-user] [-g|--group=top-group] [-f|--file=configfile] [--nw|--nowait] [-q|--quiet] [--force] ...
@@ -32,7 +32,7 @@ gosync ERROR: option --help not recognized
            gosync [opts] sync users
            gosync [opts] sync users [--new] [--updated] [--only <user> [...]]
            gosync [opts] waitlock
-
+```
 ## Update new user and project 
 To sync a new user "newosgconnectuser"
 
