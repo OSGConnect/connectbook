@@ -35,11 +35,11 @@ errors, one may have to run the gosync command by hand.
 ## Update new user and project 
 To sync a new user "newosgconnectuser"
 
-    sudo /usr/local/gosync sync users --new --updated --only newosgconnectuser
+    $ sudo /usr/local/gosync sync users --new --updated --only newosgconnectuser
 
 To sync the project
 
-   sudo /usr/local/gosync sync groups
+    $ sudo /usr/local/gosync sync groups
 
 
 ##Cronjob scripts
