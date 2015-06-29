@@ -33,14 +33,18 @@ gosync ERROR: option --help not recognized
            gosync [opts] sync users [--new] [--updated] [--only <user> [...]]
            gosync [opts] waitlock
 
-## Update new user and project. 
+## Update new user and project 
 To sync a new user "newosgconnectuser"
 
     sudo /usr/local/gosync sync users --new --updated --only newosgconnectuser
 
-To sync the projects
+To sync the project
 
    sudo /usr/local/gosync sync groups
+
+
+##Cronjob scripts
+(location of the cronjob scripts, in case we want to refer them or to check they are running)
 
 
 
