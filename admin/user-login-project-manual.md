@@ -11,8 +11,7 @@ errors, one may have to run the gosync command by hand.
 
 ## gosync command 
 ```
-    $ /usr/local/gosync --help
-gosync ERROR: option --help not recognized
+    $ /usr/local/gosync -help
     usage: gosync [-u|--user=api-user] [-g|--group=top-group] [-f|--file=configfile] [--nw|--nowait] [-q|--quiet] [--force] ...
            gosync [opts] deluser <user> [<user> ...]
            gosync [opts] group accept <groupname> <user> <email>
