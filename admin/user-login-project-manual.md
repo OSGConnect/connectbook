@@ -10,9 +10,9 @@ errors, one may have to run the gosync command by hand.
     $ gosync
 
 ## gosync command 
-```
+
     $ /usr/local/gosync -help
-    usage: gosync [-u|--user=api-user] [-g|--group=top-group] [-f|--file=configfile] [--nw|--nowait] [-q|--quiet] [--force] ...
+    usage: gosync [-u|--user=api-user] [-g|--group=top-group] [-f|--file=configfile] [--nw|--nowait] [-q|--quiet] [--force] 
            gosync [opts] deluser <user> [<user> ...]
            gosync [opts] group accept <groupname> <user> <email>
            gosync [opts] group accept <groupname> <user> [<...>]
@@ -31,7 +31,7 @@ errors, one may have to run the gosync command by hand.
            gosync [opts] sync users
            gosync [opts] sync users [--new] [--updated] [--only <user> [...]]
            gosync [opts] waitlock
-```
+           
 ## Update new user and project 
 To sync a new user "newosgconnectuser"
 
