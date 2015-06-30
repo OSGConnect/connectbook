@@ -18,7 +18,7 @@ errors, one may have to run the `gosync` command by hand.
 
 ## Login to the Portal Server
 
-Since `gosync` runs on the `www` server, the first step is to log in.
+Since `gosync` runs on the `www.osgconnect.net` server, the first step is to log in.
 
     $ ssh www.osgconnect.net
 
