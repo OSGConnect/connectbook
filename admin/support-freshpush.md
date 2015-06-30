@@ -142,13 +142,6 @@ Upper case is required.
 
 The table extension allows you to construct simple tables.  By way of example:
 
-  `| President | Year | Vice President |`
-  `|--|--|--|`
-  `| Washington | 1789 | Adams |`
-  `| Adams | 1797 | Jefferson |`
-  `| Jefferson | 1801 | Burr, Clinton |`
-  `| Madison | 1809 | Clinton, Gerry |`
-
 | President | Year | Vice President |
 |--|--|--|
 | Washington | 1789 | Adams |
@@ -156,4 +149,13 @@ The table extension allows you to construct simple tables.  By way of example:
 | Jefferson | 1801 | Burr, Clinton |
 | Madison | 1809 | Clinton, Gerry |
 
+(View this document's source to see the Markdown.)
+
 _Note that GitHub does not support tables, and your edits **will** look wrong in GitHub._
+
+
+# Provenance
+
+On publication, each document will contain a link at the very end
+to the location on GitHub where it can be edited.
+
