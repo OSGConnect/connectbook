@@ -1,17 +1,31 @@
 [title]: - "Create user login and projects by manual intervention with gosync"
 
-Usually, the cron jobs take care of user and account creations on login node based on the globus database. The gosync command synchronizes the globus information with the www.osgconnect.net server. In case of cron job failures or due to some unforseen 
-errors, one may have to run the gosync command by hand. 
+# Automation
+
+Cron jobs maintain the synchronization of users and groups in CI Connect with Globus Nexus.  The cron jobs run from the `root` user's crontab on `www.osgconnect.net`, and look like this:
+
+    */2 * * * * ( cd /usr/local/gosync && ./gosync -q --nw sync users --new && ./gosync -q --nw sync groups ) >/dev/null 2>&1
+    */15 * * * * ( cd /usr/local/gosync && ./gosync -q --nw sync users --updated; ./gosync -q --nw sync groups ) >/dev/null 2>&1
+
+The first job adds new users every two minutes.  The second job updates existing users every 15 minutes.  Each job also adds new groups and updates existing groups.
+
+Globus used to be called "Globus Online". `gosync` is short for `Globus Online Synchronizer`.
+
+# Intervention
+
+Usually, the cron jobs take care of everything. However, in case of cron job failures or due to some unforseen 
+errors, one may have to run the `gosync` command by hand. 
 
 ## Login to the Portal Server
 
+Since `gosync` runs on the `www` server, the first step is to log in.
+
     $ ssh www.osgconnect.net
-    $ cd /usr/local/gosync
-    $ gosync
 
 ## gosync command 
 
-    $ /usr/local/gosync -help
+    $ cd /usr/local/gosync
+    $ ./gosync
     usage: gosync [-u|--user=api-user] [-g|--group=top-group] [-f|--file=configfile] [--nw|--nowait] [-q|--quiet] [--force] 
            gosync [opts] deluser <user> [<user> ...]
            gosync [opts] group accept <groupname> <user> <email>
@@ -32,24 +46,48 @@ errors, one may have to run the gosync command by hand.
            gosync [opts] sync users [--new] [--updated] [--only <user> [...]]
            gosync [opts] waitlock
            
-## Update new user and project 
-To sync a new user "newosgconnectuser"
+## Update new user and project
 
-    $ sudo /usr/local/gosync sync users --new --updated --only newosgconnectuser
+(Note that `gosync` must be run under sudo.)
 
-To sync the project
+To sync a new user "newosgconnectuser":
 
-    $ sudo /usr/local/gosync sync groups
+    $ cd /usr/local/gosync
+    $ sudo ./gosync sync users --new --only newosgconnectuser
+
+To sync all new users:
+
+    $ cd /usr/local/gosync
+    $ sudo ./gosync sync users --new
+
+To sync all existing users:
+
+    $ cd /usr/local/gosync
+    $ sudo ./gosync sync users --updated
+
+To sync a project:
+
+    $ cd /usr/local/gosync
+    $ sudo ./gosync sync groups
+
+Note that after bringing in a new user, groups must _also_ be synchronized in order to grant the new user access. Thus the following idiom:
+
+    $ cd /usr/local/gosync
+    $ sudo ./gosync sync users --new
+    $ sudo ./gosync sync groups
 
 
-##Cronjob scripts
-(location of the cronjob scripts, in case we want to refer them or to check they are running)
+## Locks
 
+In order to prevent one instance of `gosync` from conflicting with another, `gosync` uses a lock file. All uses of `gosync` that might conflict with another use of `gosync` require an exclusive lock.  A `gosync` command will run immediately if it can; otherwise it will "spin" until the lock is available.  The `gosync waitlock` command will wait for the lock to become available, then exit:
 
+    $ cd /usr/local/gosync
+    $ sudo ./gosync waitlock
+    gosync NOTICE: lock file exists: pid = 28483 [waiting]
+    gosync NOTICE: lock file exists: pid = 28483 [waiting]
+    gosync NOTICE: lock file exists: pid = 28483 [waiting]
+    gosync NOTICE: lock file exists: pid = 28483 [waiting]
+    $ 
 
-
-
-
-
-
+Again, any sync command will wait for the lock in this way.  To prevent a command from waiting, use the `--nowait` (or `--nw`) option. If the lock is unavailable, `gosync` will exit right away without doing whatever you asked it to do.
 
