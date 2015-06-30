@@ -142,12 +142,12 @@ Upper case is required.
 
 The table extension allows you to construct simple tables.  By way of example:
 
-  \| President \| Year \| Vice President \|
-  \|--\|--\|--\|
-  \| Washington \| 1789 \| Adams \|
-  \| Adams \| 1797 \| Jefferson \|
-  \| Jefferson \| 1801 \| Burr, Clinton \|
-  \| Madison \| 1809 \| Clinton, Gerry \|
+  `| President | Year | Vice President |`
+  `|--|--|--|`
+  `| Washington | 1789 | Adams |`
+  `| Adams | 1797 | Jefferson |`
+  `| Jefferson | 1801 | Burr, Clinton |`
+  `| Madison | 1809 | Clinton, Gerry |`
 
 | President | Year | Vice President |
 |--|--|--|
