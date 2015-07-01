@@ -12,7 +12,7 @@ Markdown) that can be converted to HTML or to any other presentation.
 
 # Reviewing content
 
-For reviewing content, it's _critical_ to view the [kbase][Support Knowledge Base]
+For reviewing content, it's _critical_ to view the [Support Knowledge Base][kbase]
 (formerly the ConnectBook) *as an unprivileged user*.  If you are not an agent
 in the help desk, then you're fine.  But if you are an agent, you need to
 visit the site in another browser, or using your browser's "Incognito",
@@ -23,7 +23,7 @@ it will be published.
 
 At the end of any article that you want to edit, you'll find a statement like this one:
 
-> This page was updated on Jul 01, 2015 at 12:33 from [example-link][example.md].
+> This page was updated on Jul 01, 2015 at 12:33 from [example.md][example-link].
 
 [example-link]: https://github.com/OSGConnect/connectbook/blob/master/example.md
 
@@ -31,7 +31,7 @@ This is a link directly to the source document in GitHub.  Click it, or copy its
 and paste into another browser, and you'll see the document rendered by GitHub.  Take
 note: this view is probably slightly different from what you see in the Knowledge Base.
 This is because there's a difference between regular Markdown (with extensions) and
-the "[gfm][GitHub-Flavored Markdown]" that GitHub uses.  Don't worry how it looks
+the "[GitHub-Flavored Markdown][gfm]" that GitHub uses.  Don't worry how it looks
 in GitHub.
 
 [gfm]: https://help.github.com/articles/github-flavored-markdown/
@@ -41,7 +41,7 @@ in GitHub.
 Once you see the document in GitHub, find the "edit" button in the action bar:
 ![editbar][editbar]
 
-[editbar]: https://raw.githubusercontent.com/OSGConnect/connectbook/master/admin/connectbook-high-level.png
+[editbar]: https://raw.githubusercontent.com/OSGConnect/connectbook/master/admin/github-edit.jpg
 
 The edit button is the pencil icon near the right edge. Click it, and you'll enter
 a text editor where you can edit the Markdown.
