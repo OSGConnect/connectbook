@@ -9,24 +9,6 @@ in GitHub. This provides us version tracking and co-authoring capabilities,
 as well as allowing us to maintain documents in a neutral format (we chose
 Markdown) that can be converted to HTML or to any other presentation.
 
-# About Markdown
-
-You can learn more about Markdown here:
-
-* http://daringfireball.net/projects/markdown/
-* http://whatismarkdown.com/
-* http://www.squarespace.com/display/ShowHelp?section=Markdown
-
-
-Tools for editing Markdown:
-
-* Web
-  * http://daringfireball.net/projects/markdown/dingus
-  * http://dillinger.io/
-  * https://stackedit.io/
-* MacOS
-  * http://mouapp.com/
-  * http://texts.io/
 
 # Data flow
 
