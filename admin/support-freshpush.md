@@ -9,7 +9,26 @@ in GitHub. This provides us version tracking and co-authoring capabilities,
 as well as allowing us to maintain documents in a neutral format (we chose
 Markdown) that can be converted to HTML or to any other presentation.
 
-# Date flow
+# About Markdown
+
+You can learn more about Markdown here:
+
+* http://daringfireball.net/projects/markdown/
+* http://whatismarkdown.com/
+* http://www.squarespace.com/display/ShowHelp?section=Markdown
+
+
+Tools for editing Markdown:
+
+* Web
+  * http://daringfireball.net/projects/markdown/dingus
+  * http://dillinger.io/
+  * https://stackedit.io/
+* MacOS
+  * http://mouapp.com/
+  * http://texts.io/
+
+# Data flow
 
 Here is a high-level view of the data flow:
 
@@ -151,7 +170,10 @@ The table extension allows you to construct simple tables.  By way of example:
 
 (View this document's source to see the Markdown.)
 
-_Note that GitHub does not support tables, and your edits **will** look wrong in GitHub._
+## Caveats
+
+Note that GitHub does not support either of these extensions, and your edits **will**
+look wrong in GitHub's Markdown viewer.
 
 
 # Provenance
