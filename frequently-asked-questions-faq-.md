@@ -1,42 +1,43 @@
 [title]: - "Frequent Asked Questions"
 
 ##Getting Started
+
 **Who is eligible to become the user of OSG Connect?**
 
-Any researcher having an affiliation with a U.S. institution (college, university, national laboratory or research foundation) whose science application can benefit from distributed high-throughput computing resources is eligible to use OSG Connect.
+Any researcher with an affiliation with an U.S. institution (college, university, national laboratory or research foundation) is eligible to become an OSG Connect user.  Researchers outside US with affiliations to US groups may be eligible for membership.  However, these potential users should contact us directly to discuss membership.
 
 **How do I become an user of OSG Connect?**
 
-Please follow the steps outlined in the Sign Up process. 
+Please follow the steps outlined in the [Sign Up process](http://osgconnect.net/signup). 
 
 ##Software
 **What software packages are available?**
 
-The available software are listed here. 
+The available software are listed [here](http://support.opensciencegrid.org/solution/categories/5000160799/folders/5000260921/articles/5000634397-software-modules-catalog). 
  
 **How do I load a specific software application?**
 
-For example, we load NAMD software:
+For example, there are three different versions of Gromacs available (4.6.5, 5.0.0, and 5.0.5).  To load Gromacs 5.0.5:
 
 
     $ source /cvmfs/oasis.opensciencegrid.org/osg/modules/lmod/current/init/bash
-    $ module load namd
+    $ module load gromacs/5.0.5
 
 
-See the section "Accessing Software using Distributed Environment Modules" for details.
+See the section ["Accessing Software using Distributed Environment Modules"](http://support.opensciencegrid.org/solution/categories/5000160799/folders/5000260921/articles/5000634394-accessing-software-using-distributed-environment-modules) for details.
  
 **Are there any restrictions on installing commercial softwares?**
 
-We only maintain open source software. At present, we do not have or support commercial software. 
+We only maintain software that is freely distributable. At present, we do not have or support most commercial software due to licensing . 
  
 **Can I request for system wide installation of  the open source software useful for my research?**
 
-Yes. Please contact  support@opensciencegrid.org
+Yes. Please contact <support@opensciencegrid.org>.
 
 ##Running Jobs
 **What type of computation is a good match or NOT a good match on OSG Connect?**
 
-It is important for the user to carefully check the computational requirements. Please refer the section on "Best practices - Computation" for full detail.
+It is important for the user to carefully check the computational requirements of his or her workflow. Please refer the section on ["Is high throughput computing for you?"](http://support.opensciencegrid.org/solution/categories/5000131843/folders/5000209523/articles/5000632058-is-high-throughput-computing-for-you-) for full detail.
 
 **What job scheduler is being used on OSG Connect?**
 
@@ -44,7 +45,7 @@ HTCondor.
  
 **How do I submit a computing job?**
 
-Jobs are submitted via HTCondor schedular. Please refer the "QuickStart" or User Guide for the detail.
+Jobs are submitted via HTCondor scheduler. Please refer the "QuickStart" or User Guide for the detail.
  
 **What type of computation is a good match or NOT a good match on OSG Connect?**
 
@@ -64,9 +65,9 @@ Scientific Workflow Management (SWM)
 
 Scientific workflow management systems help to deal with computations or data manipulations.
 
-**What SWM systems are recommended on OSG?**
+**What workflow management systems are recommended on OSG?**
 
-DAGMan, Pegasus and Swift.
+We support and distribute DAGMan, Pegasus and Swift for workflow management.
 
 ##Workshops and Training
 *Do you plan to offer training sessions and workshop?*
@@ -75,11 +76,11 @@ We plan to offer workshops for the researchers on multiple locations. Please che
  
 **Who may attend the workshop?**
 
-Student, post doc, staff and faculty.
+Workshops are typically open to students, post docs, staff and faculty.
  
 **What are the topics covered in a typical workshops?**
 
-We plan to cover  shell script, python (or R) programming, version control with git  and distributed hight throughout computing.  
+We typically cover shell scripting, python (or R) programming, version control with git  and distributed high throughout computing.  
 
 **How to cite or acknowledge OSG?**
 
