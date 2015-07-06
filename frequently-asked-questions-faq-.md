@@ -24,7 +24,7 @@ For example, there are three different versions of Gromacs available (4.6.5, 5.0
     $ module load gromacs/5.0.5
 
 
-See the section ["Accessing Software using Distributed Environment Modules"](http://support.opensciencegrid.org/solution/categories/5000160799/folders/5000260921/articles/5000634394-accessing-software-using-distributed-environment-modules) for details.
+See the section on [Accessing Software using Distributed Environment Modules](http://support.opensciencegrid.org/solution/categories/5000160799/folders/5000260921/articles/5000634394-accessing-software-using-distributed-environment-modules) for details.
  
 **Are there any restrictions on installing commercial softwares?**
 
@@ -37,15 +37,15 @@ Yes. Please contact <support@opensciencegrid.org>.
 ##Running Jobs
 **What type of computation is a good match or NOT a good match on OSG Connect?**
 
-It is important for the user to carefully check the computational requirements of his or her workflow. Please refer the section on ["Is high throughput computing for you?"](http://support.opensciencegrid.org/solution/categories/5000131843/folders/5000209523/articles/5000632058-is-high-throughput-computing-for-you-) for full detail.
+It is important for the user to carefully check the computational requirements of his or her workflow. Please refer to ["this section"](http://support.opensciencegrid.org/solution/categories/5000131843/folders/5000209523/articles/5000632058-is-high-throughput-computing-for-you-) for more details on how to determine if your computation matches up well with OSG Connect's model.
 
 **What job scheduler is being used on OSG Connect?**
 
-HTCondor.
+We use HTCondor to schedule and run jobs.
  
 **How do I submit a computing job?**
 
-Jobs are submitted via HTCondor scheduler. Please refer the [QuickStart](http://support.opensciencegrid.org/support/solutions/articles/5000633410-osg-connect-quickstart) or User Guide for the detail.
+Jobs are submitted via HTCondor scheduler. Please refer the [QuickStart](http://support.opensciencegrid.org/support/solutions/articles/5000633410-osg-connect-quickstart) or User Guide for more details on submitting and managing jobs.
  
 
 ##Data Storage and Transfer
