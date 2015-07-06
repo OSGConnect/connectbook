@@ -45,25 +45,24 @@ HTCondor.
  
 **How do I submit a computing job?**
 
-Jobs are submitted via HTCondor scheduler. Please refer the "QuickStart" or User Guide for the detail.
+Jobs are submitted via HTCondor scheduler. Please refer the [QuickStart](http://support.opensciencegrid.org/support/solutions/articles/5000633410-osg-connect-quickstart) or User Guide for the detail.
  
-**What type of computation is a good match or NOT a good match on OSG Connect?**
-
-Please refer the section on "Best practices - Computation" for more details.
 
 ##Data Storage and Transfer
 **What is the best way to process large volume of data?**
 
-Use the "stash"  storage to  process large data. Please refer the section "Data Solutions" for more details. 
+Use the Stash storage to store and process large data. Please refer the section [Data Solutions](http://support.opensciencegrid.org/support/solutions/folders/5000262152) for more details. 
  
-**How do I transfer data from stash to Midway and vice versa?**
+**How do I transfer data from Stash to my system and vice versa?**
 
-You can transfer data using  - scp, rsync and globus. See the section on "Data Solutions" for more details.
-Scientific Workflow Management (SWM)
+You can transfer data using scp, rsync and globus. See the section on [Transferring Data to OSG Connect](http://support.opensciencegrid.org/support/solutions/folders/5000260918) for more details.
 
-**What is the use of scientific workflow management?**
 
-Scientific workflow management systems help to deal with computations or data manipulations.
+## Workflow Management
+
+**How do I run and manage complex workflows?**
+
+In order to deal with workflows that have multiple steps and/or multiple files to transfer, we advise using a workflow management system.  A workflow management system allows you to define different computational steps in your workflow and indicate how inputs and outputs should be transferred between these steps.  Once you define a workflow, the workflow management system will then run your workflow, automatically retrying failed jobs and transferrring files between different steps.
 
 **What workflow management systems are recommended on OSG?**
 
