@@ -1,3 +1,5 @@
+[TOC]
+
 [title]: - "Create user login and projects by manual intervention with gosync"
 
 # Automation
