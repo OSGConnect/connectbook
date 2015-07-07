@@ -50,7 +50,7 @@ Project Membership
 The project's principal investigator, or his/her delegate, is responsible for
 project membership. We will consult the PI or contact for group membership
 request approvals. The PI may also be assigned an "Administrator" role of the
-subgroup, and can invite OSG Connect members to the group directly.[Contact
+subgroup, and can invite OSG Connect members to the group directly. [Contact
 us](<mailto:connect-support@opensciencegrid.org>) if this interests you.
 
 ProjectName in HTCondor 
@@ -72,25 +72,4 @@ The project's resource usage appears in the OSG accounting system (Gratia) with
 its name converted to ALL CAPS. For example, a project named BiomechAnalysis
 would become BIOMECHANALYSIS in Gratia.
 
- 
 
-About the OSG
--------------
-
-The Open Science Grid (OSG) is a consortium of research communities who promote
-science via sharing of computing resources. We enable a framework of distributed
-computing and storage resources, a set of services and methods that enable
-better access to ever increasing computing resources for researchers and
-communities, and principles and software that enable distributed high
-through-put computing (DHTC) for users and communities at all scales.
-
-The OSG does not own the computing, storage, or network resources used by the
-scientific community. The resources accessible through the OSG are contributed
-by the community and organized by the OSG; an overview is available at [An
-Introduction to
-OSG](<http://osg-docdb.opensciencegrid.org/0008/000839/004/OSG%20Intro%20v23.pdf>).
-Today, the OSG community brings together over 100 sites that provide
-computational and storage resources; a current snapshot of deployment and usage
-is available at the [OSG Usage Display](<http://display.grid.iu.edu/>).
-Additional “how to” information is available at [An Introduction to Grid
-Users](<https://www.opensciencegrid.org/bin/view/Documentation/UsingTheGrid>).
