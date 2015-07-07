@@ -21,13 +21,13 @@ software files, that the **PATH** (folders where executables can be found) may b
 
 First  login to `login.osgconnect.net`. Then, to create a working directory, run `tutorial software`.  
 Then make sure that you have a public directory exported via Web. This directory should have been created for you 
-and be accessible at an URL like https://stash.osgconnect.net/+user/ where "user" is your user name on OSG Connect :
+and be accessible at an URL like `https://stash.osgconnect.net/+user/` where "user" is your user name on OSG Connect :
 
 	$ ls -al ~/data/public
 
 ## Distributing Applications Using Stash and HTTP
 
-This example is very similar to the one in **Access Stash remotely from your job using HTTP** page.  You will be preparing the 
+This example is very similar to the one in [Access Stash remotely from your job using HTTP](http://support.opensciencegrid.org/support/solutions/articles/5000639798-access-stash-remotely-using-http) page.  You will be preparing the 
 input files for the job, including an executable, and transferring them via HTTP. When you are transferring an executable 
 instead of data you have to pay attention because Web servers or commands like wget frequently change the file permissions 
 and this can cause the job to fail. To make sure that your program is executable either set manually the permission on the 
