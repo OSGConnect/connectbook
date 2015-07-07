@@ -183,30 +183,6 @@ The **connect q** command tells the status of submitted jobs:
 	10 jobs; 0 completed, 0 removed, 3 idle, 7 running, 0 held, 0 suspended
 
 
-### Job history
-
-Once your jobs have finished, you can get information about its
-execution from the **connect history** command. In this example:
-
-
-	$ connect history 1234
- 	ID     OWNER          SUBMITTED   RUN_TIME     ST COMPLETED   CMD
-	1234.5   username             4/29 16:42   0+00:00:27 C   4/29 16:45 /home/...
-	1234.4   username             4/29 16:42   0+00:01:18 C   4/29 16:45 /home/...
-	1234.1   username             4/29 16:42   0+00:00:27 C   4/29 16:45 /home/...
-	1234.0   username             4/29 16:42   0+00:00:27 C   4/29 16:45 /home/...
-	1234.6   username             4/29 16:42   0+00:00:52 C   4/29 16:44 /home/...
-	1234.8   username             4/29 16:42   0+00:00:52 C   4/29 16:44 /home/...
-	1234.7   username             4/29 16:42   0+00:00:52 C   4/29 16:44 /home/...
-	1234.9   username             4/29 16:42   0+00:00:51 C   4/29 16:44 /home/...
-	1234.2   username             4/29 16:42   0+00:00:51 C   4/29 16:44 /home/...
-	1234.3   username             4/29 16:42   0+00:00:51 C   4/29 16:44 /home/...
-
-
-Note: You can see much more information about status
-using the -long option (e.g. ```connect history -long 1234```).
-
-
 ### Retrieve outputs
 
 Once your job is complete, or if it is not yet complete but you want to
@@ -219,22 +195,6 @@ connect server.  Do that using **connect pull**.
 
 Again, the plusses and dots tell you how much file transfer activity
 occurred.
-
-### Updating the remote
-
-You can also use `connect push` to update the server's copy of your
-job.  It works exactly like `connect pull` does, but goes in the other
-direction.  (As you suspect, `connect push` is done implicitly each time
-you `connect submit`.)
-
-
-### Additional options
-
-If you need performance metrics, you can add `-t` or `--time`
-to a `push` or `pull` command.
-
-If you want to see the name of each file transferred, add the
-`-v` or `--verbose` option.
 
 
 ### Check the job output
@@ -262,6 +222,191 @@ Read one of the output files. It should look something like this:
 	Science complete!
 	
 For this example we see the first job in the submission (1234.0) ran on a free node at Syracuse University.
+
+
+## Job history
+
+Once your jobs have finished, you can get information about their
+execution from the **connect history** command. In this example:
+
+
+	$ connect history 1234
+ 	ID     OWNER          SUBMITTED   RUN_TIME     ST COMPLETED   CMD
+	1234.5   username             4/29 16:42   0+00:00:27 C   4/29 16:45 /home/...
+	1234.4   username             4/29 16:42   0+00:01:18 C   4/29 16:45 /home/...
+	1234.1   username             4/29 16:42   0+00:00:27 C   4/29 16:45 /home/...
+	1234.0   username             4/29 16:42   0+00:00:27 C   4/29 16:45 /home/...
+	1234.6   username             4/29 16:42   0+00:00:52 C   4/29 16:44 /home/...
+	1234.8   username             4/29 16:42   0+00:00:52 C   4/29 16:44 /home/...
+	1234.7   username             4/29 16:42   0+00:00:52 C   4/29 16:44 /home/...
+	1234.9   username             4/29 16:42   0+00:00:51 C   4/29 16:44 /home/...
+	1234.2   username             4/29 16:42   0+00:00:51 C   4/29 16:44 /home/...
+	1234.3   username             4/29 16:42   0+00:00:51 C   4/29 16:44 /home/...
+
+
+Note: You can see much more information about status
+using the -long option (e.g. ```connect history -long 1234```).
+
+
+## Job storage and synchronization
+
+So far we haven't explained in detail what really happens when you use
+the Connect Client to interact with OSG Connect.  Let's get a little
+deeper into that.
+
+All the files associated with any given workload are stored together
+in a directory.  Coining a term, we call this the _job repository_ or
+_job repo_.  A single job repo should contain enough information for
+OSG Connect to submit work to the grid.  Every job repo must have an
+HTCondor submit file.  Beyond that, there could be input data, state
+metadata, code, supplementary libraries, documentation, output...
+anything that might be related.  Some jobs might pull inputs from
+another location (e.g. Stash or another web site), and not have any
+inputs in the job repo.  Some jobs will deliver output some other place.
+Some will bring their code along, while others will load job code from
+shared filesystems (e.g. OASIS).  There is a lot of variability that our
+tutorials will help you explore.
+
+One thing is constant, however: not only does your job repo exist where
+you log in, it _also_ must exist on the OSG Connect service.  Keeping
+your local copy of the job repo in sync with the server copy is a
+primary task of the Connect Client.
+
+
+### Working with multiple repositories
+
+Most users will have several job repos that they use, either serially or
+in parallel.  The Connect Client must keep these separate.  You separate
+job repos on the client simply by keeping different jobs in different
+directories, but on the server, the Connect Client must manage these job
+repos.  The client does not control or advise the server's management of
+job repos; they simply exist, and have names that correspond to their
+directory names on the client system.
+
+> _N.B. Currently, the client is unable to differentiate separate job
+> repos with the same name.  This will be addressed in a future version
+> of the software._
+
+How do you know what repos you have?  If you only use one client system,
+and you keep your work very well organized, this may be a simple matter.
+But in case you need a reminder of what the server knows about, you
+can obtain a listing with `connect list`:
+
+	$ connect list
+	connect-client
+	connectbook
+	ratchet
+	tutorial-quickstart
+	tz
+
+Add the `-v` option to see more detail (this makes the listing a
+touch slower):
+
+	$ connect list -v
+	connect-client   [51 files, 158m total]
+	connectbook   [1 files, 20b total]
+	ratchet   [0 files, 0b total]
+	tutorial-quickstart   [2 files, 14k total]
+	tz   [1 files, 11b total]
+
+
+## Data handling
+
+We've already seen how to update the local job repository using `connect
+pull`, retrieving all files and outputs modified by the running job.
+
+### Updating the remote
+
+You can also use `connect push` to update the server's copy of your
+job.  It works exactly like `connect pull` does, but goes in the other
+direction.  (As you suspect, `connect push` is done implicitly each time
+you `connect submit`.)
+
+
+### Additional options
+
+If you need performance metrics on data transfer, you can add `-t` or
+`--time` to a `push` or `pull` command.
+
+If you want to see the name of each file transferred, add the
+`-v` or `--verbose` option.
+
+
+### Transfer using external tools
+
+In general, for smaller quantities of data, we recommend staying with
+`connect push` and `connect pull` for data transfer to your jobs.
+But there are cases, typically involving either a large number of
+separate files or a large net quantity of data, where you will want
+to send or retrieve data using something more efficient, like Globus.
+To do that, you need to know where your job is stored on the OSG
+Connect server.  `connect push -w` or `connect push --where` will
+tell you that.  (It also works for `pull`.)
+
+	$ pwd
+	/home/dgc/projects/ratchet
+	
+	$ connect push -w
+	/stash/user/dgc/ratchet
+	
+	$ connect pull --where
+	/stash/user/dgc/ratchet
+
+
+## Special tasks and preparations
+
+In some cases it's useful or necessary to be able to work with your job
+_on the server itself_.  For example, you might have code that must be
+compiled before submission, and you want to ensure compatibility with
+the OSG by compiling it on OSG Connect instead of locally.
+
+For cases like this, there is `connect shell`.  This command gives you
+an immediate (bash) login shell on the OSG Connect server, with your
+home directory set to the job repo directory -- right away you'll see
+your job files there.
+
+	$ cd tutorial-quickstart
+	$ connect shell
+	
+	[connected to connect://dgc@connect-client.osgconnect.net/tutorial-quickstart; ^D to disconnect]
+	sh-4.1$ ls
+	README.md  job.log     log	 test		    tutorial02.submit
+	job.error  job.output  short.sh  tutorial01.submit  tutorial03.submit
+
+This is a full-fledged shell -- do whatever you need to do to prepare
+your job.  When you're done, log out with `exit` or by pressing
+control-D.  A `connect pull` will fetch anything you changed while
+shelled in, and bring it back to your local system.
+
+You can also use `connect shell` for one-off commands, like ssh.
+
+	$ connect shell uname -a
+	Linux login02.osgconnect.net 3.18.13-UL1.el6 #2 SMP Fri May 15 09:34:50 CDT 2015 x86_64 x86_64 x86_64 GNU/Linux
+
+
+## Runtime information
+
+There may be times that it's useful to know more about your copy of the
+Connect Client, the system that it is running on, or the user account
+it's running under.  There's a command for that:
+
+	$ connect version
+	Client information:
+	| Connect client version: v0.4
+	| Python version: 2.7.10 (default, May 30 2015, 23:49:24) 
+	|   [GCC 4.2.1 Compatible Apple LLVM 6.1.0 (clang-602.0.53)]
+	| Prefix: /opt/local/Library/Frameworks/Python.framework/Versions/2.7
+	| User profile: [dgc@connect-client.osgconnect.net: user=dgc, server=connect-client.osgconnect.net]
+	
+	System:
+	| Darwin paranoia 14.3.0 Darwin Kernel Version 14.3.0: Mon Mar 23 11:59:05 PDT 2015; root:xnu-2782.20.48~5/RELEASE_X86_64 x86_64
+	|  3:50  up 14 days, 10:23, 4 users, load averages: 3.24 3.36 3.32
+
+In this case, I'm running the client on my Macbook, using MacPorts.
+The "user profile" information tells what remote account the client
+remembers your using last.  It will reuse this account information for
+the next server interaction.
+
 
 # Getting Help
 For assistance or questions, please email the OSG User Support team at
