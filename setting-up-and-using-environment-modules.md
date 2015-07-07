@@ -7,7 +7,7 @@
 
 This page covers use of the module command in the OSG computing environment.  
 
-Environment modules have historically been used in HPC environments to provide users with an easy way to access different versions of software and to access various libraries, compilers, and software (c.f. the wikipedia reference).  OSG has implemented a version based on Lmod to provide the typical module commands on any site in the OSG.  You can test workflows on the OSG Connect login node and then submit the same workflow without any changes.
+Environment modules have historically been used in HPC environments to provide users with an easy way to access different versions of software and to access various libraries, compilers, and software (c.f. the [wikipedia reference](https://en.wikipedia.org/wiki/Environment_Modules_%28software%29)).  OSG has implemented a version based on Lmod to provide the typical module commands on any site in the OSG.  You can test workflows on the OSG Connect login node and then submit the same workflow without any changes.
 Using modules on OSG Connect
 
 Use `module avail` to see available software applications and libraries:
@@ -138,6 +138,6 @@ the following condition to the requirements in your condor  job submission file.
 
 ## Available Software
 
-A list of currently installed software is available here. 
+A list of currently installed software is available [here](http://support.opensciencegrid.org/support/solutions/articles/5000634397-software-modules-catalog). 
 
  
