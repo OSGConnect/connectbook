@@ -4,7 +4,7 @@
 
 **Who is eligible to become the user of OSG Connect?**
 
-Any researcher with an affiliation with an U.S. institution (college, university, national laboratory or research foundation) is eligible to become an OSG Connect user.  Researchers outside US with affiliations to US groups may be eligible for membership.  However, these potential users should contact us directly to discuss membership.
+Any researcher with an affiliation with an U.S. institution (college, university, national laboratory or research foundation) is eligible to become an OSG Connect user.  Researchers outside US with affiliations to US groups may be eligible for membership if they are sponsored by a collaborator within the US.  However, these potential users should contact us directly to discuss membership.
 
 **How do I become an user of OSG Connect?**
 
@@ -13,12 +13,12 @@ Please follow the steps outlined in the [Sign Up process](http://osgconnect.net/
 ##Software
 **What software packages are available?**
 
-The available software are listed [here](http://support.opensciencegrid.org/solution/categories/5000160799/folders/5000260921/articles/5000634397-software-modules-catalog). 
+The available software are listed [here](http://support.opensciencegrid.org/solution/categories/5000160799/folders/5000260921/articles/5000634397-software-modules-catalog).   In general, we support most popular software that fits the distributed high thoroughput model and can add software upon request.
  
 **How do I load a specific software application?**
 
-For example, there are three different versions of Gromacs available (4.6.5, 5.0.0, and 5.0.5).  To load Gromacs 5.0.5:
-
+Generally, you'll need to give the version of after the module name when loading the module.
+For example, there are three different versions of Gromacs available (4.6.5, 5.0.0, and 5.0.5).  To load Gromacs 5.0.5, you would run:
 
     $ source /cvmfs/oasis.opensciencegrid.org/osg/modules/lmod/current/init/bash
     $ module load gromacs/5.0.5
@@ -28,7 +28,7 @@ See the section on [Accessing Software using Distributed Environment Modules](ht
  
 **Are there any restrictions on installing commercial softwares?**
 
-We only maintain software that is freely distributable. At present, we do not have or support most commercial software due to licensing . 
+We only provide software that is freely distributable. At present, we do not have or support most commercial software due to licensing issues. 
  
 **Can I request for system wide installation of  the open source software useful for my research?**
 
