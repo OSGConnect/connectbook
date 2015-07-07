@@ -14,7 +14,7 @@ Transfer data between existing servers
 -   From the [portal.osgconnect.net](<http://portal.osgconnect.net/>) web site,
     click the Transfer ▸ Start Transfer menu.
 
--   On one side, enter osgconnect\#stash into the endpoint field, and press
+-   On one side, enter `osgconnect\#stash` into the endpoint field, and press
     "Return" or the "Go" button.  
 
 -   On the other side, enter the other endpoint from which you want to transfer
