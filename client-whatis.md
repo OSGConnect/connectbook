@@ -22,13 +22,11 @@ national grid.
 
 OSG works with resource providers to set up Connect Client access at
 the system level.  If the `connect-client` package or module is already
-installed at your site, you can
-[start using it today](support/solutions/articles/5000621976).
-If not, we can
-[work with your site operations team](/support/solutions/articles/5000640325)
-to provide it, or you can
-[install it for yourself](/support/solutions/articles/5000640326).
+installed at your site, you can [start using it today][using].  If not,
+we can [work with your site operations team][install-rp] to provide it,
+or you can [install it for yourself][install-user].
 
 [client]: https://github.com/CI-Connect/connect-client
-
-
+[using]: /support/solutions/articles/5000621976
+[install-rp]: /support/solutions/articles/5000640325
+[install-self]: /support/solutions/articles/5000640326
