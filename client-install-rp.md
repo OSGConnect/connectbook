@@ -17,7 +17,7 @@ directory to that copy. **The --recursive option is important!**
 
 Typically you'll want to install a release version.
 
-	$ git checkout v0.3
+	$ git checkout v0.4
 
 # Installation using environment modules
 
@@ -33,10 +33,9 @@ Choose a directory to install Connect Client into.  You should
 know what directories are used at your site.  For these examples
 we'll `/software` as the location of software tools, and
 `/software/modulefiles` as the location of module files.
-Run `./install.sh` with these two directories and a version
-number (e.g. 0.3):
+Run `./install.sh` with these two directories:
 
-	$ ./install.sh -site /software/connect-client /software/modulefiles 0.3
+	$ ./install.sh -site /software/connect-client /software/modulefiles
 
 **Note the `-site` option.**
 
@@ -46,7 +45,8 @@ Client will be loaded by the Connect Client modulefile _each time you
 load the `connect-client` module_. This ensures that dependencies are
 handled internally. To reduce unnecessary module loads, be sure not to
 load unnecessary modules before installing.  You may wish to hand-edit
-the modulefile to ensure that only true dependencies are listed.
+the modulefile to ensure that only true dependencies are listed.  Search
+for `module load` in the installed modulefile.
 
 
 # Without environment modules
