@@ -69,7 +69,7 @@ In order to deal with workflows that have multiple steps and/or multiple files t
 We support and distribute DAGMan, Pegasus and Swift for workflow management.
 
 ##Workshops and Training
-**Do you plan to offer training sessions and workshop?*
+**Do you plan to offer training sessions and workshop?**
 
 We plan to offer workshops for the researchers on multiple locations. Please check our events page for further information about the workshop dates and venue. 
  
