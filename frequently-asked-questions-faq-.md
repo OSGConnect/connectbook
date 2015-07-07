@@ -45,13 +45,13 @@ We use HTCondor to schedule and run jobs.
  
 **How do I submit a computing job?**
 
-Jobs are submitted via HTCondor scheduler. Please refer the [QuickStart](http://support.opensciencegrid.org/support/solutions/articles/5000633410-osg-connect-quickstart) or User Guide for more details on submitting and managing jobs.
+Jobs are submitted via HTCondor scheduler. Please refer the [QuickStart](http://support.opensciencegrid.org/support/solutions/articles/5000633410-osg-connect-quickstart) for more details on submitting and managing jobs.
  
 
 ##Data Storage and Transfer
 **What is the best way to process large volume of data?**
 
-Use the Stash storage to store and process large data. Please refer the section [Data Solutions](http://support.opensciencegrid.org/support/solutions/folders/5000262152) for more details. 
+Use the Stash data system to store and process large volumes of data. Please refer the section [Data Solutions](http://support.opensciencegrid.org/support/solutions/folders/5000262152) for more details. 
  
 **How do I transfer data from Stash to my system and vice versa?**
 
@@ -88,8 +88,9 @@ Whenever you make use of Open Science Grid resources, services or tools, we woul
 This research was done using resources provided by the Open Science Grid. 
 We recommend the following references for citations
 
-    1) Pordes, R. et al. (2007). "The Open Science Grid", J. Phys. Conf. Ser. 78, 012057.doi:10.1088/1742-6596/78/1/012057.
-    2) Sfiligoi, I., Bradley, D. C., Holzman, B., Mhashilkar, P., Padhi, S. and Wurthwein, F. (2009). "The Pilot Way to Grid Resources Using glideinWMS", 2009 WRI World Congress on Computer Science and Information Engineering, Vol. 2, pp. 428–432. doi:10.1109/CSIE.2009.950.
+> 1) Pordes, R. et al. (2007). "The Open Science Grid", J. Phys. Conf. Ser. 78, 012057.doi:10.1088/1742-6596/78/1/012057.
+
+> 2) Sfiligoi, I., Bradley, D. C., Holzman, B., Mhashilkar, P., Padhi, S. and Wurthwein, F. (2009). "The Pilot Way to Grid Resources Using glideinWMS", 2009 WRI World Congress on Computer Science and Information Engineering, Vol. 2, pp. 428–432. doi:10.1109/CSIE.2009.950.
  
 
  
