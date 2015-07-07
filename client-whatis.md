@@ -29,4 +29,4 @@ or you can [install it for yourself][install-user].
 [client]: https://github.com/CI-Connect/connect-client
 [using]: /support/solutions/articles/5000621976
 [install-rp]: /support/solutions/articles/5000640325
-[install-self]: /support/solutions/articles/5000640326
+[install-user]: /support/solutions/articles/5000640326
