@@ -7,7 +7,7 @@ Stash (http://stash.osgconnect.net/) is a temporary data storage solution for yo
 
 Usage
 -----
-If you have datasets on your campus' storage system, by far the easiest method is to use Globus Online as the file transfer service.  
+If you have datasets on your campus' storage system, by far the easiest method is to use Globus as the file transfer service.  
 
 Stash is mounted on all OSG Connect submit nodes (`login.osgconnect.net`) at `~/data`, and is visible to workers via Parrot/Chirp. The portion of your Stash designated public is also available directly on the WWW as `http://stash.osgconnect.net/+yourusername`.
 
