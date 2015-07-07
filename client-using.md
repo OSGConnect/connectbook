@@ -10,33 +10,70 @@
 For a list of available commands, enter `connect` from the command line:
 
 	$ connect 
-	This is Connect Client v0.3-1-g59c218.
+	This is Connect Client v0.4.
 	usage: connect [opts] <subcommand> [args]
 	       connect [opts] dag <dagfile>
+	       connect [opts] histogram 
 	       connect [opts] history <condor_history arguments>
 	       connect [opts] list [-v]
 	       connect [opts] modules 
-	       connect [opts] pull [-v|--verbose] [-w|--where] [repository-dir]
-	       connect [opts] push [-v|--verbose] [-w|--where] [repository-dir]
+	       connect [opts] pull [-t|--time] [-v|--verbose] [-w|--where] [repository-dir]
+	       connect [opts] push [-t|--time] [-v|--verbose] [-w|--where] [repository-dir]
 	       connect [opts] q <condor_q arguments>
 	       connect [opts] revoke 
 	       connect [opts] rm <condor_rm arguments>
 	       connect [opts] run <condor_run arguments>
-	       connect [opts] setup [--replace-keys] [--update-keys] [servername]
+	       connect [opts] setup [--replace-keys] [--update-keys] [user][@servername]
 	       connect [opts] shell [command]
 	       connect [opts] status <condor_status arguments>
 	       connect [opts] submit <submitfile>
-	       connect [opts] sync [-v|--verbose] [-w|--where] [repository-dir]
+	       connect [opts] sync [-t|--time] [-v|--verbose] [-w|--where] [repository-dir]
 	       connect [opts] test  
+	       connect [opts] version 
 	       connect [opts] wait <condor_wait arguments>
-	
-	opts:
-	    -s|--server hostname       set connect server name
-	    -u|--user username         set connect server user name
-	    -r|--remote directory      set connect server directory name
-	    -v|--verbose               show additional information
 
 To run any of these commands, just enter `connect [opts] [command name]`.
+
+
+## First-time setup
+
+The first time you use the Connect Client from a given computer or
+cluster, you will need to run the `setup` command to prepare your
+remote access to Connect services.  You will need the username
+and password you used to register for OSG Connect.  (If you have not
+previously [registered for OSG Connect][register], please do that
+first.)
+
+[register]: http://support.opensciencegrid.org/solution/categories/5000160799/folders/5000260743/articles/5000632072
+
+To set up the client, simply run `connect setup username`, where
+`username` is your OSG Connect user name.  (If it's the same as
+your local user name you may omit this.)  You will be prompted
+for a password, then your remote access will be ready.
+
+	$ connect setup remote-username
+	Password for remote-username@connect-client.osgconnect.net: 
+	notice: Ongoing client access has been authorized at connect-client.osgconnect.net.
+	notice: Use "connect test" to verify access.
+	
+	$ connect test
+	Success! Your client access to connect-client.osgconnect.net is working.
+
+> N.B. `connect-client.osgconnect.net` is the default server name for OSG
+> Connect users.  If you are using a different CI Connect service, such as
+> ATLAS Connect, CMS Connect, etc., please check that site's documentation
+> for setup instructions.  Your setup command may be slightly different.
+
+If for some reason your access stops working, you can rerun setup again
+any time.  Just provide the additional `--replace-keys` option:
+
+	$ connect setup --replace-keys remote-username
+
+The Connect Client will "remember" your server name and OSG Connect user
+name.  You won't need to use this information again from this client.
+(You do need to run `setup` for each distinct computer or cluster you
+work from, though: for example, once from your HPC site and once from
+your laptop.)
 
 
 ## Example submission
@@ -106,41 +143,29 @@ task. This submit file thus directs logs for each job into files in the
 
 ### Submit the script
 
-Submit the script using `connect client submit tutorial02.submit`.  You
+Submit the script using `connect submit tutorial02.submit`.  You
 must invoke connect client commands from the working directory.
 
-	$ connect client submit tutorial02.submit
-	notice: sending README.md as tutorial-quickstart/README.md...
-	notice: sending short.sh as tutorial-quickstart/short.sh...
-	notice: sending tutorial01.submit as tutorial-quickstart/tutorial01.submit...
-	notice: sending tutorial02.submit as tutorial-quickstart/tutorial02.submit...
-	notice: sending tutorial03.submit as tutorial-quickstart/tutorial03.submit...
-	notice: sending log/.gitignore as tutorial-quickstart/log/.gitignore...
-	Submitting job(s).
-	10 job(s) submitted to cluster 1234.
+	$ connect submit tutorial02.submit
+	.++.++++++.+
+	7 objects sent; 3 objects up to date; 0 errors
+	Submitting job(s)..........
+	10 job(s) submitted to cluster 880.
+	............
+	0 objects sent; 12 objects up to date; 0 errors
 
-The `notice` lines indicate that files local to your client were transferred to the
-server in order to submit the job.
-
-**N.B. If your OSG Connect username differs from your local username,
-set `CONNECT_CLIENT_USER` in your environment.**
-
-	$ export CONNECT_CLIENT_USER=osgconnect-username
-	$ connect client submit tutorial02.submit
-	notice: sending README.md as tutorial-quickstart/README.md...
-	notice: sending short.sh as tutorial-quickstart/short.sh...
-	notice: sending tutorial01.submit as tutorial-quickstart/tutorial01.submit...
-	notice: sending tutorial02.submit as tutorial-quickstart/tutorial02.submit...
-	notice: sending tutorial03.submit as tutorial-quickstart/tutorial03.submit...
-	notice: sending log/.gitignore as tutorial-quickstart/log/.gitignore...
-	Submitting job(s).
-	10 job(s) submitted to cluster 1234.
+The lines of dots and plusses indicate file transfer status.  Each `+`
+is a file or directory transferred from your client to the Connect
+server.  Each `.` is a file or directory that's up to date already.
+This file synchronization runs before your job is submitted (a _push_)
+to ensure that the server has current information, and again after
+subission in case the act of submissing the work creates new files.
 
 
 ### Check job queue
-The **connect client q** command tells the status of submitted jobs:
+The **connect q** command tells the status of submitted jobs:
 
-	$ connect client q <osgconnect-username>
+	$ connect q <osgconnect-username>
 
 	-- Submitter: login01.osgconnect.net : <192.170.227.195:40814> : login01.osgconnect.net
  	ID      OWNER            SUBMITTED     RUN_TIME ST PRI SIZE CMD
@@ -160,11 +185,11 @@ The **connect client q** command tells the status of submitted jobs:
 
 ### Job history
 
-Once your jobs have finished, you can get information about its execution
-from the **connect client history** command. In this example:
+Once your jobs have finished, you can get information about its
+execution from the **connect history** command. In this example:
 
 
-	$ connect client history 1234
+	$ connect history 1234
  	ID     OWNER          SUBMITTED   RUN_TIME     ST COMPLETED   CMD
 	1234.5   username             4/29 16:42   0+00:00:27 C   4/29 16:45 /home/...
 	1234.4   username             4/29 16:42   0+00:01:18 C   4/29 16:45 /home/...
@@ -179,35 +204,38 @@ from the **connect client history** command. In this example:
 
 
 Note: You can see much more information about status
-using the -long option (e.g. ```connect client history -long 1234```).
+using the -long option (e.g. ```connect history -long 1234```).
 
 
 ### Retrieve outputs
 
-To retrieve job outputs from the connect server, use **connect client pull**.
+Once your job is complete, or if it is not yet complete but you want to
+review partial progress, you'll want to retrieve job outputs from the
+connect server.  Do that using **connect pull**.
 
-	$ connect client pull
-	notice: fetching tutorial-quickstart/log/job.log.1234 as log/job.log.1234...
-	notice: fetching tutorial-quickstart/log/job.error.1234-7 as log/job.error.1234-7...
-	notice: fetching tutorial-quickstart/log/job.output.1234-7 as log/job.output.1234-7...
-	notice: fetching tutorial-quickstart/log/job.error.1234-6 as log/job.error.1234-6...
-	notice: fetching tutorial-quickstart/log/job.error.1234-5 as log/job.error.1234-5...
-	notice: fetching tutorial-quickstart/log/job.output.1234-6 as log/job.output.1234-6...
-	notice: fetching tutorial-quickstart/log/job.output.1234-5 as log/job.output.1234-5...
-	notice: fetching tutorial-quickstart/log/job.error.1234-9 as log/job.error.1234-9...
-	notice: fetching tutorial-quickstart/log/job.output.1234-9 as log/job.output.1234-9...
-	notice: fetching tutorial-quickstart/log/job.error.1234-0 as log/job.error.1234-0...
-	notice: fetching tutorial-quickstart/log/job.output.1234-0 as log/job.output.1234-0...
-	notice: fetching tutorial-quickstart/log/job.error.1234-4 as log/job.error.1234-4...
-	notice: fetching tutorial-quickstart/log/job.error.1234-8 as log/job.error.1234-8...
-	notice: fetching tutorial-quickstart/log/job.output.1234-4 as log/job.output.1234-4...
-	notice: fetching tutorial-quickstart/log/job.output.1234-8 as log/job.output.1234-8...
-	notice: fetching tutorial-quickstart/log/job.output.1234-2 as log/job.output.1234-2...
-	notice: fetching tutorial-quickstart/log/job.error.1234-3 as log/job.error.1234-3...
-	notice: fetching tutorial-quickstart/log/job.error.1234-2 as log/job.error.1234-2...
-	notice: fetching tutorial-quickstart/log/job.output.1234-3 as log/job.output.1234-3...
-	notice: fetching tutorial-quickstart/log/job.error.1234-1 as log/job.error.1234-1...
-	notice: fetching tutorial-quickstart/log/job.output.1234-1 as log/job.output.1234-1...
+	$ connect pull
+	..+++........+++++++++++++++++++++
+	24 objects retrieved; 10 objects up to date; 0 errors
+
+Again, the plusses and dots tell you how much file transfer activity
+occurred.
+
+### Updating the remote
+
+You can also use `connect push` to update the server's copy of your
+job.  It works exactly like `connect pull` does, but goes in the other
+direction.  (As you suspect, `connect push` is done implicitly each time
+you `connect submit`.)
+
+
+### Additional options
+
+If you need performance metrics, you can add `-t` or `--time`
+to a `push` or `pull` command.
+
+If you want to see the name of each file transferred, add the
+`-v` or `--verbose` option.
+
 
 ### Check the job output
 
@@ -236,8 +264,10 @@ Read one of the output files. It should look something like this:
 For this example we see the first job in the submission (1234.0) ran on a free node at Syracuse University.
 
 # Getting Help
-For assistance or questions, please email the OSG User Support team  at `user-support@opensciencegrid.org`, direct message tweet to [@osgusers](http://twitter.com/osgusers) or visit the [help desk and community forums](http://support.opensciencegrid.org).
-
+For assistance or questions, please email the OSG User Support team at
+`user-support@opensciencegrid.org`, direct message tweet to
+[@osgusers](http://twitter.com/osgusers) or visit the [help desk and
+community forums](http://support.opensciencegrid.org).
 
 
 [CI Connect]:http://ci-connect.net/
