@@ -17,7 +17,7 @@ directory to that copy. **The --recursive option is important!**
 
 Typically you'll want to install a release version.
 
-	$ git checkout v0.3
+	$ git checkout v0.4
 
 
 # Installation using environment modules
@@ -36,10 +36,10 @@ module description information.  A reasonable choice for this is
 `~/privatemodules`; for many sites, this is where the `use.own` module
 looks for personal modules.
 
-Run `./install.sh` with these two directories and a version
-number (e.g. 0.3):
+Run `./install.sh` with these two directories.  The install script
+will figure out the current version number.
 
-	$ ./install.sh ~/software/connect-client ~/privatemodules 0.3
+	$ ./install.sh ~/software/connect-client ~/privatemodules
 
 
 N.B. Any modules that you have loaded at the time you install Connect
@@ -47,7 +47,8 @@ Client will be loaded by the Connect Client modulefile _each time you
 load the `connect-client` module_. This ensures that dependencies are
 handled internally. To reduce unnecessary module loads, be sure not to
 load unnecessary modules before installing.  You may wish to hand-edit
-the modulefile to ensure that only true dependencies are listed.
+the modulefile to ensure that only true dependencies are listed.  Search
+for `module load` in the installed modulefile.
 
 
 # Without environment modules
