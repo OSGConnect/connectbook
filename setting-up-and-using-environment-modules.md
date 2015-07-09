@@ -132,9 +132,15 @@ Finally, `module help` will give you more detailed information.
 
 Not all resources available through OSG Connect support OASIS and distributed environment modules.  In order to make
 sure that the jobs you submit run on resources that do support distributed environment modules, you will need to add
-the following condition to the requirements in your condor  job submission file.
+the following condition to the requirements in your condor  job submission file. E.g. :
 
-(HAS_CVMFS_oasis_opensciencegrid_org =?= TRUE)
+	Requirements = (HAS_CVMFS_oasis_opensciencegrid_org =?= TRUE)
+	
+	
+or 
+	Requirements = [Other requirements ] && (HAS_CVMFS_oasis_opensciencegrid_org =?= TRUE)
+
+if you already have other requirements specified and need to append the OASIS requirement.
 
 ## Available Software
 
