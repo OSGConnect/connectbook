@@ -138,6 +138,7 @@ the following condition to the requirements in your condor  job submission file.
 	
 	
 or 
+
 	Requirements = [Other requirements ] && (HAS_CVMFS_oasis_opensciencegrid_org =?= TRUE)
 
 if you already have other requirements specified and need to append the OASIS requirement.
