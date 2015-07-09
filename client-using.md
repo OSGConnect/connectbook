@@ -79,7 +79,7 @@ your laptop.)
 ## Example submission
 
 Now let's create a test script for execution of 10 jobs on the OSG.
-**Create a working directory (and logfile subdirectory)** that will be
+Create a working directory (and logfile subdirectory) that will be
 synched with the remote host on the OSG Connect server.  
 
 	$ cd
@@ -163,7 +163,7 @@ subission in case the act of submissing the work creates new files.
 
 
 ### Check job queue
-The **connect q** command tells the status of submitted jobs:
+The `connect q` command tells the status of submitted jobs:
 
 	$ connect q <osgconnect-username>
 
@@ -187,7 +187,7 @@ The **connect q** command tells the status of submitted jobs:
 
 Once your job is complete, or if it is not yet complete but you want to
 review partial progress, you'll want to retrieve job outputs from the
-connect server.  Do that using **connect pull**.
+connect server.  Do that using `connect pull`.
 
 	$ connect pull
 	..+++........+++++++++++++++++++++
@@ -227,7 +227,7 @@ For this example we see the first job in the submission (1234.0) ran on a free n
 ## Job history
 
 Once your jobs have finished, you can get information about their
-execution from the **connect history** command. In this example:
+execution from the `connect history` command. In this example:
 
 
 	$ connect history 1234
