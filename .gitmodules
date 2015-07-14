@@ -80,5 +80,5 @@
 	path = tutorials/tutorial-pegasus-blast
 	url = https://github.com/OSGConnect/tutorial-pegasus-blast
 [submodule "tutorial-gromacs"]
-	path = tutorial-gromacs
+	path = tutorials/tutorial-gromacs/tutorial-gromacs
 	url = https://github.com/OSGConnect/tutorial-gromacs
