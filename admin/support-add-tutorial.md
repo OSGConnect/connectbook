@@ -46,7 +46,7 @@ https://github.com/OSGConnect/tutorial-folding :
 	$ git clone --recursive https://github.com/OSGConnect/connectbook
 	$ cd connectbook/tutorials
 	$ git submodule add https://github.com/OSGConnect/tutorial-folding
-	$ git commit tutorial-folding
+	$ git commit .gitmodules tutorial-folding
 	$ git push
 
 That's it! The new tutorial is now part of `connectbook`, incorporated
