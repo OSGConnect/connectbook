@@ -13,12 +13,12 @@ Markdown) that can be converted to HTML or to any other presentation.
 # Reviewing content
 
 For reviewing content, it's _critical_ to view the [Support Knowledge Base][kbase]
-(formerly the ConnectBook) *as a user "customer" would see it*.  
+(formerly the ConnectBook) *as a user or customer would see it*.  
 
-If you are a help desk "agent", meaning you have advanced privileges in the
+If you are a help desk *agent*, meaning you have advanced privileges in the
 system for supporting users and organizing content, your default view is
-the agent view.  To see the "customer portal", choose an article or category
-in the Solutions tab.  In the upper right hand corner is a small box with an arrow
+the agent view.  To see the *customer portal*, choose an article or category
+in the Solutions tab ([kbase]).  In the upper right hand corner is a small box with an arrow
 which will take you to the user's view of the article.
 
 Alternatively you can visit the site in another browser, or using your browser's "Incognito",
