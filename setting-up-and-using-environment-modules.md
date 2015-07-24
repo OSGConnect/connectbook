@@ -7,8 +7,13 @@
 
 This page covers use of the module command in the OSG computing environment.  
 
-Environment modules have historically been used in HPC environments to provide users with an easy way to access different versions of software and to access various libraries, compilers, and software (c.f. the [wikipedia reference](https://en.wikipedia.org/wiki/Environment_Modules_%28software%29)).  OSG has implemented a version based on Lmod to provide the typical module commands on any site in the OSG.  You can test workflows on the OSG Connect login node and then submit the same workflow without any changes.
-Using modules on OSG Connect
+Environment modules have historically been used in HPC environments to provide users with an easy way to access 
+different versions of software and to access various libraries, compilers, and software 
+(c.f. the [wikipedia reference](https://en.wikipedia.org/wiki/Environment_Modules_%28software%29)).  OSG has 
+implemented a version based on Lmod to provide the typical module commands on any site in the OSG.  You can test 
+workflows on the OSG Connect login node and then submit the same workflow without any changes.
+
+## Using modules on OSG Connect
 
 Use `module avail` to see available software applications and libraries:
 
@@ -128,11 +133,11 @@ For example:
 
 Finally, `module help` will give you more detailed information.
 
-## Submit file changes
+## Using enivornment modules in jobs
 
-Not all resources available through OSG Connect support OASIS and distributed environment modules.  In order to make
+Not all resources available through OSG Connect support distributed environment modules.  In order to make
 sure that the jobs you submit run on resources that do support distributed environment modules, you will need to add
-the following condition to the requirements in your condor  job submission file. E.g. :
+the following condition to the requirements in your htcondor job submission file. E.g. :
 
 	Requirements = (HAS_CVMFS_oasis_opensciencegrid_org =?= TRUE)
 	
@@ -142,6 +147,8 @@ or
 	Requirements = [Other requirements ] && (HAS_CVMFS_oasis_opensciencegrid_org =?= TRUE)
 
 if you already have other requirements specified and need to append the OASIS requirement.
+
+Jobs submitted with the HTCondor requirement given above will automatically have the module system set up for them when run.  So the only change needed to job scripts would be to add `module load` commands to load the appropriate modules.
 
 ## Available Software
 
