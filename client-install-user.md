@@ -17,7 +17,7 @@ directory to that copy. **The --recursive option is important!**
 
 Typically you'll want to install a release version.
 
-	$ git checkout v0.4
+	$ git checkout v0.4.2
 
 
 # Installation using environment modules
@@ -29,6 +29,9 @@ explicitly. For example:
 
 	$ module load gcc
 	$ module load python/2.7.6
+
+You will also need pip, the Python package installation program.  Very
+often it is part of the Python installation itself.
 
 Choose a directory to install Connect Client into.  A reasonable
 choice is `~/software/connect`.  Also choose a directory for the
