@@ -29,6 +29,9 @@ explicitly. For example:
 	$ module load gcc
 	$ module load python/2.7.6
 
+You will also need pip, the Python package installation program.  Very
+often it is part of the Python installation itself.
+
 Choose a directory to install Connect Client into.  You should
 know what directories are used at your site.  For these examples
 we'll `/software` as the location of software tools, and
