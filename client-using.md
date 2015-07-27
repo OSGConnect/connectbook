@@ -10,7 +10,7 @@
 For a list of available commands, enter `connect` from the command line:
 
 	$ connect 
-	This is Connect Client v0.4.
+	This is Connect Client v0.4.3
 	usage: connect [opts] <subcommand> [args]
 	       connect [opts] dag <dagfile>
 	       connect [opts] histogram 
@@ -392,7 +392,7 @@ it's running under.  There's a command for that:
 
 	$ connect version
 	Client information:
-	| Connect client version: v0.4
+	| Connect client version: v0.4.3
 	| Python version: 2.7.10 (default, May 30 2015, 23:49:24) 
 	|   [GCC 4.2.1 Compatible Apple LLVM 6.1.0 (clang-602.0.53)]
 	| Prefix: /opt/local/Library/Frameworks/Python.framework/Versions/2.7
