@@ -152,6 +152,6 @@ Jobs submitted with the HTCondor requirement given above will automatically have
 
 ## Available Software
 
-A list of currently installed software is available [here](http://support.opensciencegrid.org/support/solutions/articles/5000634397-software-modules-catalog). 
+A list of currently installed software is available [here](http://support.opensciencegrid.org/support/solutions/articles/5000634397-software-modules-catalog). If your software is not already listed, you can [request it][request].
 
- 
+[request]: 5000649173

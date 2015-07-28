@@ -103,3 +103,8 @@
 * **opencv** (version 2.4.10) &mdash; OpenCV (Open Source Computer Vision Library) is an open source computer vision and machine learning software library.
 * **poppler-utils** (version 0.24.1) &mdash; Poppler is a PDF rendering library based on the xpdf-3.0 code base
 * **freetype** (version 2.5.5) &mdash; FreeType 2 provides a simple and easy-to-use API to access font content in a uniform way
+
+## Not Listed
+Is your software unavailable?  You can [ask us to install it][request].
+
+[request]: 5000649173
