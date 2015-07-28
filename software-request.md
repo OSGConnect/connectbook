@@ -7,16 +7,16 @@ software library with a simple email, along the following lines:
 
 [catalog]: 5000634397
 
->   To: support@opensciencegrid.org
->   Subject: Please install _______ in OASIS
->   
->   Hello OSG Support -
->   
->   My name is _______ and I am using OSG resources to perform research
->   in the field of _______. It would be helpful to me to have the
->   _______ software (version _______) available on the grid.  Please
->   find details on installing this software at the following web site:
->   _________________.
+	To: support@opensciencegrid.org
+	Subject: Please install _______ in OASIS
+	
+	Hello OSG Support -
+	
+	My name is _______ and I am using OSG resources to perform research
+	in the field of _______. It would be helpful to me to have the
+	_______ software (version _______) available on the grid.  Please
+	find details on installing this software at the following web site:
+	_________________.
 
 
 As long as this code is:
