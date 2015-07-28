@@ -7,7 +7,7 @@ be added to the OASIS software library with a simple email to
 [support@opensciencegrid.org][support], along the following lines:
 
 [catalog]: 5000634397
-[support]: mailto:support@opensciencegrid.org%20subject=Please%20install%20_______%20in%20OASIS
+[support]: mailto:support@opensciencegrid.org?subject=Please%20install%20_______%20in%20OASIS
 
 	
 	To: support@opensciencegrid.org
