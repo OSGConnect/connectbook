@@ -1,4 +1,4 @@
-[title]: - "Add a non-tutorial document to the knowledge base"
+[title]: - "Add other solutions to the knowledge base"
 
 [TOC]
 
