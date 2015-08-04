@@ -1,4 +1,4 @@
-[title]: - "Editing Content"
+[title]: - "Editing content (topics)"
 
 [TOC]
 
