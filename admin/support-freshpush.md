@@ -1,4 +1,4 @@
-[title]: - "How knowledge base synchronization works"
+[title]: - "How knowledge base synchronization works (technical reference)"
 
 [TOC]
 
