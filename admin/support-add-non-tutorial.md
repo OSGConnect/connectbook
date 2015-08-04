@@ -1,4 +1,4 @@
-[title]: - "Add other solutions to the knowledge base"
+[title]: - "Add a topic to the knowledge base"
 
 [TOC]
 
