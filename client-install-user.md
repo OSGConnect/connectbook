@@ -59,6 +59,15 @@ load unnecessary modules before installing.  You may wish to hand-edit
 the modulefile to ensure that only true dependencies are listed.  Search
 for `module load` in the installed modulefile.
 
+After the software is installed, you may use the `module` command to get
+access:
+
+	module load use.own
+	module load connect-client
+
+Loading `use.own` tells the module system to search your `~/privatemodules`
+folder for modules.
+
 
 # Without environment modules
 
