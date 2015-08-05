@@ -75,9 +75,11 @@ at the time you pushed.  (If one was, there may be further delay.)
 
 You can learn more about Markdown here:
 
-* [daringfireball.net]: http://daringfireball.net/projects/markdown/
+* [daringfireball.net]
 * http://whatismarkdown.com/
 * http://www.squarespace.com/display/ShowHelp?section=Markdown
+
+[daringfireball.net]: http://daringfireball.net/projects/markdown/
 
 
 Tools for editing Markdown:
