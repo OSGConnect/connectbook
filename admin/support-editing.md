@@ -4,7 +4,7 @@
 
 # General
 
-All Knowledge Base articles at http://support.osgconnect.org/ are maintained
+All Knowledge Base articles on the [helpdesk]: https://support.osgconnect.org/ are maintained
 in GitHub. This provides us version tracking and co-authoring capabilities,
 as well as allowing us to maintain documents in a neutral format (we chose
 Markdown) that can be converted to HTML or to any other presentation.
@@ -75,7 +75,7 @@ at the time you pushed.  (If one was, there may be further delay.)
 
 You can learn more about Markdown here:
 
-* http://daringfireball.net/projects/markdown/
+* [daringfireball.net]: http://daringfireball.net/projects/markdown/
 * http://whatismarkdown.com/
 * http://www.squarespace.com/display/ShowHelp?section=Markdown
 
