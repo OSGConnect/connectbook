@@ -68,5 +68,4 @@ Finally, if you do use modules from the modules system, you will need to modify
 your job scripts to load the appropriate modules before running you application.
 
 ## Assistance
-If you have questions or need assistance, please contact
-[support@opensciencegrid.org][support].
+If you have questions or need assistance, please contact [support@opensciencegrid.org][support].
