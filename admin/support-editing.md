@@ -4,7 +4,7 @@
 
 # General
 
-All Knowledge Base articles at http://support.osgconnect.net/ are maintained
+All Knowledge Base articles at http://support.osgconnect.org/ are maintained
 in GitHub. This provides us version tracking and co-authoring capabilities,
 as well as allowing us to maintain documents in a neutral format (we chose
 Markdown) that can be converted to HTML or to any other presentation.
