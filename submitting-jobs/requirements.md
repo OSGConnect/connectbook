@@ -9,7 +9,6 @@ following will run the jobs only on RHEL 6 machines with more than 10 GBs of
 disk space:
 
 	requirements = OSGVO_OS_STRING == "RHEL 6" && Disk > 10000000
-
  
 Another common requirement is to land on a node which has CVMFS. We recommend
 that you use the revision attribute. The current revision can be found by
@@ -17,11 +16,9 @@ running:
 
 	/usr/bin/attr -g revision /cvmfs/oasis.opensciencegrid.org
 
-
 Then the requirements would be:
 
 	requirements = CVMFS_oasis_opensciencegrid_org_REVISION >= 3983
- 
 
 There are many attributes that you can use. To see the attributes for all the
 machines in the current pool. Note that this is a long list:
