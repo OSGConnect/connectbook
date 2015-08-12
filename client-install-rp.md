@@ -17,7 +17,7 @@ directory to that copy. **The --recursive option is important!**
 
 Typically you'll want to install a release version.
 
-	$ git checkout v0.4.3
+	$ git checkout v0.4.5
 
 # Installation using environment modules
 
