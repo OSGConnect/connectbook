@@ -17,7 +17,7 @@ directory to that copy. **The --recursive option is important!**
 
 Typically you'll want to install a release version.
 
-	$ git checkout v0.4.5
+	$ git checkout v0.4.6
 
 # Installation using environment modules
 
@@ -44,15 +44,16 @@ we'll `/software` as the location of software tools, and
 `/software/modulefiles` as the location of module files.
 Run `./install.sh` with these two directories:
 
-	$ ./install.sh /software/connect-client /software/modulefiles
+	$ ./install.sh /software/connect-client-0.4.6 /software/modulefiles
 
-N.B. Any modules that you have loaded at the time you install Connect
-Client will be loaded by the Connect Client modulefile _each time you
-load the `connect-client` module_. This ensures that dependencies are
-handled internally. To reduce unnecessary module loads, be sure not to
-load unnecessary modules before installing.  You may wish to hand-edit
-the modulefile to ensure that only true dependencies are listed.  Search
-for `module load` in the installed modulefile.
+N.B. There may be dependencies in your module environment that should
+be loaded when `connect-client` is loaded. In particular, at many sites
+Python is a module dependency. Putting `module load` statements into
+the module file helps users load the software consistently. After a site
+installation **please review the installed modulefile** -- search for the
+text "module load" to find the right spot.  All modules that were loaded
+when you installed the software will be listed but commented out. Uncomment
+any that are true dependencies.
 
 
 # Without environment modules
