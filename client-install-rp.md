@@ -44,10 +44,7 @@ we'll `/software` as the location of software tools, and
 `/software/modulefiles` as the location of module files.
 Run `./install.sh` with these two directories:
 
-	$ ./install.sh -site /software/connect-client /software/modulefiles
-
-**Note the `-site` option.**
-
+	$ ./install.sh /software/connect-client /software/modulefiles
 
 N.B. Any modules that you have loaded at the time you install Connect
 Client will be loaded by the Connect Client modulefile _each time you
