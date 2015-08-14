@@ -4,9 +4,6 @@
 [submodule "tutorials/tutorial-ScalingUp-R"]
 	path = tutorials/tutorial-ScalingUp-R
 	url = https://github.com/OSGConnect/tutorial-ScalingUp-R
-[submodule "tutorials/tutorial-VinaAutodock"]
-	path = tutorials/tutorial-VinaAutodock
-	url = https://github.com/OSGConnect/tutorial-VinaAutodock
 [submodule "tutorials/tutorial-blast"]
 	path = tutorials/tutorial-blast
 	url = https://github.com/OSGConnect/tutorial-blast
@@ -76,6 +73,12 @@
 [submodule "tutorials/tutorial-swift"]
 	path = tutorials/tutorial-swift
 	url = https://github.com/OSGConnect/tutorial-swift
-[submodule "tutorial-gromacs"]
-	path = tutorial-gromacs
+[submodule "tutorials/tutorial-AutoDockVina"]
+	path = tutorials/tutorial-AutoDockVina
+	url = https://github.com/OSGConnect/tutorial-AutoDockVina
+[submodule "tutorials/tutorial-gromacs"]
+	path = tutorials/tutorial-gromacs
 	url = https://github.com/OSGConnect/tutorial-gromacs
+[submodule "tutorials/tutorial-pegasus-blast"]
+	path = tutorials/tutorial-pegasus-blast
+	url = https://github.com/OSGConnect/tutorial-pegasus-blast
