@@ -79,6 +79,3 @@
 [submodule "tutorial-gromacs"]
 	path = tutorial-gromacs
 	url = https://github.com/OSGConnect/tutorial-gromacs
-[submodule "tutorial-AutoDockVina"]
-	path = tutorial-AutoDockVina
-	url = https://github.com/OSGConnect/tutorial-AutoDockVina
