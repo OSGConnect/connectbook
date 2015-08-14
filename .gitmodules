@@ -73,9 +73,6 @@
 [submodule "tutorials/tutorial-swift"]
 	path = tutorials/tutorial-swift
 	url = https://github.com/OSGConnect/tutorial-swift
-[submodule "tutorials/tutorial-gromacs"]
-	path = tutorials/tutorial-gromacs
-	url = https://github.com/OSGConnect/tutorial-gromacs
-[submodule "tutorials/tutorial-pegasus-blast"]
-	path = tutorials/tutorial-pegasus-blast
-	url = https://github.com/OSGConnect/tutorial-pegasus-blast
+[submodule "tutorials/tutorial-AutoDockVina"]
+	path = tutorials/tutorial-AutoDockVina
+	url = https://github.com/OSGConnect/tutorial-AutoDockVina
