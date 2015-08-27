@@ -51,13 +51,21 @@ To set up the client, simply run `connect setup username`, where
 your local user name you may omit this.)  You will be prompted
 for a password, then your remote access will be ready.
 
-	$ connect setup remote-username
+	$ connect setup
+	Please enter the user name that you created during Connect registration.
+	When you visit http://osgconnect.net/ and log in, your user name appears
+	in the upper right corner: note that it consists only of letters and
+	numbers, with no @ symbol.
+	
+	You will be connecting via the login.ci-connect.uchicago.edu server.
+	Enter your Connect username: *your OSG Connect username goes here*
 	Password for remote-username@connect-client.osgconnect.net: 
 	notice: Ongoing client access has been authorized at connect-client.osgconnect.net.
 	notice: Use "connect test" to verify access.
 	
 	$ connect test
 	Success! Your client access to connect-client.osgconnect.net is working.
+
 
 > N.B. `connect-client.osgconnect.net` is the default server name for OSG
 > Connect users.  If you are using a different CI Connect service, such as
