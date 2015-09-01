@@ -14,7 +14,7 @@ Transfer data between existing servers
 -   From the [portal.osgconnect.net](<http://portal.osgconnect.net/>) web site,
     click the Transfer ▸ Start Transfer menu.
 
--   On one side, enter `osgconnect#stash` into the endpoint field, and press
+-   On one side, enter `connect#stash` into the endpoint field, and press
     "Return" or the "Go" button.  
 
 -   On the other side, enter the other endpoint from which you want to transfer
@@ -95,18 +95,18 @@ Now check the available endpoints:
 	...
 	username#desktop  
 	...
-	osgconnect#stash
+	connect#stash
 	...
 
 To activate the end points:
 
 	$ ssh username@cli.globusonline.org endpoint-activate \
-	  username#desktop osgconnect#stash
+	  username#desktop connect#stash
 
-To copy a file from `osgconnect#stash` to `username#desktop`:
+To copy a file from `connect#stash` to `username#desktop`:
 
 	$ ssh username@cli.globusonline.org scp \
-	  osgconnect#stash:/stash/user/username/public/file.txt \
+	  connect#stash:/stash/user/username/public/file.txt \
 	  username#desktop:/home/username/.
  
 
