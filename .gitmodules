@@ -4,9 +4,6 @@
 [submodule "tutorials/tutorial-ScalingUp-R"]
 	path = tutorials/tutorial-ScalingUp-R
 	url = https://github.com/OSGConnect/tutorial-ScalingUp-R
-[submodule "tutorials/tutorial-blast"]
-	path = tutorials/tutorial-blast
-	url = https://github.com/OSGConnect/tutorial-blast
 [submodule "tutorials/tutorial-cp2k"]
 	path = tutorials/tutorial-cp2k
 	url = https://github.com/OSGConnect/tutorial-cp2k
