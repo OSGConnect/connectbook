@@ -13,7 +13,7 @@ be added to the OASIS software library with a simple email to
 	To: user-support@opensciencegrid.org
 	Subject: Please install _______ in OASIS
 	
-	Hello OSG Support -
+	Hello OSG User Support -
 	
 	My name is _______ and I am using OSG resources to perform research
 	in the field of _______. It would be helpful to me to have the
