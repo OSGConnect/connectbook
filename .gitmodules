@@ -88,3 +88,6 @@
 [submodule "tutorials/tutorial-matlab-RandomMatrix"]
 	path = tutorials/tutorial-matlab-RandomMatrix
 	url = https://github.com/OSGConnect/tutorial-matlab-RandomMatrix
+[submodule "tutorials/tutorial-matlab-SimulatedAnnealing"]
+	path = tutorials/tutorial-matlab-SimulatedAnnealing
+	url = https://github.com/OSGConnect/tutorial-matlab-SimulatedAnnealing
