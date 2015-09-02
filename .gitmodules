@@ -79,9 +79,9 @@
 [submodule "tutorials/tutorial-pegasus-blast"]
 	path = tutorials/tutorial-pegasus-blast
 	url = https://github.com/OSGConnect/tutorial-blast
-[submodule "tutorials/tutorial-pegasus-gromacs"]
-	path = tutorials/tutorial-gromacs
-	url = https://github.com/OSGConnect/tutorial-gromacs
 [submodule "tutorials/tutorial-matlab-HelloWorld"]
 	path = tutorials/tutorial-matlab-HelloWorld
 	url = https://github.com/OSGConnect/tutorial-matlab-HelloWorld
+[submodule "tutorials/tutorial-gromacs"]
+	path = tutorials/tutorial-gromacs
+	url = https://github.com/OSGConnect/tutorial-gromacs
