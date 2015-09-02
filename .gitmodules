@@ -76,9 +76,6 @@
 [submodule "tutorials/tutorial-AutoDockVina"]
 	path = tutorials/tutorial-AutoDockVina
 	url = https://github.com/OSGConnect/tutorial-AutoDockVina
-[submodule "tutorials/tutorial-pegasus-blast"]
-	path = tutorials/tutorial-pegasus-blast
-	url = https://github.com/OSGConnect/tutorial-blast
 [submodule "tutorials/tutorial-matlab-HelloWorld"]
 	path = tutorials/tutorial-matlab-HelloWorld
 	url = https://github.com/OSGConnect/tutorial-matlab-HelloWorld
