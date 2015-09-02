@@ -85,3 +85,6 @@
 [submodule "tutorials/tutorial-blast"]
 	path = tutorials/tutorial-blast
 	url = https://github.com/OSGConnect/tutorial-blast
+[submodule "tutorials/tutorial-matlab-RandomMatrix"]
+	path = tutorials/tutorial-matlab-RandomMatrix
+	url = https://github.com/OSGConnect/tutorial-matlab-RandomMatrix
