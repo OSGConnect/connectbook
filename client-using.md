@@ -1,6 +1,8 @@
 [title]: - "Using the Connect Client"
+
 [TOC]
-## Connect Client commands
+
+# Connect Client commands
 
 For a list of available commands, enter `connect` from the command line:
 
@@ -30,7 +32,7 @@ For a list of available commands, enter `connect` from the command line:
 To run any of these commands, just enter `connect [opts] [command name]`.
 
 
-## First-time setup
+# First-time setup
 
 The first time you use the Connect Client from a given computer or
 cluster, you will need to run the `setup` command to prepare your
@@ -79,7 +81,7 @@ work from, though: for example, once from your HPC site and once from
 your laptop.)
 
 
-## Example submission
+# Example submission
 
 Now let's create a test script for execution of 10 jobs on the OSG.
 Create a working directory (and logfile subdirectory) that will be
@@ -113,7 +115,7 @@ Make the script executable.
 	$ chmod +x short.sh
 
 
-### Create the HTCondor submit description file
+## Create the HTCondor submit description file
 
 This tutorial is part of the greater [ConnectBook], which has many
 illustrations of distributed computation jobs. We'll sample just one
@@ -144,7 +146,7 @@ In an HTCondor submit file, `$(Cluster)` labels the submission task
 task. This submit file thus directs logs for each job into files in the
 `log/` directory. You'll see the relevance of this further on.
 
-### Submit the script
+## Submit the script
 
 Submit the script using `connect submit tutorial02.submit`.  You
 must invoke connect client commands from the working directory.
@@ -165,7 +167,7 @@ to ensure that the server has current information, and again after
 subission in case the act of submissing the work creates new files.
 
 
-### Check job queue
+## Check job queue
 The `connect q` command tells the status of submitted jobs:
 
 	$ connect q <osgconnect-username>
@@ -186,7 +188,7 @@ The `connect q` command tells the status of submitted jobs:
 	10 jobs; 0 completed, 0 removed, 3 idle, 7 running, 0 held, 0 suspended
 
 
-### Retrieve outputs
+## Retrieve outputs
 
 Once your job is complete, or if it is not yet complete but you want to
 review partial progress, you'll want to retrieve job outputs from the
@@ -200,7 +202,7 @@ Again, the plusses and dots tell you how much file transfer activity
 occurred.
 
 
-### Check the job output
+## Check the job output
 
 Once your jobs have finished, you can look at the files that HTCondor has
 returned to the working directory. If everything was successful, it
@@ -251,7 +253,7 @@ Note: You can see much more information about status
 using the -long option (e.g. ```connect history -long 1234```).
 
 
-## Job storage and synchronization
+# Job storage and synchronization
 
 So far we haven't explained in detail what really happens when you use
 the Connect Client to interact with OSG Connect.  Let's get a little
@@ -276,7 +278,7 @@ your local copy of the job repo in sync with the server copy is a
 primary task of the Connect Client.
 
 
-### Working with multiple repositories
+## Working with multiple repositories
 
 Most users will have several job repos that they use, either serially or
 in parallel.  The Connect Client must keep these separate.  You separate
@@ -313,12 +315,12 @@ touch slower):
 	tz   [1 files, 11b total]
 
 
-## Data handling
+# Data handling
 
 We've already seen how to update the local job repository using `connect
 pull`, retrieving all files and outputs modified by the running job.
 
-### Updating the remote
+## Updating the remote
 
 You can also use `connect push` to update the server's copy of your
 job.  It works exactly like `connect pull` does, but goes in the other
@@ -326,7 +328,7 @@ direction.  (As you suspect, `connect push` is done implicitly each time
 you `connect submit`.)
 
 
-### Additional options
+## Additional options
 
 If you need performance metrics on data transfer, you can add `-t` or
 `--time` to a `push` or `pull` command.
@@ -335,7 +337,7 @@ If you want to see the name of each file transferred, add the
 `-v` or `--verbose` option.
 
 
-### Transfer using external tools
+## Transfer using external tools
 
 In general, for smaller quantities of data, we recommend staying with
 `connect push` and `connect pull` for data transfer to your jobs.
@@ -356,7 +358,7 @@ tell you that.  (It also works for `pull`.)
 	/stash/user/dgc/ratchet
 
 
-## Special tasks and preparations
+# Special tasks and preparations: `connect shell`
 
 In some cases it's useful or necessary to be able to work with your job
 _on the server itself_.  For example, you might have code that must be
@@ -387,7 +389,7 @@ You can also use `connect shell` for one-off commands, like ssh.
 	Linux login02.osgconnect.net 3.18.13-UL1.el6 #2 SMP Fri May 15 09:34:50 CDT 2015 x86_64 x86_64 x86_64 GNU/Linux
 
 
-## Runtime information
+# Runtime information
 
 There may be times that it's useful to know more about your copy of the
 Connect Client, the system that it is running on, or the user account
