@@ -1,10 +1,5 @@
 [title]: - "Using the Connect Client"
-
-# Table of Contents
 [TOC]
-
-# User Guide 
-
 ## Connect Client commands
 
 For a list of available commands, enter `connect` from the command line:
