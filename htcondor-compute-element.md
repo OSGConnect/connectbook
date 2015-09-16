@@ -18,5 +18,8 @@ after a period of inactivity.
 # What is HTCondor CE?
 
 HTCondor CE is a special configuration of the HTCondor software designed to be a job gateway solution for the 
-OSG. It is configured to use the JobRouter daemonto delegate jobs by transforming and submitting them to the site’s 
+OSG. It is configured to use the [JobRouter daemon](http://research.cs.wisc.edu/htcondor/manual/v8.2/5_4HTCondor_Job.html) to delegate jobs by transforming and submitting them to the site’s 
 batch system.
+
+# More information
+The [OSG twiki](https://twiki.opensciencegrid.org/bin/view/Documentation/Release3/HTCondorCEOverview) has more information about the specifics of how the HTCondor CE operates and information on installing and configuring one.  
