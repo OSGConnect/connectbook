@@ -5,18 +5,20 @@
 ## Physics and Engineering
 * **LAMMPS** (version 2) &mdash; LAMMPS is a classical molecular dynamics code.
 * **CP2K** (version 2.5.1) &mdash; CP2K is the state-of-the-art method for accurate atomistic simulations.
-* **Quantum Espresso** (version 5.1) &mdash; Quantum Espresso is an integrated suite of codes for electronic-structure calculations at the nanoscale.
-* **blender** (version trunk) &mdash; Blender 3D rendering software.
+* **Quantum Espresso** (version 5.1/5.2) &mdash; Quantum Espresso is an integrated suite of codes for electronic-structure calculations at the nanoscale.
+* **clhep** (version 2.2.0.8) &mdash; Set of HEP-specific foundation and utility classes such as random generators,
+physics vectors, geometry and linear algebra.
+* **geant4** (version 2.2.0.8) &mdash;  toolkit for the simulation of the passage of particles through matter.
+* **grass** (version 6.4.4) &mdash; GRASS (Geographic Resources Analysis Support System)
 * **madgraph** (version 2.1.2 / 2.2.2) &mdash; MadGraph is a monte carlo generator for particle physics interactions
 * **octave** (version 3.8.1) &mdash; Octave is a high-level interpreted language
-* **R** (version 3.1.1) &mdash; R is a free software environment for statistical computing and graphics.
+* **R** (version 3.1.1/3.1.2) &mdash; R is a free software environment for statistical computing and graphics.
 * **graphviz** (version 2.38.0) &mdash; Graphviz is an application for visualizing networks and graphs.
 * **ROOT** (version 5.34-21) &mdash; ROOT is a high energy physics data analysis framework.
 * **qhull** (version 2012) &mdash; qhull libraries provide functions for computing convex hull.
 * **glpk** (version 4.54) &mdash; glpk is the GNU's linear programming took kit.
 * **gnuplot** (version 4.6.5) &mdash; Gnuplot is an application for generating plots.
-* **matlab** runtime libraries (compiled) (version 2013) &mdash; Matlab is a high-level language and interactive environment for numerical computation
-* **matlab** runtime libraries (compiled) (version 2014) &mdash; Matlab is a high-level language and interactive environment for numerical computation
+* **matlab** runtime libraries (compiled) (version 2013b/2014a/2014b/2015a) &mdash; Matlab is a high-level language and interactive environment for numerical computation
 * **siesta** (version 3.2) &mdash; SIESTA performs efficient electronic structure calculations of molecules and solids.
 * **udunits** (version 2.2.17) &mdash; UDUNITS package supports units of physical quantities.
 * **CDO** (version 1.6.4) &mdash; CDO is a collection of command line Operators to manipulate and analyse Climate and NWP model Data.
@@ -24,12 +26,21 @@
 ## Chemistry and Biochemistry
 * **GAMESS** (version 5/1/2013) &mdash; GAMESS is a general ab initio quantum chemistry package.
 * **NAMD** (version 2.9) &mdash; NAMD 2.9. Molecular dynamics simulator.
-* **gromacs** (version 4.6.5) &mdash; Gromacs molecular dynamics simulator. Requires fftw/fftw-3.3.4-gromacs
-* **gromacs** (version 5.0.0) &mdash; Gromacs molecular dynamics simulator. Requires fftw/fftw-3.3.4-gromacs
+* **arc-lite** (version 2015) &mdash; arc-lite (ARCIMBOLDO) is a package for the protein structure refinement.
+* **ccp4** (version 2015) &mdash; arc-lite (ARCIMBOLDO) is a package for the protein structure refinement.
+* **elastix** (version 2015) &mdash;consists of a collection of algorithms that are commonly used to solve (medical) image registration problems
+* **gromacs** (version 4.6.5/5.0.0/5.0.5/5.0.5.cuda) &mdash; Gromacs molecular dynamics simulator. Requires fftw/fftw-3.3.4-gromacs
 * **vmd** (version 1.9.1) &mdash; VMD is a molecular dynamics visualization application.
 * **autodock** (version 4.2.6) &mdash; Autodock is a suite of automated docking tools to predict how small molecules bind to a receptor.
 * **openbabel** (version 2.3.2) &mdash; Open Babel is a chemical toolbox designed to speak the many languages of chemical data.
 * **CASINO** (version 2.13.211) &mdash; CASINO performs quantum Monte Carlo (QMC) electronic structure calculations.
+
+## Image Analysis
+* **blender** (version trunk) &mdash; Blender 3D rendering software.
+* **elastix** (version 2015) &mdash;consists of a collection of algorithms that are commonly used to solve (medical) image registration problems
+* **fiji** (version 2.0) &mdash; Fiji is an image processing package. It can be described as a "batteries-included" distribution of ImageJ (and ImageJ2)
+* **Freesurfer** (version 5.3.0) &mdash; Freesurfer is an open source software suite for processing and analyzing (human) brain MRI images. 
+* **FSL** (version 5.0.8) &mdash; FSL is a comprehensive library of analysis tools for FMRI, MRI and DTI brain imaging data
 
 ## Bioinformatics
 * **blast** (version 2.2.29) &mdash; Blast is a tool to search and align gene and protein sequences.
@@ -55,10 +66,13 @@
 * **FFTW** (version 3.3.4-gromacs) &mdash; FFTW is a library for fast fourier transforms. FFTW 3.3.4 library compiled with gromacs specific options.
 * **FFTW** (version 3.3.4) &mdash; FFTW is a library for fast fourier transforms. FFTW 3.3.4 library compiled for general use.
 * **SparseSuite** (version 4.2.1) &mdash; SuiteSparse is a suite of sparse matrix algorithms.
+* **boost** (version 1.5/1.56) &mdash; Boost provides free peer-reviewed portable C++ source libraries.
 * **gsl** (version 1.16) &mdash; The GNU Scientific Library (GSL) is a numerical library for C and C++ programmers.
 * **geos** (version 3.4.2) &mdash; GEOS (Geometry Engine - Open Source) is an API for processing spatial geometry.
-* **boost** (version 1.5) &mdash; Boost provides free peer-reviewed portable C++ source libraries.
-* **boost** (version 1.56) &mdash; Boost provides free peer-reviewed portable C++ source libraries.
+* **gmp** (version 6.0.0) &mdash;  Gnu Multi Precision Libraries
+* **mixmodlib** (version 3.1) &mdash; Mixmod statistical libraries
+* **mpc** (version 1.0.3) &mdash; Gnu Mpc is a C library for arithmatics with arbitrarily high precision of complex numbers.
+* **mpfr** (version 3.1.3) &mdash; MPFR library is a C library for multiple-precision floating-point computations.
 * **netcdf** (version 4.2) &mdash; NetCDF is a set of software libraries supporting array-oriented scientific data.
 * **nco** (version 4.3) &mdash; The NCO toolkit manipulates and analyzes data stored in netCDF-accessible formats.
 * **sundials** (version 2.5) &mdash; SUNDIALS (SUite of Nonlinear and DIfferential/ALgebraic equation Solvers)
@@ -69,9 +83,13 @@
 * **Modules for Python 2.7**  &mdash; Available as all-pkgs and only available after python 2.7 module loaded
 * **Python 3.4** (version 3.4) &mdash; Interpreter for the python programming language
 * **Modules for Python 3.4**  &mdash; Available as all-pkgs and only available after python 3.4 module loaded
+* **cctools** (version 4.4.2) &mdash; Cooperative Computing Lab is software designed to easily harness large scale distributed systems such as clusters, clouds, and grids.
 * **cmake** (version 3) &mdash; CMake is a cross platform make utility
 * **ectools** (version trunk) &mdash; Ectools is a set of tools for correcting long read assembly data
-* **gcc** (version 4.6.2 / 4.6.4 / 4.9.2) &mdash; GCC is a set of compilers for c
+* **ffmpeg** (version 2.5.2/ 0.10.15) &mdash; ffmpeg is a complete
+* **libgfortran** (4.4.7) &mdash; Fortran shared library
+* **libtiff** (4.0.4) &mdash; Provides support for the Tag Image File Format (TIFF)
+* **gcc** (version 4.6.2 / 4.6.4 / 4.8.1/4.9.2) &mdash; GCC is a set of compilers for c
 * **git** (version 1.9.0) &mdash; Git is a software change management tool.
 * **mercurial** (version 1.9.1) &mdash; Mercurial is a source code management tool.
 * **hdf5** (version 1.8.9 / 1.8.12/ 1.8.13) &mdash; HDF5 is a library for storing and managing data in flexible
@@ -88,15 +106,14 @@
 * **papi** (version 5.3.2) &mdash; PAPI is a performance profiler.
 * **ruby** (version 2.1) &mdash; Ruby is a dynamic
 * **ant** (version 1.9.4) &mdash; Ant is a Java library and command-line tool is to drive processes described in build files.
-* **java** (version 7u71) &mdash; Java
-* **java** (version 8u25) &mdash; Java
+* **java** (version 7u71/8u25) &mdash; Java
+* **jasper** (version 1.9.1) &mdash; reference implementation of the codec specified in the JPEG
 * **fpc** (version 2.6.4) &mdash; Free pascal Free Pascal is a 32
 * **expat** (version 2.1.0) &mdash; Expat is an XML parser library written in C.
 * **tcl** (version 8.6.2) &mdash; Tcl (Tool Command Language) is a very powerful but easy to learn dynamic programming language.
 * **swift** (version 0.94.1) &mdash; Swift is a parallel scripting language.
 * **scons** (version 2.3.4) &mdash; SCons is a software construction tool and is a superior alternative to the classic "Make" build tool.
 * **proot** (version 2014) &mdash; PRoot is a user-space implementation of chroot
-* **ffmpeg** (version 2.5.2/ 0.10.15) &mdash; ffmpeg is a complete
 * **gnome-libs** (version 1) &mdash; The gnome-libs package includes libraries that are needed to run GNOME 1 applications.
 * **stashcp** (version 2.2/2.5) &mdash; Stashcp is a front-end to XRootD caching for OSG Connect Stash.
 * **canopy** (version 1.4.1) &mdash; Canopy is the next generation of the Enthought Python Distribution (EPD)
