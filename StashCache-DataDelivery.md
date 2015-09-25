@@ -16,13 +16,14 @@ The basic idea is one places data into an origin server (for OSG Connect users, 
 
     --closest: return closest cache location
 
-Exit status 4 indicates that at least one file did not successfully copy over.
-Exit status 1 indicates that the WantsStashCache classad was not present in job environment.
+    Exit status 4 indicates that at least one file did not successfully copy over.
+    Exit status 1 indicates that the WantsStashCache classad was not present in job environment.
 
 ## Overview of algorithm
 
-All the functions are defined above everything else, so the code is not simple to read. STASHCP itself starts "running" after the comment line ### LOGIC TO RUN STASHCP ###.
+All the functions are defined above everything else, so the code is not simple to read. STASHCP itself starts "running" after the comment line 
 
+## LOGIC TO RUN STASHCP ##.
 
 ### Startup
 Before any downloading happens, STASHCP checks for relevant classads, loads xrootd, initializes information variables and processes arguments. It also determines the closest local cache.
