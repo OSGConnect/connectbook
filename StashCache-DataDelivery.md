@@ -23,7 +23,7 @@ The basic idea is one places data into an origin server (for OSG Connect users, 
 
 All the functions are defined above everything else, so the code is not simple to read. STASHCP itself starts "running" after the comment line 
 
-## LOGIC TO RUN STASHCP ##.
+## LOGIC TO RUN STASHCP
 
 ### Startup
 Before any downloading happens, STASHCP checks for relevant classads, loads xrootd, initializes information variables and processes arguments. It also determines the closest local cache.
