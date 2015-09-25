@@ -21,7 +21,7 @@ The basic idea is one places data into an origin server (for OSG Connect users, 
 
 ## Overview of algorithm
 
-All the functions are defined above everything else, so the code is not simple to read. STASHCP itself starts "running" after the comment line 
+All the functions are defined above everything else, so the code is not simple to read. STASHCP itself starts "running" after the comment line.
 
 ## LOGIC TO RUN STASHCP
 
