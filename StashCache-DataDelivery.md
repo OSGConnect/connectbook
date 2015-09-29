@@ -93,8 +93,10 @@ If any single download failed, STASHCP itself has failed. In this case, STASHCP 
 
 ### downloading_timeout.sh
 This is a separate script that tracks the size of a file being downloaded, and cuts off the download command if the file's size does not change enough in a given period of time. This helps to tell the difference between a stalled download and a slow download.
-Usage: downloading_timeout.sh -t <TIMEOUT> -d <DIFF> -f <FILE> -s <EXPSIZE> <DOWNLOADING COMMAND>
-The script waits until $file exists, at which point it stores $prevSize, the size of the file in bytes. Every $timeoutseconds, the script computes the expected size of the file using $prevSize, $expSize and $diff: $wantSize := min($prevSize + $diff, $expSize). Thus, the script is asking for at least an increase of $diff bytes, unless $prevSize + $diff > $expSize. If the file size has not increased appropriately, the script shuts down the downloading command.
+
+    Usage: downloading_timeout.sh -t <TIMEOUT> -d <DIFF> -f <FILE> -s <EXPSIZE> <DOWNLOADING COMMAND>
+    
+The script waits until $file exists, at which point it stores $prevSize, the size of the file in bytes. Every `$timeoutseconds`, the script computes the expected size of the file using `$prevSize, $expSize and $diff: $wantSize := min($prevSize + $diff, $expSize)`. Thus, the script is asking for at least an increase of $diff bytes, unless $prevSize + $diff > $expSize. If the file size has not increased appropriately, the script shuts down the downloading command.
 It is recommended that $timeout not be set to 1 second, as tests showed that download times varied on a second-by-second level. A better value is in the range of 3-10 seconds. These variables are set in STASHCP.
 
 ## Known issues and concerns
