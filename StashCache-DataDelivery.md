@@ -26,6 +26,7 @@ All the functions are defined above everything else, so the code is not simple t
 
 ## LOGIC TO RUN STASHCP
 
+
 ### Startup
 Before any downloading happens, STASHCP checks for relevant classads, loads xrootd, initializes information variables and processes arguments. It also determines the closest local cache.
 
