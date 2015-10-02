@@ -12,7 +12,7 @@ After this, you should be able to load the connect client by running:
 	       module load connect-client
   
 Once the connect client is loaded, you can use the connect client as outlined in the other documents in this section.  
-
+  
 
 # Getting Help
 For assistance or questions, please email the OSG User Support team at
