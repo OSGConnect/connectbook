@@ -33,9 +33,11 @@ to compile and install Connect Client. You must have administrator
 access!
 
 As root (if you do not have sudo):
+
 	yum -y install sudo
 
 As a user with sudo rights:
+
 	sudo yum -y install https://centos6.iuscommunity.org/ius-release.rpm
 	sudo yum -y install python27 python27-pip python27-devel openssl-devel git gcc
 
