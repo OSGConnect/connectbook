@@ -98,8 +98,9 @@ In order to prevent one instance of `gosync` from conflicting with another, `gos
 Again, any sync command will wait for the lock in this way.  To prevent a command from waiting, use the `--nowait` (or `--nw`) option. If the lock is unavailable, `gosync` will exit right away without doing whatever you asked it to do.
 
 # Welcome message 
-This is a boiler plate message send to the new users. 
-Hi
+This is a boiler plate message communicated to the new user. 
+
+Hi 
 
 Welcome to OSG Connect. I've activated your account in OSG Connect. You'll be able to log in using SSH to login.osgconnect.net.
 
