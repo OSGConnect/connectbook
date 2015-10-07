@@ -14,30 +14,6 @@ Since `gosync` runs on the `www.osgconnect.net` server, the first step is to log
 
     $ ssh www.osgconnect.net
 
-## gosync command 
-
-    $ cd /usr/local/gosync
-    $ ./gosync
-    usage: gosync [-u|--user=api-user] [-g|--group=top-group] [-f|--file=configfile] [--nw|--nowait] [-q|--quiet] [--force] 
-           gosync [opts] deluser <user> [<user> ...]
-           gosync [opts] group accept <groupname> <user> <email>
-           gosync [opts] group accept <groupname> <user> [<...>]
-           gosync [opts] group admin <groupname> <user> [<user> ...]
-           gosync [opts] group delmember <groupname> <user> [<user> ...]
-           gosync [opts] group get <groupname>
-           gosync [opts] group list [-baseurl url | -portal hostname] [-format {html|csv|xml|json|text}] [filters ...]
-           gosync [opts] group manager <groupname> <user> [<user> ...]
-           gosync [opts] group member <groupname> <user> [<user> ...]
-           gosync [opts] group members <groupname> [<groupname> ...]
-           gosync [opts] group new [-top] [-parent groupname] <groupname> [<groupname> ...] [: <user> ...]
-           gosync [opts] group syncdesc <groupname> [<groupname> ...]
-           gosync [opts] group syncpolicy <groupname> [<groupname> ...]
-           gosync [opts] shell
-           gosync [opts] sync groups
-           gosync [opts] sync users
-           gosync [opts] sync users [--new] [--updated] [--only <user> [...]]
-           gosync [opts] waitlock
-           
 ## Update new user and project
 
 (Note that `gosync` must be run under sudo.)
@@ -68,6 +44,32 @@ Note that after bringing in a new user, groups must _also_ be synchronized in or
     $ sudo ./gosync sync users --new
     $ sudo ./gosync sync groups
 
+
+
+## gosync command reference
+
+    $ cd /usr/local/gosync
+    $ ./gosync
+    usage: gosync [-u|--user=api-user] [-g|--group=top-group] [-f|--file=configfile] [--nw|--nowait] [-q|--quiet] [--force] 
+           gosync [opts] deluser <user> [<user> ...]
+           gosync [opts] group accept <groupname> <user> <email>
+           gosync [opts] group accept <groupname> <user> [<...>]
+           gosync [opts] group admin <groupname> <user> [<user> ...]
+           gosync [opts] group delmember <groupname> <user> [<user> ...]
+           gosync [opts] group get <groupname>
+           gosync [opts] group list [-baseurl url | -portal hostname] [-format {html|csv|xml|json|text}] [filters ...]
+           gosync [opts] group manager <groupname> <user> [<user> ...]
+           gosync [opts] group member <groupname> <user> [<user> ...]
+           gosync [opts] group members <groupname> [<groupname> ...]
+           gosync [opts] group new [-top] [-parent groupname] <groupname> [<groupname> ...] [: <user> ...]
+           gosync [opts] group syncdesc <groupname> [<groupname> ...]
+           gosync [opts] group syncpolicy <groupname> [<groupname> ...]
+           gosync [opts] shell
+           gosync [opts] sync groups
+           gosync [opts] sync users
+           gosync [opts] sync users [--new] [--updated] [--only <user> [...]]
+           gosync [opts] waitlock
+           
 
 
 # Automation
