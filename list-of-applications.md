@@ -12,7 +12,7 @@ physics vectors, geometry and linear algebra.
 * **grass** (version 6.4.4) &mdash; GRASS (Geographic Resources Analysis Support System)
 * **madgraph** (version 2.1.2 / 2.2.2) &mdash; MadGraph is a monte carlo generator for particle physics interactions
 * **octave** (version 3.8.1) &mdash; Octave is a high-level interpreted language
-* **R** (version 3.1.1/3.1.2) &mdash; R is a free software environment for statistical computing and graphics.
+* **R** (version 3.1.1/3.2.0/3.2.1/3.2.2) &mdash; R is a free software environment for statistical computing and graphics.
 * **graphviz** (version 2.38.0) &mdash; Graphviz is an application for visualizing networks and graphs.
 * **ROOT** (version 5.34-21) &mdash; ROOT is a high energy physics data analysis framework.
 * **qhull** (version 2012) &mdash; qhull libraries provide functions for computing convex hull.
