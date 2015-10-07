@@ -2,20 +2,10 @@
 
 [title]: - "Create user login and projects by manual intervention with gosync"
 
-# Automation
-
-Cron jobs maintain the synchronization of users and groups in CI Connect with Globus Nexus.  The cron jobs run from the `root` user's crontab on `www.osgconnect.net`, and look like this:
-
-    */2 * * * * ( cd /usr/local/gosync && ./gosync -q --nw sync users --new && ./gosync -q --nw sync groups ) >/dev/null 2>&1
-    */15 * * * * ( cd /usr/local/gosync && ./gosync -q --nw sync users --updated; ./gosync -q --nw sync groups ) >/dev/null 2>&1
-
-The first job adds new users every two minutes.  The second job updates existing users every 15 minutes.  Each job also adds new groups and updates existing groups.
-
-Globus used to be called "Globus Online". `gosync` is short for `Globus Online Synchronizer`.
 
 # Intervention
 
-Usually, the cron jobs take care of everything. However, in case of cron job failures or due to some unforseen 
+Usually, the cron jobs take care of everything (see below). However, in case of cron job failures or due to some unforseen 
 errors, one may have to run the `gosync` command by hand. 
 
 ## Login to the Portal Server
@@ -79,7 +69,19 @@ Note that after bringing in a new user, groups must _also_ be synchronized in or
     $ sudo ./gosync sync groups
 
 
-## Locks
+
+# Automation
+
+Cron jobs maintain the synchronization of users and groups in CI Connect with Globus Nexus.  The cron jobs run from the `root` user's crontab on `www.osgconnect.net`, and look like this:
+
+    */2 * * * * ( cd /usr/local/gosync && ./gosync -q --nw sync users --new && ./gosync -q --nw sync groups ) >/dev/null 2>&1
+    */15 * * * * ( cd /usr/local/gosync && ./gosync -q --nw sync users --updated; ./gosync -q --nw sync groups ) >/dev/null 2>&1
+
+The first job adds new users every two minutes.  The second job updates existing users every 15 minutes.  Each job also adds new groups and updates existing groups.
+
+Globus used to be called "Globus Online". `gosync` is short for `Globus Online Synchronizer`.
+
+# Locks
 
 In order to prevent one instance of `gosync` from conflicting with another, `gosync` uses a lock file. All uses of `gosync` that might conflict with another use of `gosync` require an exclusive lock.  A `gosync` command will run immediately if it can; otherwise it will "spin" until the lock is available.  The `gosync waitlock` command will wait for the lock to become available, then exit:
 
@@ -92,4 +94,3 @@ In order to prevent one instance of `gosync` from conflicting with another, `gos
     $ 
 
 Again, any sync command will wait for the lock in this way.  To prevent a command from waiting, use the `--nowait` (or `--nw`) option. If the lock is unavailable, `gosync` will exit right away without doing whatever you asked it to do.
-
