@@ -35,11 +35,11 @@ physics vectors, geometry and linear algebra.
 * **vmd** (version 1.9.1) &mdash; VMD is a molecular dynamics visualization application.
 * **autodock** (version 4.2.6) &mdash; Autodock is a suite of automated docking tools to predict how small molecules bind to a receptor.
 * **openbabel** (version 2.3.2) &mdash; Open Babel is a chemical toolbox designed to speak the many languages of chemical data.
-* **phenix** (version 1.10) $mdash; software suite for the determination of molecular structures from X-Ray and other methods.
-* **psi4** (version 0.3.74) $mdash; Psi4 is an open-source suite of ab initio quantum chemistry programs designed for efficient, high-accuracy simulations of a variety of molecular properties. 
-* **rosetta** (version 2015) $mdash; The Rosetta software suite includes algorithms for computational modeling and analysis of protein structures.
-* *shelx** (version 2015) $mdash; SHELX is a set of programs for the determination of small and macromolecular crystal structures.
-* *sqlite** (version 3.8.11.1) $mdash; SQLite is a software library that implements a self-contained, serverless, zero-configuration, transactional SQL database engine.
+* **phenix** (version 1.10) &mdash; software suite for the determination of molecular structures from X-Ray and other methods.
+* **psi4** (version 0.3.74) &mdash; Psi4 is an open-source suite of ab initio quantum chemistry programs designed for efficient, high-accuracy simulations of a variety of molecular properties. 
+* **rosetta** (version 2015) &mdash; The Rosetta software suite includes algorithms for computational modeling and analysis of protein structures.
+* *shelx** (version 2015) &mdash; SHELX is a set of programs for the determination of small and macromolecular crystal structures.
+* *sqlite** (version 3.8.11.1) &mdash; SQLite is a software library that implements a self-contained, serverless, zero-configuration, transactional SQL database engine.
 * 
 
 
