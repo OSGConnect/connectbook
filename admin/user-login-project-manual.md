@@ -96,3 +96,24 @@ In order to prevent one instance of `gosync` from conflicting with another, `gos
     $ 
 
 Again, any sync command will wait for the lock in this way.  To prevent a command from waiting, use the `--nowait` (or `--nw`) option. If the lock is unavailable, `gosync` will exit right away without doing whatever you asked it to do.
+
+# Welcome message 
+This is a boiler plate message send to the new users. 
+Hi
+
+Welcome to OSG Connect. I've activated your account in OSG Connect. You'll be able to log in using SSH to login.osgconnect.net.
+
+General Examples:
+Few examples outlined on  HelpDesk (http://support.opensciencegrid.org/support/solutions) under the section High Throughput Computation on OSG.⋅
+
+Project:
+We recommend the users to create new project for their research work.  You may want to review existing projects here: http://osgconnect.net/project-summary  and the guide on how to start a new project:
+http://support.opensciencegrid.org/support/solutions/articles/5000634360-start-a-project-with-osg-connect 
+
+Contact Us:
+If you or your users have questions about OSG Connect or assistance in getting started, please contact us at user-support@opensciencegrid.org, or use the "Email Us" link from the web site or contact me.
+
+Thank you
+
+
+
