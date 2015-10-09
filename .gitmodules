@@ -94,3 +94,6 @@
 [submodule "tutorials/tutorial-matlab-ResonanceODE"]
 	path = tutorials/tutorial-matlab-ResonanceODE
 	url = https://github.com/OSGConnect/tutorial-matlab-ResonanceODE
+[submodule "tutorial-R-addlibSNA"]
+	path = tutorial-R-addlibSNA
+	url = https://github.com/OSGConnect/tutorial-R-addlibSNA
