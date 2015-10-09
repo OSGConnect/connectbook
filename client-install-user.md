@@ -7,10 +7,11 @@
 The connect client is currently fully supported on Red Hat
 Enterprise Linux 6, including CentOS and Scientific Linux.
 Other Linux distributions are supported on a best effort
-basis, but there should be no major challenges. The client
+basis, but there should be no major compatibility problems. The client
 has been tested on Mac OS X 10.9 and higher, but OSX is also
 best-effort supported. Expect these and other operating systems
 to become more fully supported in the future.
+
 
 # Tools you will need
 
@@ -19,29 +20,30 @@ the following software. These might or might not be present on
 your computer already:
 
 * a terminal emulation program
-* python 2.7 (python 2.6 works, with caveats; see below)
-* python 2.7 development libraries and headers
-* pip
-* git
-* gcc or clang
-* openssl development libraries and headers
+* Python 2.7 (python 2.6 works, with caveats; see below)
+* Python 2.7 development libraries and headers
+* Pip
+* Git
+* GCC or Clang (a C compiler)
+* OpenSSL development libraries and headers
 
-## Too long; didn't read
+## Abbreviated summary
 
 The following steps will prepare a *pristine* CentOS 6 installation
 to compile and install Connect Client. You must have administrator
-access!
+access to install these packages!  Your site might already have
+what you need, however.  The explanations below will help you
+check.  If you have admin rights and just want to be certain, though,
+follow these steps.
 
 As root (if you do not have sudo):
 
-	yum -y install sudo
+	$ yum -y install sudo
 
 As a user with sudo rights:
 
-	sudo yum -y install https://centos6.iuscommunity.org/ius-release.rpm
-	sudo yum -y install python27 python27-pip python27-devel openssl-devel git gcc
-
-If you're in a hurry, you can copy and paste these commands.
+	$ sudo yum -y install https://centos6.iuscommunity.org/ius-release.rpm
+	$ sudo yum -y install python27 python27-pip python27-devel openssl-devel git gcc
 
 
 ## Terminal emulator
@@ -59,12 +61,12 @@ in Python 2.7.  If you _need_ to run the client under Python 2.6, let us know
 and we'll try to help you get around these issues.
 
 To determine what version of Python you have installed, run: `python --version`.
-**Python 3 is not currently supported.** 
+ **Python 3 is not currently supported.** 
 	
 If you are on a remote login system that uses environment modules, see below
 for special considerations.
 
-### Means of installing Python 2.7
+### Ways to install Python 2.7
 
 **Linux**: If you're on a Red Hat Enterprise Linux 6 derivative, you will need to be
 able to install software system-wide using `sudo yum`. Python 2.7 is not
@@ -72,7 +74,7 @@ distributed from the standard repositories on any EL6 distribution, but the
 [IUS Community](http://ius.io) has [supplemental software
 repositories](https://ius.io/GettingStarted/) that are safe to add to your
 system.  Once those are installed, you can use `yum install python27` to
-install a `python27` executable.
+install a `python27` executable.  See specific commands above.
 
 **MacOS**: Mac OS X ships Python 2.7 by default. You can also use the Python
 that comes with MacPorts.
@@ -116,6 +118,8 @@ enabled already.  To check, run `gcc --version`; you should see something like:
 	This is free software; see the source for copying conditions.  There is NO
 	warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
+There are no particular version requirements for the compiler.
+
 ### Installing a compiler
 
 If you do not have `gcc`, you will need to install it on your system as
@@ -130,6 +134,18 @@ install the XCode command line tools:
 * open XCode Preferences
 * click the Locations tab
 * ensure that a command-line tools package is selected at the bottom of the pane
+
+## OpenSSL development libraries
+
+OpenSSL is used to build the *pycrypto* components that Connect Client uses
+for secure network communication.
+
+*Linux*: Install the `openssl-devel` package from your distribution.  Distributions
+not based on EL6 might call this differently.
+
+*MacOS*: You may need to install MacPorts for a successful compilation on MacOS X.
+
+There are no particular version requirements for the OpenSSL libraries.
 
 # Obtaining the Connect Client distribution
 
@@ -146,8 +162,35 @@ directory to that copy. **The --recursive option is important!**
 
 Typically you'll want to install a release version.
 
-	$ git checkout v0.5
+	$ git checkout v0.5.1
 
+Next, you'll build and install the software. How you do this depends on
+what kind of packaging environment your server uses. Environment modules
+are directly supported in our installation scheme -- we can create a
+modulefile for you. If you don't have environment modules, use the Generic
+installation.
+
+# Generic (no environment modules)
+
+Installation is a simple one-line command:
+
+	$ ./install.sh ~/software/connect-client
+	[install] Setting up the Connect module v0.5.1
+	Connect modulefile is in /home/username/software/connect-client/connect-client
+	[install] Installing Connect user commands
+	[install] ... connect command
+	[install] ... paramiko (for connect command)
+	== Connect Client dependencies installed.
+	[install] ... tutorial command
+
+Once the software is installed, you will need to add it to your $PATH:
+
+	$ export PATH=~/software/connect-client/bin:$PATH
+
+(You may also want to add this to your ~/.profile file so that it activates
+upon future logins.)
+
+You can now run the `connect` command.
 
 # Installation using environment modules
 
@@ -173,19 +216,15 @@ module description information.  A reasonable choice for this is
 `~/privatemodules`; for many sites, this is where the `use.own` module
 looks for personal modules.
 
-Run `./install.sh` with these two directories.  The install script
-will figure out the current version number.
+Run `./install.sh` with these two directories as arguments.  The
+install script will figure out the current version number.
 
 	$ ./install.sh ~/software/connect-client ~/privatemodules
 
 
-N.B. Any modules that you have loaded at the time you install Connect
-Client will be loaded by the Connect Client modulefile _each time you
-load the `connect-client` module_. This ensures that dependencies are
-handled internally. To reduce unnecessary module loads, be sure not to
-load unnecessary modules before installing.  You may wish to hand-edit
-the modulefile to ensure that only true dependencies are listed.  Search
-for `module load` in the installed modulefile.
+N.B. You may wish to hand-edit
+the modulefile to ensure that dependencies such as Python are listed.
+Search for `module load` in the installed modulefile.
 
 After the software is installed, you may use the `module` command to get
 access:
@@ -196,13 +235,4 @@ access:
 Loading `use.own` tells the module system to search your `~/privatemodules`
 folder for modules.
 
-
-# Without environment modules
-
-If your site does not have environment modules, install the package as
-above and, if necessary, modify the $PATH:
-
-	$ export PATH=~/software/connect-client/bin:$PATH
-
-The installation script will also install the modulefile (which you
-won't need) but you can simply remove it.
+You can now run the `connect` command.
