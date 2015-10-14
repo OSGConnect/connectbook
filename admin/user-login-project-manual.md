@@ -102,7 +102,7 @@ This is a boiler plate message communicated to the new user.
 
 Hi 
 
-Welcome to OSG Connect. I've activated your account in OSG Connect. You'll be able to log in using SSH to login.osgconnect.net.
+Welcome to OSG Connect. I've activated your account in OSG Connect. Now you can log in using SSH to login.osgconnect.net.
 
 General Examples:
 Few examples outlined on  HelpDesk (http://support.opensciencegrid.org/support/solutions) under the section High Throughput Computation on OSG.⋅
