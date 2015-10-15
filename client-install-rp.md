@@ -8,16 +8,12 @@ The first step in installation is to grab the latest copy of the
 client from GitHub:
 
 	$ ssh login.mycluster.edu			 # [your cluster site here]
-	$ module load git                    # [if needed]
-	$ git clone --recursive https://github.com/CI-Connect/connect-client
-	$ cd connect-client
+	$ wget http://osg.link/connect-client-0.5.2.tar.gz
+	$ tar xzf connect-client-0.5.2.tar.gz
+	$ cd connect-client-0.5.2
 
 This obtains a copy of the distribution and sets your shell's working
-directory to that copy. **The --recursive option is important!**
-
-Typically you'll want to install a release version.
-
-	$ git checkout v0.5
+directory to that copy.
 
 # Installation using environment modules
 
@@ -44,7 +40,7 @@ we'll `/software` as the location of software tools, and
 `/software/modulefiles` as the location of module files.
 Run `./install.sh` with these two directories:
 
-	$ ./install.sh /software/connect-client-0.4.6 /software/modulefiles
+	$ ./install.sh /software/connect-client-0.5.2 /software/modulefiles
 
 N.B. There may be dependencies in your module environment that should
 be loaded when `connect-client` is loaded. In particular, at many sites
