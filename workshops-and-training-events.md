@@ -6,6 +6,7 @@ We offer training and tutorials for the scientists and researchers. As part of o
 
 
 ##Upcoming Event
+
 [SWC-OSG Workshop at Duke University, October 27-29th 2015](http://swc-osg-workshop.github.io/2015-10-27-duke/index.html)
 
  
