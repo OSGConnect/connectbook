@@ -19,9 +19,11 @@ We offer training and tutorials for the scientists and researchers. As part of o
 *[Open Science Grid Mini-Workshop at University of Chicago, April 9th,  2015](http://swc-osg-workshop.github.io/MiniOSG-2015-04-09-UChicago/index.html)
 
 ### SWC-OSG Workshops
+
 *[SWC-OSG Workshop at University of Chicago, December 15-17th 2014](http://swc-osg-workshop.github.io/2014-12-15-UChicago/)
 
 *[SWC-OSG Workshop at IUPUI, Indianapolis. March 3-6th 2015](http://swc-osg-workshop.github.io/2015-03-03-iupui/index.html)
 
 ### Conferences and Showcases
-[Umbrella Initiative - Faculty Technology Receptions, University of Chicago, October 15-16th 2015] (http://umbrella.uchicago.edu/node/80)
+
+*[Umbrella Initiative - Faculty Technology Receptions, University of Chicago, October 15-16th 2015] (http://umbrella.uchicago.edu/node/80)
