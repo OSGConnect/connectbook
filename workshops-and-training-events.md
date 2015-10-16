@@ -26,4 +26,4 @@ We offer training and tutorials for the scientists and researchers. As part of o
 
 ### Conferences and Showcases
 
-[Umbrella Initiative - Faculty Technology Receptions, University of Chicago, October 15-16th 2015] (http://umbrella.uchicago.edu/node/80)
+[Umbrella Initiative - Faculty Technology Receptions, University of Chicago, October 15-16th 2015](http://umbrella.uchicago.edu/node/80)
