@@ -1,4 +1,7 @@
 
+[title]: - "Joint Software Carpentry and OSG Workshops"
+
+[TOC]
 
 We offer training and tutorials for the scientists and researchers. As part of our training service we are offering an extended Software Carpentry workshop which augments instruction on basic Linux tools and programming with tutorials on using distributed high throughput computing workflows. These workshops are run by the OSG staff and instructors from Software Carpentry.
 
