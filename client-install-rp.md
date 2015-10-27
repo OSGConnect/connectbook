@@ -8,9 +8,9 @@ The first step in installation is to grab the latest copy of the
 client from GitHub:
 
 	$ ssh login.mycluster.edu			 # [your cluster site here]
-	$ wget http://osg.link/connect-client-0.5.2.tar.gz
-	$ tar xzf connect-client-0.5.2.tar.gz
-	$ cd connect-client-0.5.2
+	$ wget http://osg.link/connect-client-0.5.3.tar.gz
+	$ tar xzf connect-client-0.5.3.tar.gz
+	$ cd connect-client-0.5.3
 
 This obtains a copy of the distribution and sets your shell's working
 directory to that copy.
@@ -52,10 +52,50 @@ when you installed the software will be listed but commented out. Uncomment
 any that are true dependencies.
 
 
+# Using RPM and Yum
+
+We've prepared an RPM for Connect Client which you can install on any Linux
+system that is based on Red Hat Enterprise Linux 6 (EL6).  This includes
+CentOS 6 and Scientific Linux 6.
+
+To start, install the CI Connect Yum repository with this command:
+
+	$ yum install http://repo.ci-connect.net/yum/ci-connect/6/x86_64/ci-connect-release-6-1.noarch.rpm
+
+This will give you access to CI Connect-related software packages, and to software
+updates as they become available.  You can see this in the output of `yum repolist`:
+
+	$ yum repolist
+	Loaded plugins: downloadonly, security
+	repo id                    repo name                                                          status
+	EPEL-6-x86_64              EPEL-6-x86_64                                                      11808
+	SL-64-x86_64               SL-64-x86_64                                                        6410
+	SL-64-x86_64-security      SL-64-x86_64-security                                               3465
+	ci-connect                 CI Connect for Enterprise Linux 6.4 - x86_64                           3
+	core-0                     core-0                                                              4011
+	dell-el6                   dell-el6                                                            2318
+	repolist: 28015
+
+Then just install the connect-client package:
+
+	$ yum install connect-client
+
+... and you're all set!
+
+
 # Without environment modules
 
-If your site does not have environment modules, install the package as
-above and, if necessary, modify the $PATH:
+If your site does not have environment modules or RPM/Yum, install the
+package from source.  This is much the same as above, but you only need
+one destination directory:
+
+	$ ./install.sh /software/connect-client
+
+or even:
+
+	$ ./install.sh /usr/local
+
+If necessary, modify the $PATH:
 
 	$ export PATH=/software/connect-client/bin:$PATH
 
@@ -63,8 +103,4 @@ You can safely install Connect Client to a common location such as
 `/usr` or `/usr/local`.  The installation script will also install
 the modulefile (which you won't need) but you can simply remove it.
 
-
-# Other
-
-We expect to provide an RPM-based installation in the near future.
 
