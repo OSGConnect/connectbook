@@ -22,6 +22,3 @@ Joint Open Science Grid - Software Carpentry Workshop at the University of Nebra
 
 [SWC-OSG Workshop at IUPUI, Indianapolis. March 3-6th 2015](http://swc-osg-workshop.github.io/2015-03-03-iupui/index.html)
 
-### Conferences and Showcases
-
-[Umbrella Initiative - Faculty Technology Receptions, University of Chicago, October 15-16th 2015](http://umbrella.uchicago.edu/node/80)
