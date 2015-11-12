@@ -135,7 +135,7 @@ host of other environment variables.
 * **unixOBDC** (version 2.3.2) &mdash; develop and promote unixODBC to be the
 definitive standard for ODBC on non MS Windows platforms.
 
-## Not Listed
-Is your software unavailable?  You can [ask us to install it][request].
+## Request Software
+Is your software not listed?  You can [ask us to install it][request].
 
 [request]: 5000649173
