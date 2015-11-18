@@ -3,7 +3,7 @@
 [TOC]
 
 ## Physics and Engineering
-* **LAMMPS** (version 2) &mdash; LAMMPS is a classical molecular dynamics code.
+* **LAMMPS** (version 15May15) &mdash; LAMMPS is a particle simulator code.
 * **CP2K** (version 2.5.1) &mdash; CP2K is the state-of-the-art method for accurate atomistic simulations.
 * **Quantum Espresso** (version 5.1/5.2) &mdash; Quantum Espresso is an integrated suite of codes for electronic-structure calculations at the nanoscale.
 * **clhep** (version 2.2.0.8) &mdash; Set of HEP-specific foundation and utility classes such as random generators,
@@ -42,6 +42,7 @@ physics vectors, geometry and linear algebra.
 * **sqlite** (version 3.8.11.1) &mdash; SQLite is a software library that implements a self-contained, serverless, zero-configuration, transactional SQL database engine.
 
 ## Image Analysis
+* **ANTs** (version 1.9.4/2.1.0) &mdash; ANTs is a popular toolkit for medical image registration and segmentation.
 * **FSL** (version 5.0.8) &mdash; FSL is a comprehensive library of analysis tools for FMRI, MRI and DTI brain imaging data
 * **blender** (version trunk) &mdash; Blender 3D rendering software.
 * **elastix** (version 2015) &mdash;consists of a collection of algorithms that are commonly used to solve (medical) image registration problems
