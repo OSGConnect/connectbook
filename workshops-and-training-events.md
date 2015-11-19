@@ -14,7 +14,7 @@ We offer training and tutorials for the scientists and researchers new to high t
 
 ## Joint OSG & Software Carpentry Workshops
 
-Joint Open Science Grid - Software Carpentry Workshop at the University of Nebraska, Lincoln, January 6-8, 2016
+[Joint Open Science Grid - Software Carpentry Workshop at the University of Nebraska, Lincoln, January 6-8, 2016](http://swc-osg-workshop.github.io/2016-01-06-UNL/)
 
 [SWC-OSG Workshop at Duke University, October 27-29th 2015](http://swc-osg-workshop.github.io/2015-10-27-duke/index.html)
 
