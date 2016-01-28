@@ -1,6 +1,8 @@
 
 [title]: - "Joint Software Carpentry and OSG Workshops"
 
+![osg swc logo](https://raw.githubusercontent.com/OSGConnect/connectbook/master/assets/osg-swc-300ppi.jpg)
+
 ## Overview 
 
 We offer training and tutorials for the scientists and researchers new to high throughput computing. As part of our training service we are offering an extended Software Carpentry workshop which augments instruction on basic Linux tools and programming with tutorials on using distributed high throughput computing workflows. These workshops are run by the OSG staff and instructors from Software Carpentry.
