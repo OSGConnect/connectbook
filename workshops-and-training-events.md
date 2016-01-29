@@ -1,7 +1,7 @@
 
 [title]: - "Joint Software Carpentry and OSG Workshops"
 
-<img src="https://raw.githubusercontent.com/OSGConnect/connectbook/master/assets/osg-swc-300ppi.jpg" width="400" />
+<img src="https://raw.githubusercontent.com/OSGConnect/connectbook/master/assets/osg-swc-300ppi.jpg" width="420" />
 
 ## Overview 
 
