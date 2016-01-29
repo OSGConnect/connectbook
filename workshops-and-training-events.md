@@ -10,8 +10,6 @@ We offer training and tutorials for the scientists and researchers new to high t
 
 ## OSG Workshops on HTC
 
-[OSG User School, July 27–31st 2015](https://twiki.opensciencegrid.org/bin/view/Education/OSGUserSchool2015)
-
 [Open Science Grid Mini-Workshop at University of Chicago, April 9th,  2015](http://swc-osg-workshop.github.io/MiniOSG-2015-04-09-UChicago/index.html)
 
 ## Joint OSG & Software Carpentry Workshops
