@@ -1,6 +1,7 @@
 
 [title]: - "Joint Software Carpentry and OSG Workshops"
 
+<img src="https://raw.githubusercontent.com/OSGConnect/connectbook/master/assets/osg-swc-300ppi.jpg" width="400" />
 
 ## Overview 
 
@@ -14,8 +15,6 @@ We offer training and tutorials for the scientists and researchers new to high t
 [Open Science Grid Mini-Workshop at University of Chicago, April 9th,  2015](http://swc-osg-workshop.github.io/MiniOSG-2015-04-09-UChicago/index.html)
 
 ## Joint OSG & Software Carpentry Workshops
-
-<img src="https://raw.githubusercontent.com/OSGConnect/connectbook/master/assets/osg-swc-300ppi.jpg" width="200" />
 
 [Joint Open Science Grid - Software Carpentry Workshop at the University of Nebraska, Lincoln, January 6-8, 2016](http://swc-osg-workshop.github.io/2016-01-06-UNL/)
 
