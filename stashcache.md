@@ -19,27 +19,18 @@ How to use Stashcache
 Stashcache is available at all OSG sites where OASIS is mounted. To use it for transferring files to active jobs:
 
 1.  Copy the data files required for the job(s) into your stash directory which is mounted on the OSG Connect login node here:
-
 	/stash/user/<userid>/
-
 Alternatively, users can [use Globus](<https://support.opensciencegrid.org/solution/articles/5000632397-data-transfer-with-globus>) to transfer data files to stash.
 
 2.  Include the following line in the job's submit script to require OASIS:
-
 	requirements = HAS_CVMFS_oasis_opensciencegrid_org =?= True
 
 3.  Use the 'stashcp' command-line tool in the job wrapper script to transfer necessary data files to the compute host.  
-
 First load the stashcp module:
-
 	module load stashcp 
-
 Then transfer your data:
-
 	stashcp -s <source> user/<userid>/<stash_data_file_path> -l <target_location>
-
-The <source> must be given as a relative path to the data file location within the stash directory.  For example, if the data file is located at /stash/user/<userid>/samples/sample01.dat, then the stashcp command to transfer this file into your current working directory on the compute host would be:
-
+The \<source\> must be given as a relative path to the data file location within the stash directory.  For example, if the data file is located at /stash/user/<userid>/samples/sample01.dat, then the stashcp command to transfer this file into your current working directory on the compute host would be:
 	stashcp -s user/<userid>/samples/sample01.dat -l .
 
 More usage options are described in the stashcp help message:
