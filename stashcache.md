@@ -1,22 +1,21 @@
 [title]: - "Introduction to Stashcache"
 
-What is Stashcache?
+What is StashCache?
 -------------------
 
-The standard practice of using HT Condor file transfer or http to move data files to grid sites can be inefficient for certain workflows.  Stashcache is a distributed network filesystem (based on XRootD proxy caching) which provides an alternative method for transferring input files to active jobs.  It is implemented through a handful of strategically-distributed sites which provide caching of data files used in grid jobs.
+StashCache is a data service for OSG which transparently caches data near compute sites for faster delivery to active grid jobs.  The standard practice of using HT Condor file transfer or http to move data files to grid sites can be inefficient for certain workflows.  StashCache uses a distributed network filesystem (based on XRootD proxy caching) which provides an alternative method for transferring input files to jobs sites.  It is implemented through a handful of strategically-distributed sites which provide caching of the input data files.
 
-
-When to use Stashcache
+When to use StashCache
 -----------------------
 
-Stashcache typically outperforms other methods in the following cases:
+StashCache typically outperforms other methods in the following cases:
 * Jobs require large data files (> a few GB)
 * The same data files are used repeatedly for many separate jobs
 
-How to use Stashcache
+How to use StashCache
 ---------------------
 
-Stashcache is available at all OSG sites where OASIS is mounted. To use it for transferring files to active jobs:
+StashCache is available at all OSG sites where OASIS is mounted. To use it for transferring files to active jobs:
 
 1)  Copy the data files required for the job(s) into your stash directory which is mounted on the OSG Connect login node here:
 
@@ -24,9 +23,9 @@ Stashcache is available at all OSG sites where OASIS is mounted. To use it for t
 
 Alternatively, users can [use Globus](<https://support.opensciencegrid.org/solution/articles/5000632397-data-transfer-with-globus>) to transfer data files to stash.
 
-2)  Include the following line in the job's submit script to require OASIS:
+2)  Include the following line in the job's submit script to indicate that StashCache is required:
 
-	requirements = HAS_CVMFS_oasis_opensciencegrid_org =?= True
+	+WantsStashCache = true
 
 3)  Use the 'stashcp' command-line tool in the job wrapper script to transfer necessary data files to the compute host.  
 
