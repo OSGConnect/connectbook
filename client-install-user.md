@@ -5,7 +5,7 @@
 # Supported platforms
 
 The connect client is currently fully supported on Red Hat
-Enterprise Linux 6, including CentOS and Scientific Linux.
+Enterprise Linux6, including CentOS and Scientific Linux.
 Other Linux distributions are supported on a best effort
 basis, but there should be no major compatibility problems. The client
 has been tested on Mac OS X 10.9 and higher, but OSX is also
