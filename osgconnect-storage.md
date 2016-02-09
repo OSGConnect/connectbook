@@ -1,4 +1,4 @@
-[title]: - "Storage Solutions on OSG Connect"
+[title]: - "Storage Solutions on OSG: Home, Stash, and Public"
 
 
 Overview
