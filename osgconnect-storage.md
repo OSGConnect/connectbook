@@ -4,8 +4,7 @@
 Overview
 --------
 
-On OSG submit nodes, the users have access to three storage solutions: `HOME`, `STASH`, and `PUBLIC`.  Although `STASH` and `PUBLIC` are different
-filesystems, they are mounted on `/home/username`. Therefore, all are accessible from `/home/username`.
+`HOME`, `STASH`, and `PUBLIC` are the data storage options for the OSG users.  Each offers certain advantages to the users.
 
 Location:
 
