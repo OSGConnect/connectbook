@@ -12,14 +12,15 @@ Location:
     STASH: /home/username/stash
     PUBLIC: /home/username/public
 
+For convenience, the stash and public are accessed from your home directory. 
+
 HOME
 ----
-Home is meant for storing programs, parameter files, etc., Although home usage does not have any quota restrictions, we recommend
-the usage of home to less than 10 GB. Home filesystem is not suitable to run your condor jobs. It is a good practice to run your jobs under the STASH directory.
+Home is meant for storing programs, parameter files, etc., Although no quota imposed on home usage,  we remmend the usage of less than 10 GB. Home filesystem is not suitable to run your condor jobs. It is a good practice to run all your jobs under the STASH directory.
 
 STASH
 -----
-Stash provides a large temporary storage. Stash is the place you run your jobs. Like home, there is no quota imposed on stash. However, the data on stash is not backed-up, so copy the files on a regular basis.  For data transfer of more than 10 GB, use the globus transfer service.   More details here:
+Stash provides a large temporary storage. Stash is the place you run all your condor jobs. Like home, there is no quota imposed on stash. However, the data on stash is not backed-up, so copy the files on a regular basis.  For data transfer of more than 10 GB, use the globus transfer service.   More details here:
 
 
 PUBLIC
