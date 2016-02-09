@@ -1,4 +1,4 @@
-[title]: - "Introduction to Stashcache"
+[title]: - "Introduction to StashCache"
 
 What is StashCache?
 -------------------
@@ -9,7 +9,8 @@ When to use StashCache
 -----------------------
 
 StashCache typically outperforms other methods in the following cases:
-* Jobs require large data files (> a few GB)
+
+* Jobs require large data files (> 500 MB)
 * The same data files are used repeatedly for many separate jobs
 
 How to use StashCache
@@ -37,7 +38,7 @@ Then transfer your data:
 	
 	stashcp -s <source> user/<userid>/<stash_data_file_path> -l <target_location>
 
-The \<source\> must be given as a relative path to the data file location within the stash directory.  For example, if the data file is located at /stash/user/\<userid\>/samples/sample01.dat, then the stashcp command to transfer this file into your current working directory on the compute host would be:
+The <source\> must be given as a relative path to the data file location within the stash directory.  For example, if the data file is located at /stash/user/<userid\>/samples/sample01.dat, then the stashcp command to transfer this file into your current working directory on the compute host would be:
 
 	stashcp -s user/<userid>/samples/sample01.dat -l .
 ___
