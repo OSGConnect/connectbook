@@ -3,9 +3,7 @@
 
 ## Overview
 
-`home`, `stash`, and `public` are the data storage options for the OSG users.  Each storage offers certain advantages to the users.
-
-Location of the three storages on the submit node:
+`home`, `stash`, and `public` are the data storage options for the OSG users.  Each storage offers certain advantages to the users. Location of the three storages on the submit node:
 
     home: /home/username
     stash: /home/username/stash
