@@ -5,16 +5,16 @@
 
 `home`, `stash`, and `public` are the data storage options for the OSG users.  Each storage offers certain advantages to the users.
 
-Location of the file systems on the submit node
+Location of the three storages on the submit node:
 
     home: /home/username
     stash: /home/username/stash
     public: /home/username/public
 
-For convenience, the stash and public directories are accessed from home directory. Here, the `username` is your login name.
+For convenience, the stash and public directories are accessed from home. Here, the `username` is your login name.
 
 ## home
-Home is meant for storing files for quick access. Usually, the files such as program files, parameter files, scripts etc., are kept under the home directory for quick access.  Although disk quota is not imposed on home,  we recommend a disk usage of less than 10 GB. Home filesystem is not suitable to run your condor jobs. It is a good practice to run all your jobs under the `stash` directory.
+Home is meant for storing files for quick access. Usually, the files such as program files, parameter files, scripts etc., are kept under the home directory.  Although disk quota is not imposed on home,  we recommend a disk usage of less than 10 GB. Home filesystem is not suitable to run your condor jobs. It is a good practice to run all your jobs under the `stash` directory.
 
 ## stash
 Stash provides a large temporary storage. Stash is the place you run all your condor jobs. Like home, there is no disk quota imposed on stash. However, the data on stash is not backed-up, so transfer the data to a secondary local disk (such as your local desktop, laptop, etc.,) on a regular basis.  For data transfer of more than 10 GB, use the globus transfer service.  For more details check the articles on [data transfer techniques](https://support.opensciencegrid.org/solution/folders/5000260918).
