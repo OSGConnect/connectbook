@@ -3,7 +3,7 @@
 
 ## Overview
 
-`home`, `stash`, and `public` are the data storage options for the OSG users.  Each storage offers certain advantages to the users. These storages are accessed on the submit node (login.osgconnect.net) from the following locations,
+`home`, `stash`, and `public` are the data storage options for the OSG users.  Each storage offers certain advantages to the users. On the submit node (login.osgconnect.net), the storages are in the following locations,
 
     home: /home/username
     stash: /home/username/stash
