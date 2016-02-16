@@ -97,3 +97,6 @@
 [submodule "tutorial-R-addlibSNA"]
 	path = tutorial-R-addlibSNA
 	url = https://github.com/OSGConnect/tutorial-R-addlibSNA
+[submodule "tutorial-fsurf"]
+	path = tutorial-fsurf
+	url = https://github.com/OSGConnect/tutorial-fsurf
