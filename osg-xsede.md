@@ -118,7 +118,10 @@ universe = vanilla
 +ProjectName = "TG-NNNNNN"
 
 # requirements is an expression to specify machines that can run jobs
-requirements = (FileSystemDomain != "") &amp;&amp; (Memory &gt;= 1) &amp;&amp; (Arch == "X86_64")
+requirements = OSGVO_OS_STRING == "RHEL 6" &amp;&amp; Arch == "X86_64" &amp;&amp; HAS_MODULES == True
+request_cpus = 1
+request_memory = 2 GB
+request_disk = 10 GB
 
 executable = /bin/hostname
 

@@ -139,12 +139,12 @@ Not all resources available through OSG Connect support distributed environment 
 sure that the jobs you submit run on resources that do support distributed environment modules, you will need to add
 the following condition to the requirements in your htcondor job submission file. E.g. :
 
-	Requirements = (HAS_CVMFS_oasis_opensciencegrid_org =?= TRUE)
+	Requirements = (HAS_MODULES =?= TRUE)
 	
 	
 or 
 
-	Requirements = [Other requirements ] && (HAS_CVMFS_oasis_opensciencegrid_org =?= TRUE)
+	Requirements = [Other requirements ] && (HAS_MODULES =?= TRUE)
 
 if you already have other requirements specified and need to append the OASIS requirement.
 
