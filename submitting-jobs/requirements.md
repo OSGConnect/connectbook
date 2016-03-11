@@ -54,12 +54,12 @@ attributes. You can check values for an attribute with:
   can be determined by running _attr -g revision /cvmfs/oasis.opensciencegrid.org/_
   Note that dots in the path is replaced with underscores in the
   attribute name.
-   - oasis.opensciencegrid.org
-   - stash.osgstorage.org
-   - icecube.opensciencegrid.org
-   - atlas.cern.ch
-   - cms.cern.ch
-   - ams.cern.ch
+    - oasis.opensciencegrid.org
+    - stash.osgstorage.org
+    - icecube.opensciencegrid.org
+    - atlas.cern.ch
+    - cms.cern.ch
+    - ams.cern.ch
 - **HAS_SQUID** - Boolean specifying if the _OSG_SQUID_LOCATION_ environment
   variable is set
 - **HAS_TCSH** - Boolean specifying if the node has /bin/tcsh
@@ -72,14 +72,14 @@ attributes. You can check values for an attribute with:
   paths are replaced with underscores in the attribute names. For example:
   **HAS_FILE_lib64_libgcc_s_so_1** advertises if /lib64/libgcc_s.so.1 exists.
   Currently the following files are advertised: 
-   - /lib64/libgcc_s.so.1
-   - /lib64/libglib-2.0.so.0
-   - /usr/lib64/libgfortran.so.3
-   - /usr/lib64/libglib-2.0.so
-   - /usr/lib64/libgslcblas.so.0
-   - /usr/lib64/libgsl.so.0
-   - /usr/lib64/libstdc++.so.6
-   - /usr/lib64/libgtk-x11-2.0.so.0
-   - /usr/lib64/libXt.so.6 
+    - /lib64/libgcc_s.so.1
+    - /lib64/libglib-2.0.so.0
+    - /usr/lib64/libgfortran.so.3
+    - /usr/lib64/libglib-2.0.so
+    - /usr/lib64/libgslcblas.so.0
+    - /usr/lib64/libgsl.so.0
+    - /usr/lib64/libstdc++.so.6
+    - /usr/lib64/libgtk-x11-2.0.so.0
+    - /usr/lib64/libXt.so.6 
 
 
