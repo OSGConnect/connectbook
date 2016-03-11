@@ -41,12 +41,16 @@ attributes. You can check values for an attribute with:
 
 - **HAS_MODULES** - Boolean specifying if you will be able to use
   _module load ..._ or not.
+
 - **OSGVO_OS_NAME** - the name of the operating system of the compute node. 
   The most common name is _RHEL_
+
 - **OSGVO_OS_VERSION** - Version of the operating system
+
 - **OSGVO_OS_STRING** - Combined OS name and version. Common values are
   _RHEL 6_ and _RHEL 7_. Please see the requirements string above on the
   recommended setup.
+
 - **OSGVO_CPU_MODEL** - The CPU model identifier string as presented in
   /proc/cpuinfo
 - **CVMFS_oasis_opensciencegrid_org_REVISION** - This attribute is set
@@ -60,13 +64,20 @@ attributes. You can check values for an attribute with:
     - atlas.cern.ch
     - cms.cern.ch
     - ams.cern.ch
+
 - **HAS_SQUID** - Boolean specifying if the _OSG_SQUID_LOCATION_ environment
   variable is set
+
 - **HAS_TCSH** - Boolean specifying if the node has /bin/tcsh
+
 - **HAS_XRDCP** - Boolean specifying if the node has _xrdcp_ in the default path
+
 - **HAS_TIMEOUT** - Boolean specifying if the node has _timeout_ in the default path
+
 - **HAS_R** - Boolean specifying if the node has R
+
 - **HAS_NUMPY** - Boolean specifying if the node has Python Numpy
+
 - **HAS_FILE_foo** - Sometimes it is easier to match against system library
   files rather than higher level tool names. Note that dots and slashes in the
   paths are replaced with underscores in the attribute names. For example:
