@@ -33,8 +33,43 @@ Then the requirements would be:
 
 	requirements = CVMFS_oasis_opensciencegrid_org_REVISION >= 3983
 
-There are many attributes that you can use. To see the attributes for all the
-machines in the current pool. Note that this is a long list:
+There are many attributes that you can use. Below is a list of common
+attributes. You can check values for an attribute with:
 
-	condor_status -pool osg-flock.grid.iu.edu -long
+	condor_status -pool osg-flock.grid.iu.edu -af {ATTR_NAME}
+
+
+- **HAS_MODULES** - Boolean specifying if you will be able to use
+  _module load ..._ or not.
+- **OSGVO_OS_NAME** - the name of the operating system of the compute node. 
+  The most common name is _RHEL_
+- **OSGVO_OS_VERSION** - Version of the operating system
+- **OSGVO_OS_STRING** - Combined OS name and version. Common values are
+  _RHEL 6_ and _RHEL 7_. Please see the requirements string above on the
+  recommended setup.
+- **OSGVO_CPU_MODEL** - The CPU model identifier string as presented in
+  /proc/cpuinfo
+- **CVMFS_oasis_opensciencegrid_org_REVISION** - This attribute is set
+  a the following /cvmfs file systems: oasis.opensciencegrid.org,
+  stash.osgstorage.org, icecube.opensciencegrid.org,
+  atlas.cern.ch, cms.cern.ch, ams.cern.ch. The revision on the submit node
+  can be determined by running _attr -g revision /cvmfs/oasis.opensciencegrid.org/_
+- **HAS_SQUID** - Boolean specifying if the _OSG_SQUID_LOCATION_ environment
+  variable is set. Note that dots in the path is replaced with underscores in the
+  attribute name.
+- **HAS_TCSH** - Boolean specifying if the node has /bin/tcsh
+- **HAS_XRDCP** - Boolean specifying if the node has _xrdcp_ in the default path
+- **HAS_TIMEOUT** - Boolean specifying if the node has _timeout_ in the default path
+- **HAS_R** - Boolean specifying if the node has R
+- **HAS_NUMPY** - Boolean specifying if the node has Python Numpy
+- **HAS_FILE_foo** - Sometimes it is easier to match against system library
+  files rather than higher level tool names. For example: **HAS_FILE_lib64_libgcc_s_so_1** 
+  advertises if /lib64/libgcc_s.so.1 exists.
+  Currently the following files are advertised: 
+  /lib64/libgcc_s.so.1 /lib64/libglib-2.0.so.0 /usr/lib64/libgfortran.so.3
+  /usr/lib64/libglib-2.0.so /usr/lib64/libgslcblas.so.0 /usr/lib64/libgsl.so.0
+  /usr/lib64/libstdc++.so.6 /usr/lib64/libgtk-x11-2.0.so.0 /usr/lib64/libXt.so.6 .
+  Note that dots and slashes in the paths are replaced with underscores in the
+  attribute names.
+
 
