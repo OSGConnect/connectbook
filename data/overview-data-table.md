@@ -11,7 +11,7 @@ The following tables provides an overview of data management in OSG. Check the r
 
 |         | Recommended Limit| Purpose | Details|
 | ------- |:----------------:| :------:| ------:|
-| home    | 0-5 GB      | Meant for quick data access and not for submitting jobs.| Data Storage] (https://support.opensciencegrid.org/support/solutions/articles/12000002985-storage-solutions-on-osg-home-stash-and-public)|
+| home    | 0-5 GB      | Meant for quick data access and not for submitting jobs.| [Data Storage] (https://support.opensciencegrid.org/support/solutions/articles/12000002985-storage-solutions-on-osg-home-stash-and-public)|
 | stash   |  < 1 TB GB  | Meant for large storage and I/O of your jobs. |[Data Storage] (https://support.opensciencegrid.org/support/solutions/articles/12000002985-storage-solutions-on-osg-home-stash-and-public)|
 | public  |  < 10 GB    | Meant for sharing data and input data  transfer via HTTP|[Data Storage] (https://support.opensciencegrid.org/support/solutions/articles/12000002985-storage-solutions-on-osg-home-stash-and-public)|
 
