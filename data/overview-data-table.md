@@ -1,5 +1,5 @@
 
-[title]: - "Guidelines for data managment in OSG"
+[title]: - "Guidelines for data managment in OSG - Storage and Transfer"
 [TOC]
 
 ## Purpose
