@@ -1,5 +1,5 @@
 
-[title]: - "GAMESS"
+[title]: - "Guidelines for data managment on OSG"
 [TOC]
 
 ## Purpose
@@ -33,4 +33,8 @@ The solutions for data transfers from your job back to OSG Connect are more limi
 | ------------|:--------:| ------:|
 | scp         | < 1 GB   | [SCP](https://support.opensciencegrid.org/support/solutions/articles/5000634376-using-scp-to-transfer-files) |
 | Globus      |  > 1 GB  | [Globus](https://support.opensciencegrid.org/support/solutions/articles/5000632397-data-transfer-with-globus) |
+
+## Getting Help
+For assistance or questions, please email the OSG User Support team  at [user-support@opensciencegrid.org](mailto:user-support@opensciencegrid.org) or visit the [help desk and community forums](http://support.opensciencegrid.org).
+
 
