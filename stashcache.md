@@ -1,4 +1,4 @@
-[title]: - "Introduction to StashCache"
+[title]: - "Transferring data with StashCache"
 
 What is StashCache?
 -------------------
