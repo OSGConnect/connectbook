@@ -9,9 +9,7 @@ Usage
 -----
 If you have datasets on your campus' storage system, by far the easiest method is to use Globus as the file transfer service.  
 
-Stash is mounted on all OSG Connect submit nodes (`login.osgconnect.net`) at `~/data`, and is visible to workers via Parrot/Chirp. The portion of your Stash designated public is also available directly on the WWW as `http://stash.osgconnect.net/+yourusername`.
-
-Projects have stashes, too!  A project's public stash can be found at `http://stash.osgconnect.net/@projectname`.
+Stash is mounted on all OSG Connect submit nodes (`login.osgconnect.net`) at `~/data`, and is visible to workers via Parrot/Chirp. The portion of your Stash designated public is also available directly on the WWW as `http://stash.osgconnect.net/~yourusername`.
 
 Policy 
 ------
