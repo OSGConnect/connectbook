@@ -20,9 +20,9 @@ The following tables provides an overview of data management in OSG. Check the r
 
 |    Protocol     | Data Size| command| Purpose | Details|
 | --------------- |:----------:| :-----:|:--------|--------:|
-| HTCondor    | < 1 GB       | transfer_input_files| Common approach to transfer your input data|[HTCondor Transfer] (https://support.opensciencegrid.org/support/solutions/articles/5000639787-transferring-data-with-htcondor)|
-| HTTP        |  < 1 10 GB   | wget, curl or transfer_input_files  | Input files from ~/public |[HTTP Access] (https://support.opensciencegrid.org/support/solutions/articles/5000639798-access-stash-remotely-using-http)|
-| StachCache  |  < 100 GB    | Staschcp |Input files from ~/public| [StachCache] (https://support.opensciencegrid.org/support/solutions/articles/5000639798-access-stash-remotely-using-http)|
+| HTCondor    | < 1 GB       | transfer_input_files| Input data from home, public or stash |[HTCondor Transfer] (https://support.opensciencegrid.org/support/solutions/articles/5000639787-transferring-data-with-htcondor)|
+| HTTP        |  < 1 10 GB   | wget, curl or transfer_input_files  | Input data from ~/public |[HTTP Access] (https://support.opensciencegrid.org/support/solutions/articles/5000639798-access-stash-remotely-using-http)|
+| StachCache  |  < 100 GB    | Staschcp |Input data from ~/public| [StachCache] (https://support.opensciencegrid.org/support/solutions/articles/5000639798-access-stash-remotely-using-http)|
 
 ## Output data for your job
 The solutions for data transfers from your job back to OSG Connect are more limited. At this point, we recommend that you use the built-in HTCondor file transfer mechanism (transfer_output_files=... in your job submit file).
