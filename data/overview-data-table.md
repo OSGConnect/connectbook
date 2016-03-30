@@ -3,9 +3,9 @@ Data Storage
 
 |         | Recommended Limit| Purpose | Details|
 | ------- |:----------------:| :------:| ------:|
-| home    | 0-5 GB      | Meant for quick data access and not for submitting jobs.Keep program and parameter files| [Storage] (https://support.opensciencegrid.org/support/solutions/articles/12000002985-storage-solutions-on-osg-home-stash-and-public)|
-| stash   |  < 1 TB GB  | Meant for large storage and I/O of your jobs. Submit jobs from this directory |[Storage] (https://support.opensciencegrid.org/support/solutions/articles/12000002985-storage-solutions-on-osg-home-stash-and-public)|
-| public  |  < 10 GB    | Keep the input data if you choose to share or use HTTP transfer |[Storage] (https://support.opensciencegrid.org/support/solutions/articles/12000002985-storage-solutions-on-osg-home-stash-and-public)|
+| home    | 0-5 GB      | Meant for quick data access and not for submitting jobs.| [Home storage] (https://support.opensciencegrid.org/support/solutions/articles/12000002985-storage-solutions-on-osg-home-stash-and-public)|
+| stash   |  < 1 TB GB  | Meant for large storage and I/O of your jobs. |[Stash storage] (https://support.opensciencegrid.org/support/solutions/articles/12000002985-storage-solutions-on-osg-home-stash-and-public)|
+| public  |  < 10 GB    | Meant for sharing data and input data  transfer via HTTP|[Public Storage] (https://support.opensciencegrid.org/support/solutions/articles/12000002985-storage-solutions-on-osg-home-stash-and-public)|
 
 
 Input data for your job
