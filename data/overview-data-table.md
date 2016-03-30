@@ -1,6 +1,5 @@
 
 [title]: - "Guidelines for data managment in OSG - Storage and Transfer"
-[TOC]
 
 ## Purpose
 
@@ -23,7 +22,7 @@ The following tables provide the guidelines of data management in OSG. Check the
 | --------------- |:----------:| :-----:|:--------|--------:|
 | HTCondor    | < 1 GB       | transfer_input_files| Input data from home, public or stash |[HTCondor Transfer](https://support.opensciencegrid.org/support/solutions/articles/5000639787-transferring-data-with-htcondor)|
 | HTTP        |  < 10 GB   | wget, curl or transfer_input_files  | Input data from ~/public |[HTTP Access](https://support.opensciencegrid.org/support/solutions/articles/5000639798-access-stash-remotely-using-http)|
-| StachCache  |  < 100 GB    | Staschcp |Input data from ~/public| [StachCache](https://support.opensciencegrid.org/support/solutions/articles/5000639798-access-stash-remotely-using-http)|
+| StachCache  |  < 50 GB    | Staschcp |Input data from ~/public| [StachCache](https://support.opensciencegrid.org/support/solutions/articles/5000639798-access-stash-remotely-using-http)|
 
 
 ## Output data for your job
