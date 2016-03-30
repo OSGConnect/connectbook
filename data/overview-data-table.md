@@ -1,10 +1,10 @@
 
-[title]: - "Guidelines for data managment on OSG"
+[title]: - "Guidelines for data managment in OSG"
 [TOC]
 
 ## Purpose
 
-The following tables provides an overview of data management in OSG. Check the relevent weblinks for more details. 
+The following tables provide the guidelines of data management in OSG. Check the web link for details. 
 
 
 ## Data Storage
