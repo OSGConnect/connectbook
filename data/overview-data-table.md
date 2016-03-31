@@ -32,10 +32,10 @@ We recommend that the built-in HTCondor file transfer mechanism (transfer_output
 
 ## External data transfer
 
-|   Protocol | Data Size| Details|
-|: ------------|:--------|:------|
-| Secured Copy Protocol (SCP)        | < 1 GB   | [SCP](https://support.opensciencegrid.org/support/solutions/articles/5000634376-using-scp-to-transfer-files) |
-| Globus                            |  > 1 GB  | [Globus](https://support.opensciencegrid.org/support/solutions/articles/5000632397-data-transfer-with-globus) |
+   Protocol | Data Size| Details
+ :------------|:--------|:------
+Secured Copy Protocol (SCP)        | < 1 GB    [SCP](https://support.opensciencegrid.org/support/solutions/articles/5000634376-using-scp-to-transfer-files) 
+ Globus                            |  > 1 GB   [Globus](https://support.opensciencegrid.org/support/solutions/articles/5000632397-data-transfer-with-globus) 
 
 
 ## Getting Help
