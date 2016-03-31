@@ -19,8 +19,8 @@ The following tables provide guidelines for data management in OSG. Check the we
 ## Transferring input data for a job
 
 |    Protocol     | Data Size| command| Purpose | Details|
-|:---------|:------| :-----|:----------|:------|
-| **HTCondor**    | < 1 GB       | transfer_input_files| Input data from home, public or stash |[HTCondor Transfer](https://support.opensciencegrid.org/support/solutions/articles/5000639787-transferring-data-with-htcondor)|
+|:---------|:------|:-----|:----------|:------|
+| **HTCondor**    | < 1 GB  | transfer_input_files| Input data from home, public or stash |[HTCondor Transfer](https://support.opensciencegrid.org/support/solutions/articles/5000639787-transferring-data-with-htcondor)|
 | **HTTP**        |  < 10 GB   | wget, curl or transfer_input_files  | Input data from ~/public |[HTTP Access](https://support.opensciencegrid.org/support/solutions/articles/5000639798-access-stash-remotely-using-http)|
 | **StachCache**  |  < 50 GB    | Staschcp |Input data from ~/public| [StachCache](https://support.opensciencegrid.org/support/solutions/articles/5000639798-access-stash-remotely-using-http)|
 
@@ -34,8 +34,8 @@ We recommend that the built-in HTCondor file transfer mechanism (transfer_output
 
    Protocol | Data Size| Details
  |:------------|:--------|:------|
-|**Secured Copy Protocol (SCP)** | < 1 GB   | [SCP](https://support.opensciencegrid.org/support/solutions/articles/5000634376-using-scp-to-transfer-files) 
- |**Globus** |  > 1 GB  | [Globus](https://support.opensciencegrid.org/support/solutions/articles/5000632397-data-transfer-with-globus) 
+|**Secured Copy Protocol (SCP)** | < 1 GB   | [SCP](https://support.opensciencegrid.org/support/solutions/articles/5000634376-using-scp-to-transfer-files) |
+ |**Globus** |  > 1 GB  | [Globus](https://support.opensciencegrid.org/support/solutions/articles/5000632397-data-transfer-with-globus) |
 
 
 ## Getting Help
