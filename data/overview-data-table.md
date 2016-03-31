@@ -8,7 +8,7 @@ The following tables provide guidelines for data management in OSG. Check the we
 
 ## Data storage options
 
-|  **Type** | **Recommended Limit**| **Purpose** | **Details**|
+|   | **Recommended Limit**| **Purpose** | **Details**|
 |:------- |:----------------| :------|:------|
 | **home**    |  < 5 GB      | Meant for quick data access and not for submitting jobs.| [Data Storage](https://support.opensciencegrid.org/support/solutions/articles/12000002985-storage-solutions-on-osg-home-stash-and-public)|
 | **stash**   |  < 500 GB      | Meant for large storage and I/O for your jobs. |[Data Storage](https://support.opensciencegrid.org/support/solutions/articles/12000002985-storage-solutions-on-osg-home-stash-and-public)|
@@ -18,7 +18,7 @@ The following tables provide guidelines for data management in OSG. Check the we
 
 ## Transferring input data for a job
 
-|    **Protocol**     | **Data Size**| **Command** | **Purpose** | **Details**|
+|         | **Data Size**| **Command** | **Purpose** | **Details**|
 |:---------|:------|:-----|:----------|:------|
 | **HTCondor**    | < 1 GB  | transfer_input_files| Input data from home, public or stash |[HTCondor Transfer](https://support.opensciencegrid.org/support/solutions/articles/5000639787-transferring-data-with-htcondor)|
 | **HTTP**        |  < 10 GB   | wget, curl or transfer_input_files  | Input data from ~/public |[HTTP Access](https://support.opensciencegrid.org/support/solutions/articles/5000639798-access-stash-remotely-using-http)|
@@ -32,7 +32,7 @@ We recommend that the built-in HTCondor file transfer mechanism (transfer_output
 
 ## External data transfer
 
-| **Protocol** | **Data Size**| **Details**|
+|  | **Data Size**| **Details**|
 |:------------|:--------|:------|
 |**Secured Copy Protocol (SCP)** | < 1 GB |[SCP](https://support.opensciencegrid.org/support/solutions/articles/5000634376-using-scp-to-transfer-files) |
 |**Globus** |  > 1 GB  | [Globus](https://support.opensciencegrid.org/support/solutions/articles/5000632397-data-transfer-with-globus) |
