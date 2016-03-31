@@ -3,7 +3,7 @@
 
 ## Purpose
 
-The following tables provide the guidelines of data management in OSG. Check the web link for details. 
+The following tables provide the guidelines for data management in OSG. Check the web link for details. 
 
 
 ## Data storage options
