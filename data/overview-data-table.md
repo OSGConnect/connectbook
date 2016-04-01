@@ -34,7 +34,7 @@ We recommend that the built-in HTCondor file transfer mechanism (transfer_output
 
 |  | **Data Size**| **Tools** |**Details**|
 |:------------|:-------:|:------|:------| 
-|**Secured Copy Protocol (SCP)** | < 1 GB | scp, puty  |[SCP](https://support.opensciencegrid.org/support/solutions/articles/5000634376-using-scp-to-transfer-files) |
+|**Secured Copy Protocol (SCP)** | < 1 GB | scp, puty, WinSCP, gFTP, etc.  |[SCP](https://support.opensciencegrid.org/support/solutions/articles/5000634376-using-scp-to-transfer-files) |
 |**Globus** |  > 1 GB  | globus webservice or globus CLI | [Globus](https://support.opensciencegrid.org/support/solutions/articles/5000632397-data-transfer-with-globus) |
 
 
