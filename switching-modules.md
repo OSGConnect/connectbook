@@ -27,6 +27,28 @@ In order to deactivate the OASIS  modules and activate the local modules run
 source /cvmfs/oasis.opensciencegrid.org/osg/modules/switch-modules/clemson/switch-modules-local
 ```
 
+## UChicago RCC Midway
+
+These instructions indicate how to switch between OASIS and local modules on the midway cluster 
+at UChicago.  
+
+First, run 
+```
+source /cvmfs/oasis.opensciencegrid.org/osg/modules/switch-modules/rcc/switch-modules.sh
+```
+
+### Switching to OASIS modules
+
+In order to deactivate the local modules and activate the OASIS modules run
+```
+switch_modules oasis
+```
+
+### Switching to local modules
+In order to deactivate the OASIS  modules and activate the local modules run 
+```
+switch_modules local
+```
 
 ## Others
 These instructions are for sites without modules installed
