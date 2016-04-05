@@ -9,22 +9,28 @@ the case, then you'll need to take some extra setup in order to access OASIS mod
 in other to test your scripts.  The switching process is specific to each site,
 so you should find your institution below and use the instructions there.
 
+
 ## Clemson Palmetto
 
 These instructions indicate how to switch between the modules on the Palmetto
 cluster at Clemson and OASIS.
 
+First, run 
+```
+source /cvmfs/oasis.opensciencegrid.org/osg/modules/switch-modules/rcc/switch-modules.sh
+```
+
 ### Switching to OASIS modules
 
 In order to deactivate the local modules and activate the OASIS modules run
 ```
-source /cvmfs/oasis.opensciencegrid.org/osg/modules/switch-modules/clemson/switch-modules-oasis
+switch_modules oasis
 ```
 
 ### Switching to local modules
 In order to deactivate the OASIS  modules and activate the local modules run 
 ```
-source /cvmfs/oasis.opensciencegrid.org/osg/modules/switch-modules/clemson/switch-modules-local
+switch_modules local
 ```
 
 ## UChicago RCC Midway
