@@ -110,3 +110,6 @@
 	path = tutorials/tutorial-makeflow-quickstart
 	url = https://github.com/OSGConnect/tutorial-makeflow-quickstart
 
+[submodule "tutorials/tutorial-makeflow-detachmaster"]
+	path = tutorials/tutorial-makeflow-detachmaster
+	url = https://github.com/OSGConnect/tutorial-makeflow-detachmaster
