@@ -106,4 +106,7 @@
 [submodule "tutorials/tutorial-stashcache-blast"]
 	path = tutorials/tutorial-stashcache-blast
 	url = https://github.com/OSGConnect/tutorial-stashcache-blast
+[submodule "tutorials/tutorial-makeflow-quickstart"]
+	path = tutorials/tutorial-makeflow-quickstart
+	url = https://github.com/OSGConnect/tutorial-makeflow-quickstart
 
