@@ -113,3 +113,6 @@
 [submodule "tutorials/tutorial-makeflow-detachmaster"]
 	path = tutorials/tutorial-makeflow-detachmaster
 	url = https://github.com/OSGConnect/tutorial-makeflow-detachmaster
+[submodule "tutorials/tutorial-makeflow-gromacs"]
+	path = tutorials/tutorial-makeflow-gromacs
+	url = https://github.com/OSGConnect/tutorial-makeflow-gromacs
