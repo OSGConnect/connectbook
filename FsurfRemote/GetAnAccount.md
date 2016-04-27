@@ -15,7 +15,8 @@ For example,
 
       ./fsurf --list --user myuser --password mypassword
 
-the argument `list` reports the list of workflows and will discussed in the  section on process a scan (LINK).
+the argument `list` reports the list of workflows and will discussed in the  section on 
+[process an MRI scan](https://support.opensciencegrid.org/support/solutions/articles/12000008490-anlysis-of-a-brain-mri-scan) .
 The argument `myuser` is your username and `mypassword` is your password for your fsurf account.  
 
 ## What next?
