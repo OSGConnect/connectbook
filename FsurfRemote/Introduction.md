@@ -17,8 +17,7 @@ We describe the proceedure to
 
 Fsurf is easy to install and use from a laptop, desktop or a dedicated server. All it requires is a machine with a network connection and Python installed.  It takes only a few minutes to set up the tool and submit an image analysis job on the OSG.  
 
-![fig 1](https://raw.githubusercontent.com/OSGConnect/connectbook/FsurfRemote/master/Figs/Fsurfv1.png) 
-![fig 1](https://raw.githubusercontent.com/OSGConnect/tutorial-FreeSurfer/master/Figs/freesurfer_image_from_net.png )
+![fig 1](https://raw.githubusercontent.com/OSGConnect/connectbook/master/FsurfRemote//Figs/Fsurfv1.png)
 
 
 **Important note on data privacy**: The `fsurf` tool is *not* HIPPA compliant. (HIPPA, the Health Insurance Portability and Accountability Act, is a federal law written to protect personal medical information.) Therefore images must be anonymized and deidentified before they are uploaded to OSG servers as described in
