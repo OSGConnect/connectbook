@@ -3,14 +3,17 @@
 ## Overview
 
 [FreeSurfer](http://freesurfer.net/) is a software package to analyze MRI images of human brain subjects. The OSG has developed a command line utility, `fsurf`, that simplifies `FreeSurfer` computation on the Open 
-Science Grid (OSG).  To use Fsurf, first you need to get an account. Follow the instructions outlined in the section on Get an account (LINK).  
+Science Grid (OSG).  
+
+To use Fsurf, first you need to have a Fsurf account. Follow the instructions outlined [here to obtain an account.](https://support.opensciencegrid.org/support/solutions/articles/12000008487-request-a-fsurf-account-)
 
 In the following sections, we describe 
 
-* the proceedure to get an account, 
-* initial set up of `Fsurf` on your laptop (or desktop)
-* run image analysis from your laptop 
-* get the output back to your laptop
+* [the proceedure to get an account](https://support.opensciencegrid.org/support/solutions/articles/12000008487-request-a-fsurf-account-)
+* [initial set up of Fsurf on your laptop (or desktop)](https://support.opensciencegrid.org/support/solutions/articles/12000008488-set-up-fsurf-on-your-laptop)
+* [run image analysis from your laptop](https://support.opensciencegrid.org/support/solutions/articles/12000008490-anlysis-of-a-brain-mri-scan)
+* [get the output back to your laptop](https://support.opensciencegrid.org/support/solutions/articles/12000008491-managing-your-output-files)
+
 
 Fsurf is easy to install and use from a laptop, desktop or a dedicated server. All it requires is a machine with a network connection and Python installed.  It takes only a few minutes to set up the tool and submit an image analysis job on the OSG.  
 
