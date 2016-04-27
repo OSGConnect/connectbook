@@ -1,4 +1,4 @@
-[title]: - "Introduction"
+[title]: - "Introduction to Fsurf and FreeSurfer"
 [TOC]
  
 ## Overview

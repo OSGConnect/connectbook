@@ -1,4 +1,4 @@
-[title]: - "Set up Fsurf on Your System"
+[title]: - "Set up Fsurf on Your Laptop"
 [TOC]
 
 Set up Fsurf on your laptop (linux/unix/MacOS X OS system) by downloading the script using the `curl` command. You need to install python.2.7 on your laptop (or desktop) to run fsurf. Open a terminal window and then run:

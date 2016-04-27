@@ -1,7 +1,7 @@
-[title]: - "Get an Fsurf account"
+[title]: - "Request a Fsurf Account "
 [TOC]
 
-To use Fsurf from your laptop (or desktop), first you need to get an account.  This Fsurf 
+To use Fsurf from your laptop (or desktop), first you need to request a Fsurf account.  This 
 account is a separate account from the user account on OSG Connect.
 
 
