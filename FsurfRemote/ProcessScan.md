@@ -1,21 +1,23 @@
-[title]: - "Process a Scan"
+[title]: - "Anlysis of a brain MRI Scan"
 [TOC]
 
+
+## Overview
+
 In this section, we see how to submit the FreeSurfer workflow from your laptop with Fsurf utility. 
+
 **Important note on data privacy**: The `fsurf` tool is *not* HIPPA compliant. (HIPPA, the Health Insurance Portability and Accountability Act, is a federal law written to protect personal medical information.) Therefore images must be anonymized and deidentified before they are uploaded to OSG servers as we discussed in the section ------
 
-## Sample defaced MRI file
+## Get a Sample MRI file
 
-
-Get a sample MRI file by running
+Type the following to get a sample MRI file, 
 
      curl -L -o MRN_3_defaced.mgz 'http://stash.osgconnect.net/+fsurf/MRN_3_defaced.mgz'
 
-the file `MRN_3_defaced.mgz` is the defaced sample file. 
+the file `MRN_3_defaced.mgz` is already defaced and anonymoized. 
 
-Images must be anonymized and deidentified before they are uploaded to OSG servers as we discussed in the section ------
 
-## Image reconstruction of the sample MRI file
+## Perfrom an Image Reconstruction 
 
 A typical Freesurfer analysis runs autorecon1, autorecon2, and autorecon3 sequentially on MRI data.  All three steps are handled by `fsurf`. 
 

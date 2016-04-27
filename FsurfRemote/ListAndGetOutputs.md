@@ -12,7 +12,7 @@ Run the command below to get a list of workflows that you have submitted and the
      test       97                   10:00 01-19-2016     2               Running   
 
 
-###  Getting Outputs
+##  Getting Outputs
 
 Once a workflow is completed successfully, the status of the workflow should be `COMPLETED` as below
 
