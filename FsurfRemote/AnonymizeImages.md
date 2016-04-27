@@ -1,5 +1,4 @@
 [title]: - "Anonymizing Images"
-[TOC]
  
 
 The `fsurf` tool is *not* HIPPA compliant. (HIPPA, the Health Insurance Portability and Accountability Act, is a federal law written to protect personal medical information.) Therefore images must be anonymized and deidentified before they are uploaded to OSG servers. 
