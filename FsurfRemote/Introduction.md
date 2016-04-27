@@ -7,20 +7,22 @@ Science Grid (OSG).
 
 To use Fsurf, first you need to have a Fsurf account. Follow the instructions outlined [here to obtain an account.](https://support.opensciencegrid.org/support/solutions/articles/12000008487-request-a-fsurf-account-)
 
-In the following sections, we describe 
+We describe the proceedure to 
 
-* [the proceedure to get an account](https://support.opensciencegrid.org/support/solutions/articles/12000008487-request-a-fsurf-account-)
-* [initial set up of Fsurf on your laptop (or desktop)](https://support.opensciencegrid.org/support/solutions/articles/12000008488-set-up-fsurf-on-your-laptop)
+* [get a Fsurf account](https://support.opensciencegrid.org/support/solutions/articles/12000008487-request-a-fsurf-account-)
+* [set up of Fsurf on your laptop](https://support.opensciencegrid.org/support/solutions/articles/12000008488-set-up-fsurf-on-your-laptop)
 * [run image analysis from your laptop](https://support.opensciencegrid.org/support/solutions/articles/12000008490-anlysis-of-a-brain-mri-scan)
-* [get the output back to your laptop](https://support.opensciencegrid.org/support/solutions/articles/12000008491-managing-your-output-files)
+* [transfer output back to your laptop](https://support.opensciencegrid.org/support/solutions/articles/12000008491-managing-your-output-files)
 
 
 Fsurf is easy to install and use from a laptop, desktop or a dedicated server. All it requires is a machine with a network connection and Python installed.  It takes only a few minutes to set up the tool and submit an image analysis job on the OSG.  
 
 ![fig 1](https://raw.githubusercontent.com/OSGConnect/connectbook/FsurfRemote/master/Figs/Fsurfv1.png) 
+![fig 1](https://raw.githubusercontent.com/OSGConnect/tutorial-FreeSurfer/master/Figs/freesurfer_image_from_net.png )
 
 
-**Important note on data privacy**: The `fsurf` tool is *not* HIPPA compliant. (HIPPA, the Health Insurance Portability and Accountability Act, is a federal law written to protect personal medical information.) Therefore images must be anonymized and deidentified before they are uploaded to OSG servers as we discussed in the section ------
+**Important note on data privacy**: The `fsurf` tool is *not* HIPPA compliant. (HIPPA, the Health Insurance Portability and Accountability Act, is a federal law written to protect personal medical information.) Therefore images must be anonymized and deidentified before they are uploaded to OSG servers as described in
+[Anonymozing Images](https://support.opensciencegrid.org/support/solutions/articles/12000008493-anonymizing-images)
 
 ## What next?
 If you don't have a Fsurf account, get an account. Otherwise, set up Fsurf. 
