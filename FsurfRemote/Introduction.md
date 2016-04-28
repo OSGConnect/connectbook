@@ -9,7 +9,7 @@ To use Fsurf, you need an Fsurf account. Follow the instructions outlined [here 
 We describe the proceedure to:
 
 * [Obtain an Fsurf account](https://support.opensciencegrid.org/support/solutions/articles/12000008487-request-a-fsurf-account-)
-* [Setup Fsurf on your laptop](https://support.opensciencegrid.org/support/solutions/articles/12000008488-set-up-fsurf-on-your-laptop)
+* [Set up Fsurf on your laptop](https://support.opensciencegrid.org/support/solutions/articles/12000008488-set-up-fsurf-on-your-laptop)
 * [Run image analysis from your laptop](https://support.opensciencegrid.org/support/solutions/articles/12000008490-anlysis-of-a-brain-mri-scan)
 * [Transfer output back to your laptop](https://support.opensciencegrid.org/support/solutions/articles/12000008491-managing-your-output-files)
 
