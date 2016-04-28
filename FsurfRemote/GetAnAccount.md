@@ -1,27 +1,23 @@
-[title]: - "Request a Fsurf Account "
+[title]: - "Requesting an Fsurf Account"
 
+To use Fsurf from your laptop (or desktop) you will first need to request an account. Open a ticket requesting an account [here](https://support.opensciencegrid.org/support/tickets/new). In the subject field of the ticket, write "Fsurf account request" and in the body of the ticket please include your contact information:
+* Name
+* Institution
+* Department
+* Institution email address
+* Phone
 
-To use Fsurf from your laptop (or desktop), first you need to request a Fsurf account.  This 
-account is a separate account from the user account on OSG Connect.
-
-If you don't have a Fsurf account, open a ticket requesting an account [here](https://support.opensciencegrid.org/support/tickets/new). This opens a new window or tab. In the subject field of the ticket, write "fsurf account request" so 
-that it helps the support team to quickly identify the nature of the ticket. 
-
-If you forgot the password, ....
-
-Whenever you use the Fsurf command from the laptop, you need to provide the username and 
-password of the Fsurf account.  Therefore, make sure the account information are quickly accessible to you. 
-For example,
+Whenever you use the Fsurf command from the laptop, you need to provide the username and password of the Fsurf account.  Therefore, make sure the account information are only accessible by you. For example,
 
       ./fsurf --list --user myuser --password mypassword
 
 the argument `list` reports the list of workflows and will discussed in the  section on 
 [process an MRI scan](https://support.opensciencegrid.org/support/solutions/articles/12000008490-anlysis-of-a-brain-mri-scan) .
-The argument `myuser` is your username and `mypassword` is your password for your fsurf account.  
+The argument `myuser` is your username and `mypassword` is your password for your Fsurf account.  
 
-## What next?
+## What's next?
 
-Once you have a `Fsurf` account ready, set up `Fsurf` on your laptop or desktop. 
+Once you have your `Fsurf` account ready, set up `Fsurf` on your laptop or desktop.  
 
 ## Getting Help
 For assistance or questions, please email the OSG User Support team  at [user-support@opensciencegrid.org](mailto:user-support@opensciencegrid.org) or visit the [help desk and community forums](http://support.opensciencegrid.org).
