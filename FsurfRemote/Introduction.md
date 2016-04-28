@@ -21,7 +21,7 @@ Fsurf is easy to install and use from a laptop, desktop or a dedicated server. A
 [Anonymozing Images](https://support.opensciencegrid.org/support/solutions/articles/12000008493-anonymizing-images)
 
 ## What's next?
-If you don't have a Fsurf account, get an account. Otherwise, set up Fsurf. 
+If you don't have a Fsurf account, [get an account](https://support.opensciencegrid.org/solution/articles/12000008487-requesting-an-fsurf-account). Otherwise, [set up Fsurf](https://support.opensciencegrid.org/solution/articles/12000008488-set-up-fsurf-on-your-laptop). 
 
 ## Getting Help
 For assistance or questions, please email the OSG User Support team  at [user-support@opensciencegrid.org](mailto:user-support@opensciencegrid.org) or visit the [help desk and community forums](http://support.opensciencegrid.org).

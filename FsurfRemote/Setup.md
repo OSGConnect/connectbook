@@ -7,9 +7,9 @@ Set up Fsurf on your laptop (linux/unix/MacOS X OS system) by downloading the sc
 
 If you don't have a Fsurf password, open a ticket requesting an account [here](https://support.opensciencegrid.org/support/tickets/new). 
 
-## What next? 
+## What's next? 
 
-See how to submit an example FreeSurfer workflow  from your laptop with Fsurf.
+See how to [submit an example FreeSurfer workflow from your laptop]( https://support.opensciencegrid.org/solution/articles/12000008490-anlysis-of-a-brain-mri-scan).
 
 ## Getting Help
 For assistance or questions, please email the OSG User Support team  at [user-support@opensciencegrid.org](mailto:user-support@opensciencegrid.org) or visit the [help desk and community forums](http://support.opensciencegrid.org).

@@ -18,7 +18,7 @@ The argument `myuser` is your username and `mypassword` is your password for you
 
 ## What's next?
 
-Once you your account is ready, setup Fsurf on your laptop or desktop.  
+Once your Fsurf account is ready, [setup Fsurf on your laptop or desktop.](https://support.opensciencegrid.org/solution/articles/12000008488-set-up-fsurf-on-your-laptop)
 
 ## Getting Help
 For assistance or questions, please email the OSG User Support team  at [user-support@opensciencegrid.org](mailto:user-support@opensciencegrid.org) or visit the [help desk and community forums](http://support.opensciencegrid.org).

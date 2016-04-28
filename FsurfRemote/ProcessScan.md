@@ -6,7 +6,7 @@
 
 In this section, we see how to submit the FreeSurfer workflow from your laptop with Fsurf utility. 
 
-**Important note on data privacy**: The `fsurf` tool is *not* HIPPA compliant. (HIPPA, the Health Insurance Portability and Accountability Act, is a federal law written to protect personal medical information.) Therefore images must be anonymized and deidentified before they are uploaded to OSG servers as we discussed in the section ------
+**Important note on data privacy**: The `fsurf` tool is *not* HIPPA compliant. (HIPPA, the Health Insurance Portability and Accountability Act, is a federal law written to protect personal medical information.) Therefore images must be anonymized and deidentified before they are uploaded to OSG servers as described in [Anonymozing Images](https://support.opensciencegrid.org/support/solutions/articles/12000008493-anonymizing-images)
 
 ## Get a Sample MRI file
 
@@ -47,9 +47,9 @@ Run the command below to get a list of workflows that you have submitted and the
      Subject    Workflow             Submit time          Cores          Status
      test       97                   10:00 01-19-2016     2               Running
 
-## What next? 
+## What's next? 
 
-See how to get the output files back to the laptop once the workflow finished. 
+See how to [get the output files back to the laptop](https://support.opensciencegrid.org/solution/articles/12000008491-managing-your-output-files) once the workflow finished. 
 
 ## Getting Help
 For assistance or questions, please email the OSG User Support team  at [user-support@opensciencegrid.org](mailto:user-support@opensciencegrid.org) or visit the [help desk and community forums](http://support.opensciencegrid.org).
