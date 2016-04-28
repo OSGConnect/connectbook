@@ -1,6 +1,7 @@
 [title]: - "Requesting an Fsurf Account"
 
 To use Fsurf from your laptop (or desktop) you will first need to request an account. Open a ticket requesting an account [here](https://support.opensciencegrid.org/support/tickets/new). In the subject field of the ticket, write "Fsurf account request" and in the body of the ticket please include your contact information:
+
 * Name
 * Institution
 * Department
@@ -17,7 +18,7 @@ The argument `myuser` is your username and `mypassword` is your password for you
 
 ## What's next?
 
-Once you have your `Fsurf` account ready, set up `Fsurf` on your laptop or desktop.  
+Once you your account is ready, setup Fsurf on your laptop or desktop.  
 
 ## Getting Help
 For assistance or questions, please email the OSG User Support team  at [user-support@opensciencegrid.org](mailto:user-support@opensciencegrid.org) or visit the [help desk and community forums](http://support.opensciencegrid.org).
