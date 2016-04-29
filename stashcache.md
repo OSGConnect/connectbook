@@ -3,7 +3,7 @@
 What is StashCache?
 -------------------
 
-StashCache is a data service for OSG which transparently caches data near compute sites for faster delivery to active grid jobs.  The standard practice of using HT Condor file transfer or http to move data files to grid sites can be inefficient for certain workflows.  StashCache uses a distributed network filesystem (based on XRootD proxy caching) which provides an alternative method for transferring input files to jobs sites.  It is implemented through a handful of strategically-distributed sites which provide caching of the input data files.
+StashCache is a data service for OSG which transparently caches data near compute sites for faster delivery to active grid jobs.  The standard practice of using HTCondor file transfer or http to move data files to grid sites can be inefficient for certain workflows.  StashCache uses a distributed network filesystem (based on XRootD proxy caching) which provides an alternative method for transferring input files to compute sites.  It is implemented through a handful of strategically-distributed sites which provide caching of the input data files.
 
 When to use StashCache
 -----------------------
@@ -18,11 +18,11 @@ How to use StashCache
 
 StashCache is available at all OSG sites where OASIS is mounted. To use it for transferring files to active jobs:
 
-1)  Copy the data files required for the job(s) into your stash directory which is mounted on the OSG Connect login node here:
+1)  Copy the data files required for the job(s) into your Stash directory which is mounted on the OSG Connect login node here:
 
 	/stash/user/<userid>/
 
-Alternatively, users can [use Globus](<https://support.opensciencegrid.org/solution/articles/5000632397-data-transfer-with-globus>) to transfer data files to stash.
+Alternatively, users can [use Globus](<https://support.opensciencegrid.org/solution/articles/5000632397-data-transfer-with-globus>) to transfer data files to Stash.
 
 2)  Include the following line in the job's submit script to indicate that StashCache is required:
 
