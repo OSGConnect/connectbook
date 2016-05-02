@@ -34,7 +34,7 @@ The `FreeSurfer` requires that the MRI file to be deidentified and defaced. The 
 After typing `y` to the above two questions, `fsurf` creates and submits the workflow 
 
      Creating and submitting workflow
-     Workflow submitted with an id of 97
+     Workflow 97 submitted for processing
 
 The id of your workflow is `97`. The id is needed to check the status, remove and get the output of the workflow. 
 
@@ -46,6 +46,13 @@ Run the command below to get a list of workflows that you have submitted and the
      Current workflows
      Subject    Workflow             Submit time          Cores          Status
      MRN_3       97                   10:00 01-19-2016     2             PROCESSING
+
+The screen output shows that there is just one workflow in the list 
+with the subject name `MRN_3`. The workflow is in the state 
+of `PROCESSING` (same as running state) and utilizes two cores.  It's id  is `97` which is 
+useful to get the output or remove the workflow from the list.  
+
+
 
 ## What's next? 
 
