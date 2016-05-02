@@ -11,9 +11,9 @@ Run the command below to get a list of workflows that you have submitted and the
      Subject    Workflow             Submit time          Cores          Status
      MRN_3       97                   10:00 01-19-2016     2              PROCESSING
 
-The above screen output shows that there is just one workflow in the list. The status of the workflow 
-is `PROCESSING` which means the workflow is not completed yet.  The id of the workflow is `97` which is 
-required to get the output or remove the workflow. 
+The status of the workflow is `PROCESSING` which means the workflow is not completed yet.  The 
+id of the workflow is `97`.  The id is required to get the output of a completed workflow or remove it from 
+the list of workflows. 
 
 ##  Getting Outputs
 
