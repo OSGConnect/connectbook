@@ -36,7 +36,7 @@ After typing `y` to the above two questions, `fsurf` creates and submits the wor
      Creating and submitting workflow
      Workflow 97 submitted for processing
 
-The id of your workflow is `97`. The id is needed to check the status, remove and get the output of the workflow. 
+The ID of your workflow is `97`. The ID is needed to check the status, remove and get the output of the workflow. 
 
 ##  List Workflows
 
@@ -48,11 +48,11 @@ Run the command below to get a list of workflows that you have submitted and the
      MRN_3       97                   10:00 01-19-2016     2             PROCESSING
 
 The screen output shows that there is just one workflow in the list 
-with the subject name `MRN_3`. The workflow is in the state 
-of `PROCESSING` (same as running state) and utilizes two cores.  It's id  is `97` which is 
-useful to get the output or remove the workflow from the list.  
+with the subject name `MRN_3`. The status of the workflow is `PROCESSING` (same as running). Two cores are 
+being used for this workflow. The ID of the workflow is `97`. 
 
-
+A unique ID is assigned to each submitted workflow. The ID is useful to get the output or 
+remove the workflow from the list. 
 
 ## What's next? 
 
