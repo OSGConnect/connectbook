@@ -12,7 +12,8 @@ Run the command below to get a list of workflows that you have submitted and the
      MRN_3       97                   10:00 01-19-2016     2              PROCESSING
 
 The above screen output shows that there is just one workflow in the list. The status of the workflow 
-is `PROCESSING` which means the workflow is not completed yet.  The id of the workflow is `97`. 
+is `PROCESSING` which means the workflow is not completed yet.  The id of the workflow is `97` which is 
+required to get the output or remove the workflow. 
 
 ##  Getting Outputs
 
@@ -28,8 +29,8 @@ Run the command below to get the output of the completed workflow by referring i
  
      $ ./fsurf --output --id 97 --user myuser --password mypassword
 
-The output files are commpressed as a single file `MRN_3_output.tar.bz2` in the current work directory. Note 
-that  MRN_3 is the name of the subject name. You can extract all the files in the archive using: 
+The output files are compressed as a single file `MRN_3_output.tar.bz2` in the current work 
+directory. You can extract all the files in the archive using: 
 
     $ tar -jxvf MRN_3_output.tar.bz2
  

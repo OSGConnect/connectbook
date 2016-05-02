@@ -34,9 +34,9 @@ The `FreeSurfer` requires that the MRI file to be deidentified and defaced. The 
 After typing `y` to the above two questions, `fsurf` creates and submits the workflow 
 
      Creating and submitting workflow
-     Workflow submitted with an id of 20160119T100055-0600
+     Workflow submitted with an id of 97
 
-The id of your workflow is `20160119T100055-0600`. The id is needed to check the status, remove and get the output of the workflow. 
+The id of your workflow is `97`. The id is needed to check the status, remove and get the output of the workflow. 
 
 ##  List Workflows
 
@@ -45,7 +45,7 @@ Run the command below to get a list of workflows that you have submitted and the
      $ ./fsurf --list --user myuser --password mypassword
      Current workflows
      Subject    Workflow             Submit time          Cores          Status
-     test       97                   10:00 01-19-2016     2               Running
+     MRN_3       97                   10:00 01-19-2016     2             PROCESSING
 
 ## What's next? 
 
