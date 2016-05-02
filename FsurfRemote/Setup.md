@@ -5,7 +5,7 @@ Set up Fsurf on your laptop (linux/unix/MacOS X OS system) by downloading the sc
       curl -L -o fsurf 'http://stash.osgconnect.net/+fsurf/fsurf'
       chmod +x fsurf 
 
-If you don't have a Fsurf password, open a ticket requesting an account [here](https://support.opensciencegrid.org/support/tickets/new). 
+If you don't have an Fsurf password, open a ticket requesting an account [here](https://support.opensciencegrid.org/support/tickets/new). 
 
 ## What's next? 
 
