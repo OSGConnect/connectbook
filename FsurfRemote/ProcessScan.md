@@ -1,4 +1,4 @@
-[title]: - "Analysis of a brain MRI Scan"
+[title]: - "Analysis of a Brain MRI Scan"
 [TOC]
 
 
