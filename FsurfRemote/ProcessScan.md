@@ -1,12 +1,12 @@
-[title]: - "Anlysis of a brain MRI Scan"
+[title]: - "Analysis of a brain MRI Scan"
 [TOC]
 
 
 ## Overview
 
-In this section, we see how to submit the FreeSurfer workflow from your laptop with Fsurf utility. 
+In this section, we see how to submit a FreeSurfer workflow from your laptop with Fsurf utility. 
 
-**Important note on data privacy**: The `fsurf` tool is *not* HIPPA compliant. (HIPPA, the Health Insurance Portability and Accountability Act, is a federal law written to protect personal medical information.) Therefore images must be anonymized and deidentified before they are uploaded to OSG servers as described in [Anonymozing Images](https://support.opensciencegrid.org/support/solutions/articles/12000008493-anonymizing-images).
+**Important note on data privacy**:  `Fsurf` tool is *not* HIPPA compliant. (HIPPA, the Health Insurance Portability and Accountability Act, is a federal law written to protect personal medical information.) Therefore images must be anonymized and deidentified before they are uploaded to OSG servers as described in [Anonymozing Images](https://support.opensciencegrid.org/support/solutions/articles/12000008493-anonymizing-images).
 
 ## Get a Sample MRI file
 
@@ -19,19 +19,19 @@ the file `MRN_3_defaced.mgz` is already defaced and anonymoized.
 
 ## Perfrom an Image Reconstruction 
 
-A typical Freesurfer analysis runs autorecon1, autorecon2, and autorecon3 sequentially on MRI data.  All three steps are handled by `fsurf`. 
+A typical image reconstruction with Freesurfer requires the execution of autorecon1, autorecon2, and autorecon3 on MRI data.  All three steps are handled by `Fsurf`. 
 
-Now we do the image reconstruction of  `MRN_3_defaced.mgz` with Fsurf. In the file `MRN_3_defaced.mgz` the prefix `MRN_3` is the name of the subject.
+Now we do the image reconstruction of  `MRN_3_defaced.mgz` with Fsurf. In the file `MRN_3_defaced.mgz`,  the prefix `MRN_3` is the name of the subject.
 
 
      $ ./fsurf  --submit --subject MRN_3 --user myuser --password mypassword
 
-The `FreeSurfer` requires that the MRI file to be deidentified and defaced. The `MRN_3_defaced.mgz` image is already deidentified and defaced, so say `y` to the following questions. 
+`MRN_3_defaced.mgz` image is already deidentified and defaced, so say `y` to the following questions. 
 
      Has the MRI data been deidentified (This is required) [y/n]? y
      Has the MRI data been defaced (This is recommended) [y/n]? y
 
-After typing `y` to the above two questions, `fsurf` creates and submits the workflow 
+After typing `y` to the above two questions, `Fsurf` creates and submits the workflow 
 
      Creating and submitting workflow
      Workflow 97 submitted for processing
@@ -40,7 +40,7 @@ The ID of your workflow is `97`. The ID is needed to check the status, remove an
 
 ##  List Workflows
 
-Run the command below to get a list of workflows that you have submitted and their status:
+To get a list and status of workflows that you have submitted, run the following command:
 
      $ ./fsurf --list --user myuser --password mypassword
      Current workflows
