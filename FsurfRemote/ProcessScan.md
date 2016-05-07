@@ -40,7 +40,7 @@ The ID of your workflow is `97`. The ID is needed to check the status, remove an
 
 ##  List Workflows
 
-To get a list and status of workflows that you have submitted, run the following command:
+To get the status of workflows, run the following command:
 
      $ ./fsurf --list --user myuser --password mypassword
      Current workflows
