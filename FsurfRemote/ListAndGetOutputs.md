@@ -18,14 +18,14 @@ the list of workflows.
 ##  Getting Outputs
 
 Depending on the computer resources available, a workflow will typically require 6-12 hours to complete. 
-Once a workflow completed successfully, the status of the workflow should be `COMPLETED` as below
+Once a workflow has completed successfully, the status of the workflow should be `COMPLETED` as below
 
      $ ./fsurf --list --user myuser --password mypassword
      Current workflows
      Subject    Workflow             Submit time          Cores           Status    
      MRN_3       97                   10:00 01-19-2016     2               COMPLETED   
 
-Run the command below to get the output of the completed workflow by referring it's id:
+Run the command below to get the output of the completed workflow by referring its id:
  
      $ ./fsurf --output --id 97 --user myuser --password mypassword
 
@@ -41,7 +41,7 @@ directory. You can extract all the files in the archive using:
 
 ##  Remove Workflows
 
-Make sure you got the output of an workflow before you remove it.  Run the following to remove an 
+Make sure you have downloaded the output of a workflow before you remove it.  Run the following to remove an 
 existing workflow:
    
     $ ./fsurf --remove --id WorkflowID --user myuser --password mypassword

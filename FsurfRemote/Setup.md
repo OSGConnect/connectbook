@@ -1,13 +1,13 @@
 [title]: - "Set up Fsurf on Your Laptop"
 
-Set up Fsurf on your laptop (linux/unix/MacOS X OS system) by downloading the script using the `curl` command. You need to install python.2.7 on your laptop (or desktop) to run fsurf. Open a terminal window and then run:
+Set up Fsurf on your laptop (linux/unix/MacOS X OS system) by downloading the script using the `curl` command. You need to install python.2.7 on your laptop (or desktop) to run Fsurf. Open a terminal window and then run:
 
       curl -L -o fsurf 'http://stash.osgconnect.net/+fsurf/fsurf'
       chmod +x fsurf 
 
 If you don't have an Fsurf password, open a ticket requesting an account [here](https://support.opensciencegrid.org/support/tickets/new). 
 
-## What's next? 
+## What's Next? 
 
 See how to [submit an example FreeSurfer workflow from your laptop]( https://support.opensciencegrid.org/solution/articles/12000008490-anlysis-of-a-brain-mri-scan).
 

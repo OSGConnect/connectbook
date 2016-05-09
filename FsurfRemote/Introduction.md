@@ -17,10 +17,10 @@ Fsurf is easy to install and use from a laptop, desktop or a dedicated server. A
 
 <img src="https://raw.githubusercontent.com/OSGConnect/connectbook/master/FsurfRemote//Figs/Fsurfv1.png" width="450px" height="400px" />
 
-**Important note on data privacy**: The `fsurf` tool is *not* HIPPA compliant. (HIPPA, the Health Insurance Portability and Accountability Act, is a federal law written to protect personal medical information.) Therefore images must be anonymized and deidentified before they are uploaded to OSG servers as described in
-[Anonymozing Images](https://support.opensciencegrid.org/support/solutions/articles/12000008493-anonymizing-images).
+**Important note on data privacy**:  `Fsurf` tool is *not* HIPPA compliant. (HIPPA, the Health Insurance Portability and Accountability Act, is a federal law written to protect personal medical information.) Therefore images must be anonymized and deidentified before they are uploaded to OSG servers as described in [the article on Anonymozing Images](https://support.opensciencegrid.org/support/solutions/articles/12000008493-anonymizing-images).
 
-## What's next?
+
+## What's Next?
 If you don't have an Fsurf account, 
 [get an account](https://support.opensciencegrid.org/solution/articles/12000008487-requesting-an-fsurf-account). 
 Otherwise, [set up Fsurf](https://support.opensciencegrid.org/solution/articles/12000008488-set-up-fsurf-on-your-laptop). 

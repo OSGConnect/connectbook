@@ -1,7 +1,7 @@
 [title]: - "Anonymizing Images"
  
 
-The `fsurf` tool is *not* HIPPA compliant. (HIPPA, the Health Insurance Portability and Accountability Act, is a federal law written to protect personal medical information.) Therefore images must be anonymized and deidentified before they are uploaded to OSG servers. 
+The `Fsurf` tool is *not* HIPPA compliant. (HIPPA, the Health Insurance Portability and Accountability Act, is a federal law written to protect personal medical information.) Therefore images must be anonymized and deidentified before they are uploaded to OSG servers. 
 
 Since OSG resources are not HIPPA compliant, the MRI images must be deidentified and defaced on your local machine before being used.  You can use a local `FreeSurfer` installation to prepare your scans. First, on your local machine import into FreeSurfer your image by running
 
