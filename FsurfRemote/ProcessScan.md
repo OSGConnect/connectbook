@@ -6,7 +6,7 @@
 
 In this section, we see how to submit a FreeSurfer workflow from your laptop with Fsurf utility. 
 
-**Important note on data privacy**:  `Fsurf` tool is *not* HIPPA compliant. (HIPPA, the Health Insurance Portability and Accountability Act, is a federal law written to protect personal medical information.) Therefore images must be anonymized and deidentified before they are uploaded to OSG servers as described in [Anonymozing Images](https://support.opensciencegrid.org/support/solutions/articles/12000008493-anonymizing-images).
+**Important note on data privacy**:  `Fsurf` tool is *not* HIPPA compliant. (HIPPA, the Health Insurance Portability and Accountability Act, is a federal law written to protect personal medical information.) Therefore images must be anonymized and deidentified before they are uploaded to OSG servers as described in [the article on Anonymozing Images](https://support.opensciencegrid.org/support/solutions/articles/12000008493-anonymizing-images).
 
 ## Get a Sample MRI file
 
@@ -14,15 +14,15 @@ Type the following to get a sample MRI file,
 
      curl -L -o MRN_3_defaced.mgz 'http://stash.osgconnect.net/+fsurf/MRN_3_defaced.mgz'
 
-the file `MRN_3_defaced.mgz` is already defaced and anonymoized. 
+`MRN_3_defaced.mgz` is an MRI file that was already defaced and anonymoized. 
 
 
 ## Perfrom an Image Reconstruction 
 
-A typical image reconstruction with Freesurfer requires the execution of autorecon1, autorecon2, and autorecon3 on MRI data.  All three steps are handled by `Fsurf`. 
+A typical image reconstruction with Freesurfer requires the execution of autorecon1, autorecon2, and 
+autorecon3 on MRI data.  All three steps are handled by `Fsurf`. 
 
 Now we do the image reconstruction of  `MRN_3_defaced.mgz` with Fsurf. In the file `MRN_3_defaced.mgz`,  the prefix `MRN_3` is the name of the subject.
-
 
      $ ./fsurf  --submit --subject MRN_3 --user myuser --password mypassword
 
@@ -54,7 +54,7 @@ being used for this workflow. The ID of the workflow is `97`.
 A unique ID is assigned to each submitted workflow. The ID is useful to get the output or 
 remove the workflow from the list. 
 
-## What's next? 
+## What's Next? 
 
 See how to [get the output files back to the laptop](https://support.opensciencegrid.org/solution/articles/12000008491-managing-your-output-files).
 
