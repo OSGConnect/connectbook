@@ -15,7 +15,7 @@ We describe the proceedure to:
 
 Fsurf is easy to install and use from a laptop, desktop or a dedicated server. All it requires is a machine with a network connection and Python installed.  It takes only a few minutes to set up the tool and submit an image analysis job on the OSG.  
 
-<img src="https://raw.githubusercontent.com/OSGConnect/connectbook/master/FsurfRemote/Figs/FsurfTool.png" width="550px" height="400px" />
+<img src="https://raw.githubusercontent.com/OSGConnect/connectbook/master/FsurfRemote/Figs/FsurfTool.png" width="600px" height="400px" />
 
 **Important note on data privacy**:  `Fsurf` tool is *not* HIPPA compliant. (HIPPA, the Health Insurance Portability and Accountability Act, is a federal law written to protect personal medical information.) Therefore images must be anonymized and deidentified before they are uploaded to OSG servers as described in [the article on Anonymozing Images](https://support.opensciencegrid.org/support/solutions/articles/12000008493-anonymizing-images).
 
