@@ -14,7 +14,7 @@ Type the following to get a sample MRI file,
 
      curl -L -o MRN_3_defaced.mgz 'http://stash.osgconnect.net/+fsurf/MRN_3_defaced.mgz'
 
-`MRN_3_defaced.mgz` is an MRI file that was already defaced and anonymoized. 
+`MRN_3_defaced.mgz` is an MRI file that has already been defaced and anonymized. 
 
 
 ## Performing an Image Reconstruction 
