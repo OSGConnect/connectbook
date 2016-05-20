@@ -2,13 +2,13 @@
 [TOC]
  
  
-## Saving user credentials
+## Saving account name and password
 The examples in these pages run the `fsurf` command using the `--user` and `--password` options to give an username 
 and password to the fsurf command.  However, when you do so, fsurf will ask you if you want to save these credentials.  
 If you say yes to this, then you can omit these options and let fsurf use the saved credentials for future invocations.
 
 
-## Changing saved user credentials
+## Changing saved account information
 To change saved user credentials (e.g. if your password has been changed),  just run any command with the `--user ` option. 
 The `fsurf` tool will ask you for a password and then ask you if you'd like to save your credentials.  Enter 'y' or 'yes' at 
 the prompt and your credentials will be updated.
