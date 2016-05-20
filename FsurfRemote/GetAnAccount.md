@@ -6,7 +6,7 @@ To use Fsurf from your laptop (or desktop) you will first need to request an acc
 * Username 
 * Institution
 * Department
-* Institution email address
+* Institutional email address
 * Phone
 
 Whenever you use Fsurf command from a laptop, you need to provide the username and password of the Fsurf account.  Therefore, make sure the account information are only accessible by you. For example,
@@ -19,7 +19,7 @@ The argument `myuser` is your username and `mypassword` is your password for you
 
 ## What's Next?
 
-[Set up Fsurf on your laptop or desktop](https://support.opensciencegrid.org/solution/articles/12000008488-set-up-fsurf-on-your-laptop).
+[Set up Fsurf on your computer](https://support.opensciencegrid.org/solution/articles/12000008488-set-up-fsurf-on-your-laptop).
 
 ## Getting Help
 For assistance or questions, please email the OSG User Support team  at [user-support@opensciencegrid.org](mailto:user-support@opensciencegrid.org) or visit the [help desk and community forums](http://support.opensciencegrid.org).
