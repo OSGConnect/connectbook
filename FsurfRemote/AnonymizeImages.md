@@ -3,7 +3,7 @@
 
 The `Fsurf` tool is *not* HIPPA compliant. (HIPPA, the Health Insurance Portability and Accountability Act, is a federal law written to protect personal medical information.) Therefore images must be anonymized and deidentified before they are uploaded to OSG servers. 
 
-Since OSG resources are not HIPPA compliant, the MRI images must be deidentified and defaced on your local machine before being used.  You can use a local `FreeSurfer` installation to prepare your scans. First, on your local machine import into FreeSurfer your image by running
+You can use a local `FreeSurfer` installation to prepare your scans. First, on your local machine import into FreeSurfer your image by running
 
       $ recon-all -subject SUBJECT -i PATH_TO_MGZ_INPUT_FILE
 
@@ -23,3 +23,7 @@ If the `mri_deface` program cannot find the needed `*.gca` files (the standard F
 
 ## Getting Help
 For assistance or questions, please email the OSG User Support team  at [user-support@opensciencegrid.org](mailto:user-support@opensciencegrid.org) or visit the [help desk and community forums](http://support.opensciencegrid.org).
+
+
+## Validation Information
+A list of linux kernels on OSG  on which the Freesurfer workflows have been validated can be found [here](https://support.opensciencegrid.org/support/solutions/articles/12000008494-freesurfer-validation-on-the-osg-)
