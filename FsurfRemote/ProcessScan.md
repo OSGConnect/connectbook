@@ -17,7 +17,7 @@ Type the following to get a sample MRI file,
 `MRN_3_defaced.mgz` is an MRI file that was already defaced and anonymoized. 
 
 
-## Perfrom an Image Reconstruction 
+## Performing an Image Reconstruction 
 
 A typical image reconstruction with Freesurfer requires the execution of autorecon1, autorecon2, and 
 autorecon3 on MRI data.  All three steps are handled by `Fsurf`. 
@@ -38,7 +38,7 @@ After typing `y` to the above two questions, `Fsurf` creates and submits the wor
 
 The ID of your workflow is `97`. The ID is needed to check the status, remove and get the output of the workflow. 
 
-##  List Workflows
+##  Listing Workflows
 
 To get the status of workflows, run the following command:
 
