@@ -1,4 +1,4 @@
-[title]: - "Set up Fsurf on Your Laptop"
+[title]: - "Setting up Fsurf on Your Computer"
 
 Set up Fsurf on your computer (linux/unix/MacOS X OS system) by downloading the script using the `curl` command. Open a terminal window and then run:
 
