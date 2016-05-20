@@ -1,6 +1,8 @@
 [title]: - "Managing your workflows and output files"
 [TOC]
  
+## Saving user credentials
+The examples below run the `fsurf` command using the `--user` and `--password` options to give an username and password to the fsurf command.  However, when you do so, fsurf will ask you if you want to save these credentials.  If you say yes to this, then you can omit these options and let fsurf use the saved credentials for future invocations.
 
 ##  List Workflows
 
