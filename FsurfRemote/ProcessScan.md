@@ -6,7 +6,7 @@
 
 In this section, we see how to submit a FreeSurfer workflow from your laptop with Fsurf utility. 
 
-**Important note on data privacy**:  In order to protect the privacy of your participants’ scans, we request that you submit only defaced and fully deidentified scans for processing by fsurf.  Images can be anonymized and deidentified before they are uploaded to OSG servers as described in [the article on Anonymozing Images](https://support.opensciencegrid.org/support/solutions/articles/12000008493-anonymizing-images).
+**Important note on data privacy**:  In order to protect the privacy of your participants’ scans, we request that you submit only defaced and fully deidentified scans for processing by fsurf.  Images can be anonymized and deidentified before they are uploaded to OSG servers as described in [the article on Anonymizing Images](https://support.opensciencegrid.org/support/solutions/articles/12000008493-anonymizing-images).
 
 ## Get a Sample MRI file
 
