@@ -1,10 +1,7 @@
 [title]: - "Managing your workflows and output files"
 [TOC]
- 
-## Saving user credentials
-The examples below run the `fsurf` command using the `--user` and `--password` options to give an username and password to the fsurf command.  However, when you do so, fsurf will ask you if you want to save these credentials.  If you say yes to this, then you can omit these options and let fsurf use the saved credentials for future invocations.
 
-##  List Workflows
+##  Listing Workflows
 
 Run the command below to get a list of workflows that you have submitted and their status:
 
@@ -14,7 +11,7 @@ Run the command below to get a list of workflows that you have submitted and the
      MRN_3       97                   10:00 01-19-2016     2              PROCESSING
 
 The status of the workflow is `PROCESSING` which means the workflow is not completed yet.  The 
-id of the workflow is `97`.  The id is required to get the output of a completed workflow or remove it from 
+ID of the workflow is `97`.  The ID is required to get the output of a completed workflow or remove it from 
 the list of workflows. 
 
 ##  Getting Outputs
@@ -27,7 +24,7 @@ Once a workflow has completed successfully, the status of the workflow should be
      Subject    Workflow             Submit time          Cores           Status    
      MRN_3       97                   10:00 01-19-2016     2               COMPLETED   
 
-Run the command below to get the output of the completed workflow by referring its id:
+Run the command below to get the output of the completed workflow by using its ID:
  
      $ ./fsurf --user myuser --password mypassword output --id 97 
 
@@ -36,24 +33,24 @@ directory. You can extract all the files in the archive using:
 
     $ tar -jxvf MRN_3_output.tar.bz2
  
- Similarly, you get the output of any completed  workflow with id `WorkflowID` 
+ Similarly, you get the Freesurfer logs of any completed  workflow with ID `WorkflowID` 
  
-     $ ./fsurf --user myuser --password mypassword output --id WorkflowID  
-     $ tar -jxvf <SubjectName>_output.tar.bz2
+     $ ./fsurf --user myuser --password mypassword output --id WorkflowID  --log-only
 
-##  Remove Workflows
+
+##  Removing Workflows
 
 Make sure you have downloaded the output of a workflow before you remove it.  Run the following to remove an 
 existing workflow:
    
     $ ./fsurf --user myuser --password mypassword remove --id WorkflowID 
 
-For example, to remove a running worflow with an id `56`, type
+For example, to remove a running worflow with an ID `56`, type
 
     $ ./fsurf --user myuser --password mypassword remove --id 56 
     Workflow removed
 
-This will not effect the files you have downloaded already. 
+This will not affect the files you have downloaded already. 
 
 ## Getting Help 
 For assistance or questions, please email the OSG User Support team  at [user-support@opensciencegrid.org](mailto:user-support@opensciencegrid.org) or visit the [help desk and community forums](http://support.opensciencegrid.org).
