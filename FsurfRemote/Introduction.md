@@ -2,7 +2,7 @@
  
 ## Overview
 
-[FreeSurfer](http://freesurfer.net/) is a software package to analyze MRI images of human brains. The Open Science Grid (OSG) has developed a command line utility, Fsurf, that simplifies running a FreeSurfer 5.3 workflow on the OSG.  
+[FreeSurfer](http://freesurfer.net/) is a software package to analyze MRI scans of human brains. The Open Science Grid (OSG) has developed a command line utility, Fsurf, that simplifies running a FreeSurfer 5.3 workflow on the OSG.  
 
 To use Fsurf, you need an account. Follow the instructions outlined [here to obtain an account](https://support.opensciencegrid.org/support/solutions/articles/12000008487-request-a-fsurf-account-).
 
