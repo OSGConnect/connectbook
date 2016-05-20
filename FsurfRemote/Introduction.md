@@ -6,7 +6,7 @@
 
 To use Fsurf, you need an Fsurf account. Follow the instructions outlined [here to obtain an account](https://support.opensciencegrid.org/support/solutions/articles/12000008487-request-a-fsurf-account-).
 
-We describe the proceedure to:
+We describe the procedure to:
 
 * [Obtain an Fsurf account](https://support.opensciencegrid.org/support/solutions/articles/12000008487-request-a-fsurf-account-)
 * [Set up Fsurf on your laptop](https://support.opensciencegrid.org/support/solutions/articles/12000008488-set-up-fsurf-on-your-laptop)
