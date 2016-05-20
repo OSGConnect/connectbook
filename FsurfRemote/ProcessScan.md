@@ -24,7 +24,7 @@ autorecon3 on MRI data.  All three steps are handled by `Fsurf`.
 
 Now we do the image reconstruction of  `MRN_3_defaced.mgz` with Fsurf. In the file `MRN_3_defaced.mgz`,  the prefix `MRN_3` is the name of the subject.
 
-     $ ./fsurf  --submit --subject MRN_3 --user myuser --password mypassword
+     $ ./fsurf  --user myuser --password mypassword submit --subject MRN_3 
 
 `MRN_3_defaced.mgz` image is already deidentified and defaced, so say `y` to the following questions. 
 
@@ -42,7 +42,7 @@ The ID of your workflow is `97`. The ID is needed to check the status, remove an
 
 To get the status of workflows, run the following command:
 
-     $ ./fsurf --list --user myuser --password mypassword
+     $ ./fsurf --user myuser --password mypassword list 
      Current workflows
      Subject    Workflow             Submit time          Cores          Status
      MRN_3       97                   10:00 01-19-2016     2             PROCESSING
