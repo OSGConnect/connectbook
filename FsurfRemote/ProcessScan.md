@@ -54,6 +54,8 @@ being used for this workflow. The ID of the workflow is `97`.
 A unique ID is assigned to each submitted workflow. The ID is useful to get the output or 
 remove the workflow from the list. 
 
+The potential statuses for a workflow are UPLOADED (workflow has been created), PROCESSING (workflow is being run), FAILED (an error occurred while the workflow was running), COMPLETED (workflow has successfully completed), DELETE PENDING (workflow will be deleted soon), DELETED (workflow has been removed), ERROR (an error occurred with the workflow).
+
 ## What's Next? 
 
 See how to [get the output files back to the laptop](https://support.opensciencegrid.org/solution/articles/12000008491-managing-your-output-files).
