@@ -8,6 +8,7 @@
 
 ## Prerequisites
 In order to use the fsurf utility, you'll need a few things:
+
 * A computer with Freesurfer installed (for anonymizing scans)
 * A computer with python 2.6+ (this can be the same as the computer above) - Most linux/unix systems released in the last several years already support this and Mac OS X versions released after 2012 also provide this
 * A ethernet or fast wireless connection if you are processing multiple scans at once
