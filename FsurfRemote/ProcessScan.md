@@ -4,7 +4,7 @@
 
 ## Overview
 
-In this section, we see how to submit a FreeSurfer workflow from your laptop with Fsurf utility. 
+In this section, we see how to submit a FreeSurfer workflow from your computer with Fsurf utility. 
 
 **Important note on data privacy**:  In order to protect the privacy of your participants’ scans, we request that you submit only defaced and fully deidentified scans for processing by fsurf.  Images can be anonymized and deidentified before they are uploaded to OSG servers as described in [the article on Anonymizing Images](https://support.opensciencegrid.org/support/solutions/articles/12000008493-anonymizing-images).
 
@@ -58,7 +58,7 @@ The potential statuses for a workflow are UPLOADED (workflow has been created), 
 
 ## What's Next? 
 
-See how to [get the output files back to the laptop](https://support.opensciencegrid.org/solution/articles/12000008491-managing-your-output-files).
+See how to [get the output files back to your computer](https://support.opensciencegrid.org/solution/articles/12000008491-managing-your-output-files).
 
 ## Getting Help
 For assistance or questions, please email the OSG User Support team  at [user-support@opensciencegrid.org](mailto:user-support@opensciencegrid.org) or visit the [help desk and community forums](http://support.opensciencegrid.org).
