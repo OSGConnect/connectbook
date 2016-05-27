@@ -113,7 +113,7 @@ you will be emailed a warning a few days before results are removed.
 
 ## What's Next? 
 
-See how to [submit scans in batches](https://support.opensciencegrid.org/solution/articles/)
+See how to [anonymize scans](https://support.opensciencegrid.org/support/solutions/articles/12000008493-anonymizing-images)
 
 ## Getting Help
 For assistance or questions, please email the OSG User Support team  at
