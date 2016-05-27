@@ -10,6 +10,7 @@
 In order to use the fsurf utility, you'll need a few things:
 * A computer with Freesurfer installed (for anonymizing scans)
 * A computer with python 2.6+ (this can be the same as the computer above) - Most linux/unix systems released in the last several years already support this and Mac OS X versions released after 2012 also provide this
+* A ethernet or fast wireless connection if you are processing multiple scans at once
 
 ## Privacy and confidentiality
 In order to protect the privacy of your participants’ scans, we request that you submit only defaced and fully deidentified scans for processing by fsurf. Images can be anonymized and deidentified before they are uploaded to OSG servers as described in the article on [anonymizing images](https://support.opensciencegrid.org/solution/articles/12000008493-anonymizing-images).
