@@ -1,7 +1,6 @@
 [title]: - "Anonymizing Images"
  
-
-The `Fsurf` tool is *not* HIPPA compliant. (HIPPA, the Health Insurance Portability and Accountability Act, is a federal law written to protect personal medical information.) Therefore images must be anonymized and deidentified before they are uploaded to OSG servers. 
+In order to protect the privacy of your participants’ scans, we request that you submit only defaced and fully deidentified scans for processing by fsurf. Images can be anonymized and deidentified before they are uploaded to OSG servers as described in this article on anonymizing images.
 
 You can use a local `FreeSurfer` installation to prepare your scans. First, on your local machine import into FreeSurfer your image by running
 
