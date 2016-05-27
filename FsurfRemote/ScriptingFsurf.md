@@ -44,20 +44,15 @@ The first step we'll need to take is to generate a text file with input files
 and subjects.  First, we'll generate a list of files.  Assuming, the scans that
 we'd like to process are at `~/scans`, run:
 
-```
-   $ ls ~/scans > scan_list
-
-```
+     $ ls ~/scans > scan_list
 
 This will generate a file listing each scan on a separate line.  Now edit the
 file using a text editor and add the subject for each scan in.  After you're
 done, the file should look something like this:
 
-```
-subject_1_defaced.mgz subject_1
-MRN_1_defaced.mgz MRN_1
-MRN_3.mgz MRN_3
-```
+     subject_1_defaced.mgz subject_1
+     MRN_1_defaced.mgz MRN_1
+     MRN_3.mgz MRN_3
 
 Each line should have the filename for the scan, a space, and then the name of 
 the subject.
@@ -71,23 +66,19 @@ to `fsurf` for processing.
 Open a filed called `submit_multiple.sh` in your text editor and cut and paste
 the following in it :
 
-```
-#/bin/bash
-
-for line in `cat $1`;
-do
-  input_file=`echo $line | cut -f 1 -d' '`
-  subject=`echo $line | cut -f 2 -d' '`
-  ./fsurf submit --input-directory $2 --input-file $input_file --subject $subject --defaced --deidentified
-done
-```
+     #/bin/bash
+     
+     for line in `cat $1`;
+     do
+       input_file=`echo $line | cut -f 1 -d' '`
+       subject=`echo $line | cut -f 2 -d' '`
+       ./fsurf submit --input-directory $2 --input-file $input_file --subject $subject --defaced --deidentified
+     done
 
 Now make the script executable and run it:
 
-```
-   $ chmod a+x submit_multiple.sh
-   $ ./submit_multiple.sh scan_list ~/scans
-```
+     $ chmod a+x submit_multiple.sh
+     $ ./submit_multiple.sh scan_list ~/scans
 
 The script may take a while to complete if you have a slow connection or if you
 have a lot of scans to submit.  If you're submitting many scans, it's best that
