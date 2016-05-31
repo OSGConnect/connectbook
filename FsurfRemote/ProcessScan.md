@@ -4,7 +4,7 @@
 
 ## Overview
 
-In this section, we will demonstrate how to use the `fsurf` script by going the
+In this section, we will demonstrate how to use the `fsurf` utility by going the
 the process of analyzing a brain scan. 
 
 **Important note on data privacy**:  In order to protect the privacy of your
@@ -42,7 +42,8 @@ following questions.
 After typing `y` to the above two questions, `Fsurf` creates and submits the
 workflow 
 
-     Creating and submitting workflow Workflow 97 submitted for processing
+     Creating and submitting workflow 
+     Workflow 97 submitted for processing
 
 The ID of your workflow is `97`. The ID is needed to check the status, remove
 and get the output of the workflow. 
@@ -64,11 +65,15 @@ running). Two cores are being used for this workflow. The ID of the workflow is
 A unique ID is assigned to each submitted workflow. The ID is useful to get the
 output or remove the workflow from the list. 
 
-The potential statuses for a workflow are UPLOADED (workflow has been created),
-PROCESSING (workflow is being run), FAILED (an error occurred while the
-workflow was running), COMPLETED (workflow has successfully completed), DELETE
-PENDING (workflow will be deleted soon), DELETED (workflow has been removed),
-ERROR (an error occurred with the workflow).
+The potential statuses for a workflow are:
+
+* UPLOADED - workflow has been created
+* PROCESSING - workflow is being run 
+* FAILED - an error occurred while the workflow was running
+* COMPLETED  - workflow has successfully completed
+* DELETE PENDING  - workflow will be deleted soon
+* DELETED - workflow has been removed
+* ERROR - an error occurred with the workflow
 
 ##  Getting Outputs
 
