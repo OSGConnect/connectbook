@@ -17,7 +17,7 @@ utility to change your password.
 
 ## What's Next?
 
-[Set up Fsurf on your computer](https://support.opensciencegrid.org/solution/articles/12000008488-set-up-fsurf-on-your-laptop).
+[Setting up Fsurf on your computer](https://support.opensciencegrid.org/solution/articles/12000008488-set-up-fsurf-on-your-laptop).
 
 ## Getting Help
 For assistance or questions, please email the OSG User Support team  at [user-support@opensciencegrid.org](mailto:user-support@opensciencegrid.org) or visit the [help desk and community forums](http://support.opensciencegrid.org).
