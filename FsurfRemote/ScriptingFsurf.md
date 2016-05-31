@@ -5,8 +5,7 @@
 
 ## Overview
 
-This document shows how to submit mulitple scans for processing using a
-script.  
+This document shows how to process multiple scans with a shell script.  
 
 **Important note on data privacy**:  In order to protect the privacy of your
 participants’ scans, we request that you submit only defaced and fully
@@ -33,15 +32,13 @@ submitted for processing.  However, if fsurf is given `--defaced` and
 
 ## Scripting `fsurf` submissions
 
-The basic approach to submitting multiple files that we'll take is to generate a
-text file with a input file and subject on each line.  Then we'll use a script
-that will read this file and use the information in the file to submit each file
-for processing.  
+The basic approach is that we'll generate a
+text file that contains the scan and subject on each line.  Then we'll use a script
+that will read this text file to submit each subject for processing on the OSG. 
 
 ### Generating the text file
 
-The first step we'll need to take is to generate a text file with input files
-and subjects.  First, we'll generate a list of files.  Assuming, the scans that
+  First, we'll generate a list of subjects.  Assuming, the scans that
 we'd like to process are at `~/scans`, run:
 
      $ ls ~/scans > scan_list
