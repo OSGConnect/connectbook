@@ -1,6 +1,7 @@
 [title]: - "Requesting an Fsurf Account"
 
-To use Fsurf from your computer you will first need to request an account. Open a ticket requesting an account [here](https://support.opensciencegrid.org/support/tickets/new). In the subject field of the ticket, write "Fsurf account request" and in the body of the ticket please include your contact information:
+To use Fsurf from your computer you will first need to request an account by [opening a ticket requesting an account](https://support.opensciencegrid.org/support/tickets/new). In the subject field of the ticket, 
+write "Fsurf account request" and in the body of the ticket please include your contact information:
 
 * Name
 * Username 
@@ -12,7 +13,7 @@ To use Fsurf from your computer you will first need to request an account. Open 
 
 After your account has been created, you'll get an email with your username and
 password.  When you receive this information, you should use the fsurf
-command to change your password.
+utility to change your password. 
 
 ## What's Next?
 
