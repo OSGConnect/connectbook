@@ -78,7 +78,7 @@ The potential statuses for a workflow are:
 ##  Getting Outputs
 
 Depending on the computer resources available, a workflow will typically
-require 6-12 hours to complete.  Once a workflow has completed successfully,
+requires 6-12 hours to complete.  Once a workflow has completed successfully,
 the status of the workflow should be `COMPLETED` as below
 
      $ ./fsurf list
@@ -103,7 +103,7 @@ directory. You can extract all the files in the archive using:
 ##  Removing Workflows
 
 Make sure you have downloaded the output of a workflow before you remove it.
-Run the following to remove an existing workflow:
+Run the following command to remove an existing workflow:
 
     $ ./fsurf remove --id WorkflowID
 
