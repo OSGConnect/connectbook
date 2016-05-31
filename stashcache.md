@@ -32,22 +32,22 @@ Alternatively, users can [use Globus](<https://support.opensciencegrid.org/solut
 
 First load the stashcp module:
 
-	module load stashcp 
+	module load stashcp/3.0
 
 Then transfer your data:
 	
-	stashcp -s <source> user/<userid>/<stash_data_file_path> -l <target_location>
+	stashcp /user/<userid>/<stash_data_file_path> <target_location>
 
-The <source\> must be given as a relative path to the data file location within the stash directory.  For example, if the data file is located at /stash/user/<userid\>/samples/sample01.dat, then the stashcp command to transfer this file into your current working directory on the compute host would be:
+ For example, if the data file is located at /stash/user/<userid\>/samples/sample01.dat, then the stashcp command to transfer this file into your current working directory on the compute host would be:
 
-	stashcp -s user/<userid>/samples/sample01.dat -l .
+	stashcp /user/<userid>/samples/sample01.dat  .
 ___
 
 More usage options are described in the stashcp help message:
 
 	$ stashcp -h
-	stashcp [-d] [-r] [-h] -s <source> [-l <location to be copied to>]
-
+	stashcp [-d] [-r] [-h] <source> <destination>
+	
 	-d: show debugging information
 	-r: recursively copy
 	-h: show this help text
