@@ -49,7 +49,7 @@ done, the file should look something like this:
 
      subject_1_defaced.mgz subject_1
      MRN_1_defaced.mgz MRN_1
-     MRN_3.mgz MRN_3
+     MRN_3_defaced.mgz MRN_3
 
 Each line should have the filename for the scan, a space, and then the name of 
 the subject.
@@ -69,7 +69,7 @@ the following in it :
      do
        input_file=`echo $line | cut -f 1 -d' '`
        subject=`echo $line | cut -f 2 -d' '`
-       ./fsurf submit --input-directory $2 --input-file $input_file --subject $subject --defaced --deidentified
+       ./fsurf submit --dir $2 --subject $subject --defaced --deidentified
      done
 
 Now make the script executable and run it:
