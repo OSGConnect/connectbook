@@ -18,4 +18,4 @@ For assistance or questions, please email the OSG User Support team  at [user-su
 
 
 ## Validation Information
-A list of linux kernels on OSG  on which the Freesurfer workflows have been validated can be found [here](https://support.opensciencegrid.org/support/solutions/articles/12000008494-freesurfer-validation-on-the-osg-)
+A list of linux kernels on OSG  on which the FreeSurfer workflows have been validated can be found [here](https://support.opensciencegrid.org/support/solutions/articles/12000008494-freesurfer-validation-on-the-osg-)

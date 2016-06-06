@@ -3,7 +3,8 @@
 
 ## Overview
 
-This document outlines the validation of the Freesurfer worksflows on OSG.  All validation has been done using Freesurfer 5.3.
+This document outlines the validation of the FreeSurfer worksflows on OSG.  All
+validation has been done using FreeSurfer 5.3.
 
 ## Testing on Scientific Linux 6 Distributions
 This testing also applies to systems using Centos 6 and RHEL 6.

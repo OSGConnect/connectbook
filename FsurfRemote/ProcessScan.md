@@ -24,7 +24,7 @@ Type the following to get a sample MRI file,
 
 ## Performing an Image Reconstruction 
 
-A typical image reconstruction with Freesurfer requires the execution of
+A typical image reconstruction with FreeSurfer requires the execution of
 autorecon1, autorecon2, and autorecon3 on MRI data.  All three steps are handled
 by `fsurf`. 
 
@@ -95,7 +95,7 @@ directory. You can extract all the files in the archive using:
 
     $ tar -jxvf MRN_3_output.tar.bz2
 
- Similarly, you get the Freesurfer logs of any completed  workflow with ID `WorkflowID`
+ Similarly, you get the FreeSurfer logs of any completed  workflow with ID `WorkflowID`
 
      $ ./fsurf output --id WorkflowID  --log-only
 
@@ -127,6 +127,6 @@ visit the [help desk and community forums](http://support.opensciencegrid.org).
 
 
 ## Validation Information
-A list of linux kernels on OSG  on which the Freesurfer workflows have been
+A list of linux kernels on OSG  on which the FreeSurfer workflows have been
 validated can be found
 [here](https://support.opensciencegrid.org/support/solutions/articles/12000008494-freesurfer-validation-on-the-osg-)
