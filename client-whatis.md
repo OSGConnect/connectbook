@@ -1,7 +1,5 @@
 [title]: - "What is the Connect Client?"
 
-[TOC]
-
 # Introducing the Connect Client
 
 The [Campus Connect Client][client] is a bridge from your campus to
