@@ -1,5 +1,5 @@
 
-[title]: - "Submitting multiple  scans to Fsurf"
+[title]: - "Submitting multiple scans to Fsurf"
 [TOC]
 
 
@@ -11,7 +11,8 @@ This document shows how to process multiple scans with a shell script.
 participants’ scans, we request that you submit only defaced and fully
 deidentified scans for processing by fsurf.  Images can be anonymized and
 deidentified before they are uploaded to OSG servers as described in [the
-article on anonymizing images](https://support.opensciencegrid.org/support/solutions/articles/12000008493-anonymizing-images).
+article on anonymizing
+images](https://support.opensciencegrid.org/support/solutions/articles/12000008493-anonymizing-images).
 
 
 ## Preparing to submit scans

@@ -1,5 +1,4 @@
 [title]: - "Saving or changing user account information"
-[TOC]
  
  
 ## Saving account name and password
