@@ -1,0 +1,106 @@
+[title]: - "FSurf Command Reference"
+[TOC]
+
+
+## Overview
+
+This page gives an overview of the commands and options that are supported by
+the FSurf utility .  You can get general help by running `./fsurf --help` and
+help on a specific command by running `./fsurf [command] --help`.  E.g. to get
+help on the submit command, you can run `./fsurf submit --help`.  
+
+FSurf takes a single command (see below) followed by options for the command in
+any order.  The commands that FSurf accepts are:
+
+| Command | Operation |
+| ------- | --------- |
+| submit  | Submits MRI scans for processing | 
+| list    | Lists current and past workflows |
+| status  | Gives the status of a specified workflow | 
+| output  | Downloads results or logs for a workflow |
+| remove  | Removes an existing workflow | 
+| change-password | Changes an user password | 
+
+
+## Submit Options
+
+**Important note on data privacy**:  In order to protect the privacy of your
+participants’ scans, we request that you submit only defaced and fully
+deidentified scans for processing by fsurf.  Images can be anonymized and
+deidentified before they are uploaded to OSG servers as described in [the
+article on anonymizing
+images](https://support.opensciencegrid.org/support/solutions/articles/12000008493-anonymizing-images).
+
+The submit command accepts the following options:
+
+| Option | Description |
+| ------ | ----------- |
+| --user | Username to use when logging into the FSurf service |
+| --help | Display help for command |
+| --subject | Name of subject to process | 
+| --dir | Directory containing MRI scans for subject |
+| --dualcore | Use 2 cores rather than 8 for per hemisphere processing.  This allow the processing to complete when 8 core systems are not available |
+| --defaced | Indicates that the scan is defaced |
+| --deidentified | Indicates that the scan is deidentified |
+
+## List Options
+
+The list command accepts the following options:
+
+| Option | Description |
+| ------ | ----------- |
+| --user | Username to use when logging into the FSurf service |
+| --help | Display help for command |
+| --all-workflows | List all workflows submitted rather than the workflows submitted in the last month | 
+
+## Status Options
+
+The status command accepts the following options:
+
+| Option | Description |
+| ------ | ----------- |
+| --user | Username to use when logging into the FSurf service |
+| --help | Display help for command |
+| --id   | ID of workflow to display |
+
+## Output Options
+
+The output command accepts the following options:
+
+| Option | Description |
+| ------ | ----------- |
+| --user | Username to use when logging into the FSurf service |
+| --help | Display help for command |
+| --id   | ID of workflow to display |
+| --log-only | Only download log files for workflow  |
+
+## Remove Options
+
+The remove command accepts the following options:
+
+| Option | Description |
+| ------ | ----------- |
+| --user | Username to use when logging into the FSurf service |
+| --help | Display help for command |
+| --id   | ID of workflow to display |
+
+
+## Change-password Options
+
+The change-password command accepts the following options:
+
+| Option | Description |
+| ------ | ----------- |
+| --user | Username to use when logging into the FSurf service |
+| --help | Display help for command |
+
+## Getting Help
+For assistance or questions, please email the OSG User Support team  at
+[user-support@opensciencegrid.org](mailto:user-support@opensciencegrid.org) or
+visit the [help desk and community forums](http://support.opensciencegrid.org).
+
+
+## Validation Information
+A list of linux kernels on OSG  on which the FreeSurfer workflows have been
+validated can be found
+[here](https://support.opensciencegrid.org/support/solutions/articles/12000008494-freesurfer-validation-on-the-osg-).
