@@ -65,7 +65,7 @@ running). Two cores are being used for this workflow. The ID of the workflow is
 A unique ID is assigned to each submitted workflow. The ID is useful to get the
 output or remove the workflow from the list. 
 
-The potential statuses for a workflow are:
+A workflow can have the following statuses:
 
 * UPLOADED - workflow has been created
 * PROCESSING - workflow is being run 
@@ -113,8 +113,8 @@ For example, to remove a running worflow with an ID `56`, type
     Workflow removed
 
 This will not affect the files you have downloaded already. Please note that
-the results of a workflow will be removed after a certain period of time.  However
-you will be emailed a warning a few days before results are removed.
+the results of a workflow will be removed after a certain period of time. However
+you will be emailed a warning a few days before results are removed. 
 
 ## What's Next? 
 

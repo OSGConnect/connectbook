@@ -9,7 +9,7 @@ This document shows how to process multiple scans with a shell script.
 
 **Important note on data privacy**:  In order to protect the privacy of your
 participants’ scans, we request that you submit only defaced and fully
-deidentified scans for processing by fsurf.  Images can be anonymized and
+deidentified scans for processing by `fsurf`.  Images can be anonymized and
 deidentified before they are uploaded to OSG servers as described in [the
 article on anonymizing
 images](https://support.opensciencegrid.org/support/solutions/articles/12000008493-anonymizing-images).
@@ -28,19 +28,19 @@ There are a few things that will be needed before you can start:
 ## Running `fsurf` non-interactively
 
 By default, `fsurf` asks if an image has defaced and anonymized when it is
-submitted for processing.  However, if fsurf is given `--defaced` and
+submitted for processing.  However, if `fsurf` is given `--defaced` and
 `--deidentified` as options, these prompts will not appear.
 
 ## Scripting `fsurf` submissions
 
-The basic approach is that we'll generate a
-text file that contains the scan and subject on each line.  Then we'll use a script
-that will read this text file to submit each subject for processing on the OSG. 
+The basic approach is that we'll generate a text file that contains the scan and
+subject on each line.  Then we'll use a script that will read this text file to
+submit each subject for processing on the OSG. 
 
 ### Generating the text file
 
-  First, we'll generate a list of subjects.  Assuming, the scans that
-we'd like to process are at `~/scans`, run:
+First, we'll generate a list of subjects.  Assuming, the scans that we'd like to
+process are at `~/scans`, run:
 
      $ ls ~/scans > scan_list
 
