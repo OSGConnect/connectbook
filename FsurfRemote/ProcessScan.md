@@ -28,10 +28,12 @@ A typical image reconstruction with FreeSurfer requires the execution of
 autorecon1, autorecon2, and autorecon3 on MRI data.  All three steps are handled
 by `fsurf`. 
 
-Now we do the image reconstruction of `MRN_3_defaced.mgz` with Fsurf. In the
-file `MRN_3_defaced.mgz`, the prefix `MRN_3` is the name of the subject.
+Now we will create a workflow to process `MRN_3_defaced.mgz` using `fsurf`. In the
+file `MRN_3_defaced.mgz`, the prefix `MRN_3` is the name of the subject. Note,
+that `fsurf` expects the input file to be named `subject_defaced.mgz` where
+`subject` is the name of the subject given by the `--subject` option. 
 
-     $ ./fsurf  submit --subject MRN_3 
+     $ ./fsurf submit --subject MRN_3 
 
 `MRN_3_defaced.mgz` image is already deidentified and defaced, so say `y` to the
 following questions. 
@@ -39,7 +41,7 @@ following questions.
      Has the MRI data been deidentified (This is required) [y/n]? y 
      Has the MRI data been defaced (This is recommended) [y/n]? y
 
-After typing `y` to the above two questions, `Fsurf` creates and submits the
+After typing `y` to the above two questions, `fsurf` creates and submits the
 workflow 
 
      Creating and submitting workflow 

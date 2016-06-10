@@ -5,12 +5,12 @@
 ## Overview
 
 This page gives an overview of the commands and options that are supported by
-the FSurf utility .  You can get general help by running `./fsurf --help` and
+the `fsurf` utility .  You can get general help by running `./fsurf --help` and
 help on a specific command by running `./fsurf [command] --help`.  E.g. to get
 help on the submit command, you can run `./fsurf submit --help`.  
 
-FSurf takes a single command (see below) followed by options for the command in
-any order.  The commands that FSurf accepts are:
+`fsurf` takes a single command (see below) followed by options for the command in
+any order.  The commands that `fsurf` accepts are:
 
 | Command | Operation |
 | ------- | --------- |
@@ -26,7 +26,7 @@ any order.  The commands that FSurf accepts are:
 
 **Important note on data privacy**:  In order to protect the privacy of your
 participants’ scans, we request that you submit only defaced and fully
-deidentified scans for processing by fsurf.  Images can be anonymized and
+deidentified scans for processing by `fsurf`.  Images can be anonymized and
 deidentified before they are uploaded to OSG servers as described in [the
 article on anonymizing
 images](https://support.opensciencegrid.org/support/solutions/articles/12000008493-anonymizing-images).
@@ -37,8 +37,8 @@ The submit command accepts the following options:
 | ------ | ----------- |
 | --user | Username to use when logging into the FSurf service |
 | --help | Display help for command |
-| --subject | Name of subject to process | 
-| --dir | Directory containing MRI scans for subject |
+| --subject | Name of subject to process.  | 
+| --dir | Directory containing MRI scans for subject.  `fsurf` expects the input file to be named `subject_defaced.mgz` where `subject` is the subject name given by the `--subject` option. |
 | --dualcore | Use 2 cores rather than 8 for per hemisphere processing.  This allow the processing to complete when 8 core systems are not available |
 | --defaced | Indicates that the scan is defaced |
 | --deidentified | Indicates that the scan is deidentified |
