@@ -23,7 +23,7 @@ described in the article on [anonymizing images](https://support.opensciencegrid
 
 ## Using Fsurf
 
-You need an account to use Fsurf from your computer. Apply for an account  by 
+You need an account to use Fsurf. Apply for the account  by 
 following [the instructions outlined here](https://support.opensciencegrid.org/support/solutions/articles/12000008487-request-a-fsurf-account-).
 
 Fsurf is easy to install and use from any computer. All it requires is a machine
