@@ -9,7 +9,7 @@ of human brains. The Open Science Grid (OSG) has developed a command line
 utility, Fsurf, that simplifies running a FreeSurfer 5.3 workflow on the OSG.  
 
 ## Prerequisites
-To use Fsurf utility, you'll need a few things:
+To install and use Fsurf utility, you'll need a few things:
 
 * A computer with FreeSurfer installed (for anonymizing scans)
 * A computer with python 2.6+ (this can be the same as the computer above) - Most linux/unix systems released in the last several years already support this and Mac OS X versions released after 2012 also provide this
