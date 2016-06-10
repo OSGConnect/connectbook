@@ -61,7 +61,7 @@ Now that we have a file that has information on the scans that should be
 submitted, let's write a script that will use that to submit the scans
 to `fsurf` for processing.
 
-Open a filed called `submit_multiple.sh` in your text editor and cut and paste
+Open a file called `submit_multiple.sh` in your text editor and cut and paste
 the following in it :
 
      #/bin/bash
