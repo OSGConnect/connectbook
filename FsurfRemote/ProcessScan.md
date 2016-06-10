@@ -120,7 +120,8 @@ you will be emailed a warning a few days before results are removed.
 
 ## What's Next? 
 
-See how to [anonymize scans](https://support.opensciencegrid.org/support/solutions/articles/12000008493-anonymizing-images)
+See how to [process multiple scans with a shell script](https://support.opensciencegrid.org/support/solutions/articles/12000010122-submitting-multiple-scans-to-fsurf). 
+If you want to check all the commands and options in `fsurf` [go here] (https://support.opensciencegrid.org/support/solutions/articles/12000011119-fsurf-command-reference)
 
 ## Getting Help
 For assistance or questions, please email the OSG User Support team  at
