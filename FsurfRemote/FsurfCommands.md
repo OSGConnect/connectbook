@@ -1,4 +1,4 @@
-[title]: - "FSurf Command Reference"
+[title]: - "Fsurf Command Reference"
 [TOC]
 
 
