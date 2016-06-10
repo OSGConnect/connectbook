@@ -9,7 +9,7 @@ of human brains. The Open Science Grid (OSG) has developed a command line
 utility, Fsurf, that simplifies running a FreeSurfer 5.3 workflow on the OSG.  
 
 ## Prerequisites
-In order to use the fsurf utility, you'll need a few things:
+To use Fsurf utility, you'll need a few things:
 
 * A computer with FreeSurfer installed (for anonymizing scans)
 * A computer with python 2.6+ (this can be the same as the computer above) - Most linux/unix systems released in the last several years already support this and Mac OS X versions released after 2012 also provide this
@@ -17,13 +17,13 @@ In order to use the fsurf utility, you'll need a few things:
 
 ## Privacy and confidentiality
 In order to protect the privacy of your participants’ scans, we request that you
-submit only defaced and fully deidentified scans for processing by fsurf. Images
+submit only defaced and fully deidentified scans for processing by Fsurf. Images
 can be anonymized and deidentified before they are uploaded to OSG servers as
 described in the article on [anonymizing images](https://support.opensciencegrid.org/solution/articles/12000008493-anonymizing-images).
 
 ## Using Fsurf
 
-To use Fsurf, you need an account.  Start by following the instructions outlined
+You need an account to use Fsurf.  Start by following the instructions outlined
 [here to obtain an account](https://support.opensciencegrid.org/support/solutions/articles/12000008487-request-a-fsurf-account-).
 
 Fsurf is easy to install and use from any computer. All it requires is a machine
@@ -43,7 +43,7 @@ For assistance or questions, please email the OSG User Support team  at
 visit the [help desk and community forums](http://support.opensciencegrid.org).
 
 ## Validation Information
-A list of linux kernels on OSG  on which the FreeSurfer workflows have been
+A list of linux kernels on the OSG on which the FreeSurfer workflows have been
 validated can be found
 [here](https://support.opensciencegrid.org/support/solutions/articles/12000008494-freesurfer-validation-on-the-osg-).
 
