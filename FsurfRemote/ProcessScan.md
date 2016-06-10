@@ -57,7 +57,7 @@ To get the status of this workflow, run the following command:
      $ ./fsurf list 
      Current workflows
      Subject    Workflow             Submit time          Cores          Status
-     MRN_3       97                   10:00 01-19-2016     2             PROCESSING
+     MRN_3       97                  01-19-2016 10:00      2             PROCESSING
 
 The screen output shows that there is just one workflow in the list with the
 subject name `MRN_3`. The status of the workflow is `PROCESSING` (same as
@@ -86,7 +86,7 @@ the status of the workflow should be `COMPLETED` as below
      $ ./fsurf list
      Current workflows
      Subject    Workflow             Submit time          Cores           Status
-     MRN_3       97                   10:00 01-19-2016     2               COMPLETED
+     MRN_3       97                  01-19-2016 18.20      2               COMPLETED
 
 Run the command below to get the output of the completed workflow by using its ID:
 
