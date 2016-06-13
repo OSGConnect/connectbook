@@ -25,14 +25,14 @@ any order.  The commands that `fsurf` accepts are:
 ## Command and Option summary
 
 
-|     Command     | Function                           | Required Options | Other Options |
-|---------------|------------------------------------|--------------------------|-----------------------------------------|
-| submit          | Upload and process scan            | --subject [subject name] | <ul><li>--help</li> <li>--user</li><li>--dir </li><li>--dualcore</li><li>--defaced</li><li> --deidentified</li></ul> |
-| list            | List workflows submitted           | | <ul><li>--help</li> <li>--user</li><li>--all-workflows</li></ul> |
-| status          | List status of a given workflow    | --id | <ul><li>--help</li> <li>--user</li></ul>  |
-| output          | Get output from completed workflow | --id | <ul><li>--help</li> <li>--user</li>--log-only</li></ul> |
-| remove          | Remove specified workflow          | --id |<ul><li>--help</li> <li>--user</li></ul> |
-| change-password | Change account password            |  | <ul><li>--help</li> <li>--user</li></ul> |
+| Command   | Function    | Required Switches | Optional Switches |
+| --------- | ----------- | ---------------   | ------------  |
+| submit          | Upload and process scan            | --subject [subject name] | <ul><li>--help</li> <li>--user [user name]</li><li>--dir [directory path]</li><li>--dualcore</li><li>--defaced</li><li> --deidentified</li></ul> |
+| list            | List workflows submitted           | | <ul><li>--help</li> <li>--user [user name]</li><li>--all-workflows</li></ul> |
+| status          | List status of a given workflow    | --id [workflow id] | <ul><li>--help</li> <li>--user [user name]</li></ul>  |
+| output          | Get output from completed workflow | --id [workflow id] | <ul><li>--help</li> <li>--user [user name]</li>--log-only</li></ul> |
+| remove          | Remove specified workflow          | --id [workflow id] |<ul><li>--help</li> <li>--user [user name]</li></ul> |
+| change-password | Change account password            |  | <ul><li>--help</li> <li>--user [user name]</li></ul> |
 
 
 ## Submit Options
