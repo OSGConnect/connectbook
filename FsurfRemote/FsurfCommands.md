@@ -22,6 +22,25 @@ any order.  The commands that `fsurf` accepts are:
 | change-password | Changes an user password | 
 
 
+## Command and Option summary
+
+|     Command     | Function                           | Required Options
+| Other Options                                            |
+|:---------------:|------------------------------------|--------------------------|----------------------------------------------------------|
+| submit          | Upload and process scan            | --subject [subject
+name] | --help --user  --dir --dualcore --defaced --deidentified |
+| list            | List workflows submitted           |
+| --help --user --all-workflows                            |
+| status          | List status of a given workflow    | --id
+| --help --user                                            |
+| output          | Get output from completed workflow | --id
+| --help --user --log-only                                 |
+| remove          | Remove specified workflow          | --id
+| --help --user                                            |
+| change-password | Change account password            |
+| --help --user                                            |
+
+
 ## Submit Options
 
 **Important note on data privacy**:  In order to protect the privacy of your

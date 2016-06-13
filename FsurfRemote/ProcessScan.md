@@ -1,4 +1,4 @@
-[title]: - "Analyzing a Brain MRI Scan"
+[title]: - "An example of processing a scan"
 [TOC]
 
 
