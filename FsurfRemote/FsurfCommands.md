@@ -24,8 +24,9 @@ any order.  The commands that `fsurf` accepts are:
 
 ## Command and Option summary
 
+
 |     Command     | Function                           | Required Options | Other Options |
-|:---------------:|------------------------------------|--------------------------|-----------------------------------------|
+|---------------|------------------------------------|--------------------------|-----------------------------------------|
 | submit          | Upload and process scan            | --subject [subject name] | <ul><li>--help</li> <li>--user</li><li>--dir </li><li>--dualcore</li><li>--defaced</li><li> --deidentified</li></ul> |
 | list            | List workflows submitted           | | <ul><li>--help</li> <li>--user</li><li>--all-workflows</li></ul> |
 | status          | List status of a given workflow    | --id | <ul><li>--help</li> <li>--user</li></ul>  |
