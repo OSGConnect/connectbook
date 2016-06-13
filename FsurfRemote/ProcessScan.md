@@ -4,8 +4,8 @@
 
 ## Overview
 
-In this section, we will demonstrate how to use the `fsurf` utility by going the
-the process of analyzing a brain scan. 
+In this section, we will demonstrate how to use the `fsurf` utility by analyzing
+a brain scan. 
 
 **Important note on data privacy**:  In order to protect the privacy of your
 participants’ scans, we request that you submit only defaced and fully

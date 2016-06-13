@@ -3,19 +3,18 @@
  
 ## Saving account name and password
 
-However, when you do so, `fsurf` will ask you if you want to save 
+When you run `fsurf` it will ask you for an username and password.  However,
+after requesting this information, `fsurf` will ask you if you want to save
 these credentials. If you say yes to this, then you can omit these options 
 and let `fsurf` use the saved credentials for future invocations.
 
+If you accidentally enter the wrong username or password, you can run any
+`fsurf` command with the `--user` option to get the opportunity to reset 
+the saved username and password.
 
-## Changing saved account information
-To change the saved user credentials (e.g. if your password has been changed), 
-just run any command with the `--user ` option.  The `fsurf` utility will 
-ask you for a password and then ask you if you'd like to save your 
-credentials.  Enter 'y' or 'yes' at the prompt and your credentials 
-will be updated.
 
-## Changing your account's password 
+## Changing account password
+
 To change your account's password, run 
 `./fsurf change-password` or `./fsurf --user myuser --password mypassword`.  
 `fsurf` will then prompt you for a new password and update 
