@@ -23,10 +23,8 @@ any order.  The commands that `fsurf` accepts are:
 
 
 <br/>
-<br/>
 
 ## Command and Option summary
-<br/>
 <br/>
 
 
@@ -40,7 +38,6 @@ any order.  The commands that `fsurf` accepts are:
 | change-password | Change account password            |  | <ul><li>--help</li> <li>--user [user name]</li></ul> |
 
 
-<br/>
 <br/>
 ## Submit Options
 
