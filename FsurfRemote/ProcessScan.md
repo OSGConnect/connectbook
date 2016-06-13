@@ -67,7 +67,7 @@ running). Two cores are being used for this workflow. The ID of the workflow is
 A unique ID is assigned to each submitted workflow. The ID is useful to get the
 output or remove the workflow from the list. 
 
-A workflow can have the following statuses:
+A workflow can have the following status:
 
 * UPLOADED - workflow has been created
 * PROCESSING - workflow is being run 
