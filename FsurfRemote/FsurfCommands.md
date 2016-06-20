@@ -5,7 +5,7 @@
 ## Overview
 
 This page gives an overview of the commands and options that are supported by
-the `fsurf` utility .  You can get general help by running `./fsurf --help` and
+the `fsurf` utility.  You can get general help by running `./fsurf --help` and
 help on a specific command by running `./fsurf [command] --help`.  E.g. to get
 help on the submit command, you can run `./fsurf submit --help`.  
 
@@ -25,8 +25,6 @@ any order.  The commands that `fsurf` accepts are:
 <br/>
 
 ## Command and Option summary
-<br/>
-
 
 | Command   | Function    | Required Switches | Optional Switches |
 | --------- | ----------- | ---------------   | ------------  |
@@ -60,6 +58,7 @@ The submit command accepts the following options:
 | --defaced | Indicates that the scan is defaced |
 | --deidentified | Indicates that the scan is deidentified |
 
+<br />
 ## List Options
 
 The list command accepts the following options:
@@ -70,6 +69,7 @@ The list command accepts the following options:
 | --help | Display help for command |
 | --all-workflows | List all workflows submitted rather than the workflows submitted in the last month | 
 
+<br />
 ## Status Options
 
 The status command accepts the following options:
@@ -80,6 +80,7 @@ The status command accepts the following options:
 | --help | Display help for command |
 | --id   | ID of workflow to display |
 
+<br />
 ## Output Options
 
 The output command accepts the following options:
@@ -91,6 +92,7 @@ The output command accepts the following options:
 | --id   | ID of workflow to display |
 | --log-only | Only download log files for workflow  |
 
+<br />
 ## Remove Options
 
 The remove command accepts the following options:
@@ -101,7 +103,7 @@ The remove command accepts the following options:
 | --help | Display help for command |
 | --id   | ID of workflow to display |
 
-
+<br />
 ## Change-password Options
 
 The change-password command accepts the following options:
@@ -111,6 +113,7 @@ The change-password command accepts the following options:
 | --user | Username to use when logging into the FSurf service |
 | --help | Display help for command |
 
+<br />
 ## Getting Help
 For assistance or questions, please email the OSG User Support team  at
 [user-support@opensciencegrid.org](mailto:user-support@opensciencegrid.org) or
