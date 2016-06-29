@@ -6,3 +6,6 @@ Papers, presentations, and other publications that feature research that benefit
 
 > 2) Sfiligoi, I., Bradley, D. C., Holzman, B., Mhashilkar, P., Padhi, S. and Wurthwein, F. (2009). "The Pilot Way to Grid Resources Using glideinWMS", 2009 WRI World Congress on Computer Science and Information Engineering, Vol. 2, pp. 428–432. doi:10.1109/CSIE.2009.950.
  
+ and include the following acknowledgement:
+ 
+> This research was done using resources provided by the Open Science Grid [1,2], which is supported by the National Science Foundation and the U.S. Department of Energy's Office of Science.
