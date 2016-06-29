@@ -162,7 +162,7 @@ directory to that copy. **The --recursive option is important!**
 
 Typically you'll want to install a release version.
 
-	$ git checkout v0.5.1
+	$ git checkout v0.5.3
 
 Next, you'll build and install the software. How you do this depends on
 what kind of packaging environment your server uses. Environment modules
@@ -175,7 +175,7 @@ installation.
 Installation is a simple one-line command:
 
 	$ ./install.sh ~/software/connect-client
-	[install] Setting up the Connect module v0.5.1
+	[install] Setting up the Connect module v0.5.3
 	Connect modulefile is in /home/username/software/connect-client/connect-client
 	[install] Installing Connect user commands
 	[install] ... connect command
