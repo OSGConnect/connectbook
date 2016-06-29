@@ -2,11 +2,11 @@
 
 Whenever you make use of Open Science Grid resources, services or tools, we would be grateful for your acknowledgement in publications. 
 
-For example, you can add in your acknowledgement section:
+For example, you can add in your acknowledgements section:
  
 > "This research was done using resources provided by the Open Science Grid [1,2], which is supported by the National Science Foundation and the U.S. Department of Energy's Office of Science." 
 
-where [1,2] are citations to two of our foundational articles:
+where [1,2] are citations to two of the foundational OSG articles:
 
 > 1) Pordes, R. et al. (2007). "The Open Science Grid", J. Phys. Conf. Ser. 78, 012057.doi:10.1088/1742-6596/78/1/012057.
 
