@@ -8,7 +8,7 @@ The first step in installation is to grab the latest copy of the
 client from GitHub:
 
 	$ ssh login.mycluster.edu			 # [your cluster site here]
-	$ wget http://osg.link/connect-client-0.5.3.tar.gz
+	$ wget stash.osgconnect.net/+connect/connect-client-0.5.3.tar.gz
 	$ tar xzf connect-client-0.5.3.tar.gz
 	$ cd connect-client-0.5.3
 
