@@ -49,4 +49,4 @@ validated can be found
 
 
 ## Acknowledging the Open Science Grid
-We gratefully request your acknowledgement of the OSG in publications benefiting from this service as described [here](https://support.opensciencegrid.org/solutions/articles/5000640421-acknowledging-the-open-science-grid).
+We gratefully request your acknowledgement of the OSG in publications benefiting from this service as described [here](https://support.opensciencegrid.org/support/solutions/articles/5000640421-acknowledging-the-open-science-grid).
