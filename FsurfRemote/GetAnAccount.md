@@ -7,7 +7,7 @@ write "Fsurf account request" and in the body of the ticket please include your 
 * Username 
 * Institution
 * Department
-* Institutional email address
+* Institutional (.edu, .gov, etc.) email address
 * Phone
 * Preferred username
 
