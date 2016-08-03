@@ -100,9 +100,6 @@
 [submodule "tutorials/tutorial-fsurf"]
 	path = tutorials/tutorial-fsurf
 	url = https://github.com/OSGConnect/tutorial-fsurf
-[submodule "tutorial-R-addlibSNA"]
-	path = tutorial-R-addlibSNA
-	url = https://github.com/OSGConnect/tutorial-R-addlibSNA
 [submodule "tutorials/tutorial-stashcache-blast"]
 	path = tutorials/tutorial-stashcache-blast
 	url = https://github.com/OSGConnect/tutorial-stashcache-blast
