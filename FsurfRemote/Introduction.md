@@ -24,7 +24,7 @@ described in the article on [anonymizing images](https://support.opensciencegrid
 ## Using Fsurf
 
 You need an account to use Fsurf. Apply for the account  by 
-following [the instructions outlined here](https://support.opensciencegrid.org/support/solutions/articles/12000008487-request-a-fsurf-account-).
+following [the instructions outlined here](https://support.opensciencegrid.org/solutions/articles/12000008487-request-a-fsurf-account-).
 
 Fsurf is easy to install and use from any computer. All it requires is a machine
 with a network connection and Python installed.  It takes only a few minutes to
@@ -45,6 +45,8 @@ visit the [help desk and community forums](http://support.opensciencegrid.org).
 ## Validation Information
 A list of linux kernels on the OSG on which the FreeSurfer workflows have been
 validated can be found
-[here](https://support.opensciencegrid.org/support/solutions/articles/12000008494-freesurfer-validation-on-the-osg-).
+[here](https://support.opensciencegrid.org/solutions/articles/12000008494-freesurfer-validation-on-the-osg-).
 
 
+## Acknowledging the Open Science Grid
+We gratefully request your acknowledgement of the OSG in publications benefiting from this service as described [here](https://support.opensciencegrid.org/support/solutions/articles/5000640421-acknowledging-the-open-science-grid).

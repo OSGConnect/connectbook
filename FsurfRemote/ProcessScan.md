@@ -1,11 +1,11 @@
-[title]: - "Analyzing a Brain MRI Scan"
+[title]: - "An example of processing a scan"
 [TOC]
 
 
 ## Overview
 
-In this section, we will demonstrate how to use the `fsurf` utility by going the
-the process of analyzing a brain scan. 
+In this section, we will demonstrate how to use the `fsurf` utility by analyzing
+a brain scan. 
 
 **Important note on data privacy**:  In order to protect the privacy of your
 participants’ scans, we request that you submit only defaced and fully
@@ -67,7 +67,7 @@ running). Two cores are being used for this workflow. The ID of the workflow is
 A unique ID is assigned to each submitted workflow. The ID is useful to get the
 output or remove the workflow from the list. 
 
-A workflow can have the following statuses:
+A workflow can have the following status:
 
 * UPLOADED - workflow has been created
 * PROCESSING - workflow is being run 

@@ -13,7 +13,7 @@ obtain one.
 ## What's Next? 
 
 See how to 
-[analyze a MRI scan ]( https://support.opensciencegrid.org/solution/articles/12000008490-anlysis-of-a-brain-mri-scan).
+[analyze a MRI scan ]( https://support.opensciencegrid.org/solution/articles/12000008490-anlysis-of-a-brain-mri-scan)
 using the `fsurf` utility.
 
 ## Getting Help
