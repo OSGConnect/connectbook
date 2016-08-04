@@ -198,7 +198,7 @@ connect server.  Do that using `connect pull`.
 	..+++........+++++++++++++++++++++
 	24 objects retrieved; 10 objects up to date; 0 errors
 
-Again, the plusses and dots tell you how much file transfer activity
+Again, the pluses and dots tell you how much file transfer activity
 occurred.
 
 
