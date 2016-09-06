@@ -159,12 +159,12 @@ must invoke connect client commands from the working directory.
 	............
 	0 objects sent; 12 objects up to date; 0 errors
 
-The lines of dots and plusses indicate file transfer status.  Each `+`
+The lines of dots and pluses indicate file transfer status.  Each `+`
 is a file or directory transferred from your client to the Connect
 server.  Each `.` is a file or directory that's up to date already.
 This file synchronization runs before your job is submitted (a _push_)
 to ensure that the server has current information, and again after
-subission in case the act of submissing the work creates new files.
+submission in case the act of submitting the work creates new files.
 
 
 ## Check job queue
@@ -198,7 +198,7 @@ connect server.  Do that using `connect pull`.
 	..+++........+++++++++++++++++++++
 	24 objects retrieved; 10 objects up to date; 0 errors
 
-Again, the plusses and dots tell you how much file transfer activity
+Again, the pluses and dots tell you how much file transfer activity
 occurred.
 
 
