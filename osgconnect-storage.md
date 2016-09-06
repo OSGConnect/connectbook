@@ -1,18 +1,22 @@
-[title]: - "Storage Solutions on OSG: home, stash, and public"
+[title]: - "Storage Solutions on OSG: home, local-scratch, stash, and public"
 
 
 ## Overview
 
-`home`, `stash`, and `public` are the data storage options for the OSG users.  Each storage offers certain advantages to the users. On the submit node (login.osgconnect.net), the storages are in the following locations,
+`home`, `local-scratch`, `stash`, and `public` are the data storage options for OSG Connect users.  Each storage offers certain advantages to the users. On the submit node (login.osgconnect.net), the storages are in the following locations,
 
     home: /home/username
-    stash: /home/username/stash
-    public: /home/username/public
+    local-scratch: /local-scratch/username
+    stash: /home/username/stash (or) /stash/user/username
+    public: /home/username/public (or) /stash/user/username/public
 
-For convenience, the stash and public directories are accessed from home. Here, the `username` is your login name.
+Here, the `username` is your login name.. For convenience, the stash and public directories are accessed from home. Here, the `username` is your login name.
 
 ## home
-Home is meant for storing files for quick access. Usually, files such as program files, parameter files, scripts, etc. are kept in your `/home` directory.  Although disk quota is not imposed on home,  we recommend a disk usage of less than 10 GB. Home filesystem is not suitable to run your HTCondor jobs. It is a good practice to run all your jobs under the `stash` directory.
+Home is meant for storing files for quick access. Usually, files such as program files, parameter files, scripts, etc. are kept in your `/home` directory.  Although disk quota is not imposed on home,  we recommend a disk usage of less than 10 GB. Home filesystem is not suitable to run your HTCondor jobs. It is a good practice to run all your jobs under the `stash` or the `local-scratch` directory.
+
+## local-scratch
+`local-scratch` is meant for temporary storage. It is a good practice to run your jobs on `local-scratch` and move the output data to a secondary local disk as soon as possible.  The data on `local-scratch` are not backed-up and they are removed on a periodic basis. 
 
 ## stash
 Stash provides a large temporary storage. Stash is the place you run all your HTCondor jobs. Like home, there is no disk quota imposed on stash. However, the data on stash is not backed-up, so transfer the data to a secondary local disk (such as your local desktop, laptop, etc.,) on a regular basis.  For data transfer of more than 10 GB, use the Globus transfer service.  For more details check the articles on [data transfer techniques](https://support.opensciencegrid.org/solution/folders/5000260918).
