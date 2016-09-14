@@ -4,7 +4,6 @@ To use Fsurf from your computer, you will first need to request an account by [o
 write "Fsurf account request" and in the body of the ticket please include your contact information:
 
 * Name
-* Username 
 * Institution
 * Department
 * Institutional (.edu, .gov, etc.) email address
