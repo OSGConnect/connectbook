@@ -42,7 +42,7 @@ submit each subject for processing on the OSG.
 First, we'll generate a list of subjects.  Assuming, the scans that we'd like to
 process are at `~/scans`, run:
 
-     $ ls ~/scans > scan_list
+     $ for i in `ls ~/scans`; do; readlink -f $i; done > scan_list
 
 This will generate a file listing each scan on a separate line.  Now edit the
 file using a text editor and add the subject for each scan in.  After you're
