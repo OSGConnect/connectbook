@@ -28,7 +28,7 @@ any order.  The commands that `fsurf` accepts are:
 
 | Command   | Function    | Required Switches | Optional Switches |
 | --------- | ----------- | ---------------   | ------------  |
-| submit          | Upload and process scan            | --subject [subject name] | <ul><li>--help</li> <li>--user [user name]</li><li>--input-file [path]</li><li>--dualcore</li><li>--defaced</li><li>--deidentified</li><li>--subject-dir [file path]</li><li>--options [options]</li></ul> |
+| submit          | Upload and process scan            | --subject [subject name] | <ul><li>--help</li> <li>--user [user name]</li><li>--input-file [path]</li><li>--dualcore</li><li>--defaced</li><li>--deidentified</li><li>--subject-dir [file path]</li><li>--options="[options]"</li></ul> |
 | list            | List workflows submitted           | | <ul><li>--help</li> <li>--user [user name]</li><li>--all-workflows</li></ul> |
 | status          | List status of a given workflow    | --id [workflow id] | <ul><li>--help</li> <li>--user [user name]</li></ul>  |
 | output          | Get output from completed workflow | --id [workflow id] | <ul><li>--help</li> <li>--user [user name]</li>--log-only</li></ul> |
@@ -55,7 +55,7 @@ The submit command accepts the following options:
 | --subject | Name of subject to process.  | 
 | --input-file | Path to mgz file containing MRI scans for subject. |
 | --subject-dir | Path to zip file containing subject directory.  Used in conjunction with --option argument. |
-| --option | Options to pass to FreeSurfer.  Must be used in conjunction with --subject-dir. |
+| --option | Options to pass to FreeSurfer. Arguments must be in quotes and be specifed as --options="-option1 -option2." Must be used in conjunction with --subject-dir. |
 | --dualcore | Use 2 cores rather than 8 for per hemisphere processing.  This allow the processing to complete when 8 core systems are not available |
 | --defaced | Indicates that the scan is defaced |
 | --deidentified | Indicates that the scan is deidentified |
