@@ -23,7 +23,7 @@ Stash provides medium term storage for users. Like home, there is no disk quota 
 
 
 ## public
-Anybody could read the files under `~/public`. If you want to share some files with your collaborators, including those don't have any account on OSG, keep the files under `~/public`. The `~public` is available via WWW as `http://stash.osgconnect.net/+username`. The data on `~/public` is accessible to the jobs on remote worker machine via the wget command. For more details of using public for condor input file transfer,  [click here](https://support.opensciencegrid.org/solution/articles/5000639798-access-stash-remotely-using-http).
+Files placed in the '~public' directory are publicly accessible via WWW as `http://stash.osgconnect.net/+username`. The data on `~/public` is accessible to the jobs on remote worker machine via the wget command. For more details of using public for condor input file transfer,  [click here](https://support.opensciencegrid.org/solution/articles/5000639798-access-stash-remotely-using-http).
 
 ## Getting Help
 For assistance or questions, please email the OSG User Support team  at [user-support@opensciencegrid.org](mailto:user-support@opensciencegrid.org) or visit the [help desk and community forums](http://support.opensciencegrid.org).
