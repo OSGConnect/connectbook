@@ -93,6 +93,10 @@ contents of a subject dir instead of a mgz file. To create this workflow, you'll
 
      $ ./fsurf submit --subject MRN_3 --subject-dir  MRN_3_subject.zip --options='-motioncor'
 
+Note, that the options for FreeSurfer are surrounded by quotes and are given using the 
+equal sign.  You need to do this so that the Fsurf script does not interpret them as options
+for the script.
+
 The images should already be deidentified and defaced, so say `y` to the
 following questions. 
 
