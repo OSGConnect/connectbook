@@ -143,20 +143,19 @@ To get the status of this workflow, run the following command:
      $ ./fsurf list 
      Current workflows
      Subject    Workflow             Submit time          Cores          Status
-     MRN_3       97                  01-19-2016 10:00      2             PROCESSING
+     MRN_3       97                  01-19-2016 10:00      2             RUNNING
 
 The screen output shows that there is just one workflow in the list with the
-subject name `MRN_3`. The status of the workflow is `PROCESSING` (same as
-running). Two cores are being used for this workflow. The ID of the workflow is
-`97`. 
+subject name `MRN_3`. The status of the workflow is `RUNNING`. Two cores are 
+being used for this workflow. The ID of the workflow is `97`. 
 
 A unique ID is assigned to each submitted workflow. The ID is useful to get the
 output or remove the workflow from the list. 
 
 A workflow can have the following status:
 
-* UPLOADED (rev 0) or QUEUED (rev 2) - workflow has been created
-* PROCESSING (rev 0) or RUNNING (rev 2) - workflow is being run
+* QUEUED (rev 2) or UPLOADED (rev 0)  - workflow has been created
+* RUNNING (rev 2) or PROCESSING (rev 0)  - workflow is being run
 * FAILED - an error occurred while the workflow was running
 * COMPLETED  - workflow has successfully completed
 * DELETE PENDING  - workflow will be deleted soon
