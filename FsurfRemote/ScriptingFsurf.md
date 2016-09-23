@@ -85,15 +85,15 @@ the following in it :
 
 > Fsurf rev0:
 > <pre><code>
-     #/bin/bash
-     
-     for line in `cat $1`;
-     do
-       input_file=`echo $line | cut -f 1 -d' '`
-       subject=`echo $line | cut -f 2 -d' '`
-       ./fsurf submit --dir $2 --subject $subject --defaced --deidentified
-     done
-     </code></pre>
+>     #/bin/bash
+>     
+>    for line in `cat $1`;
+>     do
+>       input_file=`echo $line | cut -f 1 -d' '`
+>       subject=`echo $line | cut -f 2 -d' '`
+>       ./fsurf submit --dir $2 --subject $subject --defaced --deidentified
+>     done
+>     </code></pre>
 
 Now make the script executable and run it:
 
