@@ -35,9 +35,9 @@ by `fsurf`.
 Now we will create a workflow to process `MRN_3_defaced.mgz` using `fsurf`. In the
 file `MRN_3_defaced.mgz`, the prefix `MRN_3` is the name of the subject. 
 
-<div style="background-color:#e6f2ff;">Fsurf rev 0:</div>
+> Fsurf rev 0
 
-> Note that `fsurf`rev 0 expects the input file to be named `subject_defaced.mgz` where
+> Note that `fsurf` rev 0 expects the input file to be named `subject_defaced.mgz` where
 > `subject` is the name of the subject given by the `--subject` option. 
 
 
