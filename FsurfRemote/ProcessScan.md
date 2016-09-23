@@ -4,6 +4,11 @@
 
 ## Overview
 
+> Note: this page covers Fsurf rev 0 and Fsurf rev 2, places where the two versions differ
+> are indicated through blockquotes like this or using inline text. Fsurf rev 0 is the current 
+> production script and rev 2 is currently in beta testing.
+
+
 In this section, we will demonstrate how to use the `fsurf` utility by analyzing
 a brain scan. 
 
@@ -21,18 +26,25 @@ Type the following to get a sample MRI file,
 
 `MRN_3_defaced.mgz` is an MRI file that has already been defaced and anonymized. 
 
-## Performing an Image Reconstruction 
+## Performing a Standard Image Reconstruction
 
 A typical image reconstruction with FreeSurfer requires the execution of
 autorecon1, autorecon2, and autorecon3 on MRI data.  All three steps are handled
 by `fsurf`. 
 
 Now we will create a workflow to process `MRN_3_defaced.mgz` using `fsurf`. In the
-file `MRN_3_defaced.mgz`, the prefix `MRN_3` is the name of the subject. Note,
-that `fsurf` expects the input file to be named `subject_defaced.mgz` where
-`subject` is the name of the subject given by the `--subject` option. 
+file `MRN_3_defaced.mgz`, the prefix `MRN_3` is the name of the subject. 
+
+> Fsurf rev 0:
+> Note that `fsurf`rev 0 expects the input file to be named `subject_defaced.mgz` where
+> subject` is the name of the subject given by the `--subject` option. 
+
 
      $ ./fsurf submit --subject MRN_3 
+
+> Fsurf rev 2:
+
+     $ ./fsurf submit --subject MRN_3 --input-file MRN_3_defaced.mgz
 
 `MRN_3_defaced.mgz` image is already deidentified and defaced, so say `y` to the
 following questions. 
@@ -41,13 +53,25 @@ following questions.
      Has the MRI data been defaced (This is recommended) [y/n]? y
 
 After typing `y` to the above two questions, `fsurf` creates and submits the
-workflow 
+workflow
+
+> Fsurf rev 0:
 
      Creating and submitting workflow 
      Workflow 97 submitted for processing
 
+> Fsurf rev 2:
+
+     Creating and submitting workflow
+     Workflow 97 created
+     Uploading input files
+     Uploading MRN_3_defaced.mgz (file 1/1)
+     Uploaded MRN_3_defaced.mgz successfully
+
+
 The ID of your workflow is `97`. The ID is needed to check the status, remove
 and get the output of the workflow. 
+
 
 ##  Listing Workflows
 
@@ -68,8 +92,8 @@ output or remove the workflow from the list.
 
 A workflow can have the following status:
 
-* UPLOADED - workflow has been created
-* PROCESSING - workflow is being run 
+* UPLOADED (rev 0) or QUEUED (rev 2) - workflow has been created
+* PROCESSING (rev 0) or RUNNING (rev 2) - workflow is being run
 * FAILED - an error occurred while the workflow was running
 * COMPLETED  - workflow has successfully completed
 * DELETE PENDING  - workflow will be deleted soon
