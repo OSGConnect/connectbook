@@ -42,15 +42,19 @@ submit each subject for processing on the OSG.
 First, we'll generate a list of subjects.  Assuming, the scans that we'd like to
 process are at `~/scans`, run:
 
-     $ ls ~/scans > scan_list
+    $ for i in `ls ~/scans`; do; readlink -f $i; done > scan_list
+    
+
+> Fsurf rev 0: 
+> <pre><code>$ ls ~/scans > scan_list</code></pre>
 
 This will generate a file listing each scan on a separate line.  Now edit the
-file using a text editor and add the subject for each scan in.  After you're
+file using a text editor and add the subject for each scan file.  After you're
 done, the file should look something like this:
 
-     subject_1_defaced.mgz subject_1
-     MRN_1_defaced.mgz MRN_1
-     MRN_3_defaced.mgz MRN_3
+     /home/user/scans/subject_1_defaced.mgz subject_1
+     /home/user/scans/MRN_1_defaced.mgz MRN_1
+     /home/user/scans/MRN_3_defaced.mgz MRN_3
 
 Each line should have the filename for the scan, a space, and then the name of 
 the subject.
@@ -70,8 +74,21 @@ the following in it :
      do
        input_file=`echo $line | cut -f 1 -d' '`
        subject=`echo $line | cut -f 2 -d' '`
+       ./fsurf submit --input $2 --subject $subject --defaced --deidentified
+     done
+     
+
+> Fsurf rev0:
+> <pre><code>
+     #/bin/bash
+     
+     for line in `cat $1`;
+     do
+       input_file=`echo $line | cut -f 1 -d' '`
+       subject=`echo $line | cut -f 2 -d' '`
        ./fsurf submit --dir $2 --subject $subject --defaced --deidentified
      done
+     </code></pre>
 
 Now make the script executable and run it:
 
