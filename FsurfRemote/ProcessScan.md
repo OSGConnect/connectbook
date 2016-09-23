@@ -41,6 +41,8 @@ file `MRN_3_defaced.mgz`, the prefix `MRN_3` is the name of the subject.
 > `subject` is the name of the subject given by the `--subject` option. 
 > <pre><code> $ ./fsurf submit --subject MRN_3</code></pre>
 
+<br/>
+
 > Fsurf rev 2:
 
      $ ./fsurf submit --subject MRN_3 --input-file MRN_3_defaced.mgz
@@ -54,13 +56,6 @@ following questions.
 After typing `y` to the above two questions, `fsurf` creates and submits the
 workflow
 
-> Fsurf rev 0:
-
-     Creating and submitting workflow 
-     Workflow 97 submitted for processing
-
-> Fsurf rev 2:
-
      Creating and submitting workflow
      Workflow 97 created
      Uploading input files
@@ -69,6 +64,75 @@ workflow
 
 
 The ID of your workflow is `97`. The ID is needed to check the status, remove
+and get the output of the workflow. 
+
+
+## Reconstructing an Image With Multiple Inputs
+
+> Note: this feature is only available on Fsurf rev 2
+
+In addition to the standard image reconstruction, FreeSurfer can also run the autorecon1, 
+autorecon2, and autorecon3 steps with MGZ files from the same subject.  This allows FreeSurfer
+to combine the scans to give a higher quality result.  This section shows how to run this workflow.
+
+Now we will create a workflow to process `MRN_3` subject using `fsurf` and multiple input files. We'll
+assume that the input files for `MRN_3` are called `MRN_3_defaced1.mgz`, and `MRN_3_defaced2.mgz`.
+
+     $ ./fsurf submit --subject MRN_3 --input-file MRN_3_defaced1.mgz --input-file MRN_3_defaced2.mgz
+
+The images should already be deidentified and defaced, so say `y` to the
+following questions. 
+
+     Has the MRI data been deidentified (This is required) [y/n]? y 
+     Has the MRI data been defaced (This is recommended) [y/n]? y
+
+After typing `y` to the above two questions, `fsurf` creates and submits the
+workflow 
+
+     Creating and submitting workflow
+     Workflow 98 created
+     Uploading input files
+     Uploading MRN_3_defaced1.mgz (file 1/2)
+     Uploaded MRN_3_defaced1.mgz successfully
+     Uploading MRN_3_defaced2.mgz (file 2/2)
+     Uploaded MRN_3_defaced2.mgz successfully
+
+The ID of your workflow is `98`. The ID is needed to check the status, remove
+and get the output of the workflow. 
+
+## Running recon-all With Custom Options
+
+> Note: this feature is only available on Fsurf rev 2
+
+FSurf also allows users to run recon-all with a set of custom options. Users can use this
+workflow to run unique FreeSurfer workflows.
+
+Now we will create a workflow that will run just the motion correction for the `MRN_3` 
+subject using `fsurf`. Unlike the previous workflows, this workflow uses a zip file with the 
+contents of a subject dir instead of a mgz file. To create this workflow, you'll need to run:
+
+     $ ./fsurf submit --subject MRN_3 --subject-dir  MRN_3_subject.zip --options='-motioncor'
+
+Note, that the options for FreeSurfer are surrounded by quotes and are given using the 
+equal sign.  You need to do this so that the Fsurf script does not interpret them as options
+for the script.
+
+The images should already be deidentified and defaced, so say `y` to the
+following questions. 
+
+     Has the MRI data been deidentified (This is required) [y/n]? y 
+     Has the MRI data been defaced (This is recommended) [y/n]? y
+
+After typing `y` to the above two questions, `fsurf` creates and submits the
+workflow 
+
+     Creating and submitting workflow
+     Workflow 99 created
+     Uploading input files
+     Uploading MRN_3_subject.zip (file 1/2)
+     Uploaded MRN_3_subject.zip successfully
+
+The ID of your workflow is `99`. The ID is needed to check the status, remove
 and get the output of the workflow. 
 
 
