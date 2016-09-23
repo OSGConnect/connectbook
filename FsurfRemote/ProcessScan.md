@@ -21,7 +21,6 @@ Type the following to get a sample MRI file,
 
 `MRN_3_defaced.mgz` is an MRI file that has already been defaced and anonymized. 
 
-<div style="background-color:powderblue;">
 ## Performing an Image Reconstruction 
 
 A typical image reconstruction with FreeSurfer requires the execution of
@@ -49,7 +48,6 @@ workflow
 
 The ID of your workflow is `97`. The ID is needed to check the status, remove
 and get the output of the workflow. 
-</div>
 
 ##  Listing Workflows
 
