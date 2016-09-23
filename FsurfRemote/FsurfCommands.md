@@ -4,6 +4,10 @@
 
 ## Overview
 
+> Note: this page covers Fsurf rev 0 and Fsurf rev 2, places where the two versions differ
+> are indicated through blockquotes like this or using inline text. Fsurf rev 0 is the current 
+> production script and rev 2 is currently in beta testing.
+
 This page gives an overview of the commands and options that are supported by
 the `fsurf` utility.  You can get general help by running `./fsurf --help` and
 help on a specific command by running `./fsurf [command] --help`.  E.g. to get
@@ -28,7 +32,7 @@ any order.  The commands that `fsurf` accepts are:
 
 | Command   | Function    | Required Switches | Optional Switches |
 | --------- | ----------- | ---------------   | ------------  |
-| submit          | Upload and process scan            | --subject [subject name] | <ul><li>--help</li> <li>--user [user name]</li><li>--input-file [path] (fsurf rev 1)</li><li>--subject-dir [file path] (fsurf rev 1)</li><li>--options="[options]" (fsurf rev 1)</li><li>--dir [directory path] (fsurf rev 0)</li><li>--defaced</li><li>--deidentified</li><li>--dualcore</li></ul> |
+| submit          | Upload and process scan            | --subject [subject name] | <ul><li>--help</li> <li>--user [user name]</li><li>--input-file [path] (Fsurf rev 1)</li><li>--subject-dir [file path] (Fsurf rev 1)</li><li>--options="[options]" (Fsurf rev 1)</li><li>--dir [directory path] (Fsurf rev 0)</li><li>--defaced</li><li>--deidentified</li><li>--dualcore</li></ul> |
 | list            | List workflows submitted           | | <ul><li>--help</li> <li>--user [user name]</li><li>--all-workflows</li></ul> |
 | status          | List status of a given workflow    | --id [workflow id] | <ul><li>--help</li> <li>--user [user name]</li></ul>  |
 | output          | Get output from completed workflow | --id [workflow id] | <ul><li>--help</li> <li>--user [user name]</li>--log-only</li></ul> |
