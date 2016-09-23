@@ -5,6 +5,11 @@
 
 ## Overview
 
+> Note: this page covers Fsurf rev 0 and Fsurf rev 2, places where the two versions differ
+> are indicated through blockquotes like this or using inline text. Fsurf rev 0 is the current 
+> production script and rev 2 is currently in beta testing.
+
+
 This document shows how to process multiple scans with a shell script.  
 
 **Important note on data privacy**:  In order to protect the privacy of your
