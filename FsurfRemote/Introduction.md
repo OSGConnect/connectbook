@@ -12,7 +12,7 @@ utility, Fsurf, that simplifies running a FreeSurfer 5.3 workflow on the OSG.
 To install and use Fsurf utility, you'll need a few things:
 
 * A computer with FreeSurfer installed (for anonymizing scans)
-* A computer with python 2.6+ (this can be the same as the computer above) - Most linux/unix systems released in the last several years already support this and Mac OS X versions released after 2012 also provide this
+* A computer with Python 2.6+ (this can be the same as the computer above) - Most linux/unix systems released in the last several years already support this and Mac OS X versions released after 2012 also provide this
 * A ethernet or fast wireless connection if you are processing multiple scans at once
 
 ## Privacy and confidentiality
