@@ -21,14 +21,9 @@ submit only defaced and fully deidentified scans for processing by Fsurf. Images
 can be anonymized and deidentified before they are uploaded to OSG servers as
 described in the article on [anonymizing images](https://support.opensciencegrid.org/solution/articles/12000008493-anonymizing-images).
 
-## Using Fsurf
+## Introduction to Fsurf
 
-You need an account to use Fsurf. Apply for the account  by 
-following [the instructions outlined here](https://opensciencegrid.freshdesk.com/support/solutions/articles/12000008487-requesting-an-fsurf-account).
-
-Fsurf is easy to install and use from any computer. All it requires is a machine
-with a network connection and Python installed.  It takes only a few minutes to
-set up and run an image analysis job on the OSG.  
+Fsurf is designed to be easily used from any computer running macOS, OS X, or Linux/Unix.  The Fsurf script just requires Python and a network connection in order to run and process MRI scans.  When run, the script will upload your scan to the Fsurf server.  The Fsurf server then  which uses systems that OSG has access to in order to process scans using FreeSurfer and stores the resulting output.  When you are notified that a scan has completed, you can use the Fsurf script to download the output to your computer.
 
 <img src="https://raw.githubusercontent.com/OSGConnect/connectbook/master/FsurfRemote/Figs/architecture_2.png" width="450px" height="300px" />
 
