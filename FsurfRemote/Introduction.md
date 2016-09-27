@@ -30,7 +30,7 @@ Fsurf is easy to install and use from any computer. All it requires is a machine
 with a network connection and Python installed.  It takes only a few minutes to
 set up and run an image analysis job on the OSG.  
 
-<img src="https://raw.githubusercontent.com/OSGConnect/connectbook/master/FsurfRemote/Figs/FsurfTool.png" width="450px" height="300px" />
+<img src="https://raw.githubusercontent.com/OSGConnect/connectbook/master/FsurfRemote/Figs/architecture_2.png" width="450px" height="300px" />
 
 ## What's Next?
 If you don't have an Fsurf account, 
