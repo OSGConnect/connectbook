@@ -13,16 +13,15 @@
 Here, the `username` is your login name.. For convenience, the stash and public directories are accessed from home. Here, the `username` is your login name.
 
 ## home
-Home is meant for storing files for quick access. Usually, files such as program files, parameter files, scripts, etc. are kept in your `/home` directory. Soft and hard disk quota are imposed on home for each user. The soft disk quota is 20 GB and the hard disk quota is 100 GB.  When a user exceeds his soft quota, the system sends email notifications on weekly basis.  When a user exceeds his hard quota, he will loose the to write on home system. 
+Home is meant for storing files long-term. Usually, files such as source code, parameter files, scripts, etc. are kept in your `/home` directory. The disk quota on home is 20 GBs. When a user exceeds his quota, the system will send email notifications. Eventually the system will also block creating new files.
 
-Home filesystem is not suitable to run your HTCondor jobs. It is a good practice to run all your jobs under the `stash` or the `local-scratch` directory.
+Home filesystem is not suitable to run your HTCondor jobs. It is a good practice to run all your jobs under the `local-scratch` or `stash` directories.
 
 ## local-scratch
-`local-scratch` is meant for temporary storage. It is a good practice to run your jobs on `local-scratch` and move the output data to a secondary local disk as soon as possible.  The data on `local-scratch` is removed after 30 days and is not backed up.
+`local-scratch` is meant for temporary storage, and is implemented as fast local disk for each submit node. It is a good practice to run your jobs on `local-scratch` and move the output data to a secondary local disk as soon as possible. NOTE: data on `local-scratch` is automatically removed after 30 days and is not backed up.
 
 ## stash
-Stash provides medium term storage for users. Like home, there is no disk quota imposed on stash. However, the data on stash is not backed up, so you should regularly transfer your data on stash to a long term archival system.  If you are transfering more than 10GB, please use the Globus transfer service.  For more details check the articles on [data transfer techniques](https://support.opensciencegrid.org/solution/folders/5000260918).
-
+Stash provides medium term storage for users. Stash is a distributed shared filesystem mounted on all our submit nodes, and is therefore slower than local-scratch. There is no disk quota imposed, nor a automatic purge, on stash. However, the data on stash is not backed up, so you should regularly transfer your data on stash to a long term archival system.  If you are transfering a large amount of data, please use the Globus transfer service.  For more details check the articles on [data transfer techniques](https://support.opensciencegrid.org/solution/folders/5000260918).
 
 ## public
 Files placed in the '~public' directory are publicly accessible via WWW as `http://stash.osgconnect.net/+username`. The data on `~/public` is accessible to the jobs on remote worker machine via the wget command. For more details of using public for condor input file transfer,  [click here](https://support.opensciencegrid.org/solution/articles/5000639798-access-stash-remotely-using-http).
