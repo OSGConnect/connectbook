@@ -13,7 +13,7 @@
 Here, the `username` is your login name.. For convenience, the stash and public directories are accessed from home. Here, the `username` is your login name.
 
 ## home
-Home is meant for storing files long-term. Usually, files such as source code, parameter files, scripts, etc. are kept in your `/home` directory. The disk quota on home is 20 GBs. When a user exceeds his quota, the system will send email notifications. Eventually the system will also block creating new files.
+Home is meant for storing files long-term. Usually, files such as source code, parameter files, scripts, etc. are kept in your `/home` directory. The disk quota on home is 20 GBs. When a user exceeds his quota, the system will send email notifications. Eventually the user will loose the privilege to write on his home.
 
 Home filesystem is not suitable to run your HTCondor jobs. It is a good practice to run all your jobs under the `local-scratch` or `stash` directories.
 
