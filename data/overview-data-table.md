@@ -10,8 +10,8 @@ The following tables provide guidelines for data management in OSG. Check the we
 
 |   | **Recommended Limit**| **Purpose** | **Backed Up** | **Details**|
 |:------- |:----------------:| :------|:------:|:----------|
-| **home**    |  < 5 GB      | Meant for quick data access and not for submitting jobs.| Yes |  [Data Storage](https://support.opensciencegrid.org/support/solutions/articles/12000002985-storage-solutions-on-osg-home-stash-and-public)|
-| **local-scratch**   |  < 25 GB      | Meant for large storage and I/O for your jobs. |No | [Data Storage](https://support.opensciencegrid.org/support/solutions/articles/12000002985-storage-solutions-on-osg-home-stash-and-public)|
+| **home**    |  < 20 GB      | Meant for quick data access and not for submitting jobs.| Yes |  [Data Storage](https://support.opensciencegrid.org/support/solutions/articles/12000002985-storage-solutions-on-osg-home-stash-and-public)|
+| **local-scratch**   |  < 25 GB      | Meant for large temporary storage and I/O for your jobs. Files older than 30 days are automatically removed. |No | [Data Storage](https://support.opensciencegrid.org/support/solutions/articles/12000002985-storage-solutions-on-osg-home-stash-and-public)|
 | **stash**   |  < 200 GB      | Meant for large storage and I/O for your jobs. |No | [Data Storage](https://support.opensciencegrid.org/support/solutions/articles/12000002985-storage-solutions-on-osg-home-stash-and-public)|
 | **public**  |  < 10 GB    | Meant for sharing data and transfer input data via HTTP or staschcp| No | [Data Storage](https://support.opensciencegrid.org/support/solutions/articles/12000002985-storage-solutions-on-osg-home-stash-and-public)|
 
@@ -21,7 +21,7 @@ The following tables provide guidelines for data management in OSG. Check the we
 
 |         | **Data Size**| **Command** | **Purpose** | **Details**|
 |:---------|:------:|:-----|:----------|:------|
-| **HTCondor**    | < 1 GB  | transfer_input_files| Input data from home, public or stash |[HTCondor Transfer](https://support.opensciencegrid.org/support/solutions/articles/5000639787-transferring-data-with-htcondor)|
+| **HTCondor**    | < 2 GB  | transfer_input_files| Input data from home, public or stash |[HTCondor Transfer](https://support.opensciencegrid.org/support/solutions/articles/5000639787-transferring-data-with-htcondor)|
 | **HTTP**        |  < 10 GB   | wget, curl or transfer_input_files  | Input data from ~/public |[HTTP Access](https://support.opensciencegrid.org/support/solutions/articles/5000639798-access-stash-remotely-using-http)|
 | **StachCache**  |  < 50 GB    | Staschcp |Input data from ~/public| [StachCache](https://support.opensciencegrid.org/support/solutions/articles/12000002775-transferring-data-with-stashcache)|
 
