@@ -13,7 +13,7 @@
 Here, the `username` is your login name.. For convenience, the stash and public directories are accessed from home. Here, the `username` is your login name.
 
 ## home
-Home is meant for storing files for quick access. Usually, files such as program files, parameter files, scripts, etc. are kept in your `/home` directory. Soft and hard disk quota are imposed on home for each user. The soft disk quota is 20 GB and the hard disk quota is 100 GB.  When a user exceeds his soft quota, the system sends email notification. When a user exceeds his hard quota, he will loose the privilege to write on home system. 
+Home is meant for storing files for quick access. Usually, files such as program files, parameter files, scripts, etc. are kept in your `/home` directory. Soft and hard disk quota are imposed on home for each user. The soft disk quota is 20 GB and the hard disk quota is 100 GB.  When a user exceeds his soft quota, the system sends email notification. When a user exceeds his hard quota, he will loose the privilege to write on his home. 
 
 Home filesystem is not suitable to run your HTCondor jobs. It is a good practice to run all your jobs under the `stash` or the `local-scratch` directory.
 
