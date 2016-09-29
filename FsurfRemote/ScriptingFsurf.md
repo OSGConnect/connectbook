@@ -5,9 +5,10 @@
 
 ## Overview
 
-> Note: this page covers Fsurf rev 0 and Fsurf rev 2, places where the two versions differ
-> are indicated through blockquotes like this or using inline text. Fsurf rev 0 is the current 
-> production script and rev 2 is currently in beta testing.
+> Note: this page covers Fsurf version 1.x and Fsurf version 2.x, places where
+> the two versions differ are indicated through blockquotes like this or using 
+> inline text. Fsurf v1.x is the current production version and v2.x is 
+> currently in beta testing.
 
 
 This document shows how to process multiple scans with a shell script.  
@@ -50,7 +51,7 @@ process are at `~/scans`, run:
     $ for i in `ls ~/scans`; do; readlink -f $i; done > scan_list
     
 
-> Fsurf rev 0: 
+> Fsurf version 1.x
 > <pre><code>$ ls ~/scans > scan_list</code></pre>
 
 This will generate a file listing each scan on a separate line.  Now edit the
@@ -83,7 +84,7 @@ the following in it :
      done
      
 
-> Fsurf rev0:
+> Fsurf version 1.x
 > <pre><code>
 >     #/bin/bash
 >     

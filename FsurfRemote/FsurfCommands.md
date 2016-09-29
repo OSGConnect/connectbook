@@ -4,9 +4,10 @@
 
 ## Overview
 
-> Note: this page covers Fsurf rev 0 and Fsurf rev 2, places where the two versions differ
-> are indicated through blockquotes like this or using inline text. Fsurf rev 0 is the current 
-> production script and rev 2 is currently in beta testing.
+> Note: this page covers Fsurf version 1.x and Fsurf version 2.x, places where
+> the two versions differ are indicated through blockquotes like this or using
+> inline text. Fsurf v1.x is the current production version and v2.x is
+> currently in beta testing.
 
 This page gives an overview of the commands and options that are supported by
 the `fsurf` utility.  You can get general help by running `./fsurf --help` and
@@ -32,7 +33,7 @@ any order.  The commands that `fsurf` accepts are:
 
 | Command   | Function    | Required Switches | Optional Switches |
 | --------- | ----------- | ---------------   | ------------  |
-| submit          | Upload and process scan            | --subject [subject name] | <ul><li>--help</li> <li>--user [user name]</li><li>--input-file [path] (Fsurf rev 1)</li><li>--subject-dir [file path] (Fsurf rev 1)</li><li>--options="[options]" (Fsurf rev 1)</li><li>--dir [directory path] (Fsurf rev 0)</li><li>--defaced</li><li>--deidentified</li><li>--dualcore</li></ul> |
+| submit          | Upload and process scan            | --subject [subject name] | <ul><li>--help</li> <li>--user [user name]</li><li>--input-file [path] (Fsurf v2.x)</li><li>--subject-dir [file path] (Fsurf v2.x)</li><li>--options="[options]" (Fsurf v2.x)</li><li>--dir [directory path] (Fsurf v1.x)</li><li>--defaced</li><li>--deidentified</li><li>--dualcore</li></ul> |
 | list            | List workflows submitted           | | <ul><li>--help</li> <li>--user [user name]</li><li>--all-workflows</li></ul> |
 | status          | List status of a given workflow    | --id [workflow id] | <ul><li>--help</li> <li>--user [user name]</li></ul>  |
 | output          | Get output from completed workflow | --id [workflow id] | <ul><li>--help</li> <li>--user [user name]</li>--log-only</li></ul> |
@@ -57,10 +58,10 @@ The submit command accepts the following options:
 | --user | Username to use when logging into the FSurf service |
 | --help | Display help for command |
 | --subject | Name of subject to process.  | 
-| --dir | (Fsurf rev 0) Directory containing MRI scans for subject.  `fsurf` expects the input file to be named `subject_defaced.mgz` where `subject` is the subject name given by the `--subject` option. |
-| --input-file | (Fsurf rev 2) Path to mgz file containing MRI scans for subject. |
-| --subject-dir | (Fsurf rev 2) Path to zip file containing subject directory.  Used in conjunction with --option argument. |
-| --option | (Fsurf rev 2) Options to pass to FreeSurfer. Arguments must be in quotes and be specifed as --options="-option1 -option2." Must be used in conjunction with --subject-dir. |
+| --dir | (Fsurf v1.x) Directory containing MRI scans for subject.  `fsurf` expects the input file to be named `subject_defaced.mgz` where `subject` is the subject name given by the `--subject` option. |
+| --input-file | (Fsurf v2.x) Path to mgz file containing MRI scans for subject. |
+| --subject-dir | (Fsurf v2.x) Path to zip file containing subject directory.  Used in conjunction with --option argument. |
+| --option | (Fsurf v2.x) Options to pass to FreeSurfer. Arguments must be in quotes and be specifed as --options="-option1 -option2." Must be used in conjunction with --subject-dir. |
 | --dualcore | Use 2 cores rather than 8 for per hemisphere processing.  This allow the processing to complete when 8 core systems are not available |
 | --defaced | Indicates that the scan is defaced |
 | --deidentified | Indicates that the scan is deidentified |
