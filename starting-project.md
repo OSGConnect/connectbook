@@ -50,8 +50,8 @@ request approvals. The PI may also be assigned an "Administrator" role of the
 subgroup, and can invite OSG Connect members to the group directly. [Contact
 us](<mailto:connect-support@opensciencegrid.org>) if this interests you.
 
-ProjectName in HTCondor 
-------------------------
+ProjectName in HTCondor Jobs
+----------------------------
 The job submission on OSG Connect requires a project. Either you define the keyword `+ProjectName` for each job or you set the default project. 
 
 In your HTCondor job submit file, include the following directive convention:
