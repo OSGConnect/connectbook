@@ -15,27 +15,24 @@ Contact
 
 To start a project in OSG Connect, visit <https://osgconnect.net/newproject>.
  You will be asked to provide the following information:
-
--   Your name
-
--   Appointment type (student, postdoc, scientist, faculty, professional)
-
--   Email (please use an institutional email account, e.g.
-    me\@myinstitution.edu)
-
--   Phone \#
-
--   Project name (short name and full name)
-
--   Principal investigator name
-
--   Principal investigator email
-
--   Field of science
-
--   Project description (the science goal)
-
--   A brief description of the application or workflow
+ 
+-    Your Name:  
+-    Your Email Address: 
+-    Project Name: 
+-    Short Project Name: 
+-    Field of Science: 
+-    Field of Science (if Other): 
+-    PI Name: 
+-    PI Email: 
+-    PI Organization: 
+-    PI Department: 
+-    Join Date: 
+-    Sponsor: 
+-    OSG Sponsor Contact: 
+-    Project Contact: 
+-    Project Contact Email: 
+-    Telephone Number: 
+-    Project Description:
 
 OSG Connect administrative staff will review and create the project in the
 system.  Within the [OSG Connect Portal](<https://portal.osgconnect.net/>), all
@@ -55,15 +52,18 @@ us](<mailto:connect-support@opensciencegrid.org>) if this interests you.
 
 ProjectName in HTCondor 
 ------------------------
+The job submission on OSG Connect requires a project. Either you define the keyword `+ProjectName` for each job or you set the default project. 
 
-The chosen ProjectName in HTCondor for jobs from this project have the
-convention:
+In your HTCondor job submit file, include the following directive convention:
 
     +ProjectName="ProjectName"
 
-The submit files must include this directive or the jobs will not be submitted
-by OSG Connect. (If it is incorrect, `condor_submit` will give you a useful
-error message.)
+To set the default project, type 
+
+    $ connect project 
+    
+ and select a project. After the selection of default project, it is okay to omit the "+Projectname" description in the job description file.
+
 
 Accounting Name
 ---------------
