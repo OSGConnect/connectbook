@@ -16,23 +16,23 @@ Contact
 To start a project in OSG Connect, visit <https://osgconnect.net/newproject>.
  You will be asked to provide the following information:
  
--    Your Name:  
--    Your Email Address: 
--    Project Name: 
--    Short Project Name: 
--    Field of Science: 
--    Field of Science (if Other): 
--    PI Name: 
--    PI Email: 
--    PI Organization: 
--    PI Department: 
--    Join Date: 
--    Sponsor: 
--    OSG Sponsor Contact: 
--    Project Contact: 
--    Project Contact Email: 
--    Telephone Number: 
--    Project Description:
+-    Your Name
+-    Your Email Address
+-    Project Name
+-    Short Project Name
+-    Field of Science
+-    Field of Science (if Other)
+-    PI Name
+-    PI Email
+-    PI Organization
+-    PI Department
+-    Join Date
+-    Sponsor
+-    OSG Sponsor Contact
+-    Project Contact
+-    Project Contact Email
+-    Telephone Number
+-    Project Description
 
 OSG Connect administrative staff will review and create the project in the
 system.  Within the [OSG Connect Portal](<https://portal.osgconnect.net/>), all
