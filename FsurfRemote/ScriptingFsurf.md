@@ -88,7 +88,7 @@ the following in it :
 > <pre><code>
 >     #/bin/bash
 >     
->    for line in `cat $1`;
+>     for line in `cat $1`;
 >     do
 >       input_file=`echo $line | cut -f 1 -d' '`
 >       subject=`echo $line | cut -f 2 -d' '`
