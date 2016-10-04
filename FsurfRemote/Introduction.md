@@ -11,8 +11,8 @@ utility, Fsurf, that simplifies running a FreeSurfer 5.3 workflow on the OSG.
 ## Prerequisites
 To install and use Fsurf utility, you'll need a few things:
 
-* A computer with FreeSurfer installed (for anonymizing scans)
-* A computer with Python 2.6+ (this can be the same as the computer above) - Most linux/unix systems released in the last several years already support this and Mac OS X versions released after 2012 also provide this
+* A computer with [FreeSurfer](http://freesurfer.net/) installed (for anonymizing scans)
+* A computer with Python 2.6+ (this can be the same as the computer above) -  Most  macOS/Linux/Unix systems released in the last several years provide this
 * A ethernet or fast wireless connection if you are processing multiple scans at once
 
 ## Privacy and confidentiality
@@ -38,7 +38,7 @@ For assistance or questions, please email the OSG User Support team  at
 visit the [help desk and community forums](http://support.opensciencegrid.org).
 
 ## Validation Information
-A list of linux kernels on the OSG on which the FreeSurfer workflows have been
+A list of Linux kernels on the OSG on which the FreeSurfer workflows have been
 validated can be found
 [here](https://support.opensciencegrid.org/support/solutions/articles/12000008494-freesurfer-validation-on-the-osg-).
 
