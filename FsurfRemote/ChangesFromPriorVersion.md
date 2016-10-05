@@ -1,12 +1,20 @@
-[title]: - "Changes between FSurf 2.x and 1.x"
+[title]: - "What's new in Fsurf 2.0"
 
 
 ## Overview
-This document describes the differences between the 1.x versions of Fsurf and
-the current 2.x versions of Fsurf. The differences between the two are primarily
-in submitting scans for processing. 
+This document describes the new features in Fsurf 2.0 and 
+the differences from the 1.x versions.
 
-## Inputs for submission
+## What's New
+
+FSurf 2.0 adds a few new features:
+
+* Support for running the recon-all workflow using multiple scans of the same subject
+* Support for running the recon-all workflow using a custom set of options
+* Better indications of workflow progress and information on completed workflows
+
+## Differences from Fsurf 1.x
+### Inputs for submission
 
 FSurf 2.0 added support for two new workflow types (multiple input and custom).
 Since Fsurf 1.x only supports the standard workflow, it uses different options
@@ -23,7 +31,7 @@ using the `--dir` option:
 
     `fsurf --subject MRN_1 --dir /path/to/scans`.
 
-## Output 
+### Output 
 
 Fsurf 2.x and Fsurf 1.x also vary slightly in the output generated.  The only
 place where this varies significantly is when displaying information about
@@ -33,7 +41,7 @@ status when the `status` command is used.  Fsurf 2.x provides a more complete
 summary of the workflow status and some details about resources that the
 workflow used.
 
-## Workflow status
+### Workflow status
 
 Fsurf 1.x also used slightly differnt terms to indicate the status of a workflow.
 Fsurf 1.x uses `UPLOADED` when a workflow has been created instead of `QUEUED`.
