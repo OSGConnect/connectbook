@@ -1,4 +1,4 @@
-[title]: - "What's new in Fsurf 2.0"
+[title]: - "What's New in Fsurf 2.0"
 
 
 ## Overview
