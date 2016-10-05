@@ -1,4 +1,4 @@
-[title]: - "Saving or changing user account information"
+[title]: - "Saving or Changing User Account Information"
  
  
 ## Saving account name and password
