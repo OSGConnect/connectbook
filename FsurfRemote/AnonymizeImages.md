@@ -28,14 +28,3 @@ FreeSurfer parameter files), fetch and unzip them:
      $ cd ${FREESURFER_HOME}/average
      $ wget "http://stash.osgconnect.net/@freesurfer/face.gca"
      $ wget "http://stash.osgconnect.net/@freesurfer/talairach_mixed_with_skull.gca"
-
-## Getting Help
-For assistance or questions, please email the OSG User Support team  at
-[user-support@opensciencegrid.org](mailto:user-support@opensciencegrid.org) or
-visit the [help desk and community forums](http://support.opensciencegrid.org).
-
-
-## Validation Information
-A list of linux kernels on OSG  on which the FreeSurfer workflows have been
-validated can be found
-[here](https://support.opensciencegrid.org/support/solutions/articles/12000008494-freesurfer-validation-on-the-osg-)

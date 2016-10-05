@@ -122,13 +122,3 @@ The change-password command accepts the following options:
 | --help | Display help for command |
 
 <br />
-## Getting Help
-For assistance or questions, please email the OSG User Support team  at
-[user-support@opensciencegrid.org](mailto:user-support@opensciencegrid.org) or
-visit the [help desk and community forums](http://support.opensciencegrid.org).
-
-
-## Validation Information
-A list of linux kernels on OSG  on which the FreeSurfer workflows have been
-validated can be found
-[here](https://support.opensciencegrid.org/support/solutions/articles/12000008494-freesurfer-validation-on-the-osg-).

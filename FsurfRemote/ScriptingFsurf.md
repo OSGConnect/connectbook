@@ -82,14 +82,3 @@ The script may take a while to complete if you have a slow connection or if you
 have a lot of scans to submit.  If you're submitting many scans, it's best that
 you run this on a computer that's connected to the internet using a wired
 connection.
-
-## Getting Help
-For assistance or questions, please email the OSG User Support team  at
-[user-support@opensciencegrid.org](mailto:user-support@opensciencegrid.org) or
-visit the [help desk and community forums](http://support.opensciencegrid.org).
-
-
-## Validation Information
-A list of linux kernels on OSG  on which the FreeSurfer workflows have been
-validated can be found
-[here](https://support.opensciencegrid.org/support/solutions/articles/12000008494-freesurfer-validation-on-the-osg-).
