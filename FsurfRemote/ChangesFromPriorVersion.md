@@ -14,9 +14,14 @@ for inputs. The input file is derived from the subject name and doesn't
 necessarily need to be specified.  E.g. if the subject is `MRN_1` then Fsurf 1.x
 would look for a mgz file called `MRN_1_defaced.mgz`.  If the file is in the
 current directory, Fsurf 1.x would look for that file by default.  Therefore,
-you could run a workflow on the `MRN_1` subject by running `fsurf --subject
-MRN_1` .  If the file was in another directory, you would need to specify this
-using the `--dir` option, e.g. `fsurf --subject MRN_1 --dir /path/to/scans`.
+you could run a workflow on the `MRN_1` subject by running 
+
+    `fsurf --subject MRN_1`
+    
+If the file was in another directory, you would need to specify this
+using the `--dir` option:
+
+    `fsurf --subject MRN_1 --dir /path/to/scans`.
 
 ## Output 
 
