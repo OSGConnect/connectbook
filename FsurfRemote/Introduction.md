@@ -11,7 +11,7 @@ utility, Fsurf, that simplifies running a FreeSurfer 5.3 workflow on the OSG.
 ## Prerequisites
 To install and use Fsurf utility, you'll need a few things:
 
-* A local copy of [FreeSurfer installed](http://http://freesurfer.net/fswiki/DownloadAndInstall) (for anonymizing scans)
+* A local copy of [FreeSurfer installed](http://freesurfer.net/fswiki/DownloadAndInstall) (for anonymizing scans)
 * A computer with Linux/Unix/macOS released within the last 3 years
 
 ## Privacy and confidentiality
