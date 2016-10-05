@@ -22,7 +22,13 @@ described in the article on [anonymizing images](https://support.opensciencegrid
 
 ## Introduction to Fsurf
 
-Fsurf is designed to be easily used from any computer running macOS, OS X, or Linux/Unix.  The Fsurf script just requires Python and a network connection in order to run and process MRI scans.  When run, the script will upload your scan to the Fsurf server.  The Fsurf server then uses compute nodes available through OSG in order to process scans using FreeSurfer and stores the resulting output.  When you are notified that a scan has completed, you can use the Fsurf script to download the output to your computer.
+Fsurf is designed to be easily used from any computer running macOS or
+Linux/Unix.  The Fsurf script just requires Python and a network connection in
+order to run and process MRI scans.  When run, the script will upload your scan
+to the Fsurf server.  The Fsurf server then uses compute nodes available through
+OSG in order to process scans using FreeSurfer and stores the resulting output.
+When you are notified that a scan has completed, you can use the Fsurf script to
+download the output to your computer.
 
 <img src="https://raw.githubusercontent.com/OSGConnect/connectbook/master/FsurfRemote/Figs/architecture_2.png" width="450px" height="300px" />
 
