@@ -48,12 +48,8 @@ submit each subject for processing on the OSG.
 First, we'll generate a list of subjects.  Assuming, the scans that we'd like to
 process are at `~/scans`, run:
 
-    $ for i in `ls ~/scans`; do; readlink -f $i; done > scan_list
+    $ for i in `ls ~/scans`; do; python -c 'import os,sys;print(os.path.realpath(sys.argv[1]))' $i; done > scan_list
     
-
-> Fsurf version 1.x
-> <pre><code>$ ls ~/scans > scan_list</code></pre>
-
 This will generate a file listing each scan on a separate line.  Now edit the
 file using a text editor and add the subject for each scan file.  After you're
 done, the file should look something like this:
@@ -83,18 +79,6 @@ the following in it :
        ./fsurf submit --input $2 --subject $subject --defaced --deidentified
      done
      
-
-> Fsurf version 1.x
-> <pre><code>
->     #/bin/bash
->     for line in `cat $1`;
->     do
->       input_file=`echo $line | cut -f 1 -d' '`
->       subject=`echo $line | cut -f 2 -d' '`
->       ./fsurf submit --dir $2 --subject $subject --defaced --deidentified
->     done
-> </code></pre>
-
 Now make the script executable and run it:
 
      $ chmod a+x submit_multiple.sh

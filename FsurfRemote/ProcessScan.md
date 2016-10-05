@@ -4,12 +4,6 @@
 
 ## Overview
 
-> Note: this page covers Fsurf version 1.x and Fsurf version 2.x, places where
-> the two versions differ are indicated through blockquotes like this or using
-> inline text. Fsurf v1.x is the current production version and v2.x is
-> currently in beta testing.
-
-
 In this section, we will demonstrate how to use the `fsurf` utility by analyzing
 a brain scan. 
 
@@ -36,15 +30,6 @@ by `fsurf`.
 Now we will create a workflow to process `MRN_3_defaced.mgz` using `fsurf`. In the
 file `MRN_3_defaced.mgz`, the prefix `MRN_3` is the name of the subject. 
 
-> Fsurf version 1.x
-
-> Note that `fsurf` v1.x expects the input file to be named `subject_defaced.mgz` where
-> `subject` is the name of the subject given by the `--subject` option. 
-> <pre><code> $ ./fsurf submit --subject MRN_3</code></pre>
-
-<br/>
-
-> Fsurf version 2.x
 
      $ ./fsurf submit --subject MRN_3 --input-file MRN_3_defaced.mgz
 
@@ -69,8 +54,6 @@ and get the output of the workflow.
 
 
 ## Reconstructing an Image With Multiple Inputs
-
-> Note: this feature is only available on Fsurf version 2.x
 
 In addition to the standard image reconstruction, FreeSurfer can also run the autorecon1, 
 autorecon2, and autorecon3 steps with MGZ files from the same subject.  This allows FreeSurfer
@@ -102,8 +85,6 @@ The ID of your workflow is `98`. The ID is needed to check the status, remove
 and get the output of the workflow. 
 
 ## Running recon-all With Custom Options
-
-> Note: this feature is only available on Fsurf version 2.x
 
 FSurf also allows users to run recon-all with a set of custom options. Users can use this
 workflow to run unique FreeSurfer workflows.
@@ -177,8 +158,8 @@ To get the status of this workflow, run the following command:
 
      $ ./fsurf list 
      Current workflows
-     Subject    Workflow             Submit time          Cores          Status
-     MRN_3       97                  01-19-2016 10:00      2             RUNNING
+     Subject    Workflow   Submit time (Central Time)  Cores      Status     Tasks completed
+     MRN_3      97         Fri Sep 30 15:53:51 2016    8          COMPLETED  4/4
 
 The screen output shows that there is just one workflow in the list with the
 subject name `MRN_3`. The status of the workflow is `RUNNING`. Two cores are 
@@ -189,8 +170,8 @@ output or remove the workflow from the list.
 
 A workflow can have the following status:
 
-* QUEUED (v2.x) or UPLOADED (v1.x)  - workflow has been created
-* RUNNING (v2.x) or PROCESSING (v1.x)  - workflow is being run
+* QUEUED - workflow has been created
+* RUNNING - workflow is being run
 * FAILED - an error occurred while the workflow was running
 * COMPLETED  - workflow has successfully completed
 * DELETE PENDING  - workflow will be deleted soon
@@ -205,8 +186,8 @@ the status of the workflow should be `COMPLETED` as below
 
      $ ./fsurf list
      Current workflows
-     Subject    Workflow             Submit time          Cores           Status
-     MRN_3       97                  01-19-2016 18.20      2               COMPLETED
+     Subject    Workflow   Submit time (Central Time)  Cores      Status     Tasks completed
+     MRN_3      97         Fri Sep 30 15:53:51 2016    8          COMPLETED  4/4
 
 Run the command below to get the output of the completed workflow by using its ID:
 
@@ -229,9 +210,9 @@ Run the following command to remove an existing workflow:
 
     $ ./fsurf remove --id WorkflowID
 
-For example, to remove a running worflow with an ID `56`, type
+For example, to remove a running worflow with an ID `97`, type
 
-    $ ./fsurf remove --id 56
+    $ ./fsurf remove --id 97
     Workflow removed
 
 This will not affect the files you have downloaded already. Please note that
