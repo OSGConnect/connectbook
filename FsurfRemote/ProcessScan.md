@@ -1,4 +1,4 @@
-[title]: - "An example of processing a scan"
+[title]: - "An Example of Processing a Scan"
 [TOC]
 
 

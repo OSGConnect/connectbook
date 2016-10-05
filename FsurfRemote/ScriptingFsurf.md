@@ -1,11 +1,11 @@
 
-[title]: - "Submitting multiple scans to Fsurf"
+[title]: - "Processing Multiple Subjects Using Fsurf"
 [TOC]
 
 
 ## Overview
 
-This document shows how to process multiple scans with a shell script.  
+This document shows how to process multiple subjects quickly using a shell script.  
 
 **Important note on data privacy**:  In order to protect the privacy of your
 participants’ scans, we request that you submit only defaced and fully
@@ -33,8 +33,8 @@ submitted for processing.  However, if `fsurf` is given `--defaced` and
 
 ## Scripting `fsurf` submissions
 
-The basic approach is that we'll generate a text file that contains the scan and
-subject on each line.  Then we'll use a script that will read this text file to
+The basic approach we will take is to first generate a text file with scan and
+subject information.  Then we'll use a script that will read this text file to
 submit each subject for processing on the OSG. 
 
 ### Generating the text file
@@ -44,7 +44,7 @@ process are at `~/scans`, run:
 
     $ for i in `ls ~/scans`; do; python -c 'import os,sys;print(os.path.realpath(sys.argv[1]))' $i; done > scan_list
     
-This will generate a file listing each scan on a separate line.  Now edit the
+This will generate a file with each scan on a separate line.  Now edit the
 file using a text editor and add the subject for each scan file.  After you're
 done, the file should look something like this:
 
@@ -58,8 +58,8 @@ the subject.
 ### Submission script
 
 Now that we have a file that has information on the scans that should be
-submitted, let's write a script that will use that to submit the scans
-to `fsurf` for processing.
+submitted, let's write a script that will use that to call `fsurf` with the
+proper options.
 
 Open a file called `submit_multiple.sh` in your text editor and cut and paste
 the following in it :
@@ -79,6 +79,6 @@ Now make the script executable and run it:
      $ ./submit_multiple.sh scan_list ~/scans
 
 The script may take a while to complete if you have a slow connection or if you
-have a lot of scans to submit.  If you're submitting many scans, it's best that
+are processing a lot of scans.  If you're processing many scans, it's best that
 you run this on a computer that's connected to the internet using a wired
 connection.
