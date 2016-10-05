@@ -5,12 +5,6 @@
 
 ## Overview
 
-> Note: this page covers Fsurf version 1.x and Fsurf version 2.x, places where
-> the two versions differ are indicated through blockquotes like this or using 
-> inline text. Fsurf v1.x is the current production version and v2.x is 
-> currently in beta testing.
-
-
 This document shows how to process multiple scans with a shell script.  
 
 **Important note on data privacy**:  In order to protect the privacy of your
