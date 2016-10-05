@@ -86,7 +86,7 @@ and get the output of the workflow.
 
 ## Running recon-all With Custom Options
 
-FSurf also allows users to run recon-all with a set of custom options. Users can use this
+Fsurf also allows users to run recon-all with a set of custom options. Users can use this
 workflow to run unique FreeSurfer workflows.
 
 Type the following to get a sample MRI file,

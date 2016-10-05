@@ -55,7 +55,7 @@ The submit command accepts the following options:
 
 | Option | Description |
 | ------ | ----------- |
-| --user | Username to use when logging into the FSurf service |
+| --user | Username to use when logging into the Fsurf service |
 | --help | Display help for command |
 | --subject | Name of subject to process.  | 
 | --dir | (Fsurf v1.x) Directory containing MRI scans for subject.  `fsurf` expects the input file to be named `subject_defaced.mgz` where `subject` is the subject name given by the `--subject` option. |
@@ -73,7 +73,7 @@ The list command accepts the following options:
 
 | Option | Description |
 | ------ | ----------- |
-| --user | Username to use when logging into the FSurf service |
+| --user | Username to use when logging into the Fsurf service |
 | --help | Display help for command |
 | --all-workflows | List all workflows submitted rather than the workflows submitted in the last month | 
 
@@ -84,7 +84,7 @@ The status command accepts the following options:
 
 | Option | Description |
 | ------ | ----------- |
-| --user | Username to use when logging into the FSurf service |
+| --user | Username to use when logging into the Fsurf service |
 | --help | Display help for command |
 | --id   | ID of workflow to display |
 
@@ -95,7 +95,7 @@ The output command accepts the following options:
 
 | Option | Description |
 | ------ | ----------- |
-| --user | Username to use when logging into the FSurf service |
+| --user | Username to use when logging into the Fsurf service |
 | --help | Display help for command |
 | --id   | ID of workflow to display |
 | --log-only | Only download log files for workflow  |
@@ -107,7 +107,7 @@ The remove command accepts the following options:
 
 | Option | Description |
 | ------ | ----------- |
-| --user | Username to use when logging into the FSurf service |
+| --user | Username to use when logging into the Fsurf service |
 | --help | Display help for command |
 | --id   | ID of workflow to display |
 
@@ -118,7 +118,7 @@ The change-password command accepts the following options:
 
 | Option | Description |
 | ------ | ----------- |
-| --user | Username to use when logging into the FSurf service |
+| --user | Username to use when logging into the Fsurf service |
 | --help | Display help for command |
 
 <br />

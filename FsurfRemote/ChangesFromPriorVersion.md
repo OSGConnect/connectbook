@@ -7,7 +7,7 @@ the differences from the 1.x versions.
 
 ## What's New
 
-FSurf 2.0 adds a few new features:
+Fsurf 2.0 adds a few new features:
 
 * Support for running the recon-all workflow using multiple scans of the same subject
 * Support for running the recon-all workflow using a custom set of options
@@ -16,7 +16,7 @@ FSurf 2.0 adds a few new features:
 ## Differences from Fsurf 1.x
 ### Inputs for submission
 
-FSurf 2.0 added support for two new workflow types (multiple input and custom).
+Fsurf 2.0 added support for two new workflow types (multiple input and custom).
 Since Fsurf 1.x only supports the standard workflow, it uses different options
 for inputs. The input file is derived from the subject name and doesn't
 necessarily need to be specified.  E.g. if the subject is `MRN_1` then Fsurf 1.x
@@ -35,7 +35,7 @@ using the `--dir` option:
 
 Fsurf 2.x and Fsurf 1.x also vary slightly in the output generated.  The only
 place where this varies significantly is when displaying information about
-workflows.  FSurf 1.x does not show the number of total tasks and completed tasks
+workflows.  Fsurf 1.x does not show the number of total tasks and completed tasks
 when the `list` command is used.  In addition, Fsurf 1.x only gives the workflow
 status when the `status` command is used.  Fsurf 2.x provides a more complete
 summary of the workflow status and some details about resources that the
