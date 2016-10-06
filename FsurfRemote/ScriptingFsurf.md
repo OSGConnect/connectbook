@@ -76,7 +76,7 @@ the following in it :
 Now make the script executable and run it:
 
      $ chmod a+x submit_multiple.sh
-     $ ./submit_multiple.sh scan_list ~/scans
+     $ ./submit_multiple.sh scan_list 
 
 The script may take a while to complete if you have a slow connection or if you
 are processing a lot of scans.  If you're processing many scans, it's best that
