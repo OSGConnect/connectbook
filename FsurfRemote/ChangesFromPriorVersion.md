@@ -10,12 +10,11 @@ the differences from the 1.x versions.
 Fsurf 2.0 adds a few new features:
 
 * [Support for running the recon-all workflow using multiple scans of the same subject](https://support.opensciencegrid.org/support/solutions/articles/12000008490-an-example-of-processing-a-scan#reconstructing-an-image-with-multiple-inputs).  This allows for FreeSurfer to apply correct for errors in the scans due to subject movement. 
-* [Support for running the recon-all workflow using a custom set of
-* options](https://support.opensciencegrid.org/support/solutions/articles/12000008490-an-example-of-processing-a-scan#running-recon-all-with-custom-options).  This allows users to run the recon-all workflow step by step using a specific options for each step.
+* [Support for running the recon-all workflow using a custom set of options](https://support.opensciencegrid.org/support/solutions/articles/12000008490-an-example-of-processing-a-scan#running-recon-all-with-custom-options).  This allows users to run the recon-all workflow step by step using a specific options for each step.
 * Better indications of workflow progress and information on completed  workflows.
 
 ## Differences from Fsurf 1.x
-### Inputs for submission
+### Inputs for submission 
 
 Fsurf 2.0 added support for two new workflow types (multiple input and custom).
 Since Fsurf 1.x only supports the standard workflow, it uses different options
@@ -23,7 +22,7 @@ for inputs. The input file is derived from the subject name and doesn't
 necessarily need to be specified.  E.g. if the subject is `MRN_1` then Fsurf 1.x
 would look for a mgz file called `MRN_1_defaced.mgz`.  If the file is in the
 current directory, Fsurf 1.x would look for that file by default.  Therefore,
-you could run a workflow on the `MRN_1` subject by running 
+you could run a workflow on the `MRN_1` subject when using Fsurf 1.x by running
 
     fsurf --subject MRN_1
     
