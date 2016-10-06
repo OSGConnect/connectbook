@@ -53,10 +53,10 @@ The ID of your workflow is `97`. The ID is needed to check the status, remove
 and get the output of the workflow. 
 
 
-## Reconstructing an Image With Multiple Inputs
+## Combining Multiple Scans of a Subject For a Single Reconstruction
 
 In addition to the standard image reconstruction, FreeSurfer can also run the autorecon1, 
-autorecon2, and autorecon3 steps with MGZ files from the same subject.  This allows FreeSurfer
+autorecon2, and autorecon3 steps with multiple MGZ files from the same subject.  This allows FreeSurfer
 to combine the scans to give a higher quality result.  This section shows how to run this workflow.
 
 Now we will create a workflow to process `MRN_3` subject using `fsurf` and multiple input files. We'll
