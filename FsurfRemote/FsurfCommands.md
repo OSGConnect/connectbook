@@ -33,7 +33,7 @@ any order.  The commands that `fsurf` accepts are:
 
 | Command   | Function    | Required Switches | Optional Switches |
 | --------- | ----------- | ---------------   | ------------  |
-| submit          | Upload and process scan            | --subject [subject name] | <ul><li>--help</li> <li>--user [user name]</li><li>--input-file [path] (Fsurf v2.x)</li><li>--subject-dir [file path] (Fsurf v2.x)</li><li>--options="[options]" (Fsurf v2.x)</li><li>--dir [directory path] (Fsurf v1.x)</li><li>--defaced</li><li>--deidentified</li><li>--dualcore</li></ul> |
+| submit          | Upload and process scan            | --subject [subject name] | <ul><li>--help</li> <li>--user [user name]</li><li>--input-file [path] (Fsurf v2.x)</li><li>--subject-dir [file path] (Fsurf v2.x)</li><li>--options="[options]" (Fsurf v2.x)</li><li>--dir [directory path] <b>(Fsurf v1.x)</b></li><li>--defaced</li><li>--deidentified</li><li>--dualcore</li></ul> |
 | list            | List workflows submitted           | | <ul><li>--help</li> <li>--user [user name]</li><li>--all-workflows</li></ul> |
 | status          | List status of a given workflow    | --id [workflow id] | <ul><li>--help</li> <li>--user [user name]</li></ul>  |
 | output          | Get output from completed workflow | --id [workflow id] | <ul><li>--help</li> <li>--user [user name]</li>--log-only</li></ul> |
