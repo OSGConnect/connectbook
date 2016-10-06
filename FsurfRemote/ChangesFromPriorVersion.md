@@ -9,7 +9,7 @@ the differences from the 1.x versions.
 
 Fsurf 2.0 adds a few new features:
 
-* [Support for running the recon-all workflow using multiple scans of the same subject](https://support.opensciencegrid.org/support/solutions/articles/12000008490-an-example-of-processing-a-scan#reconstructing-an-image-with-multiple-inputs).  This allows for FreeSurfer to apply correct for errors in the scans due to subject movement. 
+* [Support for running the recon-all workflow using multiple scans of the same subject](https://support.opensciencegrid.org/support/solutions/articles/12000008490-an-example-of-processing-a-scan#combining-multiple-scans-of-a-subject-for-a-single-reconstruction).  This allows for FreeSurfer to apply correct for errors in the scans due to subject movement. 
 * [Support for running the recon-all workflow using a custom set of options](https://support.opensciencegrid.org/support/solutions/articles/12000008490-an-example-of-processing-a-scan#running-recon-all-with-custom-options).  This allows users to run the recon-all workflow step by step using a specific options for each step.
 * Better indications of workflow progress and information on completed  workflows.
 
