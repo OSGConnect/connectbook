@@ -26,5 +26,5 @@ If the `mri_deface` program cannot find the needed `*.gca` files (the standard
 FreeSurfer parameter files), fetch and unzip them:
 
      $ cd ${FREESURFER_HOME}/average
-     $ wget "http://stash.osgconnect.net/@freesurfer/face.gca"
-     $ wget "http://stash.osgconnect.net/@freesurfer/talairach_mixed_with_skull.gca"
+     $ wget "http://stash.osgconnect.net/+fsurf/face.gca"
+     $ wget "http://stash.osgconnect.net/+fsurf/talairach_mixed_with_skull.gca"
