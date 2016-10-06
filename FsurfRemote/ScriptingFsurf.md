@@ -42,7 +42,7 @@ submit each subject for processing on the OSG.
 First, we'll generate a list of subjects.  Assuming, the scans that we'd like to
 process are at `~/scans`, run:
 
-    $ for i in `ls ~/scans`; do; python -c 'import os,sys;print(os.path.realpath(sys.argv[1]))' $i; done > scan_list
+    $ for i in `ls ~/scans`; do python -c 'import os,sys;print(os.path.realpath(sys.argv[1]))' $i; done > scan_list
     
 This will generate a file with each scan on a separate line.  Now edit the
 file using a text editor and add the subject for each scan file.  After you're
