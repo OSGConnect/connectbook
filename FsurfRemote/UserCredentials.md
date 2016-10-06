@@ -16,7 +16,7 @@ the saved username and password.
 ## Changing account password
 
 To change your account's password, run 
-`./fsurf change-password` or `./fsurf --user myuser --password mypassword`.  
+`./fsurf change-password` or `./fsurf --user='myuser' --password='mypassword'`.  
 `fsurf` will then prompt you for a new password and update 
 your account's password.
 
