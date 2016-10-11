@@ -16,20 +16,10 @@ Fsurf 2.0 adds a few new features:
 ## Differences from Fsurf 1.x
 ### Inputs for submission 
 
-Fsurf 2.0 added support for two new workflow types (multiple input and custom).
-Since Fsurf 1.x only supports the standard workflow, it uses different options
-for inputs. The input file is derived from the subject name and doesn't
-necessarily need to be specified.  E.g. if the subject is `MRN_1` then Fsurf 1.x
-would look for a mgz file called `MRN_1_defaced.mgz`.  If the file is in the
-current directory, Fsurf 1.x would look for that file by default.  Therefore,
-you could run a workflow on the `MRN_1` subject when using Fsurf 1.x by running
-
-    fsurf --subject MRN_1
-    
-If the file was in another directory, you would need to specify this
-using the `--dir` option:
-
-    fsurf --subject MRN_1 --dir /path/to/scans
+Fsurf 2.0 changed how inputs are specified.  When submitting a workflow, the inputs
+must be specified using --input-file or --subject-dir .  Previously, Fsurf required 
+that the input files have `[subject]_defaced.mri` as their name.  This is no longer
+the case but this change means that the input file must be given.
 
 ### Output 
 
