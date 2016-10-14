@@ -12,9 +12,9 @@ utility, Fsurf, that simplifies running a FreeSurfer 5.3 workflow on the OSG.
 To install and use Fsurf utility, you'll need a few things:
 
 * A local copy of [FreeSurfer installed](http://freesurfer.net/fswiki/DownloadAndInstall) (for anonymizing scans)
-* A computer with Linux/Unix/macOS released within the last 3 years
+* A computer using a version of Linux/Unix/macOS released within the last 3 years
 
-## Privacy and confidentiality
+## Privacy and Confidentiality of Subjects
 In order to protect the privacy of your participants’ scans, we request that you
 submit only defaced and fully deidentified scans for processing by Fsurf. Images
 can be anonymized and deidentified before they are uploaded to OSG servers as
