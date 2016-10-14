@@ -1,6 +1,6 @@
 [title]: - "Setting up Fsurf on Your Computer"
 
-Set up Fsurf on your computer (Linux/Unix/OS X system) by using the `curl`
+Set up Fsurf on your computer (Linux/Unix/macOS system) by using the `curl`
 command to download the `fsurf` utility. Open a terminal window and then run:
 
       curl -L -o fsurf 'http://stash.osgconnect.net/+fsurf/fsurf'
