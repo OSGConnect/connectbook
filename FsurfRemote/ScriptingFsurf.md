@@ -5,7 +5,8 @@
 
 ## Overview
 
-This document shows how to process multiple subjects quickly using a shell script.  
+This document shows how to use a shell script to submit a batch of scans 
+to Fsurf for processing.
 
 **Important note on data privacy**:  In order to protect the privacy of your
 participants’ scans, we request that you submit only defaced and fully
@@ -20,8 +21,8 @@ images](https://support.opensciencegrid.org/support/solutions/articles/120000084
 There are a few things that will be needed before you can start:
 
 * Terminal access on a computer with the following:
-  * Bash installed
-  * Wired internet access (preferable) or very fast wireless access 
+   1.  Bash installed
+   2.  Wired internet access (preferable) or very fast wireless access 
 * A directory with anonymized and defaced MRI brain scans 
 * Knowledge of using a text editor within a terminal (e.g. vi, nano, emacs, etc.)
 
@@ -33,9 +34,9 @@ submitted for processing.  However, if `fsurf` is given `--defaced` and
 
 ## Scripting `fsurf` submissions
 
-The basic approach we will take is to first generate a text file with scan and
+The basic approach we will take is to generate a text file with scan and
 subject information.  Then we'll use a script that will read this text file to
-submit each subject for processing on the OSG. 
+submit each subject for processing using Fsurf. 
 
 ### Generating the text file
 
@@ -80,5 +81,4 @@ Now make the script executable and run it:
 
 The script may take a while to complete if you have a slow connection or if you
 are processing a lot of scans.  If you're processing many scans, it's best that
-you run this on a computer that's connected to the internet using a wired
-connection.
+you run this on a computer that's connected using a wired connection.
