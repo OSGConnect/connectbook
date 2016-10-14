@@ -4,8 +4,8 @@
 
 ## Overview
 
-In this section, we will demonstrate how to use the `fsurf` utility by analyzing
-a brain scan. 
+In this section, we will demonstrate how to use the `fsurf` utility to analyze
+brain scans. 
 
 **Important note on data privacy**:  In order to protect the privacy of your
 participants’ scans, we request that you submit only defaced and fully
@@ -24,7 +24,7 @@ Type the following to get a sample MRI file,
 ## Performing a Standard Image Reconstruction
 
 A typical image reconstruction with FreeSurfer requires the execution of
-autorecon1, autorecon2, and autorecon3 on MRI data.  All three steps are handled
+autorecon1, autorecon2, and autorecon3 on MRI scan.  All three steps are handled
 by `fsurf`. 
 
 Now we will create a workflow to process `MRN_3_defaced.mgz` using `fsurf`. In the
@@ -55,12 +55,14 @@ and get the output of the workflow.
 
 ## Combining Multiple Scans of a Subject For a Single Reconstruction
 
-In addition to the standard image reconstruction, FreeSurfer can also run the autorecon1, 
-autorecon2, and autorecon3 steps with multiple MGZ files from the same subject.  This allows FreeSurfer
-to combine the scans to give a higher quality result.  This section shows how to run this workflow.
+In addition to the standard image reconstruction, FreeSurfer can also run the
+autorecon1, autorecon2, and autorecon3 steps with multiple MGZ files from the
+same subject.  This allows FreeSurfer to combine the scans to give a higher
+quality result.  This section shows how to run this workflow.
 
-Now we will create a workflow to process `MRN_3` subject using `fsurf` and multiple input files. We'll
-assume that the input files for `MRN_3` are called `MRN_3_defaced1.mgz`, and `MRN_3_defaced2.mgz`.
+We will create a workflow to process `MRN_3` subject using `fsurf` and multiple
+input files. We'll assume that the input files for `MRN_3` are called
+`MRN_3_defaced1.mgz`, and `MRN_3_defaced2.mgz`.
 
      $ ./fsurf submit --subject='MRN_3' --input-file='MRN_3_defaced1.mgz' --input-file='MRN_3_defaced2.mgz'
 
@@ -93,17 +95,18 @@ Type the following to get a sample MRI file,
 
      $ curl -L -o MRN_3_subject.zip 'http://stash.osgconnect.net/+fsurf/MRN_3_subject.zip'
 
-`MRN_3_subject.zip` is an MRI file that has already been defaced and anonymized.
+`MRN_3_subject.zip` is a zip file containing a FreeSurfer subject directory that
+has already been defaced and anonymized.
 
 Now we will create a workflow that will run just the motion correction for the `MRN_3` 
 subject using `fsurf`. Unlike the previous workflows, this workflow uses a zip file with the 
 contents of a subject dir instead of a mgz file. To create this workflow, you'll need to run:
 
-     $ ./fsurf submit --subject='MRN_3' --subject-dir='MRN_3_subject.zip' --options='-motioncor'
+     $ ./fsurf submit --subject='MRN_3' --subject-dir='MRN_3_subject.zip' --freesurfer-options='-motioncor'
 
 Note, that the options for FreeSurfer are surrounded by quotes and are given using the 
 equal sign.  You need to do this so that the Fsurf script does not interpret them as options
-for the script.
+for the `fsurf` script.
 
 The images should already be deidentified and defaced, so say `y` to the
 following questions. 
@@ -117,7 +120,7 @@ workflow
      Creating and submitting workflow
      Workflow 99 created
      Uploading input files
-     Uploading MRN_3_subject.zip (file 1/2)
+     Uploading MRN_3_subject.zip (file 1/1)
      Uploaded MRN_3_subject.zip successfully
 
 The ID of your workflow is `99`. The ID is needed to check the status, remove
@@ -141,7 +144,7 @@ Here `SUBJECTS_DIR` should be the location of the FreeSurfer subjects directory,
 `SUBJECT_NAME` is the subject name.
 
 
-If you have already done some processing of the subject's data in FreeSurfer,
+If you have already done some processing of the subject using FreeSurfer,
 then you can just do the following:
 
      $ cd SUBJECTS_DIR
@@ -178,9 +181,34 @@ A workflow can have the following status:
 * DELETED - workflow has been removed
 * ERROR - an error occurred with the workflow
 
-##  Getting Outputs
+## Getting Detailed Information on a Workflow
 
-Depending on the computer resources available, a workflow will typically
+To get detailed information on a workflow, run the following
+command:
+
+     $ ./fsurf status --id 97
+     Workflow 97 Summary
+     Workflow Type: Standard
+     Subject: MRN_1
+     Status: RUNNING
+     Started: Fri Oct 14 10:17:00 2016
+
+If the workflow has completed, you'll get slightly more information:
+
+     $ ./fsurf status --id 99
+     Workflow Type: Custom Workflow
+     Subject: MRN_3
+     Options: -autorecon1
+     Status: COMPLETED
+     Started: Wed Oct 12 08:09:53 2016
+     Ended: Wed Oct 12 08:38:46 2016
+     CPU Time used: 47 mins, 3 secs      Active for: 26 mins, 44 secs    
+     Completed: 1/1 tasks
+
+
+## Getting Outputs
+
+Depending on the resources available on OSG, a workflow will typically
 requires 6-12 hours to complete.  Once a workflow has completed successfully,
 the status of the workflow should be `COMPLETED` as below
 
