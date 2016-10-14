@@ -1,21 +1,21 @@
-[title]: - "Anonymizing Images"
+[title]: - "Anonymizing Scans"
  
 In order to protect the privacy of your participants’ scans, we request that you
-submit only defaced and fully deidentified scans for processing by `fsurf`. Images
+submit only defaced and fully deidentified scans for processing by `fsurf`. Scans
 can be anonymized and deidentified before they are uploaded to OSG servers as
-described in this article on anonymizing images.
+described in this article.
 
-You can use a local FreeSurfer installation to prepare your scans. First, on
-your local machine import into FreeSurfer your image by running
+You should use a [local FreeSurfer
+installation](http://freesurfer.net/fswiki/DownloadAndInstall) to prepare your
+scans. First, on your local machine import your scan into FreeSurfer by running
 
       $ recon-all -subject SUBJECT -i PATH_TO_MGZ_INPUT_FILE
 
 Here, `recon-all` is the `FreeSurfer` command line tool, the argument `SUBJECT`
 is the name of the subject, and the argument `PATH_TO_MGZ_INPUT_FILE` is the
 full path to the input file. The above command produces a single compressed
-image file `001.mgz` under the directory `subjects/SUBJECT/mri/orig`. Now deface
-the image `001.mgz` to `SUBJECT_defaced.mgz` with the `mri_deface` command as
-follows,
+image file `001.mgz` under the directory `subjects/SUBJECT/mri/orig`. Now use 
+`mri_deface` to deface the image as follows,
 
       $ cd  ${FREESURFER_HOME}/average
       $ mri_deface ../subjects/SUBJECT/mri/orig/001.mgz  \
