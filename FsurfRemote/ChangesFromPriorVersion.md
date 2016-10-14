@@ -9,7 +9,7 @@ the differences from the 1.x versions.
 
 Fsurf 2.0 adds a few new features:
 
-* [Support for running the recon-all workflow using multiple scans of the same subject](https://support.opensciencegrid.org/support/solutions/articles/12000008490-an-example-of-processing-a-scan#combining-multiple-scans-of-a-subject-for-a-single-reconstruction).  This allows for FreeSurfer to apply correct for errors in the scans due to subject movement. 
+* [Support for running the recon-all workflow using multiple scans of the same subject](https://support.opensciencegrid.org/support/solutions/articles/12000008490-an-example-of-processing-a-scan#combining-multiple-scans-of-a-subject-for-a-single-reconstruction).  This allows FreeSurfer to correct errors in the scans due to subject movement. 
 * [Support for running the recon-all workflow using a custom set of options](https://support.opensciencegrid.org/support/solutions/articles/12000008490-an-example-of-processing-a-scan#running-recon-all-with-custom-options).  This allows users to run the recon-all workflow step by step using a specific options for each step.
 * Better indications of workflow progress and information on completed  workflows.
 
@@ -19,22 +19,19 @@ Fsurf 2.0 adds a few new features:
 Fsurf 2.0 changed how inputs are specified.  When submitting a workflow, the inputs
 must be specified using `--input-file` or `--subject-dir`.  Previously, Fsurf required 
 that the input files have `[subject]_defaced.mri` as their name.  This is no longer
-the case but this change means that the input file must be given.
+the case. 
 
 ### Output 
 
-Fsurf 2.x and Fsurf 1.x also vary slightly in the output generated.  The only
-place where this varies significantly is when displaying information about
-workflows.  Fsurf 1.x does not show the number of total tasks and completed tasks
-when the `list` command is used.  In addition, Fsurf 1.x only gives the workflow
-status when the `status` command is used.  Fsurf 2.x provides a more complete
-summary of the workflow status and some details about resources that the
-workflow used.
+Fsurf 2.x and Fsurf 1.x also vary slightly in how workflow information is 
+displayed. Fsurf 2.x now shows the workflow progress when listing workflows.  
+Also when displaying information about a particular workflow (using the `status` 
+command), Fsurf 2.x now gives information about workflow type, the parameters
+used for that workflow, and resources used by that workflow.
 
 ### Workflow status
 
-Fsurf 1.x also used slightly differnt terms to indicate the status of a workflow.
-Fsurf 1.x uses `UPLOADED` when a workflow has been created instead of `QUEUED`.
-Similarly, Fsurf 1.x uses `PROCESSING` instead of `RUNNING` when a workflow has
-been started.
-
+Fsurf 2.x also chnages a few of the terms to indicate the status of a workflow.
+It uses `QUEUED` instead of `UPLOADED` when a workflow has been submitted. 
+Likewise, it uses `RUNNING` instead of `PROCESSING` to indicate a workflow that
+is currently being run.
