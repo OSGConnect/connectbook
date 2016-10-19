@@ -1,14 +1,33 @@
 [title]: - "Setting up Fsurf on Your Computer"
 
-Set up Fsurf on your computer (Linux/Unix/macOS system) by using the `curl`
+# Requesting an Account
+
+To use Fsurf from your computer, you will first need to request an account by
+[submitting a ticket
+request](https://support.opensciencegrid.org/support/tickets/new). In the
+subject field of the ticket,
+write "Fsurf account request" and in the body of the ticket please include your
+contact information:
+
+* Name
+* Institution
+* Department
+* Institutional (.edu, .gov, etc.) email address
+* Phone
+* Preferred username
+
+After your account has been created, you'll get an email with your username and
+password.  When you receive this information, you should use the Fsurf
+script to [change your
+password](https://support.opensciencegrid.org/support/solutions/articles/12000009754-saving-or-changing-user-account-information).
+
+# Installing Fsurf 
+
+Install Fsurf on your computer (Linux/Unix/macOS system) use the `curl`
 command to download the `fsurf` utility. Open a terminal window and then run:
 
       curl -L -o fsurf 'http://stash.osgconnect.net/+fsurf/fsurf'
       chmod +x fsurf 
-
-If you don't have a Fsurf account, follow the instructions
-[here](https://support.opensciencegrid.org/solution/articles/12000008487) to
-obtain one.
 
 ## What's Next? 
 

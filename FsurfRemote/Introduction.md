@@ -33,9 +33,7 @@ download the output to your computer.
 <img src="https://raw.githubusercontent.com/OSGConnect/connectbook/master/FsurfRemote/Figs/architecture_2.png" width="450px" height="300px" />
 
 ## What's Next?
-If you don't have an Fsurf account, 
-[get an account](https://support.opensciencegrid.org/solution/articles/12000008487-requesting-an-fsurf-account). 
-Otherwise, [set up Fsurf](https://support.opensciencegrid.org/solution/articles/12000008488-set-up-fsurf-on-your-laptop). 
+[Setup up Fsurf on your computer](https://support.opensciencegrid.org/solution/articles/12000008488-set-up-fsurf-on-your-laptop). 
 
 ## Getting Help
 For assistance or questions, please email the OSG User Support team  at
