@@ -1,4 +1,4 @@
-[title]: - "An Example of Processing a Scan"
+[title]: - "Using Fsurf"
 [TOC]
 
 
@@ -88,7 +88,41 @@ and get the output of the workflow.
 
 ## Running recon-all With Custom Options
 
-Fsurf also allows users to run recon-all with a set of custom options. Users can use this
+### Generating Subject Directory Files
+
+Running a recon-all workflow with custom options requires a different input then 
+the prior workflows.  This workflow requires a zip file with the contents of the 
+subject directory that FreeSurfer uses. This subject directory file can be
+generated from a MGZ file or from an existing subject directory in FreeSurfer.
+
+#### Getting a Subject Directory File From a MGZ File
+
+If you are starting with a MRI scan in mgz format,
+you can run `recon-all -s SUBJECT -i SUBJECT_FILE` where `SUBJECT` is
+the subject name (e.g. `MRN_3`) and `SUBJECT_FILE` is the name of the scan file
+(e.g. `MRN_3_defaced.mgz`).  Once recon-all has completed, do the following:
+
+     $ cd SUBJECTS_DIR
+     $ zip -r SUBJECT_FILE.zip SUBJECT_NAME
+
+Here `SUBJECTS_DIR` should be the location of the FreeSurfer subjects directory,
+`SUBJECT_FILE` is the name that you'd like to use for the input file, and
+`SUBJECT_NAME` is the subject name.
+
+#### Getting a Subject Directory File From FreeSurfer 
+If you have already done some processing of the subject using FreeSurfer,
+then you can just do the following:
+
+     $ cd SUBJECTS_DIR
+     $ zip -r SUBJECT_FILE.zip SUBJECT_NAME
+
+Here `SUBJECTS_DIR` should be the location of the FreeSurfer subjects directory,
+`SUBJECT_FILE` is the name that you'd like to use for the input file, and
+`SUBJECT_NAME` is the subject name.
+
+### Running the Custom Workflow
+
+ Fsurf also allows users to run recon-all with a set of custom options. Users can use this
 workflow to run unique FreeSurfer workflows.
 
 Type the following to get a sample MRI file,
@@ -126,34 +160,7 @@ workflow
 The ID of your workflow is `99`. The ID is needed to check the status, remove
 and get the output of the workflow. 
 
-### Generating Subject Directory Files
 
-The subject directory file used by Fsurf when running a custom workflow can be
-generated in several ways:
-
-If you are starting with a MRI scan in mgz format,
-you can run `recon-all -s SUBJECT -i SUBJECT_FILE` where `SUBJECT` is
-the subject name (e.g. `MRN_3`) and `SUBJECT_FILE` is the name of the scan file
-(e.g. `MRN_3_defaced.mgz`).  Once recon-all has completed, do the following:
-
-     $ cd SUBJECTS_DIR
-     $ zip -r SUBJECT_FILE.zip SUBJECT_NAME
-
-Here `SUBJECTS_DIR` should be the location of the FreeSurfer subjects directory,
-`SUBJECT_FILE` is the name that you'd like to use for the input file, and
-`SUBJECT_NAME` is the subject name.
-
-
-If you have already done some processing of the subject using FreeSurfer,
-then you can just do the following:
-
-     $ cd SUBJECTS_DIR
-     $ zip -r SUBJECT_FILE.zip SUBJECT_NAME
-
-Here `SUBJECTS_DIR` should be the location of the FreeSurfer subjects directory,
-`SUBJECT_FILE` is the name that you'd like to use for the input file, and
-`SUBJECT_NAME` is the subject name.
- 
 
 ##  Listing Workflows
 
