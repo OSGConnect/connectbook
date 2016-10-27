@@ -31,7 +31,7 @@ Now we will create a workflow to process `MRN_3_defaced.mgz` using `fsurf`. In t
 file `MRN_3_defaced.mgz`, the prefix `MRN_3` is the name of the subject. 
 
 
-     $ ./fsurf submit --subject='MRN_3' --input-file='MRN_3_defaced.mgz'
+     $ ./fsurf submit --subject='MRN_3' --input='MRN_3_defaced.mgz'
 
 `MRN_3_defaced.mgz` image is already deidentified and defaced, so say `y` to the
 following questions. 
@@ -64,7 +64,7 @@ We will create a workflow to process `MRN_3` subject using `fsurf` and multiple
 input files. We'll assume that the input files for `MRN_3` are called
 `MRN_3_defaced1.mgz`, and `MRN_3_defaced2.mgz`.
 
-     $ ./fsurf submit --subject='MRN_3' --input-file='MRN_3_defaced1.mgz' --input-file='MRN_3_defaced2.mgz'
+     $ ./fsurf submit --subject='MRN_3' --input='MRN_3_defaced1.mgz' --input='MRN_3_defaced2.mgz'
 
 The images should already be deidentified and defaced, so say `y` to the
 following questions. 
