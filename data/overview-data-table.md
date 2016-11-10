@@ -15,7 +15,7 @@ The following tables provide guidelines for data management in OSG. Check the we
 | **stash**   |  < 200 GB      | Meant for large storage and I/O for your jobs. | Yes | No | No | no | [Data Storage](https://support.opensciencegrid.org/support/solutions/articles/12000002985-storage-solutions-on-osg-home-stash-and-public)|
 | **public**  |  < 10 GB    | Meant for sharing data and transfer input data via HTTP or staschcp | Yes | No | No | No | [Data Storage](https://support.opensciencegrid.org/support/solutions/articles/12000002985-storage-solutions-on-osg-home-stash-and-public)|
 
-For the management of datasets larger than 200 GB, please email us at [user-support@opensciencegrid.org](mailto:user-support@opensciencegrid.org)
+For the data management of more than 200 GB, please email us at [user-support@opensciencegrid.org](mailto:usersupport@opensciencegrid.org)
 
 
 ## Transferring input data for a job
