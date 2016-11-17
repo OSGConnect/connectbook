@@ -32,7 +32,7 @@ Alternatively, users can [use Globus](<https://support.opensciencegrid.org/solut
 
 First load the stashcp module:
 
-	module load stashcp/3.0
+	module load stashcp
 
 Then transfer your data:
 	
