@@ -1,6 +1,6 @@
 [title]: - "Is high throughput computing for you?"
 
-Consider the following to determine with high throughput computing (HTC) is
+Consider the following to determine whether high throughput computing (HTC) is
 appropriate for your computing problem, and therefore a candidate to consume
 cycles from the OSG.  High throughput computing is an excellent fit for you if:
 
