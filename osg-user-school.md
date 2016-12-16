@@ -7,9 +7,8 @@ During this week-long training event held at the University of Wisconsin-Madison
 
 The school is ideal for graduate students in any science or research domain where large-scale computing is a vital part of the research process, plus we will consider applications from advanced undergraduates, post-doctoral students, faculty, and staff. Students accepted to this program will receive financial support for basic travel and local costs associated with the School.
 
-## OSG User School Events
+## OSG User Schools
 
-[OSG User School, July 27-31st 2015](https://twiki.opensciencegrid.org/bin/view/Education/OSGUserSchool2015)
-
-[OSG User School, July 7-10th 2014](https://twiki.opensciencegrid.org/bin/view/Education/OSGUserSchool2014)
+* [OSG User School, July 27-31st 2015](https://twiki.opensciencegrid.org/bin/view/Education/OSGUserSchool2015)
+* [OSG User School, July 7-10th 2014](https://twiki.opensciencegrid.org/bin/view/Education/OSGUserSchool2014)
 
