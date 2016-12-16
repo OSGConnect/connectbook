@@ -21,3 +21,12 @@ We offer training and tutorials for the scientists and researchers new to high t
 [SWC-OSG Workshop at IUPUI, Indianapolis. March 3-6th 2015](http://swc-osg-workshop.github.io/2015-03-03-iupui/index.html)
 
 [SWC-OSG Workshop at University of Chicago, December 15-17th 2014](http://swc-osg-workshop.github.io/2014-12-15-UChicago/)
+
+## OSG UserSchools
+[User School 2016] (https://twiki.opensciencegrid.org/bin/view/Education/OSGUserSchool2016)
+[User School 2015] (https://twiki.opensciencegrid.org/bin/view/Education/OSGUserSchool2015)
+[User School 2014] (https://twiki.opensciencegrid.org/bin/view/Education/OSGUserSchool2014)
+
+## Tutorial session in OSG All Hands Meetings
+[AHM 2016 Clemson] (https://indico.fnal.gov/sessionDisplay.py?sessionId=21&confId=10571#20160317)
+[AHM 2015 Northwestern University] (https://indico.fnal.gov/sessionDisplay.py?sessionId=6&confId=8580#20150324)
