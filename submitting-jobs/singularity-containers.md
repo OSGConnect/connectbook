@@ -52,7 +52,7 @@ your job submit file. For example:
     executable = job.sh
     Requirements = HAS_SINGULARITY == TRUE
 
-    +SingularityImage = "docker://python:latest python"
+    +SingularityImage = "docker://python:latest"
 
     should_transfer_files = IF_NEEDED
     when_to_transfer_output = ON_EXIT
@@ -78,7 +78,26 @@ the *transfer_output_files = ...* attribute.
 If you want to use a custom image, but still have access to /cvmfs, you can add
 *+SingularityBindCVMFS = True* to your job. /cvmfs on the compute node will then
 be bound to /cvmfs inside your container, but please not that this only works
-if the /cvmfs directory exists in the image.
+if the /cvmfs directory exists in the image. For example:
+
+    universe = vanilla
+    executable = job.sh
+    Requirements = HAS_SINGULARITY == TRUE
+
+    +SingularityImage = "http://workflow.isi.edu/OSGVO/Singularity/OSGVO-EL7-latest.img"
+    +SingularityBindCVMFS = True
+
+    should_transfer_files = IF_NEEDED
+    when_to_transfer_output = ON_EXIT
+
+    # explicit list so that the Singularity image is not downloaded
+    transfer_output_files = somedata.txt
+
+    output = out
+    error = err
+    log = log
+
+    queue
 
 ## Disabling Auto Loading
 
