@@ -8,7 +8,11 @@ a set of pre-defined images. For more information about Singularity, please see:
 
  * [Singularity Home Page](http://singularity.lbl.gov/)
 
-Also, Derek Weitzel wrote a blog post about Singularity on OSG, which provides a good
+The following talk describes Singularity for scientific computing:
+
+<iframe width="560" height="315" src="//www.youtube.com/embed/DA87Ba2dpNM" frameborder="0" allowfullscreen></iframe>
+
+Derek Weitzel wrote a blog post about Singularity on OSG, which provides a good
 introduction on how to create images and run them, but does not cover all the
 functionality described further down:
 
@@ -26,8 +30,12 @@ The default setup is to auto load an image on sites which support Singularity. E
 job which lands on such a site, will have a container started for them, and the job
 run within that container. Most users will not even know that their jobs are run
 within a container, but it will provide them with a consistent environment across
-OSG sites. The current default container is [CernVM](https://cernvm.cern.ch/) which is
-derivative of EL6. If you want to steer a job to run on a default Singularity instance,
+OSG sites. The current default container is based on EL6 and contains a basic
+set of tools expected from OSG compute nodes. The image is loaded from
+*/cvmfs/singularity.opensciencegrid.org/rynge/osgvo:el6* and the defintion file
+is available in GitHub
+[https://github.com/rynge/osgvo-docker](https://github.com/rynge/osgvo-docker) .
+If you want to steer a job to run on a default Singularity instance,
 use *HAS_SINGULARITY == True* in the job requirements. For example:
 
     universe = vanilla
@@ -67,7 +75,10 @@ The image can be specified in any of the formats supported by Singularity (see
 [Supported URIs](http://singularity.lbl.gov/user-guide#supported-uris). However, if
 you are going to be running a lot of jobs, the docker: and http(s): formats might
 cause unnecessary network traffic. A better alterative is to store the image in 
-CVMFS. The image will then be automatically cached close to the compute nodes.
+CVMFS. The image will then be automatically cached close to the compute nodes. A
+common use case is to use EL7 instead of the default EL6 image:
+
+    +SingularityImage = "/cvmfs/singularity.opensciencegrid.org/rynge/osgvo:el7"
 
 When using a docker: or http(s):, the images will be downloaded to the current
 working directory. If you use HTCondor's automatic data transfer for output files
@@ -84,7 +95,7 @@ if the /cvmfs directory exists in the image. For example:
     executable = job.sh
     Requirements = HAS_SINGULARITY == TRUE
 
-    +SingularityImage = "http://workflow.isi.edu/OSGVO/Singularity/OSGVO-EL7-latest.img"
+    +SingularityImage = "/cvmfs/singularity.opensciencegrid.org/rynge/osgvo:el7"
     +SingularityBindCVMFS = True
 
     should_transfer_files = IF_NEEDED
@@ -122,9 +133,6 @@ submit file. For example:
     log = log
 
     queue
-
-
-
 
 
 
