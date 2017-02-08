@@ -2,15 +2,18 @@
 
 [TOC]
 
+
 Singularity is a container system to allow users full control over their enviroment. You
 can create your own container image which your job will execute within, or choose from
 a set of pre-defined images. For more information about Singularity, please see:
 
  * [Singularity Home Page](http://singularity.lbl.gov/)
 
+
 The following talk describes Singularity for scientific computing:
 
 <iframe width="560" height="315" src="//www.youtube.com/embed/DA87Ba2dpNM" frameborder="0" allowfullscreen></iframe>
+
 
 Derek Weitzel wrote a blog post about Singularity on OSG, which provides a good
 introduction on how to create images and run them, but does not cover all the
@@ -24,15 +27,16 @@ Singularity which means that resource availability might be limited.
 Please send any feedback of the system to
 [user-support@opensciencegrid.org](mailto:user-support@opensciencegrid.org)
 
+
 ## Auto Loading the Default Image
 
 The default setup is to auto load an image on sites which support Singularity. Every
-job which lands on such a site, will have a container started for them, and the job
-run within that container. Most users will not even know that their jobs are run
+job which lands on such a site, will have a container started just for that job, and
+then run within that container. Most users will not even know that their jobs are run
 within a container, but it will provide them with a consistent environment across
 OSG sites. The current default container is based on EL6 and contains a basic
 set of tools expected from OSG compute nodes. The image is loaded from
-*/cvmfs/singularity.opensciencegrid.org/rynge/osgvo:el6* and the defintion file
+*/cvmfs/singularity.opensciencegrid.org/rynge/osgvo:el6* and the definition file
 is available in GitHub
 [https://github.com/rynge/osgvo-docker](https://github.com/rynge/osgvo-docker) .
 If you want to steer a job to run on a default Singularity instance,
@@ -51,45 +55,11 @@ use *HAS_SINGULARITY == True* in the job requirements. For example:
 
     queue
 
+
 ## Auto Loading a Custom Image
 
 To instruct the system to load a custom image, use the *+SingularityImage* attribute in 
-your job submit file. For example:
-
-    universe = vanilla
-    executable = job.sh
-    Requirements = HAS_SINGULARITY == TRUE
-
-    +SingularityImage = "docker://python:latest"
-
-    should_transfer_files = IF_NEEDED
-    when_to_transfer_output = ON_EXIT
-
-    output = out
-    error = err
-    log = log
-
-    queue
-
-The image can be specified in any of the formats supported by Singularity (see
-[Supported URIs](http://singularity.lbl.gov/user-guide#supported-uris). However, if
-you are going to be running a lot of jobs, the docker: and http(s): formats might
-cause unnecessary network traffic. A better alterative is to store the image in 
-CVMFS. The image will then be automatically cached close to the compute nodes. A
-common use case is to use EL7 instead of the default EL6 image:
-
-    +SingularityImage = "/cvmfs/singularity.opensciencegrid.org/rynge/osgvo:el7"
-
-When using a docker: or http(s):, the images will be downloaded to the current
-working directory. If you use HTCondor's automatic data transfer for output files
-you might get copies of the image staged back for each and every job. To prevent
-this from happening, explicitly tell HTCondor what files to stage back using
-the *transfer_output_files = ...* attribute.
-
-If you want to use a custom image, but still have access to /cvmfs, you can add
-*+SingularityBindCVMFS = True* to your job. /cvmfs on the compute node will then
-be bound to /cvmfs inside your container, but please not that this only works
-if the /cvmfs directory exists in the image. For example:
+your job submit file. For example, to run your job under EL7:
 
     universe = vanilla
     executable = job.sh
@@ -101,14 +71,34 @@ if the /cvmfs directory exists in the image. For example:
     should_transfer_files = IF_NEEDED
     when_to_transfer_output = ON_EXIT
 
-    # explicit list so that the Singularity image is not downloaded
-    transfer_output_files = somedata.txt
-
     output = out
     error = err
     log = log
 
     queue
+
+If you want to use a custom image, but still have access to /cvmfs, you can add
+*+SingularityBindCVMFS = True* to your job (as in the example above). /cvmfs on
+the compute node will then be bound to /cvmfs inside your container, but please
+note that this only works if the /cvmfs directory exists in the image. If you do
+not want /cvmfs mounted in the container, just set *SingularityBindCVMFS = False*
+
+
+### Distributing Custom Images Via CVMFS
+
+In order to be able to efficiently distribute the container images to a large
+of distributed compute hosts, OSG has choosen to host the images under
+[CVMFS](https://cernvm.cern.ch/portal/filesystem). Any image available in
+Docker can be included for automatic syncing into the CVMFS repository. The
+result is an unpacked image under */cvmfs/singularity.opensciencegrid.org/*
+
+To get your images included, please either create a git pull request against
+*docker_images.txt* in the
+[cvmfs-singularity-sync repository](https://github.com/bbockelm/cvmfs-singularity-sync), 
+or contact
+[user-support@opensciencegrid.org](mailto:user-support@opensciencegrid.org)
+and we can help you.
+
 
 ## Disabling Auto Loading
 
