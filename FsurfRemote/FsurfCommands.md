@@ -24,6 +24,7 @@ any order.  The commands that `fsurf` accepts are:
 | status  | Gives the status of a specified workflow | 
 | output  | Downloads results or logs for a workflow |
 | remove  | Removes an existing workflow | 
+| retry   | Retries a workflow that has failed | 
 | change-password | Changes an user password | 
 
 
@@ -38,6 +39,7 @@ any order.  The commands that `fsurf` accepts are:
 | status          | List status of a given workflow    | --id='[workflow id]' | <ul><li>--help</li> <li>--user='[user name]'</li></ul>  |
 | output          | Get output from completed workflow | --id='[workflow id]' | <ul><li>--help</li> <li>--user='[user name]'</li>--log-only</li></ul> |
 | remove          | Remove specified workflow          | --id='workflow id]' |<ul><li>--help</li> <li>--user='[user name]'</li></ul> |
+| retry           | Retry a failed workflow            | --id='workflow id]' |<ul><li>--help</li> <li>--user='[user name]'</li></ul> |
 | change-password | Change account password            |  | <ul><li>--help</li> <li>--user='[user name]'</li></ul> |
 
 
@@ -103,6 +105,17 @@ The output command accepts the following options:
 ## Remove Options
 
 The remove command accepts the following options:
+
+| Option | Description |
+| ------ | ----------- |
+| --user | Username to use when logging into the Fsurf service |
+| --help | Display help for command |
+| --id   | ID of workflow to display |
+
+<br />
+## Retry Options
+
+The retry command accepts the following options:
 
 | Option | Description |
 | ------ | ----------- |
