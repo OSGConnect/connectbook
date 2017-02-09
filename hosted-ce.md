@@ -2,13 +2,14 @@
 
 [TOC] 
 
-By using a hosted CE, you can quickly connect your cluster with minimal
-requirements to run jobs from OSG:
+By using a hosted CE, you can quickly allow OSG to run jobs on your cluster.
+The requirements to run jobs from OSG are fairly minimal, you just need to
+provide:
 
 * A normal account for OSG jobs to run.
-* Provide ssh access to this account via public ssh keys.
-* Provide a local scratch area on compute nodes for jobs to use.
-* Use a support batch system (SGE, PBS, HTCondor, Slurm)
+* SSH access to this account via public ssh keys.
+* A local scratch area on compute nodes for jobs to use.
+* A supported batch system (SGE, PBS, HTCondor, Slurm)
 
 To fully support OSG jobs there are a few more requirements: 
        
