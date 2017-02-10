@@ -27,4 +27,4 @@ As long as this code is:
 1. Available to the public in source form (e.g. open source)
 2. Licensed to all users, and does not require a license key
 
-We should be able to work with you to make it available across the OSG.
+we should be able to install it in the OSG software respository which will make it available on most sites in the OSG.
