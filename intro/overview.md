@@ -1,11 +1,11 @@
 [title]: - "Overview"
 
-## OSG Quick Connect
+## OSG Managed Services
 
 There are two main ways to provide computing resources to the OSG. The
-first method, which is appropriate for smaller sites or those that
-cannot devote effort to deploy and operate the OSG software stack, is
-called **OSG Quick Connect**. Here the access is provided through an ssh
+first method, which is appropriate for smaller sites or those with 
+limited effort to deploy and operate the OSG software stack, is
+called the  **OSG Managed Service**. Here the access is provided through an ssh
 account to the cluster, much like a normal user account.  Jobs from the
 OSG virtual organization are delivered from a factory service provided
 by the OSG Connect system. Once commissioned, very little manpower is
