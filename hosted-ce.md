@@ -44,7 +44,7 @@ Setup and installation process consists of the following steps:
 
 The OSG provides monitoring to view which communities are accessing your site, their fields of science, home institution. 
 
-![fig gracc](https://raw.githubusercontent.com/OSGConnect/connectbook/master/images/screenshot_2929.png)
+![fig gracc](https://raw.githubusercontent.com/OSGConnect/connectbook/master/images/screenshot_2979.png)
 
 
 ## Getting Started
