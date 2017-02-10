@@ -42,9 +42,17 @@ Setup and installation process consists of the following steps:
 
 ## Which Science Communities and Institutions am I supporting?
 
-The OSG provides monitoring to view which communities are accessing your site, their fields of science, home institution. 
+The OSG provides monitoring to view which communities are accessing your site, their fields of science, home institution. Below is an example of the monitoring views that will be available for your cluster. 
 
 ![fig gracc](https://raw.githubusercontent.com/OSGConnect/connectbook/master/images/screenshot_2979.png)
+
+
+## Optional: Providing Access to Application Software Using OASIS
+
+### Install the OSG Packaged Squid Service
+The OSG Squid service comes preconfigured to point to certified OSG software repositories.
+
+### Install the OSG OASIS Software on Your Cluster Compute Servers
 
 
 ## Getting Started
