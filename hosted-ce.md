@@ -7,6 +7,9 @@
 
 OSG offers a *managed service option* to connect a campus HPC/HTC cluster to the Open Science Grid. The OSG team will host and operate an HTCondor compute element which routes user jobs to your cluster, configured for science communities that you choose to support. 
 
+![fig 1](https://raw.githubusercontent.com/OSGConnect/connectbook/images/master/screenshot_2980.png)
+
+
 
 ## Requirements
 
