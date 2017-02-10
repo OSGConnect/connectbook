@@ -28,15 +28,20 @@ Many OSG communities use software modules provided by their collaborations or by
 
 Setup and installation process consists of the following steps:
   
-* After a phone or email discussion, provide us with an account with access to your cluster 
-* We will setup and configure OSG components on our system to use that account to submit jobs to your cluster
-* We'll assist you in installing and setting up squid and networked access to OSG software for OSG jobs  (if you are fully supporting OSG jobs)
-* There will probably be some further conversations to fine tune settings but they should be minimal.## Requirements
+* Consultation call to collect system details
+* Create Unix login account for the OSG service
+* Install public SSH keys for the service
+* We configure the OSG service with your system details
+* We validate operation with a set of test jobs
+* We configure central OSG services to schedule jobs for science communities you support
+* (Optional): we can assist you in installing and setting up the Squid and OASIS software on your cluster 
 
 
 ## Which Science Communities and Institutions am I supporting?
 
-The OSG provides monitoring to view which communities are accessing your site, their fields of science, home institu
+The OSG provides monitoring to view which communities are accessing your site, their fields of science, home institution. 
+
+
 
 ## Getting Started
 
