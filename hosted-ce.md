@@ -21,10 +21,10 @@ Here are the basic system requirements:
 Setup and installation process consists of the following steps:
   
 * Consultation call to collect system details.  We'll need the following information:
-   * Cluster name
-   * Address for cluster
-   * Technical contact information for cluster
-   * Technical information on cluster (batch system, OS, location of scratch space, number of slots available for OSG)
+   1. Cluster name
+   2. Address for cluster
+   3. Technical contact information for cluster
+   4. Technical information on cluster (batch system, OS, location of scratch space, number of slots available for OSG)
 * Create Unix login account for the OSG service
 * Install public SSH keys for the service
 * We configure the OSG service with your system details
