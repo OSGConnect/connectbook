@@ -10,6 +10,7 @@ OSG offers a *managed service option* to connect a campus HPC/HTC cluster to the
 ## Requirements
 
 Here are the basic system requirements:
+
 * Cluster operating system must be RHEL 6.x, 7.x or CentOS 6.x, 7.x or Scientific Linux 6.x, 7.x 
 * A standard Unix account on your system's login server. The OSG service will use this account and submit to your batch queue in a manner you define.
 * SSH access to this account via public SSH keys.
@@ -18,6 +19,7 @@ Here are the basic system requirements:
 ## Setup Process
 
 Setup and installation process consists of the following steps:
+
 * Consultation call to collect system details.  We'll need the following information:
    <ul>
    <li>Cluster name</li>
