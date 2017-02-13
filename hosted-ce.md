@@ -11,7 +11,7 @@ OSG offers a *managed service option* to connect a campus HPC/HTC cluster to the
 
 Here are the basic system requirements:
 
-* Cluster operating system must be CentOS 6.x, 7.x or Scientific Linux 6.x, 7.x 
+* Cluster operating system must be RHEL 6.x, 7.x or CentOS 6.x, 7.x or Scientific Linux 6.x, 7.x 
 * A standard Unix account on your system's login server. The OSG service will use this account and submit to your batch queue in a manner you define.
 * SSH access to this account via public SSH keys.
 * A supported batch system (Slurm, HTCondor, PBS, LSF, SGE)
@@ -20,7 +20,11 @@ Here are the basic system requirements:
 
 Setup and installation process consists of the following steps:
   
-* Consultation call to collect system details
+* Consultation call to collect system details.  We'll need the following information:
+   * Cluster name
+   * Address for cluster
+   * Technical contact information for cluster
+   * Technical information on cluster (batch system, OS, location of scratch space, number of slots available for OSG)
 * Create Unix login account for the OSG service
 * Install public SSH keys for the service
 * We configure the OSG service with your system details
@@ -37,20 +41,31 @@ The OSG provides monitoring to view which communities are accessing your site, t
 
 ## Optional: Providing Access to Application Software Using OASIS
 
-Many OSG communities use software modules provided by their collaborations or by the OSG User Support team. You do not need to install any application software on your cluster. OSG uses a FUSE-based distributed software repository system called OASIS. To support these communities, the following additional components are needed: 
+Many OSG communities use software modules provided by their collaborations or by
+the OSG User Support team. You do not need to install any application software
+on your cluster. OSG uses a FUSE-based distributed software repository system
+called OASIS. To support these communities, the following additional components
+are needed: 
        
 * A (cluster-wide) Squid service with a minimum 50GB of cache space.
-* Local scratch area on compute nodes: typical recommendations are 20 GB per job
+* Local scratch area on compute nodes: typical recommendations are 10 GB per job
 * On each compute node, installation of the OASIS software package and associated FUSE kernel modules
-* Local scratch space of 5 GB.
+* Local scratch space of at least 10 GB (preferably 22GB) on compute nodes for caching OASIS data.
 
-### Install the OSG Packaged Squid Service
+### Install the OSG Packaged Frontier Squid Service
 
-The OSG Squid service comes preconfigured to point to certified OSG software repositories.  Instructions, or pointer to..
+OSG has a yum repository with rpms of the OSG Frontier Squid service.  The rpms
+include configuration files that allow Squid to access certified OSG software 
+repositories.  Instructions on setting up Frontier Squid are available 
+[here](https://twiki.grid.iu.edu/bin/view/Documentation/Release3/InstallFrontierSquid).
 
 ### Install the OSG OASIS Software on Your Cluster Compute Servers
 
-Instructions...or pointer to.
+OSG also provides rpms for the OASIS software in it's yum repositories.
+Instructions on installing and making OASIS based software available on your
+compute nodes are available
+[here](https://twiki.grid.iu.edu/bin/view/Documentation/Release3/InstallCvmfs).
+
 
 ## Getting Started
 
