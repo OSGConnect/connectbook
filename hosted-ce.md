@@ -41,7 +41,7 @@ The OSG provides monitoring to view which communities are accessing your site, t
 ![fig gracc](https://raw.githubusercontent.com/OSGConnect/connectbook/master/images/screenshot_2979.png)
 
 
-## Optional: Providing Access to Application Software Using OASIS
+## **Optional**: Providing Access to Application Software Using OASIS
 
 Many OSG communities use software modules provided by their collaborations or by
 the OSG User Support team. You do not need to install any application software
@@ -71,7 +71,6 @@ compute nodes are available
 [here](https://twiki.grid.iu.edu/bin/view/Documentation/Release3/InstallCvmfs).
 
 <br/>
-
 ## Getting Started
 
 Drop us a note at [user-support@opensciencegrid.org](mailto:user-support@opensciencegrid.org) if this is of interest to you. We will contact you to setup a consultation.  
