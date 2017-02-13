@@ -54,6 +54,7 @@ are needed:
 * On each compute node, installation of the OASIS software package and associated FUSE kernel modules
 * Local scratch space of at least 10 GB (preferably 22GB) on compute nodes for caching OASIS data.
 
+<br/>
 ### Install the OSG Packaged Frontier Squid Service
 
 OSG has a yum repository with rpms of the OSG Frontier Squid service.  The rpms
@@ -61,6 +62,7 @@ include configuration files that allow Squid to access certified OSG software
 repositories.  Instructions on setting up Frontier Squid are available 
 [here](https://twiki.grid.iu.edu/bin/view/Documentation/Release3/InstallFrontierSquid).
 
+<br/>
 ### Install the OSG OASIS Software on Your Cluster Compute Servers
 
 OSG also provides rpms for the OASIS software in it's yum repositories.
@@ -68,6 +70,7 @@ Instructions on installing and making OASIS based software available on your
 compute nodes are available
 [here](https://twiki.grid.iu.edu/bin/view/Documentation/Release3/InstallCvmfs).
 
+<br/>
 
 ## Getting Started
 
