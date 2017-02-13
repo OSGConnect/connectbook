@@ -47,7 +47,7 @@ usage of resources:
 * Users are carefully vetted before they are allowed to submit jobs to OSG 
 * Jobs running through OSG can be traced back to the user that submitted them
 * Job submission can quickly be disabled if needed
-* OSG staff are readily contactable through several means in case of an emergency through [mail:goc@opensciencegrid.org](email), [http://ticket.grid.iu.edu/](help desk), or phone (317-278-9699)
+* OSG staff are readily contactable through several means in case of an emergency through [email](mail:goc@opensciencegrid.org), [the help desk](http://ticket.grid.iu.edu), or phone (317-278-9699)
 
 
 ## Which Science Communities and Institutions am I supporting?
