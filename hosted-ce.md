@@ -20,19 +20,21 @@ Here are the basic system requirements:
 
 Setup and installation process consists of the following steps:
 
-* Consultation call to collect system details.  We'll need the following information:
+<ul>
+<li> Consultation call to collect system details.  We'll need the following information:</li>
    <ul>
    <li>Cluster name</li>
    <li>IP address for cluster</li>
    <li>Technical contact information for cluster</li>
    <li>Technical information on cluster (batch system, OS, location of scratch space, number of slots available for OSG)</li>
    </ul>
-* Create Unix login account for the OSG service
-* Install public SSH keys for the service
-* We configure the OSG service with your system details
-* We validate operation with a set of test jobs
-* We configure central OSG services to schedule jobs for science communities you support
-* (Optional): we can assist you in installing and setting up the Squid and OASIS software on your cluster to support application software repositories
+<li> Create Unix login account for the OSG service</li>
+<li> Install public SSH keys for the service</li>
+<li> We configure the OSG service with your system details</li>
+<li> We validate operation with a set of test jobs</li>
+<li> We configure central OSG services to schedule jobs for science communities you support</li>
+<li> (Optional): we can assist you in installing and setting up the Squid and OASIS software on your cluster to support application software repositories</li>
+</ul>
 
 ## Which Science Communities and Institutions am I supporting?
 
