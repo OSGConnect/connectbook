@@ -10,7 +10,6 @@ OSG offers a *managed service option* to connect a campus HPC/HTC cluster to the
 ## Requirements
 
 Here are the basic system requirements:
-
 * Cluster operating system must be RHEL 6.x, 7.x or CentOS 6.x, 7.x or Scientific Linux 6.x, 7.x 
 * A standard Unix account on your system's login server. The OSG service will use this account and submit to your batch queue in a manner you define.
 * SSH access to this account via public SSH keys.
@@ -19,11 +18,10 @@ Here are the basic system requirements:
 ## Setup Process
 
 Setup and installation process consists of the following steps:
-  
 * Consultation call to collect system details.  We'll need the following information:
    <ul>
    <li>Cluster name</li>
-   <li>Address for cluster</li>
+   <li>IP address for cluster</li>
    <li>Technical contact information for cluster</li>
    <li>Technical information on cluster (batch system, OS, location of scratch space, number of slots available for OSG)</li>
    </ul>
@@ -32,7 +30,7 @@ Setup and installation process consists of the following steps:
 * We configure the OSG service with your system details
 * We validate operation with a set of test jobs
 * We configure central OSG services to schedule jobs for science communities you support
-* (Optional): we can assist you in installing and setting up the Squid and OASIS software on your cluster 
+* (Optional): we can assist you in installing and setting up the Squid and OASIS software on your cluster to support application software repositories
 
 ## Which Science Communities and Institutions am I supporting?
 
