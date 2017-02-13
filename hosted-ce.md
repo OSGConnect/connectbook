@@ -40,7 +40,7 @@ The OSG provides monitoring to view which communities are accessing your site, t
 
 ![fig gracc](https://raw.githubusercontent.com/OSGConnect/connectbook/master/images/screenshot_2979.png)
 
-
+<br/>
 ## **Optional**: Providing Access to Application Software Using OASIS
 
 Many OSG communities use software modules provided by their collaborations or by
@@ -54,7 +54,6 @@ are needed:
 * On each compute node, installation of the OASIS software package and associated FUSE kernel modules
 * Local scratch space of at least 10 GB (preferably 22GB) on compute nodes for caching OASIS data.
 
-<br/>
 ### Install the OSG Packaged Frontier Squid Service
 
 OSG has a yum repository with rpms of the OSG Frontier Squid service.  The rpms
@@ -62,7 +61,6 @@ include configuration files that allow Squid to access certified OSG software
 repositories.  Instructions on setting up Frontier Squid are available 
 [here](https://twiki.grid.iu.edu/bin/view/Documentation/Release3/InstallFrontierSquid).
 
-<br/>
 ### Install the OSG OASIS Software on Your Cluster Compute Servers
 
 OSG also provides rpms for the OASIS software in it's yum repositories.
