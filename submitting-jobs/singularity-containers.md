@@ -94,7 +94,7 @@ result is an unpacked image under */cvmfs/singularity.opensciencegrid.org/*
 
 To get your images included, please either create a git pull request against
 *docker_images.txt* in the
-[cvmfs-singularity-sync repository](https://github.com/bbockelm/cvmfs-singularity-sync), 
+[cvmfs-singularity-sync repository](https://github.com/opensciencegrid/cvmfs-singularity-sync), 
 or contact
 [user-support@opensciencegrid.org](mailto:user-support@opensciencegrid.org)
 and we can help you.
