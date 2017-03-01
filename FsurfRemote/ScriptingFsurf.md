@@ -43,7 +43,7 @@ submit each subject for processing using Fsurf.
 First, we'll generate a list of subjects.  Assuming, the scans that we'd like to
 process are at `~/scans`, run:
 
-    $ for i in `ls ~/scans`; do python -c 'import os,sys;print(os.path.realpath(sys.argv[1]))' $i; done > scan_list
+    $ for i in `ls ~/scans/*`; do python -c 'import os,sys;print(os.path.realpath(sys.argv[1]))' $i; done > scan_list
     
 This will generate a file with each scan on a separate line.  Now edit the
 file using a text editor and add the subject for each scan file.  After you're
@@ -66,13 +66,13 @@ Open a file called `submit_multiple.sh` in your text editor and cut and paste
 the following in it :
 
      #/bin/bash
-     
-     for line in `cat $1`;
+
+     while IFS= read -r line;
      do
        input_file=`echo $line | cut -f 1 -d' '`
        subject=`echo $line | cut -f 2 -d' '`
        ./fsurf submit --input=$input_file --subject=$subject --defaced --deidentified
-     done
+     done < "$1"     
      
 Now make the script executable and run it:
 

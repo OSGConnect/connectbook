@@ -62,7 +62,12 @@ quality result.  This section shows how to run this workflow.
 
 We will create a workflow to process `MRN_3` subject using `fsurf` and multiple
 input files. We'll assume that the input files for `MRN_3` are called
-`MRN_3_defaced1.mgz`, and `MRN_3_defaced2.mgz`.
+`MRN_3_defaced1.mgz`, and `MRN_3_defaced2.mgz`. Download them by running:
+
+     $  curl -L -o MRN_3_defaced1.mgz 'http://stash.osgconnect.net/+fsurf/MRN_3_defaced1.mgz'
+     $  curl -L -o MRN_3_defaced2.mgz 'http://stash.osgconnect.net/+fsurf/MRN_3_defaced2.mgz'
+
+Then submit to the FSurf service
 
      $ ./fsurf submit --subject='MRN_3' --input='MRN_3_defaced1.mgz' --input='MRN_3_defaced2.mgz'
 
@@ -98,7 +103,8 @@ generated from a MGZ file or from an existing subject directory in FreeSurfer.
 #### Getting a Subject Directory File From a MGZ File
 
 If you are starting with a MRI scan in mgz format,
-you can run `recon-all -s SUBJECT -i SUBJECT_FILE` where `SUBJECT` is
+you can run `recon-all -s SUBJECT -i SUBJECT_FILE` on your computer using a
+local installation of FreeSurfer.  In the example, `SUBJECT` is
 the subject name (e.g. `MRN_3`) and `SUBJECT_FILE` is the name of the scan file
 (e.g. `MRN_3_defaced.mgz`).  Once recon-all has completed, do the following:
 
