@@ -136,7 +136,7 @@ Now we will create a workflow that will run just the motion correction for the `
 subject using `fsurf`. Unlike the previous workflows, this workflow uses a zip file with the 
 contents of a subject dir instead of a mgz file. To create this workflow, you'll need to run:
 
-     $ ./fsurf submit --subject='MRN_3' --subject-dir='MRN_3_subject.zip' --freesurfer-options='-motioncor'
+     $ ./fsurf submit --subject='MRN_3' --input='MRN_3_subject.zip' --freesurfer-options='-motioncor'
 
 Note, that the options for FreeSurfer are surrounded by quotes and are given using the 
 equal sign.  You need to do this so that the Fsurf script does not interpret them as options

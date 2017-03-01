@@ -62,7 +62,7 @@ The submit command accepts the following options:
 | --subject | Name of subject to process.  | 
 | --dir | <b>(Fsurf v1.x)</b> Directory containing MRI scans for subject.  `fsurf` expects the input file to be named `subject_defaced.mgz` where `subject` is the subject name given by the `--subject` option. |
 | --input | <b>(Fsurf v2.x)</b> Path to input for workflow (subject directory or MRI scan). |
-| --freesurfer-options | <b>(Fsurf v2.x)</b> Options to pass to FreeSurfer. Arguments must be in quotes and be specifed as --freesurfer-options='-option1 -option2'. Must be used in conjunction with --subject-dir. |
+| --freesurfer-options | <b>(Fsurf v2.x)</b> Options to pass to FreeSurfer. Arguments must be in quotes and be specifed as --freesurfer-options='-option1 -option2'. |
 | --dualcore | Use 2 cores rather than 8 for per hemisphere processing.  This allow the processing to complete when 8 core systems are not available |
 | --defaced | Indicates that the scan is defaced |
 | --deidentified | Indicates that the scan is deidentified |

@@ -17,7 +17,7 @@ Fsurf 2.0 adds a few new features:
 ### Inputs for submission 
 
 Fsurf 2.0 changed how inputs are specified.  When submitting a workflow, the inputs
-must be specified using `--input-file` or `--subject-dir`.  Previously, Fsurf required 
+must be specified using `--input`.  Previously, Fsurf required 
 that the input files have `[subject]_defaced.mri` as their name.  This is no longer
 the case. 
 
