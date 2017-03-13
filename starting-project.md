@@ -65,6 +65,6 @@ To set the default project, type
 Accounting Name
 ---------------
 
-The project's resource usage appears in the OSG accounting system,[GRACC](<https://gracc.opensciencegrid,org/>). 
+The project's resource usage appears in the OSG accounting system, [GRACC](<https://gracc.opensciencegrid.org/>). 
 
 
