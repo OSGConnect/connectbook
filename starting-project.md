@@ -26,9 +26,6 @@ To start a project in OSG Connect, visit <https://osgconnect.net/newproject>.
 -    PI Email
 -    PI Organization
 -    PI Department
--    Join Date
--    Sponsor
--    OSG Sponsor Contact
 -    Project Contact
 -    Project Contact Email
 -    Telephone Number
@@ -48,7 +45,7 @@ The project's principal investigator, or his/her delegate, is responsible for
 project membership. We will consult the PI or contact for group membership
 request approvals. The PI may also be assigned an "Administrator" role of the
 subgroup, and can invite OSG Connect members to the group directly. [Contact
-us](<mailto:connect-support@opensciencegrid.org>) if this interests you.
+us](<mailto:user-support@opensciencegrid.org>) if this interests you.
 
 ProjectName in HTCondor Jobs
 ----------------------------
@@ -68,8 +65,6 @@ To set the default project, type
 Accounting Name
 ---------------
 
-The project's resource usage appears in the OSG accounting system (Gratia) with
-its name converted to ALL CAPS. For example, a project named BiomechAnalysis
-would become BIOMECHANALYSIS in Gratia.
+The project's resource usage appears in the OSG accounting system,[GRACC](<https://gracc.opensciencegrid,org/>). 
 
 
