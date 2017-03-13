@@ -71,7 +71,10 @@ the following in it :
      do
        input_file=`echo $line | cut -f 1 -d' '`
        subject=`echo $line | cut -f 2 -d' '`
-       ./fsurf submit --input=$input_file --subject=$subject --defaced --deidentified
+       if [[ ! -z ${input_file} && ! -z ${subject} ]];
+       then
+         ./fsurf submit --input=$input_file --subject=$subject --defaced --deidentified
+       fi
      done < "$1"     
      
 Now make the script executable and run it:
