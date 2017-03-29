@@ -77,7 +77,7 @@ If you are unsure how to generate a SSH-key with your preferred Windows SSH clie
 
 ## Add SSH-key to login nodes
 
-To add your new SSH public key to the login nodes you can use two methods:
+You can add your new SSH public key to the login nodes by copy-pasting in "/home/username/.ssh/authorized_keys" or by adding the key on the OSG Connect website. 
 
 ### OSGConnect Website (Preferred)
 
