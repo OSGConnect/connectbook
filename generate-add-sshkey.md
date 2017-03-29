@@ -86,7 +86,7 @@ Follow the instructions here to generate keys:
 https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/#platform-windows
 
 
-### Step 2: Add SSH-key to login nodes
+## Step 2: Add SSH-key to login nodes
 
 You can add your new SSH public key to the login nodes by adding the public key to your Globus profile on the OSG Connect website or by copy-pasting it into `/home/<your_osg_connect_username>/.ssh/authorized_keys`. Detailed instructions are below.
 
