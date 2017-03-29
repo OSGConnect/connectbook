@@ -1,15 +1,15 @@
 [title]: - "Generate and Add an SSH key"
 
 
-## Generating SSH-Keys
+# Generating SSH-Keys
 
-### Online key generation tool
+## Online key generation tool
 If you're not familiar with SSH key generation, you can [use our key generation tool](<https://osgconnect.net/keygen>). This will create a *key
     pair* — a public key and a matching private key — and allow you to copy or download them.
 On your unix-based (Linux/Mac) laptop or desktop, save the private key in /home/<local_user_name>/.ssh/id_rsa
 and save the public key in /home/<local_user_name>/.ssh/id_rsa.pub. You should not share the private key with anyone or with any machine. The public key will be added to the submit host(s) for login access. 
 
-### Unix-based operating system (Linux/Mac)
+## Unix-based operating system (Linux/Mac)
 On your local machine:
 
 ```
@@ -52,9 +52,9 @@ The key's randomart image is:
 +-----------------+
 ```
 
-### Windows
+## Windows
 
-#### Putty
+### Putty
 
 Using `PuTTYgen`, follow these steps:
 
@@ -76,18 +76,18 @@ Using `PuTTYgen`, follow these steps:
 
 ![alt text](https://raw.githubusercontent.com/OSGConnect/connectbook/master/images/puttygen_ssh_key.png "PuttyGen SSH Window")
 
-#### Git Bash
+### Git Bash
 
 Follow the instructions here to generate keys:
 
 https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/#platform-windows
 
 
-## Add SSH-key to login nodes
+# Add SSH-key to login nodes
 
 You can add your new SSH public key to the login nodes by copy-pasting to a file under .ssh directory or by adding the key on the OSG Connect website. 
 
-### OSGConnect Website (Preferred)
+## OSGConnect Website (Preferred)
 
 To add your public key to the Globus Online interface:
 
@@ -105,7 +105,7 @@ To add your public key to the Globus Online interface:
 
 The key is now added to your profile in Globus Online. We will add to the login nodes within a couple hours
 
-### Copy-Pasting
+## Copy-Pasting
 
 On `login01.osgconnect.net`:
 
@@ -125,7 +125,7 @@ chmod go-w ~/
 chmod 600 ~/.ssh/authorized_keys
 ```
 
-### ssh-copy-id (only Unix-based)
+## ssh-copy-id (only Unix-based)
 
 Execute: 
 
@@ -133,9 +133,9 @@ Execute:
 ssh-copy-id <osg_connect_username>@login01.osgconnect.net
 ```
 
-## Troubleshooting
+# Troubleshooting
 
-### Permission denied (publickey)
+## Permission denied (publickey)
 
 If ssh returns the error 
 
@@ -153,4 +153,21 @@ chmod 600 ~/.ssh/authorized_keys
 
 on `login01.osgconnect.net`.
 
+<!-- In the Manage Identities screen, you may add an SSH key to your Globus 
+account. Not only will this facilitate scripted Globus file transfers, it also
+will help with logins to the OSG Connect job submission server. 
 
+-   If you already have an SSH key you're happy using, upload the public key
+    now.
+
+-   If you want or need to create a new SSH key and you're comfortable with an
+    SSH key generation tool, you can generate a new key for OSG Connect and
+    upload its public key.
+
+-   If you're not familiar with SSH key generation, you can [use our key
+    generation tool](<https://osgconnect.net/keygen>). This will create a *key
+    pair* — a public key and a matching private key — and allow you to copy or
+    download them.
+
+No matter which of these options you use, you should click **Add SSH Public
+Key**, then paste in your public key and submit. -->
