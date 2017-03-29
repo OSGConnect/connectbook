@@ -2,7 +2,9 @@
 
 [TOC]
 
-To improve security to our infrastructure, we are switching to a SSH key-based login model rather than the current password-based model. If you have not added an SSH key to our infrastructure or your user profile before, you will need to add one to be able to login into the OSG Connect submit host (login.osgconnect.net) in the future. You need to follow a two step process:
+We are switching to a SSH key-based login model rather than the current password-based model to improve the security of our infrastructure. If you have not added an SSH key to our infrastructure or your user profile before, you will need to add one to be able to login into the OSG Connect submit host (login.osgconnect.net).
+
+You need to follow a two-step process:
 
 1. Generate SSH key pair.  
 
@@ -18,7 +20,7 @@ or using your Windows SSH client
 
 We will discuss how to generate a SSH key pair on both Unix-based and Windows. 
 
-Please note: The key pair consist of a private key and a public key. Keep the private key only on machines that you have direct access to, i.e. your local machine (your laptop or desktop).
+Please note: The key pair consist of a private key and a public key. Keep the private key on machines that you have direct access to, i.e. your local machine (your laptop or desktop).
 
 ### Unix-based operating system (Linux/Mac)
 
