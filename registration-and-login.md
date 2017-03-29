@@ -218,7 +218,8 @@ To add your public key to the Globus Online interface:
 
 6. Click "Add Key"
 
-The key is now added to your profile in Globus Online. We will add to the login nodes within a couple hours
+The key is now added to your profile in Globus Online. This will automatically
+be added to the login nodes within a couple hours.
 
 ### Copy-Pasting
 
