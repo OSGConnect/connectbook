@@ -12,7 +12,9 @@ After completing the process, you can log in from local machine (your laptop or 
 
      ssh <your_osg_connect_username>@login.osgconnect.net
 
-## Step 1: Generating SSH-Keys
+or using your Windows SSH client
+
+## Step 1: Generating SSH Keys
 
 We will discuss how to generate a SSH key pair on both Unix-based and Windows. 
 
@@ -86,7 +88,7 @@ Follow the instructions here to generate keys:
 https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/#platform-windows
 
 
-### Step 2: Add SSH-key to login nodes
+## Step 2: Add SSH key to login nodes
 
 You can add your new SSH public key to the login nodes by adding the public key to your Globus profile on the OSG Connect website or by copy-pasting it into `/home/<your_osg_connect_username>/.ssh/authorized_keys`. Detailed instructions are below.
 
@@ -124,7 +126,7 @@ Finally execute:
      chmod go-w ~/
      chmod 600 ~/.ssh/authorized_keys
 
-#### ssh-copy-id (only Unix-based)
+#### `ssh-copy-id` (only Unix-based)
 
 Execute: 
 
@@ -134,11 +136,11 @@ Execute:
 
 #### Permission denied (publickey)
 
-If ssh returns the error 
+If SSH returns the error 
 
      Permission denied (publickey).
 
-This most likely means that the remote permissions are too open. Please execute:
+This most likely means that the remote permissions are too unconstrained. Please execute:
 
      chmod go-w ~/
      chmod 700 ~/.ssh
