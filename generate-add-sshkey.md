@@ -2,17 +2,21 @@
 
 [TOC]
 
-You need to set up an ssh key to log in to the submit host (login.osgconnect.net). 
+To improve security to our infrastructure, we are switching to a SSH key-based login model rather than the current password-based model. If you have not added an SSH key to our infrastructure or your user profile before, you will need to add one to be able to login into the OSG Connect submit host (login.osgconnect.net) in the future. You need to follow a two step process:
 
-* Step 1: Gernate ssh keypair. The keypair consist of a private key and a public key. Keep the keypair in your local machine (your laptop or desktop). 
+1. Generate SSH key pair.  
 
-* Step 2: Add your public key to the submit host. You can do this either by updating your profile on OSG Connect website or by editing the file `/home/username/.ssh/authorized_keys` that is located in the submit host. 
+2. Add your public key to the submit host. 
 
-After comoleting the above two steps, you can log in from local machine (your laptop or desktop) to the submit host (login.osgconnect.net) using ssh
+After completing the process, you can log in from local machine (your laptop or desktop) to the OSG Connect submit host using ssh:
 
-     ssh username@login.osgconnect.net
+     ssh <your_osg_connect_username>@login.osgconnect.net
 
 ## Step 1: Generating SSH-Keys
+
+We will discuss how to generate a SSH key pair on both Unix-based and Windows. 
+
+Please note: The key pair consist of a private key and a public key. Keep the private key only on machines that you have direct access to, i.e. your local machine (your laptop or desktop).
 
 ### Unix-based operating system (Linux/Mac)
 
@@ -23,7 +27,6 @@ On your local machine:
      ssh-keygen -t rsa
 
 The last command will produce a prompt similar to
-
 
      Generating public/private rsa key pair.
      Enter file in which to save the key (/home/<local_user_name>/.ssh/id_rsa):
