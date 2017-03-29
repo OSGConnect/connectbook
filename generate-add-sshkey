@@ -153,21 +153,4 @@ chmod 600 ~/.ssh/authorized_keys
 
 on `login01.osgconnect.net`.
 
-<!-- In the Manage Identities screen, you may add an SSH key to your Globus 
-account. Not only will this facilitate scripted Globus file transfers, it also
-will help with logins to the OSG Connect job submission server. 
 
--   If you already have an SSH key you're happy using, upload the public key
-    now.
-
--   If you want or need to create a new SSH key and you're comfortable with an
-    SSH key generation tool, you can generate a new key for OSG Connect and
-    upload its public key.
-
--   If you're not familiar with SSH key generation, you can [use our key
-    generation tool](<https://osgconnect.net/keygen>). This will create a *key
-    pair* — a public key and a matching private key — and allow you to copy or
-    download them.
-
-No matter which of these options you use, you should click **Add SSH Public
-Key**, then paste in your public key and submit. -->
