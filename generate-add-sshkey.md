@@ -1,13 +1,13 @@
 [title]: - "Generate ssh keypair and add the public key to your account"
-
+[TOC]
 You need to set up an ssh key to log in to the submit host (login.osgconnect.net). 
 
 * Step 1: Gernate ssh keypair. The keypair consist of a private key and a public key.
 * Steo 2: Add your public key to the submit host. You can do this either by updating your profile on OSG Connect website or by editing the file `/home/username/.ssh/authorized_keys` that is located in the submit host. 
 
-# Generating SSH-Keys
+## Step 1: Generating SSH-Keys
 
-## Unix-based operating system (Linux/Mac)
+### Unix-based operating system (Linux/Mac)
 
 On your local machine:
 
@@ -45,9 +45,9 @@ When everything has successfully completed, you the prompted will read something
      |.  oo.o .        |
      +-----------------+
 
-## Windows
+### Windows
 
-### Putty
+#### Putty
 
 Using `PuTTYgen`, follow these steps:
 
@@ -69,21 +69,18 @@ Using `PuTTYgen`, follow these steps:
 
 ![alt text](https://raw.githubusercontent.com/OSGConnect/connectbook/master/images/puttygen_ssh_key.png "PuttyGen SSH Window")
 
-### Git Bash
+#### Git Bash
 
 Follow the instructions here to generate keys:
 
 https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/#platform-windows
 
-### Other clients
 
-If you are unsure how to generate a SSH-key with your preferred Windows SSH client, please contact the Helpdesk.
-
-# Add SSH-key to login nodes
+### Step 2: Add SSH-key to login nodes
 
 You can add your new SSH public key to the login nodes by adding the public key to your Globus profile on the OSG Connect website or by copy-pasting it into `/home/<your_osg_connect_username>/.ssh/authorized_keys`. Detailed instructions are below.
 
-## OSGConnect Website (Preferred)
+#### OSGConnect Website (Preferred)
 
 To add your public key to the Globus Online interface:
 
@@ -101,7 +98,7 @@ To add your public key to the Globus Online interface:
 
 The key is now added to your profile in Globus Online. We will add to the login nodes within a couple hours.
 
-## Copy-Pasting
+#### Copy-Pasting
 
 On `login.osgconnect.net`:
 
@@ -117,15 +114,15 @@ Finally execute:
      chmod go-w ~/
      chmod 600 ~/.ssh/authorized_keys
 
-## ssh-copy-id (only Unix-based)
+#### ssh-copy-id (only Unix-based)
 
 Execute: 
 
      ssh-copy-id <osg_connect_username>@login.osgconnect.net
 
-# Troubleshooting
+### Troubleshooting
 
-## Permission denied (publickey)
+#### Permission denied (publickey)
 
 If ssh returns the error 
 
@@ -139,3 +136,5 @@ This most likely means that the remote permissions are too open. Please execute:
 
 on `login.osgconnect.net`.
 
+## Getting Help 
+For assistance or questions, please email the OSG User Support team  at <mailto:user-support@opensciencegrid.org> or visit the [help desk and community forums](http://support.opensciencegrid.org).
