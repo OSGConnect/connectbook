@@ -1,5 +1,8 @@
 [title]: - "Generate and add an SSH key to your account"
 
+You need to autherize via an ssh key to log in to the submit host (login.osgconnect.net). 
+Step 1: You gernate an ssh keys - a public key and a private key. 
+Steo 2: Add your public key to the submit host. You can do this either by updating your profile on OSG Connect website or by editing the file `/home/username/.ssh/authorized_keys` that is located in the submit host. 
 
 # Generating SSH-Keys
 
@@ -99,7 +102,7 @@ The key is now added to your profile in Globus Online. We will add to the login 
 
 ## Copy-Pasting
 
-On `login01.osgconnect.net`:
+On `login.osgconnect.net`:
 
      mkdir ~/.ssh
      chmod 700 ~/.ssh
@@ -117,7 +120,7 @@ Finally execute:
 
 Execute: 
 
-     ssh-copy-id <osg_connect_username>@login01.osgconnect.net
+     ssh-copy-id <osg_connect_username>@login.osgconnect.net
 
 # Troubleshooting
 
@@ -133,5 +136,5 @@ This most likely means that the remote permissions are too open. Please execute:
      chmod 700 ~/.ssh
      chmod 600 ~/.ssh/authorized_keys
 
-on `login01.osgconnect.net`.
+on `login.osgconnect.net`.
 
