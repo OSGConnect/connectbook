@@ -4,8 +4,13 @@
 
 You need to set up an ssh key to log in to the submit host (login.osgconnect.net). 
 
-* Step 1: Gernate ssh keypair. The keypair consist of a private key and a public key.
-* Steo 2: Add your public key to the submit host. You can do this either by updating your profile on OSG Connect website or by editing the file `/home/username/.ssh/authorized_keys` that is located in the submit host. 
+* Step 1: Gernate ssh keypair. The keypair consist of a private key and a public key. Keep the keypair in your local machine (your laptop or desktop). 
+
+* Step 2: Add your public key to the submit host. You can do this either by updating your profile on OSG Connect website or by editing the file `/home/username/.ssh/authorized_keys` that is located in the submit host. 
+
+After comoleting the above two steps, you can log in from local machine (your laptop or desktop) to the submit host (login.osgconnect.net) using ssh
+
+     ssh username@login.osgconnect.net
 
 ## Step 1: Generating SSH-Keys
 
