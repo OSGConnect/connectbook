@@ -1,60 +1,49 @@
-[title]: - "Generate and Add an SSH key"
+[title]: - "Generate and add an SSH key to your account"
 
 
-# Generating SSH-Keys
+## Generating SSH-Keys
 
-## Online key generation tool
-If you're not familiar with SSH key generation, you can [use our key generation tool](<https://osgconnect.net/keygen>). This will create a *key
-    pair* — a public key and a matching private key — and allow you to copy or download them.
-On your unix-based (Linux/Mac) laptop or desktop, save the private key in /home/<local_user_name>/.ssh/id_rsa
-and save the public key in /home/<local_user_name>/.ssh/id_rsa.pub. You should not share the private key with anyone or with any machine. The public key will be added to the submit host(s) for login access. 
+### Unix-based operating system (Linux/Mac)
 
-## Unix-based operating system (Linux/Mac)
 On your local machine:
 
-```
-mkdir ~/.ssh
-chmod 700 ~/.ssh
-ssh-keygen -t rsa
-```
+     mkdir ~/.ssh
+     chmod 700 ~/.ssh
+     ssh-keygen -t rsa
+
 The last command will produce a prompt similar to
 
-```
-Generating public/private rsa key pair.
-Enter file in which to save the key (/home/<local_user_name>/.ssh/id_rsa):
-```
+
+     Generating public/private rsa key pair.
+     Enter file in which to save the key (/home/<local_user_name>/.ssh/id_rsa):
 
 Unless you want to change the location of the key, continue by pressing enter. Now you will be asked for a passphrase. This passphrase is not necessary, but a good security measure in case your private key gets stolen. We strongly recommend that you set a passphrase:
 
-```
-Enter passphrase (empty for no passphrase):
-Enter same passphrase again:
-```
+     Enter passphrase (empty for no passphrase):
+     Enter same passphrase again:
 
 When everything has successfully completed, you the prompted will read something like: 
 
-```
-Your identification has been saved in /home/<local_user_name>/.ssh/id_rsa.
-Your public key has been saved in /home/<local_user_name>/.ssh/id_rsa.pub.
-The key fingerprint is:
-ae:89:72:0b:85:da:5a:f4:7c:1f:c2:43:fd:c6:44:38 myname@mymac.local
-The key's randomart image is:
-+--[ RSA 2048]----+
-|                 |
-|         .       |
-|        E .      |
-|   .   . o       |
-|  o . . S .      |
-| + + o . +       |
-|. + o = o +      |
-| o...o * o       |
-|.  oo.o .        |
-+-----------------+
-```
+     Your identification has been saved in /home/<local_user_name>/.ssh/id_rsa.
+     Your public key has been saved in /home/<local_user_name>/.ssh/id_rsa.pub.
+     The key fingerprint is:
+     ae:89:72:0b:85:da:5a:f4:7c:1f:c2:43:fd:c6:44:38 myname@mymac.local
+     The key's randomart image is:
+     +--[ RSA 2048]----+
+     |                 |
+     |         .       |
+     |        E .      |
+     |   .   . o       |
+     |  o . . S .      |
+     | + + o . +       |
+     |. + o = o +      |
+     | o...o * o       |
+     |.  oo.o .        |
+     +-----------------+
 
-## Windows
+### Windows
 
-### Putty
+#### Putty
 
 Using `PuTTYgen`, follow these steps:
 
@@ -76,18 +65,21 @@ Using `PuTTYgen`, follow these steps:
 
 ![alt text](https://raw.githubusercontent.com/OSGConnect/connectbook/master/images/puttygen_ssh_key.png "PuttyGen SSH Window")
 
-### Git Bash
+#### Git Bash
 
 Follow the instructions here to generate keys:
 
 https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/#platform-windows
 
+#### Other clients
 
-# Add SSH-key to login nodes
+If you are unsure how to generate a SSH-key with your preferred Windows SSH client, please contact the Helpdesk.
 
-You can add your new SSH public key to the login nodes by copy-pasting to a file under .ssh directory or by adding the key on the OSG Connect website. 
+## Add SSH-key to login nodes
 
-## OSGConnect Website (Preferred)
+To add your new SSH public key to the login nodes you can use two methods:
+
+### OSGConnect Website (Preferred)
 
 To add your public key to the Globus Online interface:
 
@@ -105,69 +97,41 @@ To add your public key to the Globus Online interface:
 
 The key is now added to your profile in Globus Online. We will add to the login nodes within a couple hours
 
-## Copy-Pasting
+### Copy-Pasting
 
 On `login01.osgconnect.net`:
 
-```
-mkdir ~/.ssh
-chmod 700 ~/.ssh
-cd ~/.ssh
-touch authorized_keys
-```
+     mkdir ~/.ssh
+     chmod 700 ~/.ssh
+     cd ~/.ssh
+     touch authorized_keys
 
 Open `authorized_keys` in your favorite text editor, i.e. `vim`, `emacs`, `nano`, `ed`, and paste the public key (contents of `/home/<local_user_name>/.ssh/id_rsa.pub` for Unix-y or output from the `PuTTYgen` window), into the file and save it. 
 
 Finally execute:
 
-```
-chmod go-w ~/
-chmod 600 ~/.ssh/authorized_keys
-```
+     chmod go-w ~/
+     chmod 600 ~/.ssh/authorized_keys
 
-## ssh-copy-id (only Unix-based)
+### ssh-copy-id (only Unix-based)
 
 Execute: 
 
-```
-ssh-copy-id <osg_connect_username>@login01.osgconnect.net
-```
+     ssh-copy-id <osg_connect_username>@login01.osgconnect.net
 
-# Troubleshooting
+## Troubleshooting
 
-## Permission denied (publickey)
+### Permission denied (publickey)
 
 If ssh returns the error 
 
-```
-Permission denied (publickey).
-```
+     Permission denied (publickey).
 
 This most likely means that the remote permissions are too open. Please execute:
 
-```
-chmod go-w ~/
-chmod 700 ~/.ssh
-chmod 600 ~/.ssh/authorized_keys
-```
+     chmod go-w ~/
+     chmod 700 ~/.ssh
+     chmod 600 ~/.ssh/authorized_keys
 
 on `login01.osgconnect.net`.
 
-<!-- In the Manage Identities screen, you may add an SSH key to your Globus 
-account. Not only will this facilitate scripted Globus file transfers, it also
-will help with logins to the OSG Connect job submission server. 
-
--   If you already have an SSH key you're happy using, upload the public key
-    now.
-
--   If you want or need to create a new SSH key and you're comfortable with an
-    SSH key generation tool, you can generate a new key for OSG Connect and
-    upload its public key.
-
--   If you're not familiar with SSH key generation, you can [use our key
-    generation tool](<https://osgconnect.net/keygen>). This will create a *key
-    pair* — a public key and a matching private key — and allow you to copy or
-    download them.
-
-No matter which of these options you use, you should click **Add SSH Public
-Key**, then paste in your public key and submit. -->
