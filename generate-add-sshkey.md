@@ -136,9 +136,9 @@ Execute:
 
      ssh-copy-id <osg_connect_username>@login.osgconnect.net
 
-### Troubleshooting
+## Troubleshooting
 
-#### Permission denied (publickey)
+### Permission denied (publickey)
 
 If SSH returns the error 
 
