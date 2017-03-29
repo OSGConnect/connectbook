@@ -1,9 +1,9 @@
 [title]: - "Generate and add an SSH key to your account"
 
 
-## Generating SSH-Keys
+# Generating SSH-Keys
 
-### Unix-based operating system (Linux/Mac)
+## Unix-based operating system (Linux/Mac)
 
 On your local machine:
 
@@ -41,9 +41,9 @@ When everything has successfully completed, you the prompted will read something
      |.  oo.o .        |
      +-----------------+
 
-### Windows
+## Windows
 
-#### Putty
+### Putty
 
 Using `PuTTYgen`, follow these steps:
 
@@ -65,27 +65,27 @@ Using `PuTTYgen`, follow these steps:
 
 ![alt text](https://raw.githubusercontent.com/OSGConnect/connectbook/master/images/puttygen_ssh_key.png "PuttyGen SSH Window")
 
-#### Git Bash
+### Git Bash
 
 Follow the instructions here to generate keys:
 
 https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/#platform-windows
 
-#### Other clients
+### Other clients
 
 If you are unsure how to generate a SSH-key with your preferred Windows SSH client, please contact the Helpdesk.
 
-## Add SSH-key to login nodes
+# Add SSH-key to login nodes
 
-You can add your new SSH public key to the login nodes by copy-pasting in "/home/username/.ssh/authorized_keys" or by adding the key on the OSG Connect website. 
+You can add your new SSH public key to the login nodes by adding the public key to your Globus profile on the OSG Connect website or by copy-pasting it into `/home/<your_osg_connect_username>/.ssh/authorized_keys`. Detailed instructions are below.
 
-### OSGConnect Website (Preferred)
+## OSGConnect Website (Preferred)
 
 To add your public key to the Globus Online interface:
 
 1. Go to www.osgconnect.net
 
-2. Go to "Update Profile"
+2. Go to "Update Profile" under your username
 
 3. Click on "Manage SSH and X.509 keys".
 
@@ -95,9 +95,9 @@ To add your public key to the Globus Online interface:
 
 6. Click "Add Key"
 
-The key is now added to your profile in Globus Online. We will add to the login nodes within a couple hours
+The key is now added to your profile in Globus Online. We will add to the login nodes within a couple hours.
 
-### Copy-Pasting
+## Copy-Pasting
 
 On `login01.osgconnect.net`:
 
@@ -106,22 +106,22 @@ On `login01.osgconnect.net`:
      cd ~/.ssh
      touch authorized_keys
 
-Open `authorized_keys` in your favorite text editor, i.e. `vim`, `emacs`, `nano`, `ed`, and paste the public key (contents of `/home/<local_user_name>/.ssh/id_rsa.pub` for Unix-y or output from the `PuTTYgen` window), into the file and save it. 
+Open `authorized_keys` in your favorite text editor, i.e. `vim`, `emacs`, `nano`, `ed`, and paste the public key (contents of `/home/<local_username>/.ssh/id_rsa.pub` on Linux, `/Users/<local_username>/.ssh/id_rsa.pub` on Mac, or output from the `PuTTYgen` window above, into the file and save it. 
 
 Finally execute:
 
      chmod go-w ~/
      chmod 600 ~/.ssh/authorized_keys
 
-### ssh-copy-id (only Unix-based)
+## ssh-copy-id (only Unix-based)
 
 Execute: 
 
      ssh-copy-id <osg_connect_username>@login01.osgconnect.net
 
-## Troubleshooting
+# Troubleshooting
 
-### Permission denied (publickey)
+## Permission denied (publickey)
 
 If ssh returns the error 
 
