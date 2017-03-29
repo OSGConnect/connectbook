@@ -130,45 +130,39 @@ Generate and Add an SSH key
 
 On your local machine:
 
-```
-mkdir ~/.ssh
-chmod 700 ~/.ssh
-ssh-keygen -t rsa
-```
+     mkdir ~/.ssh
+     chmod 700 ~/.ssh
+     ssh-keygen -t rsa
+
 The last command will produce a prompt similar to
 
-```
-Generating public/private rsa key pair.
-Enter file in which to save the key (/home/<local_user_name>/.ssh/id_rsa):
-```
+
+     Generating public/private rsa key pair.
+     Enter file in which to save the key (/home/<local_user_name>/.ssh/id_rsa):
 
 Unless you want to change the location of the key, continue by pressing enter. Now you will be asked for a passphrase. This passphrase is not necessary, but a good security measure in case your private key gets stolen. We strongly recommend that you set a passphrase:
 
-```
-Enter passphrase (empty for no passphrase):
-Enter same passphrase again:
-```
+     Enter passphrase (empty for no passphrase):
+     Enter same passphrase again:
 
 When everything has successfully completed, you the prompted will read something like: 
 
-```
-Your identification has been saved in /home/<local_user_name>/.ssh/id_rsa.
-Your public key has been saved in /home/<local_user_name>/.ssh/id_rsa.pub.
-The key fingerprint is:
-ae:89:72:0b:85:da:5a:f4:7c:1f:c2:43:fd:c6:44:38 myname@mymac.local
-The key's randomart image is:
-+--[ RSA 2048]----+
-|                 |
-|         .       |
-|        E .      |
-|   .   . o       |
-|  o . . S .      |
-| + + o . +       |
-|. + o = o +      |
-| o...o * o       |
-|.  oo.o .        |
-+-----------------+
-```
+     Your identification has been saved in /home/<local_user_name>/.ssh/id_rsa.
+     Your public key has been saved in /home/<local_user_name>/.ssh/id_rsa.pub.
+     The key fingerprint is:
+     ae:89:72:0b:85:da:5a:f4:7c:1f:c2:43:fd:c6:44:38 myname@mymac.local
+     The key's randomart image is:
+     +--[ RSA 2048]----+
+     |                 |
+     |         .       |
+     |        E .      |
+     |   .   . o       |
+     |  o . . S .      |
+     | + + o . +       |
+     |. + o = o +      |
+     | o...o * o       |
+     |.  oo.o .        |
+     +-----------------+
 
 ### Windows
 
@@ -230,29 +224,23 @@ The key is now added to your profile in Globus Online. We will add to the login 
 
 On `login01.osgconnect.net`:
 
-```
-mkdir ~/.ssh
-chmod 700 ~/.ssh
-cd ~/.ssh
-touch authorized_keys
-```
+     mkdir ~/.ssh
+     chmod 700 ~/.ssh
+     cd ~/.ssh
+     touch authorized_keys
 
 Open `authorized_keys` in your favorite text editor, i.e. `vim`, `emacs`, `nano`, `ed`, and paste the public key (contents of `/home/<local_user_name>/.ssh/id_rsa.pub` for Unix-y or output from the `PuTTYgen` window), into the file and save it. 
 
 Finally execute:
 
-```
-chmod go-w ~/
-chmod 600 ~/.ssh/authorized_keys
-```
+     chmod go-w ~/
+     chmod 600 ~/.ssh/authorized_keys
 
 ### ssh-copy-id (only Unix-based)
 
 Execute: 
 
-```
-ssh-copy-id <osg_connect_username>@login01.osgconnect.net
-```
+     ssh-copy-id <osg_connect_username>@login01.osgconnect.net
 
 ## Troubleshooting
 
@@ -260,17 +248,13 @@ ssh-copy-id <osg_connect_username>@login01.osgconnect.net
 
 If ssh returns the error 
 
-```
-Permission denied (publickey).
-```
+     Permission denied (publickey).
 
 This most likely means that the remote permissions are too open. Please execute:
 
-```
-chmod go-w ~/
-chmod 700 ~/.ssh
-chmod 600 ~/.ssh/authorized_keys
-```
+     chmod go-w ~/
+     chmod 700 ~/.ssh
+     chmod 600 ~/.ssh/authorized_keys
 
 on `login01.osgconnect.net`.
 
