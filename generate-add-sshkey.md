@@ -1,8 +1,9 @@
-[title]: - "Generate and add an SSH key to your account"
+[title]: - "Generate ssh keypair and add the public key to your account"
 
-You need to autherize via an ssh key to log in to the submit host (login.osgconnect.net). 
-Step 1: You gernate an ssh keys - a public key and a private key. 
-Steo 2: Add your public key to the submit host. You can do this either by updating your profile on OSG Connect website or by editing the file `/home/username/.ssh/authorized_keys` that is located in the submit host. 
+You need to set up an ssh key to log in to the submit host (login.osgconnect.net). 
+
+* Step 1: Gernate ssh keypair. The keypair consist of a private key and a public key.
+* Steo 2: Add your public key to the submit host. You can do this either by updating your profile on OSG Connect website or by editing the file `/home/username/.ssh/authorized_keys` that is located in the submit host. 
 
 # Generating SSH-Keys
 
