@@ -140,12 +140,15 @@ The last command will produce a prompt similar to
      Generating public/private rsa key pair.
      Enter file in which to save the key (/home/<local_user_name>/.ssh/id_rsa):
 
-Unless you want to change the location of the key, continue by pressing enter. Now you will be asked for a passphrase. This passphrase is not necessary, but a good security measure in case your private key gets stolen. We strongly recommend that you set a passphrase:
+Unless you want to change the location of the key, continue by pressing enter.
+Now you will be asked for a passphrase. Enter a passphrase that you will be 
+able to remember and which is secure:
 
      Enter passphrase (empty for no passphrase):
      Enter same passphrase again:
 
-When everything has successfully completed, you the prompted will read something like: 
+When everything has successfully completed, the output should resemble the
+following: 
 
      Your identification has been saved in /home/<local_user_name>/.ssh/id_rsa.
      Your public key has been saved in /home/<local_user_name>/.ssh/id_rsa.pub.
@@ -223,21 +226,25 @@ be added to the login nodes within a couple hours.
 
 ### Copy-Pasting
 
-On `login01.osgconnect.net`:
+On `login01.osgconnect.net` or `login02.osgconnect.net`:
 
      mkdir ~/.ssh
      chmod 700 ~/.ssh
      cd ~/.ssh
      touch authorized_keys
 
-Open `authorized_keys` in your favorite text editor, i.e. `vim`, `emacs`, `nano`, `ed`, and paste the public key (contents of `/home/<local_user_name>/.ssh/id_rsa.pub` for Unix-y or output from the `PuTTYgen` window), into the file and save it. 
+Open `authorized_keys` in your favorite text editor, i.e. `vim`, `emacs`,
+`nano`, `ed`, and paste the public key (contents of
+`/home/<local_user_name>/.ssh/id_rsa.pub` for Unix/Linux,
+`/Users/<local_user_name>/.ssh/id_rsa.pub` for OS X, or output from the
+`PuTTYgen` window), into the file and save it. 
 
 Finally execute:
 
      chmod go-w ~/
      chmod 600 ~/.ssh/authorized_keys
 
-### ssh-copy-id (only Unix-based)
+### ssh-copy-id (Unix/Linux/OS X)
 
 Execute: 
 
@@ -258,28 +265,6 @@ This most likely means that the remote permissions are too open. Please execute:
      chmod 600 ~/.ssh/authorized_keys
 
 on `login01.osgconnect.net`.
-
-<!-- In the Manage Identities screen, you may add an SSH key to your Globus 
-account. Not only will this facilitate scripted Globus file transfers, it also
-will help with logins to the OSG Connect job submission server. It's not
-required though; you can log in with your password, too. *We will typically skip
-this in interactive workshops, and assume password use. You are encouraged to
-come back and set up an SSH key later, however.*
-
--   If you already have an SSH key you're happy using, upload the public key
-    now.
-
--   If you want or need to create a new SSH key and you're comfortable with an
-    SSH key generation tool, you can generate a new key for OSG Connect and
-    upload its public key.
-
--   If you're not familiar with SSH key generation, you can [use our key
-    generation tool](<https://osgconnect.net/keygen>). This will create a *key
-    pair* — a public key and a matching private key — and allow you to copy or
-    download them.
-
-No matter which of these options you use, you should click **Add SSH Public
-Key**, then paste in your public key and submit. -->
 
 Join a project
 --------------
