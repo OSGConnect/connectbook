@@ -1,4 +1,4 @@
-[title]: - "Generate ssh keypair and add the public key to your account"
+[title]: - "Generate SSH key pair and add the public key to your account"
 
 [TOC]
 
