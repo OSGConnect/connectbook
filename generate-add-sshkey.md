@@ -4,7 +4,7 @@
 
 ## Overview
 
-We are switching to a SSH key-based login model rather than the current password-based model to improve the security of our infrastructure. If you have not added an SSH key to our infrastructure or your user profile before, you will need to add one to be able to login into the OSG Connect submit host (login.osgconnect.net).
+Due to changes in the backend authorization service, OSG Connect will soon require SSH-key-based logins only.  If you have not added an SSH key before, upload your public SSH key to your OSG Connect user profile (choose "Update Profile" after signing into the http://osgconnect.net/ website) or to the submit host (login.osgconnect.net).
 
 You need to follow a two-step process:
 
