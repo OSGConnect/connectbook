@@ -6,7 +6,7 @@
 
 Due to changes in the backend authorization service, OSG Connect will soon require SSH-key-based logins only.  If you have not added an SSH key before, upload your public SSH key to your OSG Connect user profile (choose "Update Profile" after signing into the http://osgconnect.net/ website) or to the submit host (login.osgconnect.net).
 
-You need to follow a two-step process:
+You need to follow a two-step process to set up the SSH key to your account. 
 
 1. Generate SSH key pair.  
 
