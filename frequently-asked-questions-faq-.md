@@ -46,7 +46,10 @@ We use HTCondor to schedule and run jobs.
 **How do I submit a computing job?**
 
 Jobs are submitted via HTCondor scheduler. Please refer the [QuickStart](http://support.opensciencegrid.org/support/solutions/articles/5000633410-osg-connect-quickstart) for more details on submitting and managing jobs.
- 
+
+**How many jobs can I keep idle in the queue?**
+
+The preferred number of idle jobs is to not exceed 10k. If you have much more jobs than that, we recommend that you use HTCondor DAGMan to control it. Stick all the jobs in the DAG, and then submit with: condor_submit_dag -maxidle 10000 ...  DAGMan will then maintain the 10k idle jobs for you.
 
 ##Data Storage and Transfer
 **What is the best way to process large volume of data?**
