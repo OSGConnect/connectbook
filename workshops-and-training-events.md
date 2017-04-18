@@ -10,9 +10,9 @@ We offer training and tutorials for the scientists and researchers new to high t
 
 ## OSG Workshops on HTC
 
-[RMACC, Boulder, August 15-17, 2017](comming soon)
+RMACC, Boulder, August 15-17, 2017(details comming soon)
 
-[PEARC17, New Orleans, July 9-13, 2017](comming soon)
+PEARC17, New Orleans, July 9-13, 2017(details comming soon)
 
 [Open Science Grid Mini-Workshop at University of Chicago, April 9th, 2015](http://swc-osg-workshop.github.io/MiniOSG-2015-04-09-UChicago/index.html)
 
