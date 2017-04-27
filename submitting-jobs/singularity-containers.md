@@ -36,9 +36,9 @@ then run within that container. Most users will not even know that their jobs ar
 within a container, but it will provide them with a consistent environment across
 OSG sites. The current default container is based on EL6 and contains a basic
 set of tools expected from OSG compute nodes. The image is loaded from
-*/cvmfs/singularity.opensciencegrid.org/rynge/osgvo:el6* and the definition file
+*/cvmfs/singularity.opensciencegrid.org/opensciencegrid/osgvo:el6* and the definition file
 is available in GitHub
-[https://github.com/rynge/osgvo-docker](https://github.com/rynge/osgvo-docker) .
+[https://github.com/opensciencegrid/osgvo-singularity](https://github.com/opensciencegrid/osgvo-singularity) .
 If you want to steer a job to run on a default Singularity instance,
 use *HAS_SINGULARITY == True* in the job requirements. For example:
 
@@ -65,7 +65,7 @@ your job submit file. For example, to run your job under EL7:
     executable = job.sh
     Requirements = HAS_SINGULARITY == TRUE
 
-    +SingularityImage = "/cvmfs/singularity.opensciencegrid.org/rynge/osgvo:el7"
+    +SingularityImage = "/cvmfs/singularity.opensciencegrid.org/opensciencegrid/osgvo:el7"
     +SingularityBindCVMFS = True
 
     should_transfer_files = IF_NEEDED
