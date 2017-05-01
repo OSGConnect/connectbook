@@ -3,11 +3,11 @@
 [TOC] 
 
 GRACC is Open Science Grid's accounting system. If you need graphs or high level statistics
-on your OSG usage, please go to 
+on your OSG usage, please go to:
 
 [https://gracc.opensciencegrid.org/](https://gracc.opensciencegrid.org/)
 
-To drill down on your own project and/or user, go to _Payload Jobs_
+To drill down on your own project and/or user, go to _Payload Jobs_.
 
 Under the _Project_ or _User_ drop-downs, find your project/user. You can select multiple 
 ones.
