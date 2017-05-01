@@ -2,7 +2,7 @@
 
 [TOC] 
 
-** About TensorFlow
+## About TensorFlow
 
 [https://www.tensorflow.org/](https://www.tensorflow.org/) desribes TensorFlow as:
 
@@ -19,15 +19,15 @@
 > be applicable in a wide variety of other domains as well.
 
 
-** TensorFlow on OSG
+## TensorFlow on OSG
 
 You can use TensorFlow on OSG by running your jobs through 
 [https://support.opensciencegrid.org/solution/articles/12000024676-singularity-containers](Singularity containers).
 We currently offer two containers (both based on Ubuntu):
 
-1. _/cvmfs/singularity.opensciencegrid.org/tensorflow/tensorflow:latest_ is the
+1. __/cvmfs/singularity.opensciencegrid.org/tensorflow/tensorflow:latest__ is the
    standard CPU-only Docker image published by the TensorFlow project
-2. _/cvmfs/singularity.opensciencegrid.org/rynge/osg-tensorflow-gpu:latest_ is a
+2. __/cvmfs/singularity.opensciencegrid.org/rynge/osg-tensorflow-gpu:latest__ is a
    modified TensorFlow-GPU image to be used on the GPUs available on OSG.
 
 Note that there is still only a small number of GPUs available on OSG, so we 
@@ -128,11 +128,13 @@ set to the GPU image.
     Queue 1
 
 
-When running on the GPU image, few extra environment settings are required. We recommend a 
+When running on the GPU image, some extra environment settings are required. We recommend a 
 job wrapper like:
 
 
     #!/bin/bash
+
+    set -e
     
     export PATH=/usr/local/cuda-8.0/bin:/usr/loca/bin:/usr/bin:/bin
     export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64
