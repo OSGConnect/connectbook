@@ -22,8 +22,7 @@
 ## TensorFlow on OSG
 
 You can use TensorFlow on OSG by running your jobs through 
-[https://support.opensciencegrid.org/solution/articles/12000024676-singularity-containers](Singularity containers).
-We currently offer two containers (both based on Ubuntu):
+[Singularity containers](https://support.opensciencegrid.org/solution/articles/12000024676-singularity-containers) .  We currently offer two containers (both based on Ubuntu):
 
 1. __/cvmfs/singularity.opensciencegrid.org/tensorflow/tensorflow:latest__ is the
    standard CPU-only Docker image published by the TensorFlow project
