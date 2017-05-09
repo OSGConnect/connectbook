@@ -2,7 +2,7 @@
 
 [TOC]
 
-* ** ANTS ** version( 1.9.4, 2.1.0 )  &mdash;   Loads ANTs, which stands for Advanced Normalization Tools
+* **ANTS** version( 1.9.4, 2.1.0 )  &mdash;   Loads ANTs, which stands for Advanced Normalization Tools
 * ** AstroPy ** version( - )  &mdash;    "AstroPy" in your MODULEPATH
 * ** Julia ** version( 0.6.0 )  &mdash;  None
 * ** Lmod ** version( AnEnvironmentModuleSystem )  &mdash;    "Lmod" in your MODULEPATH
