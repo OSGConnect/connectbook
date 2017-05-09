@@ -1,12 +1,12 @@
-[title]: - "Generate ssh keypair and add the public key to your account"
+[title]: - "Generate SSH key pair and add the public key to your account"
 
 [TOC]
 
 ## Overview
 
-We are switching to a SSH key-based login model rather than the current password-based model to improve the security of our infrastructure. If you have not added an SSH key to our infrastructure or your user profile before, you will need to add one to be able to login into the OSG Connect submit host (login.osgconnect.net).
+OSG Connect will require SSH-key-based logins due to the changes in the backend authorization service. If you have not added an SSH key before, upload your public SSH key to your OSG Connect user profile (choose "Update Profile" after signing into the http://osgconnect.net/ website) or to the submit host (login.osgconnect.net).
 
-You need to follow a two-step process:
+You need to follow a two-step process to set up the SSH key to your account. 
 
 1. Generate SSH key pair.  
 
@@ -34,15 +34,18 @@ On your local machine:
 
 The last command will produce a prompt similar to
 
+
      Generating public/private rsa key pair.
      Enter file in which to save the key (/home/<local_user_name>/.ssh/id_rsa):
 
-Unless you want to change the location of the key, continue by pressing enter. Now you will be asked for a passphrase. This passphrase is not necessary, but a good security measure in case your private key gets stolen. We strongly recommend that you set a passphrase:
+Unless you want to change the location of the key, continue by pressing enter.
+Now you will be asked for a passphrase. Enter a passphrase that you will be 
+able to remember and which is secure:
 
      Enter passphrase (empty for no passphrase):
      Enter same passphrase again:
-
-When everything has successfully completed, you the prompted will read something like: 
+When everything has successfully completed, the output should resemble the
+following: 
 
      Your identification has been saved in /home/<local_user_name>/.ssh/id_rsa.
      Your public key has been saved in /home/<local_user_name>/.ssh/id_rsa.pub.
@@ -61,11 +64,11 @@ When everything has successfully completed, you the prompted will read something
      |.  oo.o .        |
      +-----------------+
 
+
+
 ### Windows
 
 #### Putty
-
-Using `PuTTYgen`, follow these steps:
 
 1. Open the `PuTTYgen` program.
 
@@ -85,6 +88,7 @@ Using `PuTTYgen`, follow these steps:
 
 ![alt text](https://raw.githubusercontent.com/OSGConnect/connectbook/master/images/puttygen_ssh_key.png "PuttyGen SSH Window")
 
+
 #### Git Bash
 
 Follow the instructions here to generate keys:
@@ -92,17 +96,17 @@ Follow the instructions here to generate keys:
 https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/#platform-windows
 
 
-## Step 2: Add SSH key to login nodes
+## Step 2: Add the public SSH key to login node
 
-You can add your new SSH public key to the login nodes by adding the public key to your Globus profile on the OSG Connect website or by copy-pasting it into `/home/<your_osg_connect_username>/.ssh/authorized_keys`. Detailed instructions are below.
+To add your new SSH public key to the login nodes you can use two methods:
 
-#### OSGConnect Website (Preferred)
+### OSGConnect Website (Preferred)
 
 To add your public key to the Globus Online interface:
 
 1. Go to www.osgconnect.net
 
-2. Go to "Update Profile" under your username
+2. Go to "Update Profile"
 
 3. Click on "Manage SSH and X.509 keys".
 
@@ -112,9 +116,10 @@ To add your public key to the Globus Online interface:
 
 6. Click "Add Key"
 
-The key is now added to your profile in Globus Online. We will add to the login nodes within a couple hours.
+The key is now added to your profile in Globus Online. This will automatically
+be added to the login nodes within a couple hours.
 
-#### Copy-Pasting
+### Copy-Pasting
 
 On `login.osgconnect.net`:
 
@@ -130,7 +135,7 @@ Finally execute:
      chmod go-w ~/
      chmod 600 ~/.ssh/authorized_keys
 
-#### `ssh-copy-id` (only Unix-based)
+### `ssh-copy-id` (only Unix-based)
 
 Execute: 
 
