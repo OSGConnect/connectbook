@@ -1,5 +1,19 @@
 [title]: - "OSG Managed Services"
 
+## Overview
+
+Enabling campus researchers to share computational and data resources
+with external collaborators is a powerful multiplier in advancing
+science. Sharing spare capacity for even short durations allows an
+institutional HPC resource a cost-efficient means of participating
+in a larger cyber ecosystem. In this document we will show you how to
+integrate your HPC cluster resource to the Open Science Grid to support
+collaborative, multi-institutional science. The only requirements are
+that your cluster can provide SSH access to a single OSG staff member,
+that your cluster job submission and worker nodes have outbound IP
+connectivity, the operating system is CentOS/RHEL 6.x, 7.x or similar,
+and that a common batch scheduler is used (e.g. SLURM, PBS, HTCondor).
+
 ## How the Service Works
 
 OSG offers a *managed service option* to connect a campus HPC/HTC cluster to the Open Science Grid. The OSG team will host and operate an HTCondor compute element which routes user jobs to your cluster, configured for science communities that you choose to support. 
@@ -15,6 +29,7 @@ Here are the basic system requirements:
 * A standard Unix account on your system's login server. The OSG service will use this account and submit to your batch queue in a manner you define.
 * SSH access to this account via public SSH keys.
 * A supported batch system (Slurm, HTCondor, PBS, LSF, SGE)
+* Outbound network connectivity from the compute nodes (can be behind NAT)
 
 ## Setup Process
 
