@@ -3,6 +3,8 @@
 [TOC]
 ## Physics
 
+* **LAMMPS** (version 15May15) &mdash; LAMMPS is a particle simulator code.
+
 *     **CDO**   version (1.6.4) &mdash;       CDO is a collection of command line Operators to manipulate and analyse Climate and NWP model Data. 
 *     **CLHEP  **   version (2.1.0.1,2.2.0.8,2.3.1.0,2.3.1.1,...)&mdash;       Set of HEP-specific foundation and utility classes such as random generators, physics vectors, geometry and linear algebra.  
 *     **CP2K  **   version (2.5.1)&mdash;       CP2K is the state-of-the-art method for accurate atomistic simulations. 
