@@ -2,7 +2,7 @@
 *     **CLHEP  **   version (2.1.0.1,2.2.0.8,2.3.1.0,2.3.1.1,...)&mdash;       Set of HEP-specific foundation and utility classes such as random generators, physics vectors, geometry and linear algebra.  
 *     **CP2K  **   version (2.5.1)&mdash;       CP2K is the state-of-the-art method for accurate atomistic simulations. 
 *     **GEANT4  **   version (9.4p02,10.02,10.3p01)&mdash;        toolkit for the simulation of the passage of particles through matter. 
-*     **GLPK  **   version (4.54)&mdash;       glpk is the GNU's linear programming took kit. 
+*     **GLPK  **   version (4.54)&mdash;       glpk is the GNUs linear programming took kit. 
 *     **GNUPLOT  **   version (4.6.5)&mdash;       Gnuplot is an application for generating plots. 
 *     **GRAPHVIZ  **   version (2.38.0)&mdash;       Graphviz is an application for visualizing networks and graphs. 
 *     **GRASS  **   version (6.4.4)&mdash;       GRASS (Geographic Resources Analysis Support System) 
