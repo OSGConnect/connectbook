@@ -1,192 +1,103 @@
-[title]: - "Software modules on OSG Connect"
-
-[TOC]
-
-* **ANTS**  version ( 1.9.4, 2.1.0 )  &mdash;   Loads ANTs, which stands for Advanced Normalization Tools
-* **AstroPy**  version ( - )  &mdash;    "AstroPy" in your MODULEPATH
-* **Julia**  version ( 0.6.0 )  &mdash;  None
-* **Lmod**  version ( AnEnvironmentModuleSystem )  &mdash;    "Lmod" in your MODULEPATH
-* **MUMmer3.23**  version ( 3.23 )  &mdash;   MUMmer is a system for rapidly aligning entire genomes
-* **OpenBUGS**  version ( 3.2.3 )  &mdash;   OpenBUGS is a software package for performing Bayesian inference Using Gibbs Sampling.
-* **OpenBUGS-3.2.3**  version ( 3.2.3 )  &mdash;   OpenBUGS is a software package for performing Bayesian inference Using Gibbs Sampling.
-* **R**  version ( 3.1.1, 3.2.0, 3.2.1, 3.2.2, 3.3.1, 3.3.2 )  &mdash;   Loads R, a tool for statistical analysis
-* **RAxML**  version ( 8.2.9 )  &mdash;    A tool for Phylogenetic Analysis and Post-Analysis of Large Phylogenies
-* **SeqGen**  version ( 1.3.3 )  &mdash;   Seq-Gen is a program that will simulate the evolution of nucleotide or amino acid sequences along a phylogeny
-* **Shelx**  version ( 2015 )  &mdash;   Loads Shelx into the environment
-* **SitePackage**  version ( - )  &mdash;  None
-* **SparseSuite**  version ( 4.2.1 )  &mdash;   Loads the SparseSuite library for sparse matrix factorization
-* **ViennaRNA**  version ( 2.2 )  &mdash;   The ViennaRNA Package consists of a C code library and several stand-alone programs for the prediction and comparison of RNA secondary structures.
-* **abyss**  version ( 2.0.2 )  &mdash;   ABySS is a de novo, parallel, paired-end sequence assembler that is designed for short reads.
-* **all-pkgs**  version ( - )  &mdash;  None
-* **ant**  version ( 1.9.4 )  &mdash;   Loads the Ant build system into the environment
-* **apr**  version ( 1.5.1 )  &mdash;   Loads the APR library which provides cross platform tools for os/system operations
-* **aprutil**  version ( 1.5.3 )  &mdash;   Loads the APR Util library which provides cross platform tools for os/system operations
-* **arc-lite**  version ( 2015 )  &mdash;   Loads ARCIMBOLDO_LITE into the environment
-* **atlas**  version ( 3.10.1, 3.10.2 )  &mdash;   Loads ATLAS 3.10.2 libraries for linear algebra operations
-* **autodock**  version ( 4.2.6 )  &mdash;   autodock, is a suite of automated docking tools
-* **bedtools**  version ( 2.21 )  &mdash;   bedtools utilities are a swiss-army knife of tools for a wide-range of genomics analysis tasks.
-* **binutils**  version ( 2.26 )  &mdash;   Loads binutils 2.26
-* **blasr**  version ( 1.3.1 )  &mdash;   Loads the Blasr long read aligner
-* **blast**  version ( - )  &mdash;  None
-* **blender**  version ( - )  &mdash;  None
-* **boost**  version ( 1.50.0, 1.56, 1.57.0, 1.62.0-cxx11, ... )  &mdash;   Loads Boost libraries
-* **boto**  version ( - )  &mdash;    "boto" in your MODULEPATH
-* **bowtie**  version ( 2.2.3, 2.2.9 )  &mdash;   bowtie is an ultrafast, memory-efficient short read aligner.
-* **bwa**  version ( 0.7.12, 2014 )  &mdash;   Burrows-Wheeler Alignment Tool
-* **bzip2**  version ( 1.0.6 )  &mdash;   Loads bzip2 1.0.6
-* **canopy**  version ( 1.4.1 )  &mdash;   Loads a clean installation of the Canopy 1.4 environment
-* **casino**  version ( 2.13.211 )  &mdash;   CASINO is a computer program system for performing quantum Monte Carlo (QMC) electronic structure calculations
-* **cblosc**  version ( 1.7.1 )  &mdash;   Loads c-blosc
-* **ccp4**  version ( 2015 )  &mdash;   Loads ccp4 suit of programs
-* **cctools**  version ( 4.4.2, 5.2.3, 5.4.7, 6.0.7 )  &mdash;   Loads the cctools collection
-* **cdo**  version ( 1.6.4 )  &mdash;   Loads CDO toolkit
-* **cfitsio**  version ( 3.37 )  &mdash;   Loads cfitsio 3.37
-* **circos**  version ( 0.68 )  &mdash;   Loads Circos
-* **clhep**  version ( 2.1.0.1, 2.2.0.8, 2.3.1.0, 2.3.1.1, ... )  &mdash;   Loads the CLHEP library which provides a library for particle physics
-* **cmake**  version ( 3.0.1, 3.4.1, 3.8.0 )  &mdash;   Loads the CMake build tool
-* **connect-client**  version ( 0.2.1, 0.3.0, ... )  &mdash;   Loads the connect client tools
-* **cp2k**  version ( 2.5.1 )  &mdash;   Loads CP2K, which is a first-principles molecular dynamics package
-* **cpan**  version ( perl-5.10 )  &mdash;   Loads cpan modules for perl 5.10
-* **cufflinks**  version ( 2.2.1 )  &mdash;   Loads Cufflinks suite of tools to perform RNA-Seq
-* **curl**  version ( 7.37.1 )  &mdash;   Loads the curl command line http client
-* **dakota**  version ( 6.4.0 )  &mdash;   Loads Dakota, which provides a flexible, extensible interface between analysis codes and iterative systems analysis methods.
-* **dendropy**  version ( - )  &mdash;    "dendropy" in your MODULEPATH
-* **dmtcp**  version ( 2.5.0 )  &mdash;   Loads dmtcp 2.5.0
-* **ectools**  version ( - )  &mdash;   Loads the ectools scripts
-* **eemt**  version ( 0.1 )  &mdash;   Loads the EEMT GIS system
-* **elastix**  version ( 2015 )  &mdash;   Loads elastix into the environment
-* **entropy**  version ( 2017.03.16 )  &mdash;   Admixture and the organization of genetic diversity in a butterfly species complex revealed through common and rare genetic variants.
-* **espresso**  version ( 5.1, 5.2 )  &mdash;   Quantum Espresso is an integrated suite of Open-Source computer codes for electronic-structure calculations
-* **ete2**  version ( 2.3.8 )  &mdash;   Loads the ETE2 Toolkit, including Python
-* **expat**  version ( 2.1.0 )  &mdash;   Loads expat libraries which provide support for parsing XML documents
-* **ffmpeg**  version ( 0.10.15, 2.5.2 )  &mdash;   Loads the ffmpeg video processing app
-* **fftw**  version ( 3.3.4-gromacs, 3.3.4 )  &mdash;   Loads the FFTW library which provides functions for computing FFTs
-* **fiji**  version ( 2.0 )  &mdash;   Fiji is an image processing package with ImageJ.
-* **fpc**  version ( 2.6.4 )  &mdash;   Loads the freepascal compiler
-* **freesurfer**  version ( 5.1.0, 5.3.0, 6.0.0 )  &mdash;   Loads the freesurfer application
-* **freetype**  version ( 2.5.5 )  &mdash;  None
-* **fsl**  version ( 5.0.8 )  &mdash;   Loads FSL into the environment
-* **gamess**  version ( 2013 )  &mdash;   Loads GAMESS, which stands for General Atomic and Molecular Electronic Structure System
-* **gate**  version ( 7.2 )  &mdash;   Loads Gate 7.2
-* **gcc**  version ( 4.6.2, 4.6.4, 4.8.1, 4.9.2, 4.9.3, 6.2.0 )  &mdash;  None
-* **gd**  version ( 2.1.1 )  &mdash;   Loads the GD Libraries
-* **gdal**  version ( 2.0.0 )  &mdash;   Loads GDAL libraries
-* **geant4**  version ( 9.4p02, 10.02, 10.3p01 )  &mdash;   Loads Geant4 10.3p01
-* **geos**  version ( 3.4.2 )  &mdash;   GEOS (Geometry Engine - Open Source) is a C++ port of the  Java Topology Suite (JTS)
-* **gfal**  version ( 7.20 )  &mdash;   Loads the GFAL2 tools
-* **git**  version ( 1.9.0 )  &mdash;   Loads the Git SCM tools
-* **glpk**  version ( 4.54 )  &mdash;   Loads the GLPK library for linear programming functions
-* **gmp**  version ( 6.0.0 )  &mdash;   Loads the Gnu Multi Precision Libraries
-* **gnome_libs**  version ( 1.0 )  &mdash;   Loads gnome libraries
-* **gnuplot**  version ( 4.6.5 )  &mdash;   Loads the gnuplot plotting software
-* **graphviz**  version ( 2.38.0 )  &mdash;   Loads the Graphviz visualization software
-* **grass**  version ( 6.4.4 )  &mdash;   Loads the GRASS GIS system
-* **gromacs**  version ( 4.6.5, 5.0.0, 5.0.5.cuda, 5.0.5, ... )  &mdash;   Loads the Gromacs molecular dynamics simulator
-* **gsl**  version ( 1.16, 2.3 )  &mdash;   Loads the Gnu Scientific Libraries
-* **hdf5**  version ( 1.8.9, 1.8.12-cxx11, 1.8.12, 1.8.13-cxx11, ... )  &mdash;   Loads HDF5 libraries which provide support for reading and writing hdf5 files
-* **healpix**  version ( 3.30 )  &mdash;   Loads Healpix 3.30
-* **hisat2**  version ( 2.0.3-beta )  &mdash;   Loads HISAT2 program that aligns RNA-Seq
-* **hmmer**  version ( 3.1 )  &mdash;   HMMER is used for searching for homologs of protein sequences, and for making protein sequence alignments.
-* **igraph**  version ( 0.7.1 )  &mdash;   Loads igraph libraries into the environment
-* **image_modules**  version ( - )  &mdash;    "image_modules" in your MODULEPATH
-* **imagemagick**  version ( 7.0.2 )  &mdash;   Loads the Imagemagick image tools
-* **intelMKL**  version ( 11.3.0.109 )  &mdash;  None
-* **ipopt**  version ( 3.12.6 )  &mdash;   Loads IPOPT libraries into the environment
-* **jasper**  version ( 1.900.1 )  &mdash;   Loads JasPer libraries
-* **java**  version ( 7u71, 8u25 )  &mdash;   Loads Java JDK
-* **jpeg**  version ( 6b, 9a )  &mdash;  None
-* **julia**  version ( 0.6.0 )  &mdash;   Loads Julia into the environment
-* **lammps**  version ( 2.0, 15May15 )  &mdash;   Loads LAMMPS, which stands for Large-Scale Atomic/Molecular Massively Parallel Simulator
-* **lapack**  version ( 3.5.0, 3.6.1 )  &mdash;   Loads LAPACK libraries for linear algebra calculations
-* **libXpm**  version ( 3.5.10 )  &mdash;   Loads X.Org X11 libXpm runtime library
-* **libgfortran**  version ( 4.4.7 )  &mdash;   Loads fortran shared library
-* **libtiff**  version ( 4.0.4 )  &mdash;   Loads libtiff
-* **llvm**  version ( 3.6, 3.7, 3.8.0 )  &mdash;   Loads LLVM into the environment
-* **lmod**  version ( 5.6.2 )  &mdash;   Description
-* **madgraph**  version ( 2.1.2, 2.2.2 )  &mdash;   Loads the Madgraph event generation
-* **matlab**  version ( 2013b, 2014a, 2014b, 2015a, ... )  &mdash;  None
-* **mercurial**  version ( 1.9.1 )  &mdash;   Loads the Mercurial SCM application
-* **mixmodlib**  version ( 3.1 )  &mdash;   Loads the Mixmod Statistical  Libraries
-* **mono**  version ( 4.2.1 )  &mdash;   Loads the Mono software platform
-* **mothur**  version ( 1.39.0 )  &mdash;    collection of bioinformatics tool for micobiological community
-* **mpc**  version ( 1.0.3 )  &mdash;   Loads the Gnu MPC Libraries
-* **mpfr**  version ( 3.1.3 )  &mdash;   Loads the MPFR Libraries
-* **mplayer**  version ( 1.1 )  &mdash;   MPlayer comes with support for over 192 video and 85 audio codecs
-* **mrbayes**  version ( 3.2.2 )  &mdash;   MrBayes is a program for Bayesian inference and model choice across a wide range of phylogenetic and evolutionary models.
-* **muscle**  version ( 3.8.31 )  &mdash;   MUSCLE stands for MUltiple Sequence Comparison by Log- Expectation.
-* **mysql**  version ( 5.1.73 )  &mdash;   Loads mysql 5.1.73 client
-* **namd**  version ( 2.9, 2.10.cuda, 2.10 )  &mdash;  None
-* **nco**  version ( 4.3.0 )  &mdash;   Loads NCO toolkit
-* **netcdf**  version ( 4.2.0 )  &mdash;   Loads NetCDF libraries which provide support for reading and writing files
-* **ngsTools**  version ( 2017.03.16 )  &mdash;   Loads the ngsTools
-* **octave**  version ( 3.8.1 )  &mdash;   Loads Octave, an open source alternative to matlab
-* **openbabel**  version ( 2.3.2 )  &mdash;   Open Babel is a chemical toolbox designed to speak the many languages of chemical data.
-* **opencv**  version ( 2.4.10 )  &mdash;   Loads the OpenCV image processing library
-* **opensees**  version ( 6482 )  &mdash;   Loads opensees, used to simulate the performance of structural and geotechnical systems subjected to earthquakes
-* **opensim**  version ( 3.3 )  &mdash;   Loads simbody 3.3
-* **orca**  version ( 3.0.3 )  &mdash;   ORCA is a general-purpose quantum chemistry program package
-* **papi**  version ( 5.3.2 )  &mdash;   PAPI enables software engineers to seethe relation between software performance and processor events.
-* **pari**  version ( 2.7.5 )  &mdash;   Loads PARI
-* **pax**  version ( evan-testing, 4.5.0, 4.6.1, 4.9.1, 4.11.0 )  &mdash;   Loads the Xenon1T PAX, CAX, and HAX tools
-* **pbsuite**  version ( 14.9.9 )  &mdash;   Loads the PBSuite software
-* **pbsuite_pkgs**  version ( - )  &mdash;    "pbsuite_pkgs" in your MODULEPATH
-* **pcre**  version ( 8.35 )  &mdash;   Loads the PCRE library for running perl compatible regexes
-* **pegasus**  version ( 4.4.2-image_tools, 4.5.3, 4.6.0dev, ... )  &mdash;   Pegasus workflow management system
-* **phenix**  version ( 1.10 )  &mdash;   Loads phenix suit of programs
-* **poppler**  version ( 0.24.1, 0.32 )  &mdash;   Poppler is a PDF rendering library based on the xpdf-3.0 code base
-* **povray**  version ( 3.7 )  &mdash;   Loads the povray software
-* **proj**  version ( 4.9.1 )  &mdash;   Loads proj libraries
-* **proot**  version ( 2014 )  &mdash;   PRoot is a user-space implementation of chroot, mount --bind, and binfmt_misc.
-* **protobuf**  version ( 2.5 )  &mdash;  
-* **psi4**  version ( 0.3.74 )  &mdash;   Loads psi4 quantum chemistry package
-* **psims**  version ( - )  &mdash;    "psims" in your MODULEPATH
-* **python**  version ( 2.7, 3.4, 3.5.2 )  &mdash;   Load an clean installation of the Python 3.4.1 interpreter
-* **qhull**  version ( 2012.1 )  &mdash;   Loads QHull libaries for computing convex hull and other operations
-* **root**  version ( 5.34-32-py34, 5.34-32, 6.06-02-py34 )  &mdash;   Loads the ROOT data analysis environmemt
-* **rosetta**  version ( 2015, 2016-02, 2016-32 )  &mdash;   Loads rosetta suit of programs
-* **ruby**  version ( 2.1 )  &mdash;   A dynamic, open source programming language with a focus on simplicity and productivity.
-* **rucio**  version ( 1.6.6 )  &mdash;   Loads Rucio
-* **s3cmd**  version ( - )  &mdash;    "s3cmd" in your MODULEPATH
-* **sac**  version ( 10.1.6a )  &mdash;   Loads sac 10.1.6a
-* **saga**  version ( 2.2.0 )  &mdash;   Loads the SAGA GIS application
-* **samtools**  version ( 0.1.17, 1.3.1 )  &mdash;   Loads the SAMtools scripts
-* **sca**  version ( 10.1.6a )  &mdash;   Loads sac 10.1.6a
-* **scons**  version ( 2.3.4 )  &mdash;   SCons is a build system (build tool, make tool or software construction tool) written in pure Python.
-* **sdpa**  version ( 7.3.8 )  &mdash;   SDPA (SemiDefinite Programming Algorithm) is an efficient software packages for solving SDPs
-* **serf**  version ( 1.37 )  &mdash;   Loads the serf library which provides high performance http functionality
-* **settarg**  version ( 5.6.2 )  &mdash;  None
-* **shelx**  version ( 2015 )  &mdash;   Loads Shelx into the environment
-* **shrimp**  version ( 2.2.3 )  &mdash;   SHRiMP is a software package for aligning genomic reads against a target genome.
-* **siesta**  version ( 3.2 )  &mdash;   SIESTA is both a method and its computer program implementation, to perform efficient electronic structure calculations and ab initio molecular dynamics simulations of molecules and solids.
-* **simbody**  version ( 3.5.3 )  &mdash;   Loads simbody 3.5.3
-* **snappy**  version ( 1.1.3 )  &mdash;   Loads snappy
-* **sqlite**  version ( 3.8.11.1 )  &mdash;   Loads sqlite
-* **sra**  version ( 2.5.4, 2.8.0 )  &mdash;   Loads sra suit of programs
-* **stashcp**  version ( 2.2, 2.5, 2.6, 3.0, 3.1, ... )  &mdash;   Loads the stashcp 4.3.1 tool
-* **stringtie**  version ( 1.1.2, 1.2.2 )  &mdash;   Loads StringTie, an assembler of RNA-Seq alignments
-* **subversion**  version ( 1.8.10 )  &mdash;   Loads the Subversion SCM tools
-* **sundials**  version ( 2.5 )  &mdash;   SUNDIALS (SUite of Nonlinear and DIfferential/ALgebraic equation Solvers)
-* **swift**  version ( 0.94.1, 0.96.2 )  &mdash;    Swift programs (or workflows) are written in a language called Swift scripts.
-* **tassel**  version ( 5.0 )  &mdash;   TASSEL has functionality for association study, evaluating evolutionary relationships, analysis of linkage disequilibrium, principal component analysis, cluster analysis, missing data imputation and data visualization
-* **tcl**  version ( 8.6.2 )  &mdash;   Tcl (Tool Command Language) is a very powerful but easy to learn dynamic programming language.
-* **tcsh**  version ( 6.20.00 )  &mdash;   Loads tcsh shell
-* **tophat**  version ( 2.0.13, 2.1.1 )  &mdash;   Loads TopHat program that aligns RNA-Seq
-* **transabyss**  version ( 1.5.5 )  &mdash;   de novo assembly of RNA-Seq data using ABySS
-* **tutorial**  version ( 1.0 )  &mdash;   Tutorial script for OSG Connect that lists and installs tutorial files.
-* **uclust**  version ( 2.22 )  &mdash;   Loads uclust, which is a high-performance clustering, alignment and search algorithm
-* **udunits**  version ( 2.2.17 )  &mdash;   Loads Udunits binaries and libraries
-* **unixodbc**  version ( 2.3.2 )  &mdash;   Loads unixODBC libraries
-* **valgrind**  version ( 3.10 )  &mdash;   Valgrind tools can automatically detect many memory management and threading bugs, and profile your programs in detail
-* **vmd**  version ( 1.9.1 )  &mdash;   Loads the VMD application
-* **wget**  version ( 1.15 )  &mdash;   Loads the wget command line http client
-* **wxgtk**  version ( 3.0.2 )  &mdash;   Loads wxGTK libraries
-* **xrootd**  version ( 4.1.1, 4.2.1 )  &mdash;   Loads the XRootD software framework
-* **xz**  version ( 5.2.2 )  &mdash;   Loads the xz compression software
-* **zlib**  version ( 1.2.8 )  &mdash;   Loads Zlib libraries for compression and decompression
-
-## Request Software
-Is your software not listed?  You can [ask us to install it][request].
-
-[request]: 5000649173
-
-
+*     **CDO  **   version (1.6.4)&mdash;       CDO is a collection of command line Operators to manipulate and analyse Climate and NWP model Data. 
+*     **CLHEP  **   version (2.1.0.1,2.2.0.8,2.3.1.0,2.3.1.1,...)&mdash;       Set of HEP-specific foundation and utility classes such as random generators, physics vectors, geometry and linear algebra.  
+*     **CP2K  **   version (2.5.1)&mdash;       CP2K is the state-of-the-art method for accurate atomistic simulations. 
+*     **GEANT4  **   version (9.4p02,10.02,10.3p01)&mdash;        toolkit for the simulation of the passage of particles through matter. 
+*     **GLPK  **   version (4.54)&mdash;       glpk is the GNU's linear programming took kit. 
+*     **GNUPLOT  **   version (4.6.5)&mdash;       Gnuplot is an application for generating plots. 
+*     **GRAPHVIZ  **   version (2.38.0)&mdash;       Graphviz is an application for visualizing networks and graphs. 
+*     **GRASS  **   version (6.4.4)&mdash;       GRASS (Geographic Resources Analysis Support System) 
+*     **LAMMPS  **   version (2.0,15May15)&mdash;       LAMMPS is a particle simulator code. 
+*     **MADGRAPH  **   version (2.1.2,2.2.2)&mdash;       MadGraph is a monte carlo generator for particle physics interactions 
+*     **OCTAVE  **   version (3.8.1)&mdash;       Octave is a high-level interpreted language 
+*     **QHULL  **   version (2012.1)&mdash;       qhull libraries provide functions for computing convex hull. 
+*     **R  **   version (3.1.1,3.2.0,3.2.1,3.2.2,3.3.1,3.3.2)&mdash;       R is a free software environment for statistical computing and graphics. 
+*     **ROOT  **   version (5.34-32-py34,5.34-32,6.06-02-py34)&mdash;       ROOT is a high energy physics data analysis framework. 
+*     **SIESTA  **   version (3.2)&mdash;       SIESTA performs efficient electronic structure calculations of molecules and solids. 
+*     **UDUNITS  **   version (2.2.17)&mdash;       UDUNITS package supports units of physical quantities. 
+*     **ARC-LITE  **   version (2015)&mdash;       arc-lite (ARCIMBOLDO) is a package for the protein structure refinement. 
+*     **AUTODOCK  **   version (4.2.6)&mdash;       Autodock is a suite of automated docking tools to predict how small molecules bind to a receptor. 
+*     **CASINO  **   version (2.13.211)&mdash;       CASINO performs quantum Monte Carlo (QMC) electronic structure calculations. 
+*     **CCP4  **   version (2015)&mdash;       arc-lite (ARCIMBOLDO) is a package for the protein structure refinement. 
+*     **GAMESS  **   version (2013)&mdash;       GAMESS is a general ab initio quantum chemistry package. 
+*     **GROMACS  **   version (4.6.5,5.0.0,5.0.5.cuda,5.0.5,...)&mdash;       Gromacs molecular dynamics simulator. Requires fftw/fftw-3.3.4-gromacs 
+*     **NAMD  **   version (2.9,2.10.cuda,2.10)&mdash;       NAnoscale Molecular Dynamics (NAMD) program. 
+*     **OPENBABEL  **   version (2.3.2)&mdash;       Open Babel is a chemical toolbox designed to speak the many languages of chemical data. 
+*     **PHENIX  **   version (1.10)&mdash;       software suite for the determination of molecular structures from X-Ray and other methods. 
+*     **PSI4  **   version (0.3.74)&mdash;       Psi4 is an open-source suite of ab initio quantum chemistry programs designed for efficient, high-accuracy simulations of a variety of molecular properties.  
+*     **ROSETTA  **   version (2015,2016-02,2016-32)&mdash;       The Rosetta software suite includes algorithms for computational modeling and analysis of protein structures. 
+*     **SHELX  **   version (2015)&mdash;       SHELX is a set of programs for the determination of small and macromolecular crystal structures. 
+*     **SHELX  **   version (2015)&mdash;       SHELX is a set of programs for the determination of small and macromolecular crystal structures. 
+*     **SQLITE  **   version (3.8.11.1)&mdash;       SQLite is a software library that implements a self-contained, serverless, zero-configuration, transactional SQL database engine. 
+*     **VMD  **   version (1.9.1)&mdash;       VMD is a molecular dynamics visualization application. 
+*     **ANTS  **   version (1.9.4,2.1.0)&mdash;       ANTs is a popular toolkit for medical image registration and segmentation. 
+*     **BLENDER  **   version (-)&mdash;       Blender 3D rendering software. 
+*     **ELASTIX  **   version (2015)&mdash;      consists of a collection of algorithms that are commonly used to solve (medical) image registration problems 
+*     **FIJI  **   version (2.0)&mdash;       Fiji is an image processing package. It can be described as a "batteries-included" distribution of ImageJ (and ImageJ2) 
+*     **FREESURFER  **   version (5.1.0,5.3.0,6.0.0)&mdash;       Freesurfer is an open source software suite for processing and analyzing (human) brain MRI images.  
+*     **FSL  **   version (5.0.8)&mdash;       FSL is a comprehensive library of analysis tools for FMRI, MRI and DTI brain imaging data 
+*     **BEDTOOLS  **   version (2.21)&mdash;       A set of tools for a wide-range of genomics analysis tasks. 
+*     **BLASR  **   version (1.3.1)&mdash;       Blasr is a tool to search and align sequences with refinements. 
+*     **BLAST  **   version (-)&mdash;       Blast is a tool to search and align gene and protein sequences. 
+*     **BOWTIE  **   version (2.2.3,2.2.9)&mdash;       Bowtie is an ultrafast and memory-efficient tool for aligning sequencing reads to long reference sequences. 
+*     **BWA  **   version (0.7.12,2014)&mdash;       BWA is a package for mapping low-divergent sequences against a large reference genome. 
+*     **CUFFLINKS  **   version (2.2.1)&mdash;       Cufflinks assembles transcripts 
+*     **HMMER  **   version (3.1)&mdash;       HMMER searches and aligns homologs of protein sequences using hidden Markov models. 
+*     **MRBAYES  **   version (3.2.2)&mdash;       MrBayes is a program for Bayesian inference of phylogenetic and evolutionary models. 
+*     **MUSCLE  **   version (3.8.31)&mdash;       MUSCLE stands for MUltiple Sequence Comparison by Log-Expectation 
+*     **PBSUITE  **   version (14.9.9)&mdash;       PBSuite is a software for long-read sequencing data from PacBio. 
+*     **SAMTOOLS  **   version (0.1.17,1.3.1)&mdash;       Samtools is a set of utilities for working with data in sequence alignment map format. 
+*     **SHRIMP  **   version (2.2.3)&mdash;       SHRiMP is a software package for aligning genomic reads against a target genome. 
+*     **SRA  **   version (2.5.4,2.8.0)&mdash;       The NCBI SRA Toolkit enables reading ("dumping") of sequencing files from the SRA database and writing ("loading") files into the .sra format  
+*     **TOPHAT  **   version (2.0.13,2.1.1)&mdash;       TopHat is a fast splice junction mapper for RNA-Seq reads. 
+*     **UCLUST  **   version (2.22)&mdash;       Uclust offers search and clustering algorithms that are often orders of magnitude faster than BLAST. 
+*     **BOOST  **   version (1.50.0,1.56,1.57.0,1.62.0-cxx11,...)&mdash;       Boost provides free peer-reviewed portable C++ source libraries. 
+*     **FFTW  **   version (3.3.4-gromacs,3.3.4)&mdash;       FFTW is a library for fast fourier transforms. FFTW 3.3.4 library compiled for general use. 
+*     **GEOS  **   version (3.4.2)&mdash;       GEOS (Geometry Engine - Open Source) is an API for processing spatial geometry. 
+*     **GMP  **   version (6.0.0)&mdash;        Gnu Multi Precision Libraries 
+*     **GSL  **   version (1.16,2.3)&mdash;       The GNU Scientific Library (GSL) is a numerical library for C and C++ programmers. 
+*     **MIXMODLIB  **   version (3.1)&mdash;       Mixmod statistical libraries 
+*     **MPC  **   version (1.0.3)&mdash;       Gnu Mpc is a C library for arithmatics with arbitrarily high precision of complex numbers. 
+*     **MPFR  **   version (3.1.3)&mdash;       MPFR library is a C library for multiple-precision floating-point computations. 
+*     **NCO  **   version (4.3.0)&mdash;       The NCO toolkit manipulates and analyzes data stored in netCDF-accessible formats. 
+*     **NETCDF  **   version (4.2.0)&mdash;       NetCDF is a set of software libraries supporting array-oriented scientific data. 
+*     **SAGA  **   version (2.2.0)&mdash;       SAGA is a GIS application 
+*     **SDPA  **   version (7.3.8)&mdash;       SDPA (Semi Definite Programming Algorithm) is one of the efficient software package for solving SDPs. 
+*     **SPARSESUITE  **   version (4.2.1)&mdash;       SuiteSparse is a suite of sparse matrix algorithms. 
+*     **SUNDIALS  **   version (2.5)&mdash;       SUNDIALS (SUite of Nonlinear and DIfferential/ALgebraic equation Solvers) 
+*     **ANT  **   version (1.9.4)&mdash;       Ant is a Java library and command-line tool is to drive processes described in build files. 
+*     **APR  **   version (1.5.1)&mdash;       The Apache Portable Runtime (APR) libraries provide a interface to platform-specific implementations. 
+*     **CANOPY  **   version (1.4.1)&mdash;       Canopy is the next generation of the Enthought Python Distribution (EPD) 
+*     **CCTOOLS  **   version (4.4.2,5.2.3,5.4.7,6.0.7)&mdash;       Cooperative Computing Lab is software designed to easily harness large scale distributed systems such as clusters, clouds, and grids. 
+*     **CMAKE  **   version (3.0.1,3.4.1,3.8.0)&mdash;       CMake is a cross platform make utility 
+*     **CURL  **   version (7.37.1)&mdash;       Curl is a command line HTTP client 
+*     **ECTOOLS  **   version (-)&mdash;       Ectools is a set of tools for correcting long read assembly data 
+*     **EXPAT  **   version (2.1.0)&mdash;       Expat is an XML parser library written in C. 
+*     **FFMPEG  **   version (0.10.15,2.5.2)&mdash;       ffmpeg is a complete 
+*     **FPC  **   version (2.6.4)&mdash;       Free pascal Free Pascal is a 32 
+*     **FREETYPE  **   version (2.5.5)&mdash;       FreeType 2 provides a simple and easy-to-use API to access font content in a uniform way 
+*     **GCC  **   version (4.6.2,4.6.4,4.8.1,4.9.2,4.9.3,6.2.0)&mdash;       GCC is a set of compilers for c 
+*     **GIT  **   version (1.9.0)&mdash;       Git is a software change management tool. 
+*     **HDF5  **   version (1.8.9,1.8.12-cxx11,1.8.12,1.8.13-cxx11,...)&mdash;       HDF5 is a library for storing and managing data in flexible 
+*     **JASPER  **   version (1.900.1)&mdash;       reference implementation of the codec specified in the JPEG 
+*     **JAVA  **   version (7u71,8u25)&mdash;       Java 
+*     **JPEG  **   version (6b,9a)&mdash;       Libjpeg is a widely used C library for reading and writing jpeg image files. 
+*     **LIBGFORTRAN  **   version (4.4.7)&mdash;      
+*     **LIBTIFF  **   version (4.0.4)&mdash;      
+*     **MERCURIAL  **   version (1.9.1)&mdash;       Mercurial is a source code management tool. 
+*     **MPLAYER  **   version (1.1)&mdash;       Mplayer is an image viewer and editor. 
+*     **OPENCV  **   version (2.4.10)&mdash;       OpenCV (Open Source Computer Vision Library) is an open source computer vision and machine learning software library. 
+*     **PAPI  **   version (5.3.2)&mdash;       PAPI is a performance profiler. 
+*     **PCRE  **   version (8.35)&mdash;       PCRE is perl compatible regular expression library. 
+*     **POPPLER  **   version (0.24.1,0.32)&mdash;       Poppler is a PDF rendering library based on the xpdf-3.0 code base 
+*     **PROJ  **   version (4.9.1)&mdash;       Cartographic projection library 
+*     **PROOT  **   version (2014)&mdash;       PRoot is a user-space implementation of chroot 
+*     **RUBY  **   version (2.1)&mdash;       Ruby is a dynamic 
+*     **SCONS  **   version (2.3.4)&mdash;       SCons is a software construction tool and is a superior alternative to the classic "Make" build tool. 
+*     **SERF  **   version (1.37)&mdash;       Serf is a library that provides high performance http client functions. 
+*     **SETTARG  **   version (5.6.2)&mdash;       The settarg module dynamically and automatically updates "$TARG" and a host of other environment variables. 
+*     **STASHCP  **   version (2.2,2.5,2.6,3.0,3.1,...)&mdash;       Stashcp is a front-end to XRootD caching for OSG Connect Stash. 
+*     **SUBVERSION  **   version (1.8.10)&mdash;       Subversion is a source control revision tool. 
+*     **SWIFT  **   version (0.94.1,0.96.2)&mdash;       Swift is a parallel scripting language. 
+*     **TCL  **   version (8.6.2)&mdash;       Tcl (Tool Command Language) is a very powerful but easy to learn dynamic programming language. 
+*     **VALGRIND  **   version (3.10)&mdash;       Valgrind can detect memory management and threading bugs 
+*     **WGET  **   version (1.15)&mdash;       Wget is a command line HTTP client 
