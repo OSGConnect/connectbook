@@ -157,8 +157,8 @@
 * **JASPER**  version (1.900.1) &mdash;      reference implementation of the codec specified in the JPEG 
 * **JAVA**  version (7u71,8u25,8u131) &mdash;      Java 
 * **JPEG**  version (6b,9a) &mdash;      Libjpeg is a widely used C library for reading and writing jpeg image files. 
-* **LIBGFORTRAN**  version (4.4.7) &mdash;     
-* **LIBTIFF**  version (4.0.4) &mdash;     
+* **LIBGFORTRAN**  version (4.4.7) &mdash;  Fortran shared library which is needed to run Fortran dynamically linked programs.   
+* **LIBTIFF**  version (4.0.4) &mdash;  libtiff  supports  the Tag Image File Format (TIFF), a widely used format for storing image data. 
 * **LIBXPM**  version (3.5.10) &mdash;    LibXPM is a package with  X.Org, X11, and libXpm runtime libraries 
 * **LLVM**  version (3.6,3.7,3.8.0) &mdash;   LLVM is a toolkit for the construction of highly optimized compilers, optimizers, and runtime environments. 
 * **MERCURIAL**  version (1.9.1) &mdash;      Mercurial is a source code management tool. 
