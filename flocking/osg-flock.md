@@ -5,9 +5,12 @@ Overview
 
 If you have a HTCondor submit node on your campus, it can be configured 
 to spill over onto available resources on the Open Science Grid. In
-HTCondor this is called 
+HTCondor terms this is called 
 [flocking](https://research.cs.wisc.edu/htcondor/manual/latest/5_2Connecting_HTCondor.html)
 
+If you are interested in this solution, please open a 
+[new ticket](https://support.opensciencegrid.org/helpdesk/tickets/new) with the hostname
+and DN of the host certificate.
 
 Requirements
 ------------
@@ -16,11 +19,11 @@ The requirements are:
 
  * HTCondor has to authenticate via GSI. At the minimum, the submit host
    has to have a host certificate and a list of trusted CAs under
-   /etc/grid-security/certificates/
+   */etc/grid-security/certificates/*
  * Reporting to the OSG accounting system has to be enabled. This can
    be accomplished by installing and configuring the 
-   gratia-probe-condor RPM.
- * Submitted jobs should have the +ProjectName attribute specified with
+   *gratia-probe-condor* RPM.
+ * Submitted jobs should have the *+ProjectName* attribute specified with
    a valid registered project name.
 
 
@@ -82,5 +85,16 @@ SEC_DEFAULT_AUTHENTICATION_METHODS = FS,GSI, $(SEC_DEFAULT_AUTHENTICATION_METHOD
 
 Project Names
 -------------
+
+OSG will only run jobs tagged with a valid *ProjectName* - this is the main attribute
+used for accounting. New projects should be registered in the
+[OSG OIM project database](https://oim.grid.iu.edu/oim/project). Jobs should specify
+which project to be accounted against by adding the *+ProhectNane* attribute. Note
+that the value is a string and hence the double quotes are required.  Example:
+
+```
++ProjectName = "Some_Name_Here"
+```
+
 
 
