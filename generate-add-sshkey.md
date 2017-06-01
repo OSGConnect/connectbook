@@ -98,11 +98,7 @@ https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-s
 
 ## Step 2: Add the public SSH key to login node
 
-To add your new SSH public key to the login nodes you can use two methods:
-
-### OSGConnect Website (Preferred)
-
-To add your public key to the Globus Online interface:
+To add your public key:
 
 1. Go to www.osgconnect.net and sign in
 
