@@ -31,7 +31,7 @@ Now we will create a workflow to process `MRN_3_defaced.mgz` using `fsurf`. In t
 file `MRN_3_defaced.mgz`, the prefix `MRN_3` is the name of the subject. 
 
 
-     $ ./fsurf submit --subject='MRN_3' --input='MRN_3_defaced.mgz'
+     $ ./fsurf submit --subject='MRN_3' --input='MRN_3_defaced.mgz' 
 
 `MRN_3_defaced.mgz` image is already deidentified and defaced, so say `y` to the
 following questions. 
@@ -166,6 +166,16 @@ workflow
 The ID of your workflow is `99`. The ID is needed to check the status, remove
 and get the output of the workflow. 
 
+## Specifying FreeSurfer version for a workflow
+
+When submitting a workflow, you can use the --version option to specify the 
+version of FreeSurfer that you'd like to use to process the workflow. For example,
+
+     $ ./fsurf submit --subject='MRN_3' --input='MRN_3_defaced.mgz' --version 6.0
+
+This creates a workflow processing the MRN_3 scan using FreeSurfer 6.0.  Currently 
+the FSurf supports using FreeSurfer 5.1, 5.3, and 6.0.  FreeSurfer 5.3 is the default 
+if the version FSurf should use is not specified.
 
 
 ##  Listing Workflows
