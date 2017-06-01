@@ -104,7 +104,7 @@ To add your new SSH public key to the login nodes you can use two methods:
 
 To add your public key to the Globus Online interface:
 
-1. Go to www.osgconnect.net
+1. Go to www.osgconnect.net and sign in
 
 2. Go to "Update Profile"
 
@@ -119,43 +119,7 @@ To add your public key to the Globus Online interface:
 The key is now added to your profile in Globus Online. This will automatically
 be added to the login nodes within a couple hours.
 
-### Copy-Pasting
 
-On `login.osgconnect.net`:
-
-     mkdir ~/.ssh
-     chmod 700 ~/.ssh
-     cd ~/.ssh
-     touch authorized_keys
-
-Open `authorized_keys` in your favorite text editor, i.e. `vim`, `emacs`, `nano`, `ed`, and paste the public key (contents of `/home/<local_username>/.ssh/id_rsa.pub` on Linux, `/Users/<local_username>/.ssh/id_rsa.pub` on Mac, or output from the `PuTTYgen` window above, into the file and save it. 
-
-Finally execute:
-
-     chmod go-w ~/
-     chmod 600 ~/.ssh/authorized_keys
-
-### `ssh-copy-id` (only Unix-based)
-
-Execute: 
-
-     ssh-copy-id <osg_connect_username>@login.osgconnect.net
-
-## Troubleshooting
-
-### Permission denied (publickey)
-
-If SSH returns the error 
-
-     Permission denied (publickey).
-
-This most likely means that the remote permissions are too unconstrained. Please execute:
-
-     chmod go-w ~/
-     chmod 700 ~/.ssh
-     chmod 600 ~/.ssh/authorized_keys
-
-on `login.osgconnect.net`.
 
 ## Getting Help 
 For assistance or questions, please email the OSG User Support team  at <mailto:user-support@opensciencegrid.org> or visit the [help desk and community forums](http://support.opensciencegrid.org).
