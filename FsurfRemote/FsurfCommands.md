@@ -34,7 +34,7 @@ any order.  The commands that `fsurf` accepts are:
 
 | Command   | Function    | Required Switches | Optional Switches |
 | --------- | ----------- | ---------------   | ------------  |
-| submit          | Upload and process scan            | --subject='[subject]' | <ul><li>--help</li> <li>--user='[user name]'</li><li>--input='[path]' <b>(Fsurf v2.x)</b></li></li><li>--freesurfer-options='[options]' <b>(Fsurf v2.x)</b></li><li>--defaced</li><li>--deidentified</li><li>--dualcore</li><li>--version='[5.1|5.3|6.0]'</ul> |
+| submit          | Upload and process scan            | --subject='[subject]' | <ul><li>--help</li> <li>--user='[user name]'</li><li>--input='[path]' <b>(Fsurf v2.x)</b></li></li><li>--freesurfer-options='[options]' <b>(Fsurf v2.x)</b></li><li>--defaced</li><li>--deidentified</li><li>--dualcore</li><li>--version='[5.1|5.3|6.0]'</li></ul> |
 | list            | List workflows submitted           | | <ul><li>--help</li> <li>--user='[user name]'</li><li>--all-workflows</li></ul> |
 | status          | List status of a given workflow    | --id='[workflow id]' | <ul><li>--help</li> <li>--user='[user name]'</li></ul>  |
 | output          | Get output from completed workflow | --id='[workflow id]' | <ul><li>--help</li> <li>--user='[user name]'</li>--log-only</li></ul> |
