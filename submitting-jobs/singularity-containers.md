@@ -15,6 +15,7 @@ The following talk describes Singularity for scientific computing:
 <iframe width="560" height="315" src="//www.youtube.com/embed/DA87Ba2dpNM" frameborder="0" allowfullscreen></iframe>
 
 
+
 Derek Weitzel wrote a blog post about Singularity on OSG, which provides a good
 introduction on how to create images and run them, but does not cover all the
 functionality described further down:
@@ -49,30 +50,7 @@ use *HAS_SINGULARITY == True* in the job requirements. For example:
 
     queue
 
-The user support team maintains a set of images. These contain a basic set of
-tools and libraries. The images are are:
-
- * **EL 6** - (*/cvmfs/singularity.opensciencegrid.org/opensciencegrid/osgvo-el6*)
-   ([Image Definition](https://github.com/opensciencegrid/osgvo-el6))
-   A basic Enterprise Linux (CentOS) 6 based image. This is currently our default
-   image
- * **EL 7** - (*/cvmfs/singularity.opensciencegrid.org/opensciencegrid/osgvo-el7*)
-   ([Image Definition](https://github.com/opensciencegrid/osgvo-el7))
-   A basic Enterprise Linux (CentOS) 7 based image.
- * **Ubuntu Xenial** - (*/cvmfs/singularity.opensciencegrid.org/opensciencegrid/osgvo-ubuntu-xenial*)
-   ([Image Definition](https://github.com/opensciencegrid/osgvo-ubuntu-xenial))
-   A good image if you prefer Ubuntu over EL flavors
- * **TensorFlow** -  (*/cvmfs/singularity.opensciencegrid.org/opensciencegrid/tensorflow:latest*)
-   ([Image Definition](https://github.com/opensciencegrid/osgvo-tensorflow))
-   Base on the TensorFlow base image, with a few OSG package added
- * **TensorFlow GPU** - (*/cvmfs/singularity.opensciencegrid.org/opensciencegrid/tensorflow-gpu:latest*)
-   ([Image Definition](https://github.com/opensciencegrid/osgvo-tensorflow-gpu))
-   Used for running TensorFlow jobs on OSG GPU resources.
-
-
-## Custom Images
-
-To instruct the system to load a custom image, use the *+SingularityImage* attribute in 
+To instruct the system to load a different image, use the *+SingularityImage* attribute in 
 your job submit file. For example, to run your job under EL7:
 
     universe = vanilla
@@ -91,26 +69,38 @@ your job submit file. For example, to run your job under EL7:
 
     queue
 
-If you want to use a custom image, but still have access to /cvmfs, you can add
-*+SingularityBindCVMFS = True* to your job (as in the example above). /cvmfs on
-the compute node will then be bound to /cvmfs inside your container, but please
-note that this only works if the /cvmfs directory exists in the image. If you do
-not want /cvmfs mounted in the container, just set *SingularityBindCVMFS = False*
+The user support team maintains a set of images. These contain a basic set of
+tools and libraries. The images are are:
 
+|                     | **Image Location**                                                            | **Defintion** | **Description** |
+|:--------------------|:------------------------------------------------------------------------------|:-------------:|:----------------|
+| **EL 6**            | /cvmfs/singularity.opensciencegrid.org/opensciencegrid/osgvo-el6              | [GitHub](https://github.com/opensciencegrid/osgvo-el6)   | A basic Enterprise Linux (CentOS) 6 based image. This is currently our default image |
+| **EL 7**            | /cvmfs/singularity.opensciencegrid.org/opensciencegrid/osgvo-el7              | [GitHub](https://github.com/opensciencegrid/osgvo-el7) | A basic Enterprise Linux (CentOS) 7 based image. |
+| **Ubuntu Xenial**   | /cvmfs/singularity.opensciencegrid.org/opensciencegrid/osgvo-ubuntu-xenial    | [GitHub](https://github.com/opensciencegrid/osgvo-ubuntu-xenial) | A good image if you prefer Ubuntu over EL flavors |
+| **TensorFlow**      | /cvmfs/singularity.opensciencegrid.org/opensciencegrid/tensorflow:latest      | [GitHub](https://github.com/opensciencegrid/osgvo-tensorflow) | Base on the TensorFlow base image, with a few OSG package added |
+| **TensorFlow GPU**  | /cvmfs/singularity.opensciencegrid.org/opensciencegrid/tensorflow-gpu:latest  | [GitHub](https://github.com/opensciencegrid/osgvo-tensorflow-gpu) | Used for running TensorFlow jobs on OSG GPU resources |
+
+
+## Custom Images
+
+OSG Connect provides tooling for users to create, publish and load custom images.
+This is useful if your job requires some very specific software setup.
 
 ### Creating a Custom Image
 
-If you want to use an image you have created yourself, the goal is to get it
-defined and published in the [Docker Hub](https://hub.docker.com/). The reason
-we use Docker as a source image repository is that it allows us to easily import
-the images into our own distribution system (see below). To get started,
-create a Docker user, sign in to the hub, and create a new repository. You will
-end up with an identifier of the *namespace/repository_name* format.
+If you want to use an image you have created yourself, the image
+should be defined as a Docker image and published in the [Docker
+Hub](https://hub.docker.com/). The reason we use Docker as a source
+image repository is that it allows us to easily import the images into
+our own distribution system (see below). To get started, create a Docker
+user, sign in to the hub, and create a new repository. You will end up
+with an identifier of the *namespace/repository_name* format.
 
-Create an image locally using a *Dockerfile* and the *docker build*. We suggest
-you base the image on one of the provided OSG images. For example, if you want
-to base the image on our Ubuntu Xenial image, first download the *Dockerfile*
-from the [GitHub repository](https://github.com/opensciencegrid/osgvo-ubuntu-xenial).
+Create an image locally using a *Dockerfile* and the *docker
+build*. We suggest you base the image on one of the provided OSG
+images. For example, if you want to base the image on our Ubuntu
+Xenial image, first download the *Dockerfile* from the [GitHub
+repository](https://github.com/opensciencegrid/osgvo-ubuntu-xenial).
 
 Edit the *Dockerfile* to fit your requirements. Then build the image with 
 tag matching your Docker Hub repository:
@@ -132,6 +122,9 @@ published on /cvfms. In your *Dockerfile*, add:
     RUN mkdir -p /cvmfs
 
 See one of the provided image defintions for a full example.
+
+If you do not want /cvmfs mounted in the container, please add 
+*+SingularityBindCVMFS = False* to your job submit file.
 
 
 ### Distributing Custom Images Via CVMFS
