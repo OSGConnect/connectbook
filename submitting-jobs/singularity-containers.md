@@ -32,7 +32,7 @@ OSG sites. The current default container is based on EL6 and contains a basic
 set of tools expected from OSG compute nodes. The image is loaded from
 */cvmfs/singularity.opensciencegrid.org/opensciencegrid/osgvo-el6* and the definition file
 is available in GitHub
-[https://github.com/opensciencegrid/osgvo-singularity](https://github.com/opensciencegrid/osgvo-singularity) .
+[https://github.com/opensciencegrid/osgvo-el6](https://github.com/opensciencegrid/osgvo-el6) .
 If you want to steer a job to run on a default Singularity instance,
 use *HAS_SINGULARITY == True* in the job requirements. For example:
 
@@ -52,20 +52,20 @@ use *HAS_SINGULARITY == True* in the job requirements. For example:
 The user support team maintains a set of images. These contain a basic set of
 tools and libraries. The images are are:
 
- * _EL 6_ - (/cvmfs/singularity.opensciencegrid.org/opensciencegrid/osgvo-el6)
+ * **EL 6** - (*/cvmfs/singularity.opensciencegrid.org/opensciencegrid/osgvo-el6*)
    ([Image Definition](https://github.com/opensciencegrid/osgvo-el6))
    A basic Enterprise Linux (CentOS) 6 based image. This is currently our default
    image
- * _EL 7_ - (/cvmfs/singularity.opensciencegrid.org/opensciencegrid/osgvo-el7)
+ * **EL 7** - (*/cvmfs/singularity.opensciencegrid.org/opensciencegrid/osgvo-el7*)
    ([Image Definition](https://github.com/opensciencegrid/osgvo-el7))
    A basic Enterprise Linux (CentOS) 7 based image.
- * _Ubuntu Xenial_ - (/cvmfs/singularity.opensciencegrid.org/opensciencegrid/osgvo-ubuntu-xenial)
+ * **Ubuntu Xenial** - (*/cvmfs/singularity.opensciencegrid.org/opensciencegrid/osgvo-ubuntu-xenial*)
    ([Image Definition](https://github.com/opensciencegrid/osgvo-ubuntu-xenial))
    A good image if you prefer Ubuntu over EL flavors
- * _TensorFlow_ -  (/cvmfs/singularity.opensciencegrid.org/opensciencegrid/tensorflow:latest)
+ * **TensorFlow** -  (*/cvmfs/singularity.opensciencegrid.org/opensciencegrid/tensorflow:latest*)
    ([Image Definition](https://github.com/opensciencegrid/osgvo-tensorflow))
    Base on the TensorFlow base image, with a few OSG package added
- * _TensorFlow GPU_ - (/cvmfs/singularity.opensciencegrid.org/opensciencegrid/tensorflow-gpu\:latest)
+ * **TensorFlow GPU** - (*/cvmfs/singularity.opensciencegrid.org/opensciencegrid/tensorflow-gpu:latest*)
    ([Image Definition](https://github.com/opensciencegrid/osgvo-tensorflow-gpu))
    Used for running TensorFlow jobs on OSG GPU resources.
 
