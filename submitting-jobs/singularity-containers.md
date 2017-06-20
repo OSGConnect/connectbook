@@ -115,8 +115,8 @@ Then register the image as described in the next section.
 
 If you prefer, you can base you image on images not already published by OSG,
 but if you do this, we recommend that you as one of the steps create the
-*/cvmfs* directory. That will allow the image to access tools and data
-published on /cvfms. In your *Dockerfile*, add:
+*/cvmfs* directory. This will enable the container to access tools and data
+published on /cvmfs. In your *Dockerfile*, add:
 
     # required directories
     RUN mkdir -p /cvmfs
