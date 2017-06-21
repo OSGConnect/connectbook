@@ -72,13 +72,13 @@ your job submit file. For example, to run your job under EL7:
 The user support team maintains a set of images. These contain a basic set of
 tools and libraries. The images are are:
 
-|                     | **Image Location**                                                            | **Defintion** | **Description** |
-|:--------------------|:------------------------------------------------------------------------------|:-------------:|:----------------|
-| **EL 6**            | /cvmfs/singularity.opensciencegrid.org/opensciencegrid/osgvo-el6              | [GitHub](https://github.com/opensciencegrid/osgvo-el6)   | A basic Enterprise Linux (CentOS) 6 based image. This is currently our default image |
-| **EL 7**            | /cvmfs/singularity.opensciencegrid.org/opensciencegrid/osgvo-el7              | [GitHub](https://github.com/opensciencegrid/osgvo-el7) | A basic Enterprise Linux (CentOS) 7 based image. |
-| **Ubuntu Xenial**   | /cvmfs/singularity.opensciencegrid.org/opensciencegrid/osgvo-ubuntu-xenial    | [GitHub](https://github.com/opensciencegrid/osgvo-ubuntu-xenial) | A good image if you prefer Ubuntu over EL flavors |
-| **TensorFlow**      | /cvmfs/singularity.opensciencegrid.org/opensciencegrid/tensorflow:latest      | [GitHub](https://github.com/opensciencegrid/osgvo-tensorflow) | Base on the TensorFlow base image, with a few OSG package added |
-| **TensorFlow GPU**  | /cvmfs/singularity.opensciencegrid.org/opensciencegrid/tensorflow-gpu:latest  | [GitHub](https://github.com/opensciencegrid/osgvo-tensorflow-gpu) | Used for running TensorFlow jobs on OSG GPU resources |
+|                     | **Image Location**                                                                 | **Defintion** | **Description** |
+|:--------------------|:-----------------------------------------------------------------------------------|:-------------:|:----------------|
+| **EL 6**            | /cvmfs/singularity.opensciencegrid.org/opensciencegrid/osgvo-el6:latest            | [GitHub](https://github.com/opensciencegrid/osgvo-el6)   | A basic Enterprise Linux (CentOS) 6 based image. This is currently our default image |
+| **EL 7**            | /cvmfs/singularity.opensciencegrid.org/opensciencegrid/osgvo-el7:latest            | [GitHub](https://github.com/opensciencegrid/osgvo-el7) | A basic Enterprise Linux (CentOS) 7 based image. |
+| **Ubuntu Xenial**   | /cvmfs/singularity.opensciencegrid.org/opensciencegrid/osgvo-ubuntu-xenial:latest  | [GitHub](https://github.com/opensciencegrid/osgvo-ubuntu-xenial) | A good image if you prefer Ubuntu over EL flavors |
+| **TensorFlow**      | /cvmfs/singularity.opensciencegrid.org/opensciencegrid/tensorflow:latest           | [GitHub](https://github.com/opensciencegrid/osgvo-tensorflow) | Base on the TensorFlow base image, with a few OSG package added |
+| **TensorFlow GPU**  | /cvmfs/singularity.opensciencegrid.org/opensciencegrid/tensorflow-gpu:latest       | [GitHub](https://github.com/opensciencegrid/osgvo-tensorflow-gpu) | Used for running TensorFlow jobs on OSG GPU resources |
 
 
 ## Custom Images
