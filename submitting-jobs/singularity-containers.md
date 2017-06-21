@@ -81,6 +81,22 @@ tools and libraries. The images are are:
 | **TensorFlow GPU**  | /cvmfs/singularity.opensciencegrid.org/opensciencegrid/tensorflow-gpu:latest       | [GitHub](https://github.com/opensciencegrid/osgvo-tensorflow-gpu) | Used for running TensorFlow jobs on OSG GPU resources |
 
 
+## Exloring Images on the Submit Host
+
+Images can be explored interactively on the submit hosts by starting it
+in "shell" mode. The recommended command line, similar to how containers
+are started for jobs, is:
+
+    singularity shell \
+                --home $PWD:/srv \
+                --pwd /srv \
+                --bind /cvmfs \
+                --scratch /var/tmp \
+                --scratch /tmp \
+                --contain --ipc --pid \
+                /cvmfs/singularity.opensciencegrid.org/opensciencegrid/osgvo-ubuntu-xenial:latest
+
+
 ## Custom Images
 
 OSG Connect provides tooling for users to create, publish and load custom images.
