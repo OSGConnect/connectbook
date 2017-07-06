@@ -1,6 +1,6 @@
 [title]: - "OSG Managed Services"
 
-Note: Special instructions for the PEARC17 conference are here: https://swc-osg-workshop.github.io/OSG-HostedCE-PEARC17/
+**Special instructions for the PEARC17 conference are here: https://swc-osg-workshop.github.io/OSG-HostedCE-PEARC17/**
 
 ## Overview
 
