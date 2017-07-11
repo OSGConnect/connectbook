@@ -38,10 +38,10 @@ Here are the basic system requirements:
 Setup and installation process consists of the following steps:
 
 <ul>
-<li>Fill out [questionnaire](http://goo.gl/forms/8OukxsyG6KBSGHuR2) so that we
-have basic cluster details.</li>
-<li> Consultation call to discuss how you'll like to contribute to OSG. E.g. #
-of OSG jobs that should run, resource limits, etc.</li>
+<li>Fill out <a href="http://goo.gl/forms/8OukxsyG6KBSGHuR2">questionnaire</a>
+so that we have basic cluster details.</li> 
+<li> Consultation call to discuss how you'll like to contribute to OSG. E.g.
+number of OSG jobs that should run, resource limits, etc.</li>
 <li> Create Unix login account for the OSG service</li>
 <li> Install public SSH keys for the service</li>
 <li> We configure the OSG service with your system details</li>
