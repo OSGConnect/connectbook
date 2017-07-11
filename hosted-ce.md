@@ -38,7 +38,7 @@ Here are the basic system requirements:
 Setup and installation process consists of the following steps:
 
 <ul>
-<li>Fill out <a href="http://goo.gl/forms/8OukxsyG6KBSGHuR2">questionnaire</a>
+<li>Fill out <a href="http://goo.gl/forms/8OukxsyG6KBSGHuR2">this questionnaire</a>
 so that we have basic cluster details.</li> 
 <li> Consultation call to discuss how you'll like to contribute to OSG. E.g.
 number of OSG jobs that should run, resource limits, etc.</li>
