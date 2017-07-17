@@ -102,6 +102,7 @@ are started for jobs, is:
 OSG Connect provides tooling for users to create, publish and load custom images.
 This is useful if your job requires some very specific software setup.
 
+
 ### Creating a Custom Image
 
 If you want to use an image you have created yourself, the image
@@ -141,6 +142,16 @@ See one of the provided image defintions for a full example.
 
 If you do not want /cvmfs mounted in the container, please add 
 *+SingularityBindCVMFS = False* to your job submit file.
+
+
+### Configuring GPU images
+
+GPU images requires a few extra steps to get access to the host GPU libraries.
+GPU containers running under GPU slots will automatically get the host GPU
+libraries bound to */host-libs* inside the container. For this to work, 
+the */host-libs* directory has to exist in the image, and *LD_LIBRARY_PATH*
+has to be set for the job. An example of how to do this is the 
+[TensorFlow GPU image](https://github.com/opensciencegrid/osgvo-tensorflow-gpu).
 
 
 ### Distributing Custom Images Via CVMFS

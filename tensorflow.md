@@ -127,8 +127,8 @@ set to the GPU image.
     Queue 1
 
 
-When running on the GPU image, some extra environment settings are required. We recommend a 
-job wrapper like:
+When running on the GPU image, some extra environment settings might be required.
+We recommend a job wrapper like:
 
 
     #!/bin/bash
@@ -136,7 +136,6 @@ job wrapper like:
     set -e
     
     export PATH=/usr/local/cuda-8.0/bin:/usr/loca/bin:/usr/bin:/bin
-    export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64
     
     echo
     nvidia-smi
