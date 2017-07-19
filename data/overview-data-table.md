@@ -20,23 +20,30 @@ For the data management of more than 200 GB, please email us at [user-support@op
 
 ## Transferring input data for a job
 
-|         | **Data Size**| **Command** | **Purpose** | **Details**|
+|         | **Recommended Data Size**| **Command** | **Purpose** | **Details**|
 |:---------|:------:|:-----|:----------|:------|
-| **HTCondor**    | < 2 GB  | transfer_input_files| Input data from home, public or stash |[HTCondor Transfer](https://support.opensciencegrid.org/support/solutions/articles/5000639787-transferring-data-with-htcondor)|
-| **HTTP**        |  < 10 GB   | wget, curl or transfer_input_files  | Input data from ~/public |[HTTP Access](https://support.opensciencegrid.org/support/solutions/articles/5000639798-access-stash-remotely-using-http)|
-| **StachCache**  |  < 50 GB    | Staschcp |Input data from ~/public| [StachCache](https://support.opensciencegrid.org/support/solutions/articles/12000002775-transferring-data-with-stashcache)|
+| **HTCondor**    | < 100 MB  | transfer_input_files | Input data from home, public or stash |[HTCondor Transfer](https://support.opensciencegrid.org/support/solutions/articles/5000639787-transferring-data-with-htcondor)|
+| **HTTP**        |  < 1 GB   | wget, curl or rsync  | Input data from ~/public |[HTTP Access](https://support.opensciencegrid.org/support/solutions/articles/5000639798-access-stash-remotely-using-http)|
+| **StachCache**  |  > 1 GB, < 50 GB    | Staschcp |Input data from ~/public| [StachCache](https://support.opensciencegrid.org/support/solutions/articles/12000002775-transferring-data-with-stashcache)|
+| **GridFTP**  |  > 1 GB, < 50 GB    | gfal-copy |Input data from ~/stash| Experts with large work flows. Please contact us if you want to use this.|
 
 
 
 ## Transferring output data for a job
-We recommend that the built-in HTCondor file transfer mechanism (transfer_output_files=... in your job submit file) to get back the output data from the remote worker machine to the submit node. More details are given in the article [Transferring data with HTCondor](https://support.opensciencegrid.org/support/solutions/articles/5000639787-transferring-data-with-htcondor). 
+<!-- We recommend that the built-in HTCondor file transfer mechanism (transfer_output_files=... in your job submit file) to get back the output data from the remote worker machine to the submit node. More details are given in the article [Transferring data with HTCondor](https://support.opensciencegrid.org/support/solutions/articles/5000639787-transferring-data-with-htcondor).  -->
+
+|         | **Recommended Data Size**| **Command** | **Purpose** | **Details**|
+|:---------|:------:|:-----|:----------|:------|
+| **HTCondor**    | < 100 MB  | transfer_output_files | Transfer data to submit directory |[HTCondor Transfer](https://support.opensciencegrid.org/support/solutions/articles/5000639787-transferring-data-with-htcondor)|
+| **UNIX tools**        |  < 1 GB   | rsync, scp, etc. | Transfer data to home, local-scratch, stash, etc.| Please contact us if you want to use this. |
+| **GridFTP**  |  > 1 GB, < 50 GB    | gfal-copy | Output data to ~/stash| Experts with large work flows. Please contact us if you want to use this.|
 
 
 ## External data transfer
 
 |  | **Data Size**| **Tools** |**Details**|
 |:------------|:-------:|:------|:------| 
-|**Secured Copy Protocol (SCP)** | < 1 GB | scp, puty, WinSCP, gFTP, etc.  |[SCP](https://support.opensciencegrid.org/support/solutions/articles/5000634376-using-scp-to-transfer-files) |
+|**UNIX tools** | < 1 GB | rsync, scp, puty, WinSCP, gFTP, etc.  |[SCP](https://support.opensciencegrid.org/support/solutions/articles/5000634376-using-scp-to-transfer-files) |
 |**Globus** |  > 1 GB  | globus webservice or globus CLI | [Globus](https://support.opensciencegrid.org/support/solutions/articles/5000632397-data-transfer-with-globus) |
 
 
