@@ -24,9 +24,10 @@
 You can use TensorFlow on OSG by running your jobs through 
 [Singularity containers](https://support.opensciencegrid.org/solution/articles/12000024676-singularity-containers) .  We currently offer two containers (both based on Ubuntu):
 
-1. __/cvmfs/singularity.opensciencegrid.org/tensorflow/tensorflow:latest__ is the
-   standard CPU-only Docker image published by the TensorFlow project
-2. __/cvmfs/singularity.opensciencegrid.org/rynge/osg-tensorflow-gpu:latest__ is a
+1. __/cvmfs/singularity.opensciencegrid.org/opensciencegrid/tensorflow:latest__ is the
+   CPU only version of TensorFlow. This runs slower, but OSG has many more CPU only
+   resources available than GPU resources.
+2. __/cvmfs/singularity.opensciencegrid.org/opensciencegrid/tensorflow-gpu:latest__ is a
    modified TensorFlow-GPU image to be used on the GPUs available on OSG.
 
 Note that there is still only a small number of GPUs available on OSG, so we 
@@ -46,7 +47,7 @@ A sample job submit file for the CPU case is:
     request_disk = 4 GB
     
     # Singularity settings
-    +SingularityImage = "/cvmfs/singularity.opensciencegrid.org/tensorflow/tensorflow:latest"
+    +SingularityImage = "/cvmfs/singularity.opensciencegrid.org/opensciencegrid/tensorflow:latest"
     
     # EXECUTABLE is the program your job will run It's often useful
     # to create a shell script to "wrap" your actual work.
@@ -96,7 +97,7 @@ set to the GPU image.
     request_disk = 4 GB
     
     # Singularity settings
-    +SingularityImage = "/cvmfs/singularity.opensciencegrid.org/rynge/osg-tensorflow-gpu:latest"
+    +SingularityImage = "/cvmfs/singularity.opensciencegrid.org/opensciencegrid/tensorflow-gpu:latest"
     
     # EXECUTABLE is the program your job will run It's often useful
     # to create a shell script to "wrap" your actual work.
