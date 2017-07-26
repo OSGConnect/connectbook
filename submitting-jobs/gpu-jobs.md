@@ -12,10 +12,10 @@ as *request_cpus* and *request_memory*. Example:
 
 Currently, a job can only use 1 GPU at the time.
 
-Just like CPUs, GPUs are shared by OSG users when the resource is idle. 
-Therefore, we do not know exactly what resources are available at what
-time. When requesting a GPU job, you might land on one of the following
-types of GPUs:
+Just like CPUs, GPUs are shared with the OSG community only when the
+resource is idle. Therefore, we do not know exactly what resources are
+available at what time. When requesting a GPU job, you might land on one
+of the following types of GPUs:
 
   * Tesla M2070
   * Tesla K20
