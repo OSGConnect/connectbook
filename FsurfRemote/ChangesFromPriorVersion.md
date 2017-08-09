@@ -41,4 +41,5 @@ is currently being run.
 
 Fsurf 2.x now also supports processing workflows using FreeSurfer 5.1 and 6.0.
 The default is set to FreeSurfer 5.3, but other versions can be specified using
-`--version=6.0.0` or `--version=5.1.0` when submitting a workflow.
+`--version=6.0.0` or `--version=5.1.0` when submitting a workflow. E.g. `./fsurf
+submit --subject=MRN_3 --input=~/subjects/MRN_3_defaced.mgz --version 6.0.0 `
