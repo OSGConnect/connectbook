@@ -121,8 +121,8 @@ with an identifier of the *namespace/repository_name* format.
 There are two main methods, we recommend to generating your own
 custom image:
 
-1) Editing the *Dockerfile*
-2) Editing the default image using local Docker
+1. Editing the *Dockerfile*
+2. Editing the default image using local Docker
 
 which are described below. Once you have created your custom image, 
 you will need to register the image as described in the next section. 
