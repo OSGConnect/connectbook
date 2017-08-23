@@ -116,26 +116,26 @@ Hub](https://hub.docker.com/). The reason we use Docker as a source
 image repository is that it allows us to easily import the images into
 our own distribution system (see below). To get started, create a Docker
 user, sign in to the hub, and create a new repository. You will end up
-with an identifier of the *namespace/repository_name* format.
+with an identifier of the `namespace/repository_name` format.
 
 There are two main methods, we recommend to generating your own
 custom image:
 
-1. Editing the *Dockerfile*
+1. Editing the `Dockerfile`
 2. Editing the default image using local Docker
 
 which are described below. Once you have created your custom image, 
 you will need to register the image as described in the next section. 
 If you prefer, you can base you image on images not already published 
 by OSG, but if you do this, we recommend that you as one of the steps 
-create the */cvmfs* directory. This will enable the container to access 
+create the `/cvmfs` directory. This will enable the container to access 
 tools and data published on `/cvmfs`. If you do not want `/cvmfs` mounted 
 in the container, please add `+SingularityBindCVMFS = False` to your job submit file.
 
-#### Editing the *Dockerfile*
+#### Editing the `Dockerfile`
 
-To create an image locally using a *Dockerfile*, 
-first download the *Dockerfile* for your desired flavor from 
+To create an image locally using a `Dockerfile`, 
+first download the `Dockerfile` for your desired flavor from 
 [OSG GitHub repository](https://github.com/opensciencegrid), 
 see table above. For example, if you want to base the image on our Ubuntu
 Xenial image, 
@@ -152,7 +152,7 @@ you want `/cvmfs` mounted in your image please add
     # required directories
     RUN mkdir -p /cvmfs
 
-to your *Dockerfile*
+to your `Dockerfile`
 
 Then build the image with tag matching your 
 Docker Hub repository:
@@ -199,7 +199,7 @@ Now you can commit the changes to the image
     docker commit <docker_session_name_here>
 
 Alternatively, you can use the sessions hash (`740b9db736a1` in the above example).
-Then you make a tag for your desired namespace/repository_name:
+Then you make a tag for your desired `namespace/repository_name`:
 
     docker tag opensciencegrid/osgvo-ubuntu-xenial namespace/repository_name
 
@@ -210,12 +210,12 @@ And finally you simply need to push the changes:
 ### Configuring GPU images
 
 GPU images requires a few extra steps to get access to the host GPU libraries.
-We recommend that in this case you edit the *Dockerfile* rather than building 
+We recommend that in this case you edit the `Dockerfile` rather than building 
 a image through Docker. 
 
 GPU containers running under GPU slots will automatically get the host GPU
-libraries bound to */host-libs* inside the container. For this to work, 
-the */host-libs* directory has to exist in the image, and *LD_LIBRARY_PATH*
+libraries bound to `/host-libs` inside the container. For this to work, 
+the `/host-libs` directory has to exist in the image, and `LD_LIBRARY_PATH`
 has to be set for the job. An example of how to do this is the 
 [TensorFlow GPU image](https://github.com/opensciencegrid/osgvo-tensorflow-gpu).
 
