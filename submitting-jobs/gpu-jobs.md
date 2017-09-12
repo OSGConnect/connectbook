@@ -23,7 +23,11 @@ of the following types of GPUs:
   * Tesla P100
   * GeForce GTX 1080
 
-It is currently not possible to specify which type of GPU you want.
+It is currently not possible to specify exactly what type of GPU you want, 
+but you can match on for example CUDA compute capability. For example, use
+the following requirements expression in your job:
+
+    requirements = CUDACapability >= 3
 
 A good example on how create a software stack for GPU use is our
 TensorFlow example:
