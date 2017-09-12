@@ -82,7 +82,8 @@ This job is mapped to sites which support Singularity, and auto-loads the Tensor
 job will start inside the container under /srv.
 
 The submit file for GPU jobs is similar, but with _request_gpus = 1_ and _+SingularityImage_ 
-set to the GPU image.
+set to the GPU image. Note that you might also need _CUDACapability_ in the requirements
+to make sure you land on a GPU new enough to support the feature set TensorFlow requires.
 
 
     # The UNIVERSE defines an execution environment. You will almost always use VANILLA.
@@ -90,7 +91,7 @@ set to the GPU image.
     
     # These are good base requirements for your jobs on OSG. It is specific on OS and
     # OS version, core cound and memory, and wants to use the software modules. 
-    Requirements = HAS_SINGULARITY == True
+    Requirements = HAS_SINGULARITY == True && CUDACapability >= 3
     request_cpus = 1
     request_gpus = 1
     request_memory = 2 GB
