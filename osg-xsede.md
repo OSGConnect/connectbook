@@ -312,6 +312,44 @@ Workflow provenance information is collected and can be summarized with
 the provided statistical and plotting tools. A sample Pegasus workflow
 can be found in <code>/opt/sample-jobs/pegasus/</code> .
 
+
+<h2><a name="singularity"></a><a href="#singularity">Singularity Containers</a></h2>
+
+Singularity containers provide a great solution for complex software
+stacks or OS requirements, and OSG has easy to use integrated support
+for such containers. Full details can be found in the
+<a href="https://support.opensciencegrid.org/support/solutions/articles/12000024676">Singularity guide</a>.
+
+
+<h2><a name="stash"></a><a href="#stash">Distribute data with Stash</a></h2>
+
+Stash is a data solution used under
+<a href="https://osgconnect.net/">OSGConnect</a>, but is partly also available 
+for OSG XSEDE users. Files under <code>/local-scratch/public_stash/</code> will
+automatically synchronize to the globally available
+<code>/cvmfs/stash.osgstorage.org/user/xd-login/public/</code> file system, which
+is available to the majority of OSG connected compute nodes. This is a great
+way to distribute software and commonly used data sets. To get started, create 
+your own sub directory:
+
+    $ mkdir -p /local-scratch/public_stash/$USER
+
+Now, populate that directory with the software and data required for your jobs.
+The synchronization can take couple of hours. You can verify the data has
+reached the /cvmfs system by using <code>ls</code>:
+
+    $ ls /cvmfs/stash.osgstorage.org/user/xd-login/public/
+
+To steer your jobs to compute nodes which can access the file system, add
+<code>HAS_CVMFS_stash_osgstorage_org == True</code> to your job 
+requirements. For example:
+
+    requirements = OSGVO_OS_STRING == "RHEL 6" && Arch == "X86_64" && HAS_MODULES == True && HAS_CVMFS_stash_osgstorage_org == True
+
+Once a job starts up on such a compute node, the job can read directly
+from <code>/cvmfs/stash.osgstorage.org/user/xd-login/public/</code>
+
+
 <h2><a name="help"></a><a href="#help">How to get help using OSG</a></h2>
 
 XSEDE users of OSG may get technical support by
