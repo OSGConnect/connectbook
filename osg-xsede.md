@@ -188,7 +188,7 @@ Below is a basic job description for the Virtual Cluster.
     +ProjectName = "TG-NNNNNN"
     
     # requirements is an expression to specify machines that can run jobs
-    requirements = OSGVO_OS_STRING == "RHEL 6" &amp;&amp; Arch == "X86_64" &amp;&amp; HAS_MODULES == True
+    requirements = OSGVO_OS_STRING == "RHEL 6" && Arch == "X86_64" && HAS_MODULES == True
     request_cpus = 1
     request_memory = 2 GB
     request_disk = 10 GB
@@ -232,7 +232,7 @@ that you enable retries in your Condor submit files. For example:
 
 <h3><a name="running:simple"></a><a href="#running:simple">J</a>ob Example: Java with a job wrapper</h3>
 
-            The following is an example on how to run Java code on Open
+The following is an example on how to run Java code on Open
 Science Grid. The job requirements specifies that the job requires
 Java, and a wrapper script is used to invoke Java.
 
@@ -245,23 +245,24 @@ File: <em>condor.sub</em>
     +ProjectName = "TG-NNNNNN"
     
     # requirements is an expression to specify machines that can run jobs
-    requirements = (HAS_JAVA =?= True)
+    requirements = HAS_JAVA == True
     
-    # stay in queue on failures on_exit_hold = (ExitBySignal == True) ||
-    (ExitCode != 0)
+    # stay in queue on failures on_exit_hold = (ExitBySignal == True) || (ExitCode != 0)
     
-    # retry job 3 times, pause 1 hour between retries periodic_release =
-    (NumJobStarts &lt; 3) &amp;&amp; ((CurrentTime - EnteredCurrentStatus)
-    &gt; (60*60))
+    # retry job 3 times, pause 1 hour between retries
+    periodic_release = (NumJobStarts < 3) && ((CurrentTime - EnteredCurrentStatus) > (60*60))
     
     executable = wrapper.sh
     
-    should_transfer_files = YES WhenToTransferOutput = ON_EXIT
+    should_transfer_files = YES
+    WhenToTransferOutput = ON_EXIT
     
-    # a list of files that the job needs transfer_input_files =
-    HelloWorld.jar
+    # a list of files that the job needs
+    transfer_input_files = HelloWorld.jar
     
-    output = job.out error = job.err log = job.log
+    output = job.out
+    error = job.err
+    log = job.log
     
     notification = NEVER
     
@@ -318,5 +319,4 @@ contacting OSG User Support staff at email
 <a href="mailto:user-support@opensciencegrid.org">user-support@opensciencegrid.org</a>.
 Users may also contact the <a href="https://portal.xsede.org/help-desk">XSEDE helpdesk</a>.
 
-<i>Last update: September 13, 2017</i>
 
