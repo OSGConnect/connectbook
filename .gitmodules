@@ -116,3 +116,6 @@
         path = tutorials/tutorial-tf-matmul
         url = https://github.com/OSGConnect/tutorial-tf-matmul
 
+[submodule "tutorial-tf-matmul"]
+	path = tutorial-tf-matmul
+	url = https://github.com/OSGConnect/tutorial-tf-matmul
