@@ -112,3 +112,6 @@
 [submodule "tutorials/tutorial-swift"]
 	path = tutorials/tutorial-swift
 	url = https://github.com/OSGConnect/tutorial-swift
+[submodule "tutorials/tutorial-tensorflow-matmul"]
+	path = tutorials/tutorial-tensorflow-matmul
+	url = https://github.com/OSGConnect/tutorial-tensorflow-matmul
