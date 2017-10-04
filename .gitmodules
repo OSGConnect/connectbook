@@ -58,9 +58,6 @@
 [submodule "tutorials/tutorial-software"]
 	path = tutorials/tutorial-software
 	url = https://github.com/OSGConnect/tutorial-software
-[submodule "tutorials/tutorial-stash-chirp"]
-	path = tutorials/tutorial-stash-chirp
-	url = https://github.com/OSGConnect/tutorial-stash-chirp
 [submodule "tutorials/tutorial-stash-http"]
 	path = tutorials/tutorial-stash-http
 	url = https://github.com/OSGConnect/tutorial-stash-http
