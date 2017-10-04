@@ -112,10 +112,6 @@
 [submodule "tutorials/tutorial-python-virtualenv"]
 	path = tutorials/tutorial-python-virtualenv
 	url = https://github.com/OSGConnect/tutorial-python-virtualenv
-[submodule "tutorials/tutorial-tf-matmul"]
-        path = tutorials/tutorial-tf-matmul
-        url = https://github.com/OSGConnect/tutorial-tf-matmul
-
 [submodule "tutorial-tf-matmul"]
 	path = tutorial-tf-matmul
 	url = https://github.com/OSGConnect/tutorial-tf-matmul
