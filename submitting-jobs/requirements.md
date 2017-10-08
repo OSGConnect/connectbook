@@ -38,6 +38,8 @@ attributes. You can check values for an attribute with:
 
 	condor_status -pool osg-flock.grid.iu.edu -af {ATTR_NAME}
 
+- **HAS_SINGULARITY** - Boolean specifying if you want to land on
+  nodes supporting Singularity containers.
 
 - **HAS_MODULES** - Boolean specifying if you will be able to use
   _module load ..._ or not.
@@ -64,6 +66,8 @@ attributes. You can check values for an attribute with:
     - atlas.cern.ch
     - cms.cern.ch
     - ams.cern.ch
+
+- **CUDACapability** - For GPUs, specifies the CUDA compute capability.
 
 - **HAS_SQUID** - Boolean specifying if the _OSG_SQUID_LOCATION_ environment
   variable is set
