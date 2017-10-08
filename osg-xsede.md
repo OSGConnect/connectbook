@@ -8,14 +8,14 @@
             The <a href="http://www.opensciencegrid.org/">Open Science Grid</a> (OSG) promotes science by:</p>
         <ul>
             <li>
-                enabling a framework of distributed computing and storage resources</li>
+                Enabling a framework of distributed computing and storage resources</li>
             <li>
-                making available a set of services and methods that enable better access to ever increasing computing resources for researchers and communities</li>
+                Making available a set of services and methods that enable better access to ever increasing computing resources for researchers and communities</li>
             <li>
-                providing resource sharing principles and software that enable distributed high throughput computing (DHTC) for users and communities at all scales.</li>
+                Providing resource sharing principles and software that enable distributed high throughput computing (DHTC) for users and communities at all scales.</li>
         </ul>
         <p>
-            The OSG facilitates access to DHTC for scientific research in the US. The resources accessible through the OSG are contributed by the community, organized by the OSG, and governed by the <a href="http://www.opensciencegrid.org">OSG Consortium</a>; an overview is available at <a href="http://osg-docdb.opensciencegrid.org/0008/000839/004/OSG%20Intro%20v23.pdf">An Introduction to OSG</a>. In July 2013, OSG is comprised of about 126 institutions with ~120 active sites that collectively support usage of ~2,000,000 core hours per day. Up-to-date usage metrics are available at the <a href="http://display.grid.iu.edu/">OSG Usage Display</a>.</p>
+            The OSG facilitates access to distributed High Throughput Computing (DHTC) for scientific research in the US. The resources accessible through the OSG are contributed by the community, organized by the OSG, and governed by the <a href="http://www.opensciencegrid.org">OSG Consortium</a>; an overview is available at <a href="http://osg-docdb.opensciencegrid.org/0008/000839/004/OSG%20Intro%20v23.pdf">An Introduction to OSG</a>. In July 2013, OSG is comprised of about 126 institutions with &#126;120 active sites that collectively support usage of &#126;2,000,000 core hours per day. Up-to-date usage metrics are available at the <a href="http://display.grid.iu.edu/">OSG Usage Display</a>.</p>
         <p>
             Cores that are not being used at any point in time by the owning communities are made available for shared use by other researchers; this usage mode is called opportunistic access. OSG supports XSEDE users by providing a Virtual Cluster that forms an abstraction layer to access the opportunistic cores in the distributed OSG infrastructure. This interface allows XSEDE users to view the OSG as a single cluster to manage their jobs, provide the inputs and retrieve the outputs. XSEDE users access the OSG via the OSG-XSEDE login host that appears as a resource in the XSEDE infrastructure.</p>
         <h2>
@@ -28,9 +28,9 @@
             <li>
                 Software should preferably be <strong>single threaded</strong>, using <strong>less than 2 GB memory</strong> and each invocation should <strong>run for 1-12 hours</strong>. Please contact the support listed below for more information about these capabilities. System level check pointing, such as the HTCondor standard universe, is not available. Application level check pointing, for example applications writing out state and restart files, can be made to work on the system.</li>
             <li>
-                Compute sites in the OSG can be configured to use pre-emption, which means jobs can be automatically killed if higher priority jobs enter the system. Pre-empted jobs will restart on another site, but it is important that the jobs can handle multiple restarts.</li>
+                Compute sites in the OSG can be configured to use preemption, which means jobs can be automatically killed if higher priority jobs enter the system. Preempted jobs will restart on another site, but it is important that the jobs can handle multiple restarts.</li>
             <li>
-                Binaries should preferably be statically linked. However, dynamically linked binaries with standard library dependencies, built for a 64-bit Red Hat Enterprise Linux (RHEL) 5 machines will also work. Also, interpreted languages such as Python or Perl will work as long as there are no special module requirements.</li>
+                Binaries should preferably be statically linked. However, dynamically linked binaries with standard library dependencies, built for a 64-bit Red Hat Enterprise Linux (RHEL) 6 machines will also work. Also, interpreted languages such as Python or Perl will work as long as there are no special module requirements.</li>
             <li>
                 Input and output data for each job should be &lt; 10 GB to allow them to be pulled in by the jobs, processed and pushed back to the submit node. Note that the OSG Virtual Cluster does not currently have a global shared file system, so jobs with such dependencies will not work.</li>
             <li>
@@ -74,7 +74,7 @@ $ gsiscp /a/local/file submit-1.osg.xsede.org/local-scratch/username/filename
         <h3>
             SSH public key authentication</h3>
         <p>
-            Secure shell users should feel free to append their public RSA key to their ~/.ssh/authorized_keys file to enable access from their own computer. Please login once via the XSEDE portal to install your key. Please make sure that the permissions on the .ssh directory and the&nbsp;<span style="letter-spacing: 0.4px;">authorized_keys file have appropiate permissions. For example:</span></p>
+            Secure shell users should feel free to append their public RSA key to their <code>~/.ssh/authorized_keys</code> file to enable access from their own computer. Please login once via the XSEDE portal to install your key. Please make sure that the permissions on the .ssh directory and the&nbsp;<span style="letter-spacing: 0.4px;">authorized_keys file have appropriate permissions. For example:</span></p>
         <pre>
 $ chmod 755 ~/.ssh
 

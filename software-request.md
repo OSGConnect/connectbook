@@ -1,6 +1,6 @@
-[title]: - "Requesting a software installation"
+[title]: - "Requesting a Software"
 
-As much software as [is already available for grid use][catalog],
+A large number of software packages [is already available for grid use][catalog],
 we realize that there are always new software elements that are
 critical to your research process.  You may request that software
 be added to the OASIS software library with a simple email to

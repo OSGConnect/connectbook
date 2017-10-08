@@ -1,4 +1,4 @@
-[title]: - "Software modules catalog"
+[title]: - "Software Modules Catalog"
 
 [TOC]
 

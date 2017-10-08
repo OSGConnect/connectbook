@@ -1,8 +1,8 @@
 
-[title]: - "Software transfer via HTCondor or HTTP"
+[title]: - "Software Transfer via HTCondor or HTTP"
  
 
-# Software transfer via HTCondor or HTTP
+# Software Transfer via HTCondor or HTTP
 
 ## Overview
 
@@ -10,16 +10,15 @@ This page will illustrate how software can be transferred and accessed in OSG Co
 
 Other sections have shown how to use the same mechanisms used to transfer data. The techniques and the 
 recommendation are the same, e.g. use HTCondor 's built-in transfer mechanisms only for relatively small amounts of 
-data and binaries to transfer (<1GB) or if you need to do ad-hoc job submissions.
+data and binaries to transfer (<100 MB) or if you need to do ad-hoc job submissions.
 
-Transferring software is very similar. When using HTCondor to transfer software keep in mind that the Executable 
+Transferring software is very similar. When using HTCondor to transfer software keep in mind that the `executable` 
 specified in the submit file is transferred by default. Then remember that you must have execute permission on the 
-software files, that the **PATH** (folders where executables can be found) may be set differently on the remote host 
-(pay attention on where the software is).
+software files that the `PATH` (folders where executables can be found) may be set differently on the remote host.
 
 ## Starting Up
 
-First  login to `login.osgconnect.net`. Then, to create a working directory, run `tutorial software`.  
+First login to `login.osgconnect.net`. Create a working directory, run `tutorial software`.  
 Then make sure that you have a public directory exported via Web. This directory should have been created for you 
 and be accessible at an URL like `https://stash.osgconnect.net/+user/` where "user" is your user name on OSG Connect :
 

@@ -6,7 +6,7 @@ Registration and Login for OSG Connect
 (An [abbreviated version of these signup
 instructions](<https://osgconnect.net/signup>) is provided when you
 choose [signup](<https://osgconnect.net/signup>) from the [OSG Connect main
-site](<https://osgconnect.net/>). This section of the ConnectBook provides more
+site](<https://osgconnect.net/>). This section of the Help Desk provides more
 comprehensive information about the registration process, but the shortened
 step-by-step guide is perhaps easier to follow.)
 
@@ -15,24 +15,23 @@ Overview of access procedure
 
 The Open Science Grid governs access to grid resources through an accounting
 framework that assigns each user's *jobs* to an *accounting group* or *project*.
-As a new user of the OSG, therefore, one of the first things to iron out is what
+As a new user of the OSG, one of the first things to iron out is what
 project or projects best describe your work.  This is more a matter of
 accountability than of entitlement: it concerns how organizations report to
 their sponsors and funding agencies on the utilization of resources placed under
 their administration.
 
-To assist in this, OSG Connect uses a group management tool that places users —
-individual human identities — into one or more groups with names such
-as *osg.RDCEP* or *osg.Extenci*. The *osg* portion of this name differentiates
-our groups from those of other organizations in the same group management
-facility. The latter portion identifies the specific project, each with a
-Principal Investigator or other administrator, that oversees access to
-resources. Within our web tools, these names are often in mixed case, though you
-may see them uppercased in some reporting/accounting software.
+To assist in this, OSG Connect uses a group management tool that places users
+into one or more groups with names such as *osg.RDCEP* or *osg.Extenci*. 
+The *osg* portion of this name differentiates our groups from those of 
+other organizations in the same group management facility. The latter portion 
+identifies the specific project, each with a Principal Investigator or other 
+administrator, that oversees access to resources. Within our web tools, these 
+names are often in mixed case, though you may see them uppercased in some 
+reporting/accounting software.
 
 The first step in registration is to create a user account and *bind* it to
 other identity information. After that you will enroll in a project group.
-
 
 Once you've enrolled in a group, you'll have the requisite rights to log in to
 the submit node for the OSG Connect job scheduler, or to transfer data in and
@@ -53,7 +52,7 @@ integrated identity service, it also enables you to begin performing data
 transfers to OSG Connect very early on, with a minimal fuss, using Globus 
 transfer.
 
-### InCommon Registration
+<!-- ### InCommon Registration
 
 The default first step is to sign in using an InCommon ID through the CILogon
 service. This allows you to enroll using your existing campus identifier and
@@ -71,7 +70,7 @@ After selecting your institution in the discovery service, you'll be taken to
 your own institution's local sign-in screen. You've probably used it before,
 and if it looks familiar that's because it's exactly the same web site.  Sign in
 using your campus credentials. When done, you'll return automatically to the
-OSG Connect portal and can carry on with signup.
+OSG Connect portal and can carry on with signup. -->
 
 ### Globus Registration
 
@@ -81,13 +80,20 @@ a Globus account, click **Already a member? Sign In** to sign in now. Otherwise,
 provide your name, email address, and a username and password to register a new
 account. Your OSG Connect identity will piggyback from here.
 
-| **Using InCommon/CILogon**                     | **Using Globus ID (existing)**                             | **Using Globus  (new)**                |
+<!-- | **Using InCommon/CILogon**                     | **Using Globus ID (existing)**                             | **Using Globus  (new)**                |
 |------------------------------------------------|-------------------------------------------------------------------|----------------------------------------------|
 | Click **Proceed**.                             | Click **Sign Up with Globus**, then **Already a member? Sign In** | Click **Sign Up with Globus**.               |
 | Select your institution from the CILogon site. | Enter Globus username and password.                               | Enter Name, Email, Username, Password.       |
 | Perform authentication at your institution.    | ↓                                                                 | Await validation email, use link to confirm. |
-| Go to the **Link accounts **workflow.          | Go to the **Join group **workflow.                                | Go to the **Join group **workflow.           |
+| Go to the **Link accounts **workflow.          | Go to the **Join group **workflow.                                | Go to the **Join group **workflow.           | -->
 
+
+| **Using Globus ID (existing)**                                    | **Using Globus  (new)**                      |
+|-------------------------------------------------------------------|----------------------------------------------|
+| Click **Sign Up with Globus**, then **Already a member? Sign In** | Click **Sign Up with Globus**.               |
+| Enter Globus username and password.                               | Enter Name, Email, Username, Password.       |
+| ↓                                                                 | Await validation email, use link to confirm. |
+| Go to the **Join group **workflow.                                | Go to the **Join group **workflow.           |
 
 Link accounts
 -------------
