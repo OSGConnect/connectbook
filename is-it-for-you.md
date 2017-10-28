@@ -31,7 +31,8 @@ Unfortunately high throughput computing is probably not a good fit for you if:
     -   Distributed HTC resources are accessed through a batch system and therefore suited for longer processing times, with job durations typically measured in hours. 
 -   Your application needs large numbers of cores simultaneously.
     -   OSG does not schedule MPI jobs. 
--   Your application requires a shared filesystem. There is no shared filesystem across the many computing sites of the OSG. We can help assess if you have this constraint, and if it can be practically removed.
+-   Your application requires a shared filesystem. 
+    - There is no shared filesystem across the many computing sites of the OSG. We can help assess if your app has this constraint, and if it can be practically removed.
 
 &nbsp;
 
