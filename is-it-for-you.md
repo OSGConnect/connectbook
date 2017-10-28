@@ -35,5 +35,5 @@ Unfortunately high throughput computing is probably not a good fit for you if:
 
 &nbsp;
 
-As usual, you can direct any questions using the help desk, or just send email
+As usual, you can direct any questions using the help desk or by sending email 
 to [user-support@opensciencegrid.org](mailto:support@opensciencegrid.org).
