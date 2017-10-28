@@ -25,7 +25,7 @@ Your application may present additional challenges, but in many of these have so
         these resources can't run many jobs at the same time so jobs will gain access to 
         these resources more slowly than jobs that require less than 2GB of RAM per core.
 
-## Applications Poorly Fitted to HTC
+## Applications Poorly Suited to Distributed HTC
 
 Unfortunately high throughput computing is probably not a good fit for you if:
 
