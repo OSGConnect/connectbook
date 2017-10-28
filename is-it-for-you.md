@@ -1,36 +1,40 @@
 [title]: - "Is High Throughput Computing for you?"
 
-Consider the following to determine whether high throughput computing (HTC) is
-appropriate for your computing problem:
+
+## Ideal Charateristics for Distributed High Throughput Computing (HTC)
+
 -   Your science workflow involves computations that can be split into many
     independent jobs
 -   Your workflow involves individual jobs be run on a single processor (as opposed to a single
     large-scale MPI job simultaneously utilizing many processors).
 -   Your applications can be interrupted and restarted at a later time or on
-    another processor or computing site? If not, your application might still 
-    be able to be adapted to run as under a HTC model
--   Your application software is “portable”? Not sure what this means? Contact us.  
+    another processor or computing site. 
+-   Your application software is “portable”. 
 
 
-High throughput computing may still be a good fit for you if:
--   Your computations require access to or produce huge amounts of data. In the OSG we have plenty of experience with very large (even extreme scale) data sets.
+## Challenges to Distributed HTC
+
+Your application may present additional challenges, but in many of these have solutions on the OSG:
+
+-   Computations that access or produce large datasets. 
 -   Your computations need small scale parallelism (8-32 cores):
-    -   OSG has some sites that will allow your jobs to utilize 8 to 32 cores on a single 
-        host at the same time.  However, gaining access to these resources is slower than 
-        gaining access to single core job slots.
--   Your applications require large amounts of memory
-    -   OSG has resources that can provide jobs with more than 2GB of RAM per core, however
+    -   OSG has sites that will allow your jobs to utilize 8 to 32 cores on a single 
+        host at the same time. 
+-   Your applications require large amounts of memory:
+    -   OSG has resources that can provide jobs with more than 2GB of RAM per (logical) core, however
         these resources can't run many jobs at the same time so jobs will gain access to 
         these resources more slowly than jobs that require less than 2GB of RAM per core.
 
+## Applications Poorly Fitted to HTC
 
 Unfortunately high throughput computing is probably not a good fit for you if:
+
 -   You need results immediately after submission.
     -   HTC computing is concerned more with processing over longer time scales
         (hours, days, weeks, ...) whereas applications requiring an immediate
-        response are not well suited to HTC. 
--   Your application needs large number of cores at the same time
-    -   OSG doesn't provide resources that are appropriate for MPI type jobs.
+        response are not well suited to distributed HTC. 
+-   Your application needs large numbers of cores at the simultaneously
+    -   OSG does not schedule MPI jobs 
 -   Your application requires a shared filesystem. There is no shared filesystem across the OSG.
 
 
