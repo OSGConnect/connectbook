@@ -2,7 +2,6 @@
 
 Consider the following to determine whether high throughput computing (HTC) is
 appropriate for your computing problem:
-
 -   Your science workflow involves computations that can be split into many
     independent jobs
 -   Your workflow involves individual jobs be run on a single processor (as opposed to a single
@@ -12,8 +11,8 @@ appropriate for your computing problem:
     be able to be adapted to run as under a HTC model
 -   Your application software is “portable”? Not sure what this means? Contact us.  
 
-High throughput computing may still be a good fit for you if:
 
+High throughput computing may still be a good fit for you if:
 -   Your computations require access to or produce huge amounts of data. In the OSG we have plenty of experience with very large (even extreme scale) data sets.
 -   Your computations need small scale parallelism (8-32 cores):
     -   OSG has some sites that will allow your jobs to utilize 8 to 32 cores on a single 
@@ -24,8 +23,8 @@ High throughput computing may still be a good fit for you if:
         these resources can't run many jobs at the same time so jobs will gain access to 
         these resources more slowly than jobs that require less than 2GB of RAM per core.
 
-Unfortunately high throughput computing is probably not a good fit for you if:
 
+Unfortunately high throughput computing is probably not a good fit for you if:
 -   You need results immediately after submission.
     -   HTC computing is concerned more with processing over longer time scales
         (hours, days, weeks, ...) whereas applications requiring an immediate
