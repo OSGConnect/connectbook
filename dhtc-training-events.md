@@ -8,8 +8,12 @@ We offer training and tutorials for the scientists and researchers on distribute
 
 ## OSG Workshops on HTC
 
-  * RMACC, Boulder, August 15-17, 2017 (comming soon)
-  * PEARC17, New Orleans, July 9-13, 2017 (comming soon)
+  * RMACC, Boulder, August 15-17, 2017 
+  * [RMACC 17 Campus Grid Workshop] (https://www.rmacc.org/hpcsymposium/schedule)
+  * [RMACC 17 User Workshop] (https://www.rmacc.org/hpcsymposium/schedule)
+  * PEARC17, New Orleans, July 9-13, 2017 
+  * [PEARC 17 User Workshop] (https://pearc17.sched.com/event/AQ3M/high-throughput-computation-on-the-open-science-grid-and-aws)
+  * [PEARC 17 Campus Grid Workshop] (https://pearc17.sched.com/event/AQ3V/enabling-science-beyond-the-campus-edge-hpc-integration-with-the-open-science-grid)
   * [Open Science Grid Mini-Workshop at University of Chicago, April 9th, 2015](http://swc-osg-workshop.github.io/MiniOSG-2015-04-09-UChicago/index.html)
 
 ## Tutorial session in OSG All Hands Meetings
