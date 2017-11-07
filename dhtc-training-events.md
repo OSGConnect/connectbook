@@ -4,7 +4,7 @@
 
 ## Overview
 
-We offer training and tutorials for domain scientists and researchers advancing distributed high throughput computing methods. 
+We offer training and tutorials for domain scientists and resource providers of high throughput computing resources. 
 
 ## OSG Workshops on HTC
 
