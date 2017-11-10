@@ -129,23 +129,13 @@ to make sure you land on a GPU new enough to support the feature set TensorFlow 
     Queue 1
 
 
-When running on the GPU image, some extra environment settings might be required.
+When running on the GPU image, some extra control over the environment might be required.
 We recommend a job wrapper like:
 
 
     #!/bin/bash
 
     set -e
-    
-    export PATH=/usr/local/cuda-8.0/bin:/usr/loca/bin:/usr/bin:/bin
-    
-    echo
-    nvidia-smi
-    echo
-    
-    echo
-    nvcc --version 
-    echo
    
     # your own code here 
     python test.py gpu 1500
