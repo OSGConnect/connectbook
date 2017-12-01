@@ -31,13 +31,26 @@ The requirements are:
    a valid registered project name.
 
 
+## Required Packages
+
+Enable the [OSG Yum repository](http://opensciencegrid.github.io/docs/common/yum/).
+
+Install the packages required for GSI authentication and Gratia job data:
+
+    # yum install gratia-probe-condor osg-ca-certs osg-pki-tools
+
+
+## Requesting a Host Certificate
+
+A host certificate is used for authenticating your submit host to the OSG
+infrastructure. If you do not already have a certificate, you can request one
+using [these instructions](http://opensciencegrid.github.io/docs/security/host-certs/)
+
+
 ## Configuration
 
-Enable the [OSG Yum repository](https://twiki.opensciencegrid.org/bin/view/Documentation/Release3/YumRepositories).
 
-
-Install the *gratia-probe-condor* package, and edit the */etc/gratia/condor/ProbeConfig* file.
-Change the probe section to be:
+Edit the */etc/gratia/condor/ProbeConfig* file. Change the probe section to be:
 
 
     ProbeName="condor:YOUR_HOSTNAME_HERE" 
