@@ -21,6 +21,8 @@ and DN of the host certificate.
 
 The requirements are:
 
+ * A public IP address, forward and reverse DNS
+ * Ability to open firewall ports
  * HTCondor has to authenticate via GSI. At the minimum, the submit host
    has to have a host certificate and a list of trusted CAs under
    */etc/grid-security/certificates/*
