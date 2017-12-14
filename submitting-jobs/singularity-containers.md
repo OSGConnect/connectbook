@@ -140,7 +140,7 @@ first download the `Dockerfile` for your desired flavor from
 see table above. For example, if you want to base the image on our Ubuntu
 Xenial image, 
 
-    $ git pull https://github.com/opensciencegrid/osgvo-ubuntu-xenial.git
+    $ git clone https://github.com/opensciencegrid/osgvo-ubuntu-xenial.git
 
 and change into the directory
 
