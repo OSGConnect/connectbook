@@ -221,4 +221,13 @@ Jobs submitted with the HTCondor requirement given above will automatically have
 
 A list of currently installed software is available [here](http://support.opensciencegrid.org/support/solutions/articles/5000634397-software-modules-catalog). If your software is not already listed, you can [request it][request].
 
+## Using modules outside of OSG Connect
+
+In order to use distributed environment modules outside of OSG Connect, you'll need to load the modules code manually from OASIS.  You can do this by running
+	
+	$ source /cvmfs/oasis.opensciencegrid.org/osg/modules/lmod/current/init/SHELL 
+	
+where SHELL is the shell that you are using (this is usually bash).  
+
+
 [request]: 5000649173
