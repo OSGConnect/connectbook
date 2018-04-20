@@ -10,7 +10,7 @@ HTCondor terms this is called
 [flocking](https://research.cs.wisc.edu/htcondor/manual/latest/5_2Connecting_HTCondor.html)
 
 If you are interested in this solution, please open a
-[new ticket](https://support.opensciencegrid.org/helpdesk/tickets/new) with the hostname and DN of the host certificate.
+[new ticket](https://support.opensciencegrid.org/helpdesk/tickets/new) with the hostname.
 
 ## Requirements
 
@@ -18,7 +18,7 @@ The requirements are:
 
 * A public IP address, forward and reverse DNS
 * Ability to open firewall ports
-* HTCondor has to authenticate via GSI. At the minimum, the submit host
+* HTCondor has to authenticate via pool password or GSI. For GSI, the submit host
    has to have a host certificate and a list of trusted CAs under */etc/grid-security/certificates/*
 * Reporting to the OSG accounting system has to be enabled. This can
    be accomplished by installing and configuring the *gratia-probe-condor* RPM.
@@ -33,13 +33,7 @@ Install the packages required for GSI authentication and Gratia job data:
 
     # yum install gratia-probe-condor osg-ca-certs osg-pki-tools
 
-## Requesting a Host Certificate
-
-A host certificate is used for authenticating your submit host to the OSG
-infrastructure. If you do not already have a certificate, you can request one
-using [these instructions](http://opensciencegrid.github.io/docs/security/host-certs/)
-
-## Configuration
+## Gratia Probe Configuration
 
 Edit the */etc/gratia/condor/ProbeConfig* file. Change the probe section to be:
 
@@ -60,9 +54,81 @@ Please remember to enable the probe:
 
     [root@client ~]$ service gratia-probes-cron start
 
+## Pool Password: HTCondor Configuration
+
 The following is a starting point for the HTCondor configuration. Depending on other
 site configuration, some changes might be required. Put this in for example
 /etc/condor/config.d/80-osg-flocking.conf
+
+    #--  With glideins, there is nothing shared
+    CONDOR_HOST=$(FULL_HOSTNAME)
+    UID_DOMAIN=$(FULL_HOSTNAME)
+    FILESYSTEM_DOMAIN=$(FULL_HOSTNAME)
+    
+    # submitters/campus factories to flock to
+    FLOCK_TO = osg-flock.grid.iu.edu
+    
+    #-- Authentication settings
+    SEC_PASSWORD_FILE = /etc/condor/pool_password
+    SEC_DEFAULT_AUTHENTICATION = REQUIRED
+    SEC_DEFAULT_AUTHENTICATION_METHODS = FS,PASSWORD
+    SEC_READ_AUTHENTICATION    = OPTIONAL
+    SEC_CLIENT_AUTHENTICATION  = OPTIONAL
+    SEC_ENABLE_MATCH_PASSWORD_AUTHENTICATION = TRUE
+    DENY_WRITE         = anonymous@*
+    DENY_ADMINISTRATOR = anonymous@*
+    DENY_DAEMON        = anonymous@*
+    DENY_NEGOTIATOR    = anonymous@*
+    DENY_CLIENT        = anonymous@*
+    
+    #--  Privacy settings
+    SEC_DEFAULT_ENCRYPTION = OPTIONAL
+    SEC_DEFAULT_INTEGRITY = REQUIRED
+    SEC_READ_INTEGRITY = OPTIONAL
+    SEC_CLIENT_INTEGRITY = OPTIONAL
+    SEC_READ_ENCRYPTION = OPTIONAL
+    SEC_CLIENT_ENCRYPTION = OPTIONAL
+    
+    #-- With strong security, do not use IP based controls
+    HOSTALLOW_WRITE = *
+
+
+## GSI: HTCondor Configuration
+
+The following is a starting point for the HTCondor configuration. Depending on other
+site configuration, some changes might be required. Put this in for example
+/etc/condor/config.d/80-osg-flocking.conf
+
+    #--  With glideins, there is nothing shared
+    CONDOR_HOST=$(FULL_HOSTNAME)
+    UID_DOMAIN=$(FULL_HOSTNAME)
+    FILESYSTEM_DOMAIN=$(FULL_HOSTNAME)
+    
+    # submitters/campus factories to flock to
+    FLOCK_TO = osg-flock.grid.iu.edu
+    
+    #-- Authentication settings
+    SEC_DEFAULT_AUTHENTICATION = REQUIRED
+    SEC_DEFAULT_AUTHENTICATION_METHODS = FS,GSI
+    SEC_READ_AUTHENTICATION    = OPTIONAL
+    SEC_CLIENT_AUTHENTICATION  = OPTIONAL
+    SEC_ENABLE_MATCH_PASSWORD_AUTHENTICATION = TRUE
+    DENY_WRITE         = anonymous@*
+    DENY_ADMINISTRATOR = anonymous@*
+    DENY_DAEMON        = anonymous@*
+    DENY_NEGOTIATOR    = anonymous@*
+    DENY_CLIENT        = anonymous@*
+    
+    #--  Privacy settings
+    SEC_DEFAULT_ENCRYPTION = OPTIONAL
+    SEC_DEFAULT_INTEGRITY = REQUIRED
+    SEC_READ_INTEGRITY = OPTIONAL
+    SEC_CLIENT_INTEGRITY = OPTIONAL
+    SEC_READ_ENCRYPTION = OPTIONAL
+    SEC_CLIENT_ENCRYPTION = OPTIONAL
+    
+    #-- With strong security, do not use IP based controls
+    HOSTALLOW_WRITE = *
 
     # OSG VO flocking host
     OSG_FLOCK = osg-flock.grid.iu.edu
@@ -79,11 +145,11 @@ site configuration, some changes might be required. Put this in for example
     GSI_DAEMON_CERT = /etc/grid-security/hostcert.pem
     GSI_DAEMON_KEY = /etc/grid-security/hostkey.pem
 
-    # Enable authentication from tne Negotiator
-    SEC_ENABLE_MATCH_PASSWORD_AUTHENTICATION = TRUE
+## GSI: Requesting a Host Certificate
 
-    # Enable gsi authentication
-    SEC_DEFAULT_AUTHENTICATION_METHODS = FS,GSI,$(SEC_DEFAULT_AUTHENTICATION_METHODS)
+A host certificate is used for authenticating your submit host to the OSG
+infrastructure. If you do not already have a certificate, you can request one
+using [these instructions](http://opensciencegrid.github.io/docs/security/host-certs/)
 
 ## Project Names
 
