@@ -16,7 +16,7 @@
                 Providing resource sharing principles and software that enable distributed high throughput computing (DHTC) for users and communities at all scales.</li>
         </ul>
         <p>
-            The OSG facilitates access to distributed High Throughput Computing (DHTC) for scientific research in the US. The resources accessible through the OSG are contributed by the community, organized by the OSG, and governed by the <a href="http://www.opensciencegrid.org">OSG Consortium</a>; an overview is available at <a href="http://osg-docdb.opensciencegrid.org/0008/000839/004/OSG%20Intro%20v23.pdf">An Introduction to OSG</a>. In July 2013, OSG is comprised of about 126 institutions with &#126;120 active sites that collectively support usage of &#126;2,000,000 core hours per day. Up-to-date usage metrics are available at the <a href="http://display.grid.iu.edu/">OSG Usage Display</a>.</p>
+            The OSG facilitates access to distributed High Throughput Computing (DHTC) for scientific research in the US. The resources accessible through the OSG are contributed by the community, organized by the OSG, and governed by the <a href="http://www.opensciencegrid.org">OSG Consortium</a>; an overview is available at <a href="http://osg-docdb.opensciencegrid.org/0008/000839/004/OSG%20Intro%20v23.pdf">An Introduction to OSG</a>. In July 2013, OSG is comprised of about 126 institutions with &#126;120 active sites that collectively support usage of &#126;2,000,000 core hours per day. Up-to-date usage metrics are available at the <a href="https://display.opensciencegrid.org/">OSG Usage Display</a>.</p>
         <p>
             Cores that are not being used at any point in time by the owning communities are made available for shared use by other researchers; this usage mode is called opportunistic access. OSG supports XSEDE users by providing a Virtual Cluster that forms an abstraction layer to access the opportunistic cores in the distributed OSG infrastructure. This interface allows XSEDE users to view the OSG as a single cluster to manage their jobs, provide the inputs and retrieve the outputs. XSEDE users access the OSG via the OSG-XSEDE login host that appears as a resource in the XSEDE infrastructure.</p>
         <h2>
@@ -242,7 +242,7 @@ href="http://osg-docdb.opensciencegrid.org/0008/000839/004/OSG%20Intro%2
 0v23.pdf">An Introduction to OSG</a>. In 2017, OSG is comprised
 of about 126 institutions with ~120 active sites that collectively
 support usage of ~4,000,000 core hours per day. Up-to-date usage metrics
-are available at the <a href="http://display.grid.iu.edu/">OSG Usage
+are available at the <a href="https://display.opensciencegrid.org/">OSG Usage
 Display</a>.
 
 Cores that are not being used at any point in time by

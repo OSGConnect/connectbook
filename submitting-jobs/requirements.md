@@ -36,7 +36,7 @@ Then the requirements would be:
 There are many attributes that you can use. Below is a list of common
 attributes. You can check values for an attribute with:
 
-	condor_status -pool osg-flock.grid.iu.edu -af {ATTR_NAME}
+	condor_status -pool flock.opensciencegrid.org -af {ATTR_NAME}
 
 - **HAS_SINGULARITY** - Boolean specifying if you want to land on
   nodes supporting Singularity containers.

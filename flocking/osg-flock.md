@@ -65,9 +65,6 @@ site configuration, some changes might be required. Put this in for example
     UID_DOMAIN=$(FULL_HOSTNAME)
     FILESYSTEM_DOMAIN=$(FULL_HOSTNAME)
     
-    # submitters/campus factories to flock to
-    FLOCK_TO = osg-flock.grid.iu.edu
-    
     #-- Authentication settings
     SEC_PASSWORD_FILE = /etc/condor/pool_password
     SEC_DEFAULT_AUTHENTICATION = REQUIRED
@@ -91,6 +88,10 @@ site configuration, some changes might be required. Put this in for example
     
     #-- With strong security, do not use IP based controls
     HOSTALLOW_WRITE = *
+    
+    # submitters/campus factories to flock to
+    FLOCK_TO = flock.opensciencegrid.org
+    
 
 
 ## GSI: HTCondor Configuration
@@ -103,9 +104,6 @@ site configuration, some changes might be required. Put this in for example
     CONDOR_HOST=$(FULL_HOSTNAME)
     UID_DOMAIN=$(FULL_HOSTNAME)
     FILESYSTEM_DOMAIN=$(FULL_HOSTNAME)
-    
-    # submitters/campus factories to flock to
-    FLOCK_TO = osg-flock.grid.iu.edu
     
     #-- Authentication settings
     SEC_DEFAULT_AUTHENTICATION = REQUIRED
@@ -131,8 +129,8 @@ site configuration, some changes might be required. Put this in for example
     HOSTALLOW_WRITE = *
 
     # OSG VO flocking host
-    OSG_FLOCK = osg-flock.grid.iu.edu
-    OSG_FLOCK_DN = /DC=org/DC=opensciencegrid/O=Open Science Grid/OU=Services/CN=osg-flock.grid.iu.edu
+    OSG_FLOCK = flock.opensciencegrid.org
+    OSG_FLOCK_DN = /DC=org/DC=incommon/C=US/postalCode=53706/ST=WI/L=Madison/street=1210 West Dayton Street/O=University of Wisconsin-Madison/OU=OCIS/CN=flock.opensciencegrid.org
 
     # submitters/campus factories to flock to
     FLOCK_TO = $(FLOCK_TO) $(OSG_FLOCK)
