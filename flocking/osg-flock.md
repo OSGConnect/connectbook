@@ -7,7 +7,7 @@
 If you have a HTCondor submit node on your campus, it can be configured
 to spill over onto available resources on the Open Science Grid. In
 HTCondor terms this is called
-[flocking](https://research.cs.wisc.edu/htcondor/manual/latest/5_2Connecting_HTCondor.html)
+[flocking](https://research.cs.wisc.edu/htcondor/manual/latest/ConnectingHTCondorPoolswithFlocking.html)
 
 If you are interested in this solution, please open a
 [new ticket](https://support.opensciencegrid.org/helpdesk/tickets/new) with the hostname.
@@ -153,9 +153,11 @@ using [these instructions](http://opensciencegrid.github.io/docs/security/host-c
 
 OSG will only run jobs tagged with a valid *ProjectName* - this is the main attribute
 used for accounting. New projects should be registered in the
-[OSG OIM project database](https://oim.grid.iu.edu/oim/project). Jobs should specify
-which project to be accounted against by adding the *+ProhectNane* attribute. Note
-that the value is a string and hence the double quotes are required.  Example:
+[OSG Topology Database](https://github.com/opensciencegrid/topology/blob/master/README.md).
+Please open at ticket to register a new project.
+Jobs should specify which project to be accounted against by adding
+the *+ProhectNane* attribute. Note that the value is a string and hence
+the double quotes are required.  Example:
 
     +ProjectName = "Some_Name_Here"
 
