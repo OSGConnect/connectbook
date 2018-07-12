@@ -206,12 +206,12 @@ Not all resources available through OSG Connect support distributed environment 
 sure that the jobs you submit run on resources that do support distributed environment modules, you will need to add
 the following condition to the requirements in your HTCondor job submission file. E.g. :
 
-	Requirements = (HAS_MODULES)
+	Requirements = (HAS_MODULES =?= true) && (OSGVO_OS_STRING == "RHEL 6") && (OpSys == "LINUX")
 	
 	
 or 
 
-	Requirements = [Other requirements ] && (HAS_MODULES)
+	Requirements = [Other requirements ] && (HAS_MODULES =?= true) && (OSGVO_OS_STRING == "RHEL 6") && (OpSys == "LINUX")
 
 if you already have other requirements specified and need to append the OASIS requirement.
 
