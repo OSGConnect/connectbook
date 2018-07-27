@@ -21,7 +21,9 @@ Home filesystem is not suitable to run your HTCondor jobs. It is a good practice
 `local-scratch` is meant for temporary storage, and is implemented as fast local disk for each submit node. It is a good practice to run your jobs on `local-scratch` and move the output data to a secondary local disk as soon as possible. NOTE: data on `local-scratch` is automatically removed after 30 days and is not backed up.
 
 ## stash
-Stash provides medium term storage for users. Stash is a distributed shared filesystem mounted on all our submit nodes, and is therefore slower than local-scratch. There is no disk quota imposed, nor a automatic purge, on stash. However, the data on stash is not backed up, so you should regularly transfer your data on stash to a long term archival system.  If you are transfering a large amount of data, please use the Globus transfer service.  For more details check the articles on [data transfer techniques](https://support.opensciencegrid.org/solution/folders/5000260918).
+Stash provides medium term storage (less 6 months) for users. Stash is a distributed shared filesystem mounted on all our submit nodes, and is therefore slower than local-scratch. There is no disk quota imposed, nor a automatic purge, on stash. However, the data on stash is not backed up, so you should regularly transfer your data on stash to a long term archival system.  If you are transfering a large amount of data, please use the Globus transfer service.  For more details check the articles on [data transfer techniques](https://support.opensciencegrid.org/solution/folders/5000260918).  
+
+*Note: Files and directories that have not been accessed for over six months may be deleted.*
 
 ## public
 Files placed in the '~public' directory are publicly accessible via WWW as `http://stash.osgconnect.net/+username`. The data on `~/public` is accessible to the jobs on remote worker machine via the wget command. For more details of using public for condor input file transfer,  [click here](https://support.opensciencegrid.org/solution/articles/5000639798-access-stash-remotely-using-http).
