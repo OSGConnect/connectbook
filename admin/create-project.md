@@ -2,7 +2,7 @@
 
 [title]: - "Creating a new project"
 
-Creating a project involves two separate steps: creating the project in the Globus system and adding the user to the 
+Creating a project involves two separate steps: creating the project in the Globus system and adding the user to the group in Globus.  Note, it may take a few hours for changes to propagate to the login nodes.
 
 ## Assumptions
 
@@ -49,4 +49,8 @@ Do the following to add user to the newly created project
 * Scroll down to the project that was just generated
 * Click on members, and then the "Invite people to this group" link
 * Search for user, and then hit the send invitation button
+
+## Freshdesk responses
+
+There is a canned response that can be used to reply to the user when the group has been created.  It's in the 'User Support > Project Created' response. 
 
