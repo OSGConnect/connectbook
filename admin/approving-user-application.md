@@ -3,7 +3,7 @@
 [title]: - "Approving User Applications"
 
 
-## Requirements for users
+## Requirements for Users
 
 Users need to satisfy the following in order to be approved:
 
@@ -23,7 +23,7 @@ Do the following to add user to the newly created project
 * Click on Approve button
 * Do the above for the connect group as well
 
-## Rejecting an application
+## Rejecting an Application
 
 * Go to https://www.osgconnect.com and login as the *connect* user
 * Go to Connect > My Projects in the menu
