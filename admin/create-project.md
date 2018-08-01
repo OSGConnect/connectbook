@@ -16,7 +16,7 @@ Creating a project requires the following two things:
 Do the following to create the project in Globus 
 
 * Login to services.ci-connect.net
-* Create a file in /tmp (e.g. /tmp/<projectname>) with the text from the freshdesk ticket (see bottom of this section for a template)
+* Create a file in /tmp (e.g. /tmp/<projectname>) with the text from the helpdesk ticket (see bottom of this section for a template)
 * _cd /usr/local/gosync3_
 * run _./add_connect_group.py --projectfile /path/to/file --parent <parent_group>_ , <parent_group> is usually osg
 
@@ -53,7 +53,7 @@ Do the following to add user to the newly created project
 * Click on members, and then the "Invite people to this group" link
 * Search for user, and then hit the send invitation button
 
-## Freshdesk responses
+## Helpdesk responses
 
 There is a canned response that can be used to reply to the user when the group has been created.  It's in the 'User Support > Project Created' response. 
 
