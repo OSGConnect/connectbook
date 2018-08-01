@@ -16,29 +16,32 @@ Creating a project requires the following two things:
 Do the following to create the project in Globus 
 
 * Login to services.ci-connect.net
-* Create a file in /tmp (e.g. /tmp/<projectname>) with the text from the freshdesk ticket, e.g.
-   ```
-   Your Name: 
-   Your Email Address: 
-   Project Name: 
-   Short Project Name: 
-   Field of Science: 
-   Field of Science (if Other):
-   PI Name: 
-   PI Email: 
-   PI Organization: 
-   PI Department: 
-   Join Date:
-   Sponsor:
-   OSG Sponsor Contact:
-   Project Contact: 
-   Project Contact Email: 
-   Telephone Number: 
-   Project Description: 
-   ```
-   
+* Create a file in /tmp (e.g. /tmp/<projectname>) with the text from the freshdesk ticket
 * _cd /usr/local/gosync3_
 * run _./add_connect_group.py --projectfile /path/to/file --parent <parent_group>_ , <parent_group> is usually osg
+
+Project file template:
+```
+Your Name: 
+Your Email Address: 
+Project Name: 
+Short Project Name: 
+Field of Science: 
+Field of Science (if Other):
+PI Name: 
+PI Email: 
+PI Organization: 
+PI Department: 
+Join Date:
+Sponsor:
+OSG Sponsor Contact:
+Project Contact: 
+Project Contact Email: 
+Telephone Number: 
+Project Description: 
+```
+
+
 
 ## Adding requester to project
 
