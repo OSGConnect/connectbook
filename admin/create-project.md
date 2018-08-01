@@ -21,25 +21,25 @@ Do the following to create the project in Globus
 * run _./add_connect_group.py --projectfile /path/to/file --parent <parent_group>_ , <parent_group> is usually osg
 
 Project file template:
-```
-Your Name: 
-Your Email Address: 
-Project Name: 
-Short Project Name: 
-Field of Science: 
-Field of Science (if Other):
-PI Name: 
-PI Email: 
-PI Organization: 
-PI Department: 
-Join Date:
-Sponsor:
-OSG Sponsor Contact:
-Project Contact: 
-Project Contact Email: 
-Telephone Number: 
-Project Description: 
-```
+
+	Your Name: 
+	Your Email Address: 
+	Project Name: 
+	Short Project Name: 
+	Field of Science: 
+	Field of Science (if Other):
+	PI Name: 
+	PI Email: 
+	PI Organization: 
+	PI Department: 
+	Join Date:
+	Sponsor:
+	OSG Sponsor Contact:
+	Project Contact: 
+	Project Contact Email: 
+	Telephone Number: 
+	Project Description: 
+
 
 
 
