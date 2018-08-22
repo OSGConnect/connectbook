@@ -2,7 +2,7 @@
 [title]: - "Accessing Software using Distributed Environment Modules 2.0"
  
 
-# Accessing Software using Distributed Environment Modules
+# Accessing Software using Distributed Environment Modules 2.0
 ## Introduction
 
 This page covers use of the modules on RHEL6 and RHEL7 compatible compute nodes in the OSG computing environment.  
@@ -18,6 +18,7 @@ not only provides newer versions of software but provides the same modules acros
 
 Use `module avail` to see available software applications and libraries:
 
+```
 	$ module avail
 	
 	------------------ /cvmfs/connect.opensciencegrid.org/modules/el7/spack/share/spack/lmod/linux-rhel7-x86_64/Core ---------------------
@@ -62,6 +63,7 @@ Use `module avail` to see available software applications and libraries:
    
 	Where:
 	(D):  Default Module
+```
 
 In addition, additional software is available once the `gcc/6.2.0` module is loaded. 
 
@@ -119,6 +121,7 @@ There are two sets of software available under this system.  A set of software p
 
 ### Software available by default
 
+```
    autoconf/2.69-s                                     perl/5.24.1-y
    automake/1.15.1-f                                   pixman/0.34.0-q
    bedtools2/2.27.1-s                                  pkgconf/1.4.0-w
@@ -203,9 +206,11 @@ There are two sets of software available under this system.  A set of software p
    openssl/1.0.2n-c                                    xz/5.2.3-y
    pango/1.41.0-python-2.7.14-j                        yasm/1.3.0-g
    pcre/8.41-x                                         zlib/1.2.11-v
-   
+```
+
 ### Software available after loading gcc/6.2.0
 
+```
    autoconf/2.69-x                   (D)    hwloc/1.11.9-k                       nasm/2.13.03-7                       (D)
    automake/1.15.1-a                        hwloc/1.11.9-python-2.7.14-c         ncurses/6.0-e
    binutils/2.29.1-python-2.7.14-d   (D)    igraph/0.7.1-f                       numactl/2.0.11-a
@@ -245,7 +250,8 @@ There are two sets of software available under this system.  A set of software p
    hisat2/2.1.0-n                           mothur/1.39.5-boost-i                zlib/1.2.11-q
    hmmer/3.1b2-7                            mpfr/4.0.1-2                  (D)
    htslib/1.6-o                             muscle/3.8.1551-h
-   
+```
+
 ## Using modules outside of OSG Connect
 
 In order to use distributed environment modules outside of OSG Connect, you'll need to load the modules code manually from OASIS.  You can do this by running
