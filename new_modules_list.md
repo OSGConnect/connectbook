@@ -21,7 +21,7 @@ Use `module avail` to see available software applications and libraries:
 
 	$ module avail
 	
-	------------- /cvmfs/connect.opensciencegrid.org/modules/el7/spack/share/spack/lmod/linux-rhel7-x86_64/Core -------------
+	--- /cvmfs/connect.opensciencegrid.org/modules/el7/spack/share/spack/lmod/linux-rhel7-x86_64/Core ---
 	autoconf/2.69-s                                     jdk/8u141-b15-x                    openssl/1.0.2n-c
 	automake/1.15.1-f                                   kbproto/1.0.7-x                    pango/1.41.0-python-2.7.14-j
 	bedtools2/2.27.1-s                                  libbsd/0.8.6-5                     pcre/8.41-x
