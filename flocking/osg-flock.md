@@ -21,7 +21,7 @@ The requirements are:
 * HTCondor has to authenticate via pool password or GSI. For GSI, the submit host
    has to have a host certificate and a list of trusted CAs under */etc/grid-security/certificates/*
 * Reporting to the OSG accounting system has to be enabled. This can
-   be accomplished by installing and configuring the *gratia-probe-condor* RPM.
+   be accomplished by installing and configuring the *gratia-probe-condor* and *gratia-probe-glideinwms* RPMs.
 * Submitted jobs should have the *+ProjectName* attribute specified with
    a valid registered project name.
 
@@ -29,9 +29,9 @@ The requirements are:
 
 Enable the [OSG Yum repository](http://opensciencegrid.github.io/docs/common/yum/).
 
-Install the packages required for GSI authentication and Gratia job data:
+Install the packages required:
 
-    # yum install gratia-probe-condor osg-ca-certs osg-pki-tools
+    # yum install gratia-probe-glideinwms gratia-probe-condor osg-ca-certs osg-pki-tools
 
 ## Gratia Probe Configuration
 
