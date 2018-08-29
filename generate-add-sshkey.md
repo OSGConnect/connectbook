@@ -20,6 +20,8 @@ After completing the process, you can log in from local machine (your laptop or 
 
 or using your Windows SSH client
 
+
+
 ## Step 1: Generating SSH Keys
 
 We will discuss how to generate a SSH key pair on both Unix-based and Windows. 
@@ -36,7 +38,6 @@ On your local machine:
 
 The last command will produce a prompt similar to
 
-
      Generating public/private rsa key pair.
      Enter file in which to save the key (/home/<local_user_name>/.ssh/id_rsa):
 
@@ -46,31 +47,19 @@ able to remember and which is secure:
 
      Enter passphrase (empty for no passphrase):
      Enter same passphrase again:
+
 When everything has successfully completed, the output should resemble the
 following: 
 
      Your identification has been saved in /home/<local_user_name>/.ssh/id_rsa.
      Your public key has been saved in /home/<local_user_name>/.ssh/id_rsa.pub.
      The key fingerprint is:
-     ae:89:72:0b:85:da:5a:f4:7c:1f:c2:43:fd:c6:44:38 myname@mymac.local
-     The key's randomart image is:
-     +--[ RSA 2048]----+
-     |                 |
-     |         .       |
-     |        E .      |
-     |   .   . o       |
-     |  o . . S .      |
-     | + + o . +       |
-     |. + o = o +      |
-     | o...o * o       |
-     |.  oo.o .        |
-     +-----------------+
+     ...
+
+The part you want to upload is the content of the .pub file (~/.ssh/id_rsa.pub)
 
 
-
-### Windows
-
-#### Putty
+### Windows / Putty
 
 1. Open the `PuTTYgen` program.
 
@@ -91,12 +80,6 @@ following:
 ![alt text](https://raw.githubusercontent.com/OSGConnect/connectbook/master/images/puttygen_ssh_key.png "PuttyGen SSH Window")
 
 
-#### Git Bash
-
-Follow the instructions here to generate keys:
-
-https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/#platform-windows
-
 
 ## Step 2: Add the public SSH key to login node
 
@@ -110,7 +93,7 @@ To add your public key:
 
 4. Click on "Add a New Key"
 
-5. Give the key a name, select "SSH Public Key", and copy/paste the public key into the text box
+5. Give the key a name, select "SSH Public Key", and copy/paste the public key into the text box. The expected key is a single line, with three fields looking something like `ssh-rsa ASSFFSAF... user@host`. On Linux/Mac, it is the content of `~/.ssh/id_rsa.pub` and on Windows, it is the content from step 7 above.
 
 6. Click "Add Key"
 
@@ -121,3 +104,4 @@ be added to the login nodes within a couple hours.
 
 ## Getting Help 
 For assistance or questions, please email the OSG User Support team  at <mailto:user-support@opensciencegrid.org> or visit the [help desk and community forums](http://support.opensciencegrid.org).
+
