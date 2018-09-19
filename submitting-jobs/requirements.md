@@ -7,15 +7,15 @@ defining requirements in your job submit file. Requirements is an expression, so
 you can use logical operators to combine multiple requirements. The requirment
 expression can be used in combination with a few basic attributes to specify
 memory and disk requirements. For example, the following will run the jobs only
-on 64 bit RHEL 6 machines, with access to the "modules" command, and with more
+on 64 bit RHEL 7 machines, with access to the "modules" command, and with more
 than 10 GBs of disk space:
 
-    requirements = OSGVO_OS_STRING == "RHEL 6" && Arch == "X86_64" && HAS_MODULES == True
+    requirements = OSGVO_OS_STRING == "RHEL 7" && Arch == "X86_64" && HAS_MODULES == True
     request_cpus = 1
     request_memory = 2 GB
     request_disk = 10 GB
 
-We will soon see more RHEL 7 based compute nodes on OSG. If you have code which
+We still have some older RHEL 6 machines available. If you have code which
 can run on either RHEL 6 or 7, you can use "or":
 
     requirements = (OSGVO_OS_STRING == "RHEL 6" || OSGVO_OS_STRING == "RHEL 7") && Arch == "X86_64" && HAS_MODULES == True

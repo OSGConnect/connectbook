@@ -33,8 +33,8 @@ Regardless of whether you statically or dynamically compile your application,
 you should compile your application on `login.osgconnect.net`.  This will ensure
 that your application is built on an environment that is similar to the majority
 of the compute nodes on OSG.  In addition, you will need to add the following
-require to your HTCondor submit file: `(OpSysAndVer =?= "SL6") || (OpSysAndVer
-=?= "RHEL6") || (OpSysAndVer =?= "Centos6")` to make sure that your binaries run 
+require to your HTCondor submit file: `(OpSysAndVer =?= "SL7") || (OpSysAndVer
+=?= "RHEL7") || (OpSysAndVer =?= "Centos6")` to make sure that your binaries run 
 systems that have compatible linux distributions.
 
 ## Choosing a compiler
