@@ -58,7 +58,7 @@
         <h2>
             <a name="system_access"></a><a href="#system_access">System Access</a></h2>
         <p>
-            The OSG Virtual Cluster supports Single Sign On through the XSEDE User Portal, and also from the command line using <code>gsissh</code> with a grid certificate for authentication. Please see the <a href="https://www.xsede.org/accessing-resources">XSEDE GSISSH documentation</a> for more information. Additionaly, you may install a SSH public key to do direct logins from your own computer.</p>
+            The OSG Virtual Cluster supports Single Sign On through the XSEDE User Portal, and also from the command line using <code>gsissh</code> with a grid certificate for authentication. Please see the <a href="https://portal.xsede.org/web/xup/single-sign-on-hub">XSEDE GSISSH documentation</a> for more information. Additionaly, you may install a SSH public key to do direct logins from your own computer.</p>
         <p>
             To log in via the XSEDE User Portal, log in to the portal and use the login link on the "accounts" tab there.</p>
         <p>
