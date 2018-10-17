@@ -28,6 +28,7 @@ Here are the basic system requirements:
 * Cluster operating system must be RHEL 6.x, 7.x or CentOS 6.x, 7.x or Scientific Linux 6.x, 7.x 
 * A standard Unix account on your system's login server. The OSG service will use this account and submit to your batch queue in a manner you define.
 * SSH access to this account via public SSH keys.
+* Shared home directory in the cluster
 * A supported batch system (Slurm, HTCondor, PBS, LSF, SGE)
 * Outbound network connectivity from the compute nodes (can be behind NAT)
 
