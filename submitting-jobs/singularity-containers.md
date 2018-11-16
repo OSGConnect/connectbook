@@ -84,6 +84,7 @@ tools and libraries. The images are are:
 | **EL 6**            | /cvmfs/singularity.opensciencegrid.org/opensciencegrid/osgvo-el6:latest            | [GitHub](https://github.com/opensciencegrid/osgvo-el6)   | A basic Enterprise Linux (CentOS) 6 based image. This is currently our default image |
 | **EL 7**            | /cvmfs/singularity.opensciencegrid.org/opensciencegrid/osgvo-el7:latest            | [GitHub](https://github.com/opensciencegrid/osgvo-el7) | A basic Enterprise Linux (CentOS) 7 based image. |
 | **Ubuntu Xenial**   | /cvmfs/singularity.opensciencegrid.org/opensciencegrid/osgvo-ubuntu-xenial:latest  | [GitHub](https://github.com/opensciencegrid/osgvo-ubuntu-xenial) | A good image if you prefer Ubuntu over EL flavors |
+| **Ubuntu 18.04 (Bionic)**   | /cvmfs/singularity.opensciencegrid.org/opensciencegrid/osgvo-ubuntu-18.04:latest  | [GitHub](https://github.com/opensciencegrid/osgvo-ubuntu-18.04) | A good image if you prefer Ubuntu over EL flavors |
 | **TensorFlow**      | /cvmfs/singularity.opensciencegrid.org/opensciencegrid/tensorflow:latest           | [GitHub](https://github.com/opensciencegrid/osgvo-tensorflow) | Base on the TensorFlow base image, with a few OSG package added |
 | **TensorFlow GPU**  | /cvmfs/singularity.opensciencegrid.org/opensciencegrid/tensorflow-gpu:latest       | [GitHub](https://github.com/opensciencegrid/osgvo-tensorflow-gpu) | Used for running TensorFlow jobs on OSG GPU resources |
 
@@ -102,6 +103,19 @@ are started for jobs, is:
                 --scratch /tmp \
                 --contain --ipc --pid \
                 /cvmfs/singularity.opensciencegrid.org/opensciencegrid/osgvo-ubuntu-xenial:latest
+
+
+## Frequently Asked Questions / Common Issues ##
+
+### FATAL: kernel too old ###
+
+If you get a *FATAL: kernel too old* error, it means that the glibc version in the
+image is too new for the kernel on the host. You can work around this problem by
+specifying the minimum host kernel. For example, if you want to run the Ubuntu 18.04
+image, specfy a minimum host kernel of 3.10.0, formatted as 031000:
+
+    Requirements = HAS_SINGULARITY == True && OSG_HOST_KERNEL_VERSION >= 031000
+
 
 ## Custom Images
 
@@ -236,5 +250,4 @@ and we can help you.
 
 Once your image has been registered, new versions pushed to Docker Hub will
 automatically be detected and CVMFS will be updated accordingly.
-
 
