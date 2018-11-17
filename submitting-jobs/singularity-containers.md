@@ -112,9 +112,10 @@ are started for jobs, is:
 If you get a *FATAL: kernel too old* error, it means that the glibc version in the
 image is too new for the kernel on the host. You can work around this problem by
 specifying the minimum host kernel. For example, if you want to run the Ubuntu 18.04
-image, specfy a minimum host kernel of 3.10.0, formatted as 031000:
+image, specfy a minimum host kernel of 3.10.0, formatted as 31000
+(major * 10000 + minor * 100 + patch):
 
-    Requirements = HAS_SINGULARITY == True && OSG_HOST_KERNEL_VERSION >= 031000
+    Requirements = HAS_SINGULARITY == True && OSG_HOST_KERNEL_VERSION >= 31000
 
 
 ## Custom Images
