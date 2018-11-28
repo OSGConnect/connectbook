@@ -31,7 +31,7 @@ Enable the [OSG Yum repository](http://opensciencegrid.github.io/docs/common/yum
 
 Install the packages required:
 
-    # yum install gratia-probe-glideinwms gratia-probe-condor osg-ca-certs osg-pki-tools
+    # yum install osg-flock
 
 ## Gratia Probe Configuration
 
@@ -50,9 +50,10 @@ Edit the */etc/gratia/condor/ProbeConfig* file. Change the probe section to be:
     MapGroupToRole="1"
     VOOverride="osg"
 
-Please remember to enable the probe:
+Please remember to enable and start the probe:
 
-    [root@client ~]$ service gratia-probes-cron start
+    [root ~]$ systemctl enable gratia-probes-cron
+    [root ~]$ systemctl start gratia-probes-cron
 
 ## Pool Password: HTCondor Configuration
 
