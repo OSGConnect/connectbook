@@ -9,8 +9,9 @@ The School is ideal for graduate students in any science or research domain wher
 
 ### Past OSG User Schools
 
-* [OSG User School, July 17-21, 2017](https://twiki.opensciencegrid.org/bin/view/Education/OSGUserSchool2017)
-* [OSG User School, July 25-29, 2016](https://twiki.opensciencegrid.org/bin/view/Education/OSGUserSchool2016)
-* [OSG User School, July 27-31, 2015](https://twiki.opensciencegrid.org/bin/view/Education/OSGUserSchool2015)
-* [OSG User School, July 7-10, 2014](https://twiki.opensciencegrid.org/bin/view/Education/OSGUserSchool2014)
+* [OSG User School, July 9-13, 2018](https://opensciencegrid.org/user-school-2018/)
+* [OSG User School, July 17-21, 2017](https://opensciencegrid.org/user-school-2017/)
+* [OSG User School, July 25-29, 2016](https://opensciencegrid.org/user-school-2016/)
+* [OSG User School, July 27-31, 2015](https://opensciencegrid.org/user-school-2015/)
+* [OSG User School, July 7-10, 2014](https://opensciencegrid.org/user-school-2014/)
 
