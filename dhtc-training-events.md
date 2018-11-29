@@ -8,6 +8,9 @@ We offer training and tutorials for domain scientists and resource providers of 
 
 ## OSG Workshops on HTC
 
+  * [High Throughput Computation on the Open Science Grid (Internet2 2018 Technology Exchange)](https://meetings.internet2.edu/2018-technology-exchange/program-guide/tutorials-workshops/#OSG)
+  * [Open Science Grid Workshop (The Quilt 2018)](https://www.thequilt.net/public-event/osg-pre-workshop-session/)
+  * [High Throughput Computation on the Open Science Grid (RMACC 18)](https://rmacc2018hpcsymposium.sched.com/event/EbOT/high-throughput-computation-on-the-open-science-grid)
   * [High Throughput Computation on the Open Science Grid and AWS (RMACC 17)](https://rmacc2017hpcsymposium.sched.com/event/AVrR?iframe=no)
   * [Enabling Science Beyond the Campus Edge: HPC Integration with the Open Science Grid (RMACC17)](https://rmacc2017hpcsymposium.sched.com/event/AOrg?iframe=no)
   * [High Throughput Computation on the Open Science Grid and AWS (PEARC17)](https://pearc17.sched.com/event/AQ3M/high-throughput-computation-on-the-open-science-grid-and-aws)
