@@ -64,7 +64,7 @@ your job submit file. For example, to run your job under EL7:
     executable = job.sh
     Requirements = HAS_SINGULARITY == TRUE
 
-    +SingularityImage = "/cvmfs/singularity.opensciencegrid.org/opensciencegrid/osgvo-el7"
+    +SingularityImage = "/cvmfs/singularity.opensciencegrid.org/opensciencegrid/osgvo-el7:latest"
     +SingularityBindCVMFS = True
 
     should_transfer_files = IF_NEEDED
