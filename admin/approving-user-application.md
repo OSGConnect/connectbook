@@ -67,7 +67,7 @@ Do the following to add user to the newly created project
 * Click on Reject button
 * Do the above for the connect group as well
 
-## On-Boarding Scenerio: Username on application is not a GlobusID or Email is not a university/institutional email.
+## On-Boarding Scenario: Username on application is not a GlobusID or Email is not a university/institutional email.
 
 * Copy and paste the user's "Member Info" into a note in the account application ticket.
 * Send the user an email informing them of the issue and asking them to re-apply.
@@ -77,7 +77,7 @@ Do the following to add user to the newly created project
 * Change ticket status to "waiting on customer".
 * If user re-applies, merge the two tickets.  If user does not re-apply, resolve the original ticket after waiting a week or so.
 
-## On-Boarding Scenerio: User has no apparent affiliation with a non-profit U.S. research institution or project.
+## On-Boarding Scenario: User has no apparent affiliation with a non-profit U.S. research institution or project.
 
 * Copy and paste the user's "Member Info" into a note in the account application ticket.
 * Send the user an email informing them of the issue and asking if they have a U.S. affiliation.
