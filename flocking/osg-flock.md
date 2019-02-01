@@ -4,8 +4,6 @@
 
 ## Overview
 
-Test
-
 If you have a HTCondor submit node on your campus, it can be configured
 to spill over onto available resources on the Open Science Grid. In
 HTCondor terms this is called
