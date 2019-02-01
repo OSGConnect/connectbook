@@ -3,7 +3,8 @@
 
 ## Purpose
 
-The following tables provide guidelines for data management in OSG. Check the web links for additional details. 
+The following tables provide guidelines for data transfer and access in OSG. Check the web links for additional details for your particular use-case.  For datasets larger than 200 GB, please email us at [user-support@opensciencegrid.org](mailto:usersupport@opensciencegrid.org).
+
 
 
 ## Data storage options
@@ -14,8 +15,6 @@ The following tables provide guidelines for data management in OSG. Check the we
 | **local-scratch**   |  < 25 GB      | Meant for large temporary storage and I/O for your jobs. Files older than 30 days are automatically removed. | No | No | No | Yes, 30 days | [Data Storage](https://support.opensciencegrid.org/support/solutions/articles/12000002985-storage-solutions-on-osg-home-stash-and-public)|
 | **stash**   |  < 200 GB      | Meant for large storage and I/O for your jobs. | Yes | No | No | no | [Data Storage](https://support.opensciencegrid.org/support/solutions/articles/12000002985-storage-solutions-on-osg-home-stash-and-public)|
 | **public**  |  < 10 GB    | Meant for sharing data and transfer input data via HTTP or staschcp | Yes | No | No | No | [Data Storage](https://support.opensciencegrid.org/support/solutions/articles/12000002985-storage-solutions-on-osg-home-stash-and-public)|
-
-For the data management of more than 200 GB, please email us at [user-support@opensciencegrid.org](mailto:usersupport@opensciencegrid.org).
 
 
 ## Transferring input data for a job
