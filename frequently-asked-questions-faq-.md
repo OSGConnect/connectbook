@@ -1,4 +1,4 @@
-[title]: - "Frequent Asked Questions"
+[title]: - "Frequently Asked Questions"
 
 ##Getting Started
 
