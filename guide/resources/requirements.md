@@ -1,4 +1,4 @@
-[title]: - "Steer your jobs with HTCondor job requirements"
+[title]: - "Steer Your Jobs with HTCondor Job Requirements"
 
 By default, your HTCondor job on OSG will match any available compute slot. This
 is fine for very generic jobs, but many users have one or more requirements on

@@ -1,4 +1,4 @@
-[title]: - "Data transfer with Globus"
+[title]: - "Data Transfer with Globus"
 
 Background
 ----------

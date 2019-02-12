@@ -1,4 +1,4 @@
-[title]: - "Transferring data with StashCache"
+[title]: - "Transferring Data with StashCache"
 
 What is StashCache?
 -------------------

@@ -1,4 +1,4 @@
-[title]: - "Accessing data - when to use which tool?"
+[title]: - "Accessing Data - When to Use Which Tool?"
 
 Job Input Data
 --------------
