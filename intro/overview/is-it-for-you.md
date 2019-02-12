@@ -1,4 +1,4 @@
-[title]: - "Is High Throughput Computing for you?"
+[title]: - "Is High Throughput Computing for You?"
 
 
 ## Ideal Charateristics for Distributed High Throughput Computing (HTC)
