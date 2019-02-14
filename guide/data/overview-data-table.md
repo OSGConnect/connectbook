@@ -23,7 +23,7 @@ The following tables provide guidelines for data transfer and access in OSG. Che
 |:---------|:------:|:-----|:----------|:------|
 | **HTCondor**    | < 100 MB  | transfer_input_files | Input data from home, public or stash |[HTCondor Transfer](https://support.opensciencegrid.org/support/solutions/articles/5000639787-transferring-data-with-htcondor)|
 | **HTTP**        |  < 1 GB   | wget, curl or rsync  | Input data from ~/public |[HTTP Access](https://support.opensciencegrid.org/support/solutions/articles/5000639798-access-stash-remotely-using-http)|
-| **StachCache**  |  > 1 GB, < 50 GB    | Staschcp |Input data from ~/public| [StachCache](https://support.opensciencegrid.org/support/solutions/articles/12000002775-transferring-data-with-stashcache)|
+| **StashCache**  |  > 1 GB, < 50 GB    | stashcp |Input data from ~/public| [StashCache](https://support.opensciencegrid.org/support/solutions/articles/12000002775-transferring-data-with-stashcache)|
 | **GridFTP**  |  > 1 GB, < 50 GB    | gfal-copy |Input data from ~/stash| Experts with large work flows. Please contact us if you want to use this.|
 
 
@@ -42,7 +42,7 @@ The following tables provide guidelines for data transfer and access in OSG. Che
 
 |  | **Data Size**| **Tools** |**Details**|
 |:------------|:-------:|:------|:------| 
-|**UNIX tools** | < 1 GB | rsync, scp, puty, WinSCP, gFTP, etc.  |[SCP](https://support.opensciencegrid.org/support/solutions/articles/5000634376-using-scp-to-transfer-files) |
+|**UNIX tools** | < 1 GB | rsync, scp, putty, WinSCP, gFTP, etc.  |[SCP](https://support.opensciencegrid.org/support/solutions/articles/5000634376-using-scp-to-transfer-files) |
 |**Globus** |  > 1 GB  | globus webservice or globus CLI | [Globus](https://support.opensciencegrid.org/support/solutions/articles/5000632397-data-transfer-with-globus) |
 
 
