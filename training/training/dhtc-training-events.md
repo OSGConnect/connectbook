@@ -17,7 +17,8 @@ We offer training and tutorials for domain scientists and resource providers of 
 
 
 ## Tutorial sessions at OSG All Hands Meetings
- 
+
+  * [User Support Training at the OSG All Hands Meeting, Jefferson National Laboratory, March 2019](https://swc-osg-workshop.github.io/OSG-UserTraining-JLab-2019/)
   * [User Support Training at the OSG All Hands Meeting, University of Utah, March 2018](https://swc-osg-workshop.github.io/OSG-UserTraining-AHM18/)
   * [User Support Training at the OSG All Hands Meeting, University of California San Diego, March 2017](https://swc-osg-workshop.github.io/2017-03-09-UCSD-AHM/)
   * [User Support Training at the OSG All Hands Meeting, Clemson University, March 2016](https://indico.fnal.gov/sessionDisplay.py?sessionId=21&confId=10571#20160317) 
