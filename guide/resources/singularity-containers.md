@@ -252,3 +252,6 @@ and we can help you.
 Once your image has been registered, new versions pushed to Docker Hub will
 automatically be detected and CVMFS will be updated accordingly.
 
+Note: some common Dockerfile features, like ENV and ENTRYPOINT, are ignored
+when the image is imported into CVMFS.
+
