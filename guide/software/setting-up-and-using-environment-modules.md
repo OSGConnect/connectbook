@@ -1,8 +1,8 @@
 
-[title]: - "Accessing Software using Distributed Environment Modules (Archived)"
+[title]: - "Accessing Software using Distributed Environment Modules - Archive"
  
 
-# Accessing Software using Distributed Environment Modules (Archived)
+# Accessing Software using Distributed Environment Modules - Archive
 
 This page previously contained instructions for using OSG Connect's 
 original repository of environment modules for accessing software in the OSG, 
