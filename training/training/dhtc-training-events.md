@@ -1,4 +1,4 @@
-[title]: - "DHTC Training Events"
+[title]: - "Previous Training Events"
 
 ## Overview
 
