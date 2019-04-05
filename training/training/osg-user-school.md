@@ -1,5 +1,5 @@
 
-[title]: - "OSG User School"
+[title]: - "Annual OSG User School"
 
 ## Overview
 
