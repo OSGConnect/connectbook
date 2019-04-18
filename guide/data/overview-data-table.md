@@ -3,7 +3,7 @@
 
 ## Purpose
 
-The following tables provide guidelines for data transfer and access in OSG. Check the web links for additional details for your particular use-case.  For datasets larger than 200 GB, please email us at [user-support@opensciencegrid.org](mailto:usersupport@opensciencegrid.org).
+The following tables provide guidelines for data transfer and access in OSG. Check the web links for additional details for your particular use-case.  For datasets larger than 200 GB, please email us at [support@osgconnect.net](mailto:usersupport@opensciencegrid.org).
 
 
 
@@ -47,6 +47,6 @@ The following tables provide guidelines for data transfer and access in OSG. Che
 
 
 ## Getting Help
-For assistance or questions, please email the OSG User Support team  at [user-support@opensciencegrid.org](mailto:user-support@opensciencegrid.org) or visit the [help desk and community forums](http://support.opensciencegrid.org).
+For assistance or questions, please email the OSG User Support team  at [support@osgconnect.net](mailto:support@osgconnect.net) or visit the [help desk and community forums](http://support.opensciencegrid.org).
 
 
