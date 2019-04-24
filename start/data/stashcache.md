@@ -24,15 +24,16 @@ StashCache is available at all OSG sites where OASIS is mounted. To use it for t
 
 Alternatively, users can [use Globus](<https://support.opensciencegrid.org/solution/articles/5000632397-data-transfer-with-globus>) to transfer data files to Stash.
 
-2)  Include the following line in the job's submit script to indicate that StashCache is required:
+2)  Include the following lines in the job's submit script to indicate that StashCache is required and the necessary modules are available:
 
 	+WantsStashCache = true
+	requirements = OSGVO_OS_STRING == "RHEL 7" && Arch == "X86_64" && HAS_MODULES == True
 
 3)  Use the 'stashcp' command-line tool in the job wrapper script to transfer necessary data files to the compute host.  
 
 First load the stashcp module:
 
-	module load stashcp
+	module load stashcache
 
 Then transfer your data:
 	
@@ -46,15 +47,20 @@ ___
 More usage options are described in the stashcp help message:
 
 	$ stashcp -h
-	stashcp [-d] [-r] [-h] <source> <destination>
-	
-	-d: show debugging information
-	-r: recursively copy
-	-h: show this help text
+	Usage: stashcp [options] source destination
 
-	--closest: return closest cache location
-
-	Exit status 4 indicates that at least one file did not successfully copy over.
-	Exit status 1 indicates that the WantsStashCache classad was not present in job environment.
+	Options:
+	  -h, --help            show this help message and exit
+	  -d, --debug           debug
+	  -r                    recursively copy
+	  --closest             Return the closest cache and exit
+	  -c CACHE, --cache=CACHE
+							Cache to use
+	  -j CACHES_JSON, --caches-json=CACHES_JSON
+							The JSON file containing the list of caches
+	  --methods=METHODS     Comma separated list of methods to try, in order.
+							Default: cvmfs,xrootd,http
+	  -t TOKEN, --token=TOKEN
+							Token file to use for reading and/or writing
 
 
