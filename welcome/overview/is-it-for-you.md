@@ -34,4 +34,4 @@ Unfortunately high throughput computing is probably not a good fit for your job 
 &nbsp;
 
 As usual, you can direct any questions using the help desk or by sending email 
-to [user-support@opensciencegrid.org](mailto:support@opensciencegrid.org).
+to [support@osgconnect.net](mailto:support@opensciencegrid.org).

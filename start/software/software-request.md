@@ -4,13 +4,13 @@ A large number of software packages [is already available for grid use][catalog]
 we realize that there are always new software elements that are
 critical to your research process.  You may request that software
 be added to the OASIS software library with a simple email to
-[user-support@opensciencegrid.org][support], along the following lines:
+[support@osgconnect.net][support], along the following lines:
 
 [catalog]: 5000634397
-[support]: mailto:user-support@opensciencegrid.org?subject=Please%20install%20_______%20in%20OASIS
+[support]: mailto:support@osgconnect.net?subject=Please%20install%20_______%20in%20OASIS
 
 	
-	To: user-support@opensciencegrid.org
+	To: support@osgconnect.net
 	Subject: Please install _______ in OASIS
 	
 	Hello OSG User Support -
