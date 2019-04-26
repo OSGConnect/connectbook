@@ -113,5 +113,5 @@ Again, once your key is uploaded and it's been a few hours, you should be able t
 
 ## Getting Help 
 
-For assistance or questions, please email the OSG User Support team  at <mailto:support@osgconnect.net> or visit the [help desk and community forums](http://support.opensciencegrid.org).
+For assistance or questions, please email the OSG User Support team  at <mailto:user-support@opensciencegrid.org> or visit the [help desk and community forums](http://support.opensciencegrid.org).
 
