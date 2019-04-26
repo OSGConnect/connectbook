@@ -246,7 +246,7 @@ To get your images included, please either create a git pull request against
 `docker_images.txt` in the
 [cvmfs-singularity-sync repository](https://github.com/opensciencegrid/cvmfs-singularity-sync), 
 or contact
-[user-support@opensciencegrid.org](mailto:user-support@opensciencegrid.org)
+[support@osgconnect.net](mailto:support@osgconnect.net)
 and we can help you.
 
 Once your image has been registered, new versions pushed to Docker Hub will

@@ -12,7 +12,7 @@ The requirements to connect your cluster to the OSG using this method are minima
 
 Usually a couple of phone calls between the technical administrators from both teams is needed to complete the task. We have successfully used this approach to connect to several campus based clusters, including those at Syracuse University (OrangeGrid), Clemson University (Palmetto). We have also applied this method for the [ATLAS Connect campus grid][atlas], which routes ATLAS Monte Carlo simulations of collisions at the CERN LHC to clusters at Indiana University (Karst), TACC (Stampede), Cal State Fresno (ATLAS Tier3 Center), University of Illinois (Illinois Campus Cluster), and Harvard University (Odyssey).
 
-Drop us a note at [user-support@opensciencegrid.org](mailto:user-support@opensciencegrid.org) if this option is of interest to you.
+Drop us a note at [support@osgconnect.net](mailto:support@osgconnect.net) if this option is of interest to you.
 
 [atlas]: http://connect.usatlas.org
 
