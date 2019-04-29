@@ -27,6 +27,6 @@ CE based on HTCondor.
 
 If you are interested in having your campus HPC
 center join the Open Science Grid, contact us at
-[user-support@opensciencegrid.org](mailto:user-support@opensciencegrid.org)
+[support@osgconnect.net](mailto:support@osgconnect.net)
 and we'll help you determine the best option and help you get
 started.
