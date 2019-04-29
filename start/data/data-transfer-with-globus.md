@@ -8,7 +8,7 @@ service [Stash](<http://stash.osgconnect.net/>).  For data to be used on the
 OSG, move the data into your storage area on Stash. From the OSG Connect login
 host, `login.osgconnect.net`, this appears as: `/stash/user/your-username`.
 
-## Transfer data between existing servers
+## Transfer data between existing Globus endpoints
 
 -   From the [portal.osgconnect.net](<http://portal.osgconnect.net/>) web site,
     click the Transfer ▸ Start Transfer menu.
@@ -36,7 +36,7 @@ instructions for installing Globus Connect can be found
 here: <https://www.globusonline.org/globus_connect/>.
 
 
-## For servers
+## Adding a server as a Globus endpoint
 
 To add your own server as an endpoint, so that any user on that server can
 transfer data to/from stash, you need to install Globus Connect Multiuser.

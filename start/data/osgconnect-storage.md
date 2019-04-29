@@ -10,7 +10,7 @@ OSG Connect users have four different storage options available for their use: `
     stash: /home/username/stash (or) /stash/user/username
     public: /home/username/public (or) /stash/user/username/public
 
-Here, the `username` is your login name.. For convenience, the stash and public directories are accessed from home. Here, the `username` is your login name.
+Here, the `username` is your login name.. For convenience, the stash and public directories are accessed from home.
 
 ## Storage Options Quick Reference
 
