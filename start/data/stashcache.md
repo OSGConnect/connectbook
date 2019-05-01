@@ -14,7 +14,11 @@ StashCache typically outperforms other methods in the following cases:
 
 ## How to use StashCache
 
-StashCache is available at all OSG sites where OASIS is mounted. To use it for transferring files to active jobs:
+StashCache is available at all OSG sites where OASIS is mounted and can be used for both job input and output.
+
+### Transfer job input from StashCache
+
+To use it for transferring files to active jobs:
 
 1)  Copy the data files required for the job(s) into your Stash directory which is mounted on the OSG Connect login node here:
 
@@ -37,9 +41,27 @@ Then transfer your data:
 	
 	stashcp /user/<userid>/<stash_data_file_path> <target_location>
 
- For example, if the data file is located at /stash/user/<userid\>/samples/sample01.dat, then the stashcp command to transfer this file into your current working directory on the compute host would be:
+ For example, if the data file is located at `/stash/user/<userid\>/samples/sample01.dat`, then the `stashcp` command to transfer this file into your current working directory on the compute host would be:
 
 	stashcp /user/<userid>/samples/sample01.dat  .
+
+### Transfer job output to StashCache
+
+To transfer job output to StashCache after your analysis:
+
+1) Ensure that your job's submit script indicates the necessary requirements to make `stashcp` available by including the following lines:
+	+WantsStashCache = true
+	requirements = OSGVO_OS_STRING == "RHEL 7" && Arch == "X86_64" && HAS_MODULES == True
+
+2) Use `stashcp` to transfer the data files back to StashCache. You will need to prepend your stash location with `stash://` as follows:
+
+	module load stashcache
+	stashcp <file_name> stash:///user/<userid>/<stash_data_file_path>
+
+For example, if you wish to transfer `output.dat` to the directory `/stash/user/<userid\>/output/`. then the `stashcp` command would be:
+
+	stashcp output.dat stash:///user/<userid\>/output/output.txt
+
 ___
 
 More usage options are described in the stashcp help message:
@@ -61,4 +83,6 @@ More usage options are described in the stashcp help message:
 	  -t TOKEN, --token=TOKEN
 							Token file to use for reading and/or writing
 
+## Getting Help
+For assistance or questions, please email the OSG User Support team  at [support@osgconnect.net](mailto:support@osgconnect.net) or visit the [help desk and community forums](http://support.opensciencegrid.org).
 
