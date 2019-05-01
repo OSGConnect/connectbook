@@ -12,16 +12,16 @@ OSG Connect users have four different storage options available for their use: `
 
 Here, the `username` is your login name.. For convenience, the stash and public directories are accessed from home.
 
-## Storage Options Quick Reference
+## Storage options quick reference
 
 ### Data storage options
 
 |   | **Default Limit**| **Purpose** | **Network mounted** | **Backed Up** | **Quota** | **Purge** |
 |:------- |:----------------:|:------|:------:|:------:|:------:|:------:|:----------|
-| **home**    |  < 20 GB      | Meant for quick data access and not for submitting jobs.| Yes | Yes | 20 GB | No |
-| **local-scratch**   |  < 25 GB      | Meant for large temporary storage and I/O for your jobs. Files older than 30 days are automatically removed. | No | No | No | Yes, 30 days |
-| **stash**   |  < 200 GB      | Meant for large storage and I/O for your jobs. | Yes | No | No | No |
-| **public**  |  < 10 GB    | Meant for sharing data and transfer input data via HTTP or staschcp | Yes | No | No | No |
+| **home**    |  < 20 GB      | Meant for storage of key files such as configuration files and source code. Not designed for job input and output.| Yes | Yes | 20 GB | No |
+| **local-scratch**   |  < 25 GB      | Meant for large temporary storage and input and output for your jobs. Files older than 30 days are automatically removed. | No | No | No | Yes, 30 days |
+| **stash**   |  < 200 GB      | Meant for large storage and input and output for your jobs. | Yes | No | No | No |
+| **public**  |  < 10 GB    | Meant for sharing data and transfer input data via HTTP or job input and output via staschcp | Yes | No | No | No |
 
 
 ### Transferring input data for a job
@@ -54,7 +54,7 @@ Here, the `username` is your login name.. For convenience, the stash and public 
 |**Globus** |  > 1 GB  | globus webservice or globus CLI | [Globus](https://support.opensciencegrid.org/support/solutions/articles/5000632397) |
 
 
-## Storage Options
+## Storage options
 ### home
 Home is meant for storing files long-term. Usually, files such as source code, parameter files, scripts, etc. are kept in your `/home` directory. The disk quota on home is 20 GBs. When a user exceeds his quota, the system will send email notifications. If the notice is disregarded, eventually the user will lose the privilege to write on his home.
 
@@ -64,7 +64,7 @@ Home is meant for storing files long-term. Usually, files such as source code, p
 `local-scratch` is meant for temporary storage, and is implemented as fast local disk for each submit node. It is a good practice to run your jobs on `local-scratch` and move the output data to a secondary local disk as soon as possible. NOTE: data on `local-scratch` is automatically removed after 30 days and is not backed up.
 
 ### stash
-Stash provides medium term storage (less 6 months) for users. Stash is a distributed shared filesystem mounted on all our submit nodes, and is therefore slower than local-scratch. There is no disk quota imposed, nor a automatic purge, on stash. However, the data on stash is not backed up, so you should regularly transfer your data on stash to a long term archival system.  If you are transfering a large amount of data, please use the Globus transfer service.  For more details check the articles on [data transfer techniques](https://opensciencegrid.freshdesk.com/a/solutions/folders/12000013267).  
+Stash is a distributed shared filesystem mounted on all our submit nodes, and is therefore slower than local-scratch. There is no disk quota imposed, nor a automatic purge, on stash. However, the data on stash is not backed up, so you should regularly transfer your data on stash to a long term archival system.  If you are transfering a large amount of data, please use the Globus transfer service.  For more details check the articles on [data transfer techniques](https://opensciencegrid.freshdesk.com/a/solutions/folders/12000013267).  
 
 **Note: Files and directories that have not been accessed for over six months may be deleted.**
 

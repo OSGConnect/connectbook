@@ -1,20 +1,18 @@
 [title]: - "Transferring Data with StashCache"
+[TOC]
 
-What is StashCache?
--------------------
+## What is StashCache?
 
 StashCache is a data service for OSG which transparently caches data near compute sites for faster delivery to active grid jobs.  The standard practice of using HTCondor file transfer or http to move data files to grid sites can be inefficient for certain workflows.  StashCache uses a distributed network filesystem (based on XRootD proxy caching) which provides an alternative method for transferring input files to compute sites.  It is implemented through a handful of strategically-distributed sites which provide caching of the input data files.
 
-When to use StashCache
------------------------
+## When to use StashCache
 
 StashCache typically outperforms other methods in the following cases:
 
 * Jobs require large data files (> 500 MB)
 * The same data files are used repeatedly for many separate jobs
 
-How to use StashCache
----------------------
+## How to use StashCache
 
 StashCache is available at all OSG sites where OASIS is mounted. To use it for transferring files to active jobs:
 
