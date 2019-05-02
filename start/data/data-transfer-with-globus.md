@@ -1,20 +1,19 @@
-[title]: - "Data Transfer with Globus"
+[title]: - "Data Transfer to OSG Connect with Globus"
+[TOC]
 
-Background
-----------
+## Overview
 
 Use Globus for transferring data to and from OSG Connect and its storage
 service [Stash](<http://stash.osgconnect.net/>).  For data to be used on the
 OSG, move the data into your storage area on Stash. From the OSG Connect login
 host, `login.osgconnect.net`, this appears as: `/stash/user/your-username`.
 
-Transfer data between existing servers
---------------------------------------
+## Transfer data between existing Globus endpoints
 
 -   From the [portal.osgconnect.net](<http://portal.osgconnect.net/>) web site,
     click the Transfer ▸ Start Transfer menu.
 
--   On one side, enter `connect#stash` into the endpoint field, and press
+-   On one side, enter `osgconnect#stash` into the endpoint field, and press
     "Return" or the "Go" button.  
 
 -   On the other side, enter the other endpoint from which you want to transfer
@@ -28,8 +27,7 @@ Transfer data between existing servers
     the View Transfer window to see your transfer progress.  Click on the
     progress bar to drill in on transfer details.
 
-Transferring between your laptop and OSG Connect Stash
-------------------------------------------------------
+## Transferring between your laptop and OSG Connect Stash
 
 To add your own laptop as an endpoint, so that you can transfer data to/from
 stash, you need to install Globus Connect, by clicking on the "Get Globus
@@ -37,10 +35,8 @@ Connect" in the upper right corner of the Start Transfer page. More detailed
 instructions for installing Globus Connect can be found
 here: <https://www.globusonline.org/globus_connect/>.
 
- 
 
-For servers
------------
+## Adding a server as a Globus endpoint
 
 To add your own server as an endpoint, so that any user on that server can
 transfer data to/from stash, you need to install Globus Connect Multiuser.
@@ -48,8 +44,7 @@ Detailed instructions can be found here: <https://www.globusonline.org/gcmu/>.
 
  
 
-Using the Globus Online Command Line Interface
-----------------------------------------------
+## Using the Globus Online Command Line Interface
 
 You can also use the Globus Online CLI via ssh
 <your-user-name>@cli.globusonline.org. More
@@ -58,8 +53,7 @@ here: <https://www.globusonline.org/usingcli/>.
 
  
 
-Using the Globus CLI from login.osgconnect.net
-----------------------------------------------
+## Using the Globus CLI from login.osgconnect.net
 
 When logging into `login.osgconnect.net`, if you use the `ssh -A`
 flag, then you will be able to login from `login.osgconnect.net`
@@ -110,8 +104,7 @@ To copy a file from `connect#stash` to `username#desktop`:
 	  username#desktop:/home/username/.
  
 
-More Information
-----------------
+## Next steps
 
 -   There are a few other quick start guides
     here: <https://www.globusonline.org/quickstart/>.  
@@ -121,3 +114,9 @@ More Information
 
 -   More instructions on using the Globus Online CLI are
     here: <https://www.globusonline.org/usingcli/>.
+    
+## Getting Help
+s
+For assistance or questions, please email the OSG User Support team  at [support@opensciencegrid.org](mailto:support@opensciencegrid.org) or visit the [help desk and community forums](http://support.opensciencegrid.org).
+
+
