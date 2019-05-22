@@ -10,7 +10,7 @@ For OSG policies, executive information please email:
 [Frank Würthwein](mailto:Frank Würthwein) (OSG Executive Director)
 
 For other assistance or questions, please email the OSG User Support team at
-[support@osgconnect.net](mailto:support@osgconnect.net)
+[user-support@opensciencegrid.org](mailto:user-support@opensciencegrid.org)
 or visit the [help desk and community forums](http://support.opensciencegrid.org).
 
 To request a user account on OSG Connect, please visit the [website](http://osgconnect.net).  
