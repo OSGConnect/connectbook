@@ -1,5 +1,4 @@
 [title]: - "Introduction to Data Management on OSG"
-[TOC]
 
 ## Overview
 
