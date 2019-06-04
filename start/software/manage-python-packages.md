@@ -11,15 +11,14 @@ install these packages to your home directory and use them to run jobs.
 
 Before we begin, you should know which Python packages you need to run your job.  
 
-## Install and prepare needed Python packages
+## Install needed Python packages
 
-Load Python.  
+First, load Python [via one of the modules available on OSG Connect](https://support.opensciencegrid.org/support/solutions/articles/12000048518-accessing-software-using-distributed-environment-modules). 
 
      $ module load python/3.7.0
 
 Now, we will go through the steps to create a virtual environment.  The first 
-command creates the base environment. You 
-can swap out `my_env` for a more descriptive name like `scipy` or `word-analysis`.
+command creates the base environment. **You can swap out `my_env` for a more descriptive name like `scipy` or `word-analysis`**.
 
      $ python3 -m venv testenv
 
@@ -51,6 +50,7 @@ which is a tool to install Python packages.
 
 Install each package that you need for your job using the `pip install` command.  Once 
 you are done, you can leave the virtual environment: 
+
     (my_env)$ deactivate
 
 The above command resets the shell environmental variables and returns you to the 
