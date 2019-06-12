@@ -68,7 +68,7 @@ Hub](https://hub.docker.com/). The reason we use Docker as a source
 image repository is that it allows us to easily import the images into
 our own distribution system (see below). 
 
-See [this page]() for how to create a Docker image on your own computer and 
+See [this page][container-howto] for how to create a Docker image on your own computer and 
 push it to Docker Hub so it can be used by the Open Science Grid. 
 
 When creating the Docker image, you will give it with an 
@@ -175,3 +175,5 @@ introduction on how to create images and run them, but does not cover all the
 functionality described further down:
 
   * [Singularity on the OSG](https://djw8605.github.io/2017/01/12/singularity-on-the-osg/)
+
+[container-howto]: 12000058245

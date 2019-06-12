@@ -7,7 +7,7 @@ in the Open Science Grid.  You can use your own custom container to run jobs in 
 Open Science Grid, and we assume that those containers are built using Docker.  This 
 guide describes how to create your own Docker container "image" (the blueprint for 
 the container). Once you have created your custom image, 
-you will need to register the image as described in [this page]()
+you will need to register the image as described in [this page][osg-containers]
 
 ## Install Docker and Get a Docker Hub Account
 
@@ -135,7 +135,7 @@ command:
 	$ docker push namespace/repository_name
 
 From here, if you're planning to use this container in OSG, return to our 
-[Containers in OSG Guide]() to learn how to upload your container to the OSG's container repository. 
+[Containers in OSG Guide][osg-containers] to learn how to upload your container to the OSG's container repository. 
 
 ## Special Cases
 
@@ -177,5 +177,5 @@ the `/host-libs` directory has to exist in the image, and `LD_LIBRARY_PATH`
 has to be set for the job. An example of how to do this is the 
 [TensorFlow GPU image](https://github.com/opensciencegrid/osgvo-tensorflow-gpu).
 
-
+[osg-containers]: 12000024676
 
