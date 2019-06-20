@@ -29,8 +29,8 @@ as your starting point.* See the available containers on Docker Hub here:
 [OSG Docker Containers](https://hub.docker.com/u/opensciencegrid)
 The best candidates for you will be containers that have "osgvo" in the name. 
 
-If you prefer, you can base you image on images not already published 
-by OSG, but if you do this, we recommend that you as one of the steps you 
+If you prefer, you can base your image on images not already published 
+by OSG, but if you do this, we recommend that as one of the creation steps you 
 create the `/cvmfs` directory. See [Special Cases](#special-cases) below. 
 
 ## Build a Container
@@ -49,7 +49,7 @@ Create a folder on your computer and inside it, create a blank text file
 called `Dockerfile`.  
 
 The first line of this file should include the keyword `FROM` and then 
-the name of the Docker image you want 
+the name of a Docker image (from Docker Hub) you want 
 to use as your starting point. If using the OSG's Ubuntu Xenial image that 
 would look like this: 
 

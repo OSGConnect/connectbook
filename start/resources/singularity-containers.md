@@ -102,8 +102,8 @@ will be updated accordingly.
 
 ### Using Your Container
 
-To use your container to run jobs, you'll follow the same steps as above under "Using OSG 
-Provide Singularity Images", but will change the `+SingularityImage` option to 
+To use your container to run jobs, you will follow the same steps as above (under "Using OSG 
+Provided Singularity Images"), but will change the `+SingularityImage` option to 
 include your container identifier, like so: 
 
     +SingularityImage = "/cvmfs/singularity.opensciencegrid.org/namespace/repository_name"
