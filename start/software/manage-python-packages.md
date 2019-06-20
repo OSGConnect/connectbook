@@ -6,27 +6,91 @@
 
 ## Overview
 
-If your jobs need specific Python packages, this guide will show you how to 
-install these packages to your home directory and use them to run jobs.  
+This guide will show you to how run jobs that use Python in the Open Science Grid. Our 
+first example will show how to submit a job that runs a script that only uses base Python.  
+If your jobs use specific Python packages, the second half of this guide will show you 
+how to install these packages to your home directory and add them to a basic Python job 
+submission.  
 
 Before we begin, you should know which Python packages you need to run your job.  
 
-## Install needed Python packages
+## Running Python on the Open Science Grid
 
-First, load Python [via one of the modules available on OSG Connect](https://support.opensciencegrid.org/support/solutions/articles/12000048518-accessing-software-using-distributed-environment-modules). 
+You can see the versions of Python available in the [Open Science Grid's Software 
+Module System][module-guide], by running `module avail` on the submit node. 
+
+To use a module, you "load" it and then use the `python` command to run a Python script. 
+However, we're not actually going to do this on the submit node. Instead, we'll put 
+these commands into a script, so they can be executed wherever the job runs: 
+
+	#!/bin/bash
+
+	# Load Python
+	module load python/3.7.0
+
+	# Run the Python script 
+	python3 myscript.py
+
+
+> If you need to use Python 2, load the appropriate module and 
+> replace the `python3` above with `python2`.
+
+In order to submit this script as part of a job, you'll need to create an HTCondor 
+submit file. This should include the following: 
+
+* The `bash` script above will be the job's "executable" - for this example we'll call it `run_py.sh`. 
+* The Python script (`myscript.py`, above) will need to be transferred to wherever the job runs, and should be 
+listed in "transfer_input_files".
+* It's also important to include the requirement(s) that request OSG servers that 
+have access to the base Python module used in the wrapper script. 
+
+All together, a submit file will look something like this: 
+
+	universe 	= vanilla     
+	executable 	= run_py.sh
+
+	transfer_input_files = myscript.py
+
+	log         = job.log
+	output      = job.out
+	error       = job.error
+
+	# Require nodes that can access the correct OSG modules
+	Requirements = (HAS_MODULES =?= true) && (OSGVO_OS_STRING == "RHEL 7")
+
+	request_cpus 	= 1 
+	request_memory 	= 2GB
+	request_disk 	= 2GB
+
+	queue 1
+
+Once everything is set up, the job can be submitted in the usual way, by running 
+the `condor_submit` command with the name of the submit file. 
+
+When you've prepared a real job submission, make sure to run a test job and then check 
+the `log` file for disk and memory usage; if you're using significantly more or less 
+than what you requested, make sure you adjust your requests. 
+
+## Adding Python Packages to a Job
+
+It's likely that you'll need additional Python packages that aren't present in 
+the default OSG software modules.  This portion of the guide describes how to 
+create a Python "virtual environment" that contains your packages and can be 
+included as part of your jobs. 
+
+### Install needed Python packages
+
+First, load the Python module that you want to use to run jobs. 
 
      $ module load python/3.7.0
 
 Now, we will go through the steps to create a virtual environment.  The first 
 command creates the base environment. **You can swap out `my_env` for a more descriptive name like `scipy` or `word-analysis`**.
 
-     $ python3 -m venv testenv
+     $ python3 -m venv my_env
 
 This creates a directory `my_env` in the current working directory 
 with sub-directories `bin/`, `include/`, and `lib/`.   
-
-> If you need to use Python 2, load the appropriate module and 
-> replace the `python3` above with `python2`.
 
 We now need to _activate_ the environment and install our packages to it.  
 
@@ -66,71 +130,54 @@ directory, as follows:
    $ tar czf my_env.tar.gz my_env
 
 
-## Executable script for using the virtual environment
+### Executable script and submit file
 
-When our job actually runs, we will want to load the same module as when 
-we created the virtual environment.  We will want to un-tar the environment 
-folder we just created, activate it (in the same way we did to install 
-the packages) and then run the job's python script.  That will look something like this: 
+When our job actually runs, we will want to include the same steps as the previous 
+shell script (load the Python module, run Python), but will need to add a few 
+steps to set-up the virtual environment we just created. That will look 
+something like this: 
 
 	#!/bin/bash
-
-	# Load Python (should be the same version used to create the virtual environment)
+	
+	# Load Python
+	# (should be the same version used to create the virtual environment)
 	module load python/3.7.0
 
-	# Extract the environment directory
+	# Unpack your envvironment (with your packages), and activate it
 	tar -xzf my_env.tar.gz
-
-	# Create the virtual environment on the remote hosts (redefines the env variables)
-	virtualenv-2.7 nltk_env
-
-	# Activate virtual environment
+	python3 -m venv my_env
 	source my_env/bin/activate
 
 	# Run the Python script 
 	python3 myscript.py
 
-	# Deactivate virtual environment 
+	# Deactivate environment 
 	deactivate
 
-## Submit file for Python jobs.
+The submit file for this job will be similar to above, but you need to make sure 
+to add the `tar.gz` file with your environment to the list of "transfer_input_files: 
 
-The submit file for Python jobs needs to include the wrapper script 
-described above as the job's `executable` and needs to transfer: 
-* The job's environment tar.gz file
-* A python script
-* Other input files (if needed)
+	universe 	= vanilla     
+	executable 	= run_py.sh
 
-It's also important to include the requirement(s) that request OSG servers that 
-have access to the base Python module used in the wrapper script. 
+	transfer_input_files = myscript.py, my_env.tar.gz
 
-All together, a submit file will look something like this: 
+	log         = job.log
+	output      = job.out
+	error       = job.error
 
-	Universe = vanilla     
-	Executable = run_py.sh
+	# Require nodes that can access the correct OSG modules
+	Requirements = (HAS_MODULES =?= true) && (OSGVO_OS_STRING == "RHEL 7")
 
-	transfer_input_files = my_env.tar.gz, script.py, input.data
-
-	log           = job.log
-	output        = job.out
-	error         = job.error
-
-	# Set the requirement that the OASIS modules are available on the remote worker machine
-	Requirements = (HAS_MODULES =?= true) && (OSGVO_OS_STRING == "RHEL 7") && (OpSys == "LINUX")
-
-	request_cpus = 1 
-	request_memory = 2GB
-	request_disk = 2GB
+	request_cpus 	= 1 
+	request_memory 	= 2GB
+	request_disk 	= 2GB
 
 	queue 1
-
-
-## Submitting a job
-
-Once everything is set up, the job can be submitted in the usual way, by running 
-the `condor_submit` command with the name of the submit file. 
 
 ## Getting Help
 
 For assistance or questions, please email the OSG User Support
  team  at [support@osgconnet.net](mailto:user-support@opensciencegrid.org) or visit the [help desk and community forums](http://support.opensciencegrid.org).
+
+[module-guide]: 12000048518
