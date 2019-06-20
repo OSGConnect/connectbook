@@ -67,10 +67,6 @@ All together, a submit file will look something like this:
 Once everything is set up, the job can be submitted in the usual way, by running 
 the `condor_submit` command with the name of the submit file. 
 
-When you've prepared a real job submission, make sure to run a test job and then check 
-the `log` file for disk and memory usage; if you're using significantly more or less 
-than what you requested, make sure you adjust your requests. 
-
 ## Adding Python Packages to a Job
 
 It's likely that you'll need additional Python packages that aren't present in 
@@ -127,7 +123,7 @@ of the `my_env` directory.  To use these packages in a job, we will transfer the
 entire `my_env` directory as a tar.gz file.  So our final step is to compress the 
 directory, as follows: 
 
-   $ tar czf my_env.tar.gz my_env
+	$ tar czf my_env.tar.gz my_env
 
 
 ### Executable script and submit file
@@ -175,9 +171,21 @@ to add the `tar.gz` file with your environment to the list of "transfer_input_fi
 
 	queue 1
 
+## Other Considerations
+
+This guide mainly focuses on the nuts and bolts of running Python, but it's important 
+to remember that additional files needed for your jobs (input data, setting files, etc.) 
+need to be transferred with the job as well. See our [Introduction to Data Management 
+on OSG][data-intro] for details on the different ways to deliver inputs to your jobs. 
+
+When you've prepared a real job submission, make sure to run a test job and then check 
+the `log` file for disk and memory usage; if you're using significantly more or less 
+than what you requested, make sure you adjust your requests. 
+
 ## Getting Help
 
 For assistance or questions, please email the OSG User Support
  team  at [support@osgconnet.net](mailto:user-support@opensciencegrid.org) or visit the [help desk and community forums](http://support.opensciencegrid.org).
 
 [module-guide]: 12000048518
+[data-intro]: 12000002985
