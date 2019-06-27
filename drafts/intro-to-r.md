@@ -85,7 +85,7 @@ Now that we've created a wrapper, let's build a HTCondor submit file around it. 
 	transfer_input_files = hello_world.R
 	 
 	requirements = OSGVO_OS_STRING == "RHEL 7" && Arch == "X86_64" && HAS_MODULES == True
-	queue 10
+	queue 1
 
 
 The `R.submit` file may have included a few lines that you are unfamiliar with.  For example, `$(Cluster)` and `$(Process)` are variables that will be replaced with the job's cluster and process id.  This is useful when you have many jobs submitted in the same file.  Any output and errors will be placed in a separate file for each job.
@@ -101,13 +101,13 @@ Finally, submit the job to OSG Connect!
 
 	$ condor_submit R.submit
 	Submitting job(s)..........
-	10 job(s) submitted to cluster 3796250.
+	1 job(s) submitted to cluster 3796250.
 	$ condor_q user
 	 
 	$ condor_q
 	-- Schedd: login03.osgconnect.net : <192.170.227.22:9618?... @ 05/13/19 09:51:04
 	OWNER      BATCH_NAME     SUBMITTED   DONE   RUN    IDLE  TOTAL JOB_IDS
-	user	   ID: 3796250   5/13 09:50      _      _     10     10 3796250.0-9
+	user	   ID: 3796250   5/13 09:50      _      _      1      1 3796250.0
 	...
 
 You can follow the status of your job cluster with the `connect watch` command, which shows `condor_q` output that refreshes each 5 seconds.  Press `control-C` to stop watching.
@@ -183,7 +183,7 @@ In either case, be sure to say `n` when prompted to `Save workspace image? [y/n/
 To tar the package directory, type the following at the shell prompt:
 
     $ cd /home/user/R_libs
-    $ $ tar -cvzf lubridate_R.3.5.tar.gz lubridate_R.3.5
+    $ tar -cvzf lubridate_R.3.5.tar.gz lubridate_R.3.5
 
 Now copy the tarball to the job directory where the R program, job wrapper script and condor job description file are. 
 
@@ -208,7 +208,7 @@ R library locations are set upon launch and can be modified using the `R_LIBS` e
 	tar -xzf lubridate_R.3.5.tar.gz
 	
 	# Set the library location
-	R_LIBS="$PWD/lubridate_R.3.5"
+	export R_LIBS="$PWD/lubridate_R.3.5"
 	
 	# run the R program
 	Rscript --no-save hello_world.R
