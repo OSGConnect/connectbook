@@ -2,10 +2,10 @@
 
 ## Background
 
-We use OSG Connect Projects to organize science work. Projects in OSG are the 
-means by which work by individual research groups is
-organized, resources granted access, and usage accounted for.
-You should be a member of a project before you can use OSG Connect to submit jobs. 
+Individual research groups 
+are organized into projects on OSG Connect. Resource access and usage accounting 
+is done on per-project basis. 
+You must be a member of a project before you can use OSG Connect to submit jobs. 
 
 Below is the process by which **principal
 investigators or their delegates** can create, join, and manage projects within OSG
@@ -55,19 +55,20 @@ request approvals. The PI may also be assigned an "Administrator" role of the
 project group, and can invite OSG Connect members to the group directly. [Contact
 us](<mailto:user-support@opensciencegrid.org>) if this interests you.
 
-## ProjectName in HTCondor Jobs
+## Using a Project in HTCondor Jobs
 
 The job submission on OSG Connect requires a project. Either you define the keyword `+ProjectName` for each job or you set the default project. 
 
-* Option 1: In your HTCondor job submit file, include the following directive convention:
-
-    +ProjectName="ProjectName"
-
-* Option 2: To set the default project, type 
+* Option 1: To set the default project, type 
 
     $ connect project 
     
- and select a project. After the selection of default project, it is okay to omit the "+Projectname" description in the job description file.
+ and select a project. 
+
+* Option 2: If you're running a few jobs under a different project, you can manually 
+set the project via an option in the submit file: 
+
+    +ProjectName="ProjectName"
 
 ## Projects in Accounting
 

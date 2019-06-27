@@ -19,7 +19,7 @@ NOTE: Please do not edit the authorized keys file on the submit host (login.osgc
 
 We will discuss how to generate a SSH key pair for two cases: 
 
-* "Unix" systems, including Linux, Mac, and newer versions of Windows (Windows 10+)
+* "Unix" systems (Linux, Mac) and certain, latest versions of Windows
 * Older Windows systems
 
 Please note: The key pair consist of a private key and a public key. You will upload the 
@@ -59,7 +59,8 @@ The part you want to upload is the content of the `.pub` file (~/.ssh/id_rsa.pub
 
 ### Windows, using Putty to log in
 
-If you can connect using the `ssh` command within the Command Prompt (Windows 10 build version 1803 and later), please follow the Mac/Linux directions above.
+If you can connect using the `ssh` command within the Command Prompt (Windows 10 build version 1803 and later), please follow the Mac/Linux directions above. If not, 
+continue with the directions below. 
 
 1. Open the `PuTTYgen` program.  You can download `PuttyGen` 
 here: [PuttyGen Download Page](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html), 
@@ -108,7 +109,7 @@ be added to the login nodes within a couple hours.
 
 Once your key is uploaded and it's been a few hours, you should be able to log in to OSG Connect. 
 
-If you have a Mac, Linux, or newer versions of Windows (Windows 10 or later), you 
+If you have a Mac, Linux, or newer versions of Windows, you 
 can log in using the `ssh` command on the command line.  To do this, open a terminal 
 and type in: 
 
@@ -117,7 +118,7 @@ and type in:
 It will ask for the passphrase for your ssh key (if you set one) and then you 
 should be logged in. 
 
-On older versions of Windows, you can use  the [Putty program](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) to log in. 
+On older versions of Windows, you can use the [Putty program](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) to log in. 
 Type "login.osgconnect.net" as the hostname, then click "Open" and provide your Globus 
 ID and passphrase when prompted to do so.
 
