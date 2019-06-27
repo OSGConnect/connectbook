@@ -1,19 +1,20 @@
-# Start a Project with OSG Connect
+# Start or Join a Project in OSG Connect
 
-Background
-----------
+## Background
 
-Projects in OSG are the means by which work by individual research groups is
-organized, resources granted access, and usage accounted for. We use OSG
-Connect Projects to organize science work. Projects allow access to resources
-and provide accounting. Below is the process by which **principal
-investigators or their delegates** create and manage projects within OSG
+Individual research groups 
+are organized into projects on OSG Connect. Resource access and usage accounting 
+is done on per-project basis. 
+You must be a member of a project before you can use OSG Connect to submit jobs. 
+
+Below is the process by which **principal
+investigators or their delegates** can create, join, and manage projects within OSG
 Connect.
 
-Contact
--------
+## Request a New Project
 
-To start a project in OSG Connect, visit <https://osgconnect.net/newproject>.
+If you or your group does not already have a project in OSG Connect, you can 
+start one. To do so, visit <https://osgconnect.net/newproject>.
  You will be asked to provide the following information:
  
 -    Your Name
@@ -31,6 +32,8 @@ To start a project in OSG Connect, visit <https://osgconnect.net/newproject>.
 -    Telephone Number
 -    Project Description
 
+You can also send us this information directly via email at support@osgconnect.net. 
+
 OSG Connect administrative staff will review and create the project in the
 system.  Within the [OSG Connect Portal](<https://portal.osgconnect.net/>), all
 OSG Connect science projects are subgroups of the **osg** group. The naming
@@ -38,32 +41,36 @@ convention is: **osg.projectname**. *Projectname* is typically a mix of upper
 case and lower case with no spaces or punctuation (except for hyphens). It
 derives from the *short name* that you submit in your application form.
 
-Project Membership
-------------------
+## Join a Project
 
-The project's principal investigator, or his/her delegate, is responsible for
+To join a pre-existing project email the OSG Connect team (support@osgconnect.net) 
+with your name and the project you wish to join. You can also be added to a project 
+by the PI or their delegate (see next session). 
+
+## Managing Project Membership
+
+The project's principal investigator, or their delegate, is responsible for
 project membership. We will consult the PI or contact for group membership
 request approvals. The PI may also be assigned an "Administrator" role of the
-subgroup, and can invite OSG Connect members to the group directly. [Contact
+project group, and can invite OSG Connect members to the group directly. [Contact
 us](<mailto:user-support@opensciencegrid.org>) if this interests you.
 
-ProjectName in HTCondor Jobs
-----------------------------
+## Using a Project in HTCondor Jobs
+
 The job submission on OSG Connect requires a project. Either you define the keyword `+ProjectName` for each job or you set the default project. 
 
-In your HTCondor job submit file, include the following directive convention:
-
-    +ProjectName="ProjectName"
-
-To set the default project, type 
+* Option 1: To set the default project, type 
 
     $ connect project 
     
- and select a project. After the selection of default project, it is okay to omit the "+Projectname" description in the job description file.
+ and select a project. 
 
+* Option 2: If you're running a few jobs under a different project, you can manually 
+set the project via an option in the submit file: 
 
-Accounting Name
----------------
+    +ProjectName="ProjectName"
+
+## Projects in Accounting
 
 The project's resource usage appears in the OSG accounting system, [GRACC](<https://gracc.opensciencegrid.org/>). 
 
