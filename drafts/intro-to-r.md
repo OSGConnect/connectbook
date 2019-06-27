@@ -70,7 +70,7 @@ To prepare our R job to run on OSG, we need to create a wrapper for our R enviro
 
 Change the permissions on the wrapper script so it is executable and then test it for correct output:
 
-	$ chmod +x R_wrapper.sh
+	$ chmod +x R-wrapper.sh
 	$ ./R-wrapper.sh
 	[1] "Hello World!"
 
