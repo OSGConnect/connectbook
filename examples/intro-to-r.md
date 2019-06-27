@@ -1,4 +1,5 @@
 [title]: - "Run R scripts on OSG"
+
 [TOC]
 
 ## Overview
@@ -118,7 +119,7 @@ You can follow the status of your job cluster with the `connect watch` command, 
 
 Since our jobs prints to standard out, we can check the output files. Let's see what one looks like:
 
-	$ cat R.out.3796250.1
+	$ cat R.out.3796250.0
 	[1] "Hello World!"
 
 ## Use custom R libraries on OSG
@@ -232,7 +233,7 @@ Next, we need to modify the submit script so that the package tarball is transfe
 	request_disk = 1GB
 
 	requirements = OSGVO_OS_STRING == "RHEL 7" && Arch == "X86_64" && HAS_MODULES == True
-	queue 10 
+	queue 1
 
 ### Job submission and output
 Now we are ready to submit the job:
