@@ -10,26 +10,26 @@ OSG Connect requires SSH-key-based logins. You need to follow a two-step process
 
 2. Add your public key to the submit host by uploading it to your OSG Connect user profile (via the OSG Connect website).
 
-After completing the process, you can log in from local machine (your laptop or desktop) to the OSG Connect submit host using ssh:
-
-     ssh <your_osg_connect_username>@login.osgconnect.net
-
-or using your Windows SSH client
+After completing the process, you can log in from a local computer (your laptop or desktop) to the OSG Connect submit `login.osgconnect.net` using either 
+ssh or an ssh program like Putty -- see below for more details on logging in. 
 
 NOTE: Please do not edit the authorized keys file on the submit host (login.osgconnect.net).
 
 ## Step 1: Generating SSH Keys
 
-We will discuss how to generate a SSH key pair on both Unix-based and Windows. 
+We will discuss how to generate a SSH key pair for two cases: 
+
+* "Unix" systems, including Linux, Mac, and newer versions of Windows (Windows 10+)
+* Older Windows systems
 
 Please note: The key pair consist of a private key and a public key. You will upload the 
 public key to OSG Connect, but you also need to keep a copy of the private key to log in!  
 You should keep the private key on machines that you have 
 direct access to, i.e. your local computer (your laptop or desktop).
 
-### Unix-based operating system (Linux/Mac)
+### Unix-based operating system (Linux/Mac/Windows 10 or newer)
 
-On your local computer:
+Open a terminal on your local computer and run the following commands: 
 
      mkdir ~/.ssh
      chmod 700 ~/.ssh
@@ -57,7 +57,7 @@ following:
 
 The part you want to upload is the content of the `.pub` file (~/.ssh/id_rsa.pub)
 
-### Windows / Putty
+### Windows, using Putty to log in
 
 1. Open the `PuTTYgen` program.  You can download `PuttyGen` 
 here: [PuttyGen Download Page](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html), 
@@ -89,27 +89,35 @@ To add your public key to the OSG Connect log in server:
 
 2. Go to "Update Profile".
 
-3. Click on "Manage SSH and X.509 keys".
+3. Click on "Manage SSH and X.509 keys" - it's a small link under your Globus ID 
+in the "Identity" column. 
 
 4. Click on "Add a New Key".
 
-5. Give the key a name, select "SSH Public Key", and copy/paste the public key into the text box. The expected key is a single line, with three fields looking something like `ssh-rsa ASSFFSAF... user@host`. On Linux/Mac, it is the content of `~/.ssh/id_rsa.pub` and on Windows, it is the content from step 7 above.
+5. Give the key a name, select "SSH Public Key", and copy/paste the public key into the text box. The expected key is a single line, with three fields looking something like `ssh-rsa ASSFFSAF... user@host`. If you used the first set of key-generating 
+instructions it is the content of `~/.ssh/id_rsa.pub` and for the second (using PuTTYgen), it is the content from step 7 above.
 
 6. Click "Add Key"
 
 The key is now added to your profile in the OSG Connect website. This will automatically
 be added to the login nodes within a couple hours.
 
-### Logging In
+## Logging In
 
-Again, once your key is uploaded and it's been a few hours, you should be able to log in to OSG Connect by using: 
+Once your key is uploaded and it's been a few hours, you should be able to log in to OSG Connect. 
 
-* On a Mac, in the Terminal: 
+If you have a Mac, Linux, or newer versions of Windows (Windows 10 or later), you 
+can log in using the `ssh` command on the command line.  To do this, open a terminal 
+and type in: 
+
     ssh <your_osg_connect_username>@login.osgconnect.net
-* On a Windows computer, the [Putty program](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
-    Type "login.osgconnect.net" as the hostname, then click "Open" and provide your Globus 
-     ID and passphrase when prompted to do so.
 
+It will ask for the passphrase for your ssh key (if you set one) and then you 
+should be logged in. 
+
+On older versions of Windows, you can use  the [Putty program](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) to log in. 
+Type "login.osgconnect.net" as the hostname, then click "Open" and provide your Globus 
+ID and passphrase when prompted to do so.
 
 ## Getting Help 
 
