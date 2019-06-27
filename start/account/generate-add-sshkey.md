@@ -27,7 +27,7 @@ public key to OSG Connect, but you also need to keep a copy of the private key t
 You should keep the private key on machines that you have 
 direct access to, i.e. your local computer (your laptop or desktop).
 
-### Unix-based operating system (Linux/Mac/Windows 10 or newer)
+### Unix-based operating system (Linux/Mac) or latest Windows 10 versions
 
 Open a terminal on your local computer and run the following commands: 
 
@@ -58,6 +58,8 @@ following:
 The part you want to upload is the content of the `.pub` file (~/.ssh/id_rsa.pub)
 
 ### Windows, using Putty to log in
+
+If you can connect using the `ssh` command within the Command Prompt (Windows 10 build version 1803 and later), please follow the Mac/Linux directions above.
 
 1. Open the `PuTTYgen` program.  You can download `PuttyGen` 
 here: [PuttyGen Download Page](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html), 
