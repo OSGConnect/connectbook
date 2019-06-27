@@ -1,151 +1,245 @@
-[title]: - "Calcuating Pi using R"
+[title]: - "Run R scripts on OSG"
 [TOC]
 
 ## Overview
-This tutorial describes how to compute the value of pi using the R statistical package on the OSG. For this example, we'll estimate the value of pi using a Monte Carlo method. We'll first run the program locally as a test.  After that we'll create a submit file, submit it to OSG using OSG Connect, and then collate results when the jobs finish.
+This tutorial describes how to run R scripts on the OSG. We'll first run the program locally as a test.  After that we'll create a submit file, submit it to OSG using OSG Connect, and look at the results when the jobs finish. Finally, we will talk about how to use custom R libraries on OSG Connect.
 
-### Background
-Some background is useful here. We define a square inscribed by a unit circle. We randomly sample points, and calculate the ratio of the points outside of the circle to the points inside for the first quadrant. This ratio approaches pi/4.
+## Run R scripts on OSG
+### Access R on the submit host
 
-> See also: http://math.fullerton.edu/mathews/n2003/montecarlopimod.html
-
-This method converges extremely slowly, which makes it great for a CPU-intensive exercise (but bad for a real estimation!).
-
-## Accessing R on the submit host
 First we'll need to create a working directory, you can either run `$ tutorial R` or type the following:
 
 	$ mkdir tutorial-R; cd tutorial-R
 
-First, we'll need to set up the system paths so we can access R correctly. This is done via OSG's [Distributed Environment Modules]. To access these modules and access R, enter:
+R is installed using modules on OSG. To load this modules and access R, enter:
 
-	$ source /cvmfs/oasis.opensciencegrid.org/osg/modules/lmod/current/init/bash
-	$ module load R
+	$ module load r/3.5.1-py2.7
 	
 
-Once we have the path set up, we can try to run R. Don't worry if you aren't an R expert, I'm not either.
+Now, we can try to run R:
 
 	$ R
-	R version 3.1.1 (2014-07-10) -- "Sock it to Me"
-	Copyright (C) 2013 The R Foundation for Statistical Computing
-	Platform: x86_64-unknown-linux-gnu (64-bit)
+	
+	R version 3.5.1 (2018-07-02) -- "Feather Spray"
+	Copyright (C) 2018 The R Foundation for Statistical Computing
+	Platform: x86_64-pc-linux-gnu (64-bit)
+
 	R is free software and comes with ABSOLUTELY NO WARRANTY.
 	You are welcome to redistribute it under certain conditions.
 	Type 'license()' or 'licence()' for distribution details.
+
 	  Natural language support but running in an English locale
+
 	R is a collaborative project with many contributors.
 	Type 'contributors()' for more information and
 	'citation()' on how to cite R or R packages in publications.
+
 	Type 'demo()' for some demos, 'help()' for on-line help, or
 	'help.start()' for an HTML browser interface to help.
 	Type 'q()' to quit R.
-		 
-	>
 
-Great! R works. You can quit out with "q()". 
+	> 
+
+Great! R works. You can quit out with `q()`. 
 
 	> q()
 	Save workspace image? [y/n/c]: n
 	$
 
-##Running R code
+### Run R code
 
-Now that we can run R, let's try using the pi estimation code. Create the file `mcpi.R`:
+Now that we can run R, let's create a small script. Create the file `hello_world.R` that contains the following:
 
-	montecarloPi <- function(trials) {
-	  count = 0
-	  for(i in 1:trials) {
-	    if((runif(1,0,1)^2 + runif(1,0,1)^2)<1) {
-	      count = count + 1
-	    }
-	  }
-	  return((count*4)/trials)
-	}
-	
-	montecarloPi(1000)
+	print("Hello World!")
 
 R normally runs as an interactive shell, but it is easy to run in batch mode too.
 
-	$ Rscript --no-save mcpi.R
-	[1] 3.141956
+	$ Rscript --no-save hello_world.R
+	[1] "Hello World!"
 
-This should take few seconds to run. Now edit the file. Increasing the trials ten times (10000000) it will take little over a minute to run, but the estimation still isn't very good. Fortunately, this problem is pleasingly parallel since we're just sampling random points. So what do we need to do to run R on the campus grid?
+Notice here that we're using Rscript (equivalent to `R CMD BATCH`) which accepts the script as command line argument. This approach makes `R` much less verbose, and it's easier to parse the output later. If you run it at the command line, you should get similar output as above.
 
-##Building the HTCondor job
-The first thing we're going to need to do is create a wrapper for our R environment, based on the setup we did in previous sections. Create the file `R-wrapper.sh`:
+### Build the HTCondor job
+
+To prepare our R job to run on OSG, we need to create a wrapper for our R environment, based on the setup we did in previous sections. Create the file `R-wrapper.sh`:
 
 	#!/bin/bash
 	 
-	EXPECTED_ARGS=1
-	 
-	if [ $# -ne $EXPECTED_ARGS ]; then
-	  echo "Usage: R-wrapper.sh file.R"
-	  exit 1
-	else
-	  source /cvmfs/oasis.opensciencegrid.org/osg/modules/lmod/current/init/bash
-	  module load R
-	  module load libgfortran
-	  Rscript $1
-	fi
+    module load r/3.5.1-py2.7
+    Rscript --no-save hello_world.R
 
-Notice here that we're using Rscript (equivalent to `R --slave`). It accepts the script as command line argument, it makes `R` much less verbose, and it's easier to parse the output later. If you run it at the command line, you should get similar output as above. This lets the wrapper launch `R` on any generic worker node under HTCondor.
+Change the permissions on the wrapper script so it is executable and then test it for correct output:
 
-	$ ./R-wrapper.sh mcpi.R
-	[1] 3.142524
+	$ chmod +x R_wrapper.sh
+	$ ./R-wrapper.sh
+	[1] "Hello World!"
 
 Now that we've created a wrapper, let's build a HTCondor submit file around it. We'll call this one `R.submit`:
 
 	universe = vanilla
-	log = mcpi.log.$(Cluster).$(Process)
-	error = mcpi.err.$(Cluster).$(Process)
-	output = mcpi.out.$(Cluster).$(Process)
-		 
-	# Setup R path, run the mcpi.R script
+	log = R.log.$(Cluster).$(Process)
+	error = R.err.$(Cluster).$(Process)
+	output = R.out.$(Cluster).$(Process)
+	 
 	executable = R-wrapper.sh
-	transfer_input_files = mcpi.R
-	arguments = mcpi.R
-		 
-	requirements = OSGVO_OS_STRING == "RHEL 6" && Arch == "X86_64" && HAS_MODULES == True
-	queue 10 
+	transfer_input_files = hello_world.R
+	 
+	requirements = OSGVO_OS_STRING == "RHEL 7" && Arch == "X86_64" && HAS_MODULES == True
+	queue 10
 
-Notice the requirements line? You'll need to put `HAS_MODULES == True` any time you need software from `/cvmfs`. There's also one small gotcha here – make sure the "log" directory used in the submit file exists before you submit! Else HTCondor will fail because it has nowhere to write the logs.
 
-##Submit and analyze
+The `R.submit` file may have included a few lines that you are unfamiliar with.  For example, `$(Cluster)` and `$(Process)` are variables that will be replaced with the job's cluster and process id.  This is useful when you have many jobs submitted in the same file.  Any output and errors will be placed in a separate file for each job.
+
+Notice the requirements line? You'll need to put `HAS_MODULES == True` any time you need software that is loaded via modules.
+
+Also, did you see the transfer_input_files line?  This tells HTCondor what files to transfer with the job to the worker node.  You don't have to tell it to transfer the executable, HTCondor is smart enough to know that the job will need that.  But any extra files, such as our R script file, will need to be explicitly listed to be transferred with the job.  You can use transfer_input_files for input data to the job, as shown in [Transferring data with HTCondor](https://github.com/OSGConnect/tutorial-htcondor_transfer).
+
+
+### Submit and analyze the output
+
 Finally, submit the job to OSG Connect!
 
 	$ condor_submit R.submit
-	Submitting job(s)....................................................................................................
-	100 job(s) submitted to cluster 14027.
+	Submitting job(s)..........
+	10 job(s) submitted to cluster 3796250.
 	$ condor_q user
 	 
-	-- Submitter: login01.osgconnect.net : <128.135.158.173:47839> : login01.osgconnect.net
-	 ID      OWNER            SUBMITTED     RUN_TIME ST PRI SIZE CMD
-	14027.0   user           8/25 22:51   0+00:00:43 R  0   0.0  R-wrapper.sh mcpi.
-	14027.1   user           8/25 22:51   0+00:00:43 R  0   0.0  R-wrapper.sh mcpi.
-	14027.2   user           8/25 22:51   0+00:00:31 R  0   0.0  R-wrapper.sh mcpi.
-	14027.4   user           8/25 22:51   0+00:00:41 R  0   0.0  R-wrapper.sh mcpi.
-	14027.5   user           8/25 22:51   0+00:00:41 R  0   0.0  R-wrapper.sh mcpi.
+	$ condor_q
+	-- Schedd: login03.osgconnect.net : <192.170.227.22:9618?... @ 05/13/19 09:51:04
+	OWNER      BATCH_NAME     SUBMITTED   DONE   RUN    IDLE  TOTAL JOB_IDS
+	user	   ID: 3796250   5/13 09:50      _      _     10     10 3796250.0-9
 	...
 
 You can follow the status of your job cluster with the `connect watch` command, which shows `condor_q` output that refreshes each 5 seconds.  Press `control-C` to stop watching.
 
-Since our jobs just output their results to standard out, we can do the final analysis from the log files. Let's see what one looks like:
+Since our jobs outputs to standard out, we can check the output files. Let's see what one looks like:
 
-	$ cat log/mcpi.out.14027.1
-	[1] 3.141246
+	$ cat R.out.3796250.1
+	[1] "Hello World!"
 
-After job completion we have 100 Monte Carlo estimates of the value of pi. Taking an average across them all should give us a closer approximation.
+## Use custom R libraries on OSG
 
-We'll use a bit of awk magic to do the averaging:
+Often we may need to add R external libraries that are not part of standard R installation. As a user, we could add the libraries in our home (or stash) directory and make the libraries available on remote machines for job executions.
 
-	$ grep "[1]" log/mcpi.out.* | awk '{sum += $2} END { print "Average =", sum/NR}'
-	Average = 3.14151
+### Build external packages for R under userspace
 
-That's pretty close! With even more sample sets — that is, more Queue jobs in the cluster — we can statistically come even closer.
+It is helpful to create a dedicated directory to install the package into. This will facilitate zipping the library so it can be transported with the job. Say, you decided to built the library in the path  `/home/username/R_libs/lubridate_R.3.5`. If it does not already exist, make the necessary directory by typing the following in your shell prompt:
 
-##What to do next?
-The `R.submit` file may have included a few lines that you are unfamiliar with.  For example, `$(Cluster)` and `$(Process)` are variables that will be replaced with the job's cluster and process id.  This is useful when you have many jobs submitted in the same file.  Each output and error file will be in a separate directory.
+    $ mkdir -p ~/R_libs/lubridate_R.3.5
 
-Also, did you notice the transfer_input_files line?  This tells HTCondor what files to transfer with the job to the worker node.  You don't have to tell it to transfer the executable, HTCondor is smart enough to know that the job will need that.  But any extra files, such as our MonteCarlo R file, will need to be explicitly listed to be transferred with the job.  You can use transfer_input_files for input data to the job, as shown in [Transferring data with HTCondor](https://github.com/OSGConnect/tutorial-htcondor_transfer).
+After defining the path, we set the `R_LIBS` environment variable so R knows to use our custom library directory:
+	
+	$ export R_LIBS=~/R_libs/lubridate_R.3.5
+	
+Now we can run R and check that our library location is being used (here the `>` is the R-prompt):
+
+    $ module load r/3.5.1-py2.7
+	$ R
+	...
+	> .libPaths()
+	[1] "/home/user/R_libs/lubridate_R.3.5"                                                                                                                      
+	[2] "/cvmfs/connect.opensciencegrid.org/modules/packages/linux-rhel7-x86_64/gcc-6.4.0spack/r-3.5.1-eoot7bzcbxp3pwf4dxlqrssdk7clylwd/rlib/R/library"
+	
+Excellent. We can see the location listed as library path `[1]`. We can also check for available libraries within R.
+
+    > library()
+
+Press `q` to close that display.
+
+If you want to install the package “XYZ”, within R do
+ 
+    > install.packages("XYZ", repos = "http://cloud.r-project.org/", dependencies = TRUE)
+
+To install `lubridate`, enter this command:
+
+	> install.packages("lubridate", repos="http://cloud.r-project.org/", dependencies=TRUE)
+
+### Install multiple packages at once
+
+If you have multiple packages to be added, it may be better to list each of the `install.packages()` commands within a separate R script and source the file to R.  For example, if we needed to install `ggplot2`, `dplyr`, and `tidyr`, we can list them to be installed in a script called `setup_packages.R` which would contain the following: 
+
+    install.packages("ggplot2", repos="http://cloud.r-project.org/", dependencies=TRUE)
+    install.packages("dplyr", repos="http://cloud.r-project.org/", dependencies = TRUE)
+    install.packages("tidyr", repos="http://cloud.r-project.org/", dependencies = TRUE)
+
+Run the setup file within R. 
+
+    > source(`setup_packages.R`) 
+
+### Prepare a tarball of the add-on packages 
+
+Proceeding with the `lubridate` package, the next step is create a tarball of the package so we can send the tarball along with the job. 
+
+Exit from the R prompt by typing:
+
+    > quit()
+
+or:
+
+    >q()
+
+In either case, be sure to say `n` when prompted to `Save workspace image? [y/n/c]:`.
+
+To tar the package directory, type the following at the shell prompt:
+
+    $ cd /home/user/R_libs
+    $ $ tar -cvzf lubridate_R.3.5.tar.gz lubridate_R.3.5
+
+Now copy the tarball to the job directory where the R program, job wrapper script and condor job description file are. 
+
+### Use the packages in your OSG job
+
+Now, let's change the `hello_world` job to use the new package. First, modify the R script `hello_world.R` by adding the following lines:
+
+	library(lubridate)
+	print(today())
+	
+This will add a print out of the local date to the output of the job. 
+
+### Define the libPaths() in the wrapper script
+
+R library locations are set upon launch and can be modified using the `R_LIBS` environmental variable. To set this correctly, we need to modify the wrapper script. Change the file `R-wrapper.sh` so it matches the following:
+
+	#!/bin/bash
+
+	module load r/3.5.1-py2.7
+	
+	# Uncompress the tarball
+	tar -xzf lubridate_R.3.5.tar.gz
+	
+	# Set the library location
+	R_LIBS="$PWD/lubridate_R.3.5"
+	
+	# run the R program
+	Rscript --no-save hello_world.R
+
+Next, we need to modify the submit script so that the package tarball is transferred correctly with the job. Change the submit script `R.submit` so that `transfer_input_files` and `arguments` are set correctly. Here's what the completed file should look like:
+
+	universe = vanilla
+	log = R.log.$(Cluster).$(Process)
+	error = R.err.$(Cluster).$(Process)
+	output = R.out.$(Cluster).$(Process)
+
+	executable = R-wrapper.sh
+	transfer_input_files = lubridate_R.3.5.tar.gz, hello_world.R
+
+	requirements = OSGVO_OS_STRING == "RHEL 7" && Arch == "X86_64" && HAS_MODULES == True
+	queue 10 
+
+### Job submission and output
+Now we are ready to submit the job:
+
+    $ condor_submit R.submit
+
+and check the job status:
+
+    $ condor_q username
+
+Once the job finished running, check the output files as before. They should now look like this:
+
+	$ cat R.out.3796676.1
+	[1] "2019-05-13"
+	[1] "Hello World!"
 
 ## Getting Help
 For assistance or questions, please email the OSG User Support team  at <mailto:support@osgconnect.net> or visit the [help desk and community forums](http://support.opensciencegrid.org).
