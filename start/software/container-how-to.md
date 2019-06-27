@@ -71,7 +71,10 @@ or
 	    make && \
 	    make install
 
-You can have multiple `RUN` commands for multiple installation steps.  
+Typically it's good to group together commands installing the same kind of thing 
+(system libraries, or software packages, or an installation process) under one `RUN` command, 
+and then have multiple `RUN` commands, one for each of the different type of 
+software or package you're installing. 
 
 (For all the possible Dockerfile keywords, see the [Docker Documentation](https://docs.docker.com/engine/reference/builder/))
 
@@ -113,14 +116,12 @@ Once you have installed all the software, you simply `exit`
 
     [root@740b9db736a1 /]# exit
 
-Now you can commit the changes to the image: 
+Now you can commit the changes to the image and give it a name: 
 
-    docker commit <docker_session_name_here>
+    docker commit <docker_session_name_here> namespace/repository_name
 
-Alternatively, you can use the sessions hash (`740b9db736a1` in the above example).
-Then you make a tag for your desired `namespace/repository_name`:
-
-    docker tag opensciencegrid/osgvo-ubuntu-xenial namespace/repository_name
+You can also use the session's hash as found in the command prompt (`740b9db736a1` 
+in the above example) in place of the docker session name. 
 
 ## Upload Docker Container to Docker Hub
 

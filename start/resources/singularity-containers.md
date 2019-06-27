@@ -92,7 +92,8 @@ and we can help you.
 Once your submission has been accepted, it will be automatically converted to a Singularity 
 image and pushed to the CVMFS Singularity repository.  Note: some 
 common Dockerfile features, like ENV and ENTRYPOINT, are ignored when the Docker 
-image is converted to a Singularity image. See our [how to guide]() for more details 
+image is converted to a Singularity image. See our the "Special Cases" section of our 
+[how to guide][container-howto] for more details 
 of how to deal with this. 
 
 Once your container has been added to CVMFS, 
@@ -128,7 +129,7 @@ For example, if my Docker Hub username was `alice` and I created a container cal
 
 ### I already have a Singularity container, not a Docker one
 
-?
+Email the OSG Connect team: support@osgconnect.net
 
 ### FATAL: kernel too old
 
