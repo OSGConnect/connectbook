@@ -27,7 +27,7 @@ public key to OSG Connect, but you also need to keep a copy of the private key t
 You should keep the private key on machines that you have 
 direct access to, i.e. your local computer (your laptop or desktop).
 
-### Unix-based operating system (Linux/Mac)
+### Unix-based operating system (Linux/Mac) or Windows 10
 
 On your local computer:
 
