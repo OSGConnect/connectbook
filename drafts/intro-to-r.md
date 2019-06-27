@@ -112,7 +112,7 @@ Finally, submit the job to OSG Connect!
 
 You can follow the status of your job cluster with the `connect watch` command, which shows `condor_q` output that refreshes each 5 seconds.  Press `control-C` to stop watching.
 
-Since our jobs outputs to standard out, we can check the output files. Let's see what one looks like:
+Since our jobs prints to standard out, we can check the output files. Let's see what one looks like:
 
 	$ cat R.out.3796250.1
 	[1] "Hello World!"
