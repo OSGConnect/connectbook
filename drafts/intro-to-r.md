@@ -83,6 +83,10 @@ Now that we've created a wrapper, let's build a HTCondor submit file around it. 
 	 
 	executable = R-wrapper.sh
 	transfer_input_files = hello_world.R
+	
+	request_cpus = 1
+	request_memory = 1GB
+	request_disk = 1GB
 	 
 	requirements = OSGVO_OS_STRING == "RHEL 7" && Arch == "X86_64" && HAS_MODULES == True
 	queue 1
@@ -222,6 +226,10 @@ Next, we need to modify the submit script so that the package tarball is transfe
 
 	executable = R-wrapper.sh
 	transfer_input_files = lubridate_R.3.5.tar.gz, hello_world.R
+	
+	request_cpus = 1
+	request_memory = 1GB
+	request_disk = 1GB
 
 	requirements = OSGVO_OS_STRING == "RHEL 7" && Arch == "X86_64" && HAS_MODULES == True
 	queue 10 
@@ -237,7 +245,7 @@ and check the job status:
 
 Once the job finished running, check the output files as before. They should now look like this:
 
-	$ cat R.out.3796676.1
+	$ cat R.out.3796676.0
 	[1] "2019-05-13"
 	[1] "Hello World!"
 
