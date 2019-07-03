@@ -5,8 +5,7 @@ OSG Connect tutorials on Github
 
 All of the OSG Connect examples are available on
 [Github](<https://github.com/OSGConnect/>).  These
-tutorials are tested regularly and should just work. If you find a problem,
-please send a report to [support@osgconnect.net](mailto:support@osgconnect.net).
+tutorials are tested regularly and should just work. 
 
 Tutorial commands
 -----------------
