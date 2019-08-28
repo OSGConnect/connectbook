@@ -1,37 +1,34 @@
-[title]: - "Is High Throughput Computing for You?"
+[title]: - "Is the Open Science Grid for You?"
 
 
-## Ideal Charateristics for Distributed High Throughput Computing (HTC)
-
--   Your science workflow can be split into independent jobs.
--   These jobs can be run on a single processor or compute node.
--   Your application software is “portable”. (We can help make applications portable and also provide pre-installed software modules)
+The [Open Science Grid][osg] is a national network that offers a strategic advantage 
+for computing work that can be run as numerous short tasks. 
 
 
+|   		| **Ideal jobs!**| **Still very advantageous** | **Less-so, but maybe** | 
+|:----------|:--------------|:--------------|:--------------|
+| CPU		|	1			|	<8			|	>8 (or MPI)	|
+| Walltime	| 	<12 hrs		|	<24 hrs		|	>24 hrs		|
+| RAM		| 	< few GB	|	<10s GB		|	>10s GB		|
+| Input		| 	<500 MB		|	<10 GB		|	>10 GB		|
+| Output	| 	< 1GB		|	<10 GB		|	>10 GB		|
+| Software	| pre-compiled binaries, containers | Most other than -> | Licensed software, non-Linux |
 
-## Challenges to Distributed HTC
+For problems that can be run as many independent jobs, as in the first two columns 
+of the table above, the OSG provides practically-unlimited resources, with the possibility 
+of having hundreds or even thousands of computer cores in use at once. Access 
+to this amount of computing capacity can transform the types of questions that researchers 
+are able to tackle. 
 
-Your application may present additional challenges, but many of these have solutions on the OSG:
+Some examples of work that have been a good fit for the OSG and benefited from 
+using its resources include: 
 
--   Computations that access or produce large datasets. 
--   Your computations need small scale parallelism:
-    -   OSG has sites that offer queues with job slots having up to 32 cores.
--   Your application requires large amounts of memory:
-    -   Most computing sites provide 2 GB/core, however some offer up to 4.5 GB/core, and requests for multi-core queues therefore come with additional memory/job.
-    
+- MRI image analysis
+- DNA read mapping
+- parameter sweeps
+- Monte Carlo methods
 
-## Applications Poorly Suited to Distributed HTC
+Learn more by requesting an account here: [OSG Connect Sign-Up][account-request]
 
-Unfortunately high throughput computing is probably not a good fit for your job if:
-
--   You need results immediately after submission (i.e. an interactive environment).
-    -   Distributed HTC resources are accessed through a batch system and therefore suited for longer processing times, with job durations typically measured in hours. 
--   Your application needs large numbers of cores simultaneously.
-    -   OSG does not schedule MPI jobs. 
--   Your application requires a shared filesystem. 
-    - There is no shared filesystem across the many computing sites of the OSG. We can help assess if your app has this constraint, and if it can be practically removed.
-
-&nbsp;
-
-As usual, you can direct any questions using the help desk or by sending email 
-to [support@osgconnect.net](mailto:support@opensciencegrid.org).
+[osg]: https://opensciencegrid.org/
+[account-request]: https://osgconnect.net/signup
