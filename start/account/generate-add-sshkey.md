@@ -82,7 +82,7 @@ can use a key without a passphrase, but this is not recommended.
 
 7. Right-click again in the same text field and choose Copy.
 
-![alt text](https://raw.githubusercontent.com/OSGConnect/connectbook/master/images/puttygen_ssh_key.png "PuttyGen SSH Window")
+![alt text](https://raw.githubusercontent.com/OSGConnect/connectbook/master/images/puttygen_ssh_key.png "PuttyGen Window")
 
 ## Step 2: Add the public SSH key to login node
 
@@ -107,20 +107,35 @@ be added to the login nodes within a couple hours.
 
 ## Logging In
 
-Once your key is uploaded and it's been a few hours, you should be able to log in to OSG Connect. 
+After following the steps above to upload your key and it's been a few hours, you should be able to log in to OSG Connect. 
 
-If you have a Mac, Linux, or newer versions of Windows, you 
-can log in using the `ssh` command on the command line.  To do this, open a terminal 
-and type in: 
+### For Mac, Linux, or newer versions of Windows
+
+Open a terminal and type in: 
 
     ssh <your_osg_connect_username>@login.osgconnect.net
 
 It will ask for the passphrase for your ssh key (if you set one) and then you 
 should be logged in. 
 
+### For older versions of Windows
+
 On older versions of Windows, you can use the [Putty program](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) to log in. 
-Type "login.osgconnect.net" as the hostname, then click "Open" and provide your Globus 
-ID and passphrase when prompted to do so.
+
+1. Open the `PutTTY` program. If necessary, you can download PuTTY from the website here [PuTTY download page](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html).
+
+2. Type "login.osgconnect.net" as the hostname.
+
+3. In the left hand menu, click the "+" next to "SSH" to expand the menu.
+
+4. Click "Auth" in the "SSH" menu.
+
+5. Click "Browse" and specify the private key file you saved in step 5 above.
+
+6. Click "Open" and provide your Globus ID (do not include @globusid.org) and passphrase when prompted to do so.
+
+![alt text](https://raw.githubusercontent.com/OSGConnect/connectbook/master/images/putty_ssh.png "PuPTTYen SSH Window")
+
 
 ## Getting Help 
 
