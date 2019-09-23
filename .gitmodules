@@ -118,3 +118,6 @@
 [submodule "tutorials/tutorial-osg-locations"]
 	path = tutorials/tutorial-osg-locations
 	url = https://github.com/OSGConnect/tutorial-osg-locations
+[submodule "tutorials/tutorial-ScalingUp-Python"]
+	path = tutorials/tutorial-ScalingUp-Python
+	url = https://github.com/OSGConnect/tutorial-ScalingUp-Python
