@@ -36,7 +36,5 @@ using its resources include:
 
 Learn more by requesting an account here: [OSG Connect Sign-Up][account-request]
 
-Test
-
 [osg]: https://opensciencegrid.org/
 [account-request]: https://osgconnect.net/signup
