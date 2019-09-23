@@ -85,6 +85,7 @@
 [stash-namd]: tutorials/tutorial-stash-namd/README.md
 [swift]: tutorials/tutorial-swift/README.md
 [vina-autodock]: tutorials/tutorial-VinaAutodock/README.md
+[locations]: tutorials/tutorial-osg-locations/README.md
 
 [DAGMan]: needed
 [Pegasus]: needed
