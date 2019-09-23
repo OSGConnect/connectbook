@@ -121,3 +121,6 @@
 [submodule "tutorials/tutorial-ScalingUp-Python"]
 	path = tutorials/tutorial-ScalingUp-Python
 	url = https://github.com/OSGConnect/tutorial-ScalingUp-Python
+[submodule "tutorials/tutorial-blast-split"]
+	path = tutorials/tutorial-blast-split
+	url = https://github.com/OSGConnect/tutorial-blast-split
