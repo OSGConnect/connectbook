@@ -26,6 +26,10 @@ integrated identity service, it also enables you to begin performing data
 transfers to OSG Connect very early on, with a minimal fuss, using Globus 
 transfer.
 
+**Note: You sill need to register using a GlobusID (@globusid.org) not your institutional login. You can 
+link your institutional account to the GlobusID if desired, but your OSG Connect application 
+cannot be processed without a GlobusID login.**
+
 <!-- ### InCommon Registration
 
 The default first step is to sign in using an InCommon ID through the CILogon
