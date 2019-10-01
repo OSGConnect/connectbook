@@ -104,13 +104,11 @@ This set of requirements will run your jobs on RHEL6 and RHEL7 nodes so your job
 ## Using Modules Outside of OSG Connect
 
 In order to use distributed environment modules outside of jobs submitted from OSG Connect, you'll need to load the modules code manually from OASIS (the repository where the modules are stored).  You can do this by 
-putting the following command into your job's executable script *before* loading the 
-modules.  
+putting the following command into your job's executable script *before* loading the modules.  
 
 	
-	$ source /cvmfs/connect.opensciencegrid.org/modules/lmod/init/SHELL
+	$ . /cvmfs/oasis.opensciencegrid.org/osg/sw/module-init.sh
 	
-where SHELL is the shell that you are using (this is usually bash). 
 
 ## Available Software
 
