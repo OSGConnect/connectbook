@@ -2,14 +2,12 @@
 
 ## Overview
 
-OSG Connect users have four different storage options available for their use: `home`, `local-scratch`, `stash`. `public`. Each storage offers certain advantages to the users. On the submit node (login.osgconnect.net), the storages are in the following locations,
+OSG Connect users have two different storage options available for their use: `home`, and `public`. Each storage offers certain advantages to the users. On the submit node (login.osgconnect.net), the storages are in the following locations,
 
     home: /home/username
-    local-scratch: /local-scratch/username
-    stash: /home/username/stash (or) /stash/user/username
-    public: /home/username/public (or) /stash/user/username/public
+    public: /public/username
 
-Here, the `username` is your login name.. For convenience, the stash and public directories are accessed from home.
+Here, the `username` is your login name.
 
 ## Storage options quick reference
 
@@ -17,10 +15,8 @@ Here, the `username` is your login name.. For convenience, the stash and public 
 
 |   | **Default Limit**| **Purpose** | **Network mounted** | **Backed Up** | **Quota** | **Purge** |
 |:------- |:----------------:|:------|:------:|:------:|:------:|:------:|:----------|
-| **home**    |  < 20 GB      | Meant for storage of key files such as configuration files and source code. Not designed for job input and output.| Yes | Yes | 20 GB | No |
-| **local-scratch**   |  < 25 GB      | Meant for large temporary storage and input and output for your jobs. Files older than 30 days are automatically removed. | No | No | No | Yes, 30 days |
-| **stash**   |  < 200 GB      | Meant for large storage and input and output for your jobs. | Yes | No | No | No |
-| **public**  |  < 10 GB    | Meant for sharing data and transfer input data via HTTP or job input and output via staschcp | Yes | No | No | No |
+| **home**    |  50 GB     | Meant for storage of key files such as configuration files and source code. Not designed for job input and output.| No | Yes | 50 GB | No |
+| **public**  |  500 GB    | Meant for sharing data and transfer input data via HTTP or job input and output via staschcp | Yes | No | 500 GB | No |
 
 
 ### Transferring input data for a job
@@ -30,7 +26,7 @@ Here, the `username` is your login name.. For convenience, the stash and public 
 | **HTCondor**    | < 100 MB  | transfer_input_files | Input data from home, public or stash |[HTCondor Transfer](https://support.opensciencegrid.org/support/solutions/articles/5000639787)|
 | **HTTP**        |  < 1 GB   | wget, curl or rsync  | Input data from ~/public |[HTTP Access](https://support.opensciencegrid.org/support/solutions/articles/5000639798)|
 | **StashCache**  |  > 1 GB, < 50 GB    | stashcp |Input data from ~/public| [StashCache](https://support.opensciencegrid.org/support/solutions/articles/12000002775)|
-| **GridFTP**  |  > 1 GB, < 50 GB    | gfal-copy |Input data from ~/stash| Experts with large work flows. Please contact us if you want to use this.|
+| **GridFTP**  |  > 1 GB    | gfal-copy |Input data from ~/stash| Experts with large work flows. Please contact us if you want to use this.|
 
 
 
