@@ -1,9 +1,5 @@
 [title]: - "Registration and Login for OSG Connect"
 
-## THIS IS A DRAFT OF DOCUMENTATION WHICH WILL GO LIVE IN JAN 2020
-
-**The current version of this can be found [here](https://support.opensciencegrid.org/support/solutions/articles/5000632072-registration-and-login-for-osg-connect)**
-
 ## Registration and Login for OSG Connect
 
 (An [abbreviated version of these signup
