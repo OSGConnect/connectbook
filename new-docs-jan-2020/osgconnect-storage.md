@@ -2,14 +2,14 @@
 
 ## Overview
 
-OSG Connect users have two different storage options available for their use: `home`, and `public`. Each storage offers certain advantages to the users. On the submit node (login.osgconnect.net), the storages are in the following locations,
+OSG Connect users are responsible for managing data in their user directories within `home` (general job files), and `public` (large job files) locations. 
 
     home: /home/<username>
     public: /public/<username>
 
-Here, the `username` is your login name.
+Each is controlled with initial quotas and should be treated as temporary storage for _active_ job execution. OSG Connect has no routine backup of data in these locations, and users should remove old data after jobs complete, in part, to make room for future submissions. *If you think you'll need more space for concurrently running jobs, please send a request to support@osgconnect.net.*
 
-## Storage options quick reference
+## Storage and Transfer of Data for Jobs
 
 ### Data storage options
 
@@ -18,7 +18,7 @@ Here, the `username` is your login name.
 | **home**    |  50 GB     | Storage of submit files, input files <100MB each, and per-job output up to a 1GB.| No | No | 50 GB | No |
 | **public**  |  500 GB    | Staging large input files (100MB-50GB, each) for publicly-accessible download into jobs (using HTTP or stashcp, see below) and large output files (1-10GB) | Yes | No | 500 GB | No |
 
-###*Contact support@osgconnect.net if you'd think you need a quota increase! We can suppport very large amounts of data, and quotas are a starting point.*
+###*/*Contact support@osgconnect.net if you think you need a quota increase! We can suppport very large amounts of data, and quotas are a starting point.*
 
 
 ### Transferring input data for a job
@@ -36,7 +36,7 @@ Here, the `username` is your login name.
 
 |         | **Recommended File Sizes**| **Command** | **Purpose** | **Details**|
 |:---------|:------:|:-----|:----------|:------|
-| **HTCondor**    | < 1 GB  | HTCondor default output transfer (or transfer_output_files) | General-use transfer of job output data into to the submission directory (in /home). |[HTCondor Transfer](https://support.opensciencegrid.org/support/solutions/articles/5000639787)|
+| **HTCondor**    | < 1 GB  | HTCondor default output transfer (or `transfer_output_files`) | General-use transfer of job output data into to the submission directory (in /home). |[HTCondor Transfer](https://support.opensciencegrid.org/support/solutions/articles/5000639787)|
 | **StashCache**        |  < 10 GB   | stashcp | Transfer large output into /public|  [StashCache](https://support.opensciencegrid.org/support/solutions/articles/12000002775) |
 | **GridFTP or UNIX tools**        |  < 50 GB   | gfal-copy, rsync, scp, etc. | Typically used by experts with large work flows. Please contact us if you want to use this.|
 
