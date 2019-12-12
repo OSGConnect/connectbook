@@ -32,7 +32,7 @@ Files placed in the '~public' directory are publicly accessible on the web via `
 
 **All jobs should be submitted from within `/home`, and NOT from within `/public`.** Contact [support@osgconnect.net] if you think you'll need a quota increase for a set of concurrently-running jobs. Given that users should not be storing long-term data (like submit files, software, etc.) in `/public/`, **files and directories that have not been accessed for over six months may be deleted by OSG Connect staff with or without notifying the user.**
 
-## Delivering Data to/from Jobs
+## Transferring Data to/from Jobs
 ### Transferring input data to jobs
 
 |         | **Recommended Files Sizes**| **Command** | **Purpose** | **Details**|
