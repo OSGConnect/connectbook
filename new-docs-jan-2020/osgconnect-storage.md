@@ -16,7 +16,7 @@ Each is controlled with initial quotas and should be treated as temporary storag
 ### Data Locations
 
 |   | **Default Limit**| **Purpose** | **Network mounted** | **Backed Up** | **Initial Quota\*** |
-|:--------:|:----------------|:------|:------:|:------:|:------:|:------:|:----------|
+|:--------:|:----------------|:------|:------:|:------:|:------:|
 |  **home**  | 50 GB | Storage of submit files, input files <100MB each, and per-job output up to a 1GB.| No | No | 50 GB |
 |  **public**  | 500 GB | Staging large input files (100MB-50GB, each) for publicly-accessible download into jobs (using HTTP or stashcp, see below) and large output files (1-10GB) | Yes | No | 500 GB |
 
