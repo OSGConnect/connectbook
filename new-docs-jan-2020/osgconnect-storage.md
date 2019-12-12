@@ -48,7 +48,7 @@ Files placed in the '~public' directory are publicly accessible on the web via `
 |         | **Recommended File Sizes**| **Command** | **Purpose** | **Details**|
 |:---------|:------:|:-----|:----------|:------|
 | **HTCondor**    | < 1 GB  | HTCondor default output transfer (or `transfer_output_files`) | General-use transfer of job output data back to the submission directory (in `/home`). |[HTCondor Transfer](https://support.opensciencegrid.org/support/solutions/articles/5000639787)|
-| **StashCache**        |  < 10 GB   | stashcp | Transfer large output into `/public`|  [StashCache](https://support.opensciencegrid.org/support/solutions/articles/12000002775) |
+| **StashCache**        |  < 10 GB   | `stashcp` | Transfer large output into `/public`|  [StashCache](https://support.opensciencegrid.org/support/solutions/articles/12000002775) |
 | **GridFTP or UNIX tools**        |  < 50 GB   | `gfal-copy`, `rsync`, `scp`, etc. | Typically used by experts with large work flows. Please contact us if you want to use this.|
 
 
@@ -56,7 +56,7 @@ Files placed in the '~public' directory are publicly accessible on the web via `
 
 |  | **Data Size**| **Tools** |**Details**|
 |:------------|:-------:|:------|:------| 
-|**UNIX tools** | < 1 GB | `rsync`, `scp`, Putty, WinSCP, 'gFTP', etc.  |[SCP](https://support.opensciencegrid.org/support/solutions/articles/5000634376) |
+|**UNIX tools** | < 1 GB | `rsync`, `scp`, Putty, WinSCP, `gFTP`, etc.  |[SCP](https://support.opensciencegrid.org/support/solutions/articles/5000634376) |
 |**Globus** |  > 1 GB  | globus webservice or globus CLI | [Globus](https://support.opensciencegrid.org/support/solutions/articles/5000632397) |
 
 
