@@ -17,8 +17,8 @@ Each is controlled with initial quotas and should be treated as temporary storag
 
 |   | **Default Limit**| **Purpose** | **Network mounted** | **Backed Up** | **Initial Quota\*** |
 |:-------- |:----------------:|:------|:------:|:------:|:------:|:------:|:----------|
-| **home**    |  50 GB     | Storage of submit files, input files <100MB each, and per-job output up to a 1GB.| No | No | 50 GB | No |
-| **public**  |  500 GB    | Staging large input files (100MB-50GB, each) for publicly-accessible download into jobs (using HTTP or stashcp, see below) and large output files (1-10GB) | Yes | No | 500 GB | Occasional |
+|  **home**  | 50 GB | Storage of submit files, input files <100MB each, and per-job output up to a 1GB.| No | No | 50 GB | No |
+|  **public**  | 500 GB | Staging large input files (100MB-50GB, each) for publicly-accessible download into jobs (using HTTP or stashcp, see below) and large output files (1-10GB) | Yes | No | 500 GB | Occasional |
 
 ### \*Contact [support@osgconnect.net](mailto:support@osgconnect.net) if you think you need a quota increase! We can suppport very large amounts of data, and quotas are a starting point.
 
@@ -36,7 +36,7 @@ Files placed within a user's '/public' directory are publicly accessible on the 
 ### Transferring input data to jobs
 
 |         | **Recommended Files Sizes**| **Command** | **Purpose** | **Details**|
-|:--------|:------:|:-----|:----------|:------|
+|:--------:|:------|:-----|:----------|:------|
 | **HTCondor File Transfer** | < 100 MB input, <1GB output  | `transfer_input_files` | General-use transfer of job input from within `/home`. |[HTCondor File Transfer](https://support.opensciencegrid.org/support/solutions/articles/5000639787)|
 | **HTTP** |  < 1 GB   | `wget`, `curl`, or `rsync`  | For large input files from within `/public`. |[HTTP Access](https://support.opensciencegrid.org/support/solutions/articles/5000639798)|
 | **OSG's StashCache** |  > 1 GB, < 50 GB    | `stashcp` | for large input files from within `/public`| [StashCache](https://support.opensciencegrid.org/support/solutions/articles/12000002775)|
