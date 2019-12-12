@@ -2,7 +2,7 @@
 
 ## Overview
 
-OSG Connect users are responsible for managing data in their user directories within `home` (general job files), and `public` (large job files) locations and for using appropriate mechanisms for delivering data to/from jobs. User-accessible storage locations supported by OSG Connect (and accessible from the login nodes) include:
+OSG Connect users are responsible for managing data in their user directories within `home` and `public` locations and for using appropriate mechanisms for delivering data to/from jobs. These user-accessible storage locations supported by OSG Connect (and accessible from the login nodes) include:
 
     home: /home/<username>
     public: /public/<username>
@@ -16,9 +16,9 @@ Each is controlled with initial quotas and should be treated as temporary storag
 ### Data Locations
 
 |   | **Default Limit**| **Purpose** | **Network mounted** | **Backed Up** | **Initial Quota\*** |
-|:-------- |:----------------:|:------|:------:|:------:|:------:|:------:|:----------|
-|  **home**  | 50 GB | Storage of submit files, input files <100MB each, and per-job output up to a 1GB.| No | No | 50 GB | No |
-|  **public**  | 500 GB | Staging large input files (100MB-50GB, each) for publicly-accessible download into jobs (using HTTP or stashcp, see below) and large output files (1-10GB) | Yes | No | 500 GB | Occasional |
+|:--------:|:----------------|:------|:------:|:------:|:------:|:------:|:----------|
+|  **home**  | 50 GB | Storage of submit files, input files <100MB each, and per-job output up to a 1GB.| No | No | 50 GB |
+|  **public**  | 500 GB | Staging large input files (100MB-50GB, each) for publicly-accessible download into jobs (using HTTP or stashcp, see below) and large output files (1-10GB) | Yes | No | 500 GB |
 
 ### \*Contact [support@osgconnect.net](mailto:support@osgconnect.net) if you think you need a quota increase! We can suppport very large amounts of data, and quotas are a starting point.
 
