@@ -18,7 +18,7 @@ Here, the `username` is your login name.
 | **home**    |  50 GB     | Storage of submit files, input files <100MB each, and per-job output up to a 1GB.| No | No | 50 GB | No |
 | **public**  |  500 GB    | Staging large input files (100MB-50GB, each) for publicly-accessible download into jobs (using HTTP or stashcp, see below) and large output files (1-10GB) | Yes | No | 500 GB | No |
 
-####*Contact support@osgconnect.net if you'd think you need a quota increase! We can suppport very large amounts of data, and quotas are a starting point.*
+###*Contact support@osgconnect.net if you'd think you need a quota increase! We can suppport very large amounts of data, and quotas are a starting point.*
 
 
 ### Transferring input data for a job
