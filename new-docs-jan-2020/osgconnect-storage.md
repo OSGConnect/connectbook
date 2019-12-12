@@ -2,7 +2,7 @@
 
 ## Overview
 
-OSG Connect users are responsible for managing data in their user directories within `home` (general job files), and `public` (large job files) locations. 
+OSG Connect users are responsible for managing data in their user directories within `home` (general job files), and `public` (large job files) locations and for using appropriate mechanisms for delivering data to/from jobs. User-accessible storage locations supported by OSG Connect (and accessible from the login nodes) include:
 
     home: /home/<username>
     public: /public/<username>
@@ -11,9 +11,9 @@ Each is controlled with initial quotas and should be treated as temporary storag
 
 **Note: OSG Connect staff reserve the right to remove data without notice to the user IF doing so is necessary to quickly fix a performance issue.**
 
-## Storage and Transfer of Data for Jobs
+## Storage of Data for Jobs
 
-### Data storage options
+### Data Locations
 
 |   | **Default Limit**| **Purpose** | **Network mounted** | **Backed Up** | **Initial Quota\*** |
 |:-------- |:----------------:|:------|:------:|:------:|:------:|:------:|:----------|
@@ -22,8 +22,18 @@ Each is controlled with initial quotas and should be treated as temporary storag
 
 ###*/*Contact [support@osgconnect.net] if you think you need a quota increase! We can suppport very large amounts of data, and quotas are a starting point.*
 
+### home
+User directories within `/home` are meant for general-use storage of various files necessary for job submission. The initial disk quota on home is 50 GBs. When a user exceeds his quota, the system will send email notifications. If the notice is disregarded, eventually the user and their jobs will be unable to write to `/home`.
 
-### Transferring input data for a job
+**All jobs should be submitted from within `/home`, and NOT from within `/public`. Contact [support@osgconnect.net] if you think you'll need a quota increase for a set of concurrently-running jobs.**
+
+### public
+Files placed in the '~public' directory are publicly accessible via WWW as `http://stash.osgconnect.net/+username`. The data on `~/public` is accessible to jobs on remote worker machines via command-line download tools. Using the HTTP protocol (through `wget` or `curl`) is ideal for files less than 1 GB in size. Larger files will need to be accessed by jobs, using the `stashcp` command. The `/public` location is a distributed shared filesystem mounted on all our submit nodes, and is therefore slower than `/home`. If you are transfering a large amount of data to or from `/public`, please use the Globus transfer service.  For more details check the articles on [data transfer techniques](https://opensciencegrid.freshdesk.com/a/solutions/folders/12000013267).  
+
+**All jobs should be submitted from within `/home`, and NOT from within `/public`. Contact [support@osgconnect.net] if you think you'll need a quota increase for a set of concurrently-running jobs. Given that users should not be storing long-term data (like submit files, software, etc.) in `/public/`, files and directories that have not been accessed for over six months may be deleted by OSG Connect staff with or without notifying the user.**
+
+## Delivering Data to/from Jobs
+### Transferring input data to jobs
 
 |         | **Recommended Files Sizes**| **Command** | **Purpose** | **Details**|
 |:--------|:------:|:-----|:----------|:------|
@@ -33,7 +43,7 @@ Each is controlled with initial quotas and should be treated as temporary storag
 | **GridFTP** |  > 1 GB    | `gfal-copy` | input staged in /public | Typically used by experts with large work flows. Please contact us if you're interested. |
 
 
-### Transferring output data for a job
+### Transferring output data from jobs
 
 |         | **Recommended File Sizes**| **Command** | **Purpose** | **Details**|
 |:---------|:------:|:-----|:----------|:------|
@@ -48,18 +58,6 @@ Each is controlled with initial quotas and should be treated as temporary storag
 |:------------|:-------:|:------|:------| 
 |**UNIX tools** | < 1 GB | `rsync`, `scp`, Putty, WinSCP, 'gFTP', etc.  |[SCP](https://support.opensciencegrid.org/support/solutions/articles/5000634376) |
 |**Globus** |  > 1 GB  | globus webservice or globus CLI | [Globus](https://support.opensciencegrid.org/support/solutions/articles/5000632397) |
-
-
-## Storage options
-### home
-User directories within `/home` are meant for general-use storage of various files necessary for job submission. The initial disk quota on home is 50 GBs. When a user exceeds his quota, the system will send email notifications. If the notice is disregarded, eventually the user and their jobs will be unable to write to `/home`.
-
-**All jobs should be submitted from within `/home`, and NOT from within `/public`. Contact [support@osgconnect.net] if you think you'll need a quota increase for a set of concurrently-running jobs.**
-
-### public
-Files placed in the '~public' directory are publicly accessible via WWW as `http://stash.osgconnect.net/+username`. The data on `~/public` is accessible to jobs on remote worker machines via command-line download tools. Using the HTTP protocol (through `wget` or `curl`) is ideal for files less than 1 GB in size. Larger files will need to be accessed by jobs, using the `stashcp` command. The `/public` location is a distributed shared filesystem mounted on all our submit nodes, and is therefore slower than `/home`. If you are transfering a large amount of data to or from `/public`, please use the Globus transfer service.  For more details check the articles on [data transfer techniques](https://opensciencegrid.freshdesk.com/a/solutions/folders/12000013267).  
-
-**All jobs should be submitted from within `/home`, and NOT from within `/public`. Contact [support@osgconnect.net] if you think you'll need a quota increase for a set of concurrently-running jobs. Given that users should not be storing long-term data (like submit files, software, etc.) in `/public/`, files and directories that have not been accessed for over six months may be deleted by OSG Connect staff with or without notifying the user.**
 
 
 ## Get Help
