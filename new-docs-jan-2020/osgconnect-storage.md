@@ -18,7 +18,7 @@ Each is controlled with initial quotas and should be treated as temporary storag
 |   | **Default Limit**| **Purpose** | **Network mounted** | **Backed Up** | **Initial Quota\*** |
 |:-------- |:----------------:|:------|:------:|:------:|:------:|:------:|:----------|
 | **home**    |  50 GB     | Storage of submit files, input files <100MB each, and per-job output up to a 1GB.| No | No | 50 GB | No |
-| **public**  |  500 GB    | Staging large input files (100MB-50GB, each) for publicly-accessible download into jobs (using HTTP or stashcp, see below) and large output files (1-10GB) | Yes | No | 500 GB |  |
+| **public**  |  500 GB    | Staging large input files (100MB-50GB, each) for publicly-accessible download into jobs (using HTTP or stashcp, see below) and large output files (1-10GB) | Yes | No | 500 GB | Occasional |
 
 ### \*Contact [support@osgconnect.net](mailto:support@osgconnect.net) if you think you need a quota increase! We can suppport very large amounts of data, and quotas are a starting point.
 
@@ -28,7 +28,7 @@ User directories within `/home` are meant for general-use storage of various fil
 **All jobs should be submitted from within `/home`, and NOT from within `/public`. Contact [support@osgconnect.net](mailto:support@osgconnect.net) if you think you'll need a quota increase for a set of concurrently-running jobs.**
 
 ### public
-Files placed in the '~public' directory are publicly accessible on the web via `http://stash.osgconnect.net/+username` and can be accessed by jobs running on remote worker machines via command-line download tools. Using the HTTP protocol (through `wget` or `curl`) is ideal for files less than 1 GB in size. Larger files will need to be accessed using the `stashcp` command. The `/public` location is a distributed shared filesystem mounted on all our submit nodes, and is therefore slower than `/home`. If you are transfering a large amount of data to or from `/public`, please use the Globus transfer service.  For more details check the articles on [data transfer techniques](https://opensciencegrid.freshdesk.com/a/solutions/folders/12000013267).  
+Files placed within a user's '/public' directory are publicly accessible on the web via `http://stash.osgconnect.net/+<username>` and can be accessed by jobs running on remote worker machines via command-line download tools. Using the HTTP protocol (through `wget` or `curl`) is ideal for files less than 1 GB in size. Larger files will need to be accessed using the `stashcp` command. The `/public` location is a distributed shared filesystem mounted on all our submit nodes, and is therefore slower than `/home`. If you are transfering a large amount of data to or from `/public`, please use the Globus transfer service.  For more details check the articles on [data transfer techniques](https://opensciencegrid.freshdesk.com/a/solutions/folders/12000013267).  
 
 **All jobs should be submitted from within `/home`, and NOT from within `/public`. Contact [support@osgconnect.net](mailto:support@osgconnect.net) if you think you'll need a quota increase for a set of concurrently-running jobs. Given that users should not be storing long-term data (like submit files, software, etc.) in `/public/`, files and directories that have not been accessed for over six months may be deleted by OSG Connect staff with or without notifying the user.**
 
