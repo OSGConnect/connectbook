@@ -7,67 +7,62 @@ OSG Connect users are responsible for managing data in their user directories wi
     home: /home/<username>
     public: /public/<username>
 
-Each is controlled with initial quotas and should be treated as temporary storage for _active_ job execution. OSG Connect has no routine backup of data in these locations, and users should remove old data after jobs complete, in part, to make room for future submissions. *If you think you'll need more space for concurrently running jobs, please send a request to support@osgconnect.net.*
+Each is controlled with initial quotas and should be treated as temporary storage for _active_ job execution. OSG Connect has no routine backup of data in these locations, and users should remove old data after jobs complete, in part, to make room for future submissions. *If you think you'll need more space for a set of concurrently-queued jobs, even after cleaning up old data, please send a request to [support@osgconnect.net]!*
+
+**Note: OSG Connect staff reserve the right to remove data without notice to the user IF doing so is necessary to quickly fix a performance issue.**
 
 ## Storage and Transfer of Data for Jobs
 
 ### Data storage options
 
-|   | **Default Limit**| **Purpose** | **Network mounted** | **Backed Up** | **Initial Quota\*** | **Purge** |
+|   | **Default Limit**| **Purpose** | **Network mounted** | **Backed Up** | **Initial Quota\*** |
 |:-------- |:----------------:|:------|:------:|:------:|:------:|:------:|:----------|
 | **home**    |  50 GB     | Storage of submit files, input files <100MB each, and per-job output up to a 1GB.| No | No | 50 GB | No |
-| **public**  |  500 GB    | Staging large input files (100MB-50GB, each) for publicly-accessible download into jobs (using HTTP or stashcp, see below) and large output files (1-10GB) | Yes | No | 500 GB | No |
+| **public**  |  500 GB    | Staging large input files (100MB-50GB, each) for publicly-accessible download into jobs (using HTTP or stashcp, see below) and large output files (1-10GB) | Yes | No | 500 GB |  |
 
-###*/*Contact support@osgconnect.net if you think you need a quota increase! We can suppport very large amounts of data, and quotas are a starting point.*
+###*/*Contact [support@osgconnect.net] if you think you need a quota increase! We can suppport very large amounts of data, and quotas are a starting point.*
 
 
 ### Transferring input data for a job
 
 |         | **Recommended Files Sizes**| **Command** | **Purpose** | **Details**|
 |:--------|:------:|:-----|:----------|:------|
-| **HTCondor File Transfer** | < 100 MB input, <1GB output  | transfer_input_files | General-use transfer of job input from within /home. |[HTCondor File Transfer](https://support.opensciencegrid.org/support/solutions/articles/5000639787)|
-| **HTTP** |  < 1 GB   | wget, curl or rsync  | For large input files from within /public. |[HTTP Access](https://support.opensciencegrid.org/support/solutions/articles/5000639798)|
-| **OSG's StashCache** |  > 1 GB, < 50 GB    | stashcp | for large input files from within /public| [StashCache](https://support.opensciencegrid.org/support/solutions/articles/12000002775)|
-| **GridFTP** |  > 1 GB    | gfal-copy | input staged in /public | Typically used by experts with large work flows. Please contact us if you're interested. |
+| **HTCondor File Transfer** | < 100 MB input, <1GB output  | `transfer_input_files` | General-use transfer of job input from within `/home`. |[HTCondor File Transfer](https://support.opensciencegrid.org/support/solutions/articles/5000639787)|
+| **HTTP** |  < 1 GB   | `wget`, `curl`, or `rsync`  | For large input files from within `/public`. |[HTTP Access](https://support.opensciencegrid.org/support/solutions/articles/5000639798)|
+| **OSG's StashCache** |  > 1 GB, < 50 GB    | `stashcp` | for large input files from within `/public`| [StashCache](https://support.opensciencegrid.org/support/solutions/articles/12000002775)|
+| **GridFTP** |  > 1 GB    | `gfal-copy` | input staged in /public | Typically used by experts with large work flows. Please contact us if you're interested. |
 
 
 ### Transferring output data for a job
-<!-- We recommend that the built-in HTCondor file transfer mechanism (transfer_output_files=... in your job submit file) to get back the output data from the remote worker machine to the submit node. More details are given in the article [Transferring data with HTCondor](https://support.opensciencegrid.org/support/solutions/articles/5000639787).  -->
 
 |         | **Recommended File Sizes**| **Command** | **Purpose** | **Details**|
 |:---------|:------:|:-----|:----------|:------|
-| **HTCondor**    | < 1 GB  | HTCondor default output transfer (or `transfer_output_files`) | General-use transfer of job output data into to the submission directory (in /home). |[HTCondor Transfer](https://support.opensciencegrid.org/support/solutions/articles/5000639787)|
-| **StashCache**        |  < 10 GB   | stashcp | Transfer large output into /public|  [StashCache](https://support.opensciencegrid.org/support/solutions/articles/12000002775) |
-| **GridFTP or UNIX tools**        |  < 50 GB   | gfal-copy, rsync, scp, etc. | Typically used by experts with large work flows. Please contact us if you want to use this.|
+| **HTCondor**    | < 1 GB  | HTCondor default output transfer (or `transfer_output_files`) | General-use transfer of job output data back to the submission directory (in `/home`). |[HTCondor Transfer](https://support.opensciencegrid.org/support/solutions/articles/5000639787)|
+| **StashCache**        |  < 10 GB   | stashcp | Transfer large output into `/public`|  [StashCache](https://support.opensciencegrid.org/support/solutions/articles/12000002775) |
+| **GridFTP or UNIX tools**        |  < 50 GB   | `gfal-copy`, `rsync`, `scp`, etc. | Typically used by experts with large work flows. Please contact us if you want to use this.|
 
 
 ### External data transfer
 
 |  | **Data Size**| **Tools** |**Details**|
 |:------------|:-------:|:------|:------| 
-|**UNIX tools** | < 1 GB | rsync, scp, putty, WinSCP, gFTP, etc.  |[SCP](https://support.opensciencegrid.org/support/solutions/articles/5000634376) |
+|**UNIX tools** | < 1 GB | `rsync`, `scp`, Putty, WinSCP, 'gFTP', etc.  |[SCP](https://support.opensciencegrid.org/support/solutions/articles/5000634376) |
 |**Globus** |  > 1 GB  | globus webservice or globus CLI | [Globus](https://support.opensciencegrid.org/support/solutions/articles/5000632397) |
 
 
 ## Storage options
 ### home
-Home is meant for general use storage of various data necessary for job submission. The initial disk quota on home is 50 GBs. When a user exceeds his quota, the system will send email notifications. If the notice is disregarded, eventually the user will lose the privilege to write on his home.
+User directories within `/home` are meant for general-use storage of various files necessary for job submission. The initial disk quota on home is 50 GBs. When a user exceeds his quota, the system will send email notifications. If the notice is disregarded, eventually the user and their jobs will be unable to write to `/home`.
 
-** Home filesystem is not suitable to run your HTCondor jobs. It is a good practice to run all your jobs under the `local-scratch` or `stash` directories. **
-
-### local-scratch
-`local-scratch` is meant for temporary storage, and is implemented as fast local disk for each submit node. It is a good practice to run your jobs on `local-scratch` and move the output data to a secondary local disk as soon as possible. NOTE: data on `local-scratch` is automatically removed after 30 days and is not backed up.
-
-### stash
-Stash is a distributed shared filesystem mounted on all our submit nodes, and is therefore slower than local-scratch. There is no disk quota imposed, nor a automatic purge, on stash. However, the data on stash is not backed up, so you should regularly transfer your data on stash to a long term archival system.  If you are transfering a large amount of data, please use the Globus transfer service.  For more details check the articles on [data transfer techniques](https://opensciencegrid.freshdesk.com/a/solutions/folders/12000013267).  
-
-**Note: Files and directories that have not been accessed for over six months may be deleted.**
+**All jobs should be submitted from within `/home`, and NOT from within `/public`. Contact [support@osgconnect.net] if you think you'll need a quota increase for a set of concurrently-running jobs.**
 
 ### public
-Files placed in the '~public' directory are publicly accessible via WWW as `http://stash.osgconnect.net/+username`. The data on `~/public` is accessible to the jobs on remote worker machine via the wget command. Using the HTTP protocol (through `wget` or `curl`) is ideal for files less than 1 GB in size. Larger files will need to be placed in stash `stash` and accessed with the `stashcp` command. For more details of using public for condor input file transfer,  [click here](https://support.opensciencegrid.org/solution/articles/5000639798).
+Files placed in the '~public' directory are publicly accessible via WWW as `http://stash.osgconnect.net/+username`. The data on `~/public` is accessible to jobs on remote worker machines via command-line download tools. Using the HTTP protocol (through `wget` or `curl`) is ideal for files less than 1 GB in size. Larger files will need to be accessed by jobs, using the `stashcp` command. The `/public` location is a distributed shared filesystem mounted on all our submit nodes, and is therefore slower than `/home`. If you are transfering a large amount of data to or from `/public`, please use the Globus transfer service.  For more details check the articles on [data transfer techniques](https://opensciencegrid.freshdesk.com/a/solutions/folders/12000013267).  
+
+**All jobs should be submitted from within `/home`, and NOT from within `/public`. Contact [support@osgconnect.net] if you think you'll need a quota increase for a set of concurrently-running jobs. Given that users should not be storing long-term data (like submit files, software, etc.) in `/public/`, files and directories that have not been accessed for over six months may be deleted by OSG Connect staff with or without notifying the user.**
 
 
-## Getting Help
+## Get Help
 For assistance or questions, please email the OSG User Support team  at [support@osgconnect.net](mailto:support@osgconnect.net) or visit the [help desk and community forums](http://support.opensciencegrid.org).
 
 
