@@ -13,8 +13,6 @@ Connect.
 
 ## Request a New Project
 
-If you or your group does not already have a project in OSG Connect, you can 
-start one. To do so, visit <https://osgconnect.net/newproject>.
  You will be asked to provide the following information:
  
 -    Your Name
