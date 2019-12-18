@@ -15,7 +15,7 @@ ssh or an ssh program like Putty -- see below for more details on logging in.
 
 NOTE: Please do not edit the authorized keys file on the submit host (login.osgconnect.net).
 
-## Step 1: Generating SSH Keys
+## Step 1: Generate SSH Keys
 
 We will discuss how to generate a SSH key pair for two cases: 
 
@@ -90,17 +90,17 @@ To add your public key to the OSG Connect log in server:
 
 1. Go to www.osgconnect.net and sign in with your Globus ID. 
 
-2. Go to "Update Profile".
+2. Click "Profile" in the top right corner.
 
-3. Click on "Manage SSH and X.509 keys" - it's a small link under your Globus ID 
-in the "Identity" column. 
+3. Click the "Edit Profile" button located after the user information in the left hand box.
 
-4. Click on "Add a New Key".
+4. Copy/paste the public key which is found in the `.pub` file into the "SSH Public Key" text box. 
+The expected key is a single line, with three fields looking something like 
+`ssh-rsa ASSFFSAF... user@host`. If you used the first set of key-generating 
+instructions it is the content of `~/.ssh/id_rsa.pub` and for the second (using 
+PuTTYgen), it is the content from step 7 above.
 
-5. Give the key a name, select "SSH Public Key", and copy/paste the public key into the text box. The expected key is a single line, with three fields looking something like `ssh-rsa ASSFFSAF... user@host`. If you used the first set of key-generating 
-instructions it is the content of `~/.ssh/id_rsa.pub` and for the second (using PuTTYgen), it is the content from step 7 above.
-
-6. Click "Add Key"
+6. Click "Update Profile"
 
 The key is now added to your profile in the OSG Connect website. This will automatically
 be added to the login nodes within a couple hours.
