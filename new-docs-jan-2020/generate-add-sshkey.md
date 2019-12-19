@@ -13,11 +13,11 @@ a two-step process to set up the SSH key to your account.
 your OSG Connect user profile (via the OSG Connect website).
 
 After completing the process, you can log in from a local computer 
-(your laptop or desktop) to the OSG Connect submit `login.osgconnect.net` 
+(your laptop or desktop) to the OSG Connect login node assigned
 using either ssh or an ssh program like Putty -- see below for 
 more details on logging in. 
 
-NOTE: Please do not edit the authorized keys file on the submit host (login.osgconnect.net).
+NOTE: Please do not edit the authorized keys file on the login node.
 
 ## Step 1: Generate SSH Keys
 
