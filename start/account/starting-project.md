@@ -53,7 +53,7 @@ The project's principal investigator, or their delegate, is responsible for
 project membership. We will consult the PI or contact for group membership
 request approvals. The PI may also be assigned an "Administrator" role of the
 project group, and can invite OSG Connect members to the group directly. [Contact
-us](<mailto:user-support@opensciencegrid.org>) if this interests you.
+us](<mailto:support@opensciencegrid.org>) if this interests you.
 
 ## Using a Project in HTCondor Jobs
 
