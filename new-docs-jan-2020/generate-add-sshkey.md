@@ -126,6 +126,8 @@ this information on your profile from the OSG Connect website.
 3. The assigned login nodes are listed in the left side box. Make note of the address of 
 your assigned login node as you will use this to connect to OSG Connect.
 
+![Identify Login Node](https://raw.githubusercontent.com/OSGConnect/connectbook/master/images/find_osgconnect_login_node.png "OSG Connect Profile")
+
 ### For Mac, Linux, or newer versions of Windows
 
 Open a terminal and type in: 
