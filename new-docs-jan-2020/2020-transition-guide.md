@@ -32,6 +32,9 @@ information can be seen on your profile here:
 
 ![Identify Login Node](https://raw.githubusercontent.com/OSGConnect/connectbook/master/images/find_osgconnect_login_node.png "OSG Connect Profile")
 
+1. Log into the new login node and set your primary project. Follow the instructions 
+at the bottom of the OSG project guide: [Join and Use a Project in OSG Connect](12000065615)
+
 1. Retrieve all the data from your old home directory. Migrate any files that you are 
 still using to run jobs to your `/home` directory on the new assigned login node. Any other (older) files can be transferred back to your own personal computer / storage. 
 
