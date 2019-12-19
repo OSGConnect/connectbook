@@ -4,14 +4,18 @@
 
 ## Overview
 
-OSG Connect requires SSH-key-based logins. You need to follow a two-step process to set up the SSH key to your account. 
+OSG Connect requires SSH-key-based logins. You need to follow 
+a two-step process to set up the SSH key to your account. 
 
 1. Generate a SSH key pair.  
 
-2. Add your public key to the submit host by uploading it to your OSG Connect user profile (via the OSG Connect website).
+2. Add your public key to the submit host by uploading it to 
+your OSG Connect user profile (via the OSG Connect website).
 
-After completing the process, you can log in from a local computer (your laptop or desktop) to the OSG Connect submit `login.osgconnect.net` using either 
-ssh or an ssh program like Putty -- see below for more details on logging in. 
+After completing the process, you can log in from a local computer 
+(your laptop or desktop) to the OSG Connect submit `login.osgconnect.net` 
+using either ssh or an ssh program like Putty -- see below for 
+more details on logging in. 
 
 NOTE: Please do not edit the authorized keys file on the submit host (login.osgconnect.net).
 
@@ -88,7 +92,7 @@ can use a key without a passphrase, but this is not recommended.
 
 To add your public key to the OSG Connect log in server: 
 
-1. Go to www.osgconnect.net and sign in with your Globus ID. 
+1. Go to www.osgconnect.net and sign in with your CILogin. 
 
 2. Click "Profile" in the top right corner.
 
@@ -107,13 +111,26 @@ be added to the login nodes within a couple hours.
 
 ## Logging In
 
-After following the steps above to upload your key and it's been a few hours, you should be able to log in to OSG Connect. 
+After following the steps above to upload your key and it's been a few hours, you should 
+be able to log in to OSG Connect. 
+
+### Determine which login node to use
+
+Before you can connect, you will need to know which login node your account is assigned to. You can find 
+this information on your profile from the OSG Connect website.
+
+1. Go to www.osgconnect.net and sign in with your CILogin. 
+
+2. Click "Profile" in the top right corner.
+
+3. The assigned login nodes are listed in the left side box. Make note of the address of 
+your assigned login node as you will use this to connect to OSG Connect.
 
 ### For Mac, Linux, or newer versions of Windows
 
 Open a terminal and type in: 
 
-    ssh <your_osg_connect_username>@login.osgconnect.net
+    ssh <your_osg_connect_username>@<your_osg_login_node>
 
 It will ask for the passphrase for your ssh key (if you set one) and then you 
 should be logged in. 
@@ -124,7 +141,7 @@ On older versions of Windows, you can use the [Putty program](https://www.chiark
 
 1. Open the `PutTTY` program. If necessary, you can download PuTTY from the website here [PuTTY download page](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html).
 
-2. Type "login.osgconnect.net" as the hostname.
+2. Type the address of your assigned login node as the hostname (see "Determine which login node to use" above).
 
 3. In the left hand menu, click the "+" next to "SSH" to expand the menu.
 
