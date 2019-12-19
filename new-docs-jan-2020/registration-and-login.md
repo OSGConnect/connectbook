@@ -20,29 +20,34 @@ submit node.
 ### Sign in to or create an account
 
 Start by creating an OSG Connect account. Visit the [OSG Connect web
-site](<https://osgconnect.net/>), then select **Sign Up**.
+site](<https://osgconnect.net/>), then click on the **Sign Up** button. You 
+will need to agree to our Acceptable Use Policy in order to get to the 
+main log in screen. 
 
-Authentication with the user management system is using your 
-institutional credentials. For example, you can authenticate with your
-own university account.
-
-The default first step is to sign in using an InCommon ID through the CILogon
-service. This allows you to enroll using your existing campus identifier and
-credentials, provided that your home institution is a member of the InCommon
-Federation.
-
-Click on **Proceed** to begin this process. You'll be directed to a discovery
+The main log in screen will prompt you to sign in via your primary institutional 
+affiliation. You'll be directed to a discovery
 service which asks you what your home institution is. (If you've used CILogon
 before it may already know your home institution and skip this step.) Locate
-your institution in the list, or type its name to find matches. If your
-institution does not appear, it may not be an InCommon member; you'll need to
-register using another provider such as Google.
+your institution in the list, or type its name to find matches. 
+
+> If you don't have an institutional identity or can't find your institution 
+> on the provided list, either (separately) sign up for a Globus ID and follow 
+> the link for that option on this page, or contact the OSG Connect support 
+> team for guidance at support@osgconnect.net
+
+Note that this is the identity that will get linked to your OSG Connect account, 
+so be sure to pick the institution (if you have multiple affiliations) that 
+you would like to associate with your OSG Connect account. 
 
 After selecting your institution in the discovery service, you'll be taken to
 your own institution's local sign-in screen. You've probably used it before,
 and if it looks familiar that's because it's exactly the same web site.  Sign in
 using your campus credentials. When done, you'll return automatically to the
 OSG Connect portal and can carry on with signup.
+
+After continuing, and allowing certain permissions in the next screen, you'll be 
+asked to create a profile and save changes. If this works successfully, you should 
+see that your membership to OSG is "pending" on the right hand side of the screen. 
 
 ### Orientation Meeting
 
