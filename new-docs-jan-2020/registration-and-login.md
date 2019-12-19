@@ -1,15 +1,19 @@
 [title]: - "Registration and Login for OSG Connect"
+[toc]
 
 ## Registration and Login for OSG Connect
 
-The major steps to getting started on OSG Connect are creating an OSG
-Connect account, requesting and/or joining a "project", and uploading
-ssh keys to the OSG Connect website which will allow you to log in and
-start submitting jobs. 
+The major steps to getting started on OSG Connect are: 
 
-Authentication with the user management system is using your 
-institutional credentials. For example, you can authenticate with your
-own university account.
+* apply for an OSG Connect account
+* meet with an OSG Connect staff member for an short consultation and orientation. 
+* join and set your default "project"
+* upload `.ssh` keys to the OSG Connect website
+
+Each of these is detailed in the guide below. 
+
+Once you've gone through these steps, you should be able to login to the OSG Connect
+submit node.  
 
 ## Account Creation
 
@@ -17,6 +21,10 @@ own university account.
 
 Start by creating an OSG Connect account. Visit the [OSG Connect web
 site](<https://osgconnect.net/>), then select **Sign Up**.
+
+Authentication with the user management system is using your 
+institutional credentials. For example, you can authenticate with your
+own university account.
 
 The default first step is to sign in using an InCommon ID through the CILogon
 service. This allows you to enroll using your existing campus identifier and
@@ -36,29 +44,34 @@ and if it looks familiar that's because it's exactly the same web site.  Sign i
 using your campus credentials. When done, you'll return automatically to the
 OSG Connect portal and can carry on with signup.
 
-## Generate and Add an SSH key
+### Orientation Meeting
 
-Once your account is created and you're approved, you 
-can upload ssh keys to log in. 
+Once you've applied to join OSG Connect as described above, an OSG Connect support 
+team member will contact you to arrange an initial orientation meeting. This meeting 
+generally takes about 20-30 minutes and is a chance to talk about your work, how it will 
+fit on the OSG, and some practical next steps for getting started. Some of these 
+next steps are also listed below. 
 
-Please visit this page: [Step by step instructions to generate and adding an SSH key][ssh-key]
+### Join a Project
 
-## Join a Project
+As part of the sign up and meeting process, you'll be asked for information related 
+to your research group so that you can be assigned to an accounting project. For 
+more information about this process, see this guide: [Start or Join a Project in OSG Connect][projects]
 
-Congratulations! You're now signed up, and you have all the accounts that you'll
-need. A critical step remains, though, before you can begin computing. You've
-now joined the OSG Connect community, which gives you visibility of the various
-projects associated with OSG Connect. To begin working in the facility, or using
-the Stash service for file storage,  you'll need to join one (or more) of them.
+### Generate and Add an SSH key
 
-See this guide: [Start or Join a Project in OSG Connect][projects]
+Once your account is created and you're approved, you can generate and upload an 
+SSH key to the OSG Connect website; this key will be duplicated on the OSG Connect 
+login server so that you're able to log in there and submit jobs. 
 
-## Ready?
+To see how to generate and add an SSH key, please visit this 
+page: [Step by step instructions to generate and adding an SSH key][ssh-key]
 
-Having stepped through these procedures and joined an `osg.*` project group, you
-have all the roles and access that you need to continue working. There can be
-some delay for project membership approval, but aside from that access rights
-are generally implemented in the OSG Connect servers within minutes. 
+## Log In
+
+Once you've gone through the steps above, you should be able to log in to the OSG Connect 
+login server. See the second half of the SSH key guide for details: 
+[How to Log Into the OSG Connect Login Server][ssh-key]
 
 ## Overview of access procedure and accounting
 
@@ -92,6 +105,6 @@ password or a public key. We'll discuss how to connect further on. Stash access
 is possible from the submit node and through Globus transfer or using HTTP to a 
 public space within your Stash.
 
-[ssh-key]: 12000027675
-[projects]: 5000634360
+[ssh-key]: 12000065612
+[projects]: 12000065615
 
