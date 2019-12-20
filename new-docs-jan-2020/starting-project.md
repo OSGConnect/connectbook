@@ -24,8 +24,7 @@ or not you want to join an existing project. You will be prompted to provide inf
 based on the following two scenarios: 
 
 - **If you are the first member of your research group / team to use the OSG through 
-OSG Connect**, a new project will be created for you. You will need to provide the  
-the following information to do so: 
+OSG Connect**, a new project will be created for you. You will need to provide the following information to do so: 
 	-    Project Name
 	-    PI Name
 	-    PI Email
@@ -53,21 +52,19 @@ you wish to join.
 The job submission on OSG Connect requires a project. 
 
 * Option 1 (preferred): To set the default project, type 
-
-    $ connect project 
-    
+		$ connect project 
 You should see a list of projects that you have joined. Most often there will 
 only be one option! Make sure the right project is highlighted and press "enter" 
 to save that choice. 
 
 * Option 2: If you're running a few jobs under a different project, you can manually 
 set the project by putting this option in the submit file: 
-
-    +ProjectName="ProjectName"
+	    +ProjectName="ProjectName"
 
 ## View Metrics For Your Project
 
 The project's resource usage appears in the OSG accounting system, [GRACC](<https://gracc.opensciencegrid.org/>). 
 You can see the main OSG Connect dashboard here: [Link to OSG Connect Dashboard](<https://gracc.opensciencegrid.org/dashboard/db/osg-connect-summary-all-usage?orgId=1&var-interval=$__auto_interval&var-project=All&var-user=All&var-Filter=ProbeName%7C%3D~%7C.*(osgconnect%5C.net__gfp__grid%5C.uchicago%5C.edu__gfp__ci-connect%5C.net__gfp__xd-login%5C.opensciencegrid.org__gfp__SUBMIT.MIT.EDU__gfp__csiu.grid.iu.edu__gfp__otsgrid.iit.edu__gfp__workflow.isi.edu__gfp__lsst-glidein.rcac.purdue.edu__gfp__scosg16.jlab.org__gfp__gluex.phys.uconn.edu)&var-institution=All>)
+
 At the top of that dashboard, there is a set of filters that you can use to examine 
 the number of hours used by your project, specific users, or your institution. 
