@@ -51,14 +51,17 @@ you wish to join.
 
 The job submission on OSG Connect requires a project. 
 
-* Option 1 (preferred): To set the default project, type 
+* **Option 1 (preferred)**: To set the default project, type 
+
 		$ connect project 
+
 You should see a list of projects that you have joined. Most often there will 
 only be one option! Make sure the right project is highlighted and press "enter" 
 to save that choice. 
 
-* Option 2: If you're running a few jobs under a different project, you can manually 
+* **Option 2**: If you're running a few jobs under a different project, you can manually 
 set the project by putting this option in the submit file: 
+
 	    +ProjectName="ProjectName"
 
 ## View Metrics For Your Project
