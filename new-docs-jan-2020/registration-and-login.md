@@ -1,5 +1,6 @@
 [title]: - "Registration and Login for OSG Connect"
-[toc]
+
+[TOC]
 
 ## Registration and Login for OSG Connect
 
