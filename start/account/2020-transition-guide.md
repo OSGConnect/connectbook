@@ -63,4 +63,4 @@ Not at this time.
 
 There are two drivers for this transition. The first one the new user management system which should make it much easier to sign up for OSG Connect and use it. A second reason is to simplify data access and increase the performance of the submit nodes.
 
-
+ 
