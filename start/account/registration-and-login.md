@@ -1,107 +1,83 @@
 [title]: - "Registration and Login for OSG Connect"
 
+[TOC]
+
 ## Registration and Login for OSG Connect
 
-(An [abbreviated version of these signup
-instructions](<https://osgconnect.net/signup>) is provided when you
-choose [signup](<https://osgconnect.net/signup>) from the [OSG Connect main
-site](<https://osgconnect.net/>). This section of the Help Desk provides more
-comprehensive information about the registration process, but the shortened
-step-by-step guide is perhaps easier to follow.)
+The major steps to getting started on OSG Connect are: 
 
-The major steps to getting started on OSG Connect are creating an OSG Connect account (which is 
-created under the `osg` project group), creating and/or joining a "project" (a subgroup of 
-the parent `osg` group) with your account, and uploading ssh keys to the OSG Connect 
-website which will allow you to log in and start submitting jobs. 
+* apply for an OSG Connect account
+* meet with an OSG Connect staff member for an short consultation and orientation. 
+* join and set your default "project"
+* upload `.ssh` keys to the OSG Connect website
+
+Each of these is detailed in the guide below. 
+
+Once you've gone through these steps, you should be able to login to the OSG Connect
+submit node.  
 
 ## Account Creation
 
 ### Sign in to or create an account
 
-Start by creating an OSG Connect identity / account. Visit the [OSG Connect web
-site](<https://osgconnect.net/>), then select **Sign In/Sign Up ▸ Sign up as a
-new user**. There are a few paths forward from here, but all end up with linking
-your OSG Connect identity with a Globus identity. This not only provides
-integrated identity service, it also enables you to begin performing data
-transfers to OSG Connect very early on, with a minimal fuss, using Globus 
-transfer.
+Start by creating an OSG Connect account. Visit the [OSG Connect web
+site](<https://osgconnect.net/>), then click on the **Sign Up** button. You 
+will need to agree to our Acceptable Use Policy in order to get to the 
+main log in screen. 
 
-**Note: You sill need to register using a GlobusID (@globusid.org) not your institutional login. You can 
-link your institutional account to the GlobusID if desired, but your OSG Connect application 
-cannot be processed without a GlobusID login.**
-
-<!-- ### InCommon Registration
-
-The default first step is to sign in using an InCommon ID through the CILogon
-service. This allows you to enroll using your existing campus identifier and
-credentials, provided that your home institution is a member of the InCommon
-Federation.
-
-Click on **Proceed** to begin this process. You'll be directed to a discovery
+The main log in screen will prompt you to sign in via your primary institutional 
+affiliation. You'll be directed to a discovery
 service which asks you what your home institution is. (If you've used CILogon
 before it may already know your home institution and skip this step.) Locate
-your institution in the list, or type its name to find matches. If your
-institution does not appear, it may not be an InCommon member; you'll need to
-register using another approach described below.
+your institution in the list, or type its name to find matches. 
+
+> If you don't have an institutional identity or can't find your institution 
+> on the provided list, either (separately) sign up for a Globus ID and follow 
+> the link for that option on this page, or contact the OSG Connect support 
+> team for guidance at support@osgconnect.net
+
+Note that this is the identity that will get linked to your OSG Connect account, 
+so be sure to pick the institution (if you have multiple affiliations) that 
+you would like to associate with your OSG Connect account. 
 
 After selecting your institution in the discovery service, you'll be taken to
 your own institution's local sign-in screen. You've probably used it before,
 and if it looks familiar that's because it's exactly the same web site.  Sign in
 using your campus credentials. When done, you'll return automatically to the
-OSG Connect portal and can carry on with signup. -->
+OSG Connect portal and can carry on with signup.
 
-### Globus Registration
+After continuing, and allowing certain permissions in the next screen, you'll be 
+asked to create a profile and save changes. If this works successfully, you should 
+see that your membership to OSG is "pending" on the right hand side of the screen. 
 
-<!--If your institution is not linked to CILogon, you can sign in with a Globus identity 
-instead. -->
-Click on **Sign Up with Globus**. If you already have
-a Globus account, click **Already a member? Sign In** to sign in now. Otherwise,
-provide your name, email address, and a username and password to register a new
-account. Your OSG Connect identity will piggyback from here.
+### Orientation Meeting
 
-<!-- | **Using InCommon/CILogon**                     | **Using Globus ID (existing)**                             | **Using Globus  (new)**                |
-|------------------------------------------------|-------------------------------------------------------------------|----------------------------------------------|
-| Click **Proceed**.                             | Click **Sign Up with Globus**, then **Already a member? Sign In** | Click **Sign Up with Globus**.               |
-| Select your institution from the CILogon site. | Enter Globus username and password.                               | Enter Name, Email, Username, Password.       |
-| Perform authentication at your institution.    | ↓                                                                 | Await validation email, use link to confirm. |
-| Go to the **Link accounts **workflow.          | Go to the **Join group **workflow.                                | Go to the **Join group **workflow.           | -->
+Once you've applied to join OSG Connect as described above, an OSG Connect support 
+team member will contact you to arrange an initial orientation meeting. This meeting 
+generally takes about 20-30 minutes and is a chance to talk about your work, how it will 
+fit on the OSG, and some practical next steps for getting started. Some of these 
+next steps are also listed below. 
 
+### Join a Project
 
-| **Using Globus ID (existing)**                                    | **Using Globus  (new)**                      |
-|-------------------------------------------------------------------|----------------------------------------------|
-| Click **Sign Up with Globus**, then **Already a member? Sign In** | Click **Sign Up with Globus**.               |
-| Enter Globus username and password.                               | Enter Name, Email, Username, Password.       |
-| ↓                                                                 | Await validation email, use link to confirm. |
-| Go to the **Join group **workflow.                                | Go to the **Join group **workflow.           |
+As part of the sign up and meeting process, you'll be asked for information related 
+to your research group so that you can be assigned to an accounting project. For 
+more information about this process, see this guide: [Start or Join a Project in OSG Connect][projects]
 
+### Generate and Add an SSH key
 
-### Join group
+Once your account is created and you're approved, you can generate and upload an 
+SSH key to the OSG Connect website; this key will be duplicated on the OSG Connect 
+login server so that you're able to log in there and submit jobs. 
 
-To complete the registration process, submit an application to join the `osg` group.
+To see how to generate and add an SSH key, please visit this 
+page: [Step by step instructions to generate and adding an SSH key][ssh-key]
 
-## Generate and Add an SSH key
+## Log In
 
-Once your account is created and you're approved to join the `osg` group, you 
-can upload ssh keys to log in. 
-
-Please visit this page: [Step by step instructions to generate and adding an SSH key][ssh-key]
-
-## Join a Project
-
-Congratulations! You're now signed up, and you have all the accounts that you'll
-need. A critical step remains, though, before you can begin computing. You've
-now joined the OSG Connect community, which gives you visibility of the various
-projects associated with OSG Connect. To begin working in the facility, or using
-the Stash service for file storage,  you'll need to join one (or more) of them.
-
-See this guide: [Start or Join a Project in OSG Connect][projects]
-
-## Ready?
-
-Having stepped through these procedures and joined an `osg.*` project group, you
-have all the roles and access that you need to continue working. There can be
-some delay for project membership approval, but aside from that access rights
-are generally implemented in the OSG Connect servers within minutes. 
+Once you've gone through the steps above, you should be able to log in to the OSG Connect 
+login server. See the second half of the SSH key guide for details: 
+[How to Log Into the OSG Connect Login Server][ssh-key]
 
 ## Overview of access procedure and accounting
 
@@ -135,5 +111,6 @@ password or a public key. We'll discuss how to connect further on. Stash access
 is possible from the submit node and through Globus transfer or using HTTP to a 
 public space within your Stash.
 
-[ssh-key]: 12000027675
-[projects]: 5000634360
+[ssh-key]: 12000065612
+[projects]: 12000065615
+

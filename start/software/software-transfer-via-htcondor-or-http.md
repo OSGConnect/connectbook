@@ -18,11 +18,11 @@ software files that the `PATH` (folders where executables can be found) may be s
 
 ## Starting Up
 
-First login to `login.osgconnect.net`. Create a working directory, run `tutorial software`.  
+First login to your OSG Connect login node. Create a working directory by running `tutorial software`, and `cd tutorial-software`.  
 Then make sure that you have a public directory exported via Web. This directory should have been created for you 
-and be accessible at an URL like `https://stash.osgconnect.net/+user/` where "user" is your user name on OSG Connect :
+and be accessible at an URL like `https://stash.osgconnect.net/+username/` where "username" is your user name on OSG Connect :
 
-	$ ls -al ~/data/public
+	$ ls -al /public/<username>
 
 ## Distributing Applications Using Stash and HTTP
 
@@ -32,25 +32,25 @@ instead of data you have to pay attention because Web servers or commands like w
 and this can cause the job to fail. To make sure that your program is executable either set manually the permission on the 
 transferred file (chmod +x filename) or transfer a tar bundle and uncompress it.
 
-Prepare the file bundle in your public html space (`~/data/public`):
+Prepare the file bundle in your public html space (`/public/<username>`):
 
-	$ ls -al ~/data/public/
+	$ ls -al /public/<username>
 	...
 	$ tar cvzf words.tar.gz distribution random_words
 	distribution
 	random_words
-	$ mv words.tar.gz ~/data/public/
-	$ chmod +r ~/data/public/words.tar.gz
+	$ mv words.tar.gz /public/<username>/
+	$ chmod +r /public/<username>/words.tar.gz
 
 `words.sh` is the auxiliary script to run the job:
 
 	#!/bin/bash
 	# HTCondor will transfer the file for us. Uncomment the following if you prefer to transfer form the script
-	# wget --no-check-certificate http://stash.osgconnect.net/+marco/words.tar.gz
+	# wget --no-check-certificate http://stash.osgconnect.net/+username/words.tar.gz
 	tar xzf words.tar.gz
 	cat random_words | ./distribution
 
-Here is the submit file. Note that HTCondor allows to specify an URL as input file and it will download it for you. Substitute your user name for marco in the `transfer_input_files` line:
+Here is the submit file. Note that HTCondor allows to specify an URL as input file and it will download it for you. Substitute your user name for username in the `transfer_input_files` line:
 
 	########################
 	# Submit description file for short test program using http transfer
@@ -63,9 +63,8 @@ Here is the submit file. Note that HTCondor allows to specify an URL as input fi
 	Output  = log/words.out.$(Cluster)-$(Process)
 	Log     = log/words.log.$(Cluster)
 	should_transfer_files = YES
-	transfer_input_files = http://stash.osgconnect.net/+marco/words.tar.gz
+	transfer_input_files = http://stash.osgconnect.net/+username/words.tar.gz
 	when_to_transfer_output = ON_EXIT
-	+ProjectName="ConnectTrain"
 	Queue 5
 
 Submit the job:
