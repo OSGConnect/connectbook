@@ -35,19 +35,25 @@ information can be seen on your profile here:
 1. Log into the new login node and set your primary project. Follow the instructions 
 at the bottom of the OSG project guide: [Join and Use a Project in OSG Connect](12000065615)
 
-1. Retrieve all the data from your old home directory. Migrate any files that you are 
-still using to run jobs to your `/home` directory on the new assigned login node. Any other (older) files can be transferred back to your own personal computer / storage. 
+      $ connect project
 
-1. Similarly, retrieve your data from Stash on the old login nodes. Note that the Stash 
-equivalent on the new login nodes, `/public`, 
- is all publicly readable - files can be downloaded from that folder 
-by any person who has the correct link. 
+1. Retrieve all the data from your old home directory. Migrate any files that you are still using to run jobs to your `/home` directory on the new assigned login node. Any other (older) files can be transferred back to your own personal computer / storage. The old $HOME directory is available under `/old-home/$USERNAME/`. For example:
+   
+       $ mv /old-home/$USERNAME/example-data $HOME/
+
+1. Similarly, retrieve your data from Stash on the old login nodes. Note that the Stash equivalent on the new login nodes, `/public`, is all publicly readable - files can be downloaded from that folder by any person who has the correct link. For example, moving data from the old stash to the new public directory:
+   
+       $ mv /stash/user/$USERNAME/example-data /public/$USERNAME/
+   
+   This is good time to clean up! Please use `mv` when moving the data from the old stash location and `rm` do remove any data you no longer need. If you leave data in the old stash location, we might contact you in the future to have it cleaned up.
 
 1. Update your workloads for the new filesystem layout. Due to the change in paths (no 
 more `/stash`, no `/local-scratch`), you may need to modify submit files and scripts 
 to work correctly on the new log in nodes. Please read our updated guide on the new filesystem layout, how the different filesystems should be used, and quotas. 
-    * [New Data Management Guide](12000065613)
-In short, jobs should run from `$HOME` and can use `/public` for data access.
+   
+      * [New Data Management Guide](12000002985)
+   
+   In short, jobs should run from `$HOME` and can use `/public` for data access.
 
 ## Other Questions
 
