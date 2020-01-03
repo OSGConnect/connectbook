@@ -20,7 +20,7 @@ The available software are listed [here](http://support.opensciencegrid.org/solu
 Generally, you'll need to give the version of after the module name when loading the module.
 For example, there are three different versions of Gromacs available (4.6.5, 5.0.0, and 5.0.5).  To load Gromacs 5.0.5, you would run:
 
-    $ source /cvmfs/oasis.opensciencegrid.org/osg/modules/lmod/current/init/bash
+    $ . /cvmfs/oasis.opensciencegrid.org/osg/sw/module-init.sh
     $ module load gromacs/5.0.5
 
 
@@ -58,7 +58,7 @@ Use the Stash data system to store and process large volumes of data. Please ref
  
 **How do I transfer data from Stash to my system and vice versa?**
 
-You can transfer data using scp, rsync and globus. See the section on [Transferring Data to OSG Connect](http://support.opensciencegrid.org/support/solutions/folders/5000260918) for more details.
+You can transfer data using scp or rsync. See the section on [Transferring Data to OSG Connect](http://support.opensciencegrid.org/support/solutions/folders/5000260918) for more details.
 
 
 ## Workflow Management
