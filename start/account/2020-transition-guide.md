@@ -35,7 +35,9 @@ information can be seen on your profile here:
 1. Log into the new login node and set your primary project. Follow the instructions 
 at the bottom of the OSG project guide: [Join and Use a Project in OSG Connect](12000065615)
 
-      $ connect project
+   ```
+   $ connect project
+   ```
 
 1. Retrieve all the data from your old home directory. Migrate any files that you are still using to run jobs to your `/home` directory on the new assigned login node. Any other (older) files can be transferred back to your own personal computer / storage. The old $HOME directory is available under `/old-home/$USERNAME/`. For example:
    
