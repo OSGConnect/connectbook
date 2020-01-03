@@ -14,8 +14,7 @@ specific, numbered login node to use, which will appear on your OSG Connect webs
 
 ## Deadlines
 
-You should have access to your newly assigned login node by December 26, 2019. Access to 
-the previous login nodes (`login02`, `login03`) will still be possible, however, we 
+Access to the previous login nodes (`login02`, `login03`) will still be possible, however, we 
 recommend migrating workloads and data as soon as possible in light of the following 
 deadlines: 
 
