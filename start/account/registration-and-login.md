@@ -107,9 +107,7 @@ other identity information. After that you will enroll in a project group.
 Once you've enrolled in a group, you'll have the requisite rights to log in to
 the submit node for the OSG Connect job scheduler, or to transfer data in and
 out of Stash. Submit node logins are typically via Secure Shell (SSH) using a
-password or a public key. We'll discuss how to connect further on. Stash access
-is possible from the submit node and through Globus transfer or using HTTP to a 
-public space within your Stash.
+password or a public key. We'll discuss how to connect further on.
 
 [ssh-key]: 12000065612
 [projects]: 12000065615

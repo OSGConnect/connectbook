@@ -151,7 +151,7 @@ On older versions of Windows, you can use the [Putty program](https://www.chiark
 
 5. Click "Browse" and specify the private key file you saved in step 5 above.
 
-6. Click "Open" and provide your Globus ID (do not include @globusid.org) and passphrase when prompted to do so.
+6. Click "Open" and provide your passphrase when prompted to do so.
 
 ![alt text](https://raw.githubusercontent.com/OSGConnect/connectbook/master/images/putty_ssh.png "PuPTTYen SSH Window")
 

@@ -28,7 +28,7 @@ User directories within `/home` are meant for general-use storage of various fil
 **All jobs should be submitted from within `/home`, and NOT from within `/public`. Contact [support@osgconnect.net](mailto:support@osgconnect.net) if you think you'll need a quota increase for a set of concurrently-running jobs.**
 
 ### public
-Files placed within a user's '/public' directory are publicly accessible on the web via `http://stash.osgconnect.net/+<username>` and can be accessed by jobs running on remote worker machines via command-line download tools. Using the HTTP protocol (through `wget` or `curl`) is ideal for files less than 1 GB in size. Larger files will need to be accessed using the `stashcp` command. The `/public` location is a distributed shared filesystem mounted on all our submit nodes, and is therefore slower than `/home`. If you are transfering a large amount of data to or from `/public`, please use the Globus transfer service.  For more details check the articles on [data transfer techniques](https://opensciencegrid.freshdesk.com/a/solutions/folders/12000013267).  
+Files placed within a user's '/public' directory are publicly accessible on the web via `http://stash.osgconnect.net/+<username>` and can be accessed by jobs running on remote worker machines via command-line download tools. Using the HTTP protocol (through `wget` or `curl`) is ideal for files less than 1 GB in size. Larger files will need to be accessed using the `stashcp` command. The `/public` location is a distributed shared filesystem mounted on all our submit nodes, and is therefore slower than `/home`. For more details check the articles on [data transfer techniques](https://opensciencegrid.freshdesk.com/a/solutions/folders/12000013267).  
 
 **All jobs should be submitted from within `/home`, and NOT from within `/public`. Contact [support@osgconnect.net](mailto:support@osgconnect.net) if you think you'll need a quota increase for a set of concurrently-running jobs. Given that users should not be storing long-term data (like submit files, software, etc.) in `/public/`, files and directories that have not been accessed for over six months may be deleted by OSG Connect staff with or without notifying the user.**
 
@@ -57,7 +57,6 @@ Files placed within a user's '/public' directory are publicly accessible on the 
 |  | **Data Size**| **Tools** |**Details**|
 |:------------|:-------:|:------|:------| 
 |**UNIX tools** | < 1 GB | `rsync`, `scp`, Putty, WinSCP, `gFTP`, etc.  |[SCP](https://support.opensciencegrid.org/support/solutions/articles/5000634376) |
-|**Globus** |  > 1 GB  | globus webservice or globus CLI | [Globus](https://support.opensciencegrid.org/support/solutions/articles/5000632397) |
 
 
 ## Get Help

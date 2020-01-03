@@ -20,11 +20,9 @@ StashCache is available at all OSG sites where OASIS is mounted and can be used 
 
 To use it for transferring files to active jobs:
 
-1)  Copy the data files required for the job(s) into your Stash directory which is mounted on the OSG Connect login node here:
+1)  Copy the data files required for the job(s) into your `/public` Stash directory which is mounted on the OSG Connect login node here:
 
-	/stash/user/<userid>/
-
-Alternatively, users can [use Globus](<https://support.opensciencegrid.org/solution/articles/5000632397-data-transfer-with-globus>) to transfer data files to Stash.
+	/public/<userid>/
 
 2)  Include the following lines in the job's submit script to indicate that StashCache is required and the necessary modules are available:
 
@@ -39,11 +37,11 @@ First load the stashcp module:
 
 Then transfer your data:
 	
-	stashcp /user/<userid>/<stash_data_file_path> <target_location>
+	stashcp /osgconnect/<userid>/<stash_data_file_path> <target_location>
 
- For example, if the data file is located at `/stash/user/<userid\>/samples/sample01.dat`, then the `stashcp` command to transfer this file into your current working directory on the compute host would be:
+Note how the `/public` directory is mapped to the `/osgconnect` namespace under StashCache. For example, if the data file is located at `/public/<userid\>/samples/sample01.dat`, then the `stashcp` command to transfer this file into your current working directory on the compute host would be:
 
-	stashcp /user/<userid>/samples/sample01.dat  .
+	stashcp /osgconnect/<userid>/samples/sample01.dat  .
 
 ### Transfer job output to StashCache
 
@@ -56,11 +54,11 @@ To transfer job output to StashCache after your analysis:
 2) Use `stashcp` to transfer the data files back to StashCache. You will need to prepend your stash location with `stash://` as follows:
 
 	module load stashcache
-	stashcp <file_name> stash:///user/<userid>/<stash_data_file_path>
+	stashcp <file_name> stash:///osgconnect/<userid>/<stash_data_file_path>
 
-For example, if you wish to transfer `output.dat` to the directory `/stash/user/<userid\>/output/`. then the `stashcp` command would be:
+For example, if you wish to transfer `output.dat` to the directory `/public/<userid\>/output/`. then the `stashcp` command would be:
 
-	stashcp output.dat stash:///user/<userid\>/output/output.txt
+	stashcp output.dat stash:///osgconnect/<userid\>/output/output.txt
 
 ___
 
