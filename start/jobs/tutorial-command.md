@@ -10,7 +10,7 @@ tutorials are tested regularly and should just work.
 Tutorial commands
 -----------------
 
-From the OSG Connect login host **login.osgconnect.net**, the following tutorial
+From the OSG Connect login node, the following tutorial
 commands are available:
 
 	$ tutorial
@@ -21,7 +21,7 @@ commands are available:
 Install and setup a tutorial
 ----------------------------
 
-On the OSG Connect login host **login.osgconnect.net**, create a directory, cd
+On the OSG Connect login node, create a directory, cd
 to it, and invoke the command:
 
 	$ tutorial <tutorial-name>
@@ -29,7 +29,7 @@ to it, and invoke the command:
 Available tutorials
 -------------------
 
-The OSG Connect login host (**login.osgconnect.net**) has the examples
+The OSG Connect login nodes have the examples
 pre-installed. To see what is available:
 
 

@@ -17,7 +17,7 @@ destination. Files on remote systems are indicated using
 First, log in using your OSG Connect user id (username): 
 
 
-    $ ssh username@login.osgconnect.net
+    $ ssh username@loginNN.osgconnect.net
 
 
 Once logged in, change to the data directory, a link from your home area:
@@ -40,7 +40,7 @@ Now copy the file just created from Stash to our local system (Desktop or
 laptop):
 
 
-    $ scp username@login.osgconnect.net:~/data/my_hello_world .
+    $ scp username@loginNN.osgconnect.net:~/data/my_hello_world .
 
 
 As you can see, `scp` uses similar syntax to the `cp` command. To copy
@@ -49,7 +49,7 @@ directories using `scp`, you'll just pass the (recursive) `-r` option to it. 
 For example:
 
 
-    $ scp -r username@login.osgconnect.net:~/data/my-directory .
+    $ scp -r username@loginNN.osgconnect.net:~/data/my-directory .
 
 
 More Information

@@ -30,27 +30,12 @@ correctly.
 ## Compilation Server
 
 Regardless of whether you statically or dynamically compile your application,
-you should compile your application on `login.osgconnect.net`.  This will ensure
+you should compile your application on your assigned login node.  This will ensure
 that your application is built on an environment that is similar to the majority
 of the compute nodes on OSG.  In addition, you will need to add the following
 require to your HTCondor submit file: `(OpSysAndVer =?= "SL7") || (OpSysAndVer
 =?= "RHEL7") || (OpSysAndVer =?= "Centos6")` to make sure that your binaries run 
 systems that have compatible linux distributions.
-
-## Choosing a compiler
-
-By default, applications will be built using gcc 4.4.7 when compiled on
-`login.osgconnect.net`.  If you use this compiler, you will not have to make any
-compiler related changes to your job script.  
-
-Alternatively, if you need to use a more recent version of gcc, there are
-several versions available using the distributed environment modules.  In order
-to use these versions of gcc, you just need to load the appropriate module (e.g.
-`module load gcc/4.9.2`).  After doing this, you can build your application as
-you normally do.  The version of gcc that you loaded should automatically be
-selected.  However, if you do this, you will also need to change your job script
-to load the appropriate gcc module before running your application.
-
 
 ## Libraries
 
@@ -69,3 +54,4 @@ your job scripts to load the appropriate modules before running you application.
 
 ## Assistance
 If you have questions or need assistance, please contact <support@osgconnect.net>.
+
