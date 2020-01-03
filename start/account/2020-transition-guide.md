@@ -19,7 +19,7 @@ the previous login nodes (`login02`, `login03`) will still be possible, however,
 recommend migrating workloads and data as soon as possible in light of the following 
 deadlines: 
 
-* **January 15, 2020**: Job submission on the old login nodes (`login02`, `login03`) will be disabled. 
+* **January 22, 2020**: Job submission on the old login nodes (`login02`, `login03`) will be disabled. 
 * **March 31, 2020**: Data will be deleted from the old login nodes and the previous Stash data locations. 
 
 ## Action Items
