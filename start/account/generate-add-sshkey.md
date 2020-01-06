@@ -90,7 +90,7 @@ can use a key without a passphrase, but this is not recommended.
 
 ## Step 2: Add the public SSH key to login node
 
-To add your public key to the OSG Connect log in server: 
+To add your public key to the OSG Connect log in node: 
 
 1. Go to www.osgconnect.net and sign in with your CILogin. 
 

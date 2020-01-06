@@ -68,7 +68,7 @@ more information about this process, see this guide: [Start or Join a Project in
 
 Once your account is created and you're approved, you can generate and upload an 
 SSH key to the OSG Connect website; this key will be duplicated on the OSG Connect 
-login server so that you're able to log in there and submit jobs. 
+login node so that you're able to log in there and submit jobs. 
 
 To see how to generate and add an SSH key, please visit this 
 page: [Step by step instructions to generate and adding an SSH key][ssh-key]
@@ -76,8 +76,8 @@ page: [Step by step instructions to generate and adding an SSH key][ssh-key]
 ## Log In
 
 Once you've gone through the steps above, you should be able to log in to the OSG Connect 
-login server. See the second half of the SSH key guide for details: 
-[How to Log Into the OSG Connect Login Server][ssh-key]
+login node. See the second half of the SSH key guide for details: 
+[How to Log Into the OSG Connect Login Node][ssh-key]
 
 ## Overview of access procedure and accounting
 
@@ -109,6 +109,6 @@ the submit node for the OSG Connect job scheduler, or to transfer data in and
 out of Stash. Submit node logins are typically via Secure Shell (SSH) using a
 password or a public key. We'll discuss how to connect further on.
 
-[ssh-key]: 12000065612
-[projects]: 12000065615
+[ssh-key]: 12000027675
+[projects]: 5000634360
 

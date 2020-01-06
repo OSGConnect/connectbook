@@ -32,7 +32,7 @@ information can be seen on your profile here:
 ![Identify Login Node](https://raw.githubusercontent.com/OSGConnect/connectbook/master/images/find_osgconnect_login_node.png "OSG Connect Profile")
 
 1. Log into the new login node and set your primary project. Follow the instructions 
-at the bottom of the OSG project guide: [Join and Use a Project in OSG Connect](12000065615)
+at the bottom of the OSG project guide: [Join and Use a Project in OSG Connect](5000634360)
 
         $ connect project
 
