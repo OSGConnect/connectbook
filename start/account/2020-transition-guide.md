@@ -28,7 +28,6 @@ Follow these steps to ensure you have your data and can continue to submit jobs:
 1. Log into https://osgconnect.net. Confirm that your information is still correct, 
 and find the name of the login node that you've been assigned. The login node 
 information can be seen on your profile here: 
-
 ![Identify Login Node](https://raw.githubusercontent.com/OSGConnect/connectbook/master/images/find_osgconnect_login_node.png "OSG Connect Profile")
 
 1. Log into the new login node and set your primary project. Follow the instructions 
