@@ -67,12 +67,6 @@ A sample job submit file for the CPU case is:
     # job's status, success, and resource consumption.
     Log = $(Cluster).$(Process).log
     
-    # Send the job to Held state on failure. 
-    on_exit_hold = (ExitBySignal == True) || (ExitCode != 0)
-    
-    # Periodically retry the jobs every 1 hour, up to a maximum of 5 retries.
-    periodic_release =  (NumJobStarts < 5) && ((CurrentTime - EnteredCurrentStatus) > 60*60)
-    
     # QUEUE is the "start button" - it launches any jobs that have been
     # specified thus far.
     Queue 1
@@ -117,12 +111,6 @@ to make sure you land on a GPU new enough to support the feature set TensorFlow 
     # The LOG file is where HTCondor places information about your
     # job's status, success, and resource consumption.
     Log = $(Cluster).$(Process).log
-    
-    # Send the job to Held state on failure. 
-    on_exit_hold = (ExitBySignal == True) || (ExitCode != 0)
-    
-    # Periodically retry the jobs every 1 hour, up to a maximum of 5 retries.
-    periodic_release =  (NumJobStarts < 5) && ((CurrentTime - EnteredCurrentStatus) > 60*60)
     
     # QUEUE is the "start button" - it launches any jobs that have been
     # specified thus far.
