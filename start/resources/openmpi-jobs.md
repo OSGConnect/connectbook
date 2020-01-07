@@ -49,9 +49,6 @@ Then, a job submit file:
     error = job.error.$(Cluster).$(Process)
     log = job.log.$(Cluster).$(Process)
 
-    on_exit_hold = (ExitBySignal == True) || (ExitCode != 0)
-    PeriodicRelease = ( (CurrentTime - EnteredCurrentStatus) > 300 ) && (NumJobStarts < 5)
-
     queue 1
 
 
