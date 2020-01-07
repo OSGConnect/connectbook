@@ -29,6 +29,7 @@ contain a basic set of tools and libraries. These include:
 
 You can indicate that your job should use one of these images by making the following 
 changes to your submit file: 
+
 * Using `Requirements = HAS_SINGULARITY == TRUE` will trigger the scripts that 
 load a Singularity image from CVMFS and run your job inside. 
 * `+SingularityImage` will tell the job which Singularity image to use for the job. If you 
