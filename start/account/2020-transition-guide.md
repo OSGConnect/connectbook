@@ -47,11 +47,11 @@ at the bottom of the OSG project guide: [Join and Use a Project in OSG Connect](
 
 1. Update your workloads for the new filesystem layout. Due to the change in paths (no 
 more `/stash`, no `/local-scratch`), you may need to modify submit files and scripts 
-to work correctly on the new log in nodes. Please read our updated guide on the new filesystem layout, how the different filesystems should be used, and quotas. 
+to work correctly on the new log in nodes. If you are using stashcp, paths will need to be updated. Please read our updated guide on the new filesystem layout, how the different filesystems should be used, and quotas.
    
       * [New Data Management Guide](12000002985)
    
-    In short, jobs should run from `$HOME` and can use `/public` for data access.
+    In short, jobs should run from `$HOME` and can use `/public` for data access. 
 
 ## Other Questions
 
