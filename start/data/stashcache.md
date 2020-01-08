@@ -37,11 +37,11 @@ First load the stashcp module:
 
 Then transfer your data:
 	
-	stashcp /osgconnect/<userid>/<stash_data_file_path> <target_location>
+	stashcp /osgconnect/public/<userid>/<stash_data_file_path> <target_location>
 
-Note how the `/public` directory is mapped to the `/osgconnect` namespace under StashCache. For example, if the data file is located at `/public/<userid\>/samples/sample01.dat`, then the `stashcp` command to transfer this file into your current working directory on the compute host would be:
+Note how the `/public` directory is mapped to the `/osgconnect/public` namespace under StashCache. For example, if the data file is located at `/public/<userid\>/samples/sample01.dat`, then the `stashcp` command to transfer this file into your current working directory on the compute host would be:
 
-	stashcp /osgconnect/<userid>/samples/sample01.dat  .
+	stashcp /osgconnect/public/<userid>/samples/sample01.dat  .
 
 ### Transfer job output to StashCache
 
@@ -54,11 +54,11 @@ To transfer job output to StashCache after your analysis:
 2) Use `stashcp` to transfer the data files back to StashCache. You will need to prepend your stash location with `stash://` as follows:
 
 	module load stashcache
-	stashcp <file_name> stash:///osgconnect/<userid>/<stash_data_file_path>
+	stashcp <file_name> stash:///osgconnect/public/<userid>/<stash_data_file_path>
 
 For example, if you wish to transfer `output.dat` to the directory `/public/<userid\>/output/`. then the `stashcp` command would be:
 
-	stashcp output.dat stash:///osgconnect/<userid\>/output/output.txt
+	stashcp output.dat stash:///osgconnect/public/<xuserid>/output/output.txt
 
 ___
 

@@ -1,7 +1,7 @@
 [title]: - "Is the Open Science Grid for You?"
 
 
-Test. The [Open Science Grid][osg] is a nationally-funded consortium of computing resources 
+The [Open Science Grid][osg] is a nationally-funded consortium of computing resources 
 at more than one hundred institutional partners that, together, offer a strategic 
 advantage for computing work that can be run as numerous short tasks. 
 
