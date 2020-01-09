@@ -9,8 +9,8 @@ In January 2020, OSG Connect will transition to a new user management system, ne
 1. **New Website** The OSG Connect website, where you log in to manage your account details will look 
 different and present information in a clearer way. 
 1. **New Login Node** Instead of using a generic login node name (`login.osgconnect.net`), you will be assigned a 
-specific, numbered login node to use, which will appear on your OSG Connect website profile. 
-1. **New Filesystem** The filesystem layout is different on the new login nodes. `$HOME` is no longer a shared filesystem, `/local-scratch` no longer exists, and `/public` is a large shared space accessible via stashcp, http, and CVMFS.
+specific, numbered login node to use, which will appear on your OSG Connect website profile. We’ve given you time to transition to the new login nodes, and recommend migrating workloads and data as soon as possible in light of the deadlines listed further below.
+1. **New Filesystem** The filesystem layout is different on the new login nodes. `$HOME` is no longer a shared filesystem, `/local-scratch` no longer exists (use `$HOME` instead, for all job submission), and /public is a large shared space for larger job data that will need to be to be accessible to jobs via stashcp, http, and CVMFS.
 
 ## Deadlines
 
@@ -18,8 +18,10 @@ Access to the previous login nodes (`login02`, `login03`) will still be possible
 recommend migrating workloads and data as soon as possible in light of the following 
 deadlines: 
 
-* **January 22, 2020**: Job submission on the old login nodes (`login02`, `login03`) will be disabled. 
+* **January 9, 2020**: stashcp will no longer be able to access files in the old /stash folder, files must be in /public
+* **January 22, 2020**: Submission of new jobs will be disabled on the old login nodes (login, login02, login03) to encourage users to transition to the new login nodes. (Already-submitted jobs and DAGs will be able to continue and complete up until March 31.)
 * **March 31, 2020**: Data will be deleted from the old login nodes and the previous Stash data locations. 
+* **After March 31, the existing login nodes and all data in their /home, /local-scratch, and previous Stash locations will be removed.** Because it may take time to move your data, it is important to begin transitioning as soon as possible!
 
 ## Action Items
 
