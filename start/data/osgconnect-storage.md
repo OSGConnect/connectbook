@@ -8,9 +8,10 @@ needed for running jobs:
     home: /home/<username>
     public: /public/<username>
 
-Each is controlled with a quota (see our notes below about how to request a quota change) and should be treated as temporary storage for _active_ job execution. OSG Connect has no routine backup of data in these locations, and users should remove old data after jobs complete, in part, to make room for future submissions. In general, OSG Connect users are
+In general, OSG Connect users are
  responsible for managing data in these folders and for using appropriate mechanisms 
- for delivering data to/from jobs, as detailed below. 
+ for delivering data to/from jobs, as detailed below. Each is controlled with a quota (see our notes below about how to request a quota change) and should be treated as temporary storage for _active_ job execution. OSG Connect has no routine backup of data in these locations, and users should remove old data after jobs complete, in part, to make room for future submissions. f you think you'll need more space for a set of concurrently-queued jobs, even after cleaning up old data, please send a 
+ request to [support@osgconnect.net](mailto:support@osgconnect.net)!
 
 For additional data information, see also the "Data Storage and Transfer" section of 
 our [FAQ](5000634384#data-storage-and-transfer). 
