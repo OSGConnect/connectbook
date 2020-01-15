@@ -38,9 +38,7 @@ Disk utilization for alice:
 /home     : [ #                      ] 4% (2147/53687 MB)
 ```
 
-> ### \*Contact [support@osgconnect.net](mailto:support@osgconnect.net) if you think you 
-> need a quota increase! We can support very large amounts of data; the listed quotas 
-> are an initial value for getting started. 
+> ### \*Contact [support@osgconnect.net](mailto:support@osgconnect.net) if you think you need a quota increase! We can support very large amounts of data; the listed quotas are an initial value for getting started. 
 
 ### More Information About `/home`
 
