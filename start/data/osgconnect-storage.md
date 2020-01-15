@@ -97,7 +97,6 @@ tools described [below](transferring-input-data-to-jobs).
 | **StashCache**        |  < 10 GB   | `stashcp` | Transfer large output into `/public`|  [StashCache](https://support.opensciencegrid.org/support/solutions/articles/12000002775) |
 | **GridFTP or UNIX tools**        |  < 50 GB   | `gfal-copy`, `rsync`, `scp`, etc. | Typically used by experts with large work flows. Please contact us if you're interested.|
 
-
 ### External data transfer
 
 |  | **Data Size**| **Tools** |**Details**|
