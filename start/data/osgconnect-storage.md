@@ -26,8 +26,8 @@ Here is a summary of the two main data locations available on OSG Connect, with 
 details following. 
 
 |   |  **Purpose** | **Network mounted** | **Backed Up** | **Initial Quota\*** |
-|:--------:|:----------------|:------|:------:|:------:|:------:|
-|  `home`  | Storage of submit files, input files <100MB each, and per-job output up to a 1GB.  Jobs should be submitted from this folder. | No | No | 50 GB |
+|:--------:|:------|:------:|:------:|:------:|
+|  `/home`  | Storage of submit files, input files <100MB each, and per-job output up to a 1GB.  Jobs should be submitted from this folder. | No | No | 50 GB |
 |  `/public`  | Staging large input files (100MB-50GB, each) for publicly-accessible download into jobs (using HTTP or stashcp, see below) and large output files (1-10GB) | Yes | No | 500 GB |
 
 You can see your quota status in the login node login message: 
@@ -52,7 +52,7 @@ contact [support@osgconnect.net](mailto:support@osgconnect.net) about a quota in
 ### More Information About `/public`
 
 User directories within `/public` are meant for staging job files too large for 
-HTCondor and file transfer (input greater than 100MB, output greater than 1GB). The initial disk quota on home is 500 GBs. Again, contact [support@osgconnect.net](mailto:support@osgconnect.net) if you 
+HTCondor file transfer (input greater than 100MB, output greater than 1GB). The initial disk quota on home is 500 GBs. Again, contact [support@osgconnect.net](mailto:support@osgconnect.net) if you 
 will need an increase for concurrently running work.
 
 Files placed within a user's '/public' directory **are publicly accessible**, 
@@ -78,14 +78,15 @@ tools described [below](transferring-input-data-to-jobs).
 
 
 ## Transferring Data to/from Jobs
+
 ### Transferring input data to jobs
 
-|         | **Recommended Files Sizes**| **Command** | **Purpose** | **Details**|
-|:--------:|:------|:-----|:----------|:------|
-| **HTCondor File Transfer** | < 100 MB input, <1GB output  | `transfer_input_files` | General-use transfer of job input from within `/home`. |[HTCondor File Transfer](https://support.opensciencegrid.org/support/solutions/articles/5000639787)|
-| **HTTP** |  < 1 GB   | `wget`, `curl`, or `rsync`  | For large input files from within `/public`. |[HTTP Access](https://support.opensciencegrid.org/support/solutions/articles/5000639798)|
-| **OSG's StashCache** |  > 1 GB, < 50 GB    | `stashcp` | for large input files from within `/public`| [StashCache](https://support.opensciencegrid.org/support/solutions/articles/12000002775)|
-| **GridFTP** |  > 1 GB    | `gfal-copy` | input staged in /public | Typically used by experts with large work flows. Please contact us if you're interested. |
+|         | **Recommended Files Sizes**| **Where Data is Placed** | **Command** | **Purpose** | **Details**|
+|:--------:|:------|:-----|:-----|:----------|:------|
+| **HTCondor File Transfer** | < 100 MB | `/home` | `transfer_input_files` | General-use transfer of job input from within `/home`. |[HTCondor File Transfer](https://support.opensciencegrid.org/support/solutions/articles/5000639787)|
+| **HTTP** |  < 1 GB | `/public` | `wget`, `curl`, or `rsync`  | For large input files from within `/public`. |[HTTP Access](https://support.opensciencegrid.org/support/solutions/articles/5000639798)|
+| **OSG's StashCache** | > 1 GB, < 50 GB  | `/home` | `stashcp` | for large input files from within `/public`| [StashCache](https://support.opensciencegrid.org/support/solutions/articles/12000002775)|
+| **GridFTP** |  > 1 GB | `/public` | `gfal-copy` | input staged in /public | Typically used by experts with large work flows. Please contact us if you're interested. |
 
 
 ### Transferring output data from jobs
