@@ -62,15 +62,15 @@ You can transfer data using scp or rsync. See the section on [Transferring Data 
 
 **How public is /public?**
 
-The data under /public is discoverable and readable by anyone in the world. Data in /public is made public over http/https (via `https://stash.osgconnect.net/public/`) and mirrored to `/cvmfs/stash.osgstorage.org/osgconnect/public/` (for use with `stashcp`) which is mounted on a large number of systems around the world.
+The data under your `/public` location is discoverable and readable by anyone in the world. Data in `/public` is made public over http/https (via `https://stash.osgconnect.net/public/`) and mirrored to `/cvmfs/stash.osgstorage.org/osgconnect/public/` (for use with `stashcp`) which is mounted on a large number of systems around the world.
 
 **Is there any support for private data?**
 
-If you do not want your data to be downloadable by anyone, and it’s small enough for HTCondor file transfer, then it should be staged in your /home directory and transferred to jobs with HTCondor file transfer (transfer_input_files, in the submit file). If it cannot be public (cannot use http or stashcp for job delivery), and is too large for HTCondor file transfer or the quota, then it’s not a good fit for the “open” environment of the Open Science Grid, and another resource will likely be more appropriate. As a reminder, if the data is not being used for active computing work on OSG Connect, it should not be stored on OSG Connect systems, and our data storage locations are not backed up or suitable for project-duration storage.
+If you do not want your data to be downloadable by anyone, and it’s small enough for HTCondor file transfer, then it should be staged in your /home directory and transferred to jobs with HTCondor file transfer (transfer_input_files, in the submit file). If it cannot be public (cannot use http or stashcp for job delivery), and is too large for HTCondor file transfer, then it’s not a good fit for the “open” environment of the Open Science Grid, and another resource will likely be more appropriate. As a reminder, if the data is not being used for active computing work on OSG Connect, it should not be stored on OSG Connect systems, and our data storage locations are not backed up or suitable for project-duration storage.
 
 **Can I get a quota increase?**
 
-Contact support@osgconnect.net if you think you'll need a quota increase for a set of concurrently-running jobs. We can suppport very large amounts of data, and the default quotas are a starting point.
+Contact support@osgconnect.net if you think you'll need a quota increase for `/home` or `/public` to accommodate a set of concurrently-running jobs. We can suppport very large amounts of data, and the default quotas are a starting point.
 
 **Will I get notified about hitting quota limits?**
 
