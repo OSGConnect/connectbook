@@ -31,14 +31,15 @@ Follow these steps to ensure you have your data and can continue to submit jobs:
 and find the name of the login node that you've been assigned. The login node 
 information can be seen on your profile here: 
 ![Identify Login Node](https://raw.githubusercontent.com/OSGConnect/connectbook/master/images/find_osgconnect_login_node.png "OSG Connect Profile")
-> **IMPORTANT** If you log into the OSG Connect website with your institutional credentials 
-and it asks you to sign up for OSG / create a profile, do NOT create a new profile. Instead, do the following: 
-> * close the OSG Connect page and go to http://globus.org. 
-> * Log in with your Globus ID and go to "Account" on the left-hand menu.
-> * If your institutional identity is already listed on that Account page, [email the OSG Connect support team](mailto:support@osgconnect.net)
-> * If your institutional identity is NOT listed on the account page, select "Link Another Identity" on the 
-> right and add your institutional identity. Then go back to the OSG Connect website and try to 
-> log in again. 
+
+	> **IMPORTANT** If you log into the OSG Connect website with your institutional credentials 
+	and it asks you to sign up for OSG / create a profile, do NOT create a new profile. Instead, do the following: 
+	> * close the OSG Connect page and go to http://globus.org. 
+	> * Log in with your Globus ID and go to "Account" on the left-hand menu.
+	> * If your institutional identity is already listed on that Account page, [email the OSG Connect support team](mailto:support@osgconnect.net)
+	> * If your institutional identity is NOT listed on the account page, select "Link Another Identity" on the 
+	> right and add your institutional identity. Then go back to the OSG Connect website and try to 
+	> log in again. 
 
 1. Log into the new login node and set your primary project. Follow the instructions 
 at the bottom of the OSG project guide: [Join and Use a Project in OSG Connect](5000634360)
