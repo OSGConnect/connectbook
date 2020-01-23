@@ -31,6 +31,8 @@ service which asks you what your home institution is. (If you've used CILogon
 before it may already know your home institution and skip this step.) Locate
 your institution in the list, or type its name to find matches. 
 
+> **No Institutional Identity?**
+> 
 > If you don't have an institutional identity or can't find your institution 
 > on the provided list, either (separately) sign up for a Globus ID and follow 
 > the link for that option on this page, or contact the OSG Connect support 
@@ -45,6 +47,13 @@ your own institution's local sign-in screen. You've probably used it before,
 and if it looks familiar that's because it's exactly the same web site.  Sign in
 using your campus credentials. When done, you'll return automatically to the
 OSG Connect portal and can carry on with signup.
+
+> **Returning to OSG Connect**?
+> 
+> If you already have an OSG Connect account and are not being taken to your 
+> profile page after logging in with your institution's credentials, 
+> see our [transition guide](12000065909#action-items) for 
+> how to proceed.
 
 After continuing, and allowing certain permissions in the next screen, you'll be 
 asked to create a profile and save changes. If this works successfully, you should 
