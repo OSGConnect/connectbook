@@ -10,7 +10,7 @@ needed for running jobs:
 
 In general, OSG Connect users are
  responsible for managing data in these folders and for using appropriate mechanisms 
- for delivering data to/from jobs, as detailed below. Each is controlled with a quota (see our notes below about how to request a quota change) and should be treated as temporary storage for _active_ job execution. OSG Connect has no routine backup of data in these locations, and users should remove old data after jobs complete, in part, to make room for future submissions. f you think you'll need more space for a set of concurrently-queued jobs, even after cleaning up old data, please send a 
+ for delivering data to/from jobs, as detailed below. Each is controlled with a quota (see our notes below about how to request a quota change) and should be treated as temporary storage for _active_ job execution. OSG Connect has no routine backup of data in these locations, and users should remove old data after jobs complete, in part, to make room for future submissions. If you think you'll need more space for a set of concurrently-queued jobs, even after cleaning up old data, please send a 
  request to [support@osgconnect.net](mailto:support@osgconnect.net)!
 
 For additional data information, see also the "Data Storage and Transfer" section of 
@@ -50,13 +50,13 @@ contact [support@osgconnect.net](mailto:support@osgconnect.net) about a quota in
 ### More Information About `/public`
 
 User directories within `/public` are meant for staging job files too large for 
-HTCondor file transfer (input greater than 100MB, output greater than 1GB). The initial disk quota on home is 500 GBs. Again, contact [support@osgconnect.net](mailto:support@osgconnect.net) if you 
+HTCondor file transfer (input greater than 100MB, output greater than 1GB). The initial disk quota of `/public` is 500 GBs. Again, contact [support@osgconnect.net](mailto:support@osgconnect.net) if you 
 will need an increase for concurrently running work.
 
 Files placed within a user's '/public' directory **are publicly accessible**, 
 discoverable and readable by anyone. Data is made public over http/https, stashcp and mirrored to `/cvmfs/stash.osgstorage.org/osgconnect/public/` which is mounted on a large number of systems around the world.
 
-Jobs should **not** be submitted from the `/public folder`. Instead, jobs should be 
+Jobs should **not** be submitted from the `/public` folder. Instead, jobs should be 
 submitted from `/home` and files in `/public` can be accessed by a job using the 
 tools described [below](transferring-input-data-to-jobs). 
 
@@ -79,7 +79,7 @@ tools described [below](transferring-input-data-to-jobs).
 
 ### Transferring input data to jobs
 
-This table summarizes the options for sending input files from the OSG Connect login node to the execution node where a job is running. This assumes that you have already uploaded these input files from your own computer to the OSG Connect login node. 
+This table summarizes the options for sending input files from the OSG Connect login node to the execution node where a job is running. This assumes that you have already uploaded these input files from your own computer to your OSG Connect login node. 
 
 |         | **Recommended Files Sizes**| **Where Data is Placed** | **Command** | **Purpose** | **Details**|
 |:--------:|:------|:-----|:-----|:----------|:------|
