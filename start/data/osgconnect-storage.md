@@ -81,11 +81,11 @@ tools described [below](transferring-input-data-to-jobs).
 
 This table summarizes the options for sending input files from the OSG Connect login node to the execution node where a job is running. This assumes that you have already uploaded these input files from your own computer to your OSG Connect login node. 
 
-|         | **Recommended Files Sizes**| **Where Data is Placed** | **Command** | **Purpose** | **Details**|
+|         | **Recommended File Sizes**| **Where Data is Placed** | **Command** | **Purpose** | **Details**|
 |:--------:|:------|:-----|:-----|:----------|:------|
-| **HTCondor File Transfer** | < 100 MB | `/home` | `transfer_input_files` | General-use transfer of job input from within `/home`. |[HTCondor File Transfer](https://support.opensciencegrid.org/support/solutions/articles/5000639787)|
-| **HTTP** |  < 1 GB | `/public` | http address in `transfer_input_files`  | For input files >100 MB, <1GB, especially if shared across many jobs. |[HTTP Access](https://support.opensciencegrid.org/support/solutions/articles/5000639798)|
-| **OSG's StashCache** | > 1 GB, < 50 GB  | `/public` | `stashcp` | For the largest input files, always from within `/public`| [StashCache](https://support.opensciencegrid.org/support/solutions/articles/12000002775)|
+| **HTCondor File Transfer** | <100 MB per file; <500 MB per job | `/home` | `transfer_input_files` | General-use transfer of job input from within `/home`. |[HTCondor File Transfer](https://support.opensciencegrid.org/support/solutions/articles/5000639787)|
+| **HTTP** |  <1 GB per file | `/public` or non-OSG web server | http address in `transfer_input_files`  | For input files 100MB-1GB, especially if shared across many jobs. |[HTTP Access](https://support.opensciencegrid.org/support/solutions/articles/5000639798)|
+| **OSG's StashCache** | >1 GB per file; <50 GB per job | `/public` | `stashcp` | For the largest input files, only from within `/public`| [StashCache](https://support.opensciencegrid.org/support/solutions/articles/12000002775)|
 | **GridFTP** |  > 1 GB | `/public` | `gfal-copy` | input staged in /public | Typically used by experts with large work flows. Please contact us if you're interested. |
 
 
