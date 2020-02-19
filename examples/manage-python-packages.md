@@ -6,22 +6,24 @@
 
 ## Overview
 
-This guide will show you to how run jobs that use Python in the Open Science Grid. Our 
-first example will show how to submit a job that runs a script that only uses base Python.  
-If your jobs use specific Python packages, the second half of this guide will show you 
-how to install these packages to your home directory and add them to a basic Python job 
-submission.  
+This guide will show you two examples of how to run jobs that use Python in the Open Science Grid.
+The first example will demonstrate how to submit a job that uses base Python.
+The second example will demonstrate the workflow for jobs that use specific Python packages, including
+how to install a custom set of Python packages to your home directory and how to add them to a Python job submission.  
 
-Before we begin, you should know which Python packages you need to run your job.  
+Before getting started, you should know which Python packages you need to run your job.  
 
-## Running Python on the Open Science Grid
+## Running Base Python on the Open Science Grid
+Several installations of base Python are available via the [Open Science Grid's Software 
+Module System][module-guide]. To see what Python versions are available on the Open Science Grid
+run `module avail` while connected to our login node. 
 
-You can see the versions of Python available in the [Open Science Grid's Software 
-Module System][module-guide], by running `module avail` on the submit node. 
+### Create a bash script to run Python 
+To submit jobs that use a module to run base Python, first create a bash executable - for
+this example we'll call it `run_py.sh` - which will include commands to first
+load the appropriate Python module and then run our Python script called `myscript.py`.  
 
-To use a module, you "load" it and then use the `python` command to run a Python script. 
-However, we're not actually going to do this on the submit node. Instead, we'll put 
-these commands into a script, so they can be executed wherever the job runs: 
+For example, `run_py.sh`:
 
 	#!/bin/bash
 
@@ -35,16 +37,15 @@ these commands into a script, so they can be executed wherever the job runs:
 > If you need to use Python 2, load the appropriate module and 
 > replace the `python3` above with `python2`.
 
-In order to submit this script as part of a job, you'll need to create an HTCondor 
+### Create an HTCondor submit file
+In order to submit `run_py.sh` as part of a job, we need to create an HTCondor 
 submit file. This should include the following: 
 
-* The `bash` script above will be the job's "executable" - for this example we'll call it `run_py.sh`. 
-* The Python script (`myscript.py`, above) will need to be transferred to wherever the job runs, and should be 
-listed in "transfer_input_files".
-* It's also important to include the requirement(s) that request OSG servers that 
-have access to the base Python module used in the wrapper script. 
+* `run_py.sh` specified as the executable    
+* use `transfer_input_files` to bring our Python script `myscript.py`to wherever the job runs   
+* include requirements that request OSG nodes with access to base Python modules   
 
-All together, a submit file will look something like this: 
+All together, the submit file will look something like this: 
 
 	universe 	= vanilla     
 	executable 	= run_py.sh
@@ -67,39 +68,38 @@ All together, a submit file will look something like this:
 Once everything is set up, the job can be submitted in the usual way, by running 
 the `condor_submit` command with the name of the submit file. 
 
-## Adding Python Packages to a Job
+## Running Python Jobs That Use Additional Pacakges
+It's likely that you'll need additional Python packages (aka libraries) that are not
+present in the base Python installations made available via modules. This portion of the
+guide describes how to create a Python "virtual environment" that contains your packages
+and which can be included as part of your jobs. 
 
-It's likely that you'll need additional Python packages that aren't present in 
-the default OSG software modules.  This portion of the guide describes how to 
-create a Python "virtual environment" that contains your packages and can be 
-included as part of your jobs. 
-
-### Install needed Python packages
-
-First, load the Python module that you want to use to run jobs. 
+### Install Python packages
+While connected to your login node, load the Python module that you want to use to run jobs: 
 
      $ module load python/3.7.0
 
-Now, we will go through the steps to create a virtual environment.  The first 
-command creates the base environment. **You can swap out `my_env` for a more descriptive name like `scipy` or `word-analysis`**.
+Next, create a virtual environment. The first command creates a base environment:
 
      $ python3 -m venv my_env
+     
+> You can swap out `my_env` for a more descriptive name like `scipy` or `word-analysis`.
 
-This creates a directory `my_env` in the current working directory 
+This creates a directory `my_env` in the current working directory
 with sub-directories `bin/`, `include/`, and `lib/`.   
 
-We now need to _activate_ the environment and install our packages to it.  
+Then _activate_ the environment and install packages to it.  
 
     $ source my_env/bin/activate
 
-Notice how your command line prompt changes to: 
+Notice how our command line prompt changes to: 
 
     (my_env)$
 
-The activation process redefines some of the shell variables 
+The activation process redefines some of the shell variables
 such as PYTHON_PATH, LIBRARY_PATH etc. 
 
-After activation, we are ready to add the packages with `pip` 
+After activation, packages can be installed using `pip` 
 which is a tool to install Python packages. 
 
     (my_env)$ pip install numpy
@@ -114,24 +114,20 @@ you are done, you can leave the virtual environment:
     (my_env)$ deactivate
 
 The above command resets the shell environmental variables and returns you to the 
-normal shell prompt (the prefix `my_env` disappears)
-
-    $ 
+normal shell prompt (with the prefix `my_env` removed).
 
 All of the packages that were just installed should be contained in a sub-directory 
-of the `my_env` directory.  To use these packages in a job, we will transfer the 
-entire `my_env` directory as a tar.gz file.  So our final step is to compress the 
+of the `my_env` directory.  To use these packages in a job, the  entire `my_env` directory
+will be transfered as a tar.gz file.  So our final step is to compress the 
 directory, as follows: 
 
 	$ tar czf my_env.tar.gz my_env
 
 
-### Executable script and submit file
-
-When our job actually runs, we will want to include the same steps as the previous 
-shell script (load the Python module, run Python), but will need to add a few 
-steps to set-up the virtual environment we just created. That will look 
-something like this: 
+### Create executable script to use installed packages
+In addition to loading the appropriate Python module, we will need to add a few
+steps to our bash executable to set-up the virtual environment we
+just created. That will look something like this: 
 
 	#!/bin/bash
 	
@@ -150,8 +146,10 @@ something like this:
 	# Deactivate environment 
 	deactivate
 
-The submit file for this job will be similar to above, but you need to make sure 
-to add the `tar.gz` file with your environment to the list of "transfer_input_files: 
+### Modify the HTCondor submit file to transfer Python packages
+The submit file for this job will be similar to the base Python job submit file shown above
+with one addition - we need to include `my_env.tar.gz` in the list of files specified by `transfer_input_files`.
+As an example: 
 
 	universe 	= vanilla     
 	executable 	= run_py.sh
@@ -172,7 +170,6 @@ to add the `tar.gz` file with your environment to the list of "transfer_input_fi
 	queue 1
 
 ## Other Considerations
-
 This guide mainly focuses on the nuts and bolts of running Python, but it's important 
 to remember that additional files needed for your jobs (input data, setting files, etc.) 
 need to be transferred with the job as well. See our [Introduction to Data Management 
@@ -185,7 +182,7 @@ than what you requested, make sure you adjust your requests.
 ## Getting Help
 
 For assistance or questions, please email the OSG User Support
- team  at [support@opensciencegrid.org](mailto:support@opensciencegrid.org) or visit the [help desk and community forums](http://support.opensciencegrid.org).
+team  at [support@opensciencegrid.org](mailto:support@opensciencegrid.org) or visit the [help desk and community forums](http://support.opensciencegrid.org).
 
 [module-guide]: 12000048518
 [data-intro]: 12000002985
