@@ -1,50 +1,73 @@
 [title]: - "Steer Your Jobs with HTCondor Job Requirements"
 
-By default, your HTCondor job on OSG will match any available compute slot. This
-is fine for very generic jobs, but many users have one or more requirements on
-the environment the job will work in. You can limit where your jobs go by
-defining requirements in your job submit file. Requirements is an expression, so
-you can use logical operators to combine multiple requirements. The requirment
-expression can be used in combination with a few basic attributes to specify
-memory and disk requirements. For example, the following will run the jobs only
-on 64 bit RHEL 7 machines, with access to the "modules" command, and with more
-than 10 GBs of disk space:
+By default, your jobs will match any available spot in the OSG. This is fine
+for very generic jobs, however in some cases a job may have one or more system
+requirements in order to complete successfully. For instance, your job may need to run
+on a node with a specific operating system.
+
+HTCondor provides several options for "steering" your jobs to appropriate
+nodes and system environments. The `request_cpus`, `request_memory`, and `request_disk`
+submit file attributes should be used to specify the hardware needs of your jobs.
+Please see our guides [Multicore Jobs](https://support.opensciencegrid.org/support/solutions/articles/5000653862-multicore-jobs) and [Large Memory Jobs](https://support.opensciencegrid.org/support/solutions/articles/5000652304-large-memory-jobs)
+for more details. HTCondor also provides a `requirements` attribute and feature-specific
+attributes that can be added to your submit files to target specific environments in
+which to run your jobs. This guide will focus on these additional environment-specific
+submit file attributes.   
+
+### Requirements
+
+The `requirements` attribute is formatted as an expression, so you can use logical
+operators to combine multiple requirements where `&&` is used for AND and
+`||` used for OR. For example, the following `requirements` statement will direct
+jobs only to 64 bit RHEL (Red Hat Enterprise Linux) 7 nodes, with access to the "modules" command.
 
     requirements = OSGVO_OS_STRING == "RHEL 7" && Arch == "X86_64" && HAS_MODULES == True
-    request_cpus = 1
-    request_memory = 2 GB
-    request_disk = 10 GB
 
-We still have some older RHEL 6 machines available. If you have code which
-can run on either RHEL 6 or 7, you can use "or":
+Alternatively, if you have code which can run on either RHEL 6 or 7, you can use OR:
 
     requirements = (OSGVO_OS_STRING == "RHEL 6" || OSGVO_OS_STRING == "RHEL 7") && Arch == "X86_64" && HAS_MODULES == True
-    request_cpus = 1
-    request_memory = 2 GB
-    request_disk = 10 GB
+
+Note that parentheses placement is important for controling how the logical operations
+are interpreted by HTCondor.
  
-Another common requirement is to land on a node which has CVMFS. We recommend
-that you use the revision attribute. The current revision can be found by
-running:
-
-	/usr/bin/attr -g revision /cvmfs/oasis.opensciencegrid.org
-
-Then the requirements would be:
+Another common requirement is to land on a node which has CVMFS.
+Then the `requirements` would be:
 
 	requirements = CVMFS_oasis_opensciencegrid_org_REVISION >= 3983
 
-There are many attributes that you can use. Below is a list of common
-attributes. You can check values for an attribute with:
+As shown in the above example, when specifying a CVMFS requirement, we recommend
+that you use the REVISION attribute. To determine which REVISION to specify
+you can run the following command while connected to your login node:
 
-	condor_status -pool flock.opensciencegrid.org -af {ATTR_NAME}
+	$ /usr/bin/attr -g revision /cvmfs/oasis.opensciencegrid.org
 
-- **HAS_SINGULARITY** - Boolean specifying if you want to land on
-  nodes supporting Singularity containers.
+### Additional Feature-Specific Attributes
+There are many attributes that you can use with `requirements`. To see what values
+you can specify for a given attribute you can run the following command while
+connected to your login node:
 
-- **HAS_MODULES** - Boolean specifying if you will be able to use
+	$ condor_status -pool flock.opensciencegrid.org -af {ATTR_NAME} | sort -u
+	
+For example, to see what values you can specify for the OSGVO_OS_VERSION attribute run:
+	
+	$ condor_status -pool flock.opensciencegrid.org -af OSGVO_OS_VERSION | sort -u
+	6
+	7
+	8
+	undefined
+
+This means that we can specify an OS version of `6`, `7`, `8`. Alternatively
+you will find many attrubites will take the boolean values `true` or `false`
+as shown in the HAS_MODULES example above.
+
+Below is a list of common attributes that you can include in your submit file `requirements` statement. 
+
+- **HAS_SINGULARITY** - Boolean specifying the need to use Singularity containers in your job.
+
+- **HAS_MODULES** - Boolean specifying the need to use modules in your job.
   _module load ..._ or not.
 
-- **OSGVO_OS_NAME** - the name of the operating system of the compute node. 
+- **OSGVO_OS_NAME** - The name of the operating system of the compute node. 
   The most common name is _RHEL_
 
 - **OSGVO_OS_VERSION** - Version of the operating system
@@ -55,22 +78,16 @@ attributes. You can check values for an attribute with:
 
 - **OSGVO_CPU_MODEL** - The CPU model identifier string as presented in
   /proc/cpuinfo
-- **CVMFS_oasis_opensciencegrid_org_REVISION** - This attribute is set
-  a the following /cvmfs file systems. The revision on the submit node
-  can be determined by running _attr -g revision /cvmfs/oasis.opensciencegrid.org/_
-  Note that dots in the path is replaced with underscores in the
-  attribute name.
-    - oasis.opensciencegrid.org
-    - stash.osgstorage.org
-    - icecube.opensciencegrid.org
-    - atlas.cern.ch
-    - cms.cern.ch
-    - ams.cern.ch
+- **CVMFS_oasis_opensciencegrid_org_REVISION** - Attribute specifying
+  the need to access specific oasis /cvmfs file system repositories. See the
+  example above for determining the appropriate REVISION number when using
+  this `requirements` attribute.
 
-- **CUDACapability** - For GPUs, specifies the CUDA compute capability.
+- **CUDACapability** - For GPU jobs, specifies the CUDA compute capability.
 
-- **HAS_SQUID** - Boolean specifying if the _OSG_SQUID_LOCATION_ environment
-  variable is set
+- **HAS_SQUID** - Boolean specifying the need for access to SQUID fileshare,
+  set to `true` if your job has the _OSG_SQUID_LOCATION_ environment
+  variable set
 
 - **HAS_TCSH** - Boolean specifying if the node has /bin/tcsh
 
@@ -96,5 +113,4 @@ attributes. You can check values for an attribute with:
     - /usr/lib64/libstdc++.so.6
     - /usr/lib64/libgtk-x11-2.0.so.0
     - /usr/lib64/libXt.so.6 
-
 
