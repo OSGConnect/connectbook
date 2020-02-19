@@ -19,7 +19,7 @@ submit file attributes.
 The `requirements` attribute is formatted as an expression, so you can use logical
 operators to combine multiple requirements where `&&` is used for AND and
 `||` used for OR. For example, the following `requirements` statement will direct
-jobs only to 64 bit RHEL 7 nodes, with access to the "modules" command.
+jobs only to 64 bit RHEL (Red Hat Enterprise Linux) 7 nodes, with access to the "modules" command.
 
     requirements = OSGVO_OS_STRING == "RHEL 7" && Arch == "X86_64" && HAS_MODULES == True
 
@@ -113,5 +113,4 @@ Below is a list of common attributes that you can include in your submit file `r
     - /usr/lib64/libstdc++.so.6
     - /usr/lib64/libgtk-x11-2.0.so.0
     - /usr/lib64/libXt.so.6 
-
 
