@@ -2,15 +2,19 @@
 
 [TOC]
 
-OSG has limited support for multicore jobs. These can be used for
-threaded or OpenMP applications. To request a multicore slot, simply use 
-the HTCondor *request_cpus* attribute in your submit file. Example:
+Please note, the OSG has limited support for multicore jobs. Multicore jobs
+can be submitted for threaded or OpenMP applications. To request multiple cores
+(aka cpus) use the HTCondor *request_cpus* attribute in your submit file. 
+
+Example:
 
     request_cpus = 8
 
-Multicore jobs can currently request up to 8 cores. Please note that
-you have to limit your code to the same number of cores. Do not use
-core auto-detection as it might detect cores not assigned to your job.
-If you request 8 cores from the scheduler, limit your code to 8
-threads as well.
+We recommend requesting a maximum of 8 cpus. 
+
+**Important considerations**    
+When submitting multicore jobs please note that you will also have to tell 
+your code or application to use the number of cpus requested in your submit 
+file. Do not use core auto-detection as it might detect more cores than what 
+were actually assigned to your job.
 
