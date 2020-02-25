@@ -1,4 +1,4 @@
-[title]: - "GRACC - OSG Accounting"
+[title]: - "OSG Accounting (GRACC)"
 
 [TOC] 
 
