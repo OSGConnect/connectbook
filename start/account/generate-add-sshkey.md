@@ -92,7 +92,7 @@ can use a key without a passphrase, but this is not recommended.
 
 To add your public key to the OSG Connect log in node: 
 
-1. Go to www.osgconnect.net and sign in with your CILogin. 
+1. Go to www.osgconnect.net and sign in with the institutional identity you used when requesting an OSG Connect account. 
 
 2. Click "Profile" in the top right corner.
 
