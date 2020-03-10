@@ -1,7 +1,7 @@
 [title]: - "Frequently Asked Questions"
 
-##Getting Started
-
+## Getting Started
+   
 **Who is eligible to become the user of OSG Connect?**
 
 Any researcher affiliated with a U.S. institution (college, university, national laboratory or research foundation) is eligible to become an OSG Connect user. Researchers outside of the U.S. with affiliations to U.S. groups may be eligible for membership if they are sponsored by a collaborator within the U.S. Researchers outside of the U.S. are asked to first
@@ -11,7 +11,8 @@ Any researcher affiliated with a U.S. institution (college, university, national
 
 Please follow the steps outlined in the [Sign Up process](http://osgconnect.net/signup). 
 
-##Software
+## Software
+   
 **What software packages are available?**
 
 The available software are listed [here](https://support.opensciencegrid.org/support/solutions/articles/12000048518). In general, we support most software that fits the distributed high thoroughput computing model. Additionally, we can add software upon request.
@@ -26,9 +27,10 @@ We only provide software that is freely distributable. At present, we do not hav
  
 **Can I request for system wide installation of the open source software useful for my research?**
 
-Yes. Please contact <support@osgconnect.net>.
-
-##Running Jobs
+Yes. Please contact <support@osgconnect.net>.  
+   
+## Running Jobs
+   
 **What type of computation is a good match or NOT a good match for OSG Connect?**
 
 It is to carefully check the computational requirements of your workflow. Please see our ["Is the Open Science Grid for You?"](http://support.opensciencegrid.org/solution/categories/5000131843/folders/5000209523/articles/5000632058-is-high-throughput-computing-for-you-) page for more details on how to determine if your work matches up well with OSG Connect's model.
@@ -44,9 +46,10 @@ Jobs are submitted via HTCondor scheduler. Please see our [QuickStart](http://su
 **How many jobs can I have in the queue?**
 
 The number of jobs that are submitted to the queue by any one user should not exceed 10,000. If you have more jobs than that, we ask that you include the following statement in your submit file: 
-`maxidle 2000`
-
-##Data Storage and Transfer
+`maxidle 2000`  
+   
+## Data Storage and Transfer
+   
 **What is the best way to process large volume of data?**
 
 Use the Stash data system to stage large volumes of data. Please refer the section [Data Solutions](http://support.opensciencegrid.org/support/solutions/folders/5000262152) for more details. 
@@ -70,7 +73,7 @@ If you do not want your data to be downloadable by anyone, and it’s small enou
 **Will I get notified about hitting quota limits?**
 
 The only place you can currently see your quota status is in the login messages.
-
+    
 ## Workflow Management
 
 **How do I run and manage complex workflows?**
@@ -81,7 +84,8 @@ For workflows that have multiple steps and/or multiple files to transfer, we adv
 
 We support and distribute DAGMan, Pegasus, and Swift for workflow management.
 
-##Workshops and Training
+## Workshops and Training
+   
 **Do you plan to offer training sessions and workshop?**
 
 We plan to offer workshops for the researchers on multiple locations, including an annual, week-long summer school for OSG users. Please check our [events page](https://support.opensciencegrid.org/support/solutions/5000161177) for further information about workshop dates and locations. 
