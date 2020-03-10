@@ -43,13 +43,13 @@ Jobs are submitted via HTCondor scheduler. Please see our [QuickStart](http://su
 
 **How many jobs can I have in the queue?**
 
-The number of jobs that are submitted to the queue by any one user should not exceed 10,000. If you have much more jobs than that, we ask that you include the following statement in your submit file: 
--maxidle 10000 ...  DAGMan will then maintain the 10k idle jobs for you.
+The number of jobs that are submitted to the queue by any one user should not exceed 10,000. If you have more jobs than that, we ask that you include the following statement in your submit file: 
+`maxidle 2000`
 
 ##Data Storage and Transfer
 **What is the best way to process large volume of data?**
 
-Use the Stash data system to store and process large volumes of data. Please refer the section [Data Solutions](http://support.opensciencegrid.org/support/solutions/folders/5000262152) for more details. 
+Use the Stash data system to stage large volumes of data. Please refer the section [Data Solutions](http://support.opensciencegrid.org/support/solutions/folders/5000262152) for more details. 
  
 **How do I transfer data from Stash to my system and vice versa?**
 
