@@ -1,0 +1,181 @@
+[title]: - "Docker and Singularity Containers"
+
+[TOC]
+
+Docker and Singularity are container systems that allow users full control 
+over their environment. You can create your own container image (a blueprint for 
+the running container) which your 
+job will execute within, or choose from a set of pre-defined images. 
+
+For jobs on OSG, it does not matter whether you provide a Docker or Singularity 
+image. Either is compatible with our system and can be used with little to 
+no modification. This is of course highly dependent on your workload. Please
+feel free to contact us at [support@osgconnect.net](mailto:support@osgconnect.net) if you have any questions. 
+
+## Using OSG Provided Singularity Images
+
+The Open Science Grid user support team maintains a small set of images, hosted in a distributed
+file system called [CVMFS](https://cernvm.cern.ch/portal/filesystem). These images
+contain a basic set of tools and libraries. These include: 
+
+|                     | **Image Location**                                                                 | **Defintion** | **Description** |
+|:--------------------|:-----------------------------------------------------------------------------------|:-------------:|:----------------|
+| **EL 6**            | /cvmfs/singularity.opensciencegrid.org/opensciencegrid/osgvo-el6:latest            | [GitHub](https://github.com/opensciencegrid/osgvo-el6)   | A basic Enterprise Linux (CentOS) 6 based image. This is currently our default image |
+| **EL 7**            | /cvmfs/singularity.opensciencegrid.org/opensciencegrid/osgvo-el7:latest            | [GitHub](https://github.com/opensciencegrid/osgvo-el7) | A basic Enterprise Linux (CentOS) 7 based image. |
+| **Ubuntu Xenial**   | /cvmfs/singularity.opensciencegrid.org/opensciencegrid/osgvo-ubuntu-xenial:latest  | [GitHub](https://github.com/opensciencegrid/osgvo-ubuntu-xenial) | A good image if you prefer Ubuntu over EL flavors |
+| **Ubuntu 18.04 (Bionic)**   | /cvmfs/singularity.opensciencegrid.org/opensciencegrid/osgvo-ubuntu-18.04:latest  | [GitHub](https://github.com/opensciencegrid/osgvo-ubuntu-18.04) | A good image if you prefer Ubuntu over EL flavors |
+| **TensorFlow**      | /cvmfs/singularity.opensciencegrid.org/opensciencegrid/tensorflow:latest           | [GitHub](https://github.com/opensciencegrid/osgvo-tensorflow) | Base on the TensorFlow base image, with a few OSG package added |
+| **TensorFlow GPU**  | /cvmfs/singularity.opensciencegrid.org/opensciencegrid/tensorflow-gpu:latest       | [GitHub](https://github.com/opensciencegrid/osgvo-tensorflow-gpu) | Used for running TensorFlow jobs on OSG GPU resources |
+
+You can indicate that your job should use one of these images by making the following 
+changes to your submit file: 
+
+* Using `Requirements = HAS_SINGULARITY == TRUE` will trigger the scripts that 
+load a Singularity image from CVMFS and run your job inside. 
+* `+SingularityImage` will tell the job which Singularity image to use for the job. If you 
+don't include this option, your job will use a default OSG Singularity image (currently EL 6). 
+
+For example, this is what a submit file might look like to run your job under EL7:
+
+    universe = vanilla
+    executable = job.sh
+	
+    Requirements = HAS_SINGULARITY == TRUE
+    +SingularityImage = "/cvmfs/singularity.opensciencegrid.org/opensciencegrid/osgvo-el7:latest"
+
+    output = out
+    error = err
+    log = log
+
+    queue
+
+## Using Custom Singularity Images
+
+OSG Connect provides tooling for users to create, publish and load custom images.
+This is useful if your job requires some very specific software setup. The general 
+process goes like this: 
+
+1. Create your own custom container image using **Docker** and push it to Docker Hub. 
+2. Add your Docker image to the Open Science Grid image repository. 
+3. Use the container image in jobs. 
+
+We will expand on each of these steps below. 
+
+### Creating a Container
+
+If you want to use an container image you have created yourself, the image
+should be defined as a Docker image and published in [Docker
+Hub](https://hub.docker.com/). The reason we use Docker as a source
+image repository is that it allows us to easily import the images into
+our own distribution system (see below). 
+
+See [this page][container-howto] for how to create a Docker image on your own computer and 
+push it to Docker Hub so it can be used by the Open Science Grid. 
+
+When creating the Docker image, you will give it with an 
+identifier with this format: `namespace/repository_name`
+This identifier will be used both to submit the Docker container to 
+the Open Science Grid repository and to run jobs. 
+
+### Submitting your Docker Container to the Open Science Grid Repository
+
+Once your Docker image has been published on Docker Hub, it needs to be 
+submitted to the CVMFS image repository (`/cvmfs/singularity.opensciencegrid.org/`), 
+which also hosts the OSG-provided default images. 
+
+To get your images included, please create a git pull request with the container 
+identifier in `docker_images.txt` in the
+[cvmfs-singularity-sync repository](https://github.com/opensciencegrid/cvmfs-singularity-sync), 
+or contact
+[support@osgconnect.net](mailto:support@osgconnect.net)
+and we can help you.
+
+Once your submission has been accepted, it will be automatically converted to a Singularity 
+image and pushed to the CVMFS Singularity repository.  Note: some 
+common Dockerfile features, like ENV and ENTRYPOINT, are ignored when the Docker 
+image is converted to a Singularity image. See our the "Special Cases" section of our 
+[how to guide][container-howto] for more details 
+of how to deal with this. 
+
+Once your container has been added to CVMFS, 
+if you update your original Docker image, new versions pushed to Docker Hub will
+automatically be detected and the version on the OSG (in the CVMFS filesystem)
+will be updated accordingly.
+
+### Using Your Container
+
+To use your container to run jobs, you will follow the same steps as above (under "Using OSG 
+Provided Singularity Images"), but will change the `+SingularityImage` option to 
+include your container identifier, like so: 
+
+    +SingularityImage = "/cvmfs/singularity.opensciencegrid.org/namespace/repository_name"
+
+For example, if my Docker Hub username was `alice` and I created a container called 
+`ncbi-blast`, my submit file might look like this: 
+
+    universe = vanilla
+    executable = job.sh
+	
+    Requirements = HAS_SINGULARITY == TRUE
+    +SingularityImage = "/cvmfs/singularity.opensciencegrid.org/alice/ncbi-blast"
+
+    output = out
+    error = err
+    log = log
+
+    queue
+
+
+## Frequently Asked Questions / Common Issues
+
+### I already have a Singularity container, not a Docker one
+
+Email the OSG Connect team: support@osgconnect.net
+
+### FATAL: kernel too old
+
+If you get a *FATAL: kernel too old* error, it means that the glibc version in the
+image is too new for the kernel on the host. You can work around this problem by
+specifying the minimum host kernel. For example, if you want to run the Ubuntu 18.04
+image, specfy a minimum host kernel of 3.10.0, formatted as 31000
+(major * 10000 + minor * 100 + patch):
+
+    Requirements = HAS_SINGULARITY == True && OSG_HOST_KERNEL_VERSION >= 31000
+
+### Exploring Images on the Submit Host
+
+Images can be explored interactively on the submit hosts by starting it
+in "shell" mode. The recommended command line, similar to how containers
+are started for jobs, is:
+
+    singularity shell \
+                --home $PWD:/srv \
+                --pwd /srv \
+                --bind /cvmfs \
+                --scratch /var/tmp \
+                --scratch /tmp \
+                --contain --ipc --pid \
+                /cvmfs/singularity.opensciencegrid.org/opensciencegrid/osgvo-ubuntu-xenial:latest
+
+### Learning More
+
+For 
+more information about Docker, please see:
+
+* [Docker Home Page](https://www.docker.com/)
+
+and  Singularity, please see:
+
+ * [Singularity Home Page](http://singularity.lbl.gov/)
+ 
+ Singularity has become the preferred containerization method in scientific computing. The following talk describes Singularity for scientific computing:
+
+<iframe width="560" height="315" src="//www.youtube.com/embed/DA87Ba2dpNM" frameborder="0" allowfullscreen></iframe>
+
+Derek Weitzel wrote a blog post about Singularity on OSG, which provides a good
+introduction on how to create images and run them, but does not cover all the
+functionality described further down:
+
+  * [Singularity on the OSG](https://djw8605.github.io/2017/01/12/singularity-on-the-osg/)
+
+[container-howto]: 12000058245
