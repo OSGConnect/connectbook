@@ -12,10 +12,11 @@ describe steps and important considerations for transferring your installed soft
 ## Important Considerations
 
 How you transfer your software via HTCondor will depend on the size and location of the executable binary or tar archive 
-that needs to be transferred along with your jobs. Only software files <100MB staged in your `/home` directory or files 
->100MB but <1GB staged in your `/public` directory should be transferred via HTCondor using the steps described below. Please see the [Introduction to Data Management on OSG Connect](https://support.opensciencegrid.org/support/solutions/articles/12000002985) guide for more information regarding our policies for staging files (data, software, etc.) in OSG Connect.  
+that needs to be transferred along with your jobs. Only software files <100MB staged in your `/home` directory or 
+files >100MB but <1GB staged in your `/public` directory should be transferred via HTCondor using the steps described below. Please see [Introduction to Data Management on OSG Connect](https://support.opensciencegrid.org/support/solutions/articles/12000002985) for more information regarding our policies for staging files (data, software, etc.) in OSG Connect.  
 
-Keep in mind that HTCondor will always transfer the script or executable binary that is specified as the `executable` in your submit. As such, it is not necessary to follow the steps below if your software is the designated executable in your submit file.  
+Keep in mind that HTCondor will always transfer the script or binary that is specified as the `executable` in your submit 
+file. Thus, it is not necessary to follow the steps below if your software is the designated executable in your submit file.  
 
 The steps and considerations described below also apply to transferring data, and other files, as described in the [Transfering Data With HTCondor](https://support.opensciencegrid.org/support/solutions/articles/5000639787) guide.
 
@@ -41,7 +42,7 @@ In addition to any software needed for your jobs, be sure to also include other 
 ## Transferring Software from `/public`
 
 Software executables and tar archives that are >100MB should be staged in your `/public` directory. Only software  
-located in `/public` that is <1GB should be transferred using `transfer_input_files` in your submit file. If you have software that is &gt;1GB please plan to use [SStashCache](https://support.opensciencegrid.org/support/solutions/articles/12000002775). 
+located in `/public` that is <1GB should be transferred using `transfer_input_files` in your submit file. If you have software that is >1GB please plan to use [StashCache](https://support.opensciencegrid.org/support/solutions/articles/12000002775). 
 
 Transferring software from `/public` using the `transfer_input_files` statement in your HTCondor submit file will occur via 
 an HTTP connection, for example:
@@ -50,7 +51,7 @@ an HTTP connection, for example:
 
 Where `username` refers to your OGS Connect username. 
 
-Precompiled binaries that are available on the web may also be transferred via HTTP using `transfer_input_files`, 
+Precompiled binaries that are available on the web may also be transferred via HTTP using `transfer_input_files`. 
 For example, Blast precompiled binaries are available from the NCBI at https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/ncbi-blast-2.10.0+-x64-linux.tar.gz. We can use HTCondor to transfer this tar archive of precompiled binaries (which is 222MB in size):
 
 	transfer_input_files = https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/ncbi-blast-2.10.0+-x64-linux.tar.gz
