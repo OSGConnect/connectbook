@@ -17,23 +17,37 @@ not only provides newer versions of software but provides the same modules acros
 
 ## See Available Modules on OSG Connect
 
-Use `module avail` to see available software applications and libraries:
-
+Use `module avail` to see all available software applications and libraries:
 
 	$ module avail
 	
-	--- /cvmfs/connect.opensciencegrid.org/modules/el7/spack/share/spack/lmod/linux-rhel7-x86_64/Core ---
-	autoconf/2.69-s                                     jdk/8u141-b15-x                    openssl/1.0.2n-c
-	automake/1.15.1-f                                   kbproto/1.0.7-x                    pango/1.41.0-python-2.7.14-j
-	bedtools2/2.27.1-s                                  libbsd/0.8.6-5                     pcre/8.41-x
-	binutils/2.29.1-y                                   libcerf/1.3-p                      perl/5.24.1-y
-	bison/3.0.4-d                                       libedit/3.1-20170329-n             pixman/0.34.0-q
-	boost/1.66.0-i                                      libffi/3.2.1-4                                
+        ------------------- /cvmfs/connect.opensciencegrid.org/modules/modulefiles/linux-rhel7-x86_64/Core -------------------
+        autoconf/2.69                             libiconv/1.15                       py-idna/2.5-py3.7            (D)
+        automake/1.16.1                           libjpeg-turbo/1.5.3                 py-ipaddress/1.0.18-py2.7
+        binutils/2.31.1-py2.7                     libjpeg-turbo/1.5.90         (D)    py-kiwisolver/1.0.1-py2.7
+        binutils/2.31.1-py3.7              (D)    libpciaccess/0.13.5                 py-kiwisolver/1.0.1-py3.7    (D)
+        bison/3.0.5-py2.7                         libpng/1.6.34                       py-lit/0.5.0-py2.7
+        bison/3.0.5                        (D)    libpthread-stubs/0.4                py-mako/1.0.4-py2.7
+        boost/1.68.0-py2.7                        libsigsegv/2.11                     py-markupsafe/1.0-py2.7
+        boost/1.68.0-py3.7                 (D)    libsm/1.2.2                         py-matplotlib/2.2.3-py2.7
+        bowtie2/2.3.4.1-py2.7                     libtiff/4.0.9                       py-matplotlib/3.0.0-py3.7    (D)
+        bullet3/2.87                              libtool/2.4.6                       py-nose/1.3.7-py2.7
+        bwa/0.7.17                                libx11/1.6.5                        py-numexpr/2.6.5-py2.7
+        bzip2/1.0.6                               libxau/1.0.8                        py-numexpr/2.6.5-py3.7       (D)
+        cairo/1.14.12-py2.7                       libxcb/1.13                         py-numpy/1.15.2-py2.7
+        cctools/7.0.8-py2.7                       libxdamage/1.1.4                    py-numpy/1.15.2-py3.7        (D)
+        cfitsio/3.450                             libxdmcp/1.1.2                      py-pandas/0.23.4-py2.7
+        charmpp/6.8.2                             libxext/1.3.3                       py-pandas/0.23.4-py3.7       (D)
 	
-	...
-   
+	... more modules ...
+	
 	Where:
-	(D):  Default Module
+        D:  Default Module
+        
+        Use "module spider" to find all possible modules.
+        Use "module keyword key1 key2 ..." to search for all possible modules matching any of the "keys".
+
+Please know, there are more than 200 modules available to OSG Connect users. The above is **not** a complete list of all available modules
 
 In addition, additional software is available once the `gcc/6.2.0` module is loaded. 
 
