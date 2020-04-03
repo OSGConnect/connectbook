@@ -48,7 +48,7 @@ contact [support@osgconnect.net](mailto:support@osgconnect.net) about a quota in
 
 User directories within `/public` are meant **ONLY** for staging job files too large for 
 HTCondor file transfer (input greater than 100MB, output greater than 1GB). 
-**USERS SHOULD NEVER SUBMIT JOBS FROM WITHIN**, and should not list `/public` files in the 'transfer_input_files` line of a submit file, unless as an HTTP address (see more details below). Files place in `/public` should only be accessed by jobs using the below tools (see "Transferring Data To/From Jobs). Users violating these policies may lose the ability to submit jobs until their submissions are corrected.
+**USERS SHOULD NEVER SUBMIT JOBS FROM WITHIN**, and should not list `/public` files in the `transfer_input_files` line of a submit file, unless as an HTTP address (see more details below). Files place in `/public` should only be accessed by jobs using the below tools (see "Transferring Data To/From Jobs). Users violating these policies may lose the ability to submit jobs until their submissions are corrected.
 
 The initial disk quota of `/public` is 500 GBs. Contact [support@osgconnect.net](mailto:support@osgconnect.net) if you 
 will need an increase for concurrently running work, after cleaning up all data from past jobs. 
