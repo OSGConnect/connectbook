@@ -38,13 +38,31 @@ For a working example on how to use this in a submit file, and additional applic
 please see [Job 3 of the OSG Connect Quickstart guide]
 (https://support.opensciencegrid.org/support/solutions/articles/5000633410-osg-connect-quickstart#job-3-submitting-jobs-concurrently)
 
+### Submitting Multiple Jobs with a Single Script
+
+The easiest way to submit multiple jobs from a single submit script is to follow 
+queue line in the submit script with a number. For example, if we edit the `queue`
+line to read:
+
+	queue 100
+	
+HTCondor will then submit 100 **processes** within 1 **cluster**. Each of these 
+*processes* will have the same *cluster* ID. but will each have their own unique 
+*process* ID. Checkout the Handling Output section for more information on how 
+to use these IDs to uniquely tag output and job logs.
+
+The queue command can also be used to queue a list of values from an input file 
+or list. For more details on the different possibilities for the `queue` command, 
+visit [UW-Madsion CHTC's Documentation](http://chtc.cs.wisc.edu/multiple-jobs.shtml)
+
 ### Disk Usage
 
-Each OSG Connect user is granted 500 GB of storage in their `/public` directories. 
-This may seem like a lot, but when running many jobs this can fill quickly. As the 
-number of jobs submitted simultaneously increases, so will storage usage on 
-the connect login nodes. For example, if a single job creates 1 GB of output, running 
-1000 such jobs will generate approximately 1 TB of output. 
+Each OSG Connect user is granted 100 GB of storage in their `/home` directory and 
+500 GB of storage in their `/public` directories. This may seem like a lot, but 
+when running many jobs this can fill quickly. As the number of jobs submitted 
+simultaneously increases, so will storage usage on the connect login nodes. For 
+example, if a single job creates 1 GB of output, running 1000 such jobs will 
+generate approximately 1 TB of output. 
 
 To prevent errors or workflow interruption, carefully consider disk usage for your jobs.
 By default, HTCondor will transfer back any new files created inside the jobs working 
