@@ -15,7 +15,8 @@ Please follow the steps outlined in the [Sign Up process](http://osgconnect.net/
    
 **What software packages are available?**
 
-The available software are listed [here](https://support.opensciencegrid.org/support/solutions/articles/12000048518). In general, we support most software that fits the distributed high thoroughput computing model. Additionally, we can add software upon request.
+In general, we support most software that fits the distributed high throughput computing model. Users are encouraged to download and install their own software. For some software, we support distributed software modules listed [here](https://support.opensciencegrid.org/support/solutions/articles/12000048518). Software can be added to the modules upon request. 
+
  
 **How do I access a specific software application?**
 
