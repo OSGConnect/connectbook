@@ -46,7 +46,8 @@ Jobs are submitted via HTCondor scheduler. Please see our [QuickStart](http://su
 **How many jobs can I have in the queue?**
 
 The number of jobs that are submitted to the queue by any one user should not exceed 10,000. If you have more jobs than that, we ask that you include the following statement in your submit file: 
-`maxidle 2000`  
+`max_idle  = 2000`  
+
    
 ## Data Storage and Transfer
    
