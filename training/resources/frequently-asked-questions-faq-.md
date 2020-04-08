@@ -33,11 +33,13 @@ Yes. Please contact <support@osgconnect.net>.
    
 **What type of computation is a good match or NOT a good match for OSG Connect?**
 
-It is to carefully check the computational requirements of your workflow. Please see our ["Is the Open Science Grid for You?"](http://support.opensciencegrid.org/solution/categories/5000131843/folders/5000209523/articles/5000632058-is-high-throughput-computing-for-you-) page for more details on how to determine if your work matches up well with OSG Connect's model.
+OSG Connect is a high throughput computing system. You can get the most of out OSG Connect resources by breaking up a 
+single large computational task into many smaller tasks for the fastest overall turnaround. This approach can be 
+invaluable in accelerating your computational work and thus your research. Please see our ["Is the Open Science Grid for You?"](https://support.opensciencegrid.org/support/solutions/articles/5000632058) page for more details on how to determine if your work matches up well with OSG Connect's model.
 
 **What job scheduler is being used on OSG Connect?**
 
-We use HTCondor to schedule and run jobs.
+We use use the task scheduling software called HTCondor to schedule and run jobs.
  
 **How do I submit a computing job?**
 
@@ -46,7 +48,7 @@ Jobs are submitted via HTCondor scheduler. Please see our [QuickStart](http://su
 **How many jobs can I have in the queue?**
 
 The number of jobs that are submitted to the queue by any one user should not exceed 10,000. If you have more jobs than that, we ask that you include the following statement in your submit file: 
-`maxidle 2000`  
+`max_idle = 2000`  
    
 ## Data Storage and Transfer
    
@@ -54,9 +56,9 @@ The number of jobs that are submitted to the queue by any one user should not ex
 
 Use the Stash data system to stage large volumes of data. Please refer the section [Data Solutions](http://support.opensciencegrid.org/support/solutions/folders/5000262152) for more details. 
  
-**How do I transfer data from Stash to my system and vice versa?**
+**How do I transfer my data to and from OSG Connect?
 
-You can transfer data using scp or rsync. See the section on [Transferring Data to OSG Connect](http://support.opensciencegrid.org/support/solutions/folders/5000260918) for more details.
+You can transfer data using scp or rsync. See [Using scp To Transfer Files To OSG Connect](https://support.opensciencegrid.org/support/solutions/articles/5000634376) for more details.
 
 **How public is /public?**
 
