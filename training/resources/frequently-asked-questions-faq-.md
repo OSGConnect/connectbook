@@ -15,11 +15,12 @@ Please follow the steps outlined in the [Sign Up process](http://osgconnect.net/
    
 **What software packages are available?**
 
-The available software are listed [here](https://support.opensciencegrid.org/support/solutions/articles/12000048518). In general, we support most software that fits the distributed high thoroughput computing model. Additionally, we can add software upon request.
+In general, we support most software that fit the distributed high throughput computing model. Users are encouraged to download and install their own software. For some software, we support distributed software modules listed [here](https://support.opensciencegrid.org/support/solutions/articles/12000048518). Software can be added to the modules upon request. 
+
  
 **How do I access a specific software application?**
 
-We have implemented modules within OSG Connect to manage the software that is available to users. Modules allow for easy access to a number of software and version options. Our [Accessing Software using Distributed Environment Modules](https://support.opensciencegrid.org/support/solutions/articles/12000048518-accessing-software-using-distributed-environment-modules) page provides more details on how to use modules in OSG Connect.
+We have implemented modules within OSG Connect to manage the software that is available to users. Modules allow for easy access to a number of software and version options. Our [Accessing Software using Distributed Environment Modules](https://support.opensciencegrid.org/support/solutions/articles/12000048518) page provides more details on how to use modules in OSG Connect.
  
 **Are there any restrictions on installing commercial softwares?**
 
@@ -43,13 +44,14 @@ We use use the task scheduling software called HTCondor to schedule and run jobs
  
 **How do I submit a computing job?**
 
-Jobs are submitted via HTCondor scheduler. Please see our [QuickStart](http://support.opensciencegrid.org/support/solutions/articles/5000633410-osg-connect-quickstart) guide for more details on submitting and managing jobs.
+Jobs are submitted via HTCondor scheduler. Please see our [QuickStart](http://support.opensciencegrid.org/support/solutions/articles/5000633410) guide for more details on submitting and managing jobs.
 
 **How many jobs can I have in the queue?**
 
 The number of jobs that are submitted to the queue by any one user should not exceed 10,000. If you have more jobs than that, we ask that you include the following statement in your submit file: 
+
 `max_idle = 2000`  
-   
+
 ## Data Storage and Transfer
    
 **What is the best way to process large volume of data?**
@@ -80,7 +82,7 @@ The only place you can currently see your quota status is in the login messages.
 
 **How do I run and manage complex workflows?**
 
-For workflows that have multiple steps and/or multiple files to transfer, we advise using a workflow management system. A workflow management system allows you to define different computational steps in your workflow and indicate how inputs and outputs should be transferred between these steps. Once you define a workflow, the workflow management system will then run your workflow, automatically retrying failed jobs and transferrring files between different steps.
+For workflows that have multiple steps and/or multiple files to, we advise using a workflow management system. A workflow management system allows you to define different computational steps in your workflow and indicate how inputs and outputs should be transferred between these steps. Once you define a workflow, the workflow management system will then run your workflow, automatically retrying failed jobs and transferrring files between different steps.
 
 **What workflow management systems are recommended on OSG?**
 
