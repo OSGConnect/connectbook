@@ -16,7 +16,6 @@ Please follow the steps outlined in the [Sign Up process](http://osgconnect.net/
 **What software packages are available?**
 
 In general, we support most software that fit the distributed high throughput computing model. Users are encouraged to download and install their own software. For some software, we support distributed software modules listed [here](https://support.opensciencegrid.org/support/solutions/articles/12000048518). Software can be added to the modules upon request. 
-
  
 **How do I access a specific software application?**
 
@@ -58,7 +57,7 @@ The number of jobs that are submitted to the queue by any one user should not ex
 
 Use the Stash data system to stage large volumes of data. Please refer the section [Data Solutions](http://support.opensciencegrid.org/support/solutions/folders/5000262152) for more details. 
  
-**How do I transfer my data to and from OSG Connect?
+**How do I transfer my data to and from OSG Connect?**
 
 You can transfer data using scp or rsync. See [Using scp To Transfer Files To OSG Connect](https://support.opensciencegrid.org/support/solutions/articles/5000634376) for more details.
 
