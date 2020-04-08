@@ -34,7 +34,8 @@ Yes. Please contact <support@osgconnect.net>.
    
 **What type of computation is a good match or NOT a good match for OSG Connect?**
 
-It is to carefully check the computational requirements of your workflow. Please see our ["Is the Open Science Grid for You?"](http://support.opensciencegrid.org/solution/categories/5000131843/folders/5000209523/articles/5000632058-is-high-throughput-computing-for-you-) page for more details on how to determine if your work matches up well with OSG Connect's model.
+It is important to carefully check the computational requirements of your workflow. Please see our ["Is the Open Science Grid for You?"](http://support.opensciencegrid.org/solution/categories/5000131843/folders/5000209523/articles/5000632058-is-high-throughput-computing-for-you-) page for more details on how to determine if your work matches up well with OSG Connect's model.
+
 
 **What job scheduler is being used on OSG Connect?**
 
