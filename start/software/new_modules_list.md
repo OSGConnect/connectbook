@@ -68,9 +68,9 @@ For example:
 
 Finally, `module help` will give you more detailed information.
 
-## How To Use Environment Modules in Jobs
+## Use Environment Modules in Jobs
 
-### Executable script
+### Add module commands to executable script
 
 To use environment modules within a job, use the same `module load` command
 described above inside your job's main "executable" to load your software 
@@ -82,27 +82,21 @@ and then run it.  For example:
 	python myscript.py
 
 
-### Submit file requirements
+### Set appropriate submit file requirements
 
 Not all resources available through OSG Connect support distributed environment modules.  In order to make
-sure that the jobs you submit run on resources that do support distributed environment modules, you will need to add
+sure that the jobs you submit run on resources that that have access to OSG Connect modules, you will need to add
 the following condition to the requirements in your HTCondor job submission file. We recommend the following requirements:
 
 	Requirements = (HAS_MODULES =?= true) && (OSGVO_OS_STRING == "RHEL 7") && (OpSys == "LINUX")
 	
-	
-or 
+or if you already have other requirements specified and need to append the OASIS requirement:
 
 	Requirements = [Other requirements ] && (HAS_MODULES =?= true) && (OSGVO_OS_STRING == "RHEL 7") && (OpSys == "LINUX")
-
-if you already have other requirements specified and need to append the OASIS requirement.
-
-Jobs submitted with the HTCondor requirement given above will automatically have the module system set up for them when run.  
 
 If you are willing to run into potential RHEL6 vs RHEL7 incompatibilities in order to gain access to the maximum amount of resources, you can use the following requirements:
 
 	Requirements = (HAS_MODULES =?= true) && (OpSys == "LINUX")
-	
 	
 or 
 
