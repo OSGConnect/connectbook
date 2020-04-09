@@ -53,7 +53,8 @@ to use these IDs to uniquely tag output and job logs.
 
 The queue command can also be used to queue a list of values from an input file 
 or list. For more details on the different possibilities for the `queue` command, 
-visit [UW-Madsion CHTC's Documentation](http://chtc.cs.wisc.edu/multiple-jobs.shtml)
+visit [UW-Madison CHTC's Documentation](http://chtc.cs.wisc.edu/multiple-jobs.shtml)
+
 
 ### Disk Usage
 
