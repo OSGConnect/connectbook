@@ -27,10 +27,11 @@ More details about using modules in OSG Connect can be found
 
 Some software may be available as a precompiled binary or prebuilt executable which provides a quick 
 and easy way to run a program without the need for installation from source code. Binaries and executables 
-are software files that are ready to run as is, however there are several important considerations 
-for using precompiled binaries in OSG Connect: 1.) only binary files compiled against a Linux operating 
-are suitable for use in OSG, 2.) some softwares have system and hardware dependencies that must be met 
-in order to run properly, and 3.) ...
+are software files that are ready to run as is, however binaries should always be tesed beforehand. 
+There also are several important considerations for using precompiled binaries in OSG Connect: 1.) only binary 
+files compiled against a Linux operating are suitable for use in OSG 2.) some softwares have system and 
+hardware dependencies that must be met in order to run properly and 3.) the available binaries may not have been 
+compiled with the feaures or configuration needed for your work.
 
 ### Using Java JAR files
 
@@ -42,7 +43,7 @@ JAR files extremely portable and are ready to run as-is using Java.
 For some users it may be necessary or advantageuos to install their own software. This will be the case when
 your software is not available as a module or compatible precompiled binary, and/or when your work would benefit from 
 additional throughput that cannot be acheived with modules alone. More information about how to install 
-your own software can be found at 
+your own software from source code can be found at 
 [Compiling Application for OSG Connect](https://support.opensciencegrid.org/support/solutions/articles/5000652099). 
 Be sure to review our 
 [Introduction to Data Management on OSG Connect](https://support.opensciencegrid.org/support/solutions/articles/12000002985) 
