@@ -7,11 +7,11 @@
 ## Overview
 
 Due to the distributed configuration of the OSG, more often than not, your jobs will need to bring along a copy 
-(i.e. transfer a copy) of data, code, packages, software, ect. from the login node where the job is submitted 
+(i.e. transfer a copy) of data, code, packages, software, etc. from the login node where the job is submitted 
 to the execute node where the job will run. This requirement applies to any and all files that are needed to 
-successfully execute and complete you job.
+successfully execute and complete your job.
 
-This guide will describe steps and important considerations for transferring your files that are <100MB specifically 
+This guide will describe steps and important considerations for transferring your files that are <100MB  
 via the HTCondor submit file.  
 
 ## Important Considerations
@@ -28,7 +28,7 @@ To transfer files from your `/home` directory use the `transfer_input_files` sta
 
 Multiple files can be specified using a comma-separated list, for example:
 
-	transfer_input_files = my_data.csv, my_software.csv, my_script.py
+	transfer_input_files = my_data.csv, my_software.tar.gz, my_script.py
 
 > When using `transfer_input_files` to transfer files located in `/home`, keep in mind that the path to the file is 
 > relative to the location of the submit file. If you have files located in a different `/home` subdirectory,
