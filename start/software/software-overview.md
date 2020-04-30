@@ -33,11 +33,6 @@ files compiled against a Linux operating are suitable for use in OSG 2.) some so
 hardware dependencies that must be met in order to run properly and 3.) the available binaries may not have been 
 compiled with the feaures or configuration needed for your work.
 
-### Using Java JAR files
-
-Some programs may be available as Java JAR files which are compressed archives of Java class files. 
-JAR files extremely portable and are ready to run as-is using Java.
-
 ## Install Your Own Software
 
 For some users it may be necessary or advantageuos to install their own software. This will be the case when
