@@ -59,6 +59,7 @@ class main(object):
 		}
 
 		data = {
+			'status': 2,
 			'title': title,
 			'description': html
 		}
