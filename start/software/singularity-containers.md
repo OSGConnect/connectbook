@@ -172,10 +172,4 @@ and  Singularity, please see:
 
 <iframe width="560" height="315" src="//www.youtube.com/embed/DA87Ba2dpNM" frameborder="0" allowfullscreen></iframe>
 
-Derek Weitzel wrote a blog post about Singularity on OSG, which provides a good
-introduction on how to create images and run them, but does not cover all the
-functionality described further down:
-
-  * [Singularity on the OSG](https://djw8605.github.io/2017/01/12/singularity-on-the-osg/)
-
 [container-howto]: 12000058245
