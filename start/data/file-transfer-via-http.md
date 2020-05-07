@@ -2,7 +2,7 @@
 [title]: - "Input File Transfer via HTCondor"
  
 
-# File Transfer via HTTP
+# Input File Transfer via HTTP
 
 
 ## Overview
