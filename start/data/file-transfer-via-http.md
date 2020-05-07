@@ -38,6 +38,7 @@ a combination of URLs and files from `/home` directory can be provided in a comm
 
 Files that are available on the web, and are <1GB in size, can also be transferred with your jobs via HTTP using 
 `transfer_input_files`. Examples of files that are available on the web that may be needed for your jobs include precompiled binaries (i.e. software), data in public repositories, etc. Like the example above, use a URL in comnbination with the `transfer_input_files` statement in your HTCondor submit file. For example, to have a copy of 
-the Blast precompiled binaries tranfserred with your jobs you can use: 
+the Blast precompiled binaries transferred with your jobs you can use: 
+
 
 	transfer_input_files = https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/ncbi-blast-2.10.0+-x64-linux.tar.gz
