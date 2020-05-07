@@ -27,7 +27,7 @@ More details about using modules in OSG Connect can be found
 
 Some software may be available as a precompiled binary or prebuilt executable which provides a quick 
 and easy way to run a program without the need for installation from source code. Binaries and executables 
-are software files that are ready to run as is, however binaries should always be tesed beforehand. 
+are software files that are ready to run as is, however binaries should always be tested beforehand. 
 There also are several important considerations for using precompiled binaries in OSG Connect: 1.) only binary 
 files compiled against a Linux operating are suitable for use in OSG 2.) some softwares have system and 
 hardware dependencies that must be met in order to run properly and 3.) the available binaries may not have been 
