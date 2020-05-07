@@ -18,7 +18,8 @@ via the HTCondor submit file.
 
 As described in the [Introduction to Data Management on OSG Connect](https://support.opensciencegrid.org/support/solutions/articles/12000002985) 
 any data, files, or even software that is <100MB should be staged in your `/home` directory on your login node. Files in your 
-`/home` directory can be transferred via your HTCondor submit file.
+`/home` directory can be transferred to jobs via your HTCondor submit file.
+
 
 ## Transfer Files From `/home` Using HTCondor
 
@@ -37,4 +38,3 @@ Multiple files can be specified using a comma-separated list, for example:
 > transfer_input_files = /home/username/path/to/my_software.tar.gz
 > ```
 > Where `username` refers to your OSG Connect username.
-
