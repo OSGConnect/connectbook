@@ -2,7 +2,8 @@
 [title]: - "File Transfer via HTCondor"
  
 
-# File Transfer via HTCondor
+# File Transfer via HTTP
+
 
 ## Overview
 
@@ -40,4 +41,3 @@ Files that are available on the web, and are <1GB in size, can also be transferr
 the Blast precompiled binaries tranfserred with your jobs you can use: 
 
 	transfer_input_files = https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/ncbi-blast-2.10.0+-x64-linux.tar.gz
-
