@@ -35,7 +35,7 @@ compiled with the feaures or configuration needed for your work.
 
 ## Install Your Own Software
 
-For some users it may be necessary or advantageuos to install their own software. This will be the case when
+For some users it may be necessary or advantageous to install their own software. This will be the case when
 your software is not available as a module or compatible precompiled binary, and/or when your work would benefit from 
 additional throughput that cannot be acheived with modules alone. More information about how to install 
 your own software from source code can be found at 
