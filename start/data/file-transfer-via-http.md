@@ -4,7 +4,6 @@
 
 # Input File Transfer via HTTP
 
-
 ## Overview
 
 Due to the distributed configuration of the OSG, more often than not, your jobs will need to bring along a copy 
