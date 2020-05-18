@@ -7,16 +7,22 @@ jobs:
   publish:
     # Job name is Greeting
     name: publish
-    # This job runs on Linux
+    # This job runs on Linux, but with our own container
     runs-on: ubuntu-latest
+    container:
+      image: docker://opensciencegrid/osgvo-ubuntu-18.04:latest
     steps:
-      - name: Run the update script
-        uses: docker://opensciencegrid/osgvo-ubuntu-18.04:latest
+      - uses: actions/checkout@v2
+      - name: Configuation file setup
         env:
           APIKEY: ${{ secrets.FRESHDESK_APIKEY }}
-        shell: bash
         run: |
+            pwd
+            cd /github/workspace
             echo "[api]" >update/apikey.ini
             echo "apikey = $APIKEY" >>update/apikey.ini
+      - name: Run the update script
+        run: |
+            cd /github/workspace
             ./update/update.sh
 
