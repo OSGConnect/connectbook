@@ -16,11 +16,10 @@ jobs:
           APIKEY: ${{ secrets.FRESHDESK_APIKEY }}
         run: |
             pwd
-            cd /github/workspace
+            ls -l
             echo "[api]" >update/apikey.ini
             echo "apikey = $APIKEY" >>update/apikey.ini
       - name: Run the update script
         run: |
-            cd /github/workspace
             ./update/update.sh
 
