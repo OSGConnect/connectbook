@@ -32,3 +32,4 @@ generator "$@" | while read file; do
 	relpath=$(cd "$dir"; git ls-files --full-name $(basename "$file"))
 	env "upstream=$upstream" "relpath=$relpath" $(dirname $0)/freshpush $(pwd)/$file
 done
+
