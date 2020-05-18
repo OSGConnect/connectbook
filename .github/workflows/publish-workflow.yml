@@ -1,9 +1,6 @@
-
 name: Publish to Freshdesk
-
 # This workflow is triggered on pushes to the repository.
 on: [push]
-
 jobs:
   publish:
     # Job name is Greeting
