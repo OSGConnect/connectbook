@@ -10,16 +10,17 @@ jobs:
     container:
       image: docker://opensciencegrid/osgvo-ubuntu-18.04:latest
     steps:
-      - uses: actions/checkout@v2
+      # use a custom git clone so we can do sub modules
       - name: Configuation file setup
         env:
           APIKEY: ${{ secrets.FRESHDESK_APIKEY }}
         run: |
-            pwd
-            ls -l
+            git clone https://github.com/OSGConnect/connectbook.git /tmp/connectbook
+            cd /tmp/connectbook
             echo "[api]" >update/apikey.ini
             echo "apikey = $APIKEY" >>update/apikey.ini
       - name: Run the update script
         run: |
+            cd /tmp/connectbook
             ./update/update.sh
 
