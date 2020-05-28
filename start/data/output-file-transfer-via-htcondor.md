@@ -9,8 +9,8 @@ When your OSG Connect jobs run, any output that gets generated is specifically w
 the execute node on which the job ran. In order to get access to your output files, a copy of 
 the output must be transferred back to your OSG Connect login node. 
 
-This guide will describe steps and important considerations specifically for transferring your 
-output files back to your `/home` directory on your OSG login node. 
+This guide will describe the necessary steps, along with important considerations, for transferring your 
+output files back to your `/home` directory on your OSG Connect login node. 
 
 ## Important Considerations
 
@@ -34,8 +34,8 @@ subdirectory so that HTCondor will not transfer these large files back to your `
 
 If your jobs will generate multiple output files, we recommend combining all output into a compressed 
 tar archive for convenience, particularly when transferring your results to your local computer from 
-your login node. To create a compressed tar archive, inlcude steps in your bash executable script 
-to first create a directory and move all of the output to this new directory, then create a tar archive. 
+your login node. To create a compressed tar archive, include commands in your your bash executable script 
+to create a new subdirectory, move all of the output to this new subdirectory, and create a tar archive. 
 For example:
 
 	#! /bin/bash
@@ -50,7 +50,7 @@ For example:
 The example above will create a file called `my_job.output.tar.gz` that contains all the output that 
 was moved to `my_output`. Be sure to create `my_job.output.tar.gz` in the top-level directory of where 
 your job executes and HTCondor will automatically transfer this tar archive back to your `/home` 
-directory of your login node.
+directory.
 
 
 ## Select Specific Output Files To Transfer to `/home` Using HTCondor
@@ -58,19 +58,19 @@ directory of your login node.
 As described above, HTCondor will, by default, transfer any files that are generated during the 
 execution of your job(s) back to your `/home` directory. If your job(s) will produce multiple output 
 files but you only need to retain a subset of these output files, we recommend deleting the unrequired 
-output files or moving the unrequired output files to a subdirectory as a step you your jobs bash 
-executable script -  only the output files that remain in the top-level directory will be transferred 
+output files or moving themto a subdirectory as a step in the bash 
+executable script of your job -  only the output files that remain in the top-level directory will be transferred 
 bask to your `/home` directory.
 
 In cases where a bash script is not used as the excutable of your job, you can use `transfer_output_files` 
-in you HTCondor submit file to specify individual output files that should be transferred back to your 
+in your HTCondor submit file to specify individual output files that should be transferred back to your 
 `/home` directory. For example, if you only wish to retain `my_job.output.csv` from a set of multiple 
 output files, use the following in your HTCondor submit file:
 
 	transfer_output_files = my_job.output.csv
 
 A note of caution when using the above: only this file will be transferred back to your `/home` directory 
-and if there is a typo in the file name your job will go on hold and all progress will be lost. Be sure 
+and if there is a typo in the file name, your job will go on hold and all progress will be lost. Be sure 
 to properly test the above submit file statement with your workflow before using for a large batch of jobs.
 
 ## Get Additional Options For Managing Job Output
