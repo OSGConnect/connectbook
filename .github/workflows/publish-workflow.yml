@@ -1,0 +1,26 @@
+name: Publish to Freshdesk
+# This workflow is triggered on pushes to the repository.
+on: [push]
+jobs:
+  publish:
+    # Job name is Greeting
+    name: publish
+    # This job runs on Linux, but with our own container
+    runs-on: ubuntu-latest
+    container:
+      image: docker://opensciencegrid/osgvo-ubuntu-18.04:latest
+    steps:
+      # use a custom git clone so we can do sub modules
+      - name: Configuation file setup
+        env:
+          APIKEY: ${{ secrets.FRESHDESK_APIKEY }}
+        run: |
+            git clone https://github.com/OSGConnect/connectbook.git /tmp/connectbook
+            cd /tmp/connectbook
+            echo "[api]" >update/apikey.ini
+            echo "apikey = $APIKEY" >>update/apikey.ini
+      - name: Run the update script
+        run: |
+            cd /tmp/connectbook
+            ./update/update.sh
+
