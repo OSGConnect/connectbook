@@ -15,7 +15,7 @@ jobs:
         env:
           APIKEY: ${{ secrets.FRESHDESK_APIKEY }}
         run: |
-            git clone https://github.com/OSGConnect/connectbook.git /tmp/connectbook
+            git clone --recursive https://github.com/OSGConnect/connectbook.git /tmp/connectbook
             cd /tmp/connectbook
             echo "[api]" >update/apikey.ini
             echo "apikey = $APIKEY" >>update/apikey.ini
