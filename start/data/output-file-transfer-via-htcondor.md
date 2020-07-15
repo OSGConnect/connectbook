@@ -58,7 +58,7 @@ directory.
 As described above, HTCondor will, by default, transfer any files that are generated during the 
 execution of your job(s) back to your `/home` directory. If your job(s) will produce multiple output 
 files but you only need to retain a subset of these output files, we recommend deleting the unrequired 
-output files or moving themto a subdirectory as a step in the bash 
+output files or moving them to a subdirectory as a step in the bash 
 executable script of your job -  only the output files that remain in the top-level directory will be transferred 
 bask to your `/home` directory.
 
