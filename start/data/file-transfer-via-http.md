@@ -1,5 +1,5 @@
 
-[title]: - "Input File Transfer via HTCondor"
+[title]: - "Input File Transfer via HTTP"
  
 
 # Input File Transfer via HTTP
