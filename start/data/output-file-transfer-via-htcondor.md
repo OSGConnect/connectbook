@@ -22,7 +22,7 @@ By default, HTCondor will transfer any files that are generated during the execu
 back to your `/home` directory, specifically to the directory from which the `condor_submit` 
 command was performed when submitting your job(s). However, this behavior only applies to files 
 in the top-level directory of where your job executes, meaning HTCondor will ignore any files 
-located in subdirectories (because HTCondor ignores subdirectories when determining what needs 
+created in subdirectories of the job's main working directory (because HTCondor ignores subdirectories when determining what needs 
 to be transferred after the job completes). Several options exist for modifying this default output 
 file transfer behavior - to learn more please contact us at [support@osgconnect.net](mailto:support@osgconnect.net).
 
