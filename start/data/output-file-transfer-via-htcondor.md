@@ -60,7 +60,7 @@ execution of your job(s) back to your `/home` directory. If your job(s) will pro
 files but you only need to retain a subset of these output files, we recommend deleting the unrequired 
 output files or moving them to a subdirectory as a step in the bash 
 executable script of your job -  only the output files that remain in the top-level directory will be transferred 
-bask to your `/home` directory.
+back to your `/home` directory.
 
 In cases where a bash script is not used as the excutable of your job, you can use `transfer_output_files` 
 in your HTCondor submit file to specify individual output files that should be transferred back to your 
