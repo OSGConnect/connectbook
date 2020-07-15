@@ -27,7 +27,7 @@ to be transferred after the job completes). Several options exist for modifying 
 file transfer behavior - to learn more please contact us at [support@osgconnect.net](mailto:support@osgconnect.net).
 
 **If your jobs use any input files >1GB that are transferred from your `/public` directory 
-using StacheCash, it is important that these files get deleted or moved to a 
+using StacheCash, it is important that these files get deleted from the job's working directory or moved to a 
 subdirectory so that HTCondor will not transfer these large files back to your `/home` directory.**
 
 ### Managing Multiple Output Files
