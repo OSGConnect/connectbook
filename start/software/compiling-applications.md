@@ -1,27 +1,28 @@
 [title]: - "Compiling Software for OSG Connect"
 
 # Compiling Software for OSG Connect
+
 ## Introduction
 
 Due to the distributed nature of the Open Science Grid, you will always need to 
-ensure that your jobs have access to the software that will be executed. This guide provides 
+ensure that your jobs have access to the software that will be executed in your jobs. This guide provides 
 useful information and examples for compiling and using your software in OSG Connect. 
 
 > *What is compiling?*
-> The process of compiling converts ASCII (i.e. human readable) code into binary, 
+> The process of compiling converts human readable code into binary, 
 > machine readable code that will execute the steps of the program. 
 
 ## Get software source code
 
 The first step to compiling your software is to locate and download the source 
-code for your software, being sure to select the version that you want. Source code 
+code, being sure to select the version that you want. Source code 
 will often be made available as a compressed tar archive which will need to be 
 extracted for before compilation.
 
 You should also carefully review the installation instructions provided by the 
 software developers. The installation instructions should include important 
 information regarding various options for configuring and performing the compilation. 
-Also carefully note any system dependencies (other software and libraries) that are 
+Also carefully note any system dependencies (hardware, other software, and libraries) that are 
 required for your software.
 
 ## Select the appropriate compiler and compilation options
@@ -30,14 +31,13 @@ A compiler is a program that is used to peform source code compilation. The GNU 
 Collection (GCC) is a common, open source collection of compilers with support for C, C++, 
 fotran, and other languages, and includes important libraries for supporting your compilation 
 and sometimes software executation. Your software compilation may require certain versions 
-of compilers which should be noted in the installtion instructions or system dependencies 
-documention. Currently the login nodes have `GCC 4.8.5` as the default version, but ...
+of a compiler which should be noted in the installtion instructions or system dependencies 
+documention. Currently the login nodes have `GCC 4.8.5` as the default version, but newer 
+versions of GCC may also be available - to learn more please contact <support@osgconnect.net>.
 
 CMake is a commonly used compilation platform. Your software may have dependencies for 
-specific `make` versions. Currently the login nodes have two versions of CMake, `3.12.3` 
+specific `cmake` versions. Currently the login nodes have two versions of CMake, `3.12.3` 
 and `3.13.0` available as [modules](https://support.opensciencegrid.org/support/solutions/articles/12000048518). 
-
-Most source code is written to write the compiled binaries to a default path.
 
 ### Static versus dynamic linking during compilation
 
@@ -46,15 +46,15 @@ known as libraries, for proper execution. The default behavior when compiling, i
 final binary to be "dynamically linked" to libraries that it depends on, such that when 
 the binary is executed, it will look for these library files on the system that it is 
 running on. Thus a copy of the appropriate library files will need to be available to your 
-software whenever it runs. OSG Connect users can transfer copies of libraries necessary 
-libraries with their jobs to manage such dependencies may not be supported by the node 
-that your jobs run on.
+software wherever it runs. OSG Connect users can transfer a copy of the necessary 
+libraries alog with with their jobs to manage such dependencies if not supported by the 
+execute node that your jobs run on.
 
-However, the option exists to "statically link" the library dependencies of your software 
-binary. By statically linking libraries during compilation, the library coded will be 
-directly packaged with your software binary. This signficantly reduces the execute node 
-system dependencies for running your software and can potentially allow you jobs to run
-on a greater proportion of OSG nodes.
+However, the option exists to "statically link" the library dependencies of your software. 
+By statically linking libraries during compilation, the library code will be 
+directly packaged with your software binary. By statically linking libraries during 
+compilation, the library code will always be available to your software and will help 
+your software to run on more execute nodes.
 
 To statically link libraries during compilation, use the `-static` flag when running `gcc`, 
 use `--enable-static` when running a `configure` script, or set your `LD_FLAGS` 
@@ -70,12 +70,9 @@ need to add these libraries to your `LIBRARY_PATH` environment variable before c
 your software. There may also be additional environment variables that will need to be 
 defined or modified for software compilation, this information should be provided 
 in the installtion instructions of your software. For any libraries added to `LIBRARY_PATH` 
-before software compilation, you'll likely also need to add these same libraries to 
+before software compilation, you'll also need to add these same libraries to 
 your `LD_LIBRARY_PATH` as a step in your job's executable bash script before executing 
 your software.
-
-The Octopus complilation example below includes an example of installing 
-and using user-installed libraries for software compilation and execution.
 
 The [distributed environment modules system](https://support.opensciencegrid.org/support/solutions/articles/12000048518) 
 available on OSG Connect also provides several commonly used software libraries 
@@ -100,15 +97,15 @@ nodes with specific operating systems, for instance:
 	requirements = (OpSysAndVer =?= "SL7") || (OpSysAndVer=?= "RHEL7") || (OpSysAndVer =?= "Centos7")
 
 Software installation typically includes three steps: 1.) configuration, 2.) compilation, and 3.) 
-"installation" which places the compiled code in specific location. In most cases install instructions, 
+"installation" which places the compiled code in specific location. In most cases, 
 these steps will be achieved with the following commands:
 
 	./configure
 	make
 	make install
 
-Most software is written to install to a default location, however your OSG Connect 
-account is not authorized to write to these default system locations. Instead, you will want to 
+**Most software is written to install to a default location, however your OSG Connect 
+account is not authorized to write to these default system locations.** Instead, you will want to 
 create a folder for your software installation in your `home` directory use an option in the 
 configuration step that will install the software to this folder:
 
