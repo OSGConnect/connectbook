@@ -114,38 +114,19 @@ configuration step that will install the software to this folder:
 where `username` should be replaced with your OSG Connect username and `path` replaced with the 
 path to the directory you created for your software installation.
 
-## Example Compilation
+## Use Your Software
 
-He we provide an example of compiling software for use via OSG Connect using the common bioinformatics 
-program Samtools.
+When submitting jobs, you will need to transfer a copy of your compiled software, 
+and any dynamically-linked dependencies that you also installed. Our 
+[Introduction to Data Management on OSG Connect](https://support.opensciencegrid.org/support/solutions/articles/12000002985) 
+guide is a good starting point for more information for selecting the appropriate
+methods for transferring you software. Depending on your job workfloe, it may be possible 
+to directly specify your executable binary as the `executable` in your HTCondor 
+submit file.
 
-### Step 1. Acquire Samtools source code
-
-Samtools source code is available at [http://www.htslib.org/download/](http://www.htslib.org/download/). The 
-development code is also available via GitHub at [https://github.com/samtools/samtools](https://github.com/samtools/samtools).
-
-Either download the Samtools source code to your co
-Right-click on the Samtools source code link and copy the link location. Login in to your OSG Connect login 
-and use `wget` to download the source code directly and extract the tarball:
-
-	wget https://github.com/samtools/samtools/releases/download/1.10/samtools-1.10.tar.bz2
-	tar -xjf samtools-1.10.tar.bz2
-
-The above two commands will create directory named `samtools-1.10` which contains all the code 
-needed for compiling Samtools.
-
-### Step 2. Read through installation instructions
-
-The HTSlib website page where the Samtools source code is hosted provides basic installation instructions 
-and refers to `INSTALL` for more information. Source code directories will always include a `README` 
-file with important information including where to get detailed installation instructions. 
-
-`cd` to samtools-1.10 and read through `README` and `INSTALL`. As described in `INSTALL`, there are 
-a number of required and optional system dependencies for installing Samtools. Some dependencies are 
-needed to support certain features from Samtools (such as `tview` and CRAM). You will not need `tview` 
-as this is intended for interactive work which is not currently supported in OSG Connect.
-
-
+When using your software in subsequent job submissions, be sure to add additional  
+commands to the executable bash script to define evironment variables, like
+for instance `LD_LIBRARY_PATH`, that may be needed to properly execute your software.
 
 ## Get Additional Assistance
 If you have questions or need assistance, please contact <support@osgconnect.net>.
