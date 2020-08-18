@@ -84,10 +84,10 @@ def main():
             table += '| **Name** | **CVMFS Locations** | **Description** |\n'
             table += '|:---------|:--------------------|:----------------|\n'
         locations = ''
-        for tag in entry['tags']:
+        for tag in sorted(entry['tags']):
             if locations != '':
                 locations += '<br>'
-            locations += '`{}:{}`'.format(entry['cvmfs_path'], tag)
+            locations += '<span style="white-space: nowrap">{}:{}</span>'.format(entry['cvmfs_path'], tag)
         desc = entry['description']
         if 'url' in entry:
             desc += '<br>[Project Website]({})'.format(entry['url'])
