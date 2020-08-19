@@ -30,6 +30,8 @@ def import_metadata(top_dir, identifier, tag):
     json_file = os.path.join(top_dir, identifier + ':' + tag, '.singularity.d/labels.json')
     if os.path.getsize(json_file) < 10:
         return
+
+    print('Processing {}...'.format(json_file))
     
     # first ensure it has the required metadata
     with open(json_file) as f:
@@ -84,6 +86,7 @@ def main():
             table += '| **Name** | **CVMFS Locations** | **Description** |\n'
             table += '|:---------|:--------------------|:----------------|\n'
         locations = ''
+        name = '<span style="white-space: nowrap">{}</span>'.format(entry['name'])
         for tag in sorted(entry['tags']):
             if locations != '':
                 locations += '<br>'
@@ -93,7 +96,7 @@ def main():
             desc += '<br>[Project Website]({})'.format(entry['url'])
         if 'definition_url' in entry:
             desc += '<br>[Container Definition]({})'.format(entry['definition_url'])
-        table += '| {} | {} | {} |\n'.format(entry['name'], locations, desc)
+        table += '| {} | {} | {} |\n'.format(name, locations, desc)
 
     
     # the page is a simple template
