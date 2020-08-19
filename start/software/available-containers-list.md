@@ -31,7 +31,7 @@ or not described well enough to make this list.
 | **Name** | **CVMFS Locations** | **Description** |
 |:---------|:--------------------|:----------------|
 | <span style="white-space: nowrap">Julia</span> | <span style="white-space: nowrap">/cvmfs/singularity.opensciencegrid.org/opensciencegrid/osgvo-julia:latest</span> | Ubuntu based image with Julia<br>[Project Website](https://julialang.org/)<br>[Container Definition](https://github.com/opensciencegrid/osgvo-julia) |
-| <span style="white-space: nowrap">R</span> | <span style="white-space: nowrap">/cvmfs/singularity.opensciencegrid.org/opensciencegrid/osgvo-r:3.5.0</span> | Example for building R images<br>[Project Website](https://www.r-project.org/)<br>[Container Definition](https://github.com/opensciencegrid/osgvo-r) |
+| <span style="white-space: nowrap">R</span> | <span style="white-space: nowrap">/cvmfs/singularity.opensciencegrid.org/opensciencegrid/osgvo-r:3.5.0</span><br><span style="white-space: nowrap">/cvmfs/singularity.opensciencegrid.org/opensciencegrid/osgvo-r:4.0.2</span> | Example for building R images<br>[Project Website](https://www.r-project.org/)<br>[Container Definition](https://github.com/opensciencegrid/osgvo-r) |
 
 ## Tools
 
