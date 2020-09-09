@@ -58,13 +58,62 @@ will need to additionally be compiled before proceeding with compiling samtools.
 > When performing your compilation, if your compiler is unable to locate the necessary 
 > libraries, or if newer versions of libraries are needed, it will result in an error - this 
 > makes for an alternative method for determining whether your system has the appropriate 
-> libraries for your software.
+> libraries for your software and more often than not, installation by trial and error is 
+> a common approach many people take. However, taking a little bit of time before hand 
+> and looking for library files can save you time and frustration.
 
 ### Step 3. Install HTSlib
 
-Follow steps 1 and 2 above for first compiling HTSlib.
+Follow steps 1 (acquire soure code and untar) and 2 (review installation instructions) for HTSlib.
 
 	wget https://github.com/samtools/htslib/releases/download/1.10.2/htslib-1.10.2.tar.bz2
 	tar -xjz htslib-1.10.2.tar.gz
+	cd htslib-1.10.2/
+	less INSTALL
 
-HTSlib has the same library dependencies as Samtools.
+You will see that HTSlib has the same library dependencies as Samtools and from our initial examination of 
+available libraries on the submit node. Under "Basic Installation" you will see that 
+HTSLib follows the conventional `configure`, `make`, `make install` process described in 
+[Compiling Software for OSG Connect](https://support.opensciencegrid.org/support/solutions/articles/5000652099).
+
+To execute these three steps, first create a new directory in your home directoy where you 
+want the installation to be written to: 
+
+	mkdir $HOME/htslib-1.10.2-install
+
+> If you haven't already, next change directories to the HTSLib source code directory.
+
+Then run:
+
+	./configure --prefix=$HOME/htslib-1.10.2-install
+
+This will produce an error: `configure: error: libbzip2 development files not found`. 
+**Why did we get this error?** Following the example above, we confirmed that bzip2 library 
+was present when we ran `ls /usr/lib64 | grep libbz2`, but if you look closer, additional 
+information was provided in the error message:
+
+	The CRAM format may use bzip2 compression, which is implemented in HTSlib
+	by using compression routines from libbzip2 <http://www.bzip.org/>.
+
+	Building HTSlib requires libbzip2 development files to be installed on the
+	build machine; you may need to ensure a package such as libbz2-dev (on Debian
+	or Ubuntu Linux) or bzip2-devel (on RPM-based Linux distributions or Cygwin)
+	is installed.
+	
+	Either configure with --disable-bz2 (which will make some CRAM files
+	produced elsewhere unreadable) or resolve this error to build HTSlib. 
+
+What this means is that the bzip2 libraries on the login node don't include support 
+for certain HTSlib features, specifically CRAM file format support. If your work does 
+not depend on CRAM format support, then repeat the `configure` step using the flag provided 
+in the error message to disable these features:
+
+	./configure --prefix=$HOME/htslib-1.10.2-install --disable-bz2
+
+For this example compilation, we will assume that CRAM file format support is not required. 
+However, see [below](#something) for details about getting full bzip2 support for HTSlib and 
+Samtools.
+
+ 
+	make
+	make
