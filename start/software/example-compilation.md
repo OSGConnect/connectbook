@@ -22,12 +22,6 @@ support.
 *Do I need CRAM support for my work?* CRAM is an alternative compressed sequence alignment 
 file format to BAM. Learn more at [https://www.sanger.ac.uk/tool/cram/](https://www.sanger.ac.uk/tool/cram/).
 
-## Get Organized
-
-How you organize the content of your `home` directory is entirely up to you, but there are some 
-general best practices that we recommend. First, and foremost, use directories to organize your 
-`home` content. Second, install your software to a separate location
-
 ## Compile Samtools Without CRAM Support
 
 ### Step 1. Acquire Samtools source code
@@ -38,16 +32,16 @@ development code is also available via GitHub at [https://github.com/samtools/sa
 > "\[Samtools\] uses HTSlib internally \[and\] these source packages contain their own copies of htslib"
 
 What this means is 1.) HTSlib is a dependency of Samtools and 2.) the HTSlib source code is included 
-in along with the Samtools source code.
+with the Samtools source code.
 
 Either download the Samtools source code to your computer and upload to the your login node, or
-right-click on the Samtools source code link and copy the link location. Login in to your OSG Connect login 
+right-click on the Samtools source code link and copy the link location. Login in to your OSG Connect login node  
 and use `wget` to download the source code directly and extract the tarball:
 
 	[user@login ~]$ wget https://github.com/samtools/samtools/releases/download/1.10/samtools-1.10.tar.bz2
 	[user@login ~]$ tar -xjf samtools-1.10.tar.bz2
 
-The above two commands will create directory named `samtools-1.10` which contains all the code 
+The above two commands will create a directory named `samtools-1.10` which contains all the code 
 and instructions needed for compiling Samtools and HTSlib. Take a moment to look at the content available 
 in this new directory.
 
@@ -115,7 +109,7 @@ both `tview` and CRAM support - see [below](#install-samtools-with-cram-support)
 compilation example that will provide CRAM file support. 
 
 Following the suggestion in the Samtools `INSTALL` file, we can view the HTSlib `INSTALL` 
-file at `samtools-`1.10/htslib-1.10/INSTALL`. Here we will find the necessary 
+file at `samtools-1.10/htslib-1.10/INSTALL`. Here we will find the necessary 
 information for disabling bzip2 and liblzma dependencies:
 
 	--disable-bz2
@@ -128,15 +122,15 @@ information for disabling bzip2 and liblzma dependencies:
 	    by default.  It can be disabled with --disable-lzma, but be aware
 	    that not all CRAM files may be possible to decode. 
 
-These are examples of two flags that will need to be used when performing our installation.
+These are two flags that will need to be used when performing our installation.
 
-To determine what libraries are available on your OSG Connect login node, you can look at `/usr/lib` 
+To determine what libraries are available on our OSG Connect login node, we can look at `/usr/lib` 
 and `/usr/lib64` for the various Samtools library dependencies, for example:
 
 	[user@login ~]$ ls /usr/lib* | grep libcurl
 	[user@login ~]$ ls /usr/lib* | grep htslib
 
-Although we will find hits for libcurl, we will not find any htslib files meaning that 
+Although we will find matches for `libcurl`, we will not find any `htslib` files meaning that 
 HTSlib is not currently installed on the login node, nor is it currently available 
 as a module. This means that HTSlib will also need to be compiled. Luckly, the Samtools 
 developers have conveniently included the HTSlib source code with the Samtools source code 
@@ -148,21 +142,21 @@ Samtools `INSTALL` file, is the following:
 	    you will have to choose one via this option.
 
 This mean that we don't have to do anything extra to get HTSlib installed because 
-the Samtools installation will by default do it for us.
+the Samtools installation will do it by default.
 
 > When performing your compilation, if your compiler is unable to locate the necessary 
 > libraries, or if newer versions of libraries are needed, it will result in an error - this 
-> makes for an alternative method for determining whether your system has the appropriate 
+> makes for an alternative method of determining whether your system has the appropriate 
 > libraries for your software and more often than not, installation by trial and error is 
-> a common approach many people take. However, taking a little bit of time before hand 
-> and looking for library files can save you time and frustration.
+> a common approach. However, taking a little bit of time before hand 
+> and looking for library files can save you time and frustration during software compilation.
 
 ### Step 3. Perform Samtools compilation
 
 We now have all of the information needed to start our compilation of Samtools without CRAM support.
 
 First, we will create a new directory in our `home` directory that will store the 
-Samtools compiled software. The example here will use a common directory, called `my-software`, 
+Samtools compiled software. The example here will use a directory, called `my-software`, 
 for organizing all compiled software in the `home` directory:
 
 	[user@login ~]$ mkdir $HOME/my-software
@@ -170,19 +164,19 @@ for organizing all compiled software in the `home` directory:
 
 > As a best practice, always include the version name of your software in the directory name.
 
-Change our directories to the Samtools source code direcory that was created in 
+Next we'll change to the Samtools source code direcory that was created in 
 [Step 1](#step-1-.-acquire-samtools-source-code). You should see the `INSTALL` and `README` files 
 as well as a file called `configure`.
 
-The first command we will run is `./configure` - this file is a script that allows us 
-to modify various details about our Samtools installation and we will be executing `configure` 
+The first command we will run is `./configure` - this step will execute the configure script 
+and allows us to modify various details about our Samtools installation. We will be executing `configure` 
 with several flags:
 
 	[user@login samtools-1.10]$ ./configure --prefix=$HOME/my-software/samtools-1.10 --disable-bz2 --disable-lzma --without-curses
 
 Here we used `--prefix` to specify where we would like the final Samtools software 
-to be installed, `--disable-bz2` and `--disable-lzma` to disable lzma 
-and bzip2 dependencies for CRAM, and `--without-curses` to disable `tview` support.
+to be installed, `--disable-bz2` and `--disable-lzma` to disable `lzma` 
+and `bzip2` dependencies for CRAM, and `--without-curses` to disable `tview` support.
 
 Next run the final two commands:
 
@@ -191,7 +185,7 @@ Next run the final two commands:
 
 Once `make install` has finished running, the compilation is complete. We can 
 also confirm this by looking at the content of `~/my-software/samtools-1.10/` where 
-we has Samtools installed:
+we had Samtools installed:
 
 	[user@login samtools-1.10]$ cd ~
 	[user@login ~]$ ls -F my-software/samtools-1.10/
@@ -208,13 +202,12 @@ which will return the Samtools `view` usage statement.
 ### Step 4. Make our software portable
 
 Our subsequent job submissions on OSG Connect will need a copy of our software. For 
-convenience, we recommend converting your software directory to a tar archive, this will 
-be particularly useful if our jobs will use more than one "tool" from Samtools. 
+convenience, we recommend converting your software directory to a tar archive. 
 First move to `my-software/`, then create the tar archive:
 
 	[user@login ~]$ mv my-software/
 	[user@login my-software]$ tar -czf samtools-1.10.tar.gz samtools-1.10/
-	[user@login my-software]$ ls -lh samtools-1.10.tar.gz
+	[user@login my-software]$ ls samtools-1.10*
 	samtools-1.10/ samtools-1.10.tar.gz
 	[user@login my-software]$ du -h samtools-1.10.tar.gz
 	2.0M	samtools-1.10.tar.gz
@@ -225,14 +218,12 @@ this file along with our subsequent jobs. To learn more, please see
 [Introduction to Data Management on OSG Connect](https://support.opensciencegrid.org/support/solutions/articles/12000002985).
 
 To clean up and clear out space in your home directory, we recommend deleting the Samtools source 
-code directory and the installation directory.
+code directory.
 
 ### Step 5. Use Samtools in our jobs
 
-Now that Samtools has been compiled we can submit jobs that use this software. For Samtools 
-with CRAM we will also need to bring along a copy of XZ Utils (which includes the `liblzma` library) 
-and ensure that our jobs have access to the `bzip2 1.0.6` module. Below is an example submit file 
-for a job that will use Samtools with a CRAM file named `my-sample.bam` which is <100MB in size:
+Now that Samtools has been compiled we can submit jobs that use this software. Below is an example submit file 
+for a job that will use Samtools with a BAM file named `my-sample.bam` which is <100MB in size:
 
 	#samtools.sub
 	log = samtools.$(Cluster).log
@@ -262,7 +253,7 @@ execute nodes running Red Hat Linux version 7 operating system.
 > above example. Always run tests to determine the appropriate requests for your jobs.
 
 Some additional steps are then needed in the executable bash script used by this job 
-to "untar" the Samtools and (optionally) modify the `PATH` enviroment variable:
+to "untar" the Samtools and add this software to the `PATH` enviroment variable:
 
 	#!/bin/bash
 	# samtools.sh
