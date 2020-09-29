@@ -97,7 +97,7 @@ compatible for execution on RHEL 7 or similar operating systems. You can use the
 `requirements` statement of your HTCondor submit file to direct your jobs to execute 
 nodes with specific operating systems, for instance:
 
-	requirements = (OpSysAndVer =?= "SL7") || (OpSysAndVer=?= "RHEL7") || (OpSysAndVer =?= "Centos7")
+	requirements = (OSGVO_OS_STRING == "RHEL 7")
 
 Software installation typically includes three steps: 1.) configuration, 2.) compilation, and 3.) 
 "installation" which places the compiled code in specific location. In most cases, 
