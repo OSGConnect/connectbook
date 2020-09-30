@@ -105,7 +105,7 @@ for installing Samtools and HTSlib (which is itself a dependency of Samtools):
 Some dependencies are needed to support certain features from Samtools (such as `tview` and 
 CRAM compression). You will not need `tview` as this is intended for interactive work which is 
 not currently supported in OSG Connect. For this specific compilation example, we will disable 
-both `tview` and CRAM support - see [below](#install-samtools-with-cram-support) for our 
+both `tview` and CRAM support - see [below](#compile-samtools-with-cram-support) for our 
 compilation example that will provide CRAM file support. 
 
 Following the suggestion in the Samtools `INSTALL` file, we can view the HTSlib `INSTALL` 
@@ -272,7 +272,7 @@ to "untar" the Samtools and add this software to the `PATH` enviroment variable:
 This example includes steps to install and use a library and to use a module, 
 which are both currently needed for compiling Samtools with CRAM support. 
 
-The steps following steps in this example assume that you have performed 
+The steps in this example assume that you have performed 
 [Step 1](#step-1-acquire-samtools-source-code) and 
 [Step 2](#step-2-read-through-installation-instructions) in the above example for 
 compiling Samtools without CRAM support.
@@ -285,17 +285,17 @@ libzlma are required for CRAM support. We can check our system for these librari
 	[user@login ~]$ ls /usr/lib* | grep libz
 	[user@login ~]$ ls /usr/lib* | grep libbz2
 
-which will reveal that both sets of libraries are available on the login node which 
-means we can moved on to performing our compilation with CRAM support. **However** 
-if we were to attempt Samtools installation with CRAM support right now, 
+which will reveal that both sets of libraries are available on the login. **However** 
+if we were to attempt Samtools installation with CRAM support right now 
 we would find that this results in an error when performing the `configure` step.
 
 *If the libraries are present, why do we get this error?* This error is due to 
 differences between types of library files. For example, running 
-`ls /usr/lib\* | grep libbz2` will return two matches, `libbz2.so.1` and `libbz2.so.1.0.6`. 
-But running `ls /usr/lib\* | grep liblz` will return four matches including three 
-`.so` and one `.a` match. Our Samtools compilation specifically requires 
-the `.a` type of library file for both `libbz2` and `liblzma` and is why compilation 
+`ls /usr/lib* | grep libbz2` will return two matches, `libbz2.so.1` and `libbz2.so.1.0.6`. 
+But running `ls /usr/lib* | grep liblz` will return four matches including three 
+`.so` and one `.a` files. Our Samtools compilation specifically requires 
+the `.a` type of library file for both `libbz2` and `liblzma` and the absence of 
+this type of library file in `/usr/lib64` is why compilation 
 will fail without additional steps.
 
 Luckily for us, bzip2 version 1.0.6 is available as a module and this module 
@@ -310,7 +310,7 @@ will be to install `liblzma`.
 To compile Samtools with CRAM support requires that we first compile 
 `liblzma`. Following the same approach as we did for Samtools, first we 
 acquire a copy of the the latest liblzma source code, then review the installation instructions. 
-From our online search we will find that XZ Utils has replaced LZMA Utils and that liblzma 
+From our online search we will that `liblzma` 
 is availble from the XZ Utils library package.
 
 	[user@login ~]$ wget https://tukaani.org/xz/xz-5.2.5.tar.gz
@@ -333,7 +333,7 @@ Perform the XZ Utils compilation:
 
 Success!
 
-Lastly we need to set a some environment variable so that Samtools knows where to 
+Lastly we need to set some environment variables so that Samtools knows where to 
 find this library:
 
 	[user@login xz-5.2.5]$ export PATH=$HOME/my-software/xz-5.2.5/bin:$PATH
@@ -367,8 +367,8 @@ for organizing all compiled software in the `home` directory:
 
 > As a best practice, always include the version name of your software in the directory name.
 
-Change our directories to the Samtools source code direcory that was created in 
-[Step 1](#step-1-.-acquire-samtools-source-code). You should see the `INSTALL` and `README` files 
+Next, we will change our directory to the Samtools source code direcory that was created in 
+[Step 1](#step-1-acquire-samtools-source-code). You should see the `INSTALL` and `README` files 
 as well as a file called `configure`.
 
 The first command we will run is `./configure` - this file is a script that allows us 
@@ -387,7 +387,7 @@ Next run the final two commands:
 
 Once `make install` has finished running, the compilation is complete. We can 
 also confirm this by looking at the content of `~/my-software/samtools-1.10/` where 
-we has Samtools installed:
+we had Samtools installed:
 
 	[user@login samtools-1.10]$ cd ~
 	[user@login ~]$ ls -F my-software/samtools-1.10/
@@ -404,13 +404,12 @@ which will return the Samtools `view` usage statement.
 ### Step 6. Make our software portable
 
 Our subsequent job submissions on OSG Connect will need a copy of our software. For 
-convenience, we recommend converting your software directory to a tar archive, this will 
-be particularly useful if our jobs will use more than one "tool" from Samtools. 
+convenience, we recommend converting your software directory to a tar archive. 
 First move to `my-software/`, then create the tar archive:
 	
 	[user@login ~]$ mv my-software/
 	[user@login my-software]$ tar -czf samtools-1.10.tar.gz samtools-1.10/
-	[user@login my-software]$ ls -lh samtools-1.10.tar.gz
+	[user@login my-software]$ ls samtools-1.10*
 	samtools-1.10/ samtools-1.10.tar.gz
 	[user@login my-software]$ du -h samtools-1.10.tar.gz
 	2.0M	samtools-1.10.tar.gz
@@ -420,8 +419,10 @@ important for determine the appropriate method that we should use for transferri
 this file along with our subsequent jobs. To learn more, please see 
 [Introduction to Data Management on OSG Connect](https://support.opensciencegrid.org/support/solutions/articles/12000002985).
 
+Follow the these same steps for creating a tar archive of the xz-5.2.5 library as well. 
+
 To clean up and clear out space in your home directory, we recommend deleting the Samtools source 
-code directory and the installation directory.
+code directory.
 
 ### Step 7. Use Samtools in our jobs
 
@@ -451,7 +452,7 @@ for a job that will use Samtools with a CRAM file named `my-sample.cram` which i
 
 The above submit file will transfer a complete copy of the Samtools tar archive 
 created in [Step 6](#step-6-make-our-software-portable) as well as a copy of XZ Utils installation from 
-[Step 3](#step-3-compile-liblzma) from which a tar archive was also created. This submit file 
+[Step 3](#step-3-compile-liblzma). This submit file 
 also includes two important `requirements` which tell HTCondor to run our job on 
 execute nodes running Red Hat Linux version 7 operating system and which has 
 access to OSG Connect software modules.
