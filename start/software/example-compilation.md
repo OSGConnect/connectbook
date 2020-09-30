@@ -13,8 +13,9 @@ software for working with aligned sequencing data. However, the steps described 
 example are applicable to many other software. For a general introduction to software 
 compilation in OSG Connect, please see [Compiling Software for OSG Connect](https://support.opensciencegrid.org/support/solutions/articles/5000652099).
 
-Specifically, this guide provides two examples of compiling Samtools, one without CRAM file 
-support and one with CRAM file support. *Why two examples?* Currently, to install Samtools 
+Specifically, this guide provides two examples of compiling Samtools, [one without CRAM file 
+support](#compile-samtools-without-cram-support) and [one with CRAM file support](#compile-samtools-with-cram-support). 
+*Why two examples?* Currently, to install Samtools 
 with CRAM support requires additional dependencies (aka libraries) that will also need to be 
 installed and most Samtools users are only working with BAM files which does not require CRAM 
 support.
