@@ -165,7 +165,7 @@ for organizing all compiled software in the `home` directory:
 > As a best practice, always include the version name of your software in the directory name.
 
 Next we'll change to the Samtools source code direcory that was created in 
-[Step 1](#step-1-.-acquire-samtools-source-code). You should see the `INSTALL` and `README` files 
+[Step 1](#step-1-acquire-samtools-source-code). You should see the `INSTALL` and `README` files 
 as well as a file called `configure`.
 
 The first command we will run is `./configure` - this step will execute the configure script 
