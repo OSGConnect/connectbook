@@ -263,7 +263,7 @@ to "untar" the Samtools and add this software to the `PATH` enviroment variable:
 	tar -xzf samtools-1.10.tar.gz
 
 	# modify environment variables 
-	export PATH=$_CONDOR_SCRATCH_DIR/samtools-1.10/bin:$_CONDOR_SCRATCH_DIR/xz-5.2.5/bin:$PATH
+	export PATH=$_CONDOR_SCRATCH_DIR/samtools-1.10/bin:$PATH
 	
 	# run samtools commands
 	...
