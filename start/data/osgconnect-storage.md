@@ -1,4 +1,4 @@
-[title]: - "Introduction to Data Management on OSG Connect"
+[title]: - "Data Management Overview and Policies"
 
 ## Overview
 
