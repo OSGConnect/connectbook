@@ -1,6 +1,6 @@
 [title]: - "Policies for Using OSG via OSG Connect Submit Servers"
 
-Access to OSG Connect resources is contingent on compliance with the below and with any requests from OSG staff to change practices that cause issues for OSG Connect systems and/or users. **Please contact us if you have any questions! We can often help with exceptions to default policies and/or identify available alternative approaches to helping you with a perceived barrier.**
+Access to OSG Connect resources is contingent on compliance with the below and with any requests from OSG staff to change practices that cause issues for OSG Connect systems and/or users. **Please contact us if you have any questions! We can often help with exceptions to default policies and/or identify available alternative approaches to help you with a perceived barrier.**
 
 As the below do not cover every possible scenario of potentially disruptive practices, OSG staff reserve the right to take any necessary corrective actions to ensure performance and resource availability for all OSG Connect users. This may include the hold or removal of jobs, deletion of user data, deactivation of accounts, etc. In some cases, these actions may need to be taken without notifying the user.
 
