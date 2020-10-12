@@ -55,9 +55,8 @@ execute node that your jobs run on.
 
 However, the option exists to "statically link" the library dependencies of your software. 
 By statically linking libraries during compilation, the library code will be 
-directly packaged with your software binary. By statically linking libraries during 
-compilation, the library code will always be available to your software and will help 
-your software to run on more execute nodes.
+directly packaged with your software binary meaning the libraries will always be 
+available to your software which your software to run on more execute nodes.
 
 To statically link libraries during compilation, use the `-static` flag when running `gcc`, 
 use `--enable-static` when running a `configure` script, or set your `LD_FLAGS` 
