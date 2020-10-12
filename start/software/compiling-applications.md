@@ -8,7 +8,7 @@ Due to the distributed nature of the Open Science Grid, you will always need to
 ensure that your jobs have access to the software that will be executed. This guide provides 
 useful information for compiling and using your software in OSG Connect. A detailed 
 example of performing software compilation is additionally available 
-at (link). 
+at [OSG Connect Example Compilation Guide](https://support.opensciencegrid.org/support/solutions/articles/12000074984). 
 
 
 > *What is compiling?*
