@@ -33,8 +33,8 @@ required for your software.
 A compiler is a program that is used to peform source code compilation. The GNU Compiler 
 Collection (GCC) is a common, open source collection of compilers with support for C, C++, 
 fotran, and other languages, and includes important libraries for supporting your compilation 
-and sometimes software executation. Your software compilation may require certain versions 
-of a compiler which should be noted in the installtion instructions or system dependencies 
+and sometimes software execution. Your software compilation may require certain versions 
+of a compiler which should be noted in the installation instructions or system dependencies 
 documention. Currently the login nodes have `GCC 4.8.5` as the default version, but newer 
 versions of GCC may also be available - to learn more please contact <support@osgconnect.net>.
 
@@ -50,7 +50,7 @@ final binary to be "dynamically linked" to libraries that it depends on, such th
 the binary is executed, it will look for these library files on the system that it is 
 running on. Thus a copy of the appropriate library files will need to be available to your 
 software wherever it runs. OSG Connect users can transfer a copy of the necessary 
-libraries alog with with their jobs to manage such dependencies if not supported by the 
+libraries along with with their jobs to manage such dependencies if not supported by the 
 execute node that your jobs run on.
 
 However, the option exists to "statically link" the library dependencies of your software. 
@@ -100,7 +100,7 @@ nodes with specific operating systems, for instance:
 	requirements = (OSGVO_OS_STRING == "RHEL 7")
 
 Software installation typically includes three steps: 1.) configuration, 2.) compilation, and 3.) 
-"installation" which places the compiled code in specific location. In most cases, 
+"installation" which places the compiled code in a specific location. In most cases, 
 these steps will be achieved with the following commands:
 
 	./configure
@@ -109,7 +109,7 @@ these steps will be achieved with the following commands:
 
 **Most software is written to install to a default location, however your OSG Connect 
 account is not authorized to write to these default system locations.** Instead, you will want to 
-create a folder for your software installation in your `home` directory use an option in the 
+create a folder for your software installation in your `home` directory and use an option in the 
 configuration step that will install the software to this folder:
 
 	./configure --prefix=/home/username/path
@@ -123,7 +123,7 @@ When submitting jobs, you will need to transfer a copy of your compiled software
 and any dynamically-linked dependencies that you also installed. Our 
 [Introduction to Data Management on OSG Connect](https://support.opensciencegrid.org/support/solutions/articles/12000002985) 
 guide is a good starting point for more information for selecting the appropriate
-methods for transferring you software. Depending on your job workfloe, it may be possible 
+methods for transferring you software. Depending on your job workflow, it may be possible 
 to directly specify your executable binary as the `executable` in your HTCondor 
 submit file.
 

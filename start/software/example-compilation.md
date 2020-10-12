@@ -35,7 +35,7 @@ development code is also available via GitHub at [https://github.com/samtools/sa
 What this means is 1.) HTSlib is a dependency of Samtools and 2.) the HTSlib source code is included 
 with the Samtools source code.
 
-Either download the Samtools source code to your computer and upload to the your login node, or
+Either download the Samtools source code to your computer and upload to your login node, or
 right-click on the Samtools source code link and copy the link location. Login in to your OSG Connect login node  
 and use `wget` to download the source code directly and extract the tarball:
 
@@ -481,5 +481,4 @@ to "untar" the Samtools and XZ Util tar archives, modify the `PATH` and
 
 	# run samtools commands
 	...
-
 
