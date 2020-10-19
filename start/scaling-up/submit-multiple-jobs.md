@@ -1,4 +1,5 @@
 [title]: - "Easily Submit Multiple Jobs"
+
 [TOC]
 
 # Easily Submit Multiple Jobs Using HTCondor
@@ -46,7 +47,7 @@ with user-defined variables. Additional examples and use cases are provided futh
     another option that can be helpful in organizing multi-job submissions.
 
 These `queue` options are also described in the following video from HTCondor Week 2020: 
-![video thumbnail](https://raw.githubusercontent.com/OSGConnect/connectbook/master/images/multi-job-submit-video-thumbnail.png "2020 HTCondor Week Presentation")[Submitting Multiple Jobs Using HTCondor Video](https://www.youtube.com/watch?v=m7dQChJH5LU)
+![video thumbnail](https://raw.githubusercontent.com/OSGConnect/connectbook/master/images/multi-job-submit-video-thumbnail.png "2020 HTCondor Week Presentation") [Submitting Multiple Jobs Using HTCondor Video](https://www.youtube.com/watch?v=m7dQChJH5LU)
 
 What makes these `queue` options powerful is the ability to use user-defined 
 variables to specify details about your jobs in the HTCondor submit file. The 
@@ -55,7 +56,7 @@ like input file names, file locations (aka paths), etc. **When selecting a
 variable name, users must avoid bespoke HTCondor submit file variables 
 such as `Cluster`, `Process`, `output`, and `input`, `arguments`, etc.**
 
-**1. Use `queue <N>` in you HTCondor submit files**<a name="process"></a>
+## 1. Use `queue <N>` in you HTCondor submit files<a name="process"></a>
 
 When using `queue <N>`, HTCondor will submit a total of *N* 
 jobs, counting from 0 to *N* - 1 and each job will be assigned 
@@ -96,12 +97,12 @@ else as needed, in the submit file:
 	queue 100
 
 Be sure to properly format the `arguments` statement according to the 
-executable used by the job. **(links to more info??)**
+executable used by the job.
 
-***What if my jobs are not identical?*** `queue N` may still be a great 
+***What if my jobs are not identical?*** `queue <N>` may still be a great 
 option! Additional examples for using this option include:
 
-**A. Use integer numbered input files**
+### A. Use integer numbered input files
 
 	[user@login]$ ls *.data
 	0.data   1.data   2.data   3.data
@@ -113,7 +114,7 @@ In the submit file, use:
 	... remaining submit details ...
 	queue 100
 
-**B. Specify a row or column number for each job**
+### B. Specify a row or column number for each job
 
 $(Process) can be used to specify a unique row or column of information in a 
 matrix to be used by each job in the batch. The matrix needs to then be transferred 
@@ -127,7 +128,7 @@ with each job as input. For exmaple:
 The above exmaples assumes that your job is set up to use an argument to 
 specify the row or column to be used by your software.
 
-**C. Need *N* to start at 1**
+### C. Need *N* to start at 1
 
 If your input files are numbered 1 - 100 instead of 0 - 99, or your matrix 
 row starts with 1 instead of 0, you can perform basic arithmetic in the submit 
@@ -143,21 +144,21 @@ Then use `$(NewProcess)` anywhere in the submit file that you would
 have otherwise used `$(Process)`. Note that there is nothing special about the 
 names `plusone` and `NewProcess`, you can use any names you want as variables.
 
-**2. Submit multiple jobs with one or more distinct variables per job**<a name="foreach"></a>
+## 2. Submit multiple jobs with one or more distinct variables per job<a name="foreach"></a>
 
-Think about what's different between each job that you want to submit. 
-Will each jobs use a distinct input file or set of software parameters? Do 
-some of the need more memory or disk space? Do you want to use a different 
-software or script with each job on a common set of input files? Using `queue <var> from <list>` 
-in your submit files can make that possible! *var* can be a single user-defined 
+Think about what's different between each job that needs to be submitted. 
+Will each job use a different input file or combination of software parameters? Do 
+some of the jobs need more memory or disk space? Do you want to use a different 
+software or script on a common set of input files? Using `queue <var> from <list>` 
+in your submit files can make that possible! *\<var\>* can be a single user-defined 
 variable or comma-separated list of variables to be used anywhere in the submit file. 
-*list* is a plain text file that defines each *var* for each job to be submitted in the batch.
+*\<list\>* is a plain text file that defines *\<var\>* for each individual job to be submitted in the batch.
 
 Suppose you need to run a program called `compare_states` that will run on 
 on the following set of input files: `illinois.data`, `nebraska.data`, and 
 `wisconsin.data` and each input file can analyzed as a separate job.
 
-To create a submit file that will submit all three jobs, first, create a 
+To create a submit file that will submit all three jobs, first create a 
 text file that lists each `.data` file (one file per line). 
 This step can be performed directly on the login node, for example:
 
@@ -188,9 +189,9 @@ second job `$(state)` will be `nebraska.data`, and so on. For example:
 	
 	queue state from states.txt
 
-**Use more than one different variable between jobs**
+### Use multiple variables for each job
 
-Let's imagine that each state `.data` files contains data spanning several 
+Let's imagine that each state `.data` file contains data spanning several 
 years and that each job needs to analyze a specific year of data. Then 
 the states.txt file can be modified to specify this information:
 
@@ -217,7 +218,7 @@ Then the variables `$(state)` and `$(year)` can be used in the submit file:
 
 	queue state,year from states.txt
 
-**3. Organizing Jobs Into Individual Directories**<a name="initialdir"></a>
+## 3. Organizing Jobs Into Individual Directories<a name="initialdir"></a>
 
 One way to organize jobs is to assign each job to its own directory,
 instead of putting files in the same directory with unique names. To
@@ -263,7 +264,7 @@ Where `state-dirs.txt` is a list of each directory with state data:
 	wisconsin
 
 **Notice that `executable = compare_states` has remained unchanged in the above example. 
-When using `initialdir`, only the input and output path (including the HTCondor log, error, and 
+When using `initialdir`, only the input and output file path (including the HTCondor log, error, and 
 output files) will be changed by `initialdir`**.
 
 In this examples, HTCondor will create a job for each directory in `state-dirs.txt` and use 
@@ -271,4 +272,9 @@ that state\'s directory as the `initialdir` from which the job will be submitted
 Therefore, in `transfer_input_files`, we can use `input.data` without using the 
 directory name in the path. Any output generated by the job will then returned to the `initialdir` 
 location.
+
+## Additional Related Links 
+[Policies For Using An OSG Connect Submit Server](https://support.opensciencegrid.org/support/solutions/articles/12000074852)   
+[Submitting Multiple Jobs Using HTCondor Video](https://www.youtube.com/watch?v=m7dQChJH5LU)   
+[Data Management Overview and Policies](https://support.opensciencegrid.org/support/solutions/articles/12000002985)   
 
