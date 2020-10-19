@@ -111,7 +111,9 @@ option! Additional examples for using this option include:
 In the submit file, use:
 
 	transfer_input_files = $(Process).data
+	
 	... remaining submit details ...
+	
 	queue 100
 
 ### B. Specify a row or column number for each job
@@ -122,7 +124,9 @@ with each job as input. For exmaple:
 
 	transfer_input_files = matrix.csv
 	arguments = $(Process)
+	
 	... remaining submit details ...
+	
 	queue 100
 
 The above exmaples assumes that your job is set up to use an argument to 
@@ -137,7 +141,9 @@ file:
 	plusone = $(Process) + 1
 	NewProcess = $INT(plusone, %d)
 	arguments = $(NewProcess)
+	
 	... remaining submit details ...
+	
 	queue 100
 
 Then use `$(NewProcess)` anywhere in the submit file that you would
