@@ -1,5 +1,7 @@
 [title]: - "Transfer Job Output <1GB In Size"
 
+[TOC]
+
 # Overview
 
 When your OSG Connect jobs run, any output that gets generated is specifically written to 
@@ -65,7 +67,7 @@ directory will be transferred back to your `/home` directory.
 In cases where a bash script is not used as the excutable of your job, please contact us 
 at [support@osgconnect.net](mailto:support@osgconnect.net).
 
-## Get Additional Options For Managing Job Output
+# Get Additional Options For Managing Job Output
 
 Several options exist for managing output file transfers back to your `/home` directory and we 
 encourage you to get in touch with us at [support@osgconnect.net](mailto:support@osgconnect.net) to 
