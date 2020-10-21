@@ -64,8 +64,8 @@ output files or moving them to a subdirectory as a step in the bash
 executable script of your job -  only the output files that remain in the top-level 
 directory will be transferred back to your `/home` directory.
 
-In cases where a bash script is not used as the excutable of your job, please contact us 
-at [support@osgconnect.net](mailto:support@osgconnect.net).
+In cases where a bash script is not used as the excutable of your job and you wish to have only specific 
+output files transferred back, please contact us at [support@osgconnect.net](mailto:support@osgconnect.net).
 
 # Get Additional Options For Managing Job Output
 
