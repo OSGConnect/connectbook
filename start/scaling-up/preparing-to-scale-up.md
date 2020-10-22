@@ -17,7 +17,8 @@ In order to avoid confusion, let's review some HTCondor terminiology:
  - When you queue a single submit script using the `condor_submit` command, this is 
 called a **cluster** and can consist of one more individual jobs.
  - Each individual job within a cluster is called a **process**. Therefore, each 
-*cluster* can be made up of one or more *processees*. Each proceess lands on its 
+*cluster* can be made up of one or more *processes*. Each process lands on its 
+
 own job slot and is handled individually from the other processes in the cluster.
 
 ### Handling Output

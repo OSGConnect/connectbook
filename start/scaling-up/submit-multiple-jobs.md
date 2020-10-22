@@ -21,7 +21,7 @@ efficient for users and will help ensure reliable operation of the the login nod
 Many options exist for streamlining your submission of multiple jobs, 
 and this guide only covers a few examples of what is truly possible with 
 HTCondor. If you are interested in a particular approach that isn't described here, 
-please contact [OSG Connect support](mailto:chtc@cs.wisc.edu) and we will 
+please contact [OSG Connect support](mailto:support@osgconnect.net) and we will 
 work with you to identify options to meet the needs of your work.
 
 ## Submit Multiple Jobs Using `queue`
@@ -283,4 +283,3 @@ location.
 [Policies For Using An OSG Connect Submit Server](https://support.opensciencegrid.org/support/solutions/articles/12000074852)   
 [Submitting Multiple Jobs Using HTCondor Video](https://www.youtube.com/watch?v=m7dQChJH5LU)   
 [Data Management Overview and Policies](https://support.opensciencegrid.org/support/solutions/articles/12000002985)   
-
