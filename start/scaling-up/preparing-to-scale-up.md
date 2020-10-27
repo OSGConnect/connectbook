@@ -42,7 +42,8 @@ please see [Job 3 of the OSG Connect Quickstart guide]
 ### Submitting Multiple Jobs with a Single Script
 
 The easiest way to submit multiple jobs from a single submit script is to follow 
-queue line in the submit script with a number. For example, if we edit the `queue`
+the queue line in the submit script with a number. For example, if we edit the `queue`
+
 line to read:
 
 	queue 100
@@ -60,7 +61,8 @@ visit [UW-Madison CHTC's Documentation](http://chtc.cs.wisc.edu/multiple-jobs.sh
 ### Disk Usage
 
 Each OSG Connect user is granted 100 GB of storage in their `/home` directory and 
-500 GB of storage in their `/public` directories. This may seem like a lot, but 
+500 GB of storage in their `/public` directory. This may seem like a lot, but 
+
 when running many jobs this can fill quickly. As the number of jobs submitted 
 simultaneously increases, so will storage usage on the connect login nodes. For 
 example, if a single job creates 1 GB of output, running 1000 such jobs will 
