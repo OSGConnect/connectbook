@@ -24,32 +24,32 @@ for which our
 [Using scp To Transfer Files To OSG Connect](https://support.opensciencegrid.org/support/solutions/articles/5000634376) 
 guide may be helpful.
 
-2) Add the following two lines to your HTCondor submit file:
-
-	+WantsStashCache = true
-	requirements = (OSGVO_OS_STRING =?= "RHEL 7") && (HAS_MODULES =?= True)
-
-This tells HTCondor that your jobs must run on executes nodes that 
+2) Add the following two lines to your HTCondor submit file to tell 
+HTCondor that your jobs must run on executes nodes that 
 have access StashCache and to OSG Connect modules.
+
+		+WantsStashCache = true
+		requirements = (OSGVO_OS_STRING =?= "RHEL 7") && (HAS_MODULES =?= True)
 
 3) Add three commands to the job executable script to (1) load the StashCache 
 module, (2) use the command `stashcp` to transfer the large input file 
 from a cache site to the execute node where the job is running, and (3) 
 delete the large input file before the job terminates:
 
-	#!/bin/bash
-
-	# load module
-	module load stashcache
-
-	# transfer large input file
-	stashcp /osgconnect/public/username/path/<file_name> ./
-
-	# remaining commands to be executed in job
-	...
-	
-	# delete large input from public
-	rm <file_name>
+		#!/bin/bash
+		
+		#load module   
+		module load stashcache   
+		
+		#transfer large input file   
+		stashcp /osgconnect/public/username/path/<file_name> ./   
+		
+		#remaining commands to be executed in job   
+		
+		...   
+		
+		#delete large input from public   
+		rm <file_name>   
 
 Any large input files transferred from `/public` should be deleted before 
 the job terminates, otherwise HTCondor will mistake these files for output 
@@ -69,14 +69,14 @@ To transfer job output to StashCache after your analysis:
 1) Ensure that your job's submit script indicates the necessary requirements to 
 make `stashcp` available by including the following lines:
 
-	+WantsStashCache = true
-	requirements = OSGVO_OS_STRING == "RHEL 7" && Arch == "X86_64" && HAS_MODULES == True
+		+WantsStashCache = true
+		requirements = OSGVO_OS_STRING == "RHEL 7" && Arch == "X86_64" && HAS_MODULES == True
 
 2) Use `stashcp` to transfer the data files back to StashCache. You will 
 need to prepend your stash location with `stash://` as follows:
 
-	module load stashcache
-	stashcp <file_name> stash:///osgconnect/public/username/path/<file_name>
+		module load stashcache
+		stashcp <file_name> stash:///osgconnect/public/username/path/<file_name>
 
 For example, if you wish to transfer `output.dat` to the directory 
 `/public/username/output/` then the `stashcp` command would be:
