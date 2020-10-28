@@ -33,19 +33,22 @@ Below are different HTCondor submit file examples for submitting batches of mult
 jobs and, where applicable, how to indicate the differences between jobs in a batch 
 with user-defined variables. Additional examples and use cases are provided futher below:
 
-1.  ***[queue \<N\>](#process)*** - will submit *N* number of jobs. Examples 
+1.  ***[queue <N\>](#process)*** - will submit *N* number of jobs. Examples 
     include performing replications, where the same job must be repeated *N* number 
     of times, looping through files named with numbers, and looping through 
     a matrix where each job uses information from a specific row or column.
-2.  ***[queue \<var\> from \<list\>](#foreach)*** - will loop through a 
-    list of file names, parameters, etc. as defined in separate text file (i.e. *\<list\>*). 
+2.  ***[queue <var\> from <list\>](#foreach)*** - will loop through a 
+    list of file names, parameters, etc. as defined in separate text file (i.e. *<list>*). 
     This `queue` option is very flexible and provides users with many options for 
     submitting multiple jobs.
 3.  **[Organizing Jobs Into Individual Directories](#initialdir)** -
     another option that can be helpful in organizing multi-job submissions.
 
 These `queue` options are also described in the following video from HTCondor Week 2020: 
-![video thumbnail](https://raw.githubusercontent.com/OSGConnect/connectbook/master/images/multi-job-submit-video-thumbnail.png "2020 HTCondor Week Presentation") [Submitting Multiple Jobs Using HTCondor Video](https://www.youtube.com/watch?v=m7dQChJH5LU)
+<a href="https://www.youtube.com/watch?v=m7dQChJH5LU">
+	<img alt="2020 HTCondor Week Presentation" src="https://raw.githubusercontent.com/OSGConnect/connectbook/master/images/multi-job-submit-video-thumbnail.png" width="360" height="204"></a>
+
+[Submitting Multiple Jobs Using HTCondor Video](https://www.youtube.com/watch?v=m7dQChJH5LU)
 
 What makes these `queue` options powerful is the ability to use user-defined 
 variables to specify details about your jobs in the HTCondor submit file. The 
@@ -54,15 +57,15 @@ like input file names, file locations (aka paths), etc. **When selecting a
 variable name, users must avoid bespoke HTCondor submit file variables 
 such as `Cluster`, `Process`, `output`, and `input`, `arguments`, etc.**
 
-## 1. Use `queue <N>` in you HTCondor submit files<a name="process"></a>
+## 1. Use `queue N` in you HTCondor submit files<a name="process"></a>
 
-When using `queue <N>`, HTCondor will submit a total of *N* 
+When using `queue N`, HTCondor will submit a total of *N* 
 jobs, counting from 0 to *N* - 1 and each job will be assigned 
 a unique `Process` id number spanning this range of values. Because 
 the `Process` variable will be unique for each job, it can be used in 
 the submit file to indicate unique filenames and filepaths for each job.
 
-The most straightforward example of using `queue <N>` is to submit 
+The most straightforward example of using `queue N` is to submit 
 *N* number of identical jobs. The example shown below demonstrates 
 how to use the `Cluster` and `Process` variables to assign unique names 
 for the HTCondor `error`, `output`, and `log` files for each job in the batch:
@@ -80,7 +83,7 @@ for the HTCondor `error`, `output`, and `log` files for each job in the batch:
 
 For each job, the appropriate number, `0, 1, 2, ... 99` will replace `$(Process)`. 
 `$(Cluster)` will be a unique number assigned to the entire 100 job batch. Each 
-time you run `condor_submit <job.sub>`, you will be provided 
+time you run `condor_submit job.sub`, you will be provided 
 with the `Cluster` number which you will also see in the output produced by 
 the command `condor_q`.
 
@@ -97,7 +100,7 @@ else as needed, in the submit file:
 Be sure to properly format the `arguments` statement according to the 
 executable used by the job.
 
-***What if my jobs are not identical?*** `queue <N>` may still be a great 
+***What if my jobs are not identical?*** `queue N` may still be a great 
 option! Additional examples for using this option include:
 
 ### A. Use integer numbered input files
@@ -154,9 +157,9 @@ Think about what's different between each job that needs to be submitted.
 Will each job use a different input file or combination of software parameters? Do 
 some of the jobs need more memory or disk space? Do you want to use a different 
 software or script on a common set of input files? Using `queue <var> from <list>` 
-in your submit files can make that possible! *\<var\>* can be a single user-defined 
+in your submit files can make that possible! `<var>` can be a single user-defined 
 variable or comma-separated list of variables to be used anywhere in the submit file. 
-*\<list\>* is a plain text file that defines *\<var\>* for each individual job to be submitted in the batch.
+`<list>` is a plain text file that defines `<var>` for each individual job to be submitted in the batch.
 
 Suppose you need to run a program called `compare_states` that will run on 
 on the following set of input files: `illinois.data`, `nebraska.data`, and 
