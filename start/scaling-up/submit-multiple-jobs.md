@@ -45,7 +45,10 @@ with user-defined variables. Additional examples and use cases are provided futh
     another option that can be helpful in organizing multi-job submissions.
 
 These `queue` options are also described in the following video from HTCondor Week 2020: 
-[![video thumbnail](https://raw.githubusercontent.com/OSGConnect/connectbook/master/images/multi-job-submit-video-thumbnail.png "2020 HTCondor Week Presentation")]((https://www.youtube.com/watch?v=m7dQChJH5LU)[Submitting Multiple Jobs Using HTCondor Video](https://www.youtube.com/watch?v=m7dQChJH5LU)
+<a href="https://www.youtube.com/watch?v=m7dQChJH5LU">
+	<img alt="2020 HTCondor Week Presentation" src="https://raw.githubusercontent.com/OSGConnect/connectbook/master/images/multi-job-submit-video-thumbnail.png" width="360" height="204"></a>
+
+[Submitting Multiple Jobs Using HTCondor Video](https://www.youtube.com/watch?v=m7dQChJH5LU)
 
 What makes these `queue` options powerful is the ability to use user-defined 
 variables to specify details about your jobs in the HTCondor submit file. The 
