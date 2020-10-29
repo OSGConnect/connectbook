@@ -32,7 +32,7 @@ proper use or to quickly fix a performance or security issue.**
 
 Your OSG Connect account includes access to two data storage locations: 
 `/home` and `/public`. **Where you store your files and how your files 
-are made accessible to your jobs depend on the size of the file and how 
+are made accessible to your jobs depends on the size of the file and how 
 much data is needed or produced by your jobs.**   
 
 |  **Location**  |  **Purpose**         | **Network mounted** | **Backed Up** | **Initial Quota\** |
@@ -40,7 +40,7 @@ much data is needed or produced by your jobs.**
 |     `/home`    | Storage of submit files, input files <100MB each, and per-job output<br>up to a 1GB.  Jobs should ONLY be submitted from this folder.   |   No   |   No   |  50 GB  |
 |  `/public`     | Staging ONLY for large input files (100MB-50GB, each) for<br>publicly-accessible download into jobs (using HTTP or stashcp, see below) and large output files (1-10GB). | Yes | No | 500 GB |
 
-You quota status displayed when you connect to your login node: 
+You quota status will be displayed when you connect to your OSG Connect login node: 
 
     Disk utilization for alice:
     /public   : [                        ] 0% (0/500000 MB)
@@ -70,57 +70,64 @@ reached your `/home` quota, please contact us at
 User directories within `/public` are meant **ONLY** for staging job files too large for 
 HTCondor file transfer (input greater than 100MB, output greater than 1GB). 
 
-**USERS SHOULD NEVER SUBMIT JOBS FROM WITHIN `/public`**, and should not list `/public` files in the 'transfer_input_files` line of a submit file, unless as an HTTP address (see more details below). Files place in `/public` should only be accessed by jobs using the below tools (see "Transferring Data To/From Jobs). Users violating these policies may lose the ability to submit jobs until their submissions are corrected.
+**USERS SHOULD NEVER SUBMIT JOBS FROM WITHIN `/public`**, and should not list `/public` files in the 
+`transfer_input_files` line of a submit file, unless as an HTTP address (see more details below). 
+Files place in `/public` should only be accessed by jobs using the below tools (see 
+[Transferring Data To/From Jobs](#transferring-data-tofrom-jobs)). Users violating these policies may 
+lose the ability to submit jobs until their submissions are corrected.
 
 The initial disk quota of `/public` is 500 GBs. Contact [support@osgconnect.net](mailto:support@osgconnect.net) if you 
 will need an increase for concurrently running work, after cleaning up all data from past jobs. 
-**Given that users should not be storing long-term data (like submit files, software, etc.) in `/public`, files and directories that have not been accessed for over six months may be deleted by OSG Connect staff with or without notifying the user.**
+**Given that users should not be storing long-term data (like submit files, software, etc.) 
+in `/public`, files and directories that have not been accessed for over six months may be 
+deleted by OSG Connect staff with or without notifying the user.**
 
 Files placed within a user's `/public` directory **are publicly accessible**, 
-discoverable and readable by anyone. Data is made public over http/https, stashcp and mirrored to `/cvmfs/stash.osgstorage.org/osgconnect/public` which is mounted on a large number of systems around the world.
+discoverable and readable by anyone. Data is made public over http/https, stashcp and mirrored 
+to `/cvmfs/stash.osgstorage.org/osgconnect/public` which is mounted on a large number of systems around the world.
 
-> ### Is there any support for private data?
-> 
-> If you do not want your data to be downloadable by anyone, and itâs small enough for
-> HTCondor file transfer, then it should be staged in your `/home` directory and 
-> transferred to jobs with HTCondor file transfer (transfer_input_files, in the submit 
-> file). If it cannot be public (cannot use http or stashcp for job delivery), and is too
-> large for HTCondor file transfer, then itâs not a good fit for the âopenâ environment of 
-> the Open Science Grid, and another resource will likely be more appropriate. As a 
-> reminder, if the data is not being used for active computing work on OSG Connect, it 
-> should not be stored on OSG Connect systems, and our data storage locations are not 
-> backed up or suitable for project-duration storage.
+### Is there any support for private data?
+
+If you do not want your data to be downloadable by anyone, and it's small enough for
+HTCondor file transfer, then it should be staged in your `/home` directory and 
+transferred to jobs with HTCondor file transfer (transfer_input_files, in the submit 
+file). If it cannot be public (cannot use http or stashcp for job delivery), and is too
+large for HTCondor file transfer, then it's not a good fit for the open environment of 
+the Open Science Grid, and another resource will likely be more appropriate. As a 
+reminder, if the data is not being used for active computing work on OSG Connect, it 
+should not be stored on OSG Connect systems, and our data storage locations are not 
+backed up or suitable for project-duration storage.
 
 ## External Data Transfer to/from OSG Connect Login Nodes
 
 The following tools should be used to upload data from your computer to the OSG Connect login node, or to download files from the OSG Connect login node. 
 
-|  | **Data Size**| **Tools** |**Details**|
-|:------------|:-------:|:------|:------| 
+|  | **Data Size**| **Tools** |**More Info**|
+|:------------|:-------:|:------|:------:| 
 |**UNIX tools** | < 1 GB | `rsync`, `scp`, Putty, WinSCP, `gFTP`, etc.  |[SCP](https://support.opensciencegrid.org/support/solutions/articles/5000634376) |
 
-## Transferring Data To/From Jobs
+# Transferring Data To/From Jobs
 
-### Transferring Input Data to Jobs
+## Transferring Input Data to Jobs
 
 This table summarizes the options for sending input files from the OSG Connect login node to the execution node where a job is running. This assumes that you have already uploaded these input files from your own computer to your OSG Connect login node. 
 
-|  *Transfer Method** | **File Sizes**| **File Location** | **Command** | **More Info**|
-|  :--------:  |  :------:  |  :-----:  |  :-----:  |  :----------:  |
-| **HTCondor File Transfer** | Files <100 MB;<br><500 MB per job | `/home` | `transfer_input_files` | [HTCondor File Transfer](https://support.opensciencegrid.org/support/solutions/articles/5000639787)|
-| **HTTP** |  Files >100MB<br>and <1GB | `/public` or non-OSG web server | http address in `transfer_input_files`  |[HTTP Access](https://support.opensciencegrid.org/support/solutions/articles/5000639798)|
-| **OSG's StashCache** | Files >1;<br><10 GB per job | `/public` | `stashcp` | [StashCache](https://support.opensciencegrid.org/support/solutions/articles/12000002775)|
+|  *Transfer Method** | **File Sizes**| **File Location** | **Command** | **More Info** |
+|      :--------:     |    :------:   |       :-----:     |    :-----:  |   :--------:   |
+| **HTCondor<br>File Transfer** | Files <100 MB;<br><500 MB per job | `/home` | `transfer_input_files` | [HTCondor File Transfer](https://support.opensciencegrid.org/support/solutions/articles/5000639787)|
+| **HTTP** |  Files >100MB<br>and <1GB | `/public` or<br>non-OSG web server | http address in `transfer_input_files`  |[HTTP Access](https://support.opensciencegrid.org/support/solutions/articles/5000639798)|
+| **OSG's<br>StashCache** | Files >1;<br><10 GB per job | `/public` | `stashcp` | [StashCache](https://support.opensciencegrid.org/support/solutions/articles/12000002775)|
 | **GridFTP** |  > 10 GB | `/public` | `gfal-copy` | [contact us](mailto:support@osgconnect.net) |
 
-### Transferring Output Data from Jobs
+## Transferring Output Data from Jobs
 
 This table summarizes a job's options for returning output files generated by the job back to the OSG Connect login node. 
 
-|         | **Recommended File Sizes**| **Command** | **Purpose** | **Details**|
-|:---------|:------:|:-----|:----------|:------|
-| **HTCondor**    | < 1 GB  | HTCondor default output transfer (or `transfer_output_files`) | General-use transfer of job output data back to the submission directory (in `/home`). |[HTCondor Transfer](https://support.opensciencegrid.org/support/solutions/articles/5000639787)|
-| **StashCache**        |  < 10 GB   | `stashcp` | Transfer large output to show up in `/public`|  [StashCache](https://support.opensciencegrid.org/support/solutions/articles/12000002775) |
-| **GridFTP**        |  > 10 GB   | `gfal-copy` | Staging against /public | Typically used by experts with large work flows. Please contact us if you're interested.|
+|  **Transfer Methond**  | **File Sizes**   |  **Transfer To**  |    **Command**     |   **More Info**  |
+|      :---------:       |     :------:     |       :-----:     |     :--------:     |     :------:     |
+|      **HTCondor**      |      < 1 GB      |      `/home`      |  HTCondor default output transfer | [HTCondor Transfer](https://support.opensciencegrid.org/support/solutions/articles/5000639787)|
+|     **StashCache**     |      < 10 GB     |      `/public`    |      `stashcp`     |   [StashCache](https://support.opensciencegrid.org/support/solutions/articles/12000002775) |
+|       **GridFTP**      |     > 10 GB      |      `/public`    |     `gfal-copy`    | [contact us](mailto:support@osgconnect.net) |
 
-## Get Help
+# Get Help
 For assistance or questions, please email the OSG User Support team  at [support@osgconnect.net](mailto:support@osgconnect.net) or visit the [help desk and community forums](http://support.opensciencegrid.org).
