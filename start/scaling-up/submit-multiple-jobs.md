@@ -31,7 +31,7 @@ that will submit multiple jobs, with each job varying as predefined by the user.
 
 Below are different HTCondor submit file examples for submitting batches of multiple 
 jobs and, where applicable, how to indicate the differences between jobs in a batch 
-with user-defined variables. Additional examples and use cases are provided futher below:
+with user-defined variables. Additional examples and use cases are provided further below:
 
 1.  ***[queue <N\>](#process)*** - will submit *N* number of jobs. Examples 
     include performing replications, where the same job must be repeated *N* number 
