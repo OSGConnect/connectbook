@@ -1,4 +1,4 @@
-[title]: - "Transfer Large Input and Output Files &gt;1GB In Size"
+[title]: - "Transfer Large Input and Output Files >1GB In Size"
 
 [TOC]
 
