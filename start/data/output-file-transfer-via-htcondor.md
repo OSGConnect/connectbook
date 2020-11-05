@@ -1,4 +1,4 @@
-[title]: - "Transfer Job Output <1GB In Size"
+[title]: - "Transfer Job Output &lt;1GB In Size"
 
 [TOC]
 
@@ -17,7 +17,7 @@ As described in the [Introduction to Data Management on OSG Connect](https://sup
 any output <1GB should be staged in your `/home` directory. For output files >1GB, 
 please refer to our [Transfer Large Input and Output Files >1GB In Size](https://support.opensciencegrid.org/support/solutions/articles/12000002775) guide.
 
-# Use HTCondor To Transfer Output \<1GB
+# Use HTCondor To Transfer Output &lt;1GB
 
 *By default, HTCondor will transfer any files that are generated or modified during 
 the execution of your job(s) back to your `/home` directory*, specifically to the 
