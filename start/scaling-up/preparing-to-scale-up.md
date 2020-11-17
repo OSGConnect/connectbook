@@ -1,17 +1,46 @@
-[title]: - "Scale Up your Workflow on OSG Connect"
+[title]: - "Preparing To Scale Up Job Submission"
+
 [TOC]
 
-## Background
+# Overview
 
 Much of OGS's computing power comes from the ability to run a large number 
-of jobs simulateously. Many HTC-friendly workflows involve running the same 
-job multiple times with no or minor changes between them. Here, we will 
-talk about how to submit multiple jobs at once using the `queue` command as 
-well as some important considerations and tips for scaling up your HTCondor jobs. 
+of jobs simulateously. Optimizing the resource requests of your jobs, by 
+only requesting the amount  memory, disk, and cpus truely needed, is an 
+important for ensuring that you get the most out of OSG computing resources. 
+This is an important practice that will reduce the amount of time your 
+jobs remain idle before starting to run and which will maximize the number of 
+concurrently running jobs (i.e. throughput), all helping to get your jobs 
+completed sooner.
+
+As described belowing, submitting test jobs is a critical part of optimizing 
+the resource requests of your jobs. Another key aspect is to break up 
+your computational work into independently executable tasks whenever possible. 
+Breaking up your work not only increases the parallelization of your work, but 
+also often reduces the memory, disk, and cpus needs for each individual task.
+
+Links to videos or additional resources?
+
 For a hands-on example of these concepts, checkout the [OSG Connect Quickstart]
 (https://support.opensciencegrid.org/support/solutions/articles/5000633410-osg-connect-quickstart). 
 
-## Things to Consider
+# Submit Test Jobs First
+
+We always recommend submitting a few test jobs first whether this is your first time 
+using OSG Connect or an experienced user starting a new workflow. Test jobs will 
+help identify specific `requirements` for your jobs
+
+
+### Debugging Jobs
+
+Testing your jobs and workflows is always strongly recommended, but it is of even 
+more importance when submitting a large number of jobs. Start out with running a 
+single job. When it completes with no errors, then try a small number - about 10. 
+Use this to ensure that the jobs complete successfully, produce the desired 
+output, and do not conflict with each other. Once you are confident that the jobs 
+will complete as desired, submit your large workflow.
+
+
 
 In order to avoid confusion, let's review some HTCondor terminiology:
  - When you queue a single submit script using the `condor_submit` command, this is 
@@ -74,14 +103,6 @@ directory. Adding clean up steps to remove intermediate and/or unnecessary files
 your analysis is complete will help reduce the amount of space used and help prevent 
 running into that quota limit.
 
-### Debugging Jobs
-
-Testing your jobs and workflows is always strongly recommended, but it is of even 
-more importance when submitting a large number of jobs. Start out with running a 
-single job. When it completes with no errors, then try a small number - about 10. 
-Use this to ensure that the jobs complete successfully, produce the desired 
-output, and do not conflict with each other. Once you are confident that the jobs 
-will complete as desired, submit your large workflow.
 
 
 ### Workflow Management
