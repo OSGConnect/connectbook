@@ -8,6 +8,6 @@ Papers, presentations, and other publications that feature research that benefit
  
  and include in the text the following acknowledgement:
  
-> This research was done using resources provided by the Open Science Grid [1,2], which is supported by the National Science Foundation award 1148698, and the U.S. Department of Energy's Office of Science.
+> This research was done using resources provided by the Open Science Grid [1,2], which is supported by the National Science Foundation award #2030508.
 
 For your conveinence, [a BibTex file containing the above two refences](https://raw.githubusercontent.com/OSGConnect/connectbook/master/attachments/osg.bib) has been provided.
