@@ -42,14 +42,14 @@ delete the large input file before the job terminates:
 		module load stashcache   
 		
 		#transfer large input file   
-		stashcp /osgconnect/public/username/path/<file_name> ./   
+		stashcp /osgconnect/public/username/path/file_name ./   
 		
 		#remaining commands to be executed in job   
 		
 		...   
 		
 		#delete large input from public   
-		rm <file_name>   
+		rm file_name   
 
 Any large input files transferred from `/public` should be deleted before 
 the job terminates, otherwise HTCondor will mistake these files for output 
@@ -76,7 +76,7 @@ make `stashcp` available by including the following lines:
 need to prepend your stash location with `stash://` as follows:
 
 		module load stashcache
-		stashcp <file_name> stash:///osgconnect/public/username/path/<file_name>
+		stashcp file_name stash:///osgconnect/public/username/path/file_name
 
 For example, if you wish to transfer `output.dat` to the directory 
 `/public/username/output/` then the `stashcp` command would be:
@@ -85,6 +85,8 @@ For example, if you wish to transfer `output.dat` to the directory
 
 **Notice that the output file name `output.dat` must be included at the end of the 
 `/public` path where the file will be transferred.**
+
+# Stachcp Command Manual
 
 More usage options are described in the stashcp help message:
 

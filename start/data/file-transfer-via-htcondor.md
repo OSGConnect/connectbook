@@ -1,4 +1,4 @@
-[title]: - "Transfer Input Files < 100MB In Size"
+[title]: - "Transfer Input Files Up To 100MB In Size"
 
 [TOC] 
 
@@ -9,7 +9,7 @@ your jobs will need to bring along a copy (i.e. transfer a copy) of
 data, code, packages, software, etc. from the login node where the job 
 is submitted to the execute node where the job will run. This requirement 
 applies to any and all files that are needed to successfully execute and 
-complete your job.
+complete your job that do not otherwise exist on OSG execute servers.
 
 **This guide will describe steps and important considerations for transferring 
 your files that are <100MB in size via the HTCondor submit file.**   
@@ -32,15 +32,15 @@ Multiple files can be specified using a comma-separated list, for example:
 
 	transfer_input_files = my_data.csv, my_software.tar.gz, my_script.py
 
-> When using `transfer_input_files` to transfer files located in `/home`, 
-> keep in mind that the path to the file is relative to the location of 
-> the submit file. If you have files located in a different `/home` subdirectory, 
-> we recommend specifying the full path to those files, which is also a matter 
-> of good practice, for exmaple:
-> ```
-> transfer_input_files = /home/username/path/to/my_software.tar.gz
-> ```
-> Where `username` refers to your OSG Connect username.
+When using `transfer_input_files` to transfer files located in `/home`, 
+keep in mind that the path to the file is relative to the location of 
+the submit file. If you have files located in a different `/home` subdirectory, 
+we recommend specifying the full path to those files, which is also a matter 
+of good practice, for exmaple:
+
+	transfer_input_files = /home/username/path/to/my_software.tar.gz
+
+Where `username` refers to your OSG Connect username.
 
 # Get Help
 
