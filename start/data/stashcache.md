@@ -161,7 +161,7 @@ using the following example:
 	
 If you would instead like a more detailed date and time stamp added to the 
 file name, you can modify the `date` command. One alternative to consider is 
-`unique=\`date +"%Y-%m-%d.%H-%M-%S"\`` which will set `unique` to 
+`unique=`` `date +"%Y-%m-%d.%H-%M-%S"` `` ` which will set `unique` to 
 `year-month-day.hour-minute-seconds`.
 
 # Stachcp Command Manual
