@@ -35,7 +35,7 @@ Your OSG Connect account includes access to two data storage locations:
 are made accessible to your jobs depends on the size of the file and how 
 much data is needed or produced by your jobs.**   
 
-|  **Location**  |  **Storag Needs**         | **Network mounted** | **Backed Up?** | **Initial Quota** |
+|  **Location**  |  **Storage Needs**         | **Network mounted** | **Backed Up?** | **Initial Quota** |
 |     :-----:    |    :------:          |       :------:      |   :------:    |      :------:      |
 |     `/home`    | Storage of submit files, input files <100MB each, and per-job output<br>up to a 1GB.  Jobs should ONLY be submitted from this folder.   |   No   |   No   |  50 GB  |
 |  `/public`     | Staging ONLY for large input files (100MB-50GB, each) for publicly-accessible<br>download into jobs (using HTTP or stashcp, see below) and large output files (1-10GB). | Yes | No | 500 GB |
@@ -70,7 +70,7 @@ reached your `/home` quota, please contact us at
 User directories within `/public` are meant **ONLY** for staging job files too large for 
 HTCondor file transfer (input greater than 100MB, output greater than 1GB). 
 
-**JOBS MUST NEVER SUBMIT JOBS FROM WITHIN `/public`**, and should not list `/public` files in the 
+**JOBS MUST NEVER BE SUBMIT JOBS FROM WITHIN `/public`**, and should not list `/public` files in the 
 `transfer_input_files` line of a submit file, unless as an HTTP address (see more details below). 
 Files place in `/public` should only be accessed by jobs using the below tools (see 
 [Transferring Data To/From Jobs](#transferring-data-tofrom-jobs)). Users violating these policies may 

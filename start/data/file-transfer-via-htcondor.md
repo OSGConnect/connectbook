@@ -12,7 +12,7 @@ applies to any and all files that are needed to successfully execute and
 complete your job that do not otherwise exist on OSG execute servers.
 
 **This guide will describe steps and important considerations for transferring 
-your files that are <100MB in size via the HTCondor submit file.**   
+input files that are <100MB in size via the HTCondor submit file.**   
 
 # Important Considerations
 

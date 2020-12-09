@@ -23,12 +23,12 @@ subdirectory so that HTCondor will not transfer these large files back to your `
 
 # Use HTCondor To Transfer Output &lt;1GB
 
-By default, HTCondor will transfer any files in the job's top-level directory 
-that are generated or modified during the execution of your job(s) back to 
-your `/home` directory location from which the `condor_submit` command 
-was performed. **This behavior only applies to files in the top-level directory of 
+By default, HTCondor will transfer any new or modified files in the job's 
+top-level directory back to your `/home` directory location from which 
+the `condor_submit` command was performed. **This behavior only applies 
+to files in the top-level directory of 
 where your job executes, meaning HTCondor will ignore any files 
-created in subdirectories of the job's main working directory.** Several 
+created in subdirectories of the job's top-level directory.** Several 
 options exist for modifying this default output file transfer behavior, including 
 those described in this guide. To learn more, please contact us 
 at [support@osgconnect.net](mailto:support@osgconnect.net).
