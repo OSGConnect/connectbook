@@ -21,7 +21,7 @@ any data, files, or even software that is >100MB should be staged in your
 `/public` directory on your login node. Files in your `/public` directory 
 that are <1GB can be transferred with your jobs via HTTP using your HTCondor submit file.
 
-**If you have files that are >1GB please see our 
+**If you have input files that are >1GB please see our 
 [Transfer Large Input and Output Files >1GB In Size](https://support.opensciencegrid.org/support/solutions/articles/12000002775) guide.**
 
 # Transfer Files From `/public` Using HTTP
@@ -30,12 +30,23 @@ To transfer files staged in your `/public` directory, use an HTTP URL in
 combination with the `transfer_input_files` statement in your HTCondor submit. 
 For example:
 
+	# submit file example
+	
+	log = my_job.$(Cluster).$(Process).log
+	error = my_job.$(Cluster).$(Process).err
+	output = my_job.$(Cluster).$(Process).out
+	
+	# transfer software tarball from public via http
 	transfer_input_files = http://stash.osgconnect.net/public/username/path/my_software.tar.gz
+	
+	...other submit file details...
 
 Where `username` refers to your OSG Connect username. Multiple URLs can 
 be specified using a comma-separated list, and a combination of URLs and 
 files from `/home` directory can be provided in a comma separated list. For example,
 
+	# transfer software tarball from public via http
+	# transfer input data from home via htcondor file transfer
 	transfer_input_files = http://stash.osgconnect.net/public/username/path/my_software.tar.gz, /home/username/my_data.csv
 
 # Transfer Files Directly From The Web Using HTTP

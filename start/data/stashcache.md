@@ -49,7 +49,7 @@ guide may be helpful.
 HTCondor that your jobs must run on executes nodes that 
 have access StashCache and to OSG Connect modules.
 
-		#StashCache submit file example
+		# StashCache submit file example
 		
 		log = my_job.$(Cluster).$(Process).log
 		error = my_job.$(Cluster).$(Process).err
@@ -57,7 +57,7 @@ have access StashCache and to OSG Connect modules.
 
 		...other submit file details...
 
-		#ensure jobs have access to StashCache
+		# ensure jobs have access to StashCache
 		+WantsStashCache = true
 		requirements = (OSGVO_OS_STRING =?= "RHEL 7") && (HAS_MODULES =?= True)
 
@@ -68,17 +68,17 @@ delete the large input file before the job terminates:
 
 		#!/bin/bash
 		
-		#load module   
+		# load module   
 		module load stashcache   
 		
-		#transfer large input file   
+		# transfer large input file   
 		stashcp /osgconnect/public/username/path/file_name ./   
 		
-		#remaining commands to be executed in job   
+		# remaining commands to be executed in job   
 		
 		...   
 		
-		#delete large input from public   
+		# delete large input files before job terminates   
 		rm file_name   
 
 	Any large input files transferred from `/public` should be deleted before 
@@ -101,7 +101,7 @@ is necessary to later access your results):
 HTCondor that your jobs must run on executes nodes that 
 have access StashCache and to OSG Connect modules.
 
-		#StashCache submit file example
+		# StashCache submit file example
 		
 		log = my_job.$(Cluster).$(Process).log
 		error = my_job.$(Cluster).$(Process).err
@@ -109,7 +109,7 @@ have access StashCache and to OSG Connect modules.
 		
 		...other submit file details...
 		
-		#ensure jobs have access to StashCache
+		# ensure jobs have access to StashCache
 		+WantsStashCache = true
 		requirements = (OSGVO_OS_STRING =?= "RHEL 7") && (HAS_MODULES =?= True)
 
@@ -118,14 +118,14 @@ need to prepend your `/public` directory path with `stash://osgconnect` as follo
 
 		#!/bin/bash
 	
-		#commands to be executed in job   
+		# commands to be executed in job   
 		
 		...   
 		
-		#load module   
+		# load module   
 		module load stashcache   
 		
-		#transfer large output to public
+		# transfer large output to public
 		stashcp file_name stash:///osgconnect/public/username/path/file_name
 
 	For example, if you wish to transfer `output.dat` to the directory 
@@ -147,14 +147,14 @@ using the following example:
 
 	#!/bin/bash
 	
-	#commands to be executed in job   
+	# commands to be executed in job   
 		
 	...   
 	
-	#load module   
+	# load module   
 	module load stashcache   
 	
-	#transfer large output to public
+	# transfer large output to public
 	# add epoch time to output file name to make unqiue
 	unique=`date +%s`
 	stashcp file_name stash:///osgconnect/public/username/path/$unique.file_name

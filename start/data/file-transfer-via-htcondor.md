@@ -26,10 +26,18 @@ your `/home` directory on your login node. Files in your
 To transfer files from your `/home` directory use the `transfer_input_files` 
 statement in your HTCondor submit file. For example:
 
+	# submit file example
+	
+	log = my_job.$(Cluster).$(Process).log
+	error = my_job.$(Cluster).$(Process).err
+	output = my_job.$(Cluster).$(Process).out
+	
+	# transfer small file from /home 
 	transfer_input_files = my_data.csv
 
 Multiple files can be specified using a comma-separated list, for example:
 
+	# transfer multiple files from /home
 	transfer_input_files = my_data.csv, my_software.tar.gz, my_script.py
 
 When using `transfer_input_files` to transfer files located in `/home`, 
