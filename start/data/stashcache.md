@@ -111,7 +111,7 @@ have access StashCache and to OSG Connect modules.
 		
 		#ensure jobs have access to StashCache
 		+WantsStashCache = true
-		requirements = OSGVO_OS_STRING == "RHEL 7" && HAS_MODULES == True
+		requirements = (OSGVO_OS_STRING =?= "RHEL 7") && (HAS_MODULES =?= True)
 
 2) Use `stashcp` command to transfer the data files back to `/public`. You will 
 need to prepend your `/public` directory path with `stash://osgconnect` as follows:
