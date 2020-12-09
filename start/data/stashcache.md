@@ -22,27 +22,30 @@ steps in the executable bash script used for your jobs.
 
 # Important Considerations
 
-As described in the [Introduction to Data Management on OSG Connect](https://support.opensciencegrid.org/support/solutions/articles/12000002985) 
+As described in OSG Connect's [Introduction to Data Management on OSG Connect](https://support.opensciencegrid.org/support/solutions/articles/12000002985), 
 any data, files, or even software that is >100MB should be staged in 
-your `/public` directory and only input and output files >1GB and <10GB 
-should be transferred using StashCache. 
+your `/public` directory and **any** input and output files >1GB and <10GB 
+should be transferred to and from your `public` directory using StashCache 
+during the execution of your jobs.
 
 **Because of the way your files in `/public` get cached across StashCache, 
 once a file is added to `/public` any changes or modifications that you 
 make to the file will not be propagated.** This means if you add a new version 
 of a file to your `/public` directory, it must first be given a unique name 
 to distinguish it from previous versions of that file. Adding a date or 
-version number to file names is strongly encouraged to manage you files in `/public`.
+version number to file names is strongly encouraged to manage you files in 
+`/public`. Additionally, directories with unique names can also be used to 
+organize different versions of files in `/public`.
 
 # Use StashCache To Tranfer Large Input Files From `/public` 
 
-1) Place your large files your `/public` public directory  
+1) Upload your large files to your `/public` directory 
 which is accessible via your OSG Connect login node at `/public/username` 
 for which our 
 [Using scp To Transfer Files To OSG Connect](https://support.opensciencegrid.org/support/solutions/articles/5000634376) 
 guide may be helpful.
 
-2) Add the following two lines to your HTCondor submit file to tell 
+2) Add the necessary details to your HTCondor submit file to tell 
 HTCondor that your jobs must run on executes nodes that 
 have access StashCache and to OSG Connect modules.
 
@@ -78,9 +81,9 @@ delete the large input file before the job terminates:
 		#delete large input from public   
 		rm file_name   
 
-Any large input files transferred from `/public` should be deleted before 
-the job terminates, otherwise HTCondor will mistake these files for output 
-and will transfer them back to your home directory.
+	Any large input files transferred from `/public` should be deleted before 
+	the job terminates, otherwise HTCondor will mistake these files for output 
+	and will transfer them back to your home directory.
 
 **Note how the `/public` directory is mapped to the `/osgconnect/public` namespace 
 under StashCache. For example, if the data file is located at 
@@ -94,19 +97,21 @@ transfer this file into your current working directory on the compute host would
 To transfer large output files (>1GB) back to your `/public` directory (which 
 is necessary to later access your results):
 
-1) Ensure that your job's submit script indicates the necessary requirements to 
-make `stashcp` available by including the following lines:
+1) Add the necessary details to your HTCondor submit file to tell 
+HTCondor that your jobs must run on executes nodes that 
+have access StashCache and to OSG Connect modules.
 
 		#StashCache submit file example
 		
 		log = my_job.$(Cluster).$(Process).log
 		error = my_job.$(Cluster).$(Process).err
 		output = my_job.$(Cluster).$(Process).out
-
+		
 		...other submit file details...
-
+		
+		#ensure jobs have access to StashCache
 		+WantsStashCache = true
-		requirements = OSGVO_OS_STRING == "RHEL 7" && Arch == "X86_64" && HAS_MODULES == True
+		requirements = OSGVO_OS_STRING == "RHEL 7" && HAS_MODULES == True
 
 2) Use `stashcp` command to transfer the data files back to `/public`. You will 
 need to prepend your `/public` directory path with `stash://osgconnect` as follows:
