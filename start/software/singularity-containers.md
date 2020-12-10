@@ -16,31 +16,15 @@ feel free to contact us at [support@osgconnect.net](mailto:support@osgconnect.ne
 
 The Open Science Grid user support team maintains a small set of images, hosted in a distributed
 file system called [CVMFS](https://cernvm.cern.ch/portal/filesystem). These images
-contain a basic set of tools and libraries. These include: 
-
-|                            | **Image Location**                                                                 | **Defintion** | **Description** |
-|:---------------------------|:-----------------------------------------------------------------------------------|:-------------:|:----------------|
-| **EL 8**                   | /cvmfs/singularity.opensciencegrid.org/opensciencegrid/osgvo-el8:latest            | [GitHub](https://github.com/opensciencegrid/osgvo-el8) | A basic Enterprise Linux (CentOS) 8 based image. |
-| **EL 7**                   | /cvmfs/singularity.opensciencegrid.org/opensciencegrid/osgvo-el7:latest            | [GitHub](https://github.com/opensciencegrid/osgvo-el7) | A basic Enterprise Linux (CentOS) 7 based image. |
-| **EL 6**                   | /cvmfs/singularity.opensciencegrid.org/opensciencegrid/osgvo-el6:latest            | [GitHub](https://github.com/opensciencegrid/osgvo-el6)   | A basic Enterprise Linux (CentOS) 6 based image. This is currently our default image |
-| **Ubuntu 20.04 (Focal)**   | /cvmfs/singularity.opensciencegrid.org/opensciencegrid/osgvo-ubuntu-20.04:latest   | [GitHub](https://github.com/opensciencegrid/osgvo-ubuntu-20.04) | A good image if you prefer Ubuntu over EL flavors |
-| **Ubuntu 18.04 (Bionic)**  | /cvmfs/singularity.opensciencegrid.org/opensciencegrid/osgvo-ubuntu-18.04:latest   | [GitHub](https://github.com/opensciencegrid/osgvo-ubuntu-18.04) | A good image if you prefer Ubuntu over EL flavors |
-| **Ubuntu 16.04 (Xenial)**  | /cvmfs/singularity.opensciencegrid.org/opensciencegrid/osgvo-ubuntu-xenial:latest  | [GitHub](https://github.com/opensciencegrid/osgvo-ubuntu-xenial) | A good image if you prefer Ubuntu over EL flavors |
-| **EL 7 CUDA 10**           | /cvmfs/singularity.opensciencegrid.org/opensciencegrid/osgvo-el7-cuda10:latest     | [GitHub](https://github.com/opensciencegrid/osgvo-el7-cuda10) | EL 7 based CUDA 10 base image |
-| **TensorFlow GPU**         | /cvmfs/singularity.opensciencegrid.org/opensciencegrid/tensorflow-gpu:latest       | [GitHub](https://github.com/opensciencegrid/osgvo-tensorflow-gpu) | Used for running TensorFlow jobs on OSG GPU resources |
-| **TensorFlow**             | /cvmfs/singularity.opensciencegrid.org/opensciencegrid/tensorflow:latest           | [GitHub](https://github.com/opensciencegrid/osgvo-tensorflow) | Base on the TensorFlow base image, with a few OSG package added |
-| **R**                      | /cvmfs/singularity.opensciencegrid.org/opensciencegrid/osgvo-r:4.0.2              | [GitHub](https://github.com/opensciencegrid/osgvo-r) | Example on how to build your on R image |
-| **Julia**                  | /cvmfs/singularity.opensciencegrid.org/opensciencegrid/osgvo-julia:latest          | [GitHub](https://github.com/opensciencegrid/osgvo-julia) | Example on how to build your on Julia image |
-| **GROMACS**                | /cvmfs/singularity.opensciencegrid.org/opensciencegrid/osgvo-gromacs:latest        | [GitHub](https://github.com/opensciencegrid/osgvo-gromacs) | GROMACS base image |
-| **GROMACS GPU**            | /cvmfs/singularity.opensciencegrid.org/opensciencegrid/osgvo-gromacs-gpu:latest    | [GitHub](https://github.com/opensciencegrid/osgvo-gromacs-gpu) | GROMACS GPU base image |
+contain a basic set of tools and libraries. A list of available containers can be
+found in [this page][container-list].
 
 You can indicate that your job should use one of these images by making the following 
 changes to your submit file: 
 
 * Using `Requirements = HAS_SINGULARITY == TRUE` will trigger the scripts that 
 load a Singularity image from CVMFS and run your job inside. 
-* `+SingularityImage` will tell the job which Singularity image to use for the job. If you 
-don't include this option, your job will use a default OSG Singularity image (currently EL 6). 
+* `+SingularityImage` will tell the job which Singularity image to use for the job.
 
 For example, this is what a submit file might look like to run your job under EL7:
 
@@ -180,3 +164,4 @@ and  Singularity, please see:
 <iframe width="560" height="315" src="//www.youtube.com/embed/DA87Ba2dpNM" frameborder="0" allowfullscreen></iframe>
 
 [container-howto]: 12000058245
+[container-list]: 12000073449
