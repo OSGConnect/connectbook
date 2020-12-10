@@ -46,6 +46,14 @@ def import_metadata(top_dir, identifier, tag):
                 data[newk] = v
             data['cvmfs_path'] = os.path.join(top_dir, identifier)
             data['tags'] = []
+
+            # in the base area, only allow images from /opensciencegrid/
+            # this will filter out derived images which did not update
+            # the labels
+            if data['category'] == 'Base' and \
+               not re.search('singularity.opensciencegrid.org/opensciencegrid', json_file):
+                return
+
             metadata[identifier] = data
         metadata[identifier]['tags'].append(tag)
 
