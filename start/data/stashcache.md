@@ -18,8 +18,8 @@ output files, a copy of the output must be transferred back to your OSG Connect 
 For input and output files >1GB in size, OSG Connect's StashCache should 
 be used for transferring these input and output files to and from OSG 
 login and execute servers. StashCache is a transparent and reliable system 
-that caches your large files at sites across the country for faster delivery of 
-large files. StashCache is an alternative method *specifically* for 
+that caches your larger files at sites across the country for faster delivery to 
+and from execute nodes. StashCache is an alternative method *specifically* for 
 transferring **larger** files needed for or produced by your jobs and 
 requires additional HTCondor submit file script details and additional 
 steps in the executable bash script used for your jobs.
@@ -43,7 +43,7 @@ organize different versions of files in `/public`.
 
 # Use StashCache To Tranfer Larger Input Files From `/public` 
 
-1) Upload your large files to your `/public` directory 
+1) Upload your larger files to your `/public` directory 
 which is accessible via your OSG Connect login node at `/public/username` 
 for which our 
 [Using scp To Transfer Files To OSG Connect](https://support.opensciencegrid.org/support/solutions/articles/5000634376) 
@@ -59,33 +59,33 @@ have access StashCache and to OSG Connect modules.
 		error = my_job.$(Cluster).$(Process).err
 		output = my_job.$(Cluster).$(Process).out
 
-		...other submit file details...
-
 		# ensure jobs have access to StashCache
 		+WantsStashCache = true
 		requirements = (OSGVO_OS_STRING =?= "RHEL 7") && (HAS_MODULES =?= True)
+		
+		...other submit file details...
 
 3) Add three commands to the job executable script to (1) load the StashCache 
-module, (2) use the command `stashcp` to transfer the large input file 
+module, (2) use the command `stashcp` to transfer the larger input file 
 from a cache site to the execute node where the job is running, and (3) 
-delete the large input file before the job terminates:
+delete the larger input file before the job terminates:
 
 		#!/bin/bash
 		
 		# load module   
 		module load stashcache   
 		
-		# transfer large input file   
+		# transfer input file from StashCache
 		stashcp /osgconnect/public/username/path/file_name ./   
 		
 		# remaining commands to be executed in job   
 		
 		...   
 		
-		# delete large input files before job terminates   
+		# delete input files from StashCache before job terminates   
 		rm file_name   
 
-	Any large input files transferred from `/public` should be deleted before 
+	Any input files transferred via `stashcp` should be deleted before 
 	the job terminates, otherwise HTCondor will mistake these files for output 
 	and will transfer them back to your home directory.
 
@@ -98,7 +98,7 @@ transfer this file into your current working directory on the compute host would
 
 # Use StashCache To Tranfer Larger Output Files To `/public`
 
-To transfer large output files (>1GB) back to your `/public` directory (which 
+To transfer larger output files (>1GB) back to your `/public` directory (which 
 is necessary to later access your results):
 
 1) Add the necessary details to your HTCondor submit file to tell 
@@ -111,11 +111,11 @@ have access StashCache and to OSG Connect modules.
 		error = my_job.$(Cluster).$(Process).err
 		output = my_job.$(Cluster).$(Process).out
 		
-		...other submit file details...
-		
 		# ensure jobs have access to StashCache
 		+WantsStashCache = true
 		requirements = (OSGVO_OS_STRING =?= "RHEL 7") && (HAS_MODULES =?= True)
+		
+		...other submit file details...
 
 2) Use `stashcp` command to transfer the data files back to `/public`. You will 
 need to prepend your `/public` directory path with `stash://osgconnect` as follows:
@@ -144,7 +144,7 @@ As described in [Important Considerations](#important-considerations),
 once a file is added to `/public` any changes and modifications made 
 to the file will not be propagated due to caching. In the event that your 
 jobs need to be resubmitted or restarted, we strongly recommend that your 
-large ouptut files be given unique names in `/public`. This can be achieved 
+larger ouptut files be given unique names in `/public`. This can be achieved 
 by several methods, but perhpas the most straightforward option is to include 
 [epoch](https://en.wikipedia.org/wiki/Unix_time) time in the output file name 
 using the following example:
