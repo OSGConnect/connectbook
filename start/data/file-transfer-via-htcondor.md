@@ -34,6 +34,8 @@ statement in your HTCondor submit file. For example:
 	
 	# transfer small file from /home 
 	transfer_input_files = my_data.csv
+	
+	...other submit file details...
 
 Multiple files can be specified using a comma-separated list, for example:
 
