@@ -11,12 +11,16 @@ is submitted to the execute node where the job will run. This requirement
 applies to any and all files that are needed to successfully execute and 
 complete your job that do not otherwise exist on OSG execute servers.
 
+When your OSG Connect jobs run, any output that gets generated is specifically 
+written to the execute node on which the job ran. In order to get access to your 
+output files, a copy of the output must be transferred back to your OSG Connect login node.
+
 For input and output files >1GB in size, OSG Connect's StashCache should 
 be used for transferring these input and output files to and from OSG 
 login and execute servers. StashCache is a transparent and reliable system 
 that caches your large files at sites across the country for faster delivery of 
 large files. StashCache is an alternative method *specifically* for 
-transferring **large** files needed for or produced by your jobs and 
+transferring **larger** files needed for or produced by your jobs and 
 requires additional HTCondor submit file script details and additional 
 steps in the executable bash script used for your jobs.
 
@@ -37,7 +41,7 @@ version number to file names is strongly encouraged to manage you files in
 `/public`. Additionally, directories with unique names can also be used to 
 organize different versions of files in `/public`.
 
-# Use StashCache To Tranfer Large Input Files From `/public` 
+# Use StashCache To Tranfer Larger Input Files From `/public` 
 
 1) Upload your large files to your `/public` directory 
 which is accessible via your OSG Connect login node at `/public/username` 
@@ -92,7 +96,7 @@ transfer this file into your current working directory on the compute host would
 
 	stashcp /osgconnect/public/username/samples/sample01.dat  ./
 
-# Use StashCache To Tranfer Large Output Files To `/public`
+# Use StashCache To Tranfer Larger Output Files To `/public`
 
 To transfer large output files (>1GB) back to your `/public` directory (which 
 is necessary to later access your results):
