@@ -37,8 +37,8 @@ at [support@osgconnect.net](mailto:support@osgconnect.net).
 
 Before executing a job, HTCondor will create a new directory on the execute 
 node just for your job - this is the top-level directory of the job and the 
-path is stored in the environment variable `HOME`. All of the 
-input files transferred via `transfer_inpu_files` will first be written to 
+path is stored in the environment variable `_CONDOR_SCRATCH_DIR`. All of the 
+input files transferred via `transfer_input_files` will first be written to 
 this directory and it is from this path that a job starts to execute. After 
 a job has completed the top-level directory and all of it's contents are 
 deleted.
@@ -60,7 +60,7 @@ written to `job_output/`:
 	# various commands needed to run your job
 	
 	# move csv files to scratch dir
-	mv job_output/job_output.txt $HOME
+	mv job_output/job_output.txt $_CONDOR_SCRATCH_DIR
 
 ## Group Multiple Output Files For Convenience
 
