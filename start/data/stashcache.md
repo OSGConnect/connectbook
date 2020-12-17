@@ -82,7 +82,7 @@ delete the larger input file before the job terminates:
 		
 		...   
 		
-		# delete input files from StashCache before job terminates   
+		# delete input files copied from StashCache before job terminates   
 		rm file_name   
 
 	Any input files transferred via `stashcp` should be deleted before 

@@ -46,7 +46,8 @@ When using `transfer_input_files` to transfer files located in `/home`,
 keep in mind that the path to the file is relative to the location of 
 the submit file. If you have files located in a different `/home` subdirectory, 
 we recommend specifying the full path to those files, which is also a matter 
-of good practice, for exmaple:
+of good practice, for example:
+
 
 	transfer_input_files = /home/username/path/to/my_software.tar.gz
 

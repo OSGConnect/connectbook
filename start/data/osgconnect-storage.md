@@ -70,7 +70,7 @@ reached your `/home` quota, please contact us at
 User directories within `/public` are meant **ONLY** for staging job files too large for 
 HTCondor file transfer (input greater than 100MB, output greater than 1GB). 
 
-**JOBS MUST NEVER BE SUBMIT JOBS FROM WITHIN `/public`**, and should not list `/public` files in the 
+**JOBS MUST NEVER BE SUBMITTED FROM WITHIN `/public`**, and should not list `/public` files in the 
 `transfer_input_files` line of a submit file, unless as an HTTP address (see more details below). 
 Files place in `/public` should only be accessed by jobs using the below tools (see 
 [Transferring Data To/From Jobs](#transferring-data-tofrom-jobs)). Users violating these policies may 
