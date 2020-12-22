@@ -43,13 +43,13 @@ organize different versions of files in `/public`.
 
 # Use StashCache To Tranfer Larger Input Files From `/public` 
 
-1) Upload your larger files to your `/public` directory 
+1. Upload your larger files to your `/public` directory 
 which is accessible via your OSG Connect login node at `/public/username` 
 for which our 
 [Using scp To Transfer Files To OSG Connect](https://support.opensciencegrid.org/support/solutions/articles/5000634376) 
 guide may be helpful.
 
-2) Add the necessary details to your HTCondor submit file to tell 
+2. Add the necessary details to your HTCondor submit file to tell 
 HTCondor that your jobs must run on executes nodes that 
 have access StashCache and to OSG Connect modules.
 
@@ -65,7 +65,7 @@ have access StashCache and to OSG Connect modules.
 		
 		...other submit file details...
 
-3) Add three commands to the job executable script to (1) load the StashCache 
+3. Add three commands to the job executable script to (1) load the StashCache 
 module, (2) use the command `stashcp` to transfer the larger input file 
 from a cache site to the execute node where the job is running, and (3) 
 delete the larger input file before the job terminates:
@@ -101,7 +101,7 @@ transfer this file into your current working directory on the compute host would
 To transfer larger output files (>1GB) back to your `/public` directory (which 
 is necessary to later access your results):
 
-1) Add the necessary details to your HTCondor submit file to tell 
+1. Add the necessary details to your HTCondor submit file to tell 
 HTCondor that your jobs must run on executes nodes that 
 have access StashCache and to OSG Connect modules.
 
@@ -117,7 +117,7 @@ have access StashCache and to OSG Connect modules.
 		
 		...other submit file details...
 
-2) Use `stashcp` command to transfer the data files back to `/public`. You will 
+2. Use `stashcp` command to transfer the data files back to `/public`. You will 
 need to prepend your `/public` directory path with `stash://osgconnect` as follows:
 
 		#!/bin/bash
