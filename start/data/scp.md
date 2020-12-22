@@ -1,5 +1,7 @@
 [title]: - "Use scp To Transfer Files To and From OSG Connect"
 
+[TOC]
+
 # Overview
 
 This tutorial assumes that you will be using a command line application 
@@ -52,6 +54,18 @@ but with the source being the copy that is located on OSG Connect:
     $ scp username@loginNN.osgconnect.net:/home/username/my_file.txt ./
 
 where `./` sets the destination of the copy to your current location on your computer 
+
+# Transfer Files Between OSG Connect and Another Server
+
+`scp` can be used to transfer files between OSG Connect and another server that you have 
+`ssh` access to. This means that files don't have to first be transferred to your 
+personal computer which can save a lot of time and effort! For example, to transfer 
+a file from another server and your OSG Connect login node `/home` directory:
+
+    $ scp username@serverhostname:/path/to/my_file.txt username@loginNN.osgconnect.net:/home/username
+
+Be sure to use the username assigned to you on the other server and to provide the 
+full path on the other server to your file.
 
 # Get Help
 
