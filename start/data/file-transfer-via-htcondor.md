@@ -48,7 +48,6 @@ the submit file. If you have files located in a different `/home` subdirectory,
 we recommend specifying the full path to those files, which is also a matter 
 of good practice, for example:
 
-
 	transfer_input_files = /home/username/path/to/my_software.tar.gz
 
 Where `username` refers to your OSG Connect username.
