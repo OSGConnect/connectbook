@@ -1,4 +1,4 @@
-[title]: - "Transfer Job Output `<`1GB In Size"
+[title]: - "Transfer Job Output Files Up To 1GB In Size"
 
 [TOC]
 
@@ -17,21 +17,50 @@ As described in the [Introduction to Data Management on OSG Connect](https://sup
 any output <1GB should be staged in your `/home` directory. For output files >1GB, 
 please refer to our [Transfer Large Input and Output Files >1GB In Size](https://support.opensciencegrid.org/support/solutions/articles/12000002775) guide.
 
-# Use HTCondor To Transfer Output &lt;1GB
-
-*By default, HTCondor will transfer any files that are generated or modified during 
-the execution of your job(s) back to your `/home` directory*, specifically to the 
-directory from which the `condor_submit` command was performed when submitting your 
-job(s). However, this behavior only applies to files in the top-level directory of 
-where your job executes, meaning HTCondor will ignore any files 
-created in subdirectories of the job's main working directory (because HTCondor ignores 
-subdirectories when determining what needs to be transferred after the job completes). Several 
-options exist for modifying this default output file transfer behavior - to learn more 
-please contact us at [support@osgconnect.net](mailto:support@osgconnect.net).
-
 **If your jobs use any input files >1GB that are transferred from your `/public` directory 
 using StacheCash, it is important that these files get deleted from the job's working directory or moved to a 
 subdirectory so that HTCondor will not transfer these large files back to your `/home` directory.**
+
+# Use HTCondor To Transfer Output &lt;1GB
+
+By default, HTCondor will transfer any new or modified files in the job's 
+top-level directory back to your `/home` directory location from which 
+the `condor_submit` command was performed. **This behavior only applies 
+to files in the top-level directory of 
+where your job executes, meaning HTCondor will ignore any files 
+created in subdirectories of the job's top-level directory.** Several 
+options exist for modifying this default output file transfer behavior, including 
+those described in this guide. To learn more, please contact us 
+at [support@osgconnect.net](mailto:support@osgconnect.net).
+
+*What is the top-level directory of a job?*
+
+Before executing a job, HTCondor will create a new directory on the execute 
+node just for your job - this is the top-level directory of the job and the 
+path is stored in the environment variable `_CONDOR_SCRATCH_DIR`. All of the 
+input files transferred via `transfer_input_files` will first be written to 
+this directory and it is from this path that a job starts to execute. After 
+a job has completed the top-level directory and all of it's contents are 
+deleted.
+
+*What if my output file(s) are not written to the top-level directory?*
+
+If your output files are written to a subdirectory, use the steps described 
+[below](#group-multiple-output-files-for-convenience) to convert the output 
+directory to a "tarball" that is written to the top-level directory. 
+
+Alternatively, you can include steps in the executable bash script of 
+your job to move (i.e. `mv`) output files from a subdirectory to 
+the top-level directory. For example, if there is an output file that 
+needs to be transferred back to the login node named `job_output.txt` 
+written to `job_output/`:
+
+	#! /bin/bash
+	
+	# various commands needed to run your job
+	
+	# move csv files to scratch dir
+	mv job_output/job_output.txt $_CONDOR_SCRATCH_DIR
 
 ## Group Multiple Output Files For Convenience
 
@@ -44,7 +73,7 @@ For example:
 	#! /bin/bash
 	
 	# various commands needed to run your job
-
+	
 	# create output tar archive
 	mkidr my_output
 	mv my_job_output.csv my_job_output.svg my_output/
