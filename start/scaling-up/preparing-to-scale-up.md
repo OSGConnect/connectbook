@@ -24,7 +24,7 @@ or are unsure if and how your work can be broken up, please contact us at
 This guide will described best pactices and general tips for optimizing 
 your job resource requests **before** scaling up to submitting your full set of jobs. 
 Additional information is also available from the following 2020 OSG Virtual 
-Pilot School lecture video:<a href="https://www.youtube.com/watch?v=m7dQChJH5LU">
+Pilot School lecture video:<a href="https://youtu.be/oMAvxsFJaw4">
 	<img alt="2020 VSP dHTC with HTCondor" src="https://raw.githubusercontent.com/OSGConnect/connectbook/master/images/2020-vsp-intro-dHTC-HTcondor-thumbnail.png" width="360" height="204"></a>
 
 [Introduction to High Throughput Computing with HTCondor](https://youtu.be/oMAvxsFJaw4)
