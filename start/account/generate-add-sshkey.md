@@ -143,7 +143,7 @@ On older versions of Windows, you can use the [Putty program](https://www.chiark
 
 1. Open the `PutTTY` program. If necessary, you can download PuTTY from the website here [PuTTY download page](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html).
 
-<img alt="2020 HTCondor Week Presentation" src="https://raw.githubusercontent.com/OSGConnect/connectbook/master/images/putty-screenshots.png" width="1250" height="750">
+<img src="https://raw.githubusercontent.com/OSGConnect/connectbook/master/images/putty-screenshots.png" width="1250" height="750" alt="PuTTY Intructions Screenshot">
 
 2. Type the address of your assigned login node as the hostname (see "Determine which login node to use" above).
 
