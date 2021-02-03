@@ -143,6 +143,8 @@ On older versions of Windows, you can use the [Putty program](https://www.chiark
 
 1. Open the `PutTTY` program. If necessary, you can download PuTTY from the website here [PuTTY download page](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html).
 
+<img src="https://raw.githubusercontent.com/OSGConnect/connectbook/master/images/putty-screenshots.png" width="1250" height="750" alt="PuTTY Intructions Screenshot">
+
 2. Type the address of your assigned login node as the hostname (see "Determine which login node to use" above).
 
 3. In the left hand menu, click the "+" next to "SSH" to expand the menu.
@@ -151,10 +153,10 @@ On older versions of Windows, you can use the [Putty program](https://www.chiark
 
 5. Click "Browse" and specify the private key file you saved in step 5 above.
 
-6. Click "Open" and provide your passphrase when prompted to do so.
-
-![alt text](https://raw.githubusercontent.com/OSGConnect/connectbook/master/images/putty_ssh.png "PuPTTYen SSH Window")
-
+6. Return to "Session".    
+&nbsp;&nbsp;&nbsp;&nbsp;a. Name your session    
+&nbsp;&nbsp;&nbsp;&nbsp;b. Save session for future use     
+7. Click "Open" to launch shell. Provide your ssh-key passphrase (created at Step 4 in PuTTYgen) when prompted to do so.
 
 ## Getting Help 
 
