@@ -8,7 +8,7 @@ advantage for computing work that can be run as numerous short tasks.
 
 |   		| **Ideal jobs!** | **Still very advantageous** | **Less-so, but maybe** | 
 |:----------|:--------------|:--------------|:--------------|
-| Expected Throughput		|	1000s concurrent cores per user |	100s cores per user |	let's discuss |
+| Expected Throughput, per user		|	1000s concurrent cores |	100s concurrent cores |	let's discuss! |
 | CPU		|	1			|	< 8			|	> 8 (or MPI)|
 | Walltime	| 	< 12 hrs*	|	< 24 hrs*	|	> 24 hrs	|
 | RAM		| 	< few GB	|	< 10s GB	|	> 10s GB	|
