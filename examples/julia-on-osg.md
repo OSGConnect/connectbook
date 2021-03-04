@@ -36,7 +36,6 @@ submit server, **OR** use `transfer_input_files = url` in your HTCondor submit f
 with base Julia and Standard Library, via a shell script like the following as 
 the job's executable: 
 
-	```
 	#!/bin/bash
 
 	# extract Julia tar.gz file
@@ -47,8 +46,6 @@ the job's executable:
 
 	# run Julia script
 	julia my-script.jl
-	```
-	{: .file}
 
     * For more details on the job submission, see the section 
     below: [Submit Julia Jobs](#submit-julia-jobs)
