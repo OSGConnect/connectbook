@@ -74,7 +74,7 @@ to extract the Julia software and add Julia to your `PATH`:
 
 After these steps, you should be able to run Julia from the command line, e.g.
 
-	$ julia --help
+	$ julia --version
 
 Now create a project directory to install your packages (we've called 
 it `my-project/` below) and tell Julia its name: 
@@ -116,7 +116,7 @@ If you have multiple packages to install they can be combined
 into a single command, e.g. `(my-project) pkg> add Package1 Package2 Package3`.
 
 **If you encounter issues getting packages to install successfully, please 
-contact us at **support@osgconnect.net**
+contact us at support@osgconnect.net**
 
 Once you are done, you can exit the Pkg REPL by typing the `DELETE` key and then 
 typing `exit()`
@@ -158,7 +158,7 @@ the Julia Standard library) use the example script directly below.
 	tar -xzf julia-#.#.#-linux-x86_64.tar.gz
 
 	# add Julia binary to PATH
-	export PATH=$_CONDOR_SCRATCH_DIR/julia-#-#-#/bin:$PATH
+	export PATH=$_CONDOR_SCRATCH_DIR/julia-#.#.#/bin:$PATH
 
 	# run Julia script
 	julia my-script.jl
@@ -175,7 +175,7 @@ the Julia Standard library) use the example script directly below.
 	tar -xzf my-project.tar.gz
 
 	# add Julia binary to PATH
-	export PATH=$_CONDOR_SCRATCH_DIR/julia-#-#-#/bin:$PATH
+	export PATH=$_CONDOR_SCRATCH_DIR/julia-#.#.#/bin:$PATH
 	# add Julia packages to DEPOT variable
 	export JULIA_DEPOT_PATH=$_CONDOR_SCRATCH_DIR/my-project
 
