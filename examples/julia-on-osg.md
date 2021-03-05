@@ -82,6 +82,10 @@ it `my-project/` below) and tell Julia its name:
 	$ mkdir my-project
 	$ export JULIA_DEPOT_PATH=$PWD/my-project
 
+> If you already have a directory with Julia packages on the login node, you can 
+> add to it by skipping the `mkdir` step above and going straight to setting the 
+> `JULIA_DEPOT_PATH` variable. 
+
 You can choose whatever name to use for this directory \-- if you have
 different projects that you use for different jobs, you could
 use a more descriptive name than "my-project".
@@ -141,7 +145,7 @@ and create an additional `tar.gz` file of the installed packages.
 
 Your job will use a bash script as the HTCondor `executable`. This script 
 will contain all the steps needed to unpack the Julia binaries and 
-execute your Julia script (`my-script.jl` below). What follows are two example bash scripts, 
+execute your Julia script (`script.jl` below). What follows are two example bash scripts, 
 one which can be used to execute a script with base Julia only, and one that 
 will use packages you installed to a project directory (see [Install Julia Packages](#install-julia-packages)).
 
@@ -161,7 +165,7 @@ the Julia Standard library) use the example script directly below.
 	export PATH=$_CONDOR_SCRATCH_DIR/julia-#.#.#/bin:$PATH
 
 	# run Julia script
-	julia my-script.jl
+	julia script.jl
 
 
 ### Example Bash Script For Julia With Installed Packages
@@ -180,7 +184,7 @@ the Julia Standard library) use the example script directly below.
 	export JULIA_DEPOT_PATH=$_CONDOR_SCRATCH_DIR/my-project
 
 	# run Julia script
-	julia --project=my-project my-script.jl
+	julia --project=my-project script.jl
 
 
 ## Create HTCondor Submit File 
