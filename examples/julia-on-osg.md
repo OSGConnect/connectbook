@@ -1,4 +1,4 @@
-[title]: - "Using Julia on OSG"
+[title]: - "Using Julia on the OSG"
 
 [TOC]
 
@@ -6,17 +6,18 @@
 
 This guide provides an introduction to running Julia code on the Open 
 Science Grid. The [Quickstart Instructions](#quickstart-instructions) provide 
-an outline of job submission, followed by more details on adding Julia packages 
-to a job submission and more complete submit examples. This guide assumes that 
+an outline of job submission. The following sections provide more details about 
+installing Julia packages ([Install Julia Packages](#install-julia-packages)) and creating a complete
+job submission ([Submit Julia Jobs](#submit-julia-jobs)). This guide assumes that 
 you have a script written in Julia and can identify the additional Julia packages 
 needed to run the script. 
 
 If you are using many Julia packages or have other software dependencies as 
 part of your job, you may want to manage your software via a container instead 
 of using the tar.gz file method described in this guide. The OSG Connect team 
-maintains a [Julia container](12000073449)
-See our [Docker and Singularity Guide](12000024676) for more details. 
-
+maintains a [Julia container](12000073449) that can be used as a starting point 
+for creating a customized container with added packages. See 
+our [Docker and Singularity Guide](12000024676) for more details. 
 
 # Quickstart Instructions
 
@@ -36,16 +37,16 @@ submit server, **OR** use `transfer_input_files = url` in your HTCondor submit f
 with base Julia and Standard Library, via a shell script like the following as 
 the job's executable: 
 
-	#!/bin/bash
+		#!/bin/bash
 
-	# extract Julia tar.gz file
-	tar -xzf julia-#.#.#-linux-x86_64.tar.gz
+		# extract Julia tar.gz file
+		tar -xzf julia-#.#.#-linux-x86_64.tar.gz
 
-	# add Julia binary to PATH
-	export PATH=$_CONDOR_SCRATCH_DIR/julia-#-#-#/bin:$PATH
+		# add Julia binary to PATH
+		export PATH=$_CONDOR_SCRATCH_DIR/julia-#-#-#/bin:$PATH
 
-	# run Julia script
-	julia my-script.jl
+		# run Julia script
+		julia my-script.jl
 
     * For more details on the job submission, see the section 
     below: [Submit Julia Jobs](#submit-julia-jobs)
@@ -115,7 +116,7 @@ If you have multiple packages to install they can be combined
 into a single command, e.g. `(my-project) pkg> add Package1 Package2 Package3`.
 
 **If you encounter issues getting packages to install successfully, please 
-contact us at <chtc@cs.wisc.edu>.**
+contact us at **support@osgconnect.net**
 
 Once you are done, you can exit the Pkg REPL by typing the `DELETE` key and then 
 typing `exit()`
