@@ -163,7 +163,7 @@ in the container, please add `+SingularityBindCVMFS = False` to your job submit 
 Two options that can be used in the Dockerfile to set the environment or 
 default command are `ENTRYPOINT` and `ENV`. Unfortunately, both of these 
 aspects of the Docker container are deleted when it is converted to a 
-Singularity image in the Open Science Grid. [Email us](mailto:support@osgconnect.net) if you would like 
+Singularity image in the Open Science Grid. [Email us](mailto:support@opensciencegrid.org) if you would like 
 to preserve these attributes. 
 
 [osg-containers]: 12000024676

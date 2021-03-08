@@ -36,7 +36,7 @@ fotran, and other languages, and includes important libraries for supporting you
 and sometimes software execution. Your software compilation may require certain versions 
 of a compiler which should be noted in the installation instructions or system dependencies 
 documention. Currently the login nodes have `GCC 4.8.5` as the default version, but newer 
-versions of GCC may also be available - to learn more please contact <support@osgconnect.net>.
+versions of GCC may also be available - to learn more please contact <support@opensciencegrid.org>.
 
 CMake is a commonly used compilation platform. Your software may have dependencies for 
 specific `cmake` versions. Currently the login nodes have two versions of CMake, `3.12.3` 
@@ -131,4 +131,4 @@ commands to the executable bash script to define evironment variables, like
 for instance `LD_LIBRARY_PATH`, that may be needed to properly execute your software.
 
 ## Get Additional Assistance
-If you have questions or need assistance, please contact <support@osgconnect.net>.
+If you have questions or need assistance, please contact <support@opensciencegrid.org>.

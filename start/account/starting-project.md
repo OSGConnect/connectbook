@@ -44,7 +44,7 @@ add you to it, or add you to an existing project when your account is approved.
 If you are changing research groups (and therefore projects) or are coming to 
 OSG Connect outside of the usual account creation process, it is possible to 
 join a pre-existing project by emailing the 
-OSG Connect support team (support@osgconnect.net) with your name and the project 
+OSG Connect support team (support@opensciencegrid.org) with your name and the project 
 you wish to join. 
 
 ## "Set" your OSG Connect project

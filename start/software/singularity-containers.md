@@ -10,7 +10,7 @@ job will execute within, or choose from a set of pre-defined images.
 For jobs on OSG, it does not matter whether you provide a Docker or Singularity 
 image. Either is compatible with our system and can be used with little to 
 no modification. This is of course highly dependent on your workload. Please
-feel free to contact us at [support@osgconnect.net](mailto:support@osgconnect.net) if you have any questions. 
+feel free to contact us at [support@opensciencegrid.org](mailto:support@opensciencegrid.org) if you have any questions. 
 
 ## Using OSG Provided Singularity Images
 
@@ -78,7 +78,7 @@ To get your images included, please create a git pull request with the container
 identifier in `docker_images.txt` in the
 [cvmfs-singularity-sync repository](https://github.com/opensciencegrid/cvmfs-singularity-sync), 
 or contact
-[support@osgconnect.net](mailto:support@osgconnect.net)
+[support@opensciencegrid.org](mailto:support@opensciencegrid.org)
 and we can help you.
 
 Once your submission has been accepted, it will be automatically converted to a Singularity 
@@ -121,7 +121,7 @@ For example, if my Docker Hub username was `alice` and I created a container cal
 
 ### I already have a Singularity container, not a Docker one
 
-Email the OSG Connect team: support@osgconnect.net
+Email the OSG Connect team: support@opensciencegrid.org
 
 ### FATAL: kernel too old
 

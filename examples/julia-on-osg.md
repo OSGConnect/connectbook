@@ -116,7 +116,7 @@ If you have multiple packages to install they can be combined
 into a single command, e.g. `(my-project) pkg> add Package1 Package2 Package3`.
 
 **If you encounter issues getting packages to install successfully, please 
-contact us at support@osgconnect.net**
+contact us at support@opensciencegrid.org**
 
 Once you are done, you can exit the Pkg REPL by typing the `DELETE` key and then 
 typing `exit()`

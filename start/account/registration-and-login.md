@@ -36,7 +36,7 @@ your institution in the list, or type its name to find matches.
 > If you don't have an institutional identity or can't find your institution 
 > on the provided list, either (separately) sign up for a Globus ID and follow 
 > the link for that option on this page, or contact the OSG Connect support 
-> team for guidance at support@osgconnect.net
+> team for guidance at support@opensciencegrid.org
 
 Note that this is the identity that will get linked to your OSG Connect account, 
 so be sure to pick the institution (if you have multiple affiliations) that 
