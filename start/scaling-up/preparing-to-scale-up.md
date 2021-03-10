@@ -131,7 +131,8 @@ the entire set of jobs.
 
 ## Avoid Exceeding Disk Quotas
 
-Each OSG Connect user is granted 100 GB of storage in their `/home` directory and 
+Each OSG Connect user is granted 50 GB of storage in their `/home` directory and 
+
 500 GB of storage in their `/public` directory. This may seem like a lot, but 
 when running 100's or 1000's of jobs even small output can add up quickly. If 
 these quotas are exceeded, jobs will fail or go on hold when attempting returning output.
