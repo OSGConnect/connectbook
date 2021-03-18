@@ -24,7 +24,7 @@ Learn more and chat with a Research Computing Facilitator by requesting an accou
 | Software	| pre-compiled binaries, containers | Most other than -> | Licensed software, non-Linux |
 
 *or checkpointable
-**per job; you can work with a large data set on OSG if it can be split into pieces
+**per job; you can work with a large dataset on OSG if it can be split into pieces
 
 Some examples of work that has been a good fit for the OSG and benefited from 
 using its resources include: 
