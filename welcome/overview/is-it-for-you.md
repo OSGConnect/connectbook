@@ -6,12 +6,12 @@ at more than one hundred institutional partners that, together, offer a strategi
 advantage for computing work that can be run as numerous short tasks. 
 
 
-|   		| **Ideal jobs!** | **Still very advantageous** | **Less-so, but maybe** | 
+|   		| **Ideal jobs!** | **Still very advantageous** | **Not a Good Fit / Get in Touch!** | 
 |:----------|:--------------|:--------------|:--------------|
 | Expected Throughput, per user		|	1000s concurrent cores |	100s concurrent cores |	let's discuss! |
 | CPU		|	1			|	< 8			|	> 8 (or MPI)|
-| Walltime	| 	< 12 hrs*	|	< 24 hrs*	|	> 24 hrs	|
-| RAM		| 	< few GB	|	< 10s GB	|	> 10s GB	|
+| Walltime	| 	< 10 hrs*	|	< 20 hrs*	|	> 20 hrs (do not run)	|
+| RAM		| 	< few GB	|	< 40 GB	|	> 40 GB	|
 | Input		| 	< 500 MB**	|	< 10 GB**	|	> 10 GB		|
 | Output	| 	< 1GB**		|	< 10 GB**	|	> 10 GB		|
 | Software	| pre-compiled binaries, containers | Most other than -> | Licensed software, non-Linux |
