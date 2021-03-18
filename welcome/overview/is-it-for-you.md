@@ -5,37 +5,36 @@ The [Open Science Grid][osg] is a nationally-funded consortium of computing reso
 at more than one hundred institutional partners that, together, offer a strategic 
 advantage for computing work that can be run as numerous short tasks. 
 
+For problems that can be run as many independent jobs, as in the first two columns 
+of the table below, the OSG provides computing capacity that can transform the types of 
+questions that researchers are able to tackle. **Importantly,
+many compute tasks that may appear to not be a good fit _can_ be modified in simple ways 
+to take advantage, and we'd love to discuss options with you!** 
 
-|   		| **Ideal jobs!** | **Still very advantageous** | **Not a Good Fit / Get in Touch!** | 
+Learn more and chat with a Research Computing Facilitator by requesting an account here: [OSG Connect Sign-Up][account-request]
+
+|   		| **Ideal jobs!** | **Still very advantageous** | **Maybe Not, but Get in Touch!** | 
 |:----------|:--------------|:--------------|:--------------|
 | Expected Throughput, per user		|	1000s concurrent cores |	100s concurrent cores |	let's discuss! |
 | CPU		|	1			|	< 8			|	> 8 (or MPI)|
-| Walltime	| 	< 10 hrs*	|	< 20 hrs*	|	> 20 hrs (do not run)	|
+| Walltime	| 	< 10 hrs*	|	< 20 hrs*	|	> 20 hrs (not a good fit)	|
 | RAM		| 	< few GB	|	< 40 GB	|	> 40 GB	|
-| Input		| 	< 500 MB**	|	< 10 GB**	|	> 10 GB		|
-| Output	| 	< 1GB**		|	< 10 GB**	|	> 10 GB		|
+| Input		| 	< 500 MB	|	< 10 GB	|	> 10 GB**		|
+| Output	| 	< 1GB		|	< 10 GB	|	> 10 GB**		|
 | Software	| pre-compiled binaries, containers | Most other than -> | Licensed software, non-Linux |
 
 *or checkpointable
-
 **per job; you can work with a large data set on OSG if it can be split into pieces
 
-For problems that can be run as many independent jobs, as in the first two columns 
-of the table above, the OSG provides practically-unlimited resources as 
-compared to local computing systems, with the possibility 
-of having hundreds or even thousands of computer cores in use at once. Access 
-to this amount of computing capacity can transform the types of questions that researchers 
-are able to tackle. 
-
-Some examples of work that have been a good fit for the OSG and benefited from 
+Some examples of work that has been a good fit for the OSG and benefited from 
 using its resources include: 
 
-- MRI image analysis
-- DNA read mapping and other bioinformatic pipelines
+- image analysis (including MRI, GIS, etc.)
+- text-based analysis, including DNA read mapping and other bioinformatics
 - parameter sweeps
-- Monte Carlo methods
+- Monte Carlo methods and other model optimization
 
-Learn more by requesting an account here: [OSG Connect Sign-Up][account-request]
+Learn more and chat with a Research Computing Facilitator by requesting an account here: [OSG Connect Sign-Up][account-request]
 
 [osg]: https://opensciencegrid.org/
 [account-request]: https://osgconnect.net/signup
