@@ -13,7 +13,7 @@ to take advantage, and we'd love to discuss options with you!**
 
 Learn more and chat with a Research Computing Facilitator by requesting an account here: [OSG Connect Sign-Up][account-request]
 
-|   		| **Ideal jobs!** | **Still very advantageous** | **Maybe Not, but Get in Touch!** | 
+|   		| **Ideal jobs!** | **Still very advantageous** | **Maybe not, but get in touch!** | 
 |:----------|:--------------|:--------------|:--------------|
 | Expected Throughput, per user		|	1000s concurrent cores |	100s concurrent cores |	let's discuss! |
 | CPU		|	1			|	< 8			|	> 8 (or MPI)|
