@@ -85,3 +85,6 @@
 [submodule "tutorials/tutorial-tensorflow-containers"]
 	path = tutorials/tutorial-tensorflow-containers
 	url = https://github.com/OSGConnect/tutorial-tensorflow-containers.git
+[submodule "tutorials/tutorial-wordfreq"]
+	path = tutorials/tutorial-wordfreq
+	url = https://github.com/OSGConnect/tutorial-wordfreq
