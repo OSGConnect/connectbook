@@ -40,6 +40,9 @@ For example, this is what a submit file might look like to run your job under EL
 
     queue
 
+
+> **When using Singularity for you OSG job as in the above example, the Singularity image is automatically started up when the job resource is allocated.  The executable provided in the submit script will run inside the Singularity image and have access to files, software, and libraries that were installed in the image.**
+
 ## Using Custom Singularity Images
 
 OSG Connect provides tooling for users to create, publish and load custom images.
