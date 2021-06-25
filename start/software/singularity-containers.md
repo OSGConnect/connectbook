@@ -40,6 +40,9 @@ For example, this is what a submit file might look like to run your job under EL
 
     queue
 
+
+> **When using a container for your jobs, as in the above example, the container image is automatically started up when HTCondor matches your job to a slot.  The executable provided in the submit script will be run within the context of the container image, having access to software and libraries that were installed to the image, as if they were already on the server where the job is running. Job executables need not (and should not) run any singularity or docker commands to start the container.**
+
 ## Using Custom Singularity Images
 
 OSG Connect provides tooling for users to create, publish and load custom images.
