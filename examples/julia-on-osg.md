@@ -26,7 +26,7 @@ You will need the 64-bit, tarball compiled for general use on a Linux x86 system
 file name will resemble something like `julia-#.#.#-linux-x86_64.tar.gz`.
 
     * Tip: use `wget` to download directly to your `/home` directory on the 
-submit server, **OR** use `transfer_input_files = url` in your HTCondor submit files.
+login node, **OR** use `transfer_input_files = url` in your HTCondor submit files.
 
 1. Install your Julia packages on the login node, else skip to the next step.
 
