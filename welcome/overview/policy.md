@@ -1,4 +1,4 @@
-[title]: - "Policies for Using OSG via OSG Connect Submit Servers"
+[title]: - "Policies for Using OSG via OSG Connect Access Points"
 
 Access to OSG Connect resources is contingent on compliance with the below and with any requests from OSG staff to change practices that cause issues for OSG Connect systems and/or users. **Please contact us if you have any questions! We can often help with exceptions to default policies and/or identify available alternative approaches to help you with a perceived barrier.**
 
