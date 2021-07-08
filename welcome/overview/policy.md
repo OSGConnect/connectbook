@@ -17,7 +17,7 @@ As the below do not cover every possible scenario of potentially disruptive prac
 	 - User-created ‘open’ network ports are [disallowed](https://github.com/opensciencegrid/security/blob/master/docs/policy/OSG_Connect_Login_Server_Open_Port_Policy.md), unless explicitly permitted following an accepted justification to support@opensciencegrid.org. (If you’re not sure whether something you want to do will open a port, just get in touch!)
 
 5. The following actions may be taken automatedly or by OSG staff to stop or prevent jobs from causing problems. Please contact us if you’d like help understanding why your jobs were held or removed, and so we can help you avoid problems in the future.
-	 - **Jobs using more memory or disk than requested** may be automatically held (see Optimize your Job Throughput for tips on requesting the ‘right’ amount of job resources in your submit file).
+	 - **Jobs using more memory or disk than requested** may be automatically held (see [Scaling Up after Test Jobs](https://support.opensciencegrid.org/support/solutions/articles/12000076552-scaling-up-after-success-with-test-jobs) for tips on requesting the ‘right’ amount of job resources in your submit file).
 	 - **Jobs that have executed more than 30 times without completing** may be automatically held (likely because [they’re too long](https://support.opensciencegrid.org/support/solutions/articles/5000632058-is-the-open-science-grid-for-you-) for OSG).
 	 - **Jobs that have been held more than 14 days** may be automatically removed.
 	 - **Jobs queued for more than three months** may be automatically removed.
