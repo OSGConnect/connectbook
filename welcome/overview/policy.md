@@ -21,6 +21,6 @@ As the below do not cover every possible scenario of potentially disruptive prac
 	 - **Jobs that have executed more than 30 times without completing** may be automatically held (likely because [they’re too long](https://support.opensciencegrid.org/support/solutions/articles/5000632058-is-the-open-science-grid-for-you-) for OSG).
 	 - **Jobs that have been held more than 14 days** may be automatically removed.
 	 - **Jobs queued for more than three months** may be automatically removed.
-	 - **Jobs otherwise causing known problems** may be held or removed, with prior notification to the user.
+	 - **Jobs otherwise causing known problems** may be held or removed, without prior notification to the user.
 	 - **Held jobs may also be edited to prevent automated release/retry**
 	 - NOTE: in order to respect user email clients, job holds and removals do not come with specific notification to the user, unless configured by the user at the time of submission using HTCondor’s ‘notification’ feature.
