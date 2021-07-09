@@ -25,7 +25,7 @@ We have implemented modules within OSG Connect to manage the software that is av
  
 **Are there any restrictions on installing commercial softwares?**
 
-We only provide software that is freely distributable. At present, we do not have or support most commercial software due to licensing issues. (One exception is [MATLAB standalone executables](https://support.opensciencegrid.org/support/solutions/articles/5000660751-basics-of-compiled-matlab-applications-hello-world-example) which have been compiled with the MATLAB Compiler Runtime).  
+We only provide software that is freely distributable. At present, we do not have or support most commercial software due to licensing issues. (One exception is running [MATLAB standalone executables](https://support.opensciencegrid.org/support/solutions/articles/5000660751-basics-of-compiled-matlab-applications-hello-world-example) which have been compiled with the MATLAB Compiler Runtime).  
  
 **Can I request for system wide installation of the open source software useful for my research?**
 
