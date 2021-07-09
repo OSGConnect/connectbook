@@ -17,13 +17,15 @@ Please follow the steps outlined in the [Sign Up process](http://osgconnect.net/
 
 In general, we support most software that fit the distributed high throughput computing model. Users are encouraged to download and install their own software. For some software, we support distributed software modules listed [here](https://support.opensciencegrid.org/support/solutions/articles/12000048518). Software can be added to the modules upon request. 
  
+Additionally, users may install their software into a Docker container which can run on OSG as a Singularity image.  See [this guide](https://support.opensciencegrid.org/support/solutions/articles/12000024676-docker-and-singularity-containers) for more information. 
+
 **How do I access a specific software application?**
 
 We have implemented modules within OSG Connect to manage the software that is available to users. Modules allow for easy access to a number of software and version options. Our [Accessing Software using Distributed Environment Modules](https://support.opensciencegrid.org/support/solutions/articles/12000048518) page provides more details on how to use modules in OSG Connect.
  
 **Are there any restrictions on installing commercial softwares?**
 
-We only provide software that is freely distributable. At present, we do not have or support most commercial software due to licensing issues. 
+We only provide software that is freely distributable. At present, we do not have or support most commercial software due to licensing issues. (One exception is [MATLAB standalone executables](https://support.opensciencegrid.org/support/solutions/articles/5000660751-basics-of-compiled-matlab-applications-hello-world-example) which have been compiled with the MATLAB Compiler Runtime).  
  
 **Can I request for system wide installation of the open source software useful for my research?**
 
@@ -51,6 +53,8 @@ The number of jobs that are submitted to the queue by any one user should not ex
 
 `max_idle = 2000`  
 
+This is the maximum number of jobs that you will have in the "Idle" or "Held" state for the submitted batch of jobs at any given time.  Using a value of 2000 will ensure that your jobs continue to apply a constant pressure on the queue, but will not fill up the queue unnecessarily (which helps the scheduler to perform optimally).  
+
 ## Data Storage and Transfer
    
 **What is the best way to process large volume of data?**
@@ -66,6 +70,8 @@ You can transfer data using scp or rsync. See [Using scp To Transfer Files To OS
 The data under your `/public` location is discoverable and readable by anyone in the world. Data in `/public` is made public over http/https (via `https://stash.osgconnect.net/public/`) and mirrored to `/cvmfs/stash.osgstorage.org/osgconnect/public/` (for use with `stashcp`) which is mounted on a large number of systems around the world.
 
 **Is there any support for private data?**
+
+>**OSG currently has no storage appropriate for HIPAA data.**
 
 If you do not want your data to be downloadable by anyone, and it’s small enough for HTCondor file transfer (i.e. <100MB per file and <500MB total per job), then it should be staged in your `/home` directory and transferred to jobs with HTCondor file transfer (`transfer_input_files`, in the submit file). If your data must remain private and is too large for HTCondor file transfer, then it’s not a good fit for the “open” environment of the Open Science Grid, and another resource will likely be more appropriate. As a reminder, if the data is not being used for active computing work on OSG Connect, it should not be stored on OSG Connect systems. Lastly, our data storage locations are not backed up nor are they intended for long-term storage.
 
