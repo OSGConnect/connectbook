@@ -25,7 +25,8 @@ We have implemented modules within OSG Connect to manage the software that is av
  
 **Are there any restrictions on installing commercial softwares?**
 
-We only provide software that is freely distributable. At present, we do not have or support most commercial software due to licensing issues. (One exception is running [MATLAB standalone executables](https://support.opensciencegrid.org/support/solutions/articles/5000660751-basics-of-compiled-matlab-applications-hello-world-example) which have been compiled with the MATLAB Compiler Runtime).  
+We can only *directly* support software that is freely distributable. At present, we do not have or support most commercial software due to licensing issues. (One exception is running [MATLAB standalone executables](https://support.opensciencegrid.org/support/solutions/articles/5000660751-basics-of-compiled-matlab-applications-hello-world-example) which have been compiled with the MATLAB Compiler Runtime).  Software that is licensed to individual users (and not to be shared between users) can be staged within the user's /home directory with HTCondor transferring to jobs, but should not be staged in OSG's public data staging locations (see https://support.opensciencegrid.org/support/solutions/articles/12000002985-data-management-and-policies). Please get in touch with any questions about licensed software.
+
  
 **Can I request for system wide installation of the open source software useful for my research?**
 
