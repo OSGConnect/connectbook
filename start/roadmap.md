@@ -9,7 +9,7 @@ TODO: write text addressing these questions:
 - What is this guide?
 - How should it be used?
 
-## Introduction to the OSG
+# Introduction to the OSG
 
 <!-- link to video when finished --> 
 
@@ -19,14 +19,14 @@ TODO: write text addressing these questions:
     - TODO: link to existing guide w/ table 
 - Diagram/cartoon showing how jobs are distributed to multiple sites across the U.S.
 
-## Get On OSG Connect
+# Get On OSG Connect
 
 TODO: Intro sentence
 
 - [Generate ssh keys and activate your OSG login]()
 - [Set up project]()
 
-## Explore HTCondor
+# Explore HTCondor
 
 TODO: Intro paragraph
 
@@ -37,7 +37,7 @@ TODO: Intro paragraph
 
 TODO: Intro sentence
 
-### Prepare your software
+## Prepare your software
 
 TODO: Intro paragraph
 
@@ -48,7 +48,7 @@ TODO: Intro paragraph
     - [R]()
     - TODO: select or create other tutorials? 
 
-### Move your data
+## Move your data
 
 TODO: Intro paragraph
 
@@ -56,11 +56,11 @@ TODO: Intro paragraph
 - Pick a tutorial?
 
 <!-- TODO: add guides
-### Organize your files*
-### Troubleshooting*
+## Organize your files*
+## Troubleshooting*
 -->
 
-## Scale Up
+# Scale Up
 
 TODO: intro sentence
 
@@ -69,7 +69,7 @@ TODO: intro sentence
 
 <!-- TODO: Making jobs resilient* -->
 
-## Special Use Cases
+# Special Use Cases
 
 - long jobs / checkpointing
 - complex workflows / DAGMAN
@@ -77,7 +77,7 @@ TODO: intro sentence
 - more on docker/singularity
 - using max_idle
 
-## Getting Help 
+# Getting Help 
 
 For assistance or questions, please email the OSG User Support team  at <mailto:support@opensciencegrid.org> or visit the [help desk and community forums](http://support.opensciencegrid.org).
 
