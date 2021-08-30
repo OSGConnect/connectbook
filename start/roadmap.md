@@ -9,7 +9,7 @@ TODO: write text addressing these questions:
 - What is this guide?
 - How should it be used?
 
-# Introduction to the OSG
+# 1. Introduction to the OSG
 
 <!-- link to video when finished --> 
 
@@ -19,21 +19,21 @@ TODO: write text addressing these questions:
     - TODO: link to existing guide w/ table 
 - Diagram/cartoon showing how jobs are distributed to multiple sites across the U.S.
 
-# Get On OSG Connect
+# 2. Get On OSG Connect
 
 TODO: Intro sentence
 
 - [Generate ssh keys and activate your OSG login]()
 - [Set up project]()
 
-# Explore HTCondor
+# 3. Explore HTCondor
 
 TODO: Intro paragraph
 
 - [OSG Connect Quickstart]()
 - [Finding OSG Locations]()
 
-## Test a Job
+# 4. Test a Job
 
 TODO: Intro sentence
 
@@ -60,7 +60,7 @@ TODO: Intro paragraph
 ## Troubleshooting*
 -->
 
-# Scale Up
+# 5. Scale Up
 
 TODO: intro sentence
 
@@ -69,7 +69,7 @@ TODO: intro sentence
 
 <!-- TODO: Making jobs resilient* -->
 
-# Special Use Cases
+# 6. Special Use Cases
 
 - long jobs / checkpointing
 - complex workflows / DAGMAN
