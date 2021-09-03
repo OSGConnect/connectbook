@@ -36,7 +36,7 @@ using its resources include:
 
 **Watch this video from the 2021 OSG Virtual School** for a detailed introduction to OSG the Distributed High Throughput Computing framework:
 
-[<img src="/images/Intro_OSG_Video_Thumbnail.png" width="500">](https://www.youtube.com/embed/vpJPPjoQ3QU)
+[<img src="https://raw.githubusercontent.com/OSGConnect/connectbook/master/images/Intro_OSG_Video_Thumbnail.png" width="500">](https://www.youtube.com/embed/vpJPPjoQ3QU)
 
 
 Learn more and chat with a Research Computing Facilitator by requesting an account here: [OSG Connect Sign-Up][account-request]
