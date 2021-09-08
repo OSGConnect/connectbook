@@ -82,3 +82,9 @@
 [submodule "tutorials/tutorial-blast-split"]
 	path = tutorials/tutorial-blast-split
 	url = https://github.com/OSGConnect/tutorial-blast-split
+[submodule "tutorials/tutorial-tensorflow-containers"]
+	path = tutorials/tutorial-tensorflow-containers
+	url = https://github.com/OSGConnect/tutorial-tensorflow-containers.git
+[submodule "tutorials/tutorial-wordfreq"]
+	path = tutorials/tutorial-wordfreq
+	url = https://github.com/OSGConnect/tutorial-wordfreq

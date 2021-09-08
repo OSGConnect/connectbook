@@ -163,20 +163,8 @@ in the container, please add `+SingularityBindCVMFS = False` to your job submit 
 Two options that can be used in the Dockerfile to set the environment or 
 default command are `ENTRYPOINT` and `ENV`. Unfortunately, both of these 
 aspects of the Docker container are deleted when it is converted to a 
-Singularity image in the Open Science Grid. [Email us](mailto:support@osgconnect.net) if you would like 
+Singularity image in the Open Science Grid. [Email us](mailto:support@opensciencegrid.org) if you would like 
 to preserve these attributes. 
-
-### Configuring GPU images
-
-GPU images requires a few extra steps to get access to the host GPU libraries.
-We recommend that in this case you use a `Dockerfile` rather than building 
-a image interactively. 
-
-GPU containers running under GPU slots will automatically get the host GPU
-libraries bound to `/host-libs` inside the container. For this to work, 
-the `/host-libs` directory has to exist in the image, and `LD_LIBRARY_PATH`
-has to be set for the job. An example of how to do this is the 
-[TensorFlow GPU image](https://github.com/opensciencegrid/osgvo-tensorflow-gpu).
 
 [osg-containers]: 12000024676
 
