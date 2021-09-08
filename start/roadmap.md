@@ -80,4 +80,3 @@ TODO: intro sentence
 # Getting Help 
 
 For assistance or questions, please email the OSG User Support team  at <mailto:support@opensciencegrid.org> or visit the [help desk and community forums](http://support.opensciencegrid.org).
-
