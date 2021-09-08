@@ -68,3 +68,8 @@ More details about using modules in OSG Connect can be found
 If your work would benefit from system-wide installation of open source software (made 
 available via modules), please contact us at 
 [support@opensciencegrid.org](mailto:support@opensciencegrid.org).
+
+**Watch this video from the 2021 OSG Virtual School** for more information about using software on OSG:
+
+[<img src="https://raw.githubusercontent.com/OSGConnect/connectbook/master/images/Software_Video_Thumbnail.png" width="500">](https://www.youtube.com/embed/xUeIQbVXOMQ)
+
