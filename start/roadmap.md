@@ -23,15 +23,15 @@ TODO: write text addressing these questions:
 
 TODO: Intro sentence
 
-- [Generate ssh keys and activate your OSG login]()
-- [Set up project]()
+- [Generate ssh keys and activate your OSG login](https://support.opensciencegrid.org/support/solutions/articles/12000027675-generate-ssh-keys-and-activate-your-osg-login)
+- [Set up project](https://support.opensciencegrid.org/support/solutions/articles/5000634360-join-and-use-a-project-in-osg-connect)
 
 # 3. Explore HTCondor
 
 TODO: Intro paragraph
 
-- [OSG Connect Quickstart]()
-- [Finding OSG Locations]()
+- [OSG Connect Quickstart](https://support.opensciencegrid.org/support/solutions/articles/5000633410-osg-connect-quickstart)
+- [Finding OSG Locations](https://support.opensciencegrid.org/support/solutions/articles/12000061978-finding-osg-locations)
 
 # 4. Test a Job
 
@@ -43,16 +43,16 @@ TODO: Intro paragraph
 
 - Read this about software: Using Software in OSG Connect
 - Pick a tutorial
-    - [Autodock]()
-    - [Python]()
-    - [R]()
+    - [Autodock](https://support.opensciencegrid.org/support/solutions/folders/5000262147)
+    - [Python](https://support.opensciencegrid.org/support/solutions/folders/12000005851)
+    - [R](https://support.opensciencegrid.org/support/solutions/folders/5000273495)
     - TODO: select or create other tutorials? 
 
 ## Move your data
 
 TODO: Intro paragraph
 
-- Read about Data: [Data Management Policies]()
+- Read about Data: [Data Management Policies](https://support.opensciencegrid.org/support/solutions/articles/12000002985-data-management-and-policies)
 - Pick a tutorial?
 
 <!-- TODO: add guides
@@ -64,8 +64,8 @@ TODO: Intro paragraph
 
 TODO: intro sentence
 
-- Things to think about: [Scaling up after success with test jobs]()
-- Scale up to multiple jobs: [Easily submit multiple jobs]()
+- Things to think about: [Scaling up after success with test jobs](https://support.opensciencegrid.org/support/solutions/articles/12000076552-scaling-up-after-success-with-test-jobs)
+- Scale up to multiple jobs: [Easily submit multiple jobs](https://support.opensciencegrid.org/support/solutions/articles/12000073165-easily-submit-multiple-jobs)
 
 <!-- TODO: Making jobs resilient* -->
 
