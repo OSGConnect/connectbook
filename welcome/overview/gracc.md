@@ -13,7 +13,7 @@ Under the _Project_ or _User_ drop-downs, find your project/user. You can select
 ones.
 
 In the upper right corner, you can select a different time period. You can then select a
-different _Group By_ time range. For example, if you want data for the last year group
+different _Group By_ time range. For example, if you want data for the last year grouped
 monthly, select "Last 1 year" for the _Period_, and "1M" for the _Group By_.
 
 

@@ -10,30 +10,21 @@ job will execute within, or choose from a set of pre-defined images.
 For jobs on OSG, it does not matter whether you provide a Docker or Singularity 
 image. Either is compatible with our system and can be used with little to 
 no modification. This is of course highly dependent on your workload. Please
-feel free to contact us at [support@osgconnect.net](mailto:support@osgconnect.net) if you have any questions. 
+feel free to contact us at [support@opensciencegrid.org](mailto:support@opensciencegrid.org) if you have any questions. 
 
 ## Using OSG Provided Singularity Images
 
 The Open Science Grid user support team maintains a small set of images, hosted in a distributed
 file system called [CVMFS](https://cernvm.cern.ch/portal/filesystem). These images
-contain a basic set of tools and libraries. These include: 
-
-|                     | **Image Location**                                                                 | **Defintion** | **Description** |
-|:--------------------|:-----------------------------------------------------------------------------------|:-------------:|:----------------|
-| **EL 6**            | /cvmfs/singularity.opensciencegrid.org/opensciencegrid/osgvo-el6:latest            | [GitHub](https://github.com/opensciencegrid/osgvo-el6)   | A basic Enterprise Linux (CentOS) 6 based image. This is currently our default image |
-| **EL 7**            | /cvmfs/singularity.opensciencegrid.org/opensciencegrid/osgvo-el7:latest            | [GitHub](https://github.com/opensciencegrid/osgvo-el7) | A basic Enterprise Linux (CentOS) 7 based image. |
-| **Ubuntu Xenial**   | /cvmfs/singularity.opensciencegrid.org/opensciencegrid/osgvo-ubuntu-xenial:latest  | [GitHub](https://github.com/opensciencegrid/osgvo-ubuntu-xenial) | A good image if you prefer Ubuntu over EL flavors |
-| **Ubuntu 18.04 (Bionic)**   | /cvmfs/singularity.opensciencegrid.org/opensciencegrid/osgvo-ubuntu-18.04:latest  | [GitHub](https://github.com/opensciencegrid/osgvo-ubuntu-18.04) | A good image if you prefer Ubuntu over EL flavors |
-| **TensorFlow**      | /cvmfs/singularity.opensciencegrid.org/opensciencegrid/tensorflow:latest           | [GitHub](https://github.com/opensciencegrid/osgvo-tensorflow) | Base on the TensorFlow base image, with a few OSG package added |
-| **TensorFlow GPU**  | /cvmfs/singularity.opensciencegrid.org/opensciencegrid/tensorflow-gpu:latest       | [GitHub](https://github.com/opensciencegrid/osgvo-tensorflow-gpu) | Used for running TensorFlow jobs on OSG GPU resources |
+contain a basic set of tools and libraries. A list of available containers can be
+found in [this page][container-list].
 
 You can indicate that your job should use one of these images by making the following 
 changes to your submit file: 
 
 * Using `Requirements = HAS_SINGULARITY == TRUE` will trigger the scripts that 
 load a Singularity image from CVMFS and run your job inside. 
-* `+SingularityImage` will tell the job which Singularity image to use for the job. If you 
-don't include this option, your job will use a default OSG Singularity image (currently EL 6). 
+* `+SingularityImage` will tell the job which Singularity image to use for the job.
 
 For example, this is what a submit file might look like to run your job under EL7:
 
@@ -48,6 +39,9 @@ For example, this is what a submit file might look like to run your job under EL
     log = log
 
     queue
+
+
+> **When using a container for your jobs, as in the above example, the container image is automatically started up when HTCondor matches your job to a slot.  The executable provided in the submit script will be run within the context of the container image, having access to software and libraries that were installed to the image, as if they were already on the server where the job is running. Job executables need not (and should not) run any singularity or docker commands to start the container.**
 
 ## Using Custom Singularity Images
 
@@ -87,7 +81,7 @@ To get your images included, please create a git pull request with the container
 identifier in `docker_images.txt` in the
 [cvmfs-singularity-sync repository](https://github.com/opensciencegrid/cvmfs-singularity-sync), 
 or contact
-[support@osgconnect.net](mailto:support@osgconnect.net)
+[support@opensciencegrid.org](mailto:support@opensciencegrid.org)
 and we can help you.
 
 Once your submission has been accepted, it will be automatically converted to a Singularity 
@@ -130,7 +124,7 @@ For example, if my Docker Hub username was `alice` and I created a container cal
 
 ### I already have a Singularity container, not a Docker one
 
-Email the OSG Connect team: support@osgconnect.net
+Email the OSG Connect team: support@opensciencegrid.org
 
 ### FATAL: kernel too old
 
@@ -172,10 +166,5 @@ and  Singularity, please see:
 
 <iframe width="560" height="315" src="//www.youtube.com/embed/DA87Ba2dpNM" frameborder="0" allowfullscreen></iframe>
 
-Derek Weitzel wrote a blog post about Singularity on OSG, which provides a good
-introduction on how to create images and run them, but does not cover all the
-functionality described further down:
-
-  * [Singularity on the OSG](https://djw8605.github.io/2017/01/12/singularity-on-the-osg/)
-
 [container-howto]: 12000058245
+[container-list]: 12000073449

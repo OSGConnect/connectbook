@@ -5,7 +5,7 @@
 **Who is eligible to become the user of OSG Connect?**
 
 Any researcher affiliated with a U.S. institution (college, university, national laboratory or research foundation) is eligible to become an OSG Connect user. Researchers outside of the U.S. with affiliations to U.S. groups may be eligible for membership if they are sponsored by a collaborator within the U.S. Researchers outside of the U.S. are asked to first
-[contact us](mailto:support@osgconnect.net) directly to discuss membership.
+[contact us](mailto:support@opensciencegrid.org) directly to discuss membership.
 
 **How do I become an user of OSG Connect?**
 
@@ -17,17 +17,20 @@ Please follow the steps outlined in the [Sign Up process](http://osgconnect.net/
 
 In general, we support most software that fit the distributed high throughput computing model. Users are encouraged to download and install their own software. For some software, we support distributed software modules listed [here](https://support.opensciencegrid.org/support/solutions/articles/12000048518). Software can be added to the modules upon request. 
  
+Additionally, users may install their software into a Docker container which can run on OSG as a Singularity image.  See [this guide](https://support.opensciencegrid.org/support/solutions/articles/12000024676-docker-and-singularity-containers) for more information. 
+
 **How do I access a specific software application?**
 
 We have implemented modules within OSG Connect to manage the software that is available to users. Modules allow for easy access to a number of software and version options. Our [Accessing Software using Distributed Environment Modules](https://support.opensciencegrid.org/support/solutions/articles/12000048518) page provides more details on how to use modules in OSG Connect.
  
 **Are there any restrictions on installing commercial softwares?**
 
-We only provide software that is freely distributable. At present, we do not have or support most commercial software due to licensing issues. 
+We can only *directly* support software that is freely distributable. At present, we do not have or support most commercial software due to licensing issues. (One exception is running [MATLAB standalone executables](https://support.opensciencegrid.org/support/solutions/articles/5000660751-basics-of-compiled-matlab-applications-hello-world-example) which have been compiled with the MATLAB Compiler Runtime).  Software that is licensed to individual users (and not to be shared between users) can be staged within the user's /home directory with HTCondor transferring to jobs, but should not be staged in OSG's public data staging locations (see https://support.opensciencegrid.org/support/solutions/articles/12000002985-data-management-and-policies). Please get in touch with any questions about licensed software.
+
  
 **Can I request for system wide installation of the open source software useful for my research?**
 
-Yes. Please contact <support@osgconnect.net>.  
+Yes. Please contact <support@opensciencegrid.org>.  
    
 ## Running Jobs
    
@@ -51,6 +54,8 @@ The number of jobs that are submitted to the queue by any one user should not ex
 
 `max_idle = 2000`  
 
+This is the maximum number of jobs that you will have in the "Idle" or "Held" state for the submitted batch of jobs at any given time.  Using a value of 2000 will ensure that your jobs continue to apply a constant pressure on the queue, but will not fill up the queue unnecessarily (which helps the scheduler to perform optimally).  
+
 ## Data Storage and Transfer
    
 **What is the best way to process large volume of data?**
@@ -67,11 +72,13 @@ The data under your `/public` location is discoverable and readable by anyone in
 
 **Is there any support for private data?**
 
+>**OSG currently has no storage appropriate for HIPAA data.**
+
 If you do not want your data to be downloadable by anyone, and it’s small enough for HTCondor file transfer (i.e. <100MB per file and <500MB total per job), then it should be staged in your `/home` directory and transferred to jobs with HTCondor file transfer (`transfer_input_files`, in the submit file). If your data must remain private and is too large for HTCondor file transfer, then it’s not a good fit for the “open” environment of the Open Science Grid, and another resource will likely be more appropriate. As a reminder, if the data is not being used for active computing work on OSG Connect, it should not be stored on OSG Connect systems. Lastly, our data storage locations are not backed up nor are they intended for long-term storage.
 
 **Can I get a quota increase?**
 
-[Contact us](mailto:support@osgconnect.net) if you think you'll need a quota increase for `/home` or `/public` to accommodate a set of concurrently-running jobs. We can suppport very large amounts of data, the default quotas are just a starting point.
+[Contact us](mailto:support@opensciencegrid.org) if you think you'll need a quota increase for `/home` or `/public` to accommodate a set of concurrently-running jobs. We can suppport very large amounts of data, the default quotas are just a starting point.
 
 **Will I get notified about hitting quota limits?**
 
