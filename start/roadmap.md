@@ -43,7 +43,7 @@ TODO: Intro paragraph
 
 - Read this about software: Using Software in OSG Connect
 - Pick a tutorial
-    - [Autodock](https://support.opensciencegrid.org/support/solutions/folders/5000262147)
+    - [Drug Discovery with Autodock](https://support.opensciencegrid.org/support/solutions/folders/5000262147)
     - [Python](https://support.opensciencegrid.org/support/solutions/folders/12000005851)
     - [R](https://support.opensciencegrid.org/support/solutions/folders/5000273495)
     - TODO: select or create other tutorials? 
