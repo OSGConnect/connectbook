@@ -68,7 +68,7 @@ All together, the submit file will look something like this:
 Once everything is set up, the job can be submitted in the usual way, by running 
 the `condor_submit` command with the name of the submit file. 
 
-## Running Python Jobs That Use Additional Pacakges
+## Running Python Jobs That Use Additional Packages
 It's likely that you'll need additional Python packages (aka libraries) that are not
 present in the base Python installations made available via modules. This portion of the
 guide describes how to create a Python "virtual environment" that contains your packages
