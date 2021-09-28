@@ -1,4 +1,4 @@
-[title]: - "Data Management and Policies"
+[title]: - "Choose a Data Management Strategy"
 
 [TOC]
 
