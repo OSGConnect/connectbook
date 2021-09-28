@@ -1,4 +1,4 @@
-[title]: - "Docker and Singularity Containers"
+[title]: - "Use Containers on the OSG"
 
 [TOC]
 

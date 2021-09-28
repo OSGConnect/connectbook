@@ -1,4 +1,4 @@
-[title]: - "Workflows with HTCondor's DAGMan"
+[title]: - "Submit Workflows with HTCondor's DAGMan"
 
 [TOC]
 
