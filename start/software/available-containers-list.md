@@ -1,4 +1,4 @@
-[title]: - "Available Containers List"
+[title]: - "View Existing OSG Connect-Supported Containers"
 
 [TOC]
 
