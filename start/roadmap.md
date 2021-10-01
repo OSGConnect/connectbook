@@ -29,15 +29,14 @@ than one hundred institutional partners that, together, offer a
 strategic advantage for computing work that can be run as numerous short
 tasks. 
 
-OSG Connect is a service that includes an access point to the OSG's Open 
-Science Pool and support from OSG's Research Facilitation team. The Open 
-Science Pool provides thousands of hours of computing capacity to researchers 
-every day. 
-
 The OSG is best-suited for computing work that can be run as many, independent 
 tasks, in an approach called "high throughput computing." For more information 
 on what kind of work is a good fit for the OSG, 
 see [Is the Open Science Grid for You?](5000632058). 
+
+Learn more about the services provided by the OSG that can support your HTC workload: 
+
+<a href="https://www.youtube.com/watch?v=5FMAFxROGv0"><img alt="OSG Introduction" src="https://raw.githubusercontent.com/OSGConnect/connectbook/master/images/osg-intro-video-screenshot.png" width="360" height="204"></a>
 
 <!-- Diagram/cartoon showing how jobs are distributed to multiple sites across the U.S.-->
 
