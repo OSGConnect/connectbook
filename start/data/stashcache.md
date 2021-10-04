@@ -58,35 +58,20 @@ have access StashCache and to OSG Connect modules.
 		log = my_job.$(Cluster).$(Process).log
 		error = my_job.$(Cluster).$(Process).err
 		output = my_job.$(Cluster).$(Process).out
-
+		
+		#Transfer input files
+		stash:///osgconnect/public/<username>/<dir>/<filename>
 		requirements = (OSGVO_OS_STRING =?= "RHEL 7") 
 		
 		...other submit file details...
 
-3. Add three commands to the job executable script to (1) load the StashCache 
-module, (2) use the command `stashcp` to transfer the larger input file 
-from a cache site to the execute node where the job is running, and (3) 
-delete the larger input file before the job terminates:
-
-		#!/bin/bash
-		  
-		
-		# transfer input file from StashCache
-		transfer_input_files = stash:///osgconnect/public/<username>/<dir>/<filename>  
-		
-		# remaining commands to be executed in job   
-		
-		...   
-		  
-
 	
-
 **Note how the `/public` directory is mapped to the `/osgconnect/public` namespace 
 under StashCache. For example, if the data file is located at 
-`/public/username/samples/sample01.dat`, then the `stashcp` command to 
+`/public/<username>/samples/sample01.dat`, then the `stashcp` command to 
 transfer this file into your current working directory on the compute host would be:**
 
-	 stash:///osgconnect/public/username/samples/sample01.dat  ./
+	 stash:///osgconnect/public/<username>/samples/sample01.dat  ./
 
 # Use StashCache To Tranfer Larger Output Files To `/public`
 
@@ -121,9 +106,9 @@ need to prepend your `/public` directory path with `stash:///osgconnect` as foll
 		stashcp file_name stash:///osgconnect/public/username/path/file_name
 
 	For example, if you wish to transfer `output.dat` to the directory 
-	`/public/username/output/` then the `stash` command would be:
+	`/public/<username>/output/` then the `stash` command would be:
 
-		stashcp output.dat stash:///osgconnect/public/username/output/output.dat
+		stashcp output.dat stash:///osgconnect/public/<username>/output/output.dat
 
 	**Notice that the output file name `output.dat` must be included at the end of the 
 	`/public` path where the file will be transferred.**
