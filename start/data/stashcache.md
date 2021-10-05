@@ -50,8 +50,8 @@ for which our
 guide may be helpful.
 
 2. Add the necessary details to your HTCondor submit file to tell 
-HTCondor that your jobs must run on executes nodes that 
-have access StashCache and to OSG Connect modules.
+HTCondor which files to transfer, and that your jobs must run on executes nodes that 
+have access StashCache.
 
 		# StashCache submit file example
 		
@@ -60,7 +60,7 @@ have access StashCache and to OSG Connect modules.
 		output = my_job.$(Cluster).$(Process).out
 		
 		#Transfer input files
-		stash:///osgconnect/public/<username>/<dir>/<filename>
+		transfer_input_files = stash:///osgconnect/public/<username>/<dir>/<filename>, <other input files as usual>
 		requirements = (OSGVO_OS_STRING =?= "RHEL 7") 
 		
 		...other submit file details...
@@ -71,7 +71,7 @@ under StashCache. For example, if the data file is located at
 `/public/<username>/samples/sample01.dat`, then the `stashcp` command to 
 transfer this file into your current working directory on the compute host would be:**
 
-	 stash:///osgconnect/public/<username>/samples/sample01.dat  ./
+	 stash:///osgconnect/public/<username>/samples/sample01.dat
 
 # Use StashCache To Tranfer Larger Output Files To `/public`
 
@@ -88,7 +88,7 @@ have access StashCache and to OSG Connect modules.
 		error = my_job.$(Cluster).$(Process).err
 		output = my_job.$(Cluster).$(Process).out
 		
-		requirements = (OSGVO_OS_STRING =?= "RHEL 7") 
+		requirements = (OSGVO_OS_STRING =?= "RHEL 7") && (HAS_MODULES =?= true)
 		
 		...other submit file details...
 
@@ -97,10 +97,7 @@ need to prepend your `/public` directory path with `stash:///osgconnect` as foll
 
 		#!/bin/bash
 	
-		# commands to be executed in job   
-		
-		...   
-
+		# other commands to be executed in job: 
 		
 		# transfer large output to public
 		stashcp file_name stash:///osgconnect/public/username/path/file_name
@@ -113,21 +110,19 @@ need to prepend your `/public` directory path with `stash:///osgconnect` as foll
 	**Notice that the output file name `output.dat` must be included at the end of the 
 	`/public` path where the file will be transferred.**
 
+<!--
 As described in [Important Considerations](#important-considerations), 
 once a file is added to `/public` any changes and modifications made 
 to the file will not be propagated due to caching. In the event that your 
 jobs need to be resubmitted or restarted, we strongly recommend that your 
-larger ouptut files be given unique names in `/public`. This can be achieved 
-by several methods, but perhpas the most straightforward option is to include 
+larger ouptut files be given unique names in `/public`. If your jobs aren't already 
+structured to provide unique output filenames, one option is to include 
 [epoch](https://en.wikipedia.org/wiki/Unix_time) time in the output file name 
 using the following example:
 
 	#!/bin/bash
 	
-	# commands to be executed in job   
-		
-	...   
-	  
+	# commands to be executed in job     
 	
 	# transfer large output to public
 	# add epoch time to output file name to make unqiue
@@ -138,6 +133,7 @@ If you would instead like a more detailed date and time stamp added to the
 file name, you can modify the `date` command. One alternative to consider is 
 ``unique=`date +"%Y-%m-%d.%H-%M-%S"` `` which will set `unique` to 
 `year-month-day.hour-minute-seconds`.
+--->
 
 # Stachcp Command Manual
 
