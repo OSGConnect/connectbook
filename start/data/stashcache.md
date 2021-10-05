@@ -41,7 +41,7 @@ version number to file names is strongly encouraged to manage you files in
 `/public`. Additionally, directories with unique names can also be used to 
 organize different versions of files in `/public`.
 
-# Use StashCache To Tranfer Larger Input Files From `/public` 
+# Use StashCache To Transfer Larger Input Files From `/public` 
 
 1. Upload your larger files to your `/public` directory 
 which is accessible via your OSG Connect login node at `/public/username` 
@@ -60,7 +60,7 @@ have access StashCache.
 		output = my_job.$(Cluster).$(Process).out
 		
 		#Transfer input files
-		transfer_input_files = stash:///osgconnect/public/<username>/<dir>/<filename>, <other input files as usual>
+		transfer_input_files = stash:///osgconnect/public/<username>/<dir>/<filename>, <other files>
 		requirements = (OSGVO_OS_STRING =?= "RHEL 7") 
 		
 		...other submit file details...
@@ -73,7 +73,7 @@ transfer this file into your current working directory on the compute host would
 
 	 stash:///osgconnect/public/<username>/samples/sample01.dat
 
-# Use StashCache To Tranfer Larger Output Files To `/public`
+# Use StashCache To Transfer Larger Output Files To `/public`
 
 To transfer larger output files (>1GB) back to your `/public` directory (which 
 is necessary to later access your results):
