@@ -1,21 +1,25 @@
-[title]: - "Is the Open Science Grid for You?"
+[title]: - "Is the Open Science Pool for You?"
 
 
-The [Open Science Grid][osg] is a nationally-funded consortium of computing resources 
+The [OSG][osg] is a nationally-funded consortium of computing resources 
 at more than one hundred institutional partners that, together, offer a strategic 
-advantage for computing work that can be run as numerous short tasks. 
+advantage for computing work that can be run as numerous short tasks. For researchers
+who are not part of an organization with their own pool in the OSG, we offer the 
+[Open Science Pool (OSPool)](https://opensciencegrid.org/about/open_science_pool/), with dozens 
+of campuses contributing excess computing capacity in support of open science.
 
-For problems that can be run as many independent jobs, as in the first two columns 
-of the table below, the OSG provides computing capacity that can transform the types of 
+For problems that can be run as numerous independent jobs (a high-throughput approach) and have requirements
+represented in the first two columns 
+of the table below, the significant capacity of the OSPool can transform the types of 
 questions that researchers are able to tackle. **Importantly,
 many compute tasks that may appear to not be a good fit _can_ be modified in simple ways 
 to take advantage, and we'd love to discuss options with you!** 
 
 Learn more and chat with a Research Computing Facilitator by requesting an account here: [OSG Connect Sign-Up][account-request]
 
-|   		| **Ideal jobs!** | **Still very advantageous** | **Maybe not, but get in touch!** | 
+|   		| **Ideal jobs!** | **Still advantageous** | **Maybe not, but get in touch!** | 
 |:----------|:--------------|:--------------|:--------------|
-| Expected Throughput, per user		|	1000s concurrent cores |	100s concurrent cores |	let's discuss! |
+| Per-job Requirements; Expected Throughput: | 1000s concurrent cores | 100s concurrent cores | let's discuss! |
 | CPU		|	1			|	< 8			|	> 8 (or MPI)|
 | Walltime	| 	< 10 hrs*	|	< 20 hrs*	|	> 20 hrs (not a good fit)	|
 | RAM		| 	< few GB	|	< 40 GB	|	> 40 GB	|
@@ -24,9 +28,9 @@ Learn more and chat with a Research Computing Facilitator by requesting an accou
 | Software	| pre-compiled binaries, containers | Most other than -> | Licensed software, non-Linux |
 
 *or checkpointable
-**per job; you can work with a large dataset on OSG if it can be split into pieces
+**per job; you can work with a large dataset on OSG if it can be split into pieces!
 
-Some examples of work that has been a good fit for the OSG and benefited from 
+Some examples of work that has been a good fit for the OSPool and benefited from 
 using its resources include: 
 
 - image analysis (including MRI, GIS, etc.)
