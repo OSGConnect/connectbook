@@ -8,6 +8,10 @@ who are not part of an organization with their own pool in the OSG, we offer the
 [Open Science Pool (OSPool)](https://opensciencegrid.org/about/open_science_pool/), with dozens 
 of campuses contributing excess computing capacity in support of open science.
 
+Learn more about the services provided by the OSG that can support your HTC workload: 
+
+<a href="https://www.youtube.com/watch?v=5FMAFxROGv0"><img alt="OSG Introduction" src="https://raw.githubusercontent.com/OSGConnect/connectbook/master/images/osg-intro-video-screenshot.png" width="360" height="204"></a>
+
 For problems that can be run as numerous independent jobs (a high-throughput approach) and have requirements
 represented in the first two columns 
 of the table below, the significant capacity of the OSPool can transform the types of 
