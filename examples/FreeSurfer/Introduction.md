@@ -1,4 +1,5 @@
 [title]: - "Introduction to FreeSurfer on OSG"
+[TOC]
 
 ## Overview
 
