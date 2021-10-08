@@ -1,4 +1,5 @@
 [title]: - "Previous Training Events"
+[TOC]
 
 ## Overview
 
