@@ -1,6 +1,6 @@
 ## Overview
             
-The [OSG](http://www.opensciencegrid.org/) promotes science by:
+The [OSG](https://osg-htc.org/) promotes science by:
 
  * enabling a framework of distributed computing and storage resources
 
