@@ -14,7 +14,7 @@ feel free to contact us at [support@opensciencegrid.org](mailto:support@openscie
 
 ## Using OSG Provided Singularity Images
 
-The Open Science Grid user support team maintains a small set of images, hosted in a distributed
+The OSG user support team maintains a small set of images, hosted in a distributed
 file system called [CVMFS](https://cernvm.cern.ch/portal/filesystem). These images
 contain a basic set of tools and libraries. A list of available containers can be
 found in [this page][container-list].
@@ -50,7 +50,7 @@ This is useful if your job requires some very specific software setup. The gener
 process goes like this: 
 
 1. Create your own custom container image using **Docker** and push it to Docker Hub. 
-2. Add your Docker image to the Open Science Grid image repository. 
+2. Add your Docker image to the Open Science Pool image repository. 
 3. Use the container image in jobs. 
 
 We will expand on each of these steps below. 
@@ -64,14 +64,14 @@ image repository is that it allows us to easily import the images into
 our own distribution system (see below). 
 
 See [this page][container-howto] for how to create a Docker image on your own computer and 
-push it to Docker Hub so it can be used by the Open Science Grid. 
+push it to Docker Hub so it can be used by the Open Science Pool. 
 
 When creating the Docker image, you will give it with an 
 identifier with this format: `namespace/repository_name`
 This identifier will be used both to submit the Docker container to 
-the Open Science Grid repository and to run jobs. 
+the OSG repository and to run jobs. 
 
-### Submitting your Docker Container to the Open Science Grid Repository
+### Submitting your Docker Container to the OSG Repository
 
 Once your Docker image has been published on Docker Hub, it needs to be 
 submitted to the CVMFS image repository (`/cvmfs/singularity.opensciencegrid.org/`), 

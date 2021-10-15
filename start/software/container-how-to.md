@@ -3,8 +3,8 @@
 [TOC]
 
 This guide is meant to accompany the instructions for using Singularity containers 
-in the Open Science Grid.  You can use your own custom container to run jobs in the 
-Open Science Grid, and we assume that those containers are built using Docker.  This 
+in the Open Science Pool.  You can use your own custom container to run jobs in the 
+Open Science Pool, and we assume that those containers are built using Docker.  This 
 guide describes how to create your own Docker container "image" (the blueprint for 
 the container). Once you have created your custom image, 
 you will need to register the image as described in [this page][osg-containers]
@@ -144,7 +144,7 @@ From here, if you're planning to use this container in OSG, return to our
 
 If you want your jobs to access CVMFS, make sure that you either: 
 
-1. Use one of the base containers provided by the Open Science Grid
+1. Use one of the base containers provided by the Open Science Pool
 
 or
 
@@ -163,7 +163,7 @@ in the container, please add `+SingularityBindCVMFS = False` to your job submit 
 Two options that can be used in the Dockerfile to set the environment or 
 default command are `ENTRYPOINT` and `ENV`. Unfortunately, both of these 
 aspects of the Docker container are deleted when it is converted to a 
-Singularity image in the Open Science Grid. [Email us](mailto:support@opensciencegrid.org) if you would like 
+Singularity image in the Open Science Pool. [Email us](mailto:support@opensciencegrid.org) if you would like 
 to preserve these attributes. 
 
 [osg-containers]: 12000024676

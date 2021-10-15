@@ -39,7 +39,7 @@ Yes. Please contact <support@opensciencegrid.org>.
 
 OSG Connect is a high throughput computing system. You can get the most of out OSG Connect resources by breaking up a 
 single large computational task into many smaller tasks for the fastest overall turnaround. This approach can be 
-invaluable in accelerating your computational work and thus your research. Please see our ["Is the Open Science Grid for You?"](https://support.opensciencegrid.org/support/solutions/articles/5000632058) page for more details on how to determine if your work matches up well with OSG Connect's model.
+invaluable in accelerating your computational work and thus your research. Please see our ["Is OSG for You?"](https://support.opensciencegrid.org/support/solutions/articles/5000632058) page for more details on how to determine if your work matches up well with OSG Connect's model.
 
 **What job scheduler is being used on OSG Connect?**
 
@@ -75,7 +75,7 @@ The data under your `/public` location is discoverable and readable by anyone in
 
 >**OSG currently has no storage appropriate for HIPAA data.**
 
-If you do not want your data to be downloadable by anyone, and it’s small enough for HTCondor file transfer (i.e. <100MB per file and <500MB total per job), then it should be staged in your `/home` directory and transferred to jobs with HTCondor file transfer (`transfer_input_files`, in the submit file). If your data must remain private and is too large for HTCondor file transfer, then it’s not a good fit for the “open” environment of the Open Science Grid, and another resource will likely be more appropriate. As a reminder, if the data is not being used for active computing work on OSG Connect, it should not be stored on OSG Connect systems. Lastly, our data storage locations are not backed up nor are they intended for long-term storage.
+If you do not want your data to be downloadable by anyone, and it’s small enough for HTCondor file transfer (i.e. <100MB per file and <500MB total per job), then it should be staged in your `/home` directory and transferred to jobs with HTCondor file transfer (`transfer_input_files`, in the submit file). If your data must remain private and is too large for HTCondor file transfer, then it’s not a good fit for the “open” environment of the Open Science Pool, and another resource will likely be more appropriate. As a reminder, if the data is not being used for active computing work on OSG Connect, it should not be stored on OSG Connect systems. Lastly, our data storage locations are not backed up nor are they intended for long-term storage.
 
 **Can I get a quota increase?**
 
@@ -111,11 +111,11 @@ We typically cover shell scripting, python (or R) programming, version control w
 
 **How to cite or acknowledge OSG?**
 
-Whenever you make use of Open Science Grid resources, services or tools, we would be grateful to have you acknowledge OSG in your presentations and publications. 
+Whenever you make use of OSG resources, services or tools, we would be grateful to have you acknowledge OSG in your presentations and publications. 
 
 For example, you can add the following in your acknowledgements section:
  
-> "This research was done using resources provided by the Open Science Grid, which is supported by the National Science Foundation and the U.S. Department of Energy's Office of Science." 
+> "This research was done using resources provided by the OSG, which is supported by the National Science Foundation and the U.S. Department of Energy's Office of Science." 
 
 We recommend the following references for citations
 

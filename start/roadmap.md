@@ -32,7 +32,7 @@ tasks.
 The OSG is best-suited for computing work that can be run as many, independent 
 tasks, in an approach called "high throughput computing." For more information 
 on what kind of work is a good fit for the OSG, 
-see [Is the Open Science Grid for You?](5000632058). 
+see [Is the OSG for You?](5000632058). 
 
 Learn more about the services provided by the OSG that can support your HTC workload: 
 
