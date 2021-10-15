@@ -95,7 +95,7 @@ HTCondor file transfer, then it should be staged in your `/home` directory and
 transferred to jobs with HTCondor file transfer (`transfer_input_files` in the submit 
 file). If it cannot be public (cannot use http or stashcp for job delivery), and is too
 large for HTCondor file transfer, then it's not a good fit for the open environment of 
-the OS Pool, and another resource will likely be more appropriate. As a 
+the Open Science Pool, and another resource will likely be more appropriate. As a 
 reminder, if the data is not being used for active computing work on OSG Connect, it 
 should not be stored on OSG Connect systems, and our data storage locations are not 
 backed up or suitable for project-duration storage.

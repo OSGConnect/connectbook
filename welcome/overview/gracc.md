@@ -2,7 +2,7 @@
 
 [TOC] 
 
-GRACC is the OS Pool's accounting system. If you need graphs or high level statistics
+GRACC is the Open Science Pool's accounting system. If you need graphs or high level statistics
 on your OSG usage, please go to:
 
 [https://gracc.opensciencegrid.org/](https://gracc.opensciencegrid.org/)

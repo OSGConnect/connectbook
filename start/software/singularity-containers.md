@@ -50,7 +50,7 @@ This is useful if your job requires some very specific software setup. The gener
 process goes like this: 
 
 1. Create your own custom container image using **Docker** and push it to Docker Hub. 
-2. Add your Docker image to the OS Pool image repository. 
+2. Add your Docker image to the Open Science Pool image repository. 
 3. Use the container image in jobs. 
 
 We will expand on each of these steps below. 
@@ -64,7 +64,7 @@ image repository is that it allows us to easily import the images into
 our own distribution system (see below). 
 
 See [this page][container-howto] for how to create a Docker image on your own computer and 
-push it to Docker Hub so it can be used by the OS Pool. 
+push it to Docker Hub so it can be used by the Open Science Pool. 
 
 When creating the Docker image, you will give it with an 
 identifier with this format: `namespace/repository_name`

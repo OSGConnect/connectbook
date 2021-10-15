@@ -5,7 +5,7 @@
 
 ## Introduction
 
-Due to the distributed nature of the OS Pool, you will always need to 
+Due to the distributed nature of the Open Science Pool, you will always need to 
 ensure that your jobs have access to the software that will be executed. This guide provides 
 a detailed example of compiling software for use in OSG Connect. 
 
