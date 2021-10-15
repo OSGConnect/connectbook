@@ -17,7 +17,7 @@ The OSG facilitates access to DHTC for scientific research
 in the US. The resources accessible through the OSG are
 contributed by the community, organized by the OSG, and
 governed by the [OSG
-Consortium](http://www.opensciencegrid.org); an overview is available at 
+Consortium](http://www.osg-htc.org); an overview is available at 
 [An Introduction to OSG](http://osg-docdb.opensciencegrid.org/0008/000839/004/OSG%20Intro%2
 0v23.pdf). In 2017, OSG is comprised
 of about 126 institutions with ~120 active sites that collectively

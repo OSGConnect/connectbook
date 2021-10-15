@@ -24,7 +24,7 @@ You can test the executable locally using `mpiexec`:
     Hello world from process 2 of 4
 
 
-To run your code as a job on OSG, first create a `wrapper.sh`. Example:
+To run your code as a job on the Open Science Pool, first create a `wrapper.sh`. Example:
 
     #!/bin/bash
     
