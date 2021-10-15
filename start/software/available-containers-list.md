@@ -2,7 +2,7 @@
 
 [TOC]
 
-This is list of commonly used containers in Open Science Grid. These can be used
+This is list of commonly used containers in OS Pool. These can be used
 directly in your jobs or as base images if you want to define your own. Please
 see the pages on [container overview][container-intro] and [defining containers][container-howto]
 for detailed instructions.

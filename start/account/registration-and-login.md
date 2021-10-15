@@ -93,7 +93,7 @@ login node. See the second half of the SSH key guide for details:
 For those interested in details, this section describes some of the background 
 information behind projects. 
 
-The Open Science Grid governs access to grid resources through an accounting
+The OSG governs access to grid resources through an accounting
 framework that assigns each user's *jobs* to an *accounting group* or *project*.
 As a new user of the OSG, one of the first things to iron out is what
 project or projects best describe your work.  This is more a matter of
