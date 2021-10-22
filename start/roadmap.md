@@ -1,12 +1,13 @@
-[title]: - "Roadmap to HTC Workload Submission on the OSG"
+[title]: - "Roadmap to HTC Workload Submission via OSG Connect"
 
 [TOC]
 
 # Overview
 
-This guide lays out the steps needed to go from logging in to the OSG 
+This guide lays out the steps needed to go from logging in to an OSG 
 Connect login node to running a full scale high throughput computing 
-(HTC) workload on the OSG. The steps listed here apply to any new workload 
+(HTC) workload on OSG's [Open Science Pool (OSPool)](https://opensciencegrid.org/about/open_science_pool/). 
+The steps listed here apply to any new workload 
 submission, whether you are a long-time OSG user or just getting 
 started - this guide can be used as an "overview" of the steps 
 needed to get up and running. 
@@ -15,24 +16,22 @@ For new users, this guide also includes links to our documentation pages,
 providing information and instruction about *how* to perform each step of 
 developing a new workload submission. 
 
-This guide assumes that you have applied for an OSG Connect account and 
-been approved. 
+This guide assumes that you have applied for an account on the OSG Connect service and 
+have been approved after meeting with an OSG Research Computing Facilitator. 
 If you don't yet have an account, you can apply for one at <osgconnect.net>
 or [contact us](mailto:support@opensciencegrid.org) with any questions you have. 
 
 # 1. Introduction to the OSG
 
-<!-- link to video when finished --> 
-
-The OSG is a nationally-funded consortium of computing resources at more
+The OSG is an international consortium of computing resources at more
 than one hundred institutional partners that, together, offer a
 strategic advantage for computing work that can be run as numerous short
 tasks. 
 
-The OSG is best-suited for computing work that can be run as many, independent 
+The OSG's Open Science Pool is best-suited for computing work that can be run as many, independent 
 tasks, in an approach called "high throughput computing." For more information 
 on what kind of work is a good fit for the OSG, 
-see [Is the OSG for You?](5000632058). 
+see [Is the Open Science Pool for You?](5000632058). 
 
 Learn more about the services provided by the OSG that can support your HTC workload: 
 
@@ -40,23 +39,23 @@ Learn more about the services provided by the OSG that can support your HTC work
 
 <!-- Diagram/cartoon showing how jobs are distributed to multiple sites across the U.S.-->
 
-# 2. Get On OSG Connect
+# 2. Get on OSG Connect
 
 After your OSG account has been approved, go through the following guides to 
 complete your access to the login node and to enable your account to submit jobs. 
 
-- [Generate ssh keys and activate your OSG login](https://support.opensciencegrid.org/support/solutions/articles/12000027675-generate-ssh-keys-and-activate-your-osg-login)
+- [Generate ssh keys and login](https://support.opensciencegrid.org/support/solutions/articles/12000027675-generate-ssh-keys-and-activate-your-osg-login)
 - [Set up project](https://support.opensciencegrid.org/support/solutions/articles/5000634360-join-and-use-a-project-in-osg-connect)
 
 # 3. Explore HTCondor
 
-Computational work is run on the OSG by submitting it as “jobs” to the
+Computational work is run on the OSPool by submitting it as “jobs” to the
 HTCondor scheduler. Jobs submitted to HTCondor are then scheduled and
-run on different resources that are part of the OSG’s Open Science Pool.
+run on different resources that are part of the Open Science Pool.
 Before submitting your own computational work, it is important to
 understand how HTCondor job submission works. The following guides show
 how to submit basic HTCondor jobs. The second example allows you to see
-where in the OSG your jobs ran. 
+where in the OSPool your jobs ran. 
 
 - [OSG Connect Quickstart](https://support.opensciencegrid.org/support/solutions/articles/5000633410-osg-connect-quickstart)
 - [Finding OSG Locations](https://support.opensciencegrid.org/support/solutions/articles/12000061978-finding-osg-locations)
@@ -70,7 +69,7 @@ recommend doing this using a single test job.
 
 ## Prepare your software
 
-Software is an integral part of your HTC workflow.  Whether you’ve written it yourself, inherited it from your research group, or use common open-source packages, any required executables and libraries will need to be made available to your jobs if they are to run on OSG. 
+Software is an integral part of your HTC workflow.  Whether you’ve written it yourself, inherited it from your research group, or use common open-source packages, any required executables and libraries will need to be made available to your jobs if they are to run on the OSPool. 
 
 Read through [this overview of Using Software in OSG Connect](https://support.opensciencegrid.org/support/solutions/articles/5000634395-using-software-in-osg-connect) to help you determine the best way to provide your software.  Once you know which method you would like to try, select and complete one of the following guides/tutorials:
 
@@ -92,7 +91,7 @@ Finally, here are some additional guides specific to some of the most common scr
 ## Move your data
 
 The data for your jobs originates on the OSG Connect login node, but
-needs to be copied to other nodes in the OSG in order to be used by
+needs to be copied to other nodes in the OSPool in order to be used by
 jobs. There are different ways for your jobs to move their input and
 output data based on their size. The following guides summarize which
 options exist and when to use them. 
@@ -135,4 +134,4 @@ and our facilitation team will be happy to discuss your individual case.
 
 # Getting Help 
 
-For assistance or questions, please email the OSG User Support team  at <mailto:support@opensciencegrid.org> or visit the [help desk and community forums](http://support.opensciencegrid.org).
+For assistance or questions, please email the OSG Facilitation team  at <mailto:support@opensciencegrid.org> or visit the [help desk and community forums](http://support.opensciencegrid.org).
