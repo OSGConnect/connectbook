@@ -69,6 +69,7 @@ Read through [this overview of Using Software in OSG Connect](https://support.op
 - To **use Distributed Environment Modules** for your jobs, start with [this Modules guide](https://support.opensciencegrid.org/support/solutions/articles/12000048518) and then complete the Module example in [this R tutorial](https://support.opensciencegrid.org/support/solutions/articles/5000674219-run-r-scripts-on-osg)
 
 Finally, here are some additional guides specific to some of the most common scripting languages and software tools used on OSG\*\*:
+
 - [Python](https://support.opensciencegrid.org/support/solutions/articles/12000058785-run-python-scripts-on-osg)
 - [R](https://support.opensciencegrid.org/support/solutions/articles/5000674218-use-external-packages-in-your-r-jobs)
 - [Machine Learning](https://support.opensciencegrid.org/support/solutions/articles/12000028940-working-with-tensorflow-gpus-and-containers)
