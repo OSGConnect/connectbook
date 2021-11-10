@@ -4,7 +4,7 @@
 
 # Overview
 
-Much of OGS's computing power comes from the ability to run a large number 
+Much of OSG's computing power comes from the ability to run a large number 
 of jobs simulateously. Breaking up your work into small, independently executable 
 jobs and optimizing the resource requests of those jobs, by 
 only requesting the amount of memory, disk, and cpus truely needed, 
