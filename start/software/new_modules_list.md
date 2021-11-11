@@ -1,17 +1,15 @@
 
-[title]: - "Accessing Software using Distributed Environment Modules"
+[title]: - "Access Software using Distributed Environment Modules"
 
 [TOC]
 
-# Accessing Software using Distributed Environment Modules 
-
-## Introduction
+# Introduction
 
 This page covers the use of distributed environment modules on RHEL7 compute nodes in the OSG computing environment. Environment modules provide users with an easy way to access different versions of software, libraries, and compilers. 
 
 Currently, OSG Connect login nodes and a majority of OSG compute nodes use the RHEL7 operating system. However, given the distributed nature of the OSG, there are at times a number of RHEL6 and RHEL8 compute nodes also available to users. For users that require, or who can also use, RHEL6 compute nodes for their applications, please [contact us](mailto:support@opensciencegrid.org) to learn more about modules specifically available to RHEL6 compute nodes.
 
-## List Available Modules on OSG Connect
+# List Available Modules on OSG Connect
 
 First sign in to your OSG Connect login node. Then use `module avail` to see all available software applications and libraries:
 
@@ -45,7 +43,7 @@ First sign in to your OSG Connect login node. Then use `module avail` to see all
 
 Please know, there are more than 200 modules available to OSG Connect users. The above is **not** a complete list of all available modules as the list is quite long and subject to change as new sofware and libraries get added. 
 
-## How To Use Environment Modules
+# How To Use Environment Modules
 
 In order to use the software or libraries provided in a module, you will need to 'load' that particular module. To load a particular module, use `module load [modulename]`. 
 
@@ -69,9 +67,9 @@ For example:
 
 Finally, `module help` will give you more detailed information.
 
-## Use Environment Modules in Jobs
+# Use Environment Modules in Jobs
 
-### Add module commands to executable script
+## Add module commands to executable script
 
 To use environment modules within a job, use the same `module load` command
 described above inside your job's main "executable" to load your software 
@@ -83,7 +81,7 @@ and then run it.  For example:
 	python myscript.py
 
 
-### Set appropriate submit file requirements
+## Set appropriate submit file requirements
 
 Not all resources available through OSG Connect support distributed environment modules.  In order to ensure that your 
 jobs will have access to OSG Connect modules, you will need to add the following to your HTCondor submit file:
