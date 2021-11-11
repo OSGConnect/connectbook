@@ -1,8 +1,8 @@
-[title]: - "Creating a Docker Container Image"
+[title]: - "Create a Docker Container Image"
 
 [TOC]
 
-This guide is meant to accompany the instructions for using Singularity containers 
+This guide is meant to accompany the instructions for using containers 
 in the Open Science Pool.  You can use your own custom container to run jobs in the 
 Open Science Pool, and we assume that those containers are built using Docker.  This 
 guide describes how to create your own Docker container "image" (the blueprint for 
