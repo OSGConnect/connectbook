@@ -1,9 +1,9 @@
-[title]: - "Requesting a Software"
+[title]: - "Request Help with Your Software"
 
-A large number of software packages [is already available for grid use][catalog],
-we realize that there are always new software elements that are
-critical to your research process.  You may request that software
-be added to the OASIS software library with a simple email to
+A large number of software packages can be used by compiling a portable installation or using a container 
+(many community sofwares are already available in authoritative containers).  If you believe none of
+these options ([described here](5000634395)) are applicable for your software, you may request that software
+be added to OSG's OASIS software library with a simple email to
 [support@opensciencegrid.org][support], along the following lines:
 
 [catalog]: 5000634397
@@ -24,7 +24,8 @@ be added to the OASIS software library with a simple email to
 
 As long as this code is:
 
-1. Available to the public in source form (e.g. open source)
-2. Licensed to all users, and does not require a license key
+1. available to the public in source form (e.g. open source)
+2. licensed to all users, and does not require a license key
+3. would not be better supported by another approach (which are usually preferable)
 
-we should be able to install it in the OSG software respository which will make it available on most sites in the OSG.
+we should be able to install it in the OSG software respository which will make it available on most sites in the OSG. In any case, OSG staff will help you with the 'right' solution.
