@@ -1,6 +1,6 @@
-[title]: - "Policies for Using OSG Connect Access Points and the Open Science Pool"
+[title]: - "Policies for Using OSG Connect and the OSPool"
 
-Access to OSG Connect and the Open Science Pool is contingent on compliance with the below and with any requests from OSG staff to change practices that cause issues for OSG systems and/or users. **Please contact us if you have any questions! We can often help with exceptions to default policies and/or identify available alternative approaches to help you with a perceived barrier.**
+Access to OSG Connect and the Open Science Pool (OSPool) is contingent on compliance with the below and with any requests from OSG staff to change practices that cause issues for OSG systems and/or users. **Please contact us if you have any questions! We can often help with exceptions to default policies and/or identify available alternative approaches to help you with a perceived barrier.**
 
 As the below do not cover every possible scenario of potentially disruptive practices, OSG staff reserve the right to take any necessary corrective actions to ensure performance and resource availability for all OSG Connect users. This may include the hold or removal of jobs, deletion of user data, deactivation of accounts, etc. In some cases, these actions may need to be taken without notifying the user.
 
@@ -18,6 +18,7 @@ As the below do not cover every possible scenario of potentially disruptive prac
 
 5. The following actions may be taken automatedly or by OSG staff to stop or prevent jobs from causing problems. Please contact us if you’d like help understanding why your jobs were held or removed, and so we can help you avoid problems in the future.
 	 - **Jobs using more memory or disk than requested** may be automatically held (see [Scaling Up after Test Jobs](https://support.opensciencegrid.org/support/solutions/articles/12000076552-scaling-up-after-success-with-test-jobs) for tips on requesting the ‘right’ amount of job resources in your submit file).
+	 - **Jobs running longer than their JobDurationCategory allows for** will be held (see [Indicate the Job Duration Category of Your Jobs](12000083468)).
 	 - **Jobs that have executed more than 30 times without completing** may be automatically held (likely because [they’re too long](https://support.opensciencegrid.org/support/solutions/articles/5000632058-is-the-open-science-grid-for-you-) for OSG).
 	 - **Jobs that have been held more than 14 days** may be automatically removed.
 	 - **Jobs queued for more than three months** may be automatically removed.
