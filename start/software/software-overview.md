@@ -62,10 +62,9 @@ software. To run jobs that use modules, your HTCondor submit files must include 
 More details about using modules can be found 
 [here](https://support.opensciencegrid.org/support/solutions/articles/12000048518). 
 
-## Request Software For System-wide Installation via Modules
+## Ask for Helpk
 
-If your work would benefit from system-wide installation of open source software (made 
-available via modules) because you believe the options above would not be suitable, please contact us at 
+If you are not sure which of the above options might be best for your software, we're happy to help! Just contact us at 
 [support@opensciencegrid.org](mailto:support@opensciencegrid.org).
 
 **Watch this video from the 2021 OSG Virtual School** for more information about using software on OSG:
