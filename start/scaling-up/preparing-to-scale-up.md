@@ -6,7 +6,7 @@
 
 Much of HTCondor's HTC power comes from the ability to run a large number 
 of jobs simulateously. To optimize your work with a high-throughput computing (HTC)
-approache, you will need to test and optimizing the resource requests of those jobs, by 
+approach, you will need to test and optimizing the resource requests of those jobs, by 
 only requesting the amount of memory, disk, and cpus truely needed.
 This is an important practice that will maximize your throughput by optimizing the 
 number of potential 'slots' in the OSPool that your jobs can match to, reducing the overall 
