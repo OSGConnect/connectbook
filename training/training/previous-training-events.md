@@ -7,6 +7,10 @@ We offer on-site training and tutorials on a periodic basis, usually at conferen
 
 ## OSG Workshops on HTC
 
+  * [Empowering Research Computing at Your Organization Through the Open Science Grid](https://docs.google.com/document/d/1q8ylhZ88NkDhQjgbCvCB0Atc9R1w7YRhCZOmD9F2IVc)
+  * [Organizing and Submitting HTC Workloads](https://docs.google.com/document/d/1h7GXxs6mobNmzDl4_oBh2_Jnie5wYCQ1uj5ParvQ65c)
+  * [Empower Research Computing at your Organization Through the Open Science Grid](https://docs.google.com/document/d/19i79nEOQJDBSfvxuSRF2HXhrFxTbUHJe6AxUyWNKfTw)
+  * [dHTC Campus Workshop](https://indico.fnal.gov/event/46925/)
   * [Empowering Research Computing at Your Campus Through the OSG](https://opensciencegrid.org/Tutorial-PEARC-2020/)
   * [Deploy jobs on the Open Science Grid (Gateways/eScience 2019)](https://swc-osg-workshop.github.io/OSG-UserTraining-Gateways-2019/)
   * [High Throughput Computation on the Open Science Grid (Internet2 2018 Technology Exchange)](https://meetings.internet2.edu/2018-technology-exchange/program-guide/tutorials-workshops/#OSG)
