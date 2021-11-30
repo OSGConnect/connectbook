@@ -32,11 +32,12 @@ see “Self-Checkpointing Jobs”, further below.*
  
 ## Test Jobs for Expected Duration
 As part of the [preparation for running a full-scale job batch](https://support.opensciencegrid.org/support/solutions/articles/12000076552-always-test-a-few-jobs-before-submitting-many), 
-users should test a small subset (~10) of their jobs with the **Medium** or **Long** categories, 
-and then review actual job durations in the job log files. 
-If the user expects potentially significant variation in job durations within a single batch 
-(even if tested on identical computers), a longer JobDurationCategory may be warranted relative to the duration of test jobs. Or, if variations in job duration may be predictable, the user may choose to submit different 
+users should test a subset (first ~10, then 100 or 1000) of their jobs with the **Medium** or **Long** categories, 
+and then review actual job execution durations in the job log files. 
+If the user expects potentially significant variation in job durations within a single batch, a longer JobDurationCategory may be warranted relative to the duration of test jobs. Or, if variations in job duration may be predictable, the user may choose to submit different 
 subsets of jobs with different Job Duration Categories.
+    
+**OSG Facilitators have a lot of experience with approaches for achieving shorter jobs (e.g. breaking up work into shorter, more numerous jobs; self-checkpointing; automated sequential job submissions; etc.) Get in touch, and we'll help you work through a solution!! support@opensciencegrid.org**
 
 ## Maximum Allowed Duration
 Jobs in each category will be placed on hold in the queue if they run longer than their Maximum Allowed Duration 
@@ -55,4 +56,4 @@ Jobs that [self-checkpoint](https://htcondor.readthedocs.io/en/latest/users-manu
 at least every 10 hours are an excellent way for users to run jobs that would otherwise be longer in total execution time
 than the durations listed above. Jobs that complete a checkpoint at least as often as allowed for their JobDurationCategory will not be held.
 
-We are excited to help you think through and implement self-checkpointing. Get in touch via support@opensciencegrid.org if you have questions.
+We are excited to help you think through and implement self-checkpointing. Get in touch via support@opensciencegrid.org if you have questions. :)
