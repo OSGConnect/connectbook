@@ -12,7 +12,7 @@ self-checkpointing (see further below).
 Every job submitted via an OSG Connect access point must 
 be labeled with a **Job Duration Category** upon submission.
 By knowing the expected duration, the OSG is working to be able to direct longer-running jobs to resources that are 
-faster and are interrupted less, while shorter jobs can run across more of the OSPool.
+faster and are interrupted less, while shorter jobs can run across more of the OSPool for better overall throughput.
 
 ## Specify a Job Duration Category
 The JobDurationCategory must be listed anywhere prior to the final ‘queue’ statement of the submit file, as below:
