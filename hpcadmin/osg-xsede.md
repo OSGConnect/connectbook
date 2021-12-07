@@ -11,9 +11,9 @@ The [OSG](http://www.osg-htc.org/) promotes science by:
    to ever increasing computing resources for researchers and communities
 
  * providing resource sharing principles and software that enable distributed
-   high throughput computing (DHTC) for users and communities at all scales.
+   High Throughput Computing (dHTC) for users and communities at all scales.
          
-The OSG facilitates access to DHTC for scientific research
+The OSG facilitates access to dHTC for scientific research
 in the US. The resources accessible through the OSG are
 contributed by the community, organized by the OSG, and
 governed by the [OSG
