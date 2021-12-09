@@ -33,7 +33,7 @@ Learn more and chat with a Research Computing Facilitator by requesting an accou
 
 \* or checkpointable
 
-\** per job; you can work with a large dataset on OSG if it can be split into pieces!
+\** per job; you can work with a multi-TB dataset on the OSPool if it can be split into pieces!
 
 Some examples of work that has been a good fit for the OSPool and benefited from 
 using its resources include: 
