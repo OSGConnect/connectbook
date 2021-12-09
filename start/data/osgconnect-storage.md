@@ -102,11 +102,7 @@ backed up or suitable for project-duration storage.
 
 ## External Data Transfer to/from OSG Connect Login Nodes
 
-The following tools should be used to upload data from your computer to the OSG Connect login node, or to download files from the OSG Connect login node. 
-
-|  | **Data Size**| **Tools** |**More Info**|
-|:------------|:-------:|:------|:------:| 
-|**UNIX tools** | < 1 GB | `rsync`, `scp`, Putty, WinSCP, `gFTP`, etc.  |[SCP](https://support.opensciencegrid.org/support/solutions/articles/5000634376) |
+In general, common Unix tools such as `rsync`, `scp`, Putty, WinSCP, `gFTP`, etc. can be used to upload data from your computer to the OSG Connect login node, or to download files from the OSG Connect login node. 
          
 <br>
 
