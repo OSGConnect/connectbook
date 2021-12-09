@@ -2,6 +2,6 @@
 
 [TOC]
 
-##Upcoming Trainings
+## Upcoming Trainings
 
-##Training Materials
+## Training Materials
