@@ -1,4 +1,4 @@
-[title]: - "Choose a Data Management Strategy"
+[title]: - "Data Staging and Transfer to Jobs"
 
 [TOC]
 
