@@ -44,7 +44,7 @@ much data is needed or produced by your jobs.**
 
 Your quota status will be displayed when you connect to your OSG Connect login node: 
 
-    Disk utilization for alice:
+    Disk utilization for username:
     /public   : [                        ] 0% (0/500000 MB)
     /home     : [ #                      ] 4% (2147/53687 MB)
 
@@ -57,7 +57,8 @@ think you need a quota increase! We can support very large amounts of data.**
 ## `/home` Usage And Policies
 
 User directories within `/home` are meant for general-use storage of your files 
-needed for job submission. The initial quota per user is 50 GBs. 
+needed for job submission. The initial quota per user is 50 GBs, and can be increased by request
+to support@opensciencegrid.org when a user needs more space for appropriately-sized files.
 
 **ALL JOBS MUST BE SUBMITTED FROM WITHIN `/home`**. Users are also prohibited 
 from making their `/home` directory world-readable due to security concerns. See 
@@ -69,12 +70,13 @@ reached your `/home` quota, please contact us at
 
 ## `/public` Usage and Policies
 
-User directories within `/public` are meant **ONLY** for staging job files too large for 
-HTCondor file transfer (input greater than 100MB, output greater than 1GB). 
+User directories within `/public` are meant **ONLY** for staging job files too large for regular 
+HTCondor file transfer (per-job input greater than 100MB, or per-job output greater than 1GB), and should only use HTTP or StashCache 
+mechanisms (see tables for input and output, further below).
 
 **JOBS MUST NEVER BE SUBMITTED FROM WITHIN `/public`**, and should not list `/public` files in the 
-`transfer_input_files` line of a submit file, unless as an HTTP address (see more details below). 
-Files place in `/public` should only be accessed by jobs using the below tools (see 
+`transfer_input_files` or other lines of a submit file, unless as an `http://` or `stash:///` address (see tables further below). 
+Files placed in `/public` should only be accessed by jobs using the below tools (see 
 [Transferring Data To/From Jobs](#transferring-data-tofrom-jobs)). Users violating these policies may 
 lose the ability to submit jobs until their submissions are corrected.
 
