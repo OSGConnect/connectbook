@@ -21,6 +21,16 @@ any data, files, or even software that is >100MB should be staged in your
 `/public` directory on your login node. Files in your `/public` directory 
 that are <1GB can be transferred with your jobs via HTTP using your HTCondor submit file.
 
+**Because of the way your files in `/public` get cached across OSG's data infrastructure, 
+once a file is added to `/public` any changes or modifications that you 
+make to the file may not be propagated (new jobs may end up with an 'old' version of the file).** 
+This means if you add a new version 
+of a file to your `/public` directory, it must first be given a unique name 
+to distinguish it from previous versions of that file. Adding a date or 
+version number to file names is strongly encouraged to manage you files in 
+`/public`. Additionally, directories with unique names can also be used to 
+organize different or new versions of files in `/public`.
+
 **If you have input files that are >1GB please see our 
 [Transfer Large Input and Output Files >1GB In Size](https://support.opensciencegrid.org/support/solutions/articles/12000002775) guide.**
 

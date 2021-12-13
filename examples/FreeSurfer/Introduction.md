@@ -1,9 +1,10 @@
 [title]: - "Introduction to FreeSurfer on OSG"
+[TOC]
 
 ## Overview
 
 [FreeSurfer](http://freesurfer.net/) is a software package to analyze MRI scans
-of human brains. The Open Science Grid (OSG) used to have a service called
+of human brains. The OSG used to have a service called
 Fsurf, which is now discontinued. Instead we have community supported 
 FreeSurfer container image and workflow. Please see:
 
@@ -28,7 +29,7 @@ For assistance or questions, please email the OSG User Support team  at
 [support@opensciencegrid.org](mailto:support@opensciencegrid.org) or
 visit the [help desk and community forums](http://support.opensciencegrid.org).
 
-## Acknowledging the Open Science Grid
+## Acknowledging the OSG Consortium
 
 We gratefully request your acknowledgement of the OSG in publications benefiting from this service as described [here](https://support.opensciencegrid.org/support/solutions/articles/5000640421-acknowledging-the-open-science-grid).
 

@@ -1,10 +1,11 @@
 [title]: - "Compiling Software for OSG Connect"
+[TOC]
 
 # Compiling Software for OSG Connect
 
 ## Introduction
 
-Due to the distributed nature of the Open Science Grid, you will always need to 
+Due to the distributed nature of the Open Science Pool, you will always need to 
 ensure that your jobs have access to the software that will be executed. This guide provides 
 useful information for compiling and using your software in OSG Connect. A detailed 
 example of performing software compilation is additionally available 

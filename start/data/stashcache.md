@@ -41,7 +41,7 @@ version number to file names is strongly encouraged to manage you files in
 `/public`. Additionally, directories with unique names can also be used to 
 organize different versions of files in `/public`.
 
-# Use StashCache To Tranfer Larger Input Files From `/public` 
+# Use StashCache To Transfer Larger Input Files From `/public` 
 
 1. Upload your larger files to your `/public` directory 
 which is accessible via your OSG Connect login node at `/public/username` 
@@ -50,53 +50,30 @@ for which our
 guide may be helpful.
 
 2. Add the necessary details to your HTCondor submit file to tell 
-HTCondor that your jobs must run on executes nodes that 
-have access StashCache and to OSG Connect modules.
+HTCondor which files to transfer, and that your jobs must run on executes nodes that 
+have access StashCache.
 
 		# StashCache submit file example
 		
 		log = my_job.$(Cluster).$(Process).log
 		error = my_job.$(Cluster).$(Process).err
 		output = my_job.$(Cluster).$(Process).out
-
-		# ensure jobs have access to StashCache
-		+WantsStashCache = true
-		requirements = (OSGVO_OS_STRING =?= "RHEL 7") && (HAS_MODULES =?= True)
+		
+		#Transfer input files
+		transfer_input_files = stash:///osgconnect/public/<username>/<dir>/<filename>, <other files>
+		requirements = (OSGVO_OS_STRING =?= "RHEL 7") 
 		
 		...other submit file details...
 
-3. Add three commands to the job executable script to (1) load the StashCache 
-module, (2) use the command `stashcp` to transfer the larger input file 
-from a cache site to the execute node where the job is running, and (3) 
-delete the larger input file before the job terminates:
-
-		#!/bin/bash
-		
-		# load module   
-		module load stashcache   
-		
-		# transfer input file from StashCache
-		stashcp /osgconnect/public/username/path/file_name ./   
-		
-		# remaining commands to be executed in job   
-		
-		...   
-		
-		# delete input files copied from StashCache before job terminates   
-		rm file_name   
-
-	Any input files transferred via `stashcp` should be deleted before 
-	the job terminates, otherwise HTCondor will mistake these files for output 
-	and will transfer them back to your home directory.
-
+	
 **Note how the `/public` directory is mapped to the `/osgconnect/public` namespace 
 under StashCache. For example, if the data file is located at 
-`/public/username/samples/sample01.dat`, then the `stashcp` command to 
+`/public/<username>/samples/sample01.dat`, then the `stashcp` command to 
 transfer this file into your current working directory on the compute host would be:**
 
-	stashcp /osgconnect/public/username/samples/sample01.dat  ./
+	 stash:///osgconnect/public/<username>/samples/sample01.dat
 
-# Use StashCache To Tranfer Larger Output Files To `/public`
+# Use StashCache To Transfer Larger Output Files To `/public`
 
 To transfer larger output files (>1GB) back to your `/public` directory (which 
 is necessary to later access your results):
@@ -111,52 +88,41 @@ have access StashCache and to OSG Connect modules.
 		error = my_job.$(Cluster).$(Process).err
 		output = my_job.$(Cluster).$(Process).out
 		
-		# ensure jobs have access to StashCache
-		+WantsStashCache = true
-		requirements = (OSGVO_OS_STRING =?= "RHEL 7") && (HAS_MODULES =?= True)
+		requirements = (OSGVO_OS_STRING =?= "RHEL 7") && (HAS_MODULES =?= true)
 		
 		...other submit file details...
 
-2. Use `stashcp` command to transfer the data files back to `/public`. You will 
-need to prepend your `/public` directory path with `stash://osgconnect` as follows:
+2. Use `stash' command to transfer the data files back to `/public`. You will 
+need to prepend your `/public` directory path with `stash:///osgconnect` as follows:
 
 		#!/bin/bash
 	
-		# commands to be executed in job   
-		
-		...   
-		
-		# load module   
-		module load stashcache   
+		# other commands to be executed in job: 
 		
 		# transfer large output to public
 		stashcp file_name stash:///osgconnect/public/username/path/file_name
 
 	For example, if you wish to transfer `output.dat` to the directory 
-	`/public/username/output/` then the `stashcp` command would be:
+	`/public/<username>/output/` then the `stash` command would be:
 
-		stashcp output.dat stash:///osgconnect/public/username/output/output.dat
+		stashcp output.dat stash:///osgconnect/public/<username>/output/output.dat
 
 	**Notice that the output file name `output.dat` must be included at the end of the 
 	`/public` path where the file will be transferred.**
 
+<!--
 As described in [Important Considerations](#important-considerations), 
 once a file is added to `/public` any changes and modifications made 
 to the file will not be propagated due to caching. In the event that your 
 jobs need to be resubmitted or restarted, we strongly recommend that your 
-larger ouptut files be given unique names in `/public`. This can be achieved 
-by several methods, but perhpas the most straightforward option is to include 
+larger ouptut files be given unique names in `/public`. If your jobs aren't already 
+structured to provide unique output filenames, one option is to include 
 [epoch](https://en.wikipedia.org/wiki/Unix_time) time in the output file name 
 using the following example:
 
 	#!/bin/bash
 	
-	# commands to be executed in job   
-		
-	...   
-	
-	# load module   
-	module load stashcache   
+	# commands to be executed in job     
 	
 	# transfer large output to public
 	# add epoch time to output file name to make unqiue
@@ -167,6 +133,7 @@ If you would instead like a more detailed date and time stamp added to the
 file name, you can modify the `date` command. One alternative to consider is 
 ``unique=`date +"%Y-%m-%d.%H-%M-%S"` `` which will set `unique` to 
 `year-month-day.hour-minute-seconds`.
+--->
 
 # Stachcp Command Manual
 

@@ -1,10 +1,11 @@
 [title]: - "Example Software Compilation"
+[TOC]
 
 # Example of Compilng Software For Use In OSG Connect
 
 ## Introduction
 
-Due to the distributed nature of the Open Science Grid, you will always need to 
+Due to the distributed nature of the Open Science Pool, you will always need to 
 ensure that your jobs have access to the software that will be executed. This guide provides 
 a detailed example of compiling software for use in OSG Connect. 
 

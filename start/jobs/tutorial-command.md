@@ -1,4 +1,5 @@
-[title]: - "The "tutorial" Command"
+[title]: - "Use OSG Connect Tutorials"
+[TOC]
 
 OSG Connect tutorials on Github
 -------------------------------

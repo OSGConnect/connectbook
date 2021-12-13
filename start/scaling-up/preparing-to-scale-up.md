@@ -1,27 +1,22 @@
-[title]: - "Scaling Up after Success with Test Jobs"
+[title]: - "Always Test a Few Jobs before Submitting Many"
 
 [TOC]
 
 # Overview
 
-Much of OGS's computing power comes from the ability to run a large number 
-of jobs simulateously. Breaking up your work into small, independently executable 
-jobs and optimizing the resource requests of those jobs, by 
-only requesting the amount of memory, disk, and cpus truely needed, 
-will ensure that you get the most out of OSG resources.
-This is an important practice that will reduce the amount of time your 
-jobs remain idle before running and which will maximize your throughput, 
-all helping to get your work completed sooner.
+Much of HTCondor's HTC power comes from the ability to run a large number 
+of jobs simulateously. To optimize your work with a high-throughput computing (HTC)
+approach, you will need to test and optimizing the resource requests of those jobs, by 
+only requesting the amount of memory, disk, and cpus truely needed.
+This is an important practice that will maximize your throughput by optimizing the 
+number of potential 'slots' in the OSPool that your jobs can match to, reducing the overall 
+turnaround time for completing a whole batch.
 
-A key aspect to high-throughput computing is to 
-break up your computational work into independently 
-executable tasks whenever possible. Breaking up your work not only 
-increases the parallelization of your work, but also often reduces the 
-memory, disk, and cpus needs for each individual task. If you have questions 
+If you have questions 
 or are unsure if and how your work can be broken up, please contact us at 
 <support@osgconnect.net>.
 
-This guide will described best pactices and general tips for optimizing 
+This guide will describe best pactices and general tips for testing 
 your job resource requests **before** scaling up to submitting your full set of jobs. 
 Additional information is also available from the following 2020 OSG Virtual 
 Pilot School lecture video:<a href="https://youtu.be/oMAvxsFJaw4">
@@ -32,25 +27,27 @@ Pilot School lecture video:<a href="https://youtu.be/oMAvxsFJaw4">
 # Always Start With Test Jobs
 
 Submitting test jobs is an important first step for optimizing 
-the resource requests of your jobs. We always recommend submitting a few 
-test jobs first before scaling up whether this is your first time 
-using OSG or you're an experienced user starting a new workflow. 
-Test jobs will also help identify specific `requirements` for your jobs and 
-identify bugs in scripts and workflows.
+the resource requests of your jobs. We always recommend submitting a few (3-10)
+test jobs first before scaling up, whether this is your first time 
+using OSG or you're an experienced user starting a new workflow. If you plan to submit
+thousands of jobs, you may even want to run an intermediate test of 100-1000 jobs to catch any 
+failures or holds that may mean your jobs have additional `requirements` they may need to specify 
+(and which OSG staff can help you to identify, based upon your tests).
 
 Some general tips for test jobs:
 
 - Select smaller data sets or subsets of data for your first test jobs. Using 
 smaller data will keep the resource needs of your jobs low which will help get 
-test jobs to start, and complete, sooner.
+test jobs to start, and complete, sooner, when you're just making sure that your submit file 
+and other logistical aspects of jobs submission are as you want them.
 
 - If possible, submit test jobs that will reproduce results you've gotten 
-using another system, this makes for a good "sanity check" as you'll be able 
+using another system, this makes for a good "sanity check", as you'll be able 
 to compare the results of the test to those previously obtained.
 
 - After initial tests complete successfully, scale up to larger or full-size 
-data sets; if your data spans a range of sizes, submit tests using the smallest 
-and largest data sizes to examine the range of resources that these jobs may need.
+data sets; if your jobs may span a range of input file sizes, submit tests using the smallest 
+and largest inputs to examine the range of resources that these jobs may need.
 
 - Give your test jobs, and associated HTCondor `log`, `error`, `output`, 
 and `submit` files meaningful names so you know which results refer to which tests.
@@ -58,8 +55,9 @@ and `submit` files meaningful names so you know which results refer to which tes
 # Optimize Job Resource Requests
 
 In the HTCondor submit file, you must explicitly request the number of 
-CPUs (i.e. cores) and the amount of disk and memory that the job needs 
-to complete successfully. When you submit a job for the 
+CPUs (i.e. cores), and the amount of disk and memory that the job needs 
+to complete successfully, and you may need to identify a [JobDurationCategory](12000083468). 
+When you submit a job for the 
 first time you may not know just how much to request and that's OK. 
 Below are some suggestions for making resource requests for initial test 
 jobs. **As always, reviewing the HTCondor `log` file from past jobs is 
@@ -77,38 +75,43 @@ to query your log files is to use the Unix tool `grep`. For example:
     - Alternatively, `condor_history` can be used to query details from 
     recently completed job submissions.
 
-- Start by requesting a single cpu. With single cpu jobs you will see 
+- For **requesting CPU cores** start by requesting a single cpu. With single-cpu jobs, you will see 
 your jobs start sooner. Ultimately you will be able to achieve 
 greater throughtput with single cpus jobs compared to jobs that request 
 and use multiple cpus. 
 
-    - **Keep in mind, requesting more cpus for a job 
-    does not automatically mean that your jobs will use more cpus.**.  
+    - **Keep in mind, requesting more CPU cores for a job 
+    does not mean that your jobs will use more cpus.** Rather, you want to make sure 
+    that your CPU request matches the number of cores (i.e. 'threads' or 'processes') 
+    that you expect your software to use. (Most softwares only use 1 CPU core, by default.)
 
     - There is limited support for multicore work in OSG. To learn more, 
     see our guide on 
     [Multicore Jobs](https://support.opensciencegrid.org/support/solutions/articles/5000653862)
+    
+    - Depending on how long you expect or test your jobs to take on a single core, you may need to identify a
+    non-default [JobDurationCategory](12000083468), or consider implementing self-checkpointing (email us!).
 
-- Before submitting a job always look at the size of your input 
-files. At a minimum you need to request enough disk to support all 
-of the input files your job will need, but don't forget about 
-job output. Your submit file should also request enough disk to 
-support the results that are produced by the job.
+- To inform initial **disk requests** always look at the size of your input 
+files. At a minimumm, you need to request enough disk to support all 
+of the input files, executable, and the output you expect, but don't forget that the standard 'error' and 'output'
+files you specify will capture 'terminal' output that may add up, too.
       
     - If many of your input and output files are compressed 
 (i.e. zipped or tarballs) you will need to factor that into your 
-estimates for disk usage as these files will be uncompressed during 
-job execution.
+estimates for disk usage as these files will take up additonal space once uncompressed 
+in the job.
       
     - For your initial tests it is OK to request more disk than 
 your job may need so that the test completes successfully. **The key 
 is to adjust disk requests for subsequent jobs based on the results 
 of these test jobs.**
  
-- Estimating memory usage can sometimes be tricky. If you've performed the 
+- Estimating **memory requests** can sometimes be tricky. If you've performed the 
 same or similar work on another computer, consider using the amount of 
 memory (i.e. RAM) from that computer as a starting point. For instance, 
-most laptop computers these days will have 8 or 16 GB of memory.
+most laptop computers these days will have 8 or 16 GB of memory, which is okay to start 
+with if you know a single job will succeed on your laptop.
 
 	- For your initial tests it is OK to request more memory than 
 your job may need so that the test completes successfully. **The key 
@@ -121,7 +124,7 @@ in your submit files.
 
 # Submit Multiple Jobs Using A Single Submit File
 
-Once you have a single test job that compeltes successfully, the next 
+Once you have a single test job that completes successfully, the next 
 step is to submit a small batch of test jobs (e.g. 5 or 10 jobs) 
 [**using a single submit file**](https://support.opensciencegrid.org/support/solutions/articles/12000073165). Use this small-scale 
 multi-job submission test to ensure that all jobs complete successfully, produce the 
@@ -147,8 +150,9 @@ to remove intermediate and/or unnecessary files as part of your job.
 # Workflow Management
 
 To help manage complicated workflows, consider a workflow manager such 
-as [Pegasus](https://support.opensciencegrid.org/support/solutions/articles/5000639789-pegasus) 
-or HTCondor [DAGman](https://research.cs.wisc.edu/htcondor/dagman/dagman.html).
+as HTCondor's built-in [DAGman](https://research.cs.wisc.edu/htcondor/dagman/dagman.html)
+or the HTCondor-compatible [Pegasus](https://support.opensciencegrid.org/support/solutions/articles/5000639789-pegasus) 
+workflow tool.
 
 # Get Help
 

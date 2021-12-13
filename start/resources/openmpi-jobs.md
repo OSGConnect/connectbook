@@ -2,7 +2,7 @@
 
 [TOC]
 
-Even though Open Science Grid is a high throughput computing system, sometimes
+Even though the Open Science Pool is a high throughput computing system, sometimes
 there is a need to run small OpenMPI based jobs. OSG has limited support for
 this, as long as the core count is small (4 is known to work well, 8 and 16 
 becomes more difficult due to the limited number of resources).
@@ -24,7 +24,7 @@ You can test the executable locally using `mpiexec`:
     Hello world from process 2 of 4
 
 
-To run your code as a job on OSG, first create a `wrapper.sh`. Example:
+To run your code as a job on the Open Science Pool, first create a `wrapper.sh`. Example:
 
     #!/bin/bash
     

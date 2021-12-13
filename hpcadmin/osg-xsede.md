@@ -1,9 +1,9 @@
-[title]: Running OSG jobs on XSEDE
+[title]: -Running OSG jobs on XSEDE
 [TOC]
 
 ## Overview
             
-The [Open Science Grid](http://www.opensciencegrid.org/) (OSG) promotes science by:
+The [OSG](http://www.osg-htc.org/) promotes science by:
 
  * enabling a framework of distributed computing and storage resources
 
@@ -11,13 +11,13 @@ The [Open Science Grid](http://www.opensciencegrid.org/) (OSG) promotes science 
    to ever increasing computing resources for researchers and communities
 
  * providing resource sharing principles and software that enable distributed
-   high throughput computing (DHTC) for users and communities at all scales.
+   High Throughput Computing (dHTC) for users and communities at all scales.
          
-The OSG facilitates access to DHTC for scientific research
+The OSG facilitates access to dHTC for scientific research
 in the US. The resources accessible through the OSG are
 contributed by the community, organized by the OSG, and
 governed by the [OSG
-Consortium](http://www.opensciencegrid.org); an overview is available at 
+Consortium](http://www.osg-htc.org); an overview is available at 
 [An Introduction to OSG](http://osg-docdb.opensciencegrid.org/0008/000839/004/OSG%20Intro%2
 0v23.pdf). In 2017, OSG is comprised
 of about 126 institutions with ~120 active sites that collectively
@@ -213,7 +213,7 @@ Below is a basic job description for the Virtual Cluster.
 
 You can check the status of the job using the `condor_q` command.
 
-**Note:** Open Science Grid is a distributed resource, and there
+**Note:** The Open Science Pool is a distributed resource, and there
 will be minor differences in the compute nodes, for example in what
 system libraries and tools are installed. Therefore, when running
 a large number of jobs, it is important to detect and handle job

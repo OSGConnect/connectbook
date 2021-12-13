@@ -1,9 +1,9 @@
 [title]: - "A Welcome from the User Support Team"
 
-Greetings from the Open Science Grid User Support Team
+Greetings from the OSG User Support Team
 ------------------------------------------------------
 
-On behalf of the Open Science Grid (OSG) User Support team, it is a pleasure to welcome
+On behalf of the OSG User Support team, it is a pleasure to welcome
 you to the help desk portal!
 
 

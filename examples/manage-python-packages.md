@@ -6,16 +6,16 @@
 
 ## Overview
 
-This guide will show you two examples of how to run jobs that use Python in the Open Science Grid.
+This guide will show you two examples of how to run jobs that use Python in the Open Science Pool.
 The first example will demonstrate how to submit a job that uses base Python.
 The second example will demonstrate the workflow for jobs that use specific Python packages, including
 how to install a custom set of Python packages to your home directory and how to add them to a Python job submission.  
 
 Before getting started, you should know which Python packages you need to run your job.  
 
-## Running Base Python on the Open Science Grid
-Several installations of base Python are available via the [Open Science Grid's Software 
-Module System][module-guide]. To see what Python versions are available on the Open Science Grid
+## Running Base Python on the Open Science Pool
+Several installations of base Python are available via the [Open Science Pool's Software 
+Module System][module-guide]. To see what Python versions are available on the Open Science Pool
 run `module avail` while connected to our login node. 
 
 ### Create a bash script to run Python 
@@ -68,7 +68,7 @@ All together, the submit file will look something like this:
 Once everything is set up, the job can be submitted in the usual way, by running 
 the `condor_submit` command with the name of the submit file. 
 
-## Running Python Jobs That Use Additional Pacakges
+## Running Python Jobs That Use Additional Packages
 It's likely that you'll need additional Python packages (aka libraries) that are not
 present in the base Python installations made available via modules. This portion of the
 guide describes how to create a Python "virtual environment" that contains your packages

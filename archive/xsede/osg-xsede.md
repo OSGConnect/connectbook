@@ -1,6 +1,6 @@
 ## Overview
             
-The [Open Science Grid](http://www.opensciencegrid.org/) (OSG) promotes science by:
+The [OSG](https://osg-htc.org/) promotes science by:
 
  * enabling a framework of distributed computing and storage resources
 
@@ -210,7 +210,7 @@ Below is a basic job description for the Virtual Cluster.
 
 You can check the status of the job using the `condor_q` command.
 
-**Note:** Open Science Grid is a distributed resource, and there
+**Note:** The Open Science Pool is a distributed resource, and there
 will be minor differences in the compute nodes, for example in what
 system libraries and tools are installed. Therefore, when running
 a large number of jobs, it is important to detect and handle job
