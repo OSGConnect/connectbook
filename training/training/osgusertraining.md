@@ -12,7 +12,7 @@
 The most recent version of our new user training materials are here: 
 
  [Training Slides](https://docs.google.com/presentation/d/1z-f81xtk_ZXeJcA1kX60JoScXdGfe-xgsB9g5YemrqI/edit#slide=id.g10662d3fe4f_0_0)
- [Wordcount Frequecny Tutorial](https://support.opensciencegrid.org/support/solutions/articles/12000079856)
+ [Wordcount Frequency Tutorial](https://support.opensciencegrid.org/support/solutions/articles/12000079856)
 
 ### Additional Training
 
