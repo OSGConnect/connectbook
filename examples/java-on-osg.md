@@ -12,8 +12,13 @@ your `.jar` file anywhere on the OSG.
 
 1. **Get a copy of Java/JDK.** You can access the the Java Development Kit (JDK) from 
 the [JDK website](https://jdk.java.net/). First select the link to the 
-JDK that's listed as "Ready for Use" and then download the Linux/x64 
-version of the tar.gz file. The downloaded file should end up in your 
+JDK that is listed as "Ready for Use" and then download the Linux/x64 
+version of the tar.gz file using a Unix command such as `wget` from your `/home` directory. 
+For example, 
+
+$ wget https://download.java.net/java/GA/jdk17.0.1/2a2082e5a09d4267845be086888add4f/12/GPL/openjdk-17.0.1_linux-x64_bin.tar.gz
+
+The downloaded file should end up in your 
 home directory on the OSG Connect access point. 
 
 2. **Include Java in Input Files.**  Add the downloaded tar file to the `transfer_input_files` line of your
