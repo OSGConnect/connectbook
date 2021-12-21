@@ -7,6 +7,7 @@
 
 ## Research Computing Facilitators
 To help researchers effectively utilize computing resources, our Research Computing Facilitators (RCFs) not only assist you in implementing your computational work on OSG compute resources, but can also point you to other services related to research computing and data needs. For example, RCFs can:
+
 - Assist with planning your computational approach for a research problem
 - Teach you to submit jobs via the OSG Connect service
 - Help you with troubleshooting on OSG systems
@@ -29,6 +30,7 @@ We provide ongoing support via email to support@opensciencegrid.org, and it’s 
 
 ## Virtual Office Hours
 Drop-in for live help, starting January 11, 2022!
+
 - Tuesdays, 4-5:30pm ET / 1-2:30pm PT
 - Thursdays, 11:30am-1pm ET / 8:30-10am PT
 
