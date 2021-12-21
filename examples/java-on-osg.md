@@ -1,4 +1,4 @@
-[title]: - "Using Java on the OSG"
+[title]: - "Using Java in Jobs"
 
 [TOC]
 
@@ -6,9 +6,9 @@
 
 If your code uses Java via a `.jar` file, it is easy to bring along your 
 own copy of the Java Development Kit (JDK) which allows you to run 
-your `.jar` file anywhere on the OSG. 
+your `.jar` file anywhere on the Open Science Pool. 
 
-## Steps to Use Java on the OSG
+## Steps to Use Java in Jobs
 
 1. **Get a copy of Java/JDK.** You can access the the Java Development Kit (JDK) from 
 the [JDK website](https://jdk.java.net/). First select the link to the 
@@ -16,7 +16,7 @@ JDK that is listed as "Ready for Use" and then download the Linux/x64
 version of the tar.gz file using a Unix command such as `wget` from your `/home` directory. 
 For example, 
 
-$ wget https://download.java.net/java/GA/jdk17.0.1/2a2082e5a09d4267845be086888add4f/12/GPL/openjdk-17.0.1_linux-x64_bin.tar.gz
+		$ wget https://download.java.net/java/GA/jdk17.0.1/2a2082e5a09d4267845be086888add4f/12/GPL/openjdk-17.0.1_linux-x64_bin.tar.gz
 
 The downloaded file should end up in your 
 home directory on the OSG Connect access point. 
