@@ -33,13 +33,13 @@ direct access to, i.e. your local computer (your laptop or desktop).
 
 ### Unix-based operating system (Linux/Mac) or latest Windows 10 versions
 
-Open a terminal on your local computer and run the following commands: 
+We will create a key in the .ssh directory of your computer. Open a terminal on your local computer and run the following commands: 
 
      mkdir ~/.ssh
      chmod 700 ~/.ssh
      ssh-keygen -t rsa
 
-The last command will produce a prompt similar to
+For the newer OS versions the .ssh directory is already created and the first command is redundant. The last command will produce a prompt similar to
 
      Generating public/private rsa key pair.
      Enter file in which to save the key (/home/<local_user_name>/.ssh/id_rsa):
