@@ -124,4 +124,5 @@ and our facilitation team will be happy to discuss your individual case.
 
 # Getting Help 
 
-For assistance or questions, please email the OSG Facilitation team  at <mailto:support@opensciencegrid.org> or visit the [help desk and community forums](http://support.opensciencegrid.org).
+See our [Get Help page](12000084585) for all the different ways you can reach the OSG Facilitation team. Our goal is 
+to enable you to scale up your computing, so we want to hear from you if you have any questions about using OSG Connect. 
