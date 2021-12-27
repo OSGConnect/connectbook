@@ -76,7 +76,8 @@ transfer this file into your current working directory on the compute host would
 # Use StashCache To Transfer Larger Output Files To `/public`
 
 To transfer larger output files (>1GB) back to your `/public` directory (which 
-is necessary to later access your results):
+is necessary to later access your results). [Note that you should NEVER list `/public`
+locations within the submit file (for transfer) or submit jobs from within `/public`](https://support.opensciencegrid.org/support/solutions/articles/12000002985).
 
 1. Add the necessary details to your HTCondor submit file to tell 
 HTCondor that your jobs must run on executes nodes that 
