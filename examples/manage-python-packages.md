@@ -1,63 +1,149 @@
-[title]: - "Run Python Scripts on OSG"
-
-# Run Python Scripts on OSG
+[title]: - "Run Python Scripts on the OS Pool"
 
 [TOC]
 
-## Overview
+# Overview
 
-This guide will show you two examples of how to run jobs that use Python in the Open Science Pool.
-The first example will demonstrate how to submit a job that uses base Python.
-The second example will demonstrate the workflow for jobs that use specific Python packages, including
-how to install a custom set of Python packages to your home directory and how to add them to a Python job submission.  
+This guide shows how to run jobs that use Python in the Open Science Pool.
 
 Before getting started, you should know which Python packages you need to run your job.  
 
-## Running Base Python on the Open Science Pool
-Several installations of base Python are available via the [Open Science Pool's Software 
-Module System][module-guide]. To see what Python versions are available on the Open Science Pool
-run `module avail` while connected to our login node. 
+# Python on OSG Connect
 
-### Create a bash script to run Python 
-To submit jobs that use a module to run base Python, first create a bash executable - for
-this example we'll call it `run_py.sh` - which will include commands to first
-load the appropriate Python module and then run our Python script called `myscript.py`.  
+OSG Connect provides a pre-built copy of the following versions of Python: 
 
-For example, `run_py.sh`:
+{:.gtable}
+  | Python version  | Name of Python installation file |
+  | --- | --- |
+  | Python 3.7 | python37.tar.gz |
+  | Python 3.8 | python38.tar.gz |
+  | Python 3.9 | python39.tar.gz |
+
+If you need a specific version of Python not shown 
+above, [contact us][get-help] to 
+see if we can build it for you; if 
+we can't, we can send you instructions for how to build your own copy of Python 
+or use a Singularity container for running your jobs. 
+
+# Install Python packages
+
+It's likely that you'll need additional Python *packages* (aka *libraries* or *modules*) 
+that are not
+present in the base Python installations provided by OSG staff. This portion of the
+guide describes how to install packages to a specific location in your home directory
+using `pip`. 
+
+1. Get a Copy of Python
+
+	Use the command `wget` to download a copy of Python from OSG Connect's "public" data space: 
+		$ wget http://stash.osgconnect.net/public/osg/python/python37.tar.gz
+
+1. Set Up Python
+
+	Unzip the copied Python installation and set the `PATH` variable to indicate 
+	where to find the `python` and `pip` commands. 
+	
+		$ tar -xzf python37.tar.gz
+		$ export PATH=$PWD/python/bin:$PATH
+
+	To test that the installation worked, run the following command: 
+	
+		$ which python3
+	
+	It should return a path that starts with your home directory. 
+
+1. Create Packages Directory
+	
+	Create a directory to hold your installed Python packages. 
+	
+		$ mkdir python-packages
+		
+	Note that you can call this directory whatever you want; we recommend a 
+	descriptive name that will help you recognize the contents later. If you 
+	choose a different name than `python-packages`, make sure to replace the 
+	directory name as appropriate in the following commands and examples. 
+
+1. Install Packages
+
+	Install the packages you need with the `pip` command. 
+	
+		$ python3 -m pip install --target=$PWD/python-packages package1 package2 etc.
+
+	> The last values should be the names of your packages. So if I wanted to install 
+	> `numpy` and `pandas` to my `python-packages` folder, I should run:  
+	> 
+	> 	$ python3 -m pip install --target=$PWD/python-packages numpy pandas
+	
+	You can confirm that your packages were installed by listing the contents of 
+	the package directory -- you should see your main packages and their dependencies: 
+	
+		$ ls python-packages
+
+1. Prepare Packages Directory for Jobs
+
+	Finally, when sending the packages along with jobs, it is helpful to "squash" 
+	the directory into a single, compressed "tar.gz" file, which can be done with 
+	the `tar` command: 
+	
+		$ tar -czf python-packages.tar.gz python-packages
+
+# Submit Python Jobs
+
+## Create an Script to Set Up and Run Python
+
+In order to run Python in a job, you will need to create a script (the job's "executable") 
+that unzips the OSG-provided copy of Python and your own Python packages, then 
+executes your Python script. 
+
+A sample script appears below. After the first line, the lines starting
+with hash marks are comments . You should replace \"myscript.py\" with
+the name of the script you would like to run, and modify the Python
+version numbers to be the same as what you used above to install your
+packages.
 
 	#!/bin/bash
 
-	# Load Python
-	module load python/3.7.0
+	# run_py.sh
 
-	# Run the Python script 
+	# untar your Python installation. Make sure you are using the right version!
+	tar -xzf python##.tar.gz
+	# (optional) if you have a set of packages (created previously), untar them also
+	tar -xzf python-packages.tar.gz
+
+	# set the location of your Python installation and packages
+	export PATH=$PWD/python/bin:$PATH
+	export PYTHONPATH=$PWD/packages
+	export HOME=$PWD
+
+	# run your script
 	python3 myscript.py
 
+If you have additional commands you would like to be run within the job,
+you can add them to this base script. 
 
-> If you need to use Python 2, load the appropriate module and 
-> replace the `python3` above with `python2`.
+## Create an HTCondor Submit File
 
-### Create an HTCondor submit file
-In order to submit `run_py.sh` as part of a job, we need to create an HTCondor 
-submit file. This should include the following: 
+In order to submit `run_py.sh` (created in the previous step) as part of a job, we 
+need to create an HTCondor submit file. This file should include the following:
 
-* `run_py.sh` specified as the executable    
-* use `transfer_input_files` to bring our Python script `myscript.py`to wherever the job runs   
-* include requirements that request OSG nodes with access to base Python modules   
+* `run_py.sh` specified as the executable
+* use `transfer_input_files` to bring along the Python tar.gz file, our packages (if 
+using) and the Python script (`myscript.py` in this example)
 
 All together, the submit file will look something like this: 
 
 	universe 	= vanilla     
 	executable 	= run_py.sh
 
-	transfer_input_files = myscript.py
+	# transfer Python script, packages, and base Python installation
+	# remove the packages tar.gz file if not using
+	transfer_input_files = myscript.py, packages.tar.gz, stash://python37.tar.gz
 
 	log         = job.log
 	output      = job.out
 	error       = job.error
 
-	# Require nodes that can access the correct OSG modules
-	Requirements = (HAS_MODULES =?= true) && (OSGVO_OS_STRING == "RHEL 7")
+	requirements = (OSGVO_OS_STRING == "RHEL 7")
 
 	request_cpus 	= 1 
 	request_memory 	= 2GB
@@ -65,111 +151,8 @@ All together, the submit file will look something like this:
 
 	queue 1
 
-Once everything is set up, the job can be submitted in the usual way, by running 
-the `condor_submit` command with the name of the submit file. 
+# Other Considerations
 
-## Running Python Jobs That Use Additional Packages
-It's likely that you'll need additional Python packages (aka libraries) that are not
-present in the base Python installations made available via modules. This portion of the
-guide describes how to create a Python "virtual environment" that contains your packages
-and which can be included as part of your jobs. 
-
-### Install Python packages
-While connected to your login node, load the Python module that you want to use to run jobs: 
-
-     $ module load python/3.7.0
-
-Next, create a virtual environment. The first command creates a base environment:
-
-     $ python3 -m venv my_env
-     
-> You can swap out `my_env` for a more descriptive name like `scipy` or `word-analysis`.
-
-This creates a directory `my_env` in the current working directory
-with sub-directories `bin/`, `include/`, and `lib/`.   
-
-Then _activate_ the environment and install packages to it.  
-
-    $ source my_env/bin/activate
-
-Notice how our command line prompt changes to: 
-
-    (my_env)$
-
-The activation process redefines some of the shell variables
-such as PYTHON_PATH, LIBRARY_PATH etc. 
-
-After activation, packages can be installed using `pip` 
-which is a tool to install Python packages. 
-
-    (my_env)$ pip install numpy
-    ......some download message...
-    Installing collected packages: numpy
-	Installing collected packages: numpy
-	Successfully installed numpy-1.16.3
-
-Install each package that you need for your job using the `pip install` command.  Once 
-you are done, you can leave the virtual environment: 
-
-    (my_env)$ deactivate
-
-The above command resets the shell environmental variables and returns you to the 
-normal shell prompt (with the prefix `my_env` removed).
-
-All of the packages that were just installed should be contained in a sub-directory 
-of the `my_env` directory.  To use these packages in a job, the  entire `my_env` directory
-will be transfered as a tar.gz file.  So our final step is to compress the 
-directory, as follows: 
-
-	$ tar czf my_env.tar.gz my_env
-
-
-### Create executable script to use installed packages
-In addition to loading the appropriate Python module, we will need to add a few
-steps to our bash executable to set-up the virtual environment we
-just created. That will look something like this: 
-
-	#!/bin/bash
-	
-	# Load Python
-	# (should be the same version used to create the virtual environment)
-	module load python/3.7.0
-
-	# Unpack your envvironment (with your packages), and activate it
-	tar -xzf my_env.tar.gz
-	python3 -m venv my_env
-	source my_env/bin/activate
-
-	# Run the Python script 
-	python3 myscript.py
-
-	# Deactivate environment 
-	deactivate
-
-### Modify the HTCondor submit file to transfer Python packages
-The submit file for this job will be similar to the base Python job submit file shown above
-with one addition - we need to include `my_env.tar.gz` in the list of files specified by `transfer_input_files`.
-As an example: 
-
-	universe 	= vanilla     
-	executable 	= run_py.sh
-
-	transfer_input_files = myscript.py, my_env.tar.gz
-
-	log         = job.log
-	output      = job.out
-	error       = job.error
-
-	# Require nodes that can access the correct OSG modules
-	Requirements = (HAS_MODULES =?= true) && (OSGVO_OS_STRING == "RHEL 7")
-
-	request_cpus 	= 1 
-	request_memory 	= 2GB
-	request_disk 	= 2GB
-
-	queue 1
-
-## Other Considerations
 This guide mainly focuses on the nuts and bolts of running Python, but it's important 
 to remember that additional files needed for your jobs (input data, setting files, etc.) 
 need to be transferred with the job as well. See our [Introduction to Data Management 
@@ -179,10 +162,11 @@ When you've prepared a real job submission, make sure to run a test job and then
 the `log` file for disk and memory usage; if you're using significantly more or less 
 than what you requested, make sure you adjust your requests. 
 
-## Getting Help
+# Getting Help
 
 For assistance or questions, please email the OSG User Support
 team  at [support@opensciencegrid.org](mailto:support@opensciencegrid.org) or visit the [help desk and community forums](http://support.opensciencegrid.org).
 
 [module-guide]: 12000048518
 [data-intro]: 12000002985
+[get-help]: 12000084585
