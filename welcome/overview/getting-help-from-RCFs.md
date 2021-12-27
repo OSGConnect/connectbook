@@ -36,7 +36,7 @@ Drop-in for live help, starting January 11, 2022!
 
 You can find the URL to the Virtual Office Hours meeting room when you log into an OSG Connect login node, or in the signature of a support email from an RCF. 
 
-Click [here](https://docs.google.com/forms/d/e/1FAIpQLSdj3XT7I0SM4k9jBvST7YX5wsCH_er1HLA7VqRj9ICoEvf2GA/viewform) to sign-in for office hours. 
+Click [here](https://docs.google.com/forms/d/e/1FAIpQLSdj3XT7I0SM4k9jBvST7YX5wsCH_er1HLA7VqRj9ICoEvf2GA/viewform) to sign-in for office hours, once you arrive in the room. 
 
 Cancellations will be announced via email. As always, if the times above don’t work for you, please email us at our usual support address to schedule a separate meeting.
 
