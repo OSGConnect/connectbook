@@ -25,20 +25,26 @@ see if we can build it for you; if
 we can't, we can send you instructions for how to build your own copy of Python 
 or use a Singularity container for running your jobs. 
 
-# Install Python packages
+# Install Python Packages
 
-It's likely that you'll need additional Python *packages* (aka *libraries* or *modules*) 
-that are not
+It's likely that your jobs will need additional Python *packages* 
+(aka *libraries* or *modules*) that are not
 present in the base Python installations provided by OSG staff. This portion of the
 guide describes how to install packages to a specific location in your home directory
 using `pip`. 
 
-1. Get a Copy of Python
+1. **Get a Copy of Python**
 
-	Use the command `wget` to download a copy of Python from OSG Connect's "public" data space: 
-		$ wget http://stash.osgconnect.net/public/osg/python/python37.tar.gz
+	OSG Connect's pre-built copies of Python are located at the path `/public/osg/python`. 
+	You can see available versions by running:
+	
+		$ ls -l /public/osg/python
+	
+	To get started, choose your desired version and copy it to your current directory:
+	
+		$ cp /public/osg/python/python##.tar.gz ./
 
-1. Set Up Python
+1. **Set Up Python**
 
 	Unzip the copied Python installation and set the `PATH` variable to indicate 
 	where to find the `python` and `pip` commands. 
@@ -50,9 +56,9 @@ using `pip`.
 	
 		$ which python3
 	
-	It should return a path that starts with your home directory. 
+	The output line should start with your home directory. 
 
-1. Create Packages Directory
+1. **Create Packages Directory**
 	
 	Create a directory to hold your installed Python packages. 
 	
@@ -63,7 +69,7 @@ using `pip`.
 	choose a different name than `python-packages`, make sure to replace the 
 	directory name as appropriate in the following commands and examples. 
 
-1. Install Packages
+1. **Install Packages**
 
 	Install the packages you need with the `pip` command. 
 	
@@ -79,7 +85,7 @@ using `pip`.
 	
 		$ ls python-packages
 
-1. Prepare Packages Directory for Jobs
+1. **Prepare Packages Directory for Jobs**
 
 	Finally, when sending the packages along with jobs, it is helpful to "squash" 
 	the directory into a single, compressed "tar.gz" file, which can be done with 
@@ -112,7 +118,7 @@ packages.
 
 	# set the location of your Python installation and packages
 	export PATH=$PWD/python/bin:$PATH
-	export PYTHONPATH=$PWD/packages
+	export PYTHONPATH=$PWD/python-packages
 	export HOME=$PWD
 
 	# run your script
@@ -123,7 +129,8 @@ you can add them to this base script.
 
 ## Create an HTCondor Submit File
 
-In order to submit `run_py.sh` (created in the previous step) as part of a job, we 
+In order to submit `run_py.sh` (created in the previous step) and our Python script 
+and packages as part of a job, we 
 need to create an HTCondor submit file. This file should include the following:
 
 * `run_py.sh` specified as the executable
@@ -137,19 +144,19 @@ All together, the submit file will look something like this:
 
 	# transfer Python script, packages, and base Python installation
 	# remove the packages tar.gz file if not using
-	transfer_input_files = myscript.py, packages.tar.gz, stash://python37.tar.gz
+	transfer_input_files = python##.tar.gz, python-packages.tar.gz, myscript.py
 
 	log         = job.log
 	output      = job.out
 	error       = job.error
-
-	requirements = (OSGVO_OS_STRING == "RHEL 7")
 
 	request_cpus 	= 1 
 	request_memory 	= 2GB
 	request_disk 	= 2GB
 
 	queue 1
+
+Submit the job as usual using `condor_submit`. 
 
 # Other Considerations
 
