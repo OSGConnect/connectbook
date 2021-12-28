@@ -124,5 +124,6 @@ and our facilitation team will be happy to discuss your individual case.
 
 # Getting Help 
 
-See our [Get Help page](12000084585) for all the different ways you can reach the OSG Facilitation team. Our goal is 
-to enable you to scale up your computing, so we want to hear from you if you have any questions about using OSG Connect. 
+See our [Get Help page](12000084585) for all the different ways you can reach the OSG Facilitation team. Our purpose 
+is to assist you with achieving your computational goals, so we want to hear from you if you have any questions 
+about using Open Science Pool resources.
