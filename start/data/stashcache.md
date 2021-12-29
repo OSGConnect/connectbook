@@ -92,7 +92,7 @@ have access StashCache.
 
 		stash:///osgconnect/public/<username>/samples/sample01.dat
 
-# Use StashCache to Transfer Larger Job Outputs to the Data Origin
+# Use `stashcp` to Transfer Larger Job Outputs to the Data Origin
 
 For output, users should use the **`stashcp`** command within their job executable, 
 which will transfer the user's specified file to the specific location in the data origin. 
