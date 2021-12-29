@@ -129,7 +129,7 @@ need to prepend your `/public` directory path with `stash:///osgconnect` as foll
 
 		stashcp output.dat stash:///osgconnect/public/<username>/output/output.dat
 
-	**Notice that the output file name `output.dat` must be included at the end of the 
+	**Note that the output file name must also be included at the end of the 
 	`/public` path where the file will be transferred, which also allows you to rename the file.**
 
 <!--
