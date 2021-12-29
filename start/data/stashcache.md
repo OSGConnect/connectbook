@@ -21,10 +21,10 @@ OSG's regional data caches, while preserving login node performance.
 1. As described in OSG Connect's [Introduction to Data Management on OSG Connect](https://support.opensciencegrid.org/support/solutions/articles/12000002985), 
 the `/public` location **must** be used for:
 
-- Any **input data or software larger than 100MB** for 
-transfer to jobs using StashCache tools
-- Any per-job **output >1GB and <10GB**
-should ONLY be transferred back to the origin using a StashCache `stashcp` command within the job executable. 
+	- Any **input data or software larger than 100MB** for 
+	transfer to jobs using StashCache tools
+	- Any per-job **output >1GB and <10GB**
+	should ONLY be transferred back to the origin using a StashCache `stashcp` command within the job executable. 
 
 2. **User must never submit jobs from the `/public` location,** and should continue to 
 ONLY submit jobs from within their `/home` directory. All `log`, `error`, `output` 
