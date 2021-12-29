@@ -62,8 +62,8 @@ for which our
 guide may be helpful.
 
 	**Because of the way your files in `/public` are cached across the Open Science Pool, 
-	once a file is added to `/public` any changes or modifications that you 
-	make to the file will not be propagated.** This means that if you add a new version 
+	any changes or modifications that you make after placing a file in `/public`
+	will not be propagated.** This means that if you add a new version 
 	of a file to your `/public` directory, it must first be given a unique name (or directory path)
 	to distinguish it from previous versions of that file. Adding a date or 
 	version number to directories or file names is strongly encouraged to manage your files in 
@@ -86,9 +86,9 @@ have access StashCache.
 
 	
 	**Note how the `/public` mount (visible on the login node) corresponds to the `/osgconnect/public` namespace 
-	across the OSG's StashCache system. For example, if the data file is located at 
+	across the OSG's StashCache system.** For example, if the data file is located at 
 	`/public/<username>/samples/sample01.dat`, then the `stash:///` URL to 
-	transfer this file to the job's working directory on the execute point would be:**
+	transfer this file to the job's working directory on the execute point would be:
 
 		stash:///osgconnect/public/<username>/samples/sample01.dat
 
