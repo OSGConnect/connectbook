@@ -21,4 +21,4 @@ The most recent version of our New User Training materials are here:
 
 ### Additional Training
 
-We will introduce Special Training topics in mid-2022!
+We will introduce Special Training topics in April 2022!
