@@ -93,6 +93,15 @@ using `pip`.
 	
 		$ tar -czf python-packages.tar.gz python-packages
 
+1. **Check Size of Package Tar File**
+
+	Check the size of the new `python-packages.tar.gz` file:
+	
+		$ ls -lh python-packages.tar.gz
+	
+	If it is larger than 100MB, it should be moved to your `/public` directory 
+	and copied to jobs via a stash link. If it is smaller than 
+
 # Submit Python Jobs
 
 ## Create an Script to Set Up and Run Python
@@ -134,8 +143,10 @@ and packages as part of a job, we
 need to create an HTCondor submit file. This file should include the following:
 
 * `run_py.sh` specified as the executable
-* use `transfer_input_files` to bring along the Python tar.gz file, our packages (if 
-using) and the Python script (`myscript.py` in this example)
+* use `transfer_input_files` to bring along the Python script 
+(`myscript.py` in this example), our packages (if 
+using) and the original Python tar.gz file from `/public/osg` (using the 
+correct "stash" formatted link to the file).
 
 All together, the submit file will look something like this: 
 
@@ -144,7 +155,8 @@ All together, the submit file will look something like this:
 
 	# transfer Python script, packages, and base Python installation
 	# remove the packages tar.gz file if not using
-	transfer_input_files = python##.tar.gz, python-packages.tar.gz, myscript.py
+	transfer_input_files = myscript.py, python-packages.tar.gz, \
+						   stash:///osgconnect/public/osg/python/v1/python##.tar.gz
 
 	log         = job.log
 	output      = job.out
@@ -155,6 +167,12 @@ All together, the submit file will look something like this:
 	request_disk 	= 2GB
 
 	queue 1
+
+**Note on File Sizes** If you are using 
+packages and placed them into your `/public` directory (see note on checking the 
+size [above]()), make sure to change the name of the packages tar.gz file in
+`transfer_input_files` line to the correct "stash" format -- see more information 
+in [this guide about transferring larger files](5000639798). 
 
 Submit the job as usual using `condor_submit`. 
 
