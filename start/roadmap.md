@@ -130,6 +130,6 @@ and our facilitation team will be happy to discuss your individual case.
 
 The OSG Facilitation team is here to help with questions and issues that come up as you work 
 through these roadmap steps. We are available via email, office hours, appointments, and offer 
-regular training opportunities. See our [Get Help page](12000084585) for all the different 
-ways you can reach us. Our purpose 
+regular training opportunities. See our [Get Help page](12000084585) and [OSG Training page](12000084444)
+for all the different ways you can reach us. Our purpose 
 is to assist you with achieving your computational goals, so we want to hear from you!
