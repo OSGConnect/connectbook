@@ -3,10 +3,13 @@
 
 The [OSG][osg] is a nationally-funded consortium of computing resources 
 at more than one hundred institutional partners that, together, offer a strategic 
-advantage for computing work that can be run as numerous short tasks. For researchers
+advantage for computing work that can be run as numerous short tasks that can execute 
+independent of one another. For researchers
 who are not part of an organization with their own pool in the OSG, we offer the 
 [Open Science Pool (OSPool)](https://opensciencegrid.org/about/open_science_pool/), with dozens 
-of campuses contributing excess computing capacity in support of open science.
+of campuses contributing excess computing capacity in support of open science. The OSPool is available 
+for US-affiliated research projects and groups via the [OSG Connect](https://www.osgconnect.net/) service, which the documentation 
+on this site is specific to.
 
 Learn more about the services provided by the OSG that can support your HTC workload: 
 
@@ -43,12 +46,17 @@ using its resources include:
 - parameter sweeps
 - Monte Carlo methods and other model optimization
 
-**Watch this video from the 2021 OSG Virtual School** for a detailed introduction to OSG the Distributed High Throughput Computing framework:
+**Learn more and chat with a Research Computing Facilitator by [signing up for OSG Connect][account-request]**
+
+## Resources to Quickly Learn More
+
+**Introduction to OSG the Distributed High Throughput Computing framework** from the annual [OSG User School](https://opensciencegrid.org/outreach/):
 
 [<img src="https://raw.githubusercontent.com/OSGConnect/connectbook/master/images/Intro_OSG_Video_Thumbnail.png" width="500">](https://www.youtube.com/embed/vpJPPjoQ3QU)
 
+**[Full OSG User Documentation](https://support.opensciencegrid.org/support/home)** including our [Roadmap to HTC Workload Submission](12000081596-roadmap-to-htc-workload-submission-via-osg-connect)
 
-Learn more and chat with a Research Computing Facilitator by requesting an account here: [OSG Connect Sign-Up][account-request]
+**[OSG User Training materials](https://support.opensciencegrid.org/support/solutions/articles/12000084444-osg-user-training)** . Live training sessions are advertised/open to those with active accounts on OSG Connect.
 
 [osg]: https://opensciencegrid.org/
 [account-request]: https://osgconnect.net/signup
