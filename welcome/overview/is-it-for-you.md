@@ -22,7 +22,7 @@ questions that researchers are able to tackle. **Importantly,
 many compute tasks that may appear to not be a good fit _can_ be modified in simple ways 
 to take advantage, and we'd love to discuss options with you!** 
 
-Learn more and chat with a Research Computing Facilitator by requesting an account here: [OSG Connect Sign-Up][account-request]
+**Learn more and chat with a Research Computing Facilitator by [signing up for OSG Connect][account-request]**
 
 |   		| **Ideal jobs!** | **Still advantageous** | **Maybe not, but get in touch!** | 
 |:----------|:--------------|:--------------|:--------------|
@@ -46,7 +46,6 @@ using its resources include:
 - parameter sweeps
 - Monte Carlo methods and other model optimization
 
-**Learn more and chat with a Research Computing Facilitator by [signing up for OSG Connect][account-request]**
 
 ## Resources to Quickly Learn More
 
@@ -57,6 +56,9 @@ using its resources include:
 **[Full OSG User Documentation](https://support.opensciencegrid.org/support/home)** including our [Roadmap to HTC Workload Submission](12000081596-roadmap-to-htc-workload-submission-via-osg-connect)
 
 **[OSG User Training materials](https://support.opensciencegrid.org/support/solutions/articles/12000084444-osg-user-training)** . Live training sessions are advertised/open to those with active accounts on OSG Connect.
+
+
+**Learn more and chat with a Research Computing Facilitator by [signing up for OSG Connect][account-request]**
 
 [osg]: https://opensciencegrid.org/
 [account-request]: https://osgconnect.net/signup
