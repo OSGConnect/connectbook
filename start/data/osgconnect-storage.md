@@ -119,8 +119,8 @@ have already uploaded these input files from your own computer to your OSG Conne
 |  **Transfer Method** | **File Sizes**| **File Location** | **Command** | **More Info** |
 |      :--------:     |    :------:   |       :-----:     |    :-----:  |   :--------:   |
 | **HTCondor<br>File Transfer** | <100 MB;<br><500 MB total per job | `/home` | `transfer_input_files` | [HTCondor File Transfer](https://support.opensciencegrid.org/support/solutions/articles/5000639787)|
-| **HTTP** |  <1GB | non-OSG web server | `http` address in `transfer_input_files`  |[HTTP Access](https://support.opensciencegrid.org/support/solutions/articles/5000639798)|
 | **OSG's<br>StashCache** | >1GB;<br><10 GB per job | `/public` | `stash` address in `transfer_input_files` | [StashCache](https://support.opensciencegrid.org/support/solutions/articles/12000002775)|
+| **HTTP** |  <1GB | non-OSG web server | `http` address in `transfer_input_files`  |[HTTP Access](https://support.opensciencegrid.org/support/solutions/articles/5000639798)|
 | **GridFTP** |  > 10 GB | `/public` | `gfal-copy` | [contact us](mailto:support@opensciencegrid.org) |
     
 <br>
