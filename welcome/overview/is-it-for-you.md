@@ -22,8 +22,6 @@ questions that researchers are able to tackle. **Importantly,
 many compute tasks that may appear to not be a good fit _can_ be modified in simple ways 
 to take advantage, and we'd love to discuss options with you!** 
 
-**Learn more and chat with a Research Computing Facilitator by [signing up for OSG Connect][account-request]**
-
 |   		| **Ideal jobs!** | **Still advantageous** | **Maybe not, but get in touch!** | 
 |:----------|:--------------|:--------------|:--------------|
 | Per-job Requirements; Expected Throughput: | 1000s concurrent cores | 100s concurrent cores | let's discuss! |
@@ -45,6 +43,8 @@ using its resources include:
 - text-based analysis, including DNA read mapping and other bioinformatics
 - parameter sweeps
 - Monte Carlo methods and other model optimization
+
+**Learn more and chat with a Research Computing Facilitator by [signing up for OSG Connect][account-request]**
 
 
 ## Resources to Quickly Learn More
