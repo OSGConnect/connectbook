@@ -1,43 +1,30 @@
-[title]: - "Transfer Input Files >100MB In Size"
+[title]: - "Transfer HTTP-available Files up to 1GB In Size"
 
 [TOC] 
 
 # Overview
 
-Due to the distributed configuration of the OSG, more often than not, your 
-jobs will need to bring along a copy (i.e. transfer a copy) of data, code, 
-packages, software, etc. to the execute node where the job will run. This 
-requirement applies to any and all files that are needed to successfully 
-execute and complete your job that otherwise do not exist on OSG execute servers.
-
-**This guide will describe steps and important considerations for transferring 
-your files that are >100MB but <1GB using the HTTP file transfer mechanism via 
-the HTCondor submit file.**   
+If some of the data or software your jobs depend on is available via the web, 
+you can have such files transferred by HTCondor using the appropriate HTTP address! 
 
 # Important Considerations
 
-As described in the [Introduction to Data Management on OSG Connect](https://support.opensciencegrid.org/support/solutions/articles/12000002985) 
-any data, files, or even software that is >100MB should be staged in your 
-`/public` directory on your login node. Files in your `/public` directory 
-that are <1GB can be transferred with your jobs via HTTP using your HTCondor submit file.
+While our [Overview of Data Mangement on OSG Connect](https://support.opensciencegrid.org/support/solutions/articles/12000002985) 
+describes how you can stage data, files, or even software in OSG Connect locations, 
+any web-accessible file can be transferred directly to your jobs **IF**:
 
-**Because of the way your files in `/public` get cached across OSG's data infrastructure, 
-once a file is added to `/public` any changes or modifications that you 
-make to the file may not be propagated (new jobs may end up with an 'old' version of the file).** 
-This means if you add a new version 
-of a file to your `/public` directory, it must first be given a unique name 
-to distinguish it from previous versions of that file. Adding a date or 
-version number to file names is strongly encouraged to manage you files in 
-`/public`. Additionally, directories with unique names can also be used to 
-organize different or new versions of files in `/public`.
+- the file is accessible via an HTTP address
+- the file is less than 1GB in size (if larger, you'll need to pre-stage them for [stash-based transfer](12000002775)
+- the server or website they're on can handle large numbers of your jobs accessing them simultaneously
 
-**If you have input files that are >1GB please see our 
-[Transfer Large Input and Output Files >1GB In Size](https://support.opensciencegrid.org/support/solutions/articles/12000002775) guide.**
+Importantly, you'll also want to make sure your job executable knows how to handle the file 
+(un-tar, etc.) from within the working directory of the job, just like it would for any other input file.
 
-# Transfer Files From `/public` Using HTTP
+# Transfer Files via HTTP
 
-To transfer files staged in your `/public` directory, use an HTTP URL in 
-combination with the `transfer_input_files` statement in your HTCondor submit. 
+Use an HTTP URL in 
+combination with the `transfer_input_files` statement in your HTCondor submit file. 
+
 For example:
 
 	# submit file example
@@ -47,30 +34,17 @@ For example:
 	output = my_job.$(Cluster).$(Process).out
 	
 	# transfer software tarball from public via http
-	transfer_input_files = http://stash.osgconnect.net/public/username/path/my_software.tar.gz
+	transfer_input_files = http://www.website.com/path/file.tar.gz
 	
 	...other submit file details...
 
-Where `username` refers to your OSG Connect username. Multiple URLs can 
+Multiple URLs can 
 be specified using a comma-separated list, and a combination of URLs and 
 files from `/home` directory can be provided in a comma separated list. For example,
 
 	# transfer software tarball from public via http
 	# transfer input data from home via htcondor file transfer
-	transfer_input_files = http://stash.osgconnect.net/public/username/path/my_software.tar.gz, /home/username/my_data.csv
-
-# Transfer Files Directly From The Web Using HTTP
-
-Files that are available on the web, and are <1GB in size, can also be 
-transferred with your jobs via HTTP using `transfer_input_files`. Examples 
-of files that are available on the web that may be needed for your jobs 
-include precompiled binaries (i.e. software), data in public repositories, 
-etc. Like the example above, use a URL in comnbination with the 
-`transfer_input_files` statement in your HTCondor submit file. For 
-example, to have a copy of the Blast precompiled binaries transferred 
-with your jobs you can use: 
-
-	transfer_input_files = https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/ncbi-blast-2.10.0+-x64-linux.tar.gz
+	transfer_input_files = http://www.website.com/path/file1.tar.gz, http://www.website.com/path/file2.tar.gz, my_data.csv
 
 # Get Help
 
