@@ -16,6 +16,10 @@ have been approved after meeting with an OSG Research Computing Facilitator.
 If you don't yet have an account, you can apply for one at <osgconnect.net>
 or [contact us](mailto:support@opensciencegrid.org) with any questions you have. 
 
+Learning how to get started on the OSG does not need to end with this document or 
+our guides! Learn about our training opportunities and personal facilitation support 
+in the [Getting Help](#getting-help) section below. 
+
 # 1. Introduction to the OSPool and OSG Connect
 
 The OSG's Open Science Pool is best-suited for computing work that can be run as many, independent 
@@ -124,6 +128,8 @@ and our facilitation team will be happy to discuss your individual case.
 
 # Getting Help 
 
-See our [Get Help page](12000084585) for all the different ways you can reach the OSG Facilitation team. Our purpose 
-is to assist you with achieving your computational goals, so we want to hear from you if you have any questions 
-about using Open Science Pool resources.
+The OSG Facilitation team is here to help with questions and issues that come up as you work 
+through these roadmap steps. We are available via email, office hours, appointments, and offer 
+regular training opportunities. See our [Get Help page](12000084585) and [OSG Training page](12000084444)
+for all the different ways you can reach us. Our purpose 
+is to assist you with achieving your computational goals, so we want to hear from you!

@@ -43,3 +43,8 @@ Cancellations will be announced via email. As always, if the times above don’t
 
 ## Make an Appointment
 We are happy to arrange meetings outside of designated Office Hours, per your preference. Simply email us at support@opensciencegrid.org, and we will set up a time to meet!
+
+## Training Opportunities
+
+The RCF team runs regular new user training on the first Tuesday of the month. See upcoming 
+training dates, registration information, and materials on the [OSG Training page](12000084444).
