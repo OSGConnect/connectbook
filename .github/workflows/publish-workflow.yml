@@ -22,5 +22,5 @@ jobs:
       - name: Run the update script
         run: |
             cd /tmp/connectbook
-            ./update/update.sh
+            ./update/update.sh $(diff --name-only HEAD HEAD~1 | grep \.md | tr '\n' ' ')
 
