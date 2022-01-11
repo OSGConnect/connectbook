@@ -9,10 +9,8 @@ echo child pid: $$
 echo dir: $(pwd)
 
 if [ $# -eq 0 ]; then
-	echo 'files: (discovered)'
-	generator () {
-		find . -name \*.md -print
-	}
+  echo "No Files to Change: Skipping Update"
+	exit 0
 else
 	echo files: "$@"
 	generator () {
