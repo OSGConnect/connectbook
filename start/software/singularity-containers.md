@@ -3,23 +3,59 @@
 [TOC]
 
 Docker and Singularity are container systems that allow users full control 
-over their environment. You can create your own container image (a blueprint for 
-the running container) which your 
-job will execute within, or choose from a set of pre-defined images. 
+over their software environment. You can create your own container image or choose from a set of pre-defined images, 
+and specify that your submitted jobs run within one of these. 
 
 For jobs on OSG, it does not matter whether you provide a Docker or Singularity 
 image. Either is compatible with our system and can be used with little to 
-no modification. This is of course highly dependent on your workload. Please
+no modification, though *may* be dependent on your software. Please
 feel free to contact us at [support@opensciencegrid.org](mailto:support@opensciencegrid.org) if you have any questions. 
+
+## Use an OSG-Provided Singularity Image
+
+The OSG Team maintains a set of images that are already in the OSG Singularity repository. A list of available containers can be
+found on [this page][container-list]. 
+
+If the software you need isn't already supported in a listed container, you can use your 
+own container or any container image in Docker Hub (see sections further below). Once the container you 
+need is in the OSG Singularity repository, your can submit jobs that run within a particular container 
+by listing the container image in the submit file, along with a requirement to only run on sites in the 
+Open Science Pool that support Singularity.
+
+For example, this is what a submit file might look like to run your job within our EL7 container:
+
+    Requirements = HAS_SINGULARITY == TRUE
+    +SingularityImage = "/cvmfs/singularity.opensciencegrid.org/opensciencegrid/osgvo-el7:latest"
+
+    <other usual submit file lines>
+    queue
+
+> **When using a container for your jobs, as in the above example, the container image is automatically started up when HTCondor matches your job to a slot.  The executable provided in the submit script will be run within the context of the container image, having access to software and libraries that were installed to the image, as if they were already on the server where the job is running. Job executables need not (and should not) run any singularity or docker commands to start the container.**
+
+## Use a Custom Singularity Image
+
+If you already have software in the form of a `.sif` Singuilarity file, and that file
+is within the [supported data sizes](https://support.opensciencegrid.org/support/solutions/articles/12000002985-overview-data-staging-and-transfer-to-jobs), you can stage the .sif file in your `/home` or `/public` 
+location, and list it in the submit file to be transfered and used by 
+the job (from within the working directory of the job, i.e. `./`):
+
+    transfer_input_files = path/to/mycontainer.sif, <other files to transfer, as usual>
+    +SingularityImage = "./mycontainer.sif"
+    Requirements = HAS_SINGULARITY == TRUE
+
+    <other usual submit file lines>
+    queue
+    
+**Note that if your container is large enough to stage in `/public` that you will 
+need to specify the appropriate `stash:///` address in the `transfer_input_files` line.
 
 ## Use Docker Images via Docker Hub
 
-OSG Connect provides tooling for users to create, publish and load custom images.
-This is useful if your job requires some very specific software setup. The general 
-process goes like this: 
+If you would prefer to create or use an existing Docker Hub container 
+(especially if an authoritative container for your software already exists in DockerHub), you will: 
 
-1. Create your own custom container image using **Docker** and push it to Docker Hub. 
-2. Add a Docker image to the Open Science Pool image repository. (Also useful for community software, already in Docker Hub)
+1. Create your own Docker container image, and push it to Docker Hub. (if a container for your software doesn't already exist in Docker Hub)
+2. Add a Docker Hub image to the OSG Singularity repository.
 3. Use the container image in jobs. 
 
 We will expand on each of these steps below. 
@@ -28,23 +64,17 @@ We will expand on each of these steps below.
 
 If you want to use an container image you have created yourself, the image
 should be defined as a Docker image and published in [Docker
-Hub](https://hub.docker.com/). The reason we use Docker as a source
-image repository is that it allows us to easily import the images into
-our own distribution system (see below). 
+Hub](https://hub.docker.com/). Using Docker Hub allows us to easily import the images into
+our the OSG Singularity repository (see further above). 
 
 See [this page][container-howto] for how to create a Docker image on your own computer and 
 push it to Docker Hub so it can be used by the Open Science Pool. 
 
-When creating the Docker image, you will give it with an 
-identifier with this format: `namespace/repository_name`
-This identifier will be used both to submit the Docker container to 
-the OSG repository and to run jobs. 
-
 ### Submit your Docker Container to the OSG Repository
 
 Once your Docker image has been published on Docker Hub, it needs to be 
-submitted to the CVMFS image repository (`/cvmfs/singularity.opensciencegrid.org/`), 
-which also hosts the OSG-provided default images. 
+submitted to the OSG Singularity repository (`/cvmfs/singularity.opensciencegrid.org/`), 
+which also hosts the OSG-provided default images (described further above). 
 
 To get your images included, please create a git pull request with the container 
 identifier in `docker_images.txt` in the
@@ -54,7 +84,7 @@ or contact
 and we can help you.
 
 Once your submission has been accepted, it will be automatically converted to a Singularity 
-image and pushed to the CVMFS Singularity repository.  Note: some 
+image and pushed to the OSG Singularity repository (see further above).  Note: some 
 common Dockerfile features, like ENV and ENTRYPOINT, are ignored when the Docker 
 image is converted to a Singularity image. See our the "Special Cases" section of our 
 [how to guide][container-howto] for more details 
@@ -65,62 +95,18 @@ if you update your original Docker image, new versions pushed to Docker Hub will
 automatically be detected and the version on the OSG (in the CVMFS filesystem)
 will be updated accordingly.
 
-### Use Your Container in a Job
+### Use the Docker Container in a Job
 
-To use your container to run jobs, you will follow the same steps as above (under "Using OSG 
-Provided Singularity Images"), but will change the `+SingularityImage` option to 
-include your container identifier, like so: 
-
-    +SingularityImage = "/cvmfs/singularity.opensciencegrid.org/namespace/repository_name"
-
-For example, if my Docker Hub username was `alice` and I created a container called 
-`ncbi-blast`, my submit file might look like this: 
-
-    universe = vanilla
-    executable = job.sh
+To use your container to run jobs, you will specify the container path within CVMFS, as well as a requirement to run 
+only on execute points that support Singularity. For example, if your Docker Hub username is `alice` and you created a container called 
+`ncbi-blast` added to the OSG Singularity repository, your submit file will include: 
 	
     Requirements = HAS_SINGULARITY == TRUE
     +SingularityImage = "/cvmfs/singularity.opensciencegrid.org/alice/ncbi-blast"
 
-    output = out
-    error = err
-    log = log
-
-    queue
-
-## Us a Custom Singularity Image
-
-If you already have software in a Singularity container, and that container
-is within the supported data sizes, you can stage the .sif file in your `/home` or `/public` 
-location, and list it in the submit file to be transfered and used by the job:
-
-    transfer_input_files = path/to/mycontainer.sif
-    +SingularityImage = "./mycontainer.sif"
-    Requirements = HAS_SINGULARITY == TRUE
-
-    <other usual submit file lines>
-    queue
-    
-**Note that if your container is large enough to stage in `/public` that you will 
-need to specify the appropriate `stash:///` address in the `transfer_input_files` line.
-
-## Use an OSG-Provided Singularity Image
-
-The OSG Team maintains a set of images, hosted in a distributed
-file system called [CVMFS](https://cernvm.cern.ch/portal/filesystem). These images
-contain a basic set of tools and libraries. A list of available containers can be
-found in [this page][container-list].
-
-For example, this is what a submit file might look like to run your job within our EL7 container:
-
-    Requirements = HAS_SINGULARITY == TRUE
-    +SingularityImage = "/cvmfs/singularity.opensciencegrid.org/opensciencegrid/osgvo-el7:latest"
-
     <other usual submit file lines>
     queue
 
-
-> **When using a container for your jobs, as in the above example, the container image is automatically started up when HTCondor matches your job to a slot.  The executable provided in the submit script will be run within the context of the container image, having access to software and libraries that were installed to the image, as if they were already on the server where the job is running. Job executables need not (and should not) run any singularity or docker commands to start the container.**
 
 
 ## Frequently Asked Questions / Common Issues
