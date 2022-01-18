@@ -68,8 +68,8 @@ set the project for those jobs by putting this option in the submit file:
 
 ## View Metrics For Your Project
 
-The project's resource usage appears in the OSG accounting system, [GRACC](<https://gracc.opensciencegrid.org/>). 
-You can see the main OSG Connect dashboard here: [Link to OSG Connect Dashboard](<https://gracc.opensciencegrid.org/dashboard/db/osg-connect-summary-all-usage?orgId=1&var-interval=$__auto_interval&var-project=All&var-user=All&var-Filter=ProbeName%7C%3D~%7C.*(osgconnect%5C.net__gfp__grid%5C.uchicago%5C.edu__gfp__ci-connect%5C.net__gfp__xd-login%5C.opensciencegrid.org__gfp__SUBMIT.MIT.EDU__gfp__csiu.grid.iu.edu__gfp__otsgrid.iit.edu__gfp__workflow.isi.edu__gfp__lsst-glidein.rcac.purdue.edu__gfp__scosg16.jlab.org__gfp__gluex.phys.uconn.edu)&var-institution=All>)
+The project's resource usage appears in the OSG accounting system, [GRACC](https://gracc.opensciencegrid.org/d/000000033/osg-project-accounting?orgId=1). 
+You can see the main OSG Connect dashboard here: [Link to OSG Connect Dashboard](https://gracc.opensciencegrid.org/d/000000099/osg-connect-summary-osgconnect-net-submit-hosts-only?orgId=1)
 
 At the top of that dashboard, there is a set of filters that you can use to examine 
 the number of hours used by your project, specific users, or your institution. 
