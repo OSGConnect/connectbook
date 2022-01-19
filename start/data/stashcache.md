@@ -11,10 +11,10 @@ per-job data!
 
 Users on an
 OSG Connect login node can handle such files via the OSG Connect **data caching origin** 
-(mounted and visible as the `/public` location) and use OSG's 'StashCache' tools to 
+(mounted and visible as the `/public` location) and use OSG's caching tools to 
 scalably transfer them between the running jobs and the origin. 
-The StashCache tools ensure faster delivery to and from execute nodes by taking adantage of 
-OSG's regional data caches, while preserving login node performance.
+The OSG caching tools ensure faster delivery to and from execute nodes by taking adantage of 
+regional data caches in the OSG Data Federation, while preserving login node performance.
 
 # Important Considerations and Best Practices
 
@@ -22,9 +22,9 @@ OSG's regional data caches, while preserving login node performance.
 the `/public` location **must** be used for:
 
 	- Any **input data or software larger than 100MB** for 
-	transfer to jobs using StashCache tools
-	- Any per-job **output >1GB and <10GB**
-	should ONLY be transferred back to the origin using a StashCache `stashcp` command within the job executable. 
+	transfer to jobs using OSG caching tools
+	- Any per-job **output >1GB and <10GB**, which 
+	should ONLY be transferred back to the origin using a `stashcp` command within the job executable. 
 
 2. **User must never submit jobs from the `/public` location,** and should continue to 
 ONLY submit jobs from within their `/home` directory. All `log`, `error`, `output` 
@@ -32,7 +32,7 @@ files and any other files smaller than the above values should ONLY ever
 exist within the user's /home directory, unless otherwise directed by an OSG staff member. 
 
 	Thus, **files within the `/public` location should only be referenced within 
-	the submit file by using the StashCache tools described further below**, and should 
+	the submit file by using the methods described further below**, and should 
 	never be listed for direct HTCondor transfer via `transfer_input_files`, 
 	`transfer_output_files`, or `transfer_output_remaps`.
 	
@@ -49,9 +49,9 @@ via the user's /home directory and regular HTCondor file transfer). Smaller file
 via `/public` with explicit instruction from an OSG staff member.
 
 
-# Use a StashCache URL to Transfer Large Input Files to Jobs 
+# Use a 'stash' URL to Transfer Large Input Files to Jobs 
 
-Jobs submitted from the OSG Connect login nodes will transfer data from the origin via StashCache  
+Jobs submitted from the OSG Connect login nodes will transfer data from the origin  
 when files are indicated with an appropriate `stash:///` URL in the `transfer_input_files` line 
 of the submit file:
 
@@ -71,9 +71,9 @@ guide may be helpful.
 
 2. Add the necessary details to your HTCondor submit file to tell 
 HTCondor which files to transfer, and that your jobs must run on executes nodes that 
-have access StashCache.
+have access to the OSG Data Federation.
 
-		# Submit file example of StashCache input/software transfer
+		# Submit file example of large input/software transfer
 		
 		log = my_job.$(Cluster).$(Process).log
 		error = my_job.$(Cluster).$(Process).err
@@ -86,7 +86,7 @@ have access StashCache.
 
 	
 	**Note how the `/public` mount (visible on the login node) corresponds to the `/osgconnect/public` namespace 
-	across the OSG's StashCache system.** For example, if the data file is located at 
+	across the OSG Data Federatio.** For example, if the data file is located at 
 	`/public/<username>/samples/sample01.dat`, then the `stash:///` URL to 
 	transfer this file to the job's working directory on the execute point would be:
 
@@ -102,9 +102,10 @@ within the submit file (e.g. in 'transfer_output_remaps`) or submit jobs from wi
 
 1. Add the necessary details to your HTCondor submit file to tell 
 HTCondor that your jobs must run on executes nodes that 
-have access to the `stashcp` module (among other OSG-supported modules).
+have access to the `stashcp` module (among other OSG-supported modules). Note that the output files 
+are NOT listed anywhere in the submit file for transfer purposes.
 
-		# StashCache submit file example
+		# submit file example for large output
 		
 		log = my_job.$(Cluster).$(Process).log
 		error = my_job.$(Cluster).$(Process).err
@@ -114,7 +115,7 @@ have access to the `stashcp` module (among other OSG-supported modules).
 		
 		...other submit file details...
 
-2. Add a `stashcp` command at the end of your executable to transfer the data files back to `/public`. You will 
+2. Add a `stashcp` command at the end of your executable to transfer the data files back to the OSG Connect data origin (within `/public`). You will 
 need to prepend your `/public` directory path with `stash:///osgconnect` as follows:
 
 		#!/bin/bash
