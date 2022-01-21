@@ -31,9 +31,10 @@ It's likely that your jobs will need additional Python *packages*
 (aka *libraries* or *modules*) that are not
 present in the base Python installations provided by OSG staff. This portion of the
 guide describes how to install packages to a specific location in your home directory
-using `pip`. 
+using `pip`. If you do not need any additional packages, proceeded to the 
+next section of the guide: [Submit Python Jobs](#submit-python-jobs)
 
-1. **Get a Copy of Python**
+1. **Get a Copy of OSG-Provided Python**
 
 	OSG Connect's pre-built copies of Python are located at the path `/public/osg/python`. 
 	You can see available versions by running:
@@ -78,7 +79,7 @@ using `pip`.
 	> The last values should be the names of your packages. So if I wanted to install 
 	> `numpy` and `pandas` to my `python-packages` folder, I should run:  
 	> 
-	> 	$ python3 -m pip install --target=$PWD/python-packages numpy pandas
+	>     $ python3 -m pip install --target=$PWD/python-packages numpy pandas
 	
 	You can confirm that your packages were installed by listing the contents of 
 	the package directory -- you should see your main packages and their dependencies: 
@@ -100,7 +101,8 @@ using `pip`.
 		$ ls -lh python-packages.tar.gz
 	
 	If it is larger than 100MB, it should be moved to your `/public` directory 
-	and copied to jobs via a stash link. If it is smaller than 
+	and copied to jobs via a stash link. If it is smaller than 100MB, it can 
+	remain in your `/home` directory. 
 
 # Submit Python Jobs
 
@@ -154,9 +156,10 @@ All together, the submit file will look something like this:
 	executable 	= run_py.sh
 
 	# transfer Python script, packages, and base Python installation
-	# remove the packages tar.gz file if not using
+	# remove the python-packages tar.gz file if not using
+	# see note below in user guide about python-packages.tar.gz > 100MB
 	transfer_input_files = myscript.py, python-packages.tar.gz, \
-						   stash:///osgconnect/public/osg/python/v1/python##.tar.gz
+						   stash:///osgconnect/public/osg/python/python##.tar.gz
 
 	log         = job.log
 	output      = job.out
