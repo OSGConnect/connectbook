@@ -20,10 +20,9 @@ OSG Connect provides a pre-built copy of the following versions of Python:
   | Python 3.9 | python39.tar.gz |
 
 If you need a specific version of Python not shown 
-above, [contact us][get-help] to 
-see if we can build it for you; if 
-we can't, we can send you instructions for how to build your own copy of Python 
-or use a Singularity container for running your jobs. 
+above, see our [Build a Copy of Python][python-build] guide to create
+your own. If you have questions about this process, or alternatives 
+when using different versions of Python, [contact us][get-help].
 
 # Install Python Packages
 
@@ -198,3 +197,4 @@ team  at [support@opensciencegrid.org](mailto:support@opensciencegrid.org) or vi
 [module-guide]: 12000048518
 [data-intro]: 12000002985
 [get-help]: 12000084585
+[python-build]: TBD 
