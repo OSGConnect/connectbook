@@ -18,9 +18,9 @@ The next section of this guide describes the process for joining an OSG Connect 
 ### Project Membership via Account Creation Process (Default)
 
 You will be added to a project when going through the typical 
-OSG Connect account creation process. After applying for an OSG Connect account, 
-you will receive an email to set up a consultation meeting and also whether 
-or not you want to join an existing project. You will be prompted to provide information 
+OSG Connect account setup process. After applying for an OSG Connect account, 
+you will receive an email to set up a consultation meeting and confirm which 
+'OSG Project' your usage should be associated with. You will be prompted to provide information 
 based on the following two scenarios: 
 
 - **If you are the first member of your research group / team to use the OSG through 
@@ -41,11 +41,9 @@ add you to it, or add you to an existing project when your account is approved.
 
 ### Join a Project
 
-If you are changing research groups (and therefore projects) or are coming to 
-OSG Connect outside of the usual account creation process, it is possible to 
-join a pre-existing project by emailing the 
-OSG Connect support team (support@opensciencegrid.org) with your name and the project 
-you wish to join. 
+If you need to join an existing project (you can be a member of more than one), please email the 
+OSG team (support@opensciencegrid.org) with your name and the project 
+you wish to join, with PI in CC to confirm.
 
 ## "Set" your OSG Connect project
 
@@ -61,7 +59,7 @@ You should see a list of projects that you have joined. Most often there will
 only be one option! Make sure the right project is highlighted and press "enter" 
 to save that choice. 
 
-* **Option 2**: If you're running a few jobs under a different project, you can manually 
+* **Option 2**: If need to run jobs under a different project you are a member of (not your default), you can manually 
 set the project for those jobs by putting this option in the submit file: 
 
 	    +ProjectName="ProjectName"
