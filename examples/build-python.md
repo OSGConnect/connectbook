@@ -58,11 +58,11 @@ the OSG provided versions of Python, you have created your own.
 	Run the following commands to un-tar the .tgz source code file and 
 	compile Python, installing it to the `python` subdirectory created earlier: 
 
-		$ tar -xzf Python-3.9.10.tgz
-		$ cd Python-3.9.10
-		$ ./configure --prefix=/srv/python
-		$ make; make install
-		$ cd ..
+		Singularity> tar -xzf Python-3.9.10.tgz
+		Singularity> cd Python-3.9.10
+		Singularity> ./configure --prefix=/srv/python
+		Singularity> make; make install
+		Singularity> cd ..
 
 	Once these commands are done, you can exit the container: 
 
