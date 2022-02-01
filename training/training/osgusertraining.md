@@ -1,4 +1,4 @@
-[title]: - "OSG User Training"
+[title]: - "OSG User Training (regular/monthly)"
 
 ## Upcoming Trainings
 
@@ -19,6 +19,6 @@ The most recent version of our New User Training materials are here:
 * [Wordcount Frequency Tutorial](https://support.opensciencegrid.org/support/solutions/articles/12000079856)
 * [Video of Training](https://www.youtube.com/watch?v=D14eMrkZ2gQ)
 
-### Additional Training
+### Additional Topics
 
 We will introduce Special Training topics in April 2022!
