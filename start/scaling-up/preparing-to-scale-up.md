@@ -168,7 +168,6 @@ Additional `condor_q` flags involved in optimizing and troubleshooting jobs incl
 | Flag      | Description |
 | ----------- | ----------- |
 | -nobatch | Combined with `condor_q`, this flag will list jobs individually and not by batch. |
-| -all | Shows all jobs submitted on the submit server.|
 | -hold | Show only jobs in the "on hold" state and the reason for that. An action from the user is expected to solve the problem. |
 | -run | Show your running jobs and related info, like how much time they have been running, where they are running, etc. |
 | -dag |  Organize condor_q output by DAG. |
