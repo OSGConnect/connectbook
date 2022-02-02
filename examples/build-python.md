@@ -91,7 +91,14 @@ the OSG provided versions of Python, you have created your own.
 	Once this tar.gz file is created, move it to your public directory: 
 
 		$ mv python.tar.gz /public/username
-Once you confirm that this file was moved to your public folder successfully, we can delete the remaining files in our build_dir folder to help maintain a clean workspace. We can delete them by typing: 
+
+	Once you confirm that this file was moved to your public folder 
+	successfully, you can delete the remaining files in our `build_dir` folder to 
+	help maintain a clean workspace. We can delete them by typing: 
+	
+		$ rm -r python Python-3.9.10 Python-3.9.10.tgz
+
+	You can also remove the entire build directory. 
 
 7. **Submit jobs**
 
