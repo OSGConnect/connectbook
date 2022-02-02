@@ -35,7 +35,7 @@ the OSG provided versions of Python, you have created your own.
 
 		$ mkdir build_dir
 		$ cd build_dir
-		$ cp ~/Python-3.9.10.tgz ./ # or do the download now
+		$ cp ~/Python-3.9.10.tgz ./ #  The Python source code could alternatively be downloaded *directly* into this folder.
 		$ mkdir python
 
 3. **Start a singularity container**
@@ -70,7 +70,7 @@ the OSG provided versions of Python, you have created your own.
 
 5. **Check installation**
 
-	The `python` directory should now have subdirectories `bin`, `include`, `lib` and `share`
+	The `python` directory should now have subdirectories `bin`, `include`, `lib` and `share`.
 
 		$ ls python
 		bin  include  lib  share

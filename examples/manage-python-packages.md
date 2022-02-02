@@ -56,7 +56,7 @@ next section of the guide: [Submit Python Jobs](#submit-python-jobs)
 	
 		$ which python3
 	
-	The output line should start with your home directory. 
+	The output line should start with your home directory or with a tilde (~) indicating the path of your home directory.
 
 1. **Create Packages Directory**
 	
@@ -112,7 +112,7 @@ that unzips the OSG-provided copy of Python and your own Python packages, then
 executes your Python script. 
 
 A sample script appears below. After the first line, the lines starting
-with hash marks are comments . You should replace \"myscript.py\" with
+with hash marks are comments. You should replace \"myscript.py\" with
 the name of the script you would like to run, and modify the Python
 version numbers to be the same as what you used above to install your
 packages.
