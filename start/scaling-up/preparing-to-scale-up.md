@@ -160,7 +160,6 @@ Gathering information about how, what, and where a job ran can be important for 
 | ----------- | ----------- |
 | `condor_q`      | Shows the queue information for your jobs. Includes information such as batch name and total jobs. |
 | `condor_q <JobID> -l` | Prints all information related to a job including attributes and run information about a job in the queue. Output includes `JobDurationCategory`, `ServerTime`, `SubmitFile`, etc. Also works with `condor_history`. |
-| `condor_q <JobID> -l` | Prints all information related to a job including attributes and run information about a job in the queue. Output includes `JobDurationCategory`, `ServerTime`, `SubmitFile`, etc. Also works with `condor_history`. |
 | `condor_q <JobID> -af <AttributeName1> <AttributeName2>` | Prints information about an attribute or list of attributes for a single job using the autoformat `-af` flag. The list of possible attributes can be found using `condor_q <JobID> -l`. Also works with `condor_history`.  |
 | `condor_q -constraint '<Attribute> == "<value>"' `  | The `-constraint` flag allows users to find all jobs with a certain value for a given parameter. This flag supports searching by more than one parameter and different operators (e.g. `=!=`). Also works with `condor_history`.  |
 | `condor_q -better-analyze <JobID> -pool <PoolName>` | Shows a list of the number of slots matching a job's requirements. For more information, see [Troubleshooting Job Errors](https://support.opensciencegrid.org/support/solutions/articles/5000639785-troubleshooting-job-errors). |
