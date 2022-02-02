@@ -172,7 +172,7 @@ Additional `condor_q` flags involved in optimizing and troubleshooting jobs incl
 | -nobatch | Combined with `condor_q`, this flag will list jobs individually and not by batch. |
 | -hold | Show only jobs in the "on hold" state and the reason for that. An action from the user is expected to solve the problem. |
 | -run | Show your running jobs and related info, like how much time they have been running, where they are running, etc. |
-| -dag |  Organize condor_q output by DAG. |
+| -dag |  Organize `condor_q` output by DAG. |
 
 More information about the commands and flags above can be found in the [HTCondor manual](https://htcondor.readthedocs.io/en/latest/). 
 
