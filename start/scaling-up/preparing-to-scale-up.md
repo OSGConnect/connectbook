@@ -159,7 +159,7 @@ Gathering information about how, what, and where a job ran can be important for 
 | Command      | Description |
 | ----------- | ----------- |
 | `condor_q`      | Shows the queue information for your jobs. Includes information such as batch name and total jobs. |
-| `condor_q <JobID> -l` | Prints all information related to a job including attributes and run information about a job in the queue. Output includes `JobDurationCategory`, `ServerTime`, `SubmitFile`, etc. |
+| `condor_q <JobID> -l` | Prints all information related to a job including attributes and run information about a job in the queue. Output includes `JobDurationCategory`, `ServerTime`, `SubmitFile`, etc. Also works with `condor_history`. |
 ```suggestion
 | `condor_q <JobID> -l` | Prints all information related to a job including attributes and run information about a job in the queue. Output includes `JobDurationCategory`, `ServerTime`, `SubmitFile`, etc. Also works with `condor_history`. |
 
