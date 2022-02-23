@@ -88,3 +88,6 @@
 [submodule "tutorials/tutorial-wordfreq"]
 	path = tutorials/tutorial-wordfreq
 	url = https://github.com/OSGConnect/tutorial-wordfreq
+[submodule "tutorials/tutorial-bwa"]
+	path = tutorials/tutorial-bwa
+	url = https://github.com/OSGConnect/tutorial-bwa
