@@ -32,7 +32,7 @@ to take advantage, and we'd love to discuss options with you!**
 | RAM		| 	< few GB	|	< 40 GB	|	> 40 GB	|
 | Input		| 	< 500 MB	|	< 10 GB	|	> 10 GB**		|
 | Output	| 	< 1GB		|	< 10 GB	|	> 10 GB**		|
-| Software	| pre-compiled binaries, containers | Most other than -> | Licensed software, non-Linux |
+| Software	| pre-compiled binaries, containers | Most other than ---> | Licensed software, non-Linux |
 
 \* or checkpointable
 
