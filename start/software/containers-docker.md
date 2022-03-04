@@ -1,4 +1,4 @@
-[title]: - "Create a Docker Container Image"
+[title]: - "Create/Register a Docker Container Image"
 
 [TOC]
 
@@ -7,7 +7,10 @@ in the Open Science Pool.  You can use your own custom container to run jobs in 
 Open Science Pool, and we assume that those containers are built using Docker.  This 
 guide describes how to create your own Docker container "image" (the blueprint for 
 the container). Once you have created your custom image, 
-you will need to register the image as described in [this page][osg-containers]
+you will need to register the image as described further down in this guide.
+
+For an overview and how to execute images on OSG, please see
+[Use Containers on the OSG][osg-containers]
 
 ## Install Docker and Get a Docker Hub Account
 
@@ -15,7 +18,7 @@ You'll need a Docker Hub account in order to download Docker and share your
 Docker container images with the OSG: [DockerHub](https://hub.docker.com/)
 
 Install Docker Desktop to your computer using the appropriate version for your 
-operating system. 
+operating system. Note that OSG does not provide any container build hosts.
 
 ## Identify Components
 
@@ -137,6 +140,32 @@ command:
 
 From here, if you're planning to use this container in OSG, return to our 
 [Containers in OSG Guide][osg-containers] to learn how to upload your container to the OSG's container repository. 
+
+
+## Submit your Docker Container to the OSG Repository
+
+Once your Docker image has been published on Docker Hub,
+it needs to be submitted to the OSG Singularity repository
+(`/cvmfs/singularity.opensciencegrid.org/`), which also hosts the
+OSG-provided default images.
+
+To get your images included, please create a git pull request with the
+container identifier in `docker_images.txt` in the
+[cvmfs-singularity-sync repository](https://github.com/opensciencegrid/cvmfs-singularity-sync),
+or contact
+[support@opensciencegrid.org](mailto:support@opensciencegrid.org)
+and we can help you.
+
+Once your submission has been accepted, it will be automatically
+converted to a Singularity image and pushed to the OSG Singularity
+repository (see further above). Note: some common Dockerfile features,
+like ENV and ENTRYPOINT, are ignored when the Docker image is converted
+to a Singularity image.
+
+Once your container has been added to CVMFS, if you update your original
+Docker image, new versions pushed to Docker Hub will automatically be
+detected and the version on the OSG (in the CVMFS filesystem) will be
+updated accordingly.
 
 ## Special Cases
 
