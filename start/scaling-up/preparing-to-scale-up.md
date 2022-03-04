@@ -1,4 +1,4 @@
-[title]: - "Getting Started: Determining the Amount of Resources to Request in a Submit File"
+[title]: - "Determining the Amount of Resources to Request in a Submit File"
 
 # Learning Objectives
 This guide discuses the following: 
