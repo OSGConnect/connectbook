@@ -339,7 +339,7 @@ Lastly we need to set some environment variables so that Samtools knows where to
 find this library:
 
 	[user@login xz-5.2.5]$ export PATH=$HOME/my-software/xz-5.2.5/bin:$PATH
-	[user@login xz-5.2.5]$ export LIBRARY_PATH=$HOME/my-software/xz-5.2.5/bin:$LIBRARY_PATH
+	[user@login xz-5.2.5]$ export LIBRARY_PATH=$HOME/my-software/xz-5.2.5/lib:$LIBRARY_PATH
 	[user@login xz-5.2.5]$ export LD_LIBRARY_PATH=$LIBRARY_PATH
 
 ### Step 4. Load bzip2 module
@@ -409,7 +409,7 @@ Our subsequent job submissions on OSG Connect will need a copy of our software. 
 convenience, we recommend converting your software directory to a tar archive. 
 First move to `my-software/`, then create the tar archive:
 	
-	[user@login ~]$ mv my-software/
+	[user@login ~]$ cd my-software/
 	[user@login my-software]$ tar -czf samtools-1.10.tar.gz samtools-1.10/
 	[user@login my-software]$ ls samtools-1.10*
 	samtools-1.10/ samtools-1.10.tar.gz
