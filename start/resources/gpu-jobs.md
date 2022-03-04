@@ -27,7 +27,7 @@ It is currently not possible to specify exactly what type of GPU you want,
 but you can match on for example CUDA compute capability. For example, use
 the following requirements expression in your job:
 
-    requirements = CUDACapability >= 3
+    requirements = CUDACapability >= 6
 
 A good example on how create a software stack for GPU use is our
 TensorFlow example:
