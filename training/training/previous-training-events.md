@@ -1,9 +1,9 @@
-[title]: - "External Training Events"
+[title]: - "Other Past Training Events"
 [TOC]
 
 ## Overview
 
-We offer on-site training and tutorials on a periodic basis, usually at conferences (including the annual OSG All Hands Meeting) where many researchers and/or research computing staff are gathered.
+We offer on-site training and tutorials on a periodic basis, usually at conferences (including the annual OSG All Hands Meeting) where many researchers and/or research computing staff are gathered. Below are some trainings for which the materials were public. (Apologies if any links/materials aren't accessible anymore, as some of these are external to our own web location. Feel free to let us know via support@opensciencegrid.org, in case we can fix/remove them.)
 
 ## Workshops/Tutorials
 
@@ -18,6 +18,8 @@ We offer on-site training and tutorials on a periodic basis, usually at conferen
   * [High Throughput Computation on the Open Science Grid (RMACC 18)](https://rmacc2018hpcsymposium.sched.com/event/EbOT/high-throughput-computation-on-the-open-science-grid)
 
 ## Tutorials at Recent OSG All-Hands Meetings
+
+The below were offered on-site at OSG All-Hands Meetings. Note that the last on-site AHM in 2020 was canceled due to the pandemic, though we've linked to the materials.
 
   * [User/Facilitator Training at the OSG All Hands Meeting, University of Oklahoma (OU), March 2020](https://opensciencegrid.org/UserTraining-AHM-2020/)
   * [User Training at the OSG All Hands Meeting, Thomas Jefferson National Accelerator Facility (JLAB), March 2019](https://swc-osg-workshop.github.io/OSG-UserTraining-JLab-2019/)
