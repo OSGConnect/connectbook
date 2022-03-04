@@ -431,7 +431,7 @@ code directory.
 Now that Samtools has been compiled we can submit jobs that use this software. For Samtools 
 with CRAM we will also need to bring along a copy of XZ Utils (which includes the `liblzma` library) 
 and ensure that our jobs have access to the `bzip2 1.0.6` module. Below is an example submit file 
-for a job that will use Samtools with a CRAM file named `my-sample.cram` which is <100MB in size:
+for a job that will use Samtools with a Fasta file `genome.fa' and CRAM file named `my-sample.cram` which is <100MB in size:
 
 	#samtools-cram.sub
 	log = samtools-cram.$(Cluster).log
