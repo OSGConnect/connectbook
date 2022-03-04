@@ -17,17 +17,18 @@ resource is idle. Therefore, we do not know exactly what resources are
 available at what time. When requesting a GPU job, you might land on one
 of the following types of GPUs:
 
-  * Tesla M2070
-  * Tesla K20
   * Tesla K40
   * Tesla P100
   * GeForce GTX 1080
+  * GeForce RTX 2080 Ti
+  * A40
+  * A100-PCIE-40GB
 
 It is currently not possible to specify exactly what type of GPU you want, 
 but you can match on for example CUDA compute capability. For example, use
 the following requirements expression in your job:
 
-    requirements = CUDACapability >= 6
+    requirements = CUDACapability >= 8
 
 A good example on how create a software stack for GPU use is our
 TensorFlow example:
