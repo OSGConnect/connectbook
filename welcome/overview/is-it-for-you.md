@@ -23,9 +23,11 @@ many compute tasks that may appear to not be a good fit _can_ be modified in sim
 to take advantage, and we'd love to discuss options with you!** 
 
 |   		| **Ideal jobs!** | **Still advantageous** | **Maybe not, but get in touch!** | 
-|:----------|:--------------|:--------------|:--------------|
-| Per-job Requirements; Expected Throughput: | 1000s concurrent cores | 100s concurrent cores | let's discuss! |
-| CPU		|	1			|	< 8			|	> 8 (or MPI)|
+|:--------|:--------------|:--------------|:--------------|
+| Expected Throughput: | 1000s concurrent jobs | 100s concurrent jobs | let's discuss! |
+| **Per-Job Requirements** |  |  |  |
+| CPU	cores	|	1			|	< 8			|	> 8 (or MPI)|
+| GPUs		|	0			|	1			|	> 1 |
 | Walltime	| 	< 10 hrs*	|	< 20 hrs*	|	> 20 hrs (not a good fit)	|
 | RAM		| 	< few GB	|	< 40 GB	|	> 40 GB	|
 | Input		| 	< 500 MB	|	< 10 GB	|	> 10 GB**		|
@@ -36,12 +38,12 @@ to take advantage, and we'd love to discuss options with you!**
 
 \** per job; you can work with a multi-TB dataset on the OSPool if it can be split into pieces!
 
-Some examples of work that has been a good fit for the OSPool and benefited from 
+Some examples of work that have been a good fit for the OSPool and benefited from 
 using its resources include: 
 
 - image analysis (including MRI, GIS, etc.)
 - text-based analysis, including DNA read mapping and other bioinformatics
-- parameter sweeps
+- hyper/parameter sweeps
 - Monte Carlo methods and other model optimization
 
 **Learn more and chat with a Research Computing Facilitator by [signing up for OSG Connect][account-request]**
