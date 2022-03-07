@@ -56,8 +56,12 @@ resource is idle. Therefore, we do not know exactly what resources are
 available at what time. When requesting a GPU job, you might land on one
 of the following types of GPUs:
 
-  * A100 (CUDACapability: 8.0)
-  * A40 (CUDACapability: 8.6)
+* Tesla K20m, K40m (CUDACapability: 3.5)
+* GTX 1080 Ti (CUDACapability: 6.1)
+* V100 (CUDACapability: 7.0)
+* Quadro RTX 6000 (CUDACapability: 7.5)
+* A100 (CUDACapability: 8.0)
+* A40 (CUDACapability: 8.6)
 
 # Software and Data Considerations
 
