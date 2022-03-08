@@ -4,8 +4,8 @@
 
 This is list of commonly used containers in the Open Science Pool. These can be used
 directly in your jobs or as base images if you want to define your own. Please
-see the pages on [container overview][container-intro] and [defining containers][container-howto]
-for detailed instructions.
+see the pages on [container overview][container-intro] and [creating containers][container-howto]
+for detailed instructions on how to use containers and/or have Docker containers added to the OSPool's approved list.
 
 Also note that this list is not complete. There are many images under
 `/cvmfs/singularity.opensciencegrid.org/` which are either project specific
