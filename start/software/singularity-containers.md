@@ -150,9 +150,6 @@ and  Singularity, please see:
 
  * [Singularity Home Page](http://singularity.lbl.gov/)
  
- Singularity has become the preferred containerization method in scientific computing. The following talk describes Singularity for scientific computing:
-
-<iframe width="560" height="315" src="//www.youtube.com/embed/DA87Ba2dpNM" frameborder="0" allowfullscreen></iframe>
 
 [container-howto]: 12000058245
 [container-list]: 12000073449
