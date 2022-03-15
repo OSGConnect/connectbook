@@ -97,8 +97,8 @@ so that the caches see a "new" name. In this example, replacing
 nodes get the old version and some nodes the new version. Prevent this
 by creating a new file named with v2.
 
-For more information on how to create Singularity images, please see
-the (coming soon).
+More information on how to create Singularity images, will be
+coming soon.
 
 ## Custom Docker Images
 
