@@ -1,4 +1,4 @@
-[title]: - "View Existing OSG Connect-Supported Containers"
+[title]: - "View Existing OSPool-Supported Containers"
 
 [TOC]
 
