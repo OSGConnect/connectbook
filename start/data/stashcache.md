@@ -71,7 +71,7 @@ guide may be helpful.
 
 2. Add the necessary details to your HTCondor submit file to tell 
 HTCondor which files to transfer, and that your jobs must run on executes nodes that 
-have access to the OSG Data Federation.
+have access to the Open Science Data Federation.
 
 		# Submit file example of large input/software transfer
 		
@@ -86,7 +86,7 @@ have access to the OSG Data Federation.
 
 	
 	**Note how the `/public` mount (visible on the login node) corresponds to the `/osgconnect/public` namespace 
-	across the OSG Data Federatio.** For example, if the data file is located at 
+	across the Open Science Federation.** For example, if the data file is located at 
 	`/public/<username>/samples/sample01.dat`, then the `stash:///` URL to 
 	transfer this file to the job's working directory on the execute point would be:
 
@@ -102,7 +102,8 @@ within the submit file (e.g. in 'transfer_output_remaps`) or submit jobs from wi
 
 1. Add the necessary details to your HTCondor submit file to tell 
 HTCondor that your jobs must run on executes nodes that 
-have access to the `stashcp` module (among other OSG-supported modules). Note that the output files 
+have access to the `stashcp` module (among other 
+-supported modules). Note that the output files 
 are NOT listed anywhere in the submit file for transfer purposes.
 
 		# submit file example for large output
@@ -181,6 +182,6 @@ More usage options are described in the stashcp help message:
 
 # Get Help
 
-For assistance or questions, please email the OSG User Support team 
+For assistance or questions, please email the OSG Research Facilitation team 
 at [support@opensciencegrid.org](mailto:support@opensciencegrid.org) or visit 
 the [help desk and community forums](http://support.opensciencegrid.org).
