@@ -54,7 +54,7 @@ the container and test your code with for example your own inputs from
 your home directory. Once you are down exploring, exit the container
 by running `exit` or with `CTRL+D`
 
-## OSG Provided Images
+## OSG-Provided Images
 
 The OSG Team maintains a set of images that are already in the OSG
 Singularity repository. A list of available containers can be found on
@@ -127,15 +127,15 @@ repository, your submit file will include:
     <other usual submit file lines>
     queue
 
-## Using Containers from Non-OSGConnect Access Points
+## Using Containers from Non-OSG Connect Access Points
 
-Users on non-OSGConnect access points can use all the container
+Users on non-OSG Connect access points can use all the container
 functionality described above, but will have to use slightly more
-complex job submit files. This is because the OSGConnect access points
+complex job submit files. This is because the OSG Connect access points
 uses job transforms to update the jobs based on the `+SingularityImage`
-attribute, and OSGConnect users also have direct access to Stash.
+attribute, and OSG Connect users also have direct access to Stash.
 
-To run a Singularity image from a non-OSGConnect access point, include
+To run a Singularity image from a non-OSG Connect access point, include
 a job `requirements`, and specify a method for image transfer. For example:
 
     Requirements = HAS_SINGULARITY == TRUE && SINGULARITY_CAN_USE_SIF = TRUE
