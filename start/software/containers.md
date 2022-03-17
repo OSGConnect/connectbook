@@ -83,7 +83,7 @@ each job, and thus the preferred transfer method is [Stash][stash].
 Store the .sif file under `/public/$USERNAME/`, and then use the stash
 url directly in the `+SingularityImage` attribute. Note that you can not
 use shell variable expansion in the submit file - be sure to replace the
-username with your actual OSGConnect username. Example:
+username with your actual OSG Connect username. Example:
 
     +SingularityImage = "stash:///osgconnect/public/USERNAME/my-custom-image-v1.sif"
 
