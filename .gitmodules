@@ -91,3 +91,6 @@
 [submodule "tutorials/tutorial-bwa"]
 	path = tutorials/tutorial-bwa
 	url = https://github.com/OSGConnect/tutorial-bwa
+[submodule "tutorials/tutorial-organizing"]
+	path = tutorials/tutorial-organizing
+	url = https://github.com/OSGConnect/tutorial-organizing
