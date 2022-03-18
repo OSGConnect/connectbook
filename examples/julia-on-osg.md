@@ -44,6 +44,8 @@ the job's executable:
 
 		# add Julia binary to PATH
 		export PATH=$_CONDOR_SCRATCH_DIR/julia-#-#-#/bin:$PATH
+		# set TMPDIR variable
+		TMPDIR=$_CONDOR_SCRATCH_DIR
 
 		# run Julia script
 		julia my-script.jl
@@ -163,6 +165,8 @@ the Julia Standard library) use the example script directly below.
 
 	# add Julia binary to PATH
 	export PATH=$_CONDOR_SCRATCH_DIR/julia-#.#.#/bin:$PATH
+	# set TMPDIR variable
+	TMPDIR=$_CONDOR_SCRATCH_DIR
 
 	# run Julia script
 	julia script.jl
@@ -182,6 +186,8 @@ the Julia Standard library) use the example script directly below.
 	export PATH=$_CONDOR_SCRATCH_DIR/julia-#.#.#/bin:$PATH
 	# add Julia packages to DEPOT variable
 	export JULIA_DEPOT_PATH=$_CONDOR_SCRATCH_DIR/my-project
+	# set TMPDIR variable
+	TMPDIR=$_CONDOR_SCRATCH_DIR
 
 	# run Julia script
 	julia --project=my-project script.jl

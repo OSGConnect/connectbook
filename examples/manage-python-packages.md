@@ -134,6 +134,8 @@ just created. That will look something like this:
 	# Load Python
 	# (should be the same version used to create the virtual environment)
 	module load python/3.7.0
+	# set TMPDIR variable
+	TMPDIR=$_CONDOR_SCRATCH_DIR
 
 	# Unpack your envvironment (with your packages), and activate it
 	tar -xzf my_env.tar.gz

@@ -476,6 +476,7 @@ to "untar" the Samtools and XZ Util tar archives, modify the `PATH` and
 	# modify environment variables 
 	export LD_LIBRARY_PATH=$_CONDOR_SCRATCH_DIR/xz-5.2.5/lib:$LD_LIBRARY_PATH
 	export PATH=$_CONDOR_SCRATCH_DIR/samtools-1.10/bin:$_CONDOR_SCRATCH_DIR/xz-5.2.5/bin:$PATH
+	export TMPDIR=$_CONDOR_SCRATCH_DIR
 	
 	# load bzip2 module
 	module load bzip2/1.0.6

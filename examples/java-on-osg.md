@@ -39,6 +39,8 @@ like:
 		# Add the unzipped JDK folder to the environment
 		export PATH=$PWD/jdk-17.0.1/bin:$PATH
 		export JAVA_HOME=$PWD/jdk-17.0.1
+		# set TMPDIR variable
+		TMPDIR=$_CONDOR_SCRATCH_DIR
 	
 		# run your .jar file
 		java -jar program.jar
