@@ -57,6 +57,10 @@ The number of jobs that are submitted to the queue by any one user should not ex
 
 This is the maximum number of jobs that you will have in the "Idle" or "Held" state for the submitted batch of jobs at any given time.  Using a value of 2000 will ensure that your jobs continue to apply a constant pressure on the queue, but will not fill up the queue unnecessarily (which helps the scheduler to perform optimally).  
 
+**Setting TMPDIR**
+
+More later
+
 ## Data Storage and Transfer
    
 **What is the best way to process large volume of data?**
