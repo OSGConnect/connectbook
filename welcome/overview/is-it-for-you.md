@@ -1,4 +1,4 @@
-[title]: - "Is the Open Science Pool for You?"
+[title]: - "Computation on the Open Science Pool"
 
 
 The [OSG][osg] is a nationally-funded consortium of computing resources 
