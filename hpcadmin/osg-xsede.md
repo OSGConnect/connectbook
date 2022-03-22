@@ -230,8 +230,7 @@ that you enable retries in your Condor submit files. For example:
 
 ### Job Example: Java with a job wrapper
 
-The following is an example on how to run Java code on Open
-Science Grid. The job requirements specifies that the job requires
+The following is an example on how to run Java code on Open Science Pool. The job requirements specifies that the job requires
 Java, and a wrapper script is used to invoke Java.
 
 File: `condor.sub`
