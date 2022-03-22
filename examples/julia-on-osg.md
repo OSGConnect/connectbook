@@ -5,7 +5,7 @@
 # Overview
 
 This guide provides an introduction to running Julia code on the Open 
-Science Grid. The [Quickstart Instructions](#quickstart-instructions) provide 
+Science Pool. The [Quickstart Instructions](#quickstart-instructions) provide 
 an outline of job submission. The following sections provide more details about 
 installing Julia packages ([Install Julia Packages](#install-julia-packages)) and creating a complete
 job submission ([Submit Julia Jobs](#submit-julia-jobs)). This guide assumes that 
