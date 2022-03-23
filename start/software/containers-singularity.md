@@ -2,6 +2,11 @@
 
 [TOC]
 
+**NOTE:** Building Singularity containers are currently not supported
+on the OSGConnect access point. The guide assumes that you have
+your own Linux machine where you can install Singularity and
+execute commands via sudo.
+
 This guide is meant to accompany the instructions for using containers  
 in the Open Science Pool. You can use your own custom container to run  
 jobs in the Open Science Pool. This guide describes how to create your  
@@ -82,8 +87,11 @@ Once your build spec is ready, you can "build" the container image by running th
 
     $ sudo singularity build my-container.sif image.def
 
-Note that `sudo` here is currently required. Once the image is built, upload it to Stash
-and execute it as described in the [container guide][osg-containers].
+Note that `sudo` here is currently required.
+
+Once the image is built, you can upload it to Stash, test it on OSGConenct,
+and use it in your HTCondor jobs. This is all described in the
+[container guide][osg-containers].
 
 [osg-containers]: 12000024676
 
