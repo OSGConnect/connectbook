@@ -37,24 +37,46 @@ The first lines of this file should include where to get the base image
 from. If using the OSG's Ubuntu 20.04 image that  would look like this: 
 
     Bootstrap: docker
-	From: opensciencegrid/osgvo-ubuntu-20.04:latest
+    From: opensciencegrid/osgvo-ubuntu-20.04:latest
 
 Then there is a section called `%post` where you put the additional 
 commands to make the image just like you need it. For example:
 
     %post
-	    apt-get update -y
-	    apt-get install -y build-essentials
-	    wget https://cran.r-project.org/src/base/R-3/R-3.6.0.tar.gz
-	    tar -xzf R-3.6.0.tar.gz
-	    cd R-3.6.0
-	    ./configure
-	    make
-	    make install
+        apt-get update -y
+        apt-get install -y \
+                build-essential \
+                libbz2-dev \
+                libcurl4-gnutls-dev
+        wget https://cran.r-project.org/src/base/R-3/R-3.6.0.tar.gz
+        tar -xzf R-3.6.0.tar.gz
+        cd R-3.6.0
+        ./configure
+        make
+        make install
 
 See the [Singularity documentation](https://apptainer.org/user-docs/master/definition_files.html)
 for a full reference on how to specify build specs. Note that the `%runscript`
 section is ignored when the container is executed on OSG.
+
+The final `image.def` looks like:
+
+    Bootstrap: docker
+    From: opensciencegrid/osgvo-ubuntu-20.04:latest
+    
+    %post
+        apt-get update -y
+        apt-get install -y \
+                build-essential \
+                libbz2-dev \
+                libcurl4-gnutls-dev
+        wget https://cran.r-project.org/src/base/R-3/R-3.6.0.tar.gz
+        tar -xzf R-3.6.0.tar.gz
+        cd R-3.6.0
+        ./configure
+        make
+        make install
+
 
 Once your build spec is ready, you can "build" the container image by running this command: 
 
