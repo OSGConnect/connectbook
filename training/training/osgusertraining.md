@@ -7,7 +7,7 @@ All User Training sessions are offered from 2:30-4pm ET (and usually on Tuesdays
 * Tuesday, April 5: New User Training, [Register here](https://docs.google.com/forms/d/e/1FAIpQLSdj3XT7I0SM4k9jBvST7YX5wsCH_er1HLA7VqRj9ICoEvf2GA/viewform)
 * Tuesday, April 19: Organizing and Submitting HTC Workloads, [Register here](https://docs.google.com/forms/d/e/1FAIpQLSdj3XT7I0SM4k9jBvST7YX5wsCH_er1HLA7VqRj9ICoEvf2GA/viewform)
 * Tuesday, May 3: New User Training, [Register here](https://docs.google.com/forms/d/e/1FAIpQLSdj3XT7I0SM4k9jBvST7YX5wsCH_er1HLA7VqRj9ICoEvf2GA/viewform)
-* Tuesday, May 17: Topic TBD, registration will be linked here
+* Tuesday, May 17: Containers on the OSG, [Register here](https://docs.google.com/forms/d/e/1FAIpQLSdj3XT7I0SM4k9jBvST7YX5wsCH_er1HLA7VqRj9ICoEvf2GA/viewform)
 
 ## Training Materials
 
@@ -19,6 +19,10 @@ The most recent version of our New User Training materials are here:
 * [Wordcount Frequency Tutorial](https://support.opensciencegrid.org/support/solutions/articles/12000079856)
 * [Video of Training](https://www.youtube.com/watch?v=D14eMrkZ2gQ)
 
+### Organizing and Submitting HTC Workloads
+
+Coming soon. 
+
 ### Additional Topics
 
-We will introduce Special Training topics in April 2022!
+As we introduce new training topics, we will add materials to this page. 
