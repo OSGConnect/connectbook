@@ -1,32 +1,37 @@
-[title]: - "Steer Your Jobs with HTCondor Job Requirements"
+[title]: - "Control Where Your Jobs Run / Job Requirements"
+
 [TOC]
 
 By default, your jobs will match any available spot in the OSG. This is fine
-for very generic jobs, however in some cases a job may have one or more system
+for very generic jobs. However, in some cases a job may have one or more system
 requirements in order to complete successfully. For instance, your job may need to run
 on a node with a specific operating system.
 
 HTCondor provides several options for "steering" your jobs to appropriate
-nodes and system environments. The `request_cpus`, `request_memory`, and `request_disk`
+nodes and system environments. The `request_cpus`, `request_gpus`, `request_memory`, and `request_disk`
 submit file attributes should be used to specify the hardware needs of your jobs.
 Please see our guides [Multicore Jobs](https://support.opensciencegrid.org/support/solutions/articles/5000653862-multicore-jobs) and [Large Memory Jobs](https://support.opensciencegrid.org/support/solutions/articles/5000652304-large-memory-jobs)
-for more details. HTCondor also provides a `requirements` attribute and feature-specific
-attributes that can be added to your submit files to target specific environments in
-which to run your jobs. This guide will focus on these additional environment-specific
-submit file attributes.   
+for more details.
 
-### Requirements
+HTCondor also provides a `requirements` attribute and feature-specific
+attributes that can be added to your submit files to target specific environments in
+which to run your jobs. 
+
+Lastly, there are some custom attributes you can add to your submit file to
+either focus on, or avoid, certain execution sites.
+
+# Requirements
 
 The `requirements` attribute is formatted as an expression, so you can use logical
 operators to combine multiple requirements where `&&` is used for AND and
 `||` used for OR. For example, the following `requirements` statement will direct
-jobs only to 64 bit RHEL (Red Hat Enterprise Linux) 7 nodes, with access to the "modules" command.
+jobs only to 64 bit RHEL (Red Hat Enterprise Linux) 8 nodes.
 
-    requirements = OSGVO_OS_STRING == "RHEL 7" && Arch == "X86_64" && HAS_MODULES == True
+    requirements = OSGVO_OS_STRING == "RHEL 8" && Arch == "X86_64"
 
-Alternatively, if you have code which can run on either RHEL 6 or 7, you can use OR:
+Alternatively, if you have code which can run on either RHEL 7 or 8, you can use OR:
 
-    requirements = (OSGVO_OS_STRING == "RHEL 6" || OSGVO_OS_STRING == "RHEL 7") && Arch == "X86_64" && HAS_MODULES == True
+    requirements = (OSGVO_OS_STRING == "RHEL 7" || OSGVO_OS_STRING == "RHEL 8") && Arch == "X86_64"
 
 Note that parentheses placement is important for controling how the logical operations
 are interpreted by HTCondor.
@@ -34,32 +39,24 @@ are interpreted by HTCondor.
 Another common requirement is to land on a node which has CVMFS.
 Then the `requirements` would be:
 
-	requirements = CVMFS_oasis_opensciencegrid_org_REVISION >= 3983
+	requirements = HAS_oasis_opensciencegrid_org == True
 
-As shown in the above example, when specifying a CVMFS requirement, we recommend
-that you use the REVISION attribute. To determine which REVISION to specify
-you can run the following command while connected to your login node:
+## Additional Feature-Specific Attributes
 
-	$ /usr/bin/attr -g revision /cvmfs/oasis.opensciencegrid.org
-
-### Additional Feature-Specific Attributes
 There are many attributes that you can use with `requirements`. To see what values
 you can specify for a given attribute you can run the following command while
 connected to your login node:
 
-	$ condor_status -pool flock.opensciencegrid.org -af {ATTR_NAME} | sort -u
+	$ condor_status -pool cm-1.ospool.osg-htc.org -af {ATTR_NAME} | sort -u
 	
-For example, to see what values you can specify for the OSGVO_OS_VERSION attribute run:
+For example, to see what values you can specify for the OSGVO_OS_STRING attribute run:
 	
-	$ condor_status -pool flock.opensciencegrid.org -af OSGVO_OS_VERSION | sort -u
-	6
-	7
-	8
-	undefined
+	$ condor_status -pool cm-1.ospool.osg-htc.org -af OSGVO_OS_STRING | sort -u
+    RHEL 7
+    RHEL 8
 
-This means that we can specify an OS version of `6`, `7`, `8`. Alternatively
-you will find many attrubites will take the boolean values `true` or `false`
-as shown in the HAS_MODULES example above.
+This means that we can specify an OS version of `RHEL 7` or `RHEL 8`. Alternatively
+you will find many attrubites will take the boolean values `true` or `false`.
 
 Below is a list of common attributes that you can include in your submit file `requirements` statement. 
 
@@ -74,44 +71,36 @@ Below is a list of common attributes that you can include in your submit file `r
 - **OSGVO_OS_VERSION** - Version of the operating system
 
 - **OSGVO_OS_STRING** - Combined OS name and version. Common values are
-  _RHEL 6_ and _RHEL 7_. Please see the requirements string above on the
+  _RHEL 7_ and _RHEL 8_. Please see the requirements string above on the
   recommended setup.
 
 - **OSGVO_CPU_MODEL** - The CPU model identifier string as presented in
   /proc/cpuinfo
-- **CVMFS_oasis_opensciencegrid_org_REVISION** - Attribute specifying
-  the need to access specific oasis /cvmfs file system repositories. See the
-  example above for determining the appropriate REVISION number when using
-  this `requirements` attribute.
+
+- **HAS_CVMFS_oasis_opensciencegrid_org** - Attribute specifying
+  the need to access specific oasis /cvmfs file system repositories.
 
 - **CUDACapability** - For GPU jobs, specifies the CUDA compute capability.
 
-- **HAS_SQUID** - Boolean specifying the need for access to SQUID fileshare,
-  set to `true` if your job has the _OSG_SQUID_LOCATION_ environment
-  variable set
+# Specifying Sites / Avoiding Sites
 
-- **HAS_TCSH** - Boolean specifying if the node has /bin/tcsh
+To run your jobs on a list of specific execution sites, or avoid a set of 
+sites, use the `+DESIRED_Sites`/`+UNDESIRED_Sites` attributes in your job
+submit file. These attributes should only be used as a last resort. For
+example, it is much better to use feature attributes (see above) to make
+your job go to nodes matching what you really require, than to broadly
+allow/block whole sites.
 
-- **HAS_XRDCP** - Boolean specifying if the node has _xrdcp_ in the default path
+To avoid certain sites, first find the site names. You can find a 
+current list by quering the pool:
 
-- **HAS_TIMEOUT** - Boolean specifying if the node has _timeout_ in the default path
+    condor_status -af GLIDEIN_Site | sort -u
 
-- **HAS_R** - Boolean specifying if the node has R
+In your submit file, add a comma separated list of those site like:
 
-- **HAS_NUMPY** - Boolean specifying if the node has Python Numpy
+    +UNDESIRED_Sites = "ISI,SU-ITS"
 
-- **HAS_FILE_foo** - Sometimes it is easier to match against system library
-  files rather than higher level tool names. Note that dots and slashes in the
-  paths are replaced with underscores in the attribute names. For example:
-  **HAS_FILE_lib64_libgcc_s_so_1** advertises if /lib64/libgcc_s.so.1 exists.
-  Currently the following files are advertised: 
-    - /lib64/libgcc_s.so.1
-    - /lib64/libglib-2.0.so.0
-    - /usr/lib64/libgfortran.so.3
-    - /usr/lib64/libglib-2.0.so
-    - /usr/lib64/libgslcblas.so.0
-    - /usr/lib64/libgsl.so.0
-    - /usr/lib64/libstdc++.so.6
-    - /usr/lib64/libgtk-x11-2.0.so.0
-    - /usr/lib64/libXt.so.6 
+Those sites will now be exluded from the set of sites your job can
+run at.
+
 
