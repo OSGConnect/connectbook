@@ -109,6 +109,11 @@ PuTTYgen), it is the content from step 7 above.
 The key is now added to your profile in the OSG Connect website. This will automatically
 be added to the login nodes within a couple hours.
 
+> ### Can I Use Multiple Keys?
+> Yes! If you want to log into OSG Connect from multiple computers, you can do so by generating
+> a keypair on each computer you want to use, and then adding the public key to your OSG 
+> Connect profile. 
+
 ## Logging In
 
 After following the steps above to upload your key and it's been a few hours, you should 
