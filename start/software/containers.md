@@ -57,8 +57,7 @@ by running `exit` or with `CTRL+D`
 ## OSG-Provided Images
 
 The OSG Team maintains a set of images that are already in the OSG
-Singularity repository. A list of available containers can be found on
-[this page][container-list].
+Singularity repository. *[A list of available containers can be found on this page][container-list].*
 
 If the software you need isn't already supported in a listed container,
 you can use your own container or any container image in Docker Hub
