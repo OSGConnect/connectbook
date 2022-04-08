@@ -1,4 +1,4 @@
-[title]:- "Get Help from OSG Facilitators"
+[title]:- "Email, Office Hours, and 1-1 Meetings"
 
 [TOC] 
 
