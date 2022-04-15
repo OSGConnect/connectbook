@@ -48,6 +48,11 @@ if/when files accumulated there are highly numerous and/or small.
 via the user's /home directory and regular HTCondor file transfer). Smaller files should only be handled 
 via `/public` with explicit instruction from an OSG staff member.
 
+5. **Files placed within a user's `/public` directory are publicly accessible**, 
+discoverable and readable by anyone, via the web. Data is made public via `stash` 
+transfer (and, thus, via http addresses), and mirrored to a shared data repository 
+which is available on a large number of systems around the world.
+
 
 # Use a 'stash' URL to Transfer Large Input Files to Jobs 
 

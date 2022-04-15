@@ -8,7 +8,7 @@ OSG Connect provides two locations for uploading files (data and software) that 
 needed for running jobs: 
 
     home: /home/<username>          (general storage from which ALL jobs should be submitted)
-    public: /public/<username>      (only for large job input and output using `http` or `stashcp`)
+    public: /public/<username>      (only for large job input and output using stash links (input) and stashcp (output))
 
 In general, OSG Connect users are responsible for managing data in 
 these folders and for using appropriate mechanisms for delivering 
@@ -38,7 +38,7 @@ much data is needed or produced by your jobs.**
 |  **Location**  |  **Storage Needs**         | **Network mounted** | **Backed Up?** | **Initial Quota** |
 |     :-----:    |    :------:          |       :------:      |   :------:    |      :------:      |
 |     `/home`    | Storage of submit files, input files <100MB each, and per-job output<br>up to a 1GB.  Jobs should ONLY be submitted from this folder.   |   No   |   No   |  50 GB  |
-|  `/public`     | Staging ONLY for large input files (100MB-50GB, each) for publicly-accessible<br>download into jobs (using HTTP or stashcp, see below) and large output files (1-10GB). | Yes | No | 500 GB |
+|  `/public`     | Staging ONLY for large input files (100MB-50GB, each) for publicly-accessible<br>download into jobs (using `stash:///` links or `stashcp` see below) and large output files (1-10GB). | Yes | No | 500 GB |
     
 <br>
 
@@ -87,8 +87,8 @@ software, etc.) in `/public`, files and directories that have not been accessed 
 months may be deleted by OSG Connect staff with or without notifying the user.**
 
 Files placed within a user's `/public` directory **are publicly accessible**, 
-discoverable and readable by anyone. Data is made public via http/https or stash, and mirrored 
-to `/cvmfs/stash.osgstorage.org/osgconnect/public` which is available on a large number of systems around the world.
+discoverable and readable by anyone. Data is made public via the `stash` transfer mechanisms (which also make data public via http/https), and mirrored 
+to a shared data repository which is available on a large number of systems around the world.
 
 ### Is there any support for private data?
 
