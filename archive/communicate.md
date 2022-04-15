@@ -2,7 +2,7 @@
 
 ## Receive status updates
 
-The OSG User Support Twitter account is
+The OSG Research Facilitation Twitter account is
 [@osgusers](http://twitter.com/osgusers).  We will report issues in
 near real time using that feed so you have one place to look for late
 breaking news or updates.

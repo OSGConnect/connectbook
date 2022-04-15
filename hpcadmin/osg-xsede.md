@@ -350,6 +350,6 @@ from `/cvmfs/stash.osgstorage.org/user/xd-login/public/`
 ## How to get help using OSG
 
 XSEDE users of OSG may get technical support by
-contacting OSG User Support staff at email
+contacting OSG Research Facilitation staff at email
 <support@opensciencegrid.org>.
 Users may also contact the [XSEDE helpdesk](https://portal.xsede.org/help-desk).

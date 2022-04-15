@@ -25,7 +25,7 @@ submit only defaced and fully deidentified scans for processing.
 
 ## Getting Help
 
-For assistance or questions, please email the OSG User Support team  at
+For assistance or questions, please email the OSG Research Facilitation team  at
 [support@opensciencegrid.org](mailto:support@opensciencegrid.org) or
 visit the [help desk and community forums](http://support.opensciencegrid.org).
 

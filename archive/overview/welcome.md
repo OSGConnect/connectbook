@@ -1,9 +1,9 @@
-[title]: - "A Welcome from the User Support Team"
+[title]: - "A Welcome from the Research Facilitation Team"
 
-Greetings from the OSG User Support Team
+Greetings from the OSG Research Facilitation Team
 ------------------------------------------------------
 
-On behalf of the OSG User Support team, it is a pleasure to welcome
+On behalf of the OSG Research Facilitation team, it is a pleasure to welcome
 you to the help desk portal!
 
 
@@ -47,6 +47,6 @@ Warm regards,
 [Rob Gardner](<https://www.linkedin.com/in/robertwgardner>)  
 
 
-OSG User Support and Campus Grids Area Coordinator
+OSG Research Facilitation and Campus Grids Area Coordinator
 
 [@rwg](<https://twitter.com/rwg>)
