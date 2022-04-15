@@ -181,7 +181,7 @@ than what you requested, make sure you adjust your requests.
 
 ## Getting Help
 
-For assistance or questions, please email the OSG User Support
+For assistance or questions, please email the OSG Research Facilitation
 team  at [support@opensciencegrid.org](mailto:support@opensciencegrid.org) or visit the [help desk and community forums](http://support.opensciencegrid.org).
 
 [module-guide]: 12000048518

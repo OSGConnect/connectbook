@@ -55,5 +55,5 @@ Do the following to add user to the newly created project
 
 ## Helpdesk responses
 
-There is a canned response that can be used to reply to the user when the group has been created.  It's in the 'User Support > Project Created' response. 
+There is a canned response that can be used to reply to the user when the group has been created.  It's in the 'Research Facilitation > Project Created' response. 
 

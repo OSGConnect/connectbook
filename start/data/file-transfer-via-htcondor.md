@@ -54,6 +54,6 @@ Where `username` refers to your OSG Connect username.
 
 # Get Help
 
-For assistance or questions, please email the OSG User Support team 
+For assistance or questions, please email the OSG Research Facilitation team
 at [support@opensciencegrid.org](mailto:support@opensciencegrid.org) or visit the 
 [help desk and community forums](http://support.opensciencegrid.org).
