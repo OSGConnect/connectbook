@@ -86,7 +86,7 @@ Below is a list of common attributes that you can include in your submit file `r
 
 To run your jobs on a list of specific execution sites, or avoid a set of 
 sites, use the `+DESIRED_Sites`/`+UNDESIRED_Sites` attributes in your job
-submit file. These attributes should only be used as a last resort. For
+submit file. **These attributes should only be used as a last resort.** For
 example, it is much better to use feature attributes (see above) to make
 your job go to nodes matching what you really require, than to broadly
 allow/block whole sites.
