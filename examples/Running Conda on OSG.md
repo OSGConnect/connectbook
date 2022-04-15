@@ -82,7 +82,7 @@ Finally, use **conda pack** to create a zipped tar.gz file of your environment (
 When this step finishes, you should see a file in your current directory named **env-name.tar.gz**
 
 ## 4. CHECK SIZE OF CONDA ENVIRONMENT TAR ARCHIVE
-The tar archive, **env-name.tar.gz**, created in the previous step will be used as input for subsequent job submission. As with all job input files, you should check the size of this Conda environment file. **If >100MB in size, you should NOT transfer the tar ball using transfer_input_files**. Instead, you should plan to use either OSG’s web proxy, SQUID or large data filesystem Staging. Please contact a research computing facilitators at support@opensciencegrid.org to determine the best option for your jobs.
+The tar archive, **env-name.tar.gz**, created in the previous step will be used as input for subsequent job submission. As with all job input files, you should check the size of this Conda environment file. **If >100MB in size, you should NOT transfer the tar ball using transfer_input_files from your home directory**. Instead, you should plan to use OSG Connect's `/public` folder, and a `stash:///` link, as described in [this guide](https://support.opensciencegrid.org/support/solutions/articles/12000002775-transfer-larger-input-and-output-files). Please contact a research computing facilitator at support@opensciencegrid.org if you have questions about the best option for your jobs.
 
 More information is available at [File Availability with Squid Web Proxy](https://support.opensciencegrid.org/support/solutions/articles/5000633467-steer-your-jobs-with-htcondor-job-requirements) and [Managing Large Data in HTC Jobs](https://support.opensciencegrid.org/support/solutions/articles/12000002985-overview-data-staging-and-transfer-to-jobs).
 
@@ -112,7 +112,7 @@ The job will need to go through a few steps to use this “packed” conda envir
 In your submit file, make sure to have the following:
 
 * Your executable should be the the bash script you created in [step 5](#5-create-a-job-executable).
-* Remember to transfer your Python script and the environment **tar.gz** file via **transfer_input_files**. Since the **tar.gz** file will almost certainly be larger than 100MB, please email us about different tools for delivering the installation to your jobs, likely our SQUID web proxy.
+* Remember to transfer your Python script and the environment **tar.gz** file to the job. If the **tar.gz** file is larger than 100MB, please use the `stash:///` file delivery mechanism as described above. 
 # OPTION 2: INSTALL MINICONDA INSIDE EACH JOB
 In this approach, rather than copying the Miniconda installation with each job, we will copy the Miniconda installer and install a new copy of Miniconda with each job.
 
