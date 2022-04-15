@@ -56,7 +56,7 @@ For example, to see what values you can specify for the OSGVO_OS_STRING attribut
     RHEL 8
 
 This means that we can specify an OS version of `RHEL 7` or `RHEL 8`. Alternatively
-you will find many attrubites will take the boolean values `true` or `false`.
+you will find many attributes will take the boolean values `true` or `false`.
 
 Below is a list of common attributes that you can include in your submit file `requirements` statement. 
 
