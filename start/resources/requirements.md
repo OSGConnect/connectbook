@@ -81,6 +81,7 @@ Below is a list of common attributes that you can include in your submit file `r
   the need to access specific oasis /cvmfs file system repositories.
 
 - **CUDACapability** - For GPU jobs, specifies the CUDA compute capability.
+  See our [GPU guide](5000653025) for more details.
 
 # Specifying Sites / Avoiding Sites
 
