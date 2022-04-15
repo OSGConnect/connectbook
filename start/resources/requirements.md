@@ -47,11 +47,11 @@ There are many attributes that you can use with `requirements`. To see what valu
 you can specify for a given attribute you can run the following command while
 connected to your login node:
 
-	$ condor_status -pool cm-1.ospool.osg-htc.org -af {ATTR_NAME} | sort -u
+	$ condor_status -af {ATTR_NAME} | sort -u
 	
 For example, to see what values you can specify for the OSGVO_OS_STRING attribute run:
 	
-	$ condor_status -pool cm-1.ospool.osg-htc.org -af OSGVO_OS_STRING | sort -u
+	$ condor_status -af OSGVO_OS_STRING | sort -u
     RHEL 7
     RHEL 8
 
@@ -104,4 +104,14 @@ In your submit file, add a comma separated list of sites like:
 Those sites will now be exluded from the set of sites your job can
 run at.
 
+Similarly, you can use `+DESIRED_Sites` to list a subset of sites
+you want to target. For example, to run your jobs at the SU-ITS site,
+and only at that site, use:
+
+
+    +DESIRED_Sites = "ISI,SU-ITS"
+
+Note that you should only specify one of `+DESIRED_Sites`/`+UNDESIRED_Sites`
+in the submit file. Using both at the same time will prevent the job from
+running.
 
