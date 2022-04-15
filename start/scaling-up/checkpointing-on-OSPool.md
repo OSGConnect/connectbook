@@ -52,81 +52,75 @@ In some cases, it is necessary to write a wrapper script to tell a job when to t
 
 An example submit file for an exit driven checkpointing job looks like: 
 
-```
-# exit-driven-example.submit
-
-executable                  = exit-driven.sh
-arguments                   = argument1 argument2
-
-checkpoint_exit_code        = 85
-transfer_checkpoint_files   = my_output.txt, temp_dir, temp_file.txt
-
-should_transfer_files       = yes
-when_to_transfer_output     = ON_EXIT
-
-output                      = example.out
-error                       = example.err
-log                         = example.log
-
-cpu                         = 1
-request_disk                = 2 GB
-request_memory              = 2 GB 
-
-queue 1
-```
+    # exit-driven-example.submit
+    
+    executable                  = exit-driven.sh
+    arguments                   = argument1 argument2
+    
+    checkpoint_exit_code        = 85
+    transfer_checkpoint_files   = my_output.txt, temp_dir, temp_file.txt
+    
+    should_transfer_files       = yes
+    when_to_transfer_output     = ON_EXIT
+    
+    output                      = example.out
+    error                       = example.err
+    log                         = example.log
+    
+    cpu                         = 1
+    request_disk                = 2 GB
+    request_memory              = 2 GB 
+    
+    queue 1
 
 
 # Example Wrapper Script for Checkpointing Job
 
 As previously described, it may be necessary to use a wrapper script to tell your job when and how to exit as it checkpoints. An example of a wrapper script that tells a job to exit every 4 hours looks like: 
 
-```
-#!/bin/bash
- 
-timeout 4h do_science arg1 arg2
- 
-timeout_exit_status=$?
- 
-if [ $timeout_exit_status -eq 124 ]; then
-    exit 85
-fi
- 
-exit $timeout_exit_status
-```
+    #!/bin/bash
+     
+    timeout 4h do_science arg1 arg2
+     
+    timeout_exit_status=$?
+     
+    if [ $timeout_exit_status -eq 124 ]; then
+        exit 85
+    fi
+     
+    exit $timeout_exit_status
 
 Let's take a moment to understand what each section of this wrapper script is doing: 
 
-```
-#!/bin/bash
+    #!/bin/bash
+    
+    timeout 4h do_science argument1 argument2
+    # The `timeout` command will stop the job after 4 hours (4h). 
+    # This number can be increased or decreased depending on how frequent your code/software/program 
+    # is creating checkpoint files and how long it takes to create/resume from these files. 
+    # Replace `do_science argument1 argument2` with the execution command and arguments for your job.
+    
+    timeout_exit_status=$?
+    # Uses the bash notation of `$?` to call the exit value of the last executed command 
+    # and to save it in a variable called `timeout_exit_status`. 
+    
+    
+    
+    if [ $timeout_exit_status -eq 124 ]; then
+        exit 85
+    fi
+    
+    exit $timeout_exit_status
+    
+    # Programs typically have an exit code of `124` while they are actively running. 
+    # The portion above replaces exit code `124` with code `85`. HTCondor recognizes 
+    # code `85` and knows to end a job with this code once the time specified by `timeout`
+    # has been reached. Upon exiting, HTCondor saves the files from jobs with exit code `85` 
+    # in the temporary directory within `/spool`.  Once the files have been transferred,
+    # HTCondor automatically requeues that job and fetches the files found in `/spool`. 
+    # If an exit code of `124` is not observed (for example if the program is done running 
+    # or has encountered an error), HTCondor will end the job and will not automaticlally requeue it.
 
-timeout 4h do_science argument1 argument2
-# The `timeout` command will stop the job after 4 hours (4h). 
-# This number can be increased or decreased depending on how frequent your code/software/program 
-# is creating checkpoint files and how long it takes to create/resume from these files. 
-# Replace `do_science argument1 argument2` with the execution command and arguments for your job.
-
-timeout_exit_status=$?
-# Uses the bash notation of `$?` to call the exit value of the last executed command 
-# and to save it in a variable called `timeout_exit_status`. 
-
-
-
-if [ $timeout_exit_status -eq 124 ]; then
-    exit 85
-fi
-
-exit $timeout_exit_status
-
-# Programs typically have an exit code of `124` while they are actively running. 
-# The portion above replaces exit code `124` with code `85`. HTCondor recognizes 
-# code `85` and knows to end a job with this code once the time specified by `timeout`
-# has been reached. Upon exiting, HTCondor saves the files from jobs with exit code `85` 
-# in the temporary directory within `/spool`.  Once the files have been transferred,
-# HTCondor automatically requeues that job and fetches the files found in `/spool`. 
-# If an exit code of `124` is not observed (for example if the program is done running 
-# or has encountered an error), HTCondor will end the job and will not automaticlally requeue it.
-
-```
 
 The ideal timeout frequency for a job is every 1-5 hours with a maximum of 10 hours. For jobs that checkpoint and timeout in under an hour, it is possible that a job may spend more time with checkpointing procedures than moving forward with the analysis. After 10 hours, the likelihood of a job being inturrupted on the OSPool is higher. 
 
