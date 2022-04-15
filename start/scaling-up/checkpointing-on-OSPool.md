@@ -1,15 +1,12 @@
----
-highlighter: none
-layout: markdown-page
-title: Checkpointing Jobs
----
+[title]: - "Checkpointing Jobs"
 
+[TOC]
 
 # What is Checkpointing?
 
-Checkpointing is a technique that provides fault tolerance for a user’s analysis. It consists of saving snapshots of a job’s progress so the job can be restarted without losing its progress and having to restart from the beginning. We highly encourage checkpointing as a solution for jobs that will exceed the 10 hour maximum suggested runtime on the OSPool. 
+Checkpointing is a technique that provides fault tolerance for a user's analysis. It consists of saving snapshots of a job's progress so the job can be restarted without losing its progress and having to restart from the beginning. We highly encourage checkpointing as a solution for jobs that will exceed the 10 hour maximum suggested runtime on the OSPool. 
 
-This section is about jobs capable of periodically saving checkpoint information, and how to make HTCondor store that information safely, in case it’s needed to continue the job on another machine or at a later time.
+This section is about jobs capable of periodically saving checkpoint information, and how to make HTCondor store that information safely, in case it's needed to continue the job on another machine or at a later time.
 
 There are two types of checkpointing: exit driven and eviction driven. In a vast majority of cases, **exit driven checkpointing** is preferred over eviction driven checkpointing. Therefore, this guide will focus on how to utilize exit driven checkpointing for your analysis. 
 
@@ -97,7 +94,7 @@ fi
 exit $timeout_exit_status
 ```
 
-Let’s take a moment to understand what each section of this wrapper script is doing: 
+Let's take a moment to understand what each section of this wrapper script is doing: 
 
 ```
 #!/bin/bash
@@ -143,4 +140,4 @@ You can explore the checkpointed files in `/spool` by navigating to `/home/condo
 
 # More Information
 
-More information on checkpointing HTCondor jobs can be found in HTCondor’s manual: https://htcondor.readthedocs.io/en/latest/users-manual/self-checkpointing-applications.html This documentation contains additional features available to checkpointing jobs, as well as additional examples such as a python checkpointing job. 
+More information on checkpointing HTCondor jobs can be found in HTCondor's manual: https://htcondor.readthedocs.io/en/latest/users-manual/self-checkpointing-applications.html This documentation contains additional features available to checkpointing jobs, as well as additional examples such as a python checkpointing job. 
