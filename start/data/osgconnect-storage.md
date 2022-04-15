@@ -87,7 +87,7 @@ software, etc.) in `/public`, files and directories that have not been accessed 
 months may be deleted by OSG Connect staff with or without notifying the user.**
 
 Files placed within a user's `/public` directory **are publicly accessible**, 
-discoverable and readable by anyone. Data is made public via http/https or `stash`, and mirrored 
+discoverable and readable by anyone. Data is made public via `stash` transfer mechanisms (which also make data public via http/https), and mirrored 
 to `/cvmfs/stash.osgstorage.org/osgconnect/public` which is available on a large number of systems around the world.
 
 ### Is there any support for private data?
