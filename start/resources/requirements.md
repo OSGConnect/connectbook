@@ -96,7 +96,7 @@ current list by querying the pool:
 
     condor_status -af GLIDEIN_Site | sort -u
 
-In your submit file, add a comma separated list of those site like:
+In your submit file, add a comma separated list of sites like:
 
     +UNDESIRED_Sites = "ISI,SU-ITS"
 
