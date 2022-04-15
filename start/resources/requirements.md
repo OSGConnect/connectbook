@@ -92,7 +92,7 @@ your job go to nodes matching what you really require, than to broadly
 allow/block whole sites.
 
 To avoid certain sites, first find the site names. You can find a 
-current list by quering the pool:
+current list by querying the pool:
 
     condor_status -af GLIDEIN_Site | sort -u
 
