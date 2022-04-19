@@ -22,7 +22,10 @@ The most recent version of our New User Training materials are here:
 
 ### Organizing and Submitting HTC Workloads
 
-Coming late April (see above, and register!).
+The most recent version of these training materials are here: 
+
+* [Training Slides](https://docs.google.com/presentation/d/1xYVp8NgiFSUdda2yD19HTLaXgH3HAPbVc1NASaG7Q74)
+* [Wordcount Frequency Tutorial](https://github.com/OSGConnect/tutorial-organizing)
 
 ### Using Containerized Software on the Open Science Pool
 
