@@ -69,7 +69,8 @@ outside of the main working directory. This most often happens if software expec
 the temporary directory `/tmp` for intermediate files. These files should be contained 
 in the job's working directory instead; to make this happen, the `TMPDIR` environment 
 variable needs to be set to the working directory. In a shell script, this looks like this: 
-		export TMPDI=$_CONDOR_SCRATCH_DIR
+		mkdir local_tmp
+		export TMPDIR=$_CONDOR_SCRATCH_DIR/local_tmp
 If you have questions about how to translate this into a different script format, 
 let us know. 
 
