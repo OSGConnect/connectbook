@@ -1,4 +1,4 @@
-[title]: - "Using Julia on the OSG"
+[title]: - "Using Julia on the OSPool"
 
 [TOC]
 
