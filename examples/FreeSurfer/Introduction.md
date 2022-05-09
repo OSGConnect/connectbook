@@ -1,4 +1,4 @@
-[title]: - "Introduction to FreeSurfer on OSG"
+[title]: - "Introduction to FreeSurfer on the OSPool"
 [TOC]
 
 ## Overview
