@@ -12,7 +12,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: Deploy MkDocs pages
-        if: startsWith(github.repository, 'opensciencegrid/')
+        if: startsWith(github.repository, 'osg-htc/')
         uses: docker://squidfunk/mkdocs-material:8.2.8
         with:
           args: >-
