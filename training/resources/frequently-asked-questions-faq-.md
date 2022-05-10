@@ -27,11 +27,6 @@ We have implemented modules within OSG Connect to manage the software that is av
 **Are there any restrictions on installing commercial softwares?**
 
 We can only *directly* support software that is freely distributable. At present, we do not have or support most commercial software due to licensing issues. (One exception is running [MATLAB standalone executables](https://support.opensciencegrid.org/support/solutions/articles/5000660751-basics-of-compiled-matlab-applications-hello-world-example) which have been compiled with the MATLAB Compiler Runtime).  Software that is licensed to individual users (and not to be shared between users) can be staged within the user's /home directory with HTCondor transferring to jobs, but should not be staged in OSG's public data staging locations (see https://support.opensciencegrid.org/support/solutions/articles/12000002985-data-management-and-policies). Please get in touch with any questions about licensed software.
-
- 
-**Can I request for system wide installation of the open source software useful for my research?**
-
-Yes. Please contact <support@opensciencegrid.org>.  
    
 ## Running Jobs
    
@@ -56,6 +51,28 @@ The number of jobs that are submitted to the queue by any one user should not ex
 `max_idle = 2000`  
 
 This is the maximum number of jobs that you will have in the "Idle" or "Held" state for the submitted batch of jobs at any given time.  Using a value of 2000 will ensure that your jobs continue to apply a constant pressure on the queue, but will not fill up the queue unnecessarily (which helps the scheduler to perform optimally).  
+
+**How do I solve a "disk quota exceeded" error?**
+
+If your jobs are returning errors about exceeding disk quota, there may be two different 
+problem: 
+
+1. Check that you are requesting enough disk space for your job execution. You can find 
+this information in the job log file, near the end: 
+		Partitionable Resources :    Usage  Request Allocated 
+		   Disk (KB)            :      125     1000     53813 
+You'll want to confirm that the number in the "Request" column is larger than the 
+number in the "Usage" column. 
+
+1. If you ARE requesting enough disk space, your job may be trying to use disk space 
+outside of the main working directory. This most often happens if software expects to use 
+the temporary directory `/tmp` for intermediate files. These files should be contained 
+in the job's working directory instead; to make this happen, the `TMPDIR` environment 
+variable needs to be set to the working directory. In a shell script, this looks like this: 
+		mkdir local_tmp
+		export TMPDIR=$_CONDOR_SCRATCH_DIR/local_tmp
+If you have questions about how to translate this into a different script format, 
+let us know. 
 
 ## Data Storage and Transfer
    
