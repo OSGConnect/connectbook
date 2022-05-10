@@ -40,7 +40,7 @@ All together, the submit file will look something like this:
 
 	universe 	= vanilla  
 	
-	+SingularityImage = "/cvmfs/singularity.opensciencegrid.org/opensciencegrid/osgvo-el8:latest"
+	+SingularityImage = "/cvmfs/singularity.opensciencegrid.org/opensciencegrid/osgvo-ubuntu-20.04:latest"
 	   
 	executable 	= run_py.sh
 
@@ -71,7 +71,7 @@ then include them as part of your jobs.
 While connected to your login node, start the base Singularity container that has a 
 copy of Python inside: 
 
-     $ singularity shell /cvmfs/singularity.opensciencegrid.org/opensciencegrid/osgvo-el8:latest
+     $ singularity shell /cvmfs/singularity.opensciencegrid.org/opensciencegrid/osgvo-ubuntu-20.04:latest
 
 Next, create a directory for your files and set the `PYTHONPATH`
 
@@ -127,7 +127,7 @@ As an example:
 
 	universe 	= vanilla
 	
-	+SingularityImage = "/cvmfs/singularity.opensciencegrid.org/opensciencegrid/osgvo-el8:latest"
+	+SingularityImage = "/cvmfs/singularity.opensciencegrid.org/opensciencegrid/osgvo-ubuntu-20.04:latest"
 	
 	executable 	= run_py.sh
 
