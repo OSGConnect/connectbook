@@ -1,0 +1,43 @@
+:root {
+    --md-default-fg-color: #3a3a3a;
+    --md-primary-fg-color: #F1A52C;
+    --md-primary-bg-color: #3a3a3a;
+    --md-accent-fg-color: #FFC364;
+}
+
+:root>* {
+    --md-footer-bg-color: #3a3a3a;
+
+    --md-typeset-a-color: #ad510c;
+    --md-text-font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+.md-typeset h1, .md-typeset h2 {
+    font-weight: 400;
+}
+
+
+
+
+/*$text: #3a3a3a;*/
+/*$primary: */
+/*$secondary: #F1A52C;*/
+/*$info: #FFC364;*/
+/*$warning: #fff1c7;*/
+/*$white-offset: #fff7ea;*/
+/*$nav-link-color: $text;*/
+
+
+/*$nav-link-font-weight: 500;*/
+/*$navbar-light-color: #3a3a3a;*/
+
+/*$border-radius: 1rem;*/
+
+/*$btn-border-radius: .25rem;*/
+
+/*$card-border-color: black;*/
+/*$card-border-radius: $border-radius;*/
+
+/*$font-family-base: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;*/
+/*$headings-font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;*/
+/*$headings-font-weight: 600;*/

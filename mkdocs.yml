@@ -1,0 +1,48 @@
+site_name: OSG Connect Docs
+site_url: "https://osg-htc.org/"
+repo_name: osg-htc/connectbook
+theme:
+  name: material
+  logo: assets/OSG_Logo.svg
+  favicon: assets/OSG_Logo.png
+
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: False
+  - meta
+  - pymdownx.details
+  - toc:
+      permalink: True
+
+extra_css:
+  - stylesheets/code-highlight.css
+  - stylesheets/osg.css
+
+extra:
+  social:
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/OSGUserSchool
+      name: OSG User School on Twitter
+    - icon: fontawesome/brands/facebook
+      link: https://www.facebook.com/OSGUserSchool
+      name: OSG User School on Facebook
+
+nav:
+  - Home: index.md
+  - Welcome:
+    - Welcome: welcome/index.md
+    - "Acknowledging OSG": /welcome/overview/acknowledgeOSG.md
+    - "Getting Help from RCFs": /welcome/overview/getting-help-from-RCFs.md
+    - "OSG Accounting (GRACC)": /welcome/overview/gracc.md
+    - "Computation on the OSPool": /welcome/overview/is-it-for-you.md
+    - Policy: /welcome/overview/policy.md
+    - XSEDE: /welcome/xsede/osg-xsede.md
+  - Training:
+    - "OSG User School":  /training/training/osg-user-school.md
+    - "OSG User Training": /training/training/osgusertraining.md
+    - "Previous Training Events": /training/training/previous-training-events.md
+    - "Joint SWC OSG": /training/training/Joint-SWC-OSG.md
+    - Resources:
+      - "Contact Information": /training/resources/contact-information.md
+      - "Frequently Asked Questions": /training/resources/frequently-asked-questions-faq-.md

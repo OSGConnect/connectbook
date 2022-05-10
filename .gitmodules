@@ -1,96 +1,96 @@
 [submodule "tutorials/tutorial-AutoDockVina"]
-	path = tutorials/tutorial-AutoDockVina
+	path = docs/tutorials/tutorial-AutoDockVina
 	url = https://github.com/OSGConnect/tutorial-AutoDockVina
 [submodule "tutorials/tutorial-R"]
-	path = tutorials/tutorial-R
+	path = docs/tutorials/tutorial-R
 	url = https://github.com/OSGConnect/tutorial-R
 [submodule "tutorials/tutorial-R-addlibSNA"]
-	path = tutorials/tutorial-R-addlibSNA
+	path = docs/tutorials/tutorial-R-addlibSNA
 	url = https://github.com/OSGConnect/tutorial-R-addlibSNA
 [submodule "tutorials/tutorial-ScalingUp-R"]
-	path = tutorials/tutorial-ScalingUp-R
+	path = docs/tutorials/tutorial-ScalingUp-R
 	url = https://github.com/OSGConnect/tutorial-ScalingUp-R
 [submodule "tutorials/tutorial-blast"]
-	path = tutorials/tutorial-blast
+	path = docs/tutorials/tutorial-blast
 	url = https://github.com/OSGConnect/tutorial-blast
 [submodule "tutorials/tutorial-error101"]
-	path = tutorials/tutorial-error101
+	path = docs/tutorials/tutorial-error101
 	url = https://github.com/OSGConnect/tutorial-error101
 [submodule "tutorials/tutorial-exitcode"]
-	path = tutorials/tutorial-exitcode
+	path = docs/tutorials/tutorial-exitcode
 	url = https://github.com/OSGConnect/tutorial-exitcode
 [submodule "tutorials/tutorial-gromacs"]
-	path = tutorials/tutorial-gromacs
+	path = docs/tutorials/tutorial-gromacs
 	url = https://github.com/OSGConnect/tutorial-gromacs
 [submodule "tutorials/tutorial-htcondor-transfer"]
-	path = tutorials/tutorial-htcondor-transfer
+	path = docs/tutorials/tutorial-htcondor-transfer
 	url = https://github.com/OSGConnect/tutorial-htcondor-transfer
 [submodule "tutorials/tutorial-makeflow-quickstart"]
-	path = tutorials/tutorial-makeflow-quickstart
+	path = docs/tutorials/tutorial-makeflow-quickstart
 	url = https://github.com/OSGConnect/tutorial-makeflow-quickstart
 [submodule "tutorials/tutorial-matlab-HelloWorld"]
-	path = tutorials/tutorial-matlab-HelloWorld
+	path = docs/tutorials/tutorial-matlab-HelloWorld
 	url = https://github.com/OSGConnect/tutorial-matlab-HelloWorld
 [submodule "tutorials/tutorial-namd"]
-	path = tutorials/tutorial-namd
+	path = docs/tutorials/tutorial-namd
 	url = https://github.com/OSGConnect/tutorial-namd
 [submodule "tutorials/tutorial-nelle-nemo"]
-	path = tutorials/tutorial-nelle-nemo
+	path = docs/tutorials/tutorial-nelle-nemo
 	url = https://github.com/OSGConnect/tutorial-nelle-nemo
 [submodule "tutorials/tutorial-octave"]
-	path = tutorials/tutorial-octave
+	path = docs/tutorials/tutorial-octave
 	url = https://github.com/OSGConnect/tutorial-octave
 [submodule "tutorials/tutorial-pegasus"]
-	path = tutorials/tutorial-pegasus
+	path = docs/tutorials/tutorial-pegasus
 	url = https://github.com/OSGConnect/tutorial-pegasus
 [submodule "tutorials/tutorial-photodemo"]
-	path = tutorials/tutorial-photodemo
+	path = docs/tutorials/tutorial-photodemo
 	url = https://github.com/OSGConnect/tutorial-photodemo
 [submodule "tutorials/tutorial-python-virtualenv"]
-	path = tutorials/tutorial-python-virtualenv
+	path = docs/tutorials/tutorial-python-virtualenv
 	url = https://github.com/OSGConnect/tutorial-python-virtualenv
 [submodule "tutorials/tutorial-quickstart"]
-	path = tutorials/tutorial-quickstart
+	path = docs/tutorials/tutorial-quickstart
 	url = https://github.com/OSGConnect/tutorial-quickstart
 [submodule "tutorials/tutorial-root"]
-	path = tutorials/tutorial-root
+	path = docs/tutorials/tutorial-root
 	url = https://github.com/OSGConnect/tutorial-root
 [submodule "tutorials/tutorial-scaling"]
-	path = tutorials/tutorial-scaling
+	path = docs/tutorials/tutorial-scaling
 	url = https://github.com/OSGConnect/tutorial-scaling
 [submodule "tutorials/tutorial-scaling-up-resources"]
-	path = tutorials/tutorial-scaling-up-resources
+	path = docs/tutorials/tutorial-scaling-up-resources
 	url = https://github.com/OSGConnect/tutorial-scaling-up-resources
 [submodule "tutorials/tutorial-software"]
-	path = tutorials/tutorial-software
+	path = docs/tutorials/tutorial-software
 	url = https://github.com/OSGConnect/tutorial-software
 [submodule "tutorials/tutorial-stash-http"]
-	path = tutorials/tutorial-stash-http
+	path = docs/tutorials/tutorial-stash-http
 	url = https://github.com/OSGConnect/tutorial-stash-http
 [submodule "tutorials/tutorial-stashcache-blast"]
-	path = tutorials/tutorial-stashcache-blast
+	path = docs/tutorials/tutorial-stashcache-blast
 	url = https://github.com/OSGConnect/tutorial-stashcache-blast
 [submodule "tutorials/tutorial-swift"]
-	path = tutorials/tutorial-swift
+	path = docs/tutorials/tutorial-swift
 	url = https://github.com/OSGConnect/tutorial-swift
 [submodule "tutorials/tutorial-osg-locations"]
-	path = tutorials/tutorial-osg-locations
+	path = docs/tutorials/tutorial-osg-locations
 	url = https://github.com/OSGConnect/tutorial-osg-locations
 [submodule "tutorials/tutorial-ScalingUp-Python"]
-	path = tutorials/tutorial-ScalingUp-Python
+	path = docs/tutorials/tutorial-ScalingUp-Python
 	url = https://github.com/OSGConnect/tutorial-ScalingUp-Python
 [submodule "tutorials/tutorial-blast-split"]
-	path = tutorials/tutorial-blast-split
+	path = docs/tutorials/tutorial-blast-split
 	url = https://github.com/OSGConnect/tutorial-blast-split
 [submodule "tutorials/tutorial-tensorflow-containers"]
-	path = tutorials/tutorial-tensorflow-containers
+	path = docs/tutorials/tutorial-tensorflow-containers
 	url = https://github.com/OSGConnect/tutorial-tensorflow-containers.git
 [submodule "tutorials/tutorial-wordfreq"]
-	path = tutorials/tutorial-wordfreq
+	path = docs/tutorials/tutorial-wordfreq
 	url = https://github.com/OSGConnect/tutorial-wordfreq
 [submodule "tutorials/tutorial-bwa"]
-	path = tutorials/tutorial-bwa
+	path = docs/tutorials/tutorial-bwa
 	url = https://github.com/OSGConnect/tutorial-bwa
 [submodule "tutorials/tutorial-organizing"]
-	path = tutorials/tutorial-organizing
+	path = docs/tutorials/tutorial-organizing
 	url = https://github.com/OSGConnect/tutorial-organizing
