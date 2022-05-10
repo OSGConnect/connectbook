@@ -1,7 +1,7 @@
 Indicate the Duration Category of Your Jobs 
 ====================================
 
-[TOC]
+
 ## Why Job Duration Categories?
 To maximize the value of the capacity contributed by the different organizations to the Open Science Pool (OSPool), 
 users are requested to identify one of three duration categories for their jobs. These categories should be selected based upon test 

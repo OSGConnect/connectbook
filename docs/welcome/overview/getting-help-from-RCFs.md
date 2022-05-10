@@ -1,7 +1,7 @@
 Email, Office Hours, and 1-1 Meetings 
 ====================================
 
-[TOC] 
+ 
 
 *There are multiple ways to get help from OSG’s Research Computing Facilitators. Get in touch anytime!*
 

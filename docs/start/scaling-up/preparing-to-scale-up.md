@@ -6,7 +6,7 @@ This guide discuses the following:
 - Best practices for testing jobs and scaling up your analysis. 
 - How to determine the amount of resources (CPU, memory, disk space) to request in a submit file.
 
-[TOC]
+
 
 # Overview
 

@@ -1,7 +1,7 @@
 Transfer Job Output Files Up To 1GB In Size 
 ====================================
 
-[TOC]
+
 
 # Overview
 

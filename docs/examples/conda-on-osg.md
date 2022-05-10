@@ -1,7 +1,7 @@
 Using conda to Run Python on the OSPool 
 ====================================
 
-[TOC]
+
 
 The Anaconda/Miniconda distribution of Python is a common tool for installing and managing Python-based software and other tools. 
 

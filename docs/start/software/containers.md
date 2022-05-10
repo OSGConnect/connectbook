@@ -1,7 +1,7 @@
 Use Containers on the OSG 
 ====================================
 
-[TOC]
+
 
 Docker and Singularity are container systems that allow users full
 control over their software environment. You can create your own

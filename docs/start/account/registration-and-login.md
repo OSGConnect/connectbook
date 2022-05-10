@@ -1,7 +1,7 @@
 Registration and Login for OSG Connect 
 ====================================
 
-[TOC]
+
 
 ## Registration and Login for OSG Connect
 

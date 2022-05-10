@@ -1,6 +1,6 @@
 Compiling Software for OSG Connect 
 ====================================
-[TOC]
+
 
 # Compiling Software for OSG Connect
 

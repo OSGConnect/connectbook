@@ -1,7 +1,7 @@
 Using Software on the Open Science Pool 
 ====================================
 
-[TOC]
+
 
 # Overview of Software Options
 

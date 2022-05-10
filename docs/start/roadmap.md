@@ -1,7 +1,7 @@
 Roadmap to HTC Workload Submission via OSG Connect 
 ====================================
 
-[TOC]
+
 
 # Overview
 

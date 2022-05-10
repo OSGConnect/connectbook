@@ -1,7 +1,7 @@
 Control Where Your Jobs Run / Job Requirements 
 ====================================
 
-[TOC]
+
 
 By default, your jobs will match any available spot in the OSG. This is fine
 for very generic jobs. However, in some cases a job may have one or more system

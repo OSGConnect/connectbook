@@ -1,6 +1,6 @@
 Annual, Week-Long OSG User School 
 ====================================
-[TOC]
+
 
 ## Overview
 

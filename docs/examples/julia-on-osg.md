@@ -1,7 +1,7 @@
 Using Julia on the OSPool 
 ====================================
 
-[TOC]
+
 
 # Overview
 

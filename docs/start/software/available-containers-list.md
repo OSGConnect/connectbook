@@ -1,7 +1,7 @@
 View Existing OSPool-Supported Containers 
 ====================================
 
-[TOC]
+
 
 This is list of commonly used containers in the Open Science Pool. These can be used
 directly in your jobs or as base images if you want to define your own. Please

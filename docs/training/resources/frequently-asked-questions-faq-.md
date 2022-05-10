@@ -1,7 +1,7 @@
 Frequently Asked Questions 
 ====================================
 
-[TOC]
+
 
 ## Getting Started
    

@@ -1,7 +1,7 @@
 Transfer HTTP-available Files up to 1GB In Size 
 ====================================
 
-[TOC] 
+ 
 
 # Overview
 

@@ -1,7 +1,7 @@
 Transfer Larger Input and Output Files 
 ====================================
 
-[TOC]
+
 
 # Overview
 

@@ -1,7 +1,7 @@
 Checkpointing Jobs 
 ====================================
 
-[TOC]
+
 
 # What is Checkpointing?
 

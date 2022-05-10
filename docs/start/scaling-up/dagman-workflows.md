@@ -1,7 +1,7 @@
 Submit Workflows with HTCondor's DAGMan 
 ====================================
 
-[TOC]
+
 
 # Overview
 

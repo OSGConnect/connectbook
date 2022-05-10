@@ -1,7 +1,7 @@
 Multicore Jobs 
 ====================================
 
-[TOC]
+
 
 Please note, the OSG has limited support for multicore jobs. Multicore jobs
 can be submitted for threaded or OpenMP applications. To request multiple cores

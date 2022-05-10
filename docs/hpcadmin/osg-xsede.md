@@ -1,7 +1,7 @@
 Running OSG jobs on XSEDE
 =========================
 
-[TOC]
+
 
 ## Overview
             

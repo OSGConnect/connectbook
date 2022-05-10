@@ -1,7 +1,7 @@
 Create a Singularity Container Image 
 ====================================
 
-[TOC]
+
 
 **NOTE:** Building Singularity containers are currently not supported
 on the OSGConnect access point. The guide assumes that you have

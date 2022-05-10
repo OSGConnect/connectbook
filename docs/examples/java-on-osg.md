@@ -1,7 +1,7 @@
 Using Java in Jobs 
 ====================================
 
-[TOC]
+
 
 ## Overview
 

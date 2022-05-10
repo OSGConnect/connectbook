@@ -1,7 +1,7 @@
 Using GPUs on the OSPool 
 ====================================
 
-[TOC]
+
 
 The Open Science Pool has an increasing number of GPUs available to 
 run jobs. 

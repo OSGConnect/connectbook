@@ -1,7 +1,7 @@
 OpenMPI Jobs 
 ====================================
 
-[TOC]
+
 
 Even though the Open Science Pool is a high throughput computing system, sometimes
 there is a need to run small OpenMPI based jobs. OSG has limited support for

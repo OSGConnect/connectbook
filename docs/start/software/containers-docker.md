@@ -1,7 +1,7 @@
 Create/Register a Docker Container Image 
 ====================================
 
-[TOC]
+
 
 This guide is meant to accompany the instructions for using containers 
 in the Open Science Pool.  You can use your own custom container to run jobs in the 

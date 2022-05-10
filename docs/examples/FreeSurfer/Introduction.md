@@ -1,6 +1,6 @@
 Introduction to FreeSurfer on the OSPool 
 ====================================
-[TOC]
+
 
 ## Overview
 

@@ -1,6 +1,6 @@
 Example Software Compilation 
 ====================================
-[TOC]
+
 
 # Example of Compilng Software For Use In OSG Connect
 
