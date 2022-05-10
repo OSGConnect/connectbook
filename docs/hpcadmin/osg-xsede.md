@@ -1,4 +1,6 @@
-[title]: Running OSG jobs on XSEDE
+Running OSG jobs on XSEDE
+=========================
+
 [TOC]
 
 ## Overview

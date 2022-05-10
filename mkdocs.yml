@@ -29,73 +29,73 @@ extra:
       name: OSG User School on Facebook
 
 nav:
-  - Home: index.md
-  Hpcadmin:
-    - "Submit Node Flocking to OSG ": /hpcadmin/osg-flock.md
-    - "[title]: Running OSG jobs on XSEDE": /hpcadmin/osg-xsede.md
-  Training:
-    Training:
-      - "": /training/training/osg-user-school.md
-      - "Other Past Training Events ": /training/training/previous-training-events.md
-      - "OSG User Training (regular/monthly) ": /training/training/osgusertraining.md
-      - "": /training/training/Joint-SWC-OSG.md
-    Resources:
-      - "Contact OSG for non-Support Inquiries ": /training/resources/contact-information.md
-      - "Frequently Asked Questions ": /training/resources/frequently-asked-questions-faq-.md
-  Start:
-    - "Indicate the Duration Category of Your Jobs ": /start/jobdurationcategory.md
-    - "Roadmap to HTC Workload Submission via OSG Connect ": /start/roadmap.md
-    Resources:
-      - "OpenMPI Jobs ": /start/resources/openmpi-jobs.md
-      - "Control Where Your Jobs Run / Job Requirements ": /start/resources/requirements.md
-      - "Multicore Jobs ": /start/resources/multicore-jobs.md
-      - "Using GPUs on the OSPool ": /start/resources/gpu-jobs.md
-      - "Large Memory Jobs ": /start/resources/large-memory-jobs.md
-    Software:
-      - "Compiling Software for OSG Connect ": /start/software/compiling-applications.md
-      - "Using Software on the Open Science Pool ": /start/software/software-overview.md
-      - "Example Software Compilation ": /start/software/example-compilation.md
-      - "Use Containers on the OSG ": /start/software/singularity-containers.md
-      - "Create/Register a Docker Container Image ": /start/software/containers-docker.md
-      - "Request Help with Your Software ": /start/software/software-request.md
-      - "": /start/software/new_modules_list.md
-      - "View Existing OSPool-Supported Containers ": /start/software/available-containers-list.md
-      - "Create a Singularity Container Image ": /start/software/containers-singularity.md
-      - "Use Containers on the OSG ": /start/software/containers.md
-    Scaling-Up:
-      - "Determining the Amount of Resources to Request in a Submit File ": /start/scaling-up/preparing-to-scale-up.md
-      - "Easily Submit Multiple Jobs ": /start/scaling-up/submit-multiple-jobs.md
-      - "Checkpointing Jobs ": /start/scaling-up/checkpointing-on-OSPool.md
-      - "Submit Workflows with HTCondor's DAGMan ": /start/scaling-up/dagman-workflows.md
-    Jobs:
-      - "Use OSG Connect Tutorials ": /start/jobs/tutorial-command.md
-    Account:
-      - "Generate SSH Keys and Activate Your OSG Login ": /start/account/generate-add-sshkey.md
-      - "Join and Use a Project in OSG Connect ": /start/account/starting-project.md
-      - "Registration and Login for OSG Connect ": /start/account/registration-and-login.md
-    Data:
-      - "Transfer Input Files Up To 100MB In Size ": /start/data/file-transfer-via-htcondor.md
-      - "Use scp To Transfer Files To and From OSG Connect ": /start/data/scp.md
-      - "Transfer Larger Input and Output Files ": /start/data/stashcache.md
-      - "Transfer HTTP-available Files up to 1GB In Size ": /start/data/file-transfer-via-http.md
-      - "Transfer Job Output Files Up To 1GB In Size ": /start/data/output-file-transfer-via-htcondor.md
-      - "Overview: Data Staging and Transfer to Jobs ": /start/data/osgconnect-storage.md
-  Welcome:
-    Xsede:
-      - "## Overview": /welcome/xsede/osg-xsede.md
-    Overview:
-      - "Computation on the Open Science Pool ": /welcome/overview/is-it-for-you.md
-      - "Email, Office Hours, and 1-1 Meetings ": /welcome/overview/getting-help-from-RCFs.md
-      - "Acknowledge the OSG ": /welcome/overview/acknowledgeOSG.md
-      - "OSG Accounting (GRACC)": /welcome/overview/gracc.md
-      - "Policies for Using OSG Connect and the OSPool ": /welcome/overview/policy.md
-  Examples:
-    - "Using Julia on the OSPool ": /examples/julia-on-osg.md
-    - "Run Python Scripts on the OSPool ": /examples/manage-python-packages.md
-    - "Using conda to Run Python on the OSPool ": /examples/conda-on-osg.md
-    - "Using Java in Jobs ": /examples/java-on-osg.md
-    Freesurfer:
-      - "Introduction to FreeSurfer on the OSPool ": /examples/FreeSurfer/Introduction.md
+  - "OSG Connect Documentation": index.md
+  - HPC Admin:
+    - "Submit Node Flocking to OSG ": hpcadmin/osg-flock.md
+    - "Running OSG jobs on XSEDE": hpcadmin/osg-xsede.md
+  - Training:
+    - Training:
+      - "Annual, Week-Long OSG User School ": training/training/osg-user-school.md
+      - "Other Past Training Events ": training/training/previous-training-events.md
+      - "OSG User Training (regular/monthly) ": training/training/osgusertraining.md
+      - "Joint Software Carpentry and OSG Workshops ": training/training/Joint-SWC-OSG.md
+    - Resources:
+      - "Contact OSG for non-Support Inquiries ": training/resources/contact-information.md
+      - "Frequently Asked Questions ": training/resources/frequently-asked-questions-faq-.md
+  - Start:
+    - "Indicate the Duration Category of Your Jobs ": start/jobdurationcategory.md
+    - "Roadmap to HTC Workload Submission via OSG Connect ": start/roadmap.md
+    - Resources:
+      - "OpenMPI Jobs ": start/resources/openmpi-jobs.md
+      - "Control Where Your Jobs Run / Job Requirements ": start/resources/requirements.md
+      - "Multicore Jobs ": start/resources/multicore-jobs.md
+      - "Using GPUs on the OSPool ": start/resources/gpu-jobs.md
+      - "Large Memory Jobs ": start/resources/large-memory-jobs.md
+    - Software:
+      - "Compiling Software for OSG Connect ": start/software/compiling-applications.md
+      - "Using Software on the Open Science Pool ": start/software/software-overview.md
+      - "Example Software Compilation ": start/software/example-compilation.md
+      - "Use Containers on the OSG ": start/software/singularity-containers.md
+      - "Create/Register a Docker Container Image ": start/software/containers-docker.md
+      - "Request Help with Your Software ": start/software/software-request.md
+      - "": start/software/new_modules_list.md
+      - "View Existing OSPool-Supported Containers ": start/software/available-containers-list.md
+      - "Create a Singularity Container Image ": start/software/containers-singularity.md
+      - "Use Containers on the OSG ": start/software/containers.md
+    - Scaling-Up:
+      - "Determining the Amount of Resources to Request in a Submit File ": start/scaling-up/preparing-to-scale-up.md
+      - "Easily Submit Multiple Jobs ": start/scaling-up/submit-multiple-jobs.md
+      - "Checkpointing Jobs ": start/scaling-up/checkpointing-on-OSPool.md
+      - "Submit Workflows with HTCondor's DAGMan ": start/scaling-up/dagman-workflows.md
+    - Jobs:
+      - "Use OSG Connect Tutorials ": start/jobs/tutorial-command.md
+    - Account:
+      - "Generate SSH Keys and Activate Your OSG Login ": start/account/generate-add-sshkey.md
+      - "Join and Use a Project in OSG Connect ": start/account/starting-project.md
+      - "Registration and Login for OSG Connect ": start/account/registration-and-login.md
+    - Data:
+      - "Transfer Input Files Up To 100MB In Size ": start/data/file-transfer-via-htcondor.md
+      - "Use scp To Transfer Files To and From OSG Connect ": start/data/scp.md
+      - "Transfer Larger Input and Output Files ": start/data/stashcache.md
+      - "Transfer HTTP-available Files up to 1GB In Size ": start/data/file-transfer-via-http.md
+      - "Transfer Job Output Files Up To 1GB In Size ": start/data/output-file-transfer-via-htcondor.md
+      - "Overview: Data Staging and Transfer to Jobs ": start/data/osgconnect-storage.md
+  - Welcome:
+    - Xsede:
+      - "Overview": welcome/xsede/osg-xsede.md
+    - Overview:
+      - "Computation on the Open Science Pool ": welcome/overview/is-it-for-you.md
+      - "Email, Office Hours, and 1-1 Meetings ": welcome/overview/getting-help-from-RCFs.md
+      - "Acknowledge the OSG ": welcome/overview/acknowledgeOSG.md
+      - "OSG Accounting (GRACC)": welcome/overview/gracc.md
+      - "Policies for Using OSG Connect and the OSPool ": welcome/overview/policy.md
+  - Examples:
+    - "Using Julia on the OSPool ": examples/julia-on-osg.md
+    - "Run Python Scripts on the OSPool ": examples/manage-python-packages.md
+    - "Using conda to Run Python on the OSPool ": examples/conda-on-osg.md
+    - "Using Java in Jobs ": examples/java-on-osg.md
+    - Freesurfer:
+      - "Introduction to FreeSurfer on the OSPool ": examples/FreeSurfer/Introduction.md
   - Tutorials:
     - "Running a Molecule Docking Job with AutoDock Vina": tutorials/tutorial-AutoDockVina/README.md
     - "Working with Tensorflow, GPUs, and containers": tutorials/tutorial-tensorflow-containers/README.md

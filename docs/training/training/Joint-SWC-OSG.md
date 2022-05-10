@@ -1,4 +1,3 @@
-
 Joint Software Carpentry and OSG Workshops 
 ====================================
 

@@ -1,5 +1,6 @@
 Join and Use a Project in OSG Connect 
 ====================================
+
 [TOC]
 
 ## Background
