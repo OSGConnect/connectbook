@@ -1,2 +1,4 @@
-OSG Connect Documentation
-=========================
+---
+template: home.html
+title: Home
+---
