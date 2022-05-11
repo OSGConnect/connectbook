@@ -16,6 +16,11 @@
     font-weight: 400;
 }
 
+.md-tabs__link {
+    font-size: .8rem;
+    color: black;
+}
+
 
 
 
