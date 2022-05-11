@@ -1,8 +1,6 @@
 Running OSG jobs on XSEDE
 =========================
 
-
-
 ## Overview
             
 The [OSG](http://www.osg-htc.org/) promotes science by:
