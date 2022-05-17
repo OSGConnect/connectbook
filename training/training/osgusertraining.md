@@ -29,7 +29,9 @@ The most recent version of these training materials are here:
 
 ### Using Containerized Software on the Open Science Pool
 
-In development (see above, and register!).
+The most recent version of these training materials are here:
+
+* [Slides](https://docs.google.com/presentation/d/1HdsGCEm9TcGwehh9MDapbjYvtVrZhQCJfSC7C4_ridY)
 
 ### Additional Topics
 
