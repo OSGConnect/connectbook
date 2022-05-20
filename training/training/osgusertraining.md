@@ -1,4 +1,4 @@
-[title]: - "OSG User Training (regular/monthly)"
+[title]: - "Bi-Monthly OSG User Training (registration+materials)"
 
 ## Sign Up for Upcoming Trainings!
 
