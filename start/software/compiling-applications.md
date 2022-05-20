@@ -1,4 +1,4 @@
-[title]: - "Compiling Software for OSG Connect"
+[title]: - "Compiling Software to run on the OSPool"
 [TOC]
 
 # Compiling Software for OSG Connect
