@@ -7,7 +7,7 @@
 This tutorial assumes that you will be using a command line application 
 for performing file transfers instead of a GUI-based application such as WinSCP. 
 
-We can transfer files to and from the OSG Connect login node using the 
+You can transfer files to and from the OSG Connect login node using the 
 `scp` command. Note `scp` is a counterpart to the secure shell 
 command,`ssh`, that allows for secure, encrypted file transfers between 
 systems using your ssh credentials.
@@ -23,7 +23,7 @@ Files on remote systems (like an OSG Connect login node) are indicated using
 
 # Transfer Files To OSG Connect
 
-Let's say you have a file you wish to transfer to OSG Connect named `my_file.txt`.
+Let's say you have a file name `my_file.txt` you wish to transfer to the OSG Connect login node.
 
 Using the terminal application on your computer, navigate to the location of `my_file.txt`.
 
@@ -34,7 +34,7 @@ that you will **not** be logged into OSG Connect when you perform this step.
 
 Where **NN** is the specific number of your assigned login node (i.e. `04` or `05`).
 
-Large files (>100MB in size) can be uploaded to your `/public` directory also using `scp`:
+Large files (>100MB in size) to be used as input to jobs can be uploaded to your `/public` directory also using `scp`:
 
     $ scp my_large_file.gz username@loginNN.osgconnect.net:/public/username/
 
@@ -49,7 +49,7 @@ For example:
 # Transfer Files From OSG Connect
 
 To transfer files from OSG Connect back to your laptop or desktop you can use the `scp` as shown above, 
-but with the source being the copy that is located on OSG Connect:
+but with the OSG Connect location being the source (listed first) and the destination being a location on your personal computer:
 
     $ scp username@loginNN.osgconnect.net:/home/username/my_file.txt ./
 
@@ -60,7 +60,7 @@ where `./` sets the destination of the copy to your current location on your com
 `scp` can be used to transfer files between OSG Connect and another server that you have 
 `ssh` access to. This means that files don't have to first be transferred to your 
 personal computer which can save a lot of time and effort! For example, to transfer 
-a file from another server and your OSG Connect login node `/home` directory:
+a file from another server and your OSG Connect login node `/home` directory with a command on your personal computer:
 
     $ scp username@serverhostname:/path/to/my_file.txt username@loginNN.osgconnect.net:/home/username
 

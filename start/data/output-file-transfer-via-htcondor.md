@@ -4,7 +4,7 @@
 
 # Overview
 
-When your OSG Connect jobs run, any output that gets generated is specifically written to 
+When your jobs run, any output that gets generated is specifically written to 
 the execute node on which the job ran. In order to get access to your output files, a copy of 
 the output must be transferred back to your OSG Connect login node. 
 
