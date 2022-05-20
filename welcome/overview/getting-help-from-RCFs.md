@@ -21,11 +21,11 @@ We don’t expect that you should be able to address all of your questions by co
 
 
 ## Get an Account
-If you don’t have an account yet, please [Sign Up](https://www.osgconnect.net/), and we’ll follow up quickly to set up a meeting time and create accounts. If you don’t have an account but just have general questions, feel free to send an email to support@opensciencegrid.org (see below).
+If you don’t have an account yet, please [Sign Up](https://www.osgconnect.net/), and we’ll follow up quickly to set up a meeting time and create accounts. If you don’t have an account and have general questions, feel free to send an email to support@osg-htc.org (also below).
 
 
 ## Help via Email
-We provide ongoing support via email to support@opensciencegrid.org, and it’s never a bad idea to start by sending questions or issues via email. You can typically expect a first response within a few business hours.
+We provide ongoing support via email to support@osg-htc.org, and it’s never a bad idea to start by sending questions or issues via email. You can typically expect a first response within a few business hours.
 
 
 ## Virtual Office Hours
@@ -36,9 +36,9 @@ Drop-in for live help, starting January 11, 2022!
 
 You can find the URL to the Virtual Office Hours meeting room when you log into an OSG Connect login node, or in the signature of a support email from an RCF. 
 
-Click [here](https://docs.google.com/forms/d/e/1FAIpQLSd3K78Xx1Vo-KjqW_2y0YKcUMXrEsKXWk3I1Aww64RL22QpnQ/viewform) to sign-in for office hours, once you arrive in the room. 
+**Click [here](https://docs.google.com/forms/d/e/1FAIpQLSd3K78Xx1Vo-KjqW_2y0YKcUMXrEsKXWk3I1Aww64RL22QpnQ/viewform) to sign-in for office hours, once you arrive in the room.**
 
-Cancellations will be announced via email. As always, if the times above don’t work for you, please email us at our usual support address to schedule a separate meeting.
+Cancellations will be announced via email to those with accounts via the OSG Connect service. As always, if the times above don’t work for you, please email us at our usual support address to schedule a separate meeting.
 
 
 ## Make an Appointment
