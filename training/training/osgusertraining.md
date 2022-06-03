@@ -6,6 +6,7 @@ All User Training sessions are offered from 2:30-4pm ET (and usually on Tuesdays
 
 * Tuesday, June 7: New User Training, [Register here](https://docs.google.com/forms/d/e/1FAIpQLSdj3XT7I0SM4k9jBvST7YX5wsCH_er1HLA7VqRj9ICoEvf2GA/viewform)
 * Tuesday, June 21: Software Portability on the Open Science Pool, [Register here](https://docs.google.com/forms/d/e/1FAIpQLSdj3XT7I0SM4k9jBvST7YX5wsCH_er1HLA7VqRj9ICoEvf2GA/viewform)
+* Tuesday, July 5: New User Training, [Register here](https://docs.google.com/forms/d/e/1FAIpQLSdj3XT7I0SM4k9jBvST7YX5wsCH_er1HLA7VqRj9ICoEvf2GA/viewform)
 
 # Materials
 
