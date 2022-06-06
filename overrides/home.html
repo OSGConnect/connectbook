@@ -16,6 +16,19 @@
 
     .parent-doc {
         padding: 0 20px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .parent-doc > h2 {
+        margin-right: auto;
+        margin-bottom: -5px;
+        padding-bottom: .5rem;
+        border-bottom: orange 5px solid;
+    }
+
+    .sub-doc {
+        border-top: orange 1px solid;
     }
 
     .tx-container {
@@ -42,10 +55,8 @@
 
     .tx-hero__image{
         display: flex;
-        width:17rem;
-        height:17rem;
         order:1;
-        padding-right: 2.5rem;
+        width: 50%;
     }
 
     .tx-hero__image > img {

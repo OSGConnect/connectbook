@@ -70,7 +70,7 @@ nav:
       - "Organizing and Submitting HTC Workloads": managing_htc_workloads_on_osg_connect/submitting_htc_workloads_with_htcondor/tutorial-organizing/README.md
       - "Troubleshooting Job Errors": managing_htc_workloads_on_osg_connect/submitting_htc_workloads_with_htcondor/tutorial-error101/README.md
       - "Finding OSG Locations": managing_htc_workloads_on_osg_connect/submitting_htc_workloads_with_htcondor/tutorial-osg-locations/README.md
-    - Using Software On The Osg:
+    - Using Software On The OSG:
       - "Control Where Your Jobs Run / Job Requirements ": managing_htc_workloads_on_osg_connect/using_software_on_the_osg/requirements.md
       - "Compiling Software for OSG Connect ": managing_htc_workloads_on_osg_connect/using_software_on_the_osg/compiling-applications.md
       - "Using Software on the Open Science Pool ": managing_htc_workloads_on_osg_connect/using_software_on_the_osg/software-overview.md
@@ -88,7 +88,7 @@ nav:
       - "Transfer HTTP-available Files up to 1GB In Size ": managing_htc_workloads_on_osg_connect/managing_data_for_jobs/file-transfer-via-http.md
       - "Transfer Job Output Files Up To 1GB In Size ": managing_htc_workloads_on_osg_connect/managing_data_for_jobs/output-file-transfer-via-htcondor.md
       - "Overview: Data Staging and Transfer to Jobs ": managing_htc_workloads_on_osg_connect/managing_data_for_jobs/osgconnect-storage.md
-    - Considerations For Specific Resource_Needs:
+    - Considerations For Specific Resource Needs:
       - "OpenMPI Jobs ": managing_htc_workloads_on_osg_connect/considerations_for_specific_resource_needs/openmpi-jobs.md
       - "Multicore Jobs ": managing_htc_workloads_on_osg_connect/considerations_for_specific_resource_needs/multicore-jobs.md
       - "Using GPUs on the OSPool ": managing_htc_workloads_on_osg_connect/considerations_for_specific_resource_needs/gpu-jobs.md
