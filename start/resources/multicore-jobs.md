@@ -10,7 +10,7 @@ Example:
 
     request_cpus = 8
 
-For multicore jobs, we recommend requesting a maximum of 8 cpus, which can be requested using `request_cpus =`. 
+We recommend requesting a maximum of 8 cpus.
 
 
 **Important considerations**    
