@@ -21,7 +21,14 @@ Total for query: 5 jobs; 0 completed, 0 removed, 5 idle, 0 running, 0 held, 0 su
 Total for alice: 5 jobs; 0 completed, 0 removed, 5 idle, 0 running, 0 held, 0 suspended 
 Total for all users: 4112 jobs; 0 completed, 0 removed, 76 idle, 904 running, 3132 held, 0 suspended
 ```
-The flag `-nobatch` can be used to list individual jobs instead of batches of jobs using the format `condor_q <U/C/J> -nobatch`. `Condor_q` with the `-nobatch` flag can be used to list individual jobs associated with a username`<U>`, cluster ID `<C>`, or job ID `<J>` as indicated by `<U/C/J>`. 
+
+
+## Constraints for `condor_q`
+
+`condor_q` can be used to list individual jobs associated with a username`<U>`, cluster ID `<C>`, or job ID `<J>` as indicated by `<U/C/J>`. 
+
+Additionally, the flag `-nobatch` can be used to list individual jobs instead of batches of jobs using the format `condor_q <U/C/J> -nobatch`. 
+
 ```
 $ condor_q alice -nobatch
 
@@ -39,10 +46,6 @@ $ condor_q alice -nobatch
 21562639.3   alice            3/4  12:52   0+00:00:00 I  0    0.0 wordcount.py Pride_and_Prejudice.tx
 21562639.4   alice            3/4  12:52   0+00:00:00 I  0    0.0 wordcount.py Ulysses.txt
 ```
-
-## Constraints for `condor_q`
-
-To limit output of `condor_q` to jobs submitted by a specific user or with a specific cluster or job ID, you can use `condor_q <U/C/J>`.
 
 ## View All Job Attributes 
 
@@ -70,17 +73,21 @@ For more information about these and other attributes, please see the [HTCondor 
 
 
 ## Constraints for Job Attributes
-To display only the output of specified attributes, it is possible to use the "auto format" flag denoted as `-af` with `condor_q <U/C/J>`. An example use case is to view the owner and location of the site where a given job, such as job ID 15244592.127, is running by using:  
+
+To display only the output of specified attributes, it is possible to use the "auto format" flag denoted as `-af` with `condor_q <U/C/J>`. An example use case is to view the owner and location of the site where a given job, such as job ID `15244592.127`, is running by using:  
 
 ```
-$ condor_q 15244592.127 -af Ownder MATCH_EXP_JOBGLIDEIN_ResourceName 
+$ condor_q 15244592.127 -af Owner MATCH_EXP_JOBGLIDEIN_ResourceName 
 
 alice BNL-ATLAS
 ```
 
+In the above example, the `Owner` is the user alice and the job is running on resources owned by the Brookhaven National Laboratory as indicated by `BNL_ATLAS`.
+
+
 ## View Specific Job Attributes Across More Than One Job
 
-It is possible to sort and filter the output for one or more job attributes across a batch of jobs. When investigating more than one job, it is advantageous to limit the print out to a certain number of jobs to avoid flooding your screen. To limit the output to a specified number of jobs, use `-limit N` and replace N with the number of jobs you would like to view. For example, to view the site location where 100 jobs belonging to batch 12245532 ran, you can use: 
+It is possible to sort and filter the output for one or more job attributes across a batch of jobs. When investigating more than one job, it is advantageous to limit the print out to a certain number of jobs to avoid flooding your screen. To limit the output to a specified number of jobs, use `-limit N` and replace N with the number of jobs you would like to view. For example, to view the site location where 100 jobs belonging to batch `12245532` ran, you can use: 
  
 ```
 $ condor_q 12245532 -limit 100 -af MATCH_EXP_JOBGLIDEIN_ResourceName | sort | uniq -c
@@ -108,9 +115,11 @@ $ condor_q alice -held -af HoldReason | sort | uniq -c
       4 Error from glidein_3439920_345771664@c6-6-39-2.aglt2.org: SHADOW at 192.170.227.166 failed to send file(s) to <192.41.230.81:44309>: error reading from /home/alice/InputData.txt: (errno 2) No such file or directory; STARTER failed to receive file(s) from <192.170.227.166:9618>
       1 Job in status 2 put on hold by SYSTEM_PERIODIC_HOLD due to memory usage 10572684.
 ```
+
 In the output above, four jobs were place on hold due to a "missing file or directory" in the path of `/home/alice/InputData.txt` that was specified in the `transfer_input_files` line of the submit file. Because HTCondor could not locate this input (possibly due to an incorrect file path), the job was placed on hold. Additionally, one job was placed on hold due to exceeding the requested memory specified in the submit file. 
 
-An in-depth guide on troubleshooting issues with held jobs on the OS Pool is currently in progress. The link to that guide will be added here once it is available. 
+An in-depth guide on troubleshooting issues with held jobs on the OSPool is currently in progress. The link to that guide will be added here once it is available. 
+
 
 ## View Machine Matches for a Job
 The `-analyze` and `-better-analyze` options can be used to view the number of machines that match to a job. These flags are often used to diagnose many problems, including understanding why a job has not started running. 
@@ -125,6 +134,7 @@ A portion of the output from these options shows the number of machines in the p
       0 match but are serving other users
     530 are able to run your job
 ```
+
 Additional output of these options include the requirements line of the job's submit file, last successful match date, hold reason messages, and other useful information. 
 
 The `-analyze` and `-better-analyze` options deliver similar output, however, `-better-analyze` is a newer feature that provides additional information including the number of slots matched by your job given the different requirements specified in the submit file.  
