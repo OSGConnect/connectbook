@@ -8,9 +8,10 @@ can be submitted for threaded or OpenMP applications. To request multiple cores
 
 Example:
 
+    +has_mpi = true 
     request_cpus = 8
 
-We recommend requesting a maximum of 8 cpus. 
+The submit file line `+has_mpi = true` is important for making sure MPI jobs are run on execute points that support MPI work. For multicore jobs, we recommend requesting a maximum of 8 cpus, which can be requested using `request_cpus =`. 
 
 **Important considerations**    
 When submitting multicore jobs please note that you will also have to tell 
