@@ -38,6 +38,8 @@ To run your code as a job on the Open Science Pool, first create a `wrapper.sh`.
 Then, a job submit file:
 
     Requirements = OSGVO_OS_STRING == "RHEL 7" && TARGET.Arch == "X86_64" && HAS_MODULES == True 
+    +has_mpi = true 
+    
     request_cpus = 4
     request_memory = 4 GB
 
@@ -53,7 +55,7 @@ Then, a job submit file:
 
 
 Note how the executable is the `wrapper.sh` script, and that the real executable `hello` is
-transferred using the `transfer_input_files` mechanism.
+transferred using the `transfer_input_files` mechanism. Additionally, the submit file line `+has_mpi = true` should be added to all MPI jobs so that HTCondor matches these jobs to the correct execute machines. 
 
 Please make sure that the number of cores specified in the submit file via
 `request_cpus` match the `-n` argument in the `wrapper.sh` file.
