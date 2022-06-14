@@ -53,7 +53,7 @@ Following the meeting, the Facilitator will approve your account, add your profi
 
 # How to launch a JupyterLab Instance
 
-To launch a JupyterLab instance, go to [https://notebook.ospool.osg-htc.io/](https://notebook.ospool.osg-htc.io/) using an internet browser. 
+To launch a JupyterLab instance, go to [https://notebook.ospool.osg-htc.org](https://notebook.ospool.osg-htc.org) using an internet browser. 
 
 You will be prompted to "Sign in" using your institution CILogin credentials.
 
