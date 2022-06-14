@@ -17,7 +17,7 @@ JupyterLab is a web-based interface for [Project Jupyter](https://jupyter.org). 
 
 More information about the JupyterLab interface can be found in the [JupyterLab manual](https://jupyterlab.readthedocs.io/en/stable/getting_started/overview.html). 
 
-JupyterLab can be a helpful resource for teaching and for running small batches of HTCondor jobs for testing and/or troubleshooting purposes.  
+JupyterLab can be a helpful resource for teaching and for running small batches of HTCondor jobs for testing and/or troubleshooting purposes. JupyterLab jobs also have the option of running post-processing or other analyses on the access point, as opposed to needing to run these steps on an execution point via an HTCondor job.  
 
 
 # Steps to Accessing and Working in JupyterLab
