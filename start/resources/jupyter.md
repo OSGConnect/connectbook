@@ -79,7 +79,7 @@ requirements = Machine == "CHTC-Jupyter-User-EP-$ENV(HOSTNAME)"
 +FromJupyterLab = true
 
 # Sets a Project Name for this job submission 
-+ProjectName = "ProjectNameinCOManage"
++ProjectName = "ProjectName"
 ```
 
 The only modification that needs to be made to these submit file attributes is to replace "ProjectNameinCOManage" with the project name you were assigned when you met with a Research Computing Facilitator. 
