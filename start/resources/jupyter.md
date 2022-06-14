@@ -46,10 +46,9 @@ If you have issues signing in using your institutional credentials, contact us a
 
 ## Meet with a Research Computing Facilitator
 
-Once OSG staff receive your email verification, a Research Computing Facilitator will contact you within one business day to arrange a short consultation and introduction to JupyterLab resources. During this meeting, our staff will provide personalized start-up guidance per your specific computational research goals and activate your account.
-You will be notified when your account is approved via email.
+Once OSG staff receive your email verification, a Research Computing Facilitator will contact you within one business day to arrange a short consultation and introduction to the JupterLab resources. During this meeting, our staff will provide personalized start-up guidance per your specific computational research goals and activate your account.
 
-Additionally, you will be assigned a "ProjectName" that you can use later in an HTCondor submit file to submit jobs through your JupyterLab interface to HTCondor. 
+Following the meeting, the Facilitator will approve your account, add your profile to any relevant JupyterLab ‘project’ names, and ensure that you have access to the JupyterLab. (You will receive automated emails for some of these actions, which you can otherwise ignore.)
 
 
 ## Upload an SSH Key
