@@ -24,7 +24,7 @@ JupyterLab can be a helpful resource for teaching and for running small batches 
 
 The steps necessary for working in JupyterLab are: 
 
-- Request an account.
+- Request an account to access JupyterLab
 - Meet with a Research Computing Facilitator for a short introduction to working with JupyterLab and to activate your account.
 - Launch a JupyterLab instance.
 
