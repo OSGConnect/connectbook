@@ -71,7 +71,7 @@ Each user has a *total* of 8 CPUs and 16 GB memory available to their JupyterLab
 
 # Sending jobs to HTCondor from JupyterLab
 
-To send jobs from JupyterLab to HTCondor, the following information must be added to the HTCondor submit file with one modification: 
+It is possible to send jobs from JupyterLab to HTCondor in a process that mimics job submission on the OSPool through an OSGConnect access point. To send jobs from JupyterLab to HTCondor, the following information must be added to the HTCondor submit file with one modification: 
 
 ```
 # The `requirements =` and `+FromJupyterLab` lines tell HTCondor to assign all jobs to run on the dedicated execute point server assigned to your instance upon launch. It is not necessary to edit these lines. 
