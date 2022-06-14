@@ -51,23 +51,6 @@ Once OSG staff receive your email verification, a Research Computing Facilitator
 Following the meeting, the Facilitator will approve your account, add your profile to any relevant JupyterLab ‘project’ names, and ensure that you have access to the JupyterLab. (You will receive automated emails for some of these actions, which you can otherwise ignore.)
 
 
-## Upload an SSH Key
-
-Adding an SSH public key is optional. Contact us to discuss alternative ways to authenticate when logging in.
-
-After your account has been approved following a meeting with a Research Computing Facilitator, the last step of account creation is to add an SSH key. To do this:
-
-(1) Return to the [registration website](https://registry.cilogon.org/registry/co_petitions/start/coef:261) and login using CILogon if prompted.
-
-(2) Click your name at the top right. In the dropdown box, click "My Profile (OSG)" button. 
-
-(3) On the right hand side of your profile, click "Authenticators" link. 
-
-(4) On the authenticators page, click the "Manage" button. 
-
-(5) On the new SSH Keys page, click "Add SSH Key" and browse your computer to upload your public SSH key.
-
-
 # How to launch a JupyterLab Instance
 
 To launch a JupyterLab instance, go to [https://notebook.ospool.osg-htc.io/](https://notebook.ospool.osg-htc.io/) using an internet browser. 
