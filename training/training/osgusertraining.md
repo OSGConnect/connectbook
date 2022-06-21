@@ -34,3 +34,13 @@ The most recent version of these training materials are here:
 The most recent version of these training materials are here:
 
 * [Slides](https://docs.google.com/presentation/d/1HdsGCEm9TcGwehh9MDapbjYvtVrZhQCJfSC7C4_ridY)
+
+### Software Portability on the Open Science Pool
+
+The most recent version of these training materials are here:
+
+* [Slides](https://docs.google.com/presentation/d/1Ym5piDoEkDPpInnyYgeqUkV-VWQoBTkI0RXJNG7_LK4/edit#slide=id.g120009588c4_0_0), 
+[List of Commands](https://docs.google.com/document/d/1-lfpv7AO7cLZ2yiZQIuiQbb1lyBqh2CB5Ix51cKZ1bk/edit#)
+* Tutorials (used in part)
+    * [Using Julia on the OSPool](https://support.opensciencegrid.org/support/solutions/articles/12000078187-using-julia-on-the-ospool)
+    * [High Throughput BWA Read Mapping](https://support.opensciencegrid.org/support/solutions/articles/12000085928-high-throughput-bwa-read-mapping)
