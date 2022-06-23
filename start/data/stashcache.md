@@ -2,7 +2,7 @@
 
 [TOC]
 
-*As of June 2022, users are not recommended to transfer large output files using `stashcp` and instead should use HTCondor's `transfer_output_remaps` feature. More information on this transition can be found below. Please direct any questions about this change to support@osg-htc.org *
+*As of June 2022, users are no longer recommended to transfer large output files using `stashcp` and instead should use HTCondor's `transfer_output_remaps` feature. More information on this transition can be found below. Please direct any questions about this change to support@osg-htc.org*
 
 # Overview
 
