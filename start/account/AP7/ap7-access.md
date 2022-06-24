@@ -19,7 +19,7 @@ To request access to `ap7.ospool.osg-htc.org`, submit an application using the f
 1. Go to the account [registration page](https://registry.cilogon.org/registry/co_petitions/start/coef:263). You will be redirected to the CILogon sign in page. Select your institution and use your institutional credentials to login.
    
    {: .border .border-5 }
-   <img src="{{ '/images/cilogon.png' | relative_url }}" class="img-fluid"/>
+   <img src="{{ 'connectbook/start/account/AP7/cilogon.png' | relative_url }}" class="img-fluid"/>
    
    If you have issues signing in using your institutional credentials, contact us at [support@osg-htc.org](mailto:support@opensciencegrid.org).
 
