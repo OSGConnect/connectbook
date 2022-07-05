@@ -1,9 +1,8 @@
----
-    title: OSPool ap7.ospool.osg-htc.org Access Point
-    layout: table-of-contents
-    table_of_contents:
+[title]: - "OSPool ap7.ospool.osg-htc.org Access Point"
+[TOC]
 
-*This guide is for users who were **notified by the OSG team** that they will be working on 'ap7.ospool.osg-htc.org'*
+
+*This guide is for users who were **notified by a member of the OSG team** that their access point will be 'ap7.ospool.osg-htc.org'.*
 
 The major steps to getting started with this access point are:
 
@@ -16,30 +15,31 @@ This guide will discuss how to apply for an account and login to `ap7.ospool.osg
 ## Request Access to the OSPool `ap7.ospool.osg-htc.org` Access Point
 To request access to `ap7.ospool.osg-htc.org`, submit an application using the following steps:
 
-1. Go to the account [registration page](https://registry.cilogon.org/registry/co_petitions/start/coef:297). You will be redirected to the CILogon sign in page. Select your institution and use your institutional credentials to login.
+1. Go to the account [registration page](https://registry.cilogon.org/registry/co_petitions/start/coef:297). You will be redirected to the CILogon sign in page. Select your institution and use your institutional credentials to login. You will use these credentials later to login so it is important to remember the institution you use at this step. 
    
    {: .border .border-5 }
-   <img src="{{ 'connectbook/start/account/AP7/cilogon.png' | relative_url }}" class="img-fluid"/>
+   <img src="ap7-images/cilogon.png" class= "img-fluid"/>
+   
    
    If you have issues signing in using your institutional credentials, contact us at [support@osg-htc.org](mailto:support@osg-htc.org).
 
 
-1. Once you sign in, you will be redirected to the "User Enrollment for OSPool ap7.ospool.osg-htc.org Access Point" page. Click "Begin" and enter your name, and email address in the following page. In many cases, this information will be automatically populated. If desired, it is possible to manually edit any information automatically filled in. Once you have entered your information, click "SUBMIT".
+1. Once you sign in, you will be redirected to the "User Enrollment for OSPool ap7.ospool.osg-htc.org Access Point" page. Click "Begin" and enter your name and email address in the following page. In many cases, this information will be automatically populated. If desired, it is possible to manually edit any information automatically filled in. Once you have entered your information, click "SUBMIT".
 
    {: .border .border-5 }
-   <img src="{{ '/images/comanage-enrollment-form.png' | relative_url }}" class="img-fluid"/>
-
+   <img src="ap7-images/comanage-enrollment-form.png" class= "img-fluid"/>
 
 1. After submitting your application, you will receive an email from [registry@cilogon.org](mailto:registry@cilogon.org) to verify your email address. Click the link listed in the email to be redirected to a page confirm your invitation details. Click the "ACCEPT" button to complete this step.
 
    {: .border .border-5 }
-   <img src="{{ '/images/comanage-email-verification-form.png' | relative_url }}" class="img-fluid"/>
+   <img src="ap7-images/comanage-email-verification-form.png" class= "img-fluid"/>
+   
 
 ## Account Approval by a Research Computing Facilitator
 
-Once OSG staff receive your email verification, a Research Computing Facilitator will contact you within one business day to discuss activating your account. Our staff are also able to meet to provide personalized start-up guidance per your specific computational research goals and activate your account.
+Once OSG staff receive your email verification, a Research Computing Facilitator will contact you within one business day to arrange a short consultation and introduction to OSG resources. During this meeting, our staff will provide personalized start-up guidance per your specific computational research goals and activate your account.
 
-The Facilitator will approve your account and add your profile to any relevant OSG 'project' names.
+Following the meeting, the Facilitator will approve your account and add your profile to any relevant OSG ‘project’ names. Once your account is ready, the Facilitator will email you with your account detail including your login 'username'. 
 
 
 ## Login
@@ -80,24 +80,23 @@ The process below describes how to upload a public key to the registration websi
 
 1. Click your name at the top right. In the dropdown box, click "My Profile (OSG)" button.
 
-   {: .border .border-5 }
-   <img src="{{ '/images/ssh-homepage-dropdown.png' | relative_url }}" class="img-fluid"/>
+   {: .border .border-5}
+   <img src="ap7-images/ssh-homepage-dropdown.png" class= "img-fluid"/>
 
 1. On the right hand side of your profile, click "Authenticators" link.
 
    {: .border .border-5 }
-   <img src="{{ '/images/ssh-edit-profile.png' | relative_url }}" class="img-fluid"/>
+   <img src="ap7-images/ssh-edit-profile.png" class= "img-fluid"/>
 
 1. On the authenticators page, click the "Manage" button.
 
    {: .border .border-5 }
-   <img src="{{ '/images/ssh-authenticator-select.png' | relative_url }}" class="img-fluid"/>
+   <img src="ap7-images/ssh-authenticator-select.png" class= "img-fluid"/>
 
 1. On the new SSH Keys page, click "Add SSH Key" and browse your computer to upload your public SSH key.
    
    {: .border .border-5 }
-   <img src="{{ '/images/ssh-key-list.png' | relative_url }}" class="img-fluid"/>
-
+   <img src="ap7-images/ssh-key-list.png" class= "img-fluid"/>
 
 ## Get Help
 
