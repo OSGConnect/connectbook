@@ -2,7 +2,7 @@
 [TOC]
 
 
-*This guide is for users who were **notified by a member of the OSG team** that their access point will be 'ap7.ospool.osg-htc.org'.*
+*This guide is for users who were **notified by a member of the OSG team** that they will be working on the `ap7.ospool.osg-htc.org` access point.*
 
 The major steps to getting started with this access point are:
 
