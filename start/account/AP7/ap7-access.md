@@ -16,7 +16,7 @@ This guide will discuss how to apply for an account and login to `ap7.ospool.osg
 ## Request Access to the OSPool `ap7.ospool.osg-htc.org` Access Point
 To request access to `ap7.ospool.osg-htc.org`, submit an application using the following steps:
 
-1. Go to the account [registration page](https://registry.cilogon.org/registry/co_petitions/start/coef:263). You will be redirected to the CILogon sign in page. Select your institution and use your institutional credentials to login.
+1. Go to the account [registration page](https://registry.cilogon.org/registry/co_petitions/start/coef:297). You will be redirected to the CILogon sign in page. Select your institution and use your institutional credentials to login.
    
    {: .border .border-5 }
    <img src="{{ 'connectbook/start/account/AP7/cilogon.png' | relative_url }}" class="img-fluid"/>
@@ -76,7 +76,7 @@ It is also possible to authenticate using an SSH key pair, if you prefer. Loggin
 
 The process below describes how to upload a public key to the registration website. It assumes that a private/public key pair has already been generated. If you need to generate a key pair, see the "Step 1: Generate SSH Keys" section of this [OSG guide](https://support.opensciencegrid.org/support/solutions/articles/12000027675-generate-ssh-keys-and-activate-your-osg-login). 
 
-1. Return to the [Registration Page](https://registry.cilogon.org/registry/co_petitions/start/coef:263) and login using your institutional credentials if prompted.
+1. Return to the [Registration Page](https://registry.cilogon.org/registry/co_petitions/start/coef:297) and login using your institutional credentials if prompted.
 
 1. Click your name at the top right. In the dropdown box, click "My Profile (OSG)" button.
 
