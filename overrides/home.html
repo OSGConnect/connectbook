@@ -9,13 +9,48 @@
         font-size: 1rem;
     }
 
-    .child > ul {
-        padding: 0;
+    .top-hr {
+        font-size: 16px;
+    }
+
+    .child h3 {
+        margin-top: 1.2rem;
+    }
+
+    .sub-doc ul {
         list-style-type: none;
+        margin: 0;
+        padding-left: 12px;
+    }
+
+    .sub-doc li {
+        position: relative;
+        margin: .5rem 0;
+        display: flex;
+        align-items: center;
+        color: #6D6D6D;
+    }
+
+    .sub-doc ul li::before {
+        content: url("/assets/file-text.svg");
+        height: 24px; width: 18px;
+        transform: translatex(-50%);
+    }
+
+    .sub-doc a {
+        font-weight: 500;
+        transition: color .2s;
+        transition-timing-function: ease-in;
+    }
+
+    .sub-doc a:hover {
+        color: orange;
+        transition: color .2s;
+        transition-timing-function: ease-out;
     }
 
     .parent-doc {
-        padding: 0 20px;
+        padding: 0 80px;
         display: flex;
         flex-direction: column;
     }
@@ -90,12 +125,16 @@
     }
 
     .top-hr {
-        margin-top: 42px;
+        margin-top: 20px;
     }
 
     @media screen and (max-width:30em) {
         .tx-hero h1 {
             font-size: 1.4rem
+        }
+
+        .parent-doc {
+            padding: 0 20px;
         }
     }
 
@@ -117,7 +156,6 @@
             width: 48.14815%;
             float: left;
             margin-right: 3.7037%;
-            margin-bottom: 20px;
         }
 
         .tx-hero {
@@ -163,7 +201,7 @@
         </div>
         <div class="tx-hero__content">
           <h1>OSG Connect Documentation</h1>
-          <p>OSG Connect offers researchers fair-share access to the capacity provided by the OSPool and the OSDF, with options for researchers to Bring Their Own Capacity.</p>
+          <p><b>OSG Connect offers researchers access to compute capacity provided by the <a href="https://osg-htc.org/services/open_science_pool.html">OSPool</a></b></p>
           <a href="{{ page.next_page.url | url }}" title="{{ page.next_page.title | striptags }}" class="md-button md-button--primary">
             Get started
           </a>
