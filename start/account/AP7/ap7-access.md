@@ -29,7 +29,7 @@ To request access to `ap7.ospool.osg-htc.org`, submit an application using the f
    {: .border .border-5 }
    <img src="ap7-images/comanage-enrollment-form.png" class= "img-fluid"/>
 
-1. After submitting your application, you will receive an email from [registry@cilogon.org](mailto:registry@cilogon.org) to verify your email address. Click the link listed in the email to be redirected to a page confirm your invitation details. Click the "ACCEPT" button to complete this step.
+3. After submitting your application, you will receive an email from [registry@cilogon.org](mailto:registry@cilogon.org) to verify your email address. Click the link listed in the email to be redirected to a page confirm your invitation details. Click the "ACCEPT" button to complete this step.
 
    {: .border .border-5 }
    <img src="ap7-images/comanage-email-verification-form.png" class= "img-fluid"/>
