@@ -117,6 +117,18 @@ configuration step that will install the software to this folder:
 where `username` should be replaced with your OSG Connect username and `path` replaced with the 
 path to the directory you created for your software installation.
 
+## Watch out for hardware feature detection
+
+Some software builds might try to optimize the software for the particular host you are
+building on. In general this is a good idea (optimized code will perform better), but be
+aware that not all execution endpoints on OSG are the same. If your software picks up
+hardware features such as AVX/AVX2, you might have to ensure the jobs are running on
+hardware with those features. For example, if your software requires AVX2:
+
+    requirements = (OSGVO_OS_STRING == "RHEL 7") && (HAS_AVX2 == True)
+
+Please see [Control Where Your Jobs Run / Job Requirements](5000633467)
+
 ## Use Your Software
 
 When submitting jobs, you will need to transfer a copy of your compiled software, 
