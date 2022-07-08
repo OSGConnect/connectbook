@@ -98,6 +98,7 @@ The process below describes how to upload a public key to the registration websi
    {: .border .border-5 }
    <img src="ap7-images/ssh-key-list.png" class= "img-fluid"/>
 
+You can now log in to Access Point, ap7.ospool.osg-htc.org from the terminal, using `ssh username@submit6.chtc.wisc.edu`. When you log in, instead of being prompted with a web link, you should either authenticate automatically or be asked for your ssh key passphrase to complete logging in.
 ## Get Help
 
 For questions regarding logging in or creating an account, contact us at  [support@osg-htc.org](mailto:support@osg-htc.org).
