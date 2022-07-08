@@ -6,9 +6,9 @@
 
 The major steps to getting started with this access point are:
 
-* applying for an OSPool `ap7.ospool.osg-htc.org` Access Point account 
-* have your account approved by an OSG Team member
-* logging into `ap7.ospool.osg-htc.org`
+1. Applying for an OSPool `ap7.ospool.osg-htc.org` Access Point account 
+2. Have your account approved by an OSG Team member
+3. Log in to `ap7.ospool.osg-htc.org`
 
 This guide will discuss how to apply for an account and login to `ap7.ospool.osg-htc.org`.
 
