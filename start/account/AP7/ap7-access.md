@@ -72,7 +72,7 @@ To authenticate using this approach:
 
 ### Option 2: Log in via SSH Key Pair Authentication
 
-It is also possible to authenticate using an SSH key pair, if you prefer. Logging in using SSH keys does not require access to an internet browser to login into the OSG Access Point, `ap7.ospool.osg-htc.org`. 
+It is also possible to authenticate using an SSH key pair, if you prefer. Logging in using SSH keys does not require access to an internet browser to log in into the OSG Access Point, `ap7.ospool.osg-htc.org`. 
 
 The process below describes how to upload a public key to the registration website. It assumes that a private/public key pair has already been generated. If you need to generate a key pair, see the "Step 1: Generate SSH Keys" section of this [OSG guide](https://support.opensciencegrid.org/support/solutions/articles/12000027675-generate-ssh-keys-and-activate-your-osg-login). 
 
