@@ -70,7 +70,7 @@ To authenticate using this approach:
 4. Return to your terminal, and type 'Enter' to complete the login process. 
 
 
-### Option 2: Login via SSH Key Pair Authentication
+### Option 2: Log in via SSH Key Pair Authentication
 
 It is also possible to authenticate using an SSH key pair, if you prefer. Logging in using SSH keys does not require access to an internet browser to login into the OSG Access Point, `ap7.ospool.osg-htc.org`. 
 
