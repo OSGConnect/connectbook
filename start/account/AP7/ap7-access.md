@@ -88,7 +88,7 @@ The process below describes how to upload a public key to the registration websi
    {: .border .border-5 }
    <img src="ap7-images/ssh-edit-profile.png" class= "img-fluid"/>
 
-1. On the authenticators page, click the "Manage" button.
+4. On the authenticators page, click the "Manage" button.
 
    {: .border .border-5 }
    <img src="ap7-images/ssh-authenticator-select.png" class= "img-fluid"/>
