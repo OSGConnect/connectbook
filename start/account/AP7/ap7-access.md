@@ -42,7 +42,7 @@ Once OSG staff receive your email verification, a Research Computing Facilitator
 Following the meeting, the Facilitator will approve your account and add your profile to any relevant OSG ‘project’ names. Once your account is ready, the Facilitator will email you with your account details including the 'username' you will use to log in to the `ap7.ospool.osg-htc.org` access point. 
 
 
-## Login
+## Log in
 
 Once your account has been added to the `ap7.ospool.osg-htc.org` access point, you will be able to log in using a terminal or SSH program. Logging in requires authenticating your credientials using one of two options: __web authentication__ or __SSH key pair authentication__. Additional information on this process will be provided during and/or following your discussion with a Research Computing Facilitator.
 
