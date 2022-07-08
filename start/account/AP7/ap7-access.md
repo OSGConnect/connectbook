@@ -39,7 +39,7 @@ To request access to `ap7.ospool.osg-htc.org`, submit an application using the f
 
 Once OSG staff receive your email verification, a Research Computing Facilitator will contact you within one business day to arrange a short consultation and introduction to OSG resources. During this meeting, our staff will provide personalized start-up guidance per your specific computational research goals and activate your account.
 
-Following the meeting, the Facilitator will approve your account and add your profile to any relevant OSG ‘project’ names. Once your account is ready, the Facilitator will email you with your account detail including your login 'username'. 
+Following the meeting, the Facilitator will approve your account and add your profile to any relevant OSG ‘project’ names. Once your account is ready, the Facilitator will email you with your account details including the 'username' you will use to log in to the `ap7.ospool.osg-htc.org` access point. 
 
 
 ## Login
