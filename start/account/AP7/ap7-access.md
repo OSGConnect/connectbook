@@ -78,7 +78,7 @@ The process below describes how to upload a public key to the registration websi
 
 1. Return to the [Registration Page](https://registry.cilogon.org/registry/co_petitions/start/coef:297) and login using your institutional credentials if prompted.
 
-1. Click your name at the top right. In the dropdown box, click "My Profile (OSG)" button.
+2. Click your name at the top right. In the dropdown box, click "My Profile (OSG)" button.
 
    {: .border .border-5}
    <img src="ap7-images/ssh-homepage-dropdown.png" class= "img-fluid"/>
