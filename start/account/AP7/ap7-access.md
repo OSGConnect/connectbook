@@ -24,7 +24,7 @@ To request access to `ap7.ospool.osg-htc.org`, submit an application using the f
    If you have issues signing in using your institutional credentials, contact us at [support@osg-htc.org](mailto:support@osg-htc.org).
 
 
-1. Once you sign in, you will be redirected to the "User Enrollment for OSPool ap7.ospool.osg-htc.org Access Point" page. Click "Begin" and enter your name and email address in the following page. In many cases, this information will be automatically populated. If desired, it is possible to manually edit any information automatically filled in. Once you have entered your information, click "SUBMIT".
+2. Once you sign in, you will be redirected to the "User Enrollment for OSPool ap7.ospool.osg-htc.org Access Point" page. Click "Begin" and enter your name and email address in the following page. In many cases, this information will be automatically populated. If desired, it is possible to manually edit any information automatically filled in. Once you have entered your information, click "SUBMIT".
 
    {: .border .border-5 }
    <img src="ap7-images/comanage-enrollment-form.png" class= "img-fluid"/>
