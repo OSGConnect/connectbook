@@ -93,7 +93,7 @@ The process below describes how to upload a public key to the registration websi
    {: .border .border-5 }
    <img src="ap7-images/ssh-authenticator-select.png" class= "img-fluid"/>
 
-1. On the new SSH Keys page, click "Add SSH Key" and browse your computer to upload your public SSH key.
+5. On the new SSH Keys page, click "Add SSH Key" and browse your computer to upload your public SSH key.
    
    {: .border .border-5 }
    <img src="ap7-images/ssh-key-list.png" class= "img-fluid"/>
