@@ -351,5 +351,5 @@ from `/cvmfs/stash.osgstorage.org/user/xd-login/public/`
 
 XSEDE users of OSG may get technical support by
 contacting OSG Research Facilitation staff at email
-<support@opensciencegrid.org>.
+<support@osg-htc.org>.
 Users may also contact the [XSEDE helpdesk](https://portal.xsede.org/help-desk).

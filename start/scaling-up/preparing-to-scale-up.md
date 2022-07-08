@@ -19,7 +19,7 @@ turnaround time for completing a whole batch.
 
 If you have questions 
 or are unsure if and how your work can be broken up, please contact us at 
-[support@opensciencegrid.org](mailto:support@opensciencegrid.org)
+[support@osg-htc.org](mailto:support@osg-htc.org)
 
 This guide will describe best practices and general tips for testing 
 your job resource requests **before** scaling up to submit your full set of jobs. 
@@ -200,4 +200,4 @@ workflow tool.
 
 # Get Help
 
-For assistance or questions, please email the OSG Research Facilitation team  at [support@opensciencegrid.org](mailto:support@opensciencegrid.org).
+For assistance or questions, please email the OSG Research Facilitation team  at [support@osg-htc.org](mailto:support@osg-htc.org).

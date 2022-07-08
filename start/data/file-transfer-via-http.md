@@ -47,5 +47,5 @@ files from other locations (e.g. within `/home`) can be provided in the list. Fo
 
 # Get Help
 
-For assistance or questions, please email the OSG Research Facilitation team  at [support@opensciencegrid.org](mailto:support@osg-htc.org) or visit the [help desk and community forums](http://support.osg-htc.org).
+For assistance or questions, please email the OSG Research Facilitation team  at [support@osg-htc.org](mailto:support@osg-htc.org) or visit the [help desk and community forums](http://support.osg-htc.org).
 

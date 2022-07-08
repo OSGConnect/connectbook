@@ -7,7 +7,7 @@
 
 This page covers the use of distributed environment modules on RHEL7 compute nodes in the OSG computing environment. Environment modules provide users with an easy way to access different versions of software, libraries, and compilers. 
 
-Currently, OSG Connect login nodes and a majority of OSG compute nodes use the RHEL7 operating system. However, given the distributed nature of the OSG, there are at times a number of RHEL6 and RHEL8 compute nodes also available to users. For users that require, or who can also use, RHEL6 compute nodes for their applications, please [contact us](mailto:support@opensciencegrid.org) to learn more about modules specifically available to RHEL6 compute nodes.
+Currently, OSG Connect login nodes and a majority of OSG compute nodes use the RHEL7 operating system. However, given the distributed nature of the OSG, there are at times a number of RHEL6 and RHEL8 compute nodes also available to users. For users that require, or who can also use, RHEL6 compute nodes for their applications, please [contact us](mailto:support@osg-htc.org) to learn more about modules specifically available to RHEL6 compute nodes.
 
 # List Available Modules on OSG Connect
 

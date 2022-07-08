@@ -3,7 +3,7 @@
 A large number of software packages can be used by compiling a portable installation or using a container 
 (many community sofwares are already available in authoritative containers).  If you believe none of
 these options ([described here](5000634395)) are applicable for your software, please get in touch with a simple email to
-[support@opensciencegrid.org][support] that describes:
+[support@osg-htc.org][support] that describes:
 1. the software name, version, and/or website with download and install instructions
 2. what science each job does, using the software
 3. what you've tried so far (if anything), and what indications of issues you've experienced

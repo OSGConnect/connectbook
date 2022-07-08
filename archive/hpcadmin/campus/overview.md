@@ -27,6 +27,6 @@ CE based on HTCondor.
 
 If you are interested in having your campus HPC
 center join the Open Science Pool, contact us at
-[support@opensciencegrid.org](mailto:support@opensciencegrid.org)
+[support@osg-htc.org](mailto:support@osg-htc.org)
 and we'll help you determine the best option and help you get
 started.

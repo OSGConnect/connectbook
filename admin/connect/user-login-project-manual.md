@@ -422,7 +422,7 @@ We recommend the users to create new project for their research work.  You may w
 http://support.opensciencegrid.org/support/solutions/articles/5000634360-start-a-project-with-osg-connect 
 
 Contact Us:
-If you or your users have questions about OSG Connect or assistance in getting started, please contact us at support@opensciencegrid.org, or use the "Email Us" link from the web site or contact me.
+If you or your users have questions about OSG Connect or assistance in getting started, please contact us at support@osg-htc.org, or use the "Email Us" link from the web site or contact me.
 
 Thank you -->
 
