@@ -47,7 +47,7 @@ Following the meeting, the Facilitator will approve your account and add your pr
 Once your account has been added to the `ap7.ospool.osg-htc.org` access point, you will be able to log in using a terminal or SSH program. Logging in requires authenticating your credientials using one of two options: __web authentication__ or __SSH key pair authentication__. Additional information on this process will be provided during and/or following your discussion with a Research Computing Facilitator.
 
 
-### Option 1: Login via Web Authentication
+### Option 1: Log in via Web Authentication
 
 Logging in via web authentication requires no preparatory steps beyond having access to an internet browser. 
 
