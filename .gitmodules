@@ -94,6 +94,3 @@
 [submodule "tutorials/tutorial-organizing"]
 	path = docs/managing_htc_workloads_on_osg_connect/submitting_htc_workloads_with_htcondor/tutorial-organizing
 	url = https://github.com/OSGConnect/tutorial-organizing
-[submodule "user-documentation"]
-	path = user-documentation
-	url = https://github.com/osg-htc/user-documentation.git
