@@ -13,7 +13,6 @@ theme:
   favicon: assets/OSG_Logo.svg
   custom_dir: overrides
 
-
 markdown_extensions:
   - admonition
   - codehilite:
