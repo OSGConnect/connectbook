@@ -12,6 +12,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          submodules: 'recursive'
       - name: Build MkDocs pages
         uses: docker://squidfunk/mkdocs-material:8.2.8
         timeout-minutes: 1
