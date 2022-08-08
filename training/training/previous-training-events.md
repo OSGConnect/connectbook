@@ -3,7 +3,7 @@
 
 ## Overview
 
-We offer on-site training and tutorials on a periodic basis, usually at conferences (including the annual OSG All Hands Meeting) where many researchers and/or research computing staff are gathered. Below are some trainings for which the materials were public. (Apologies if any links/materials aren't accessible anymore, as some of these are external to our own web location. Feel free to let us know via support@opensciencegrid.org, in case we can fix/remove them.)
+We offer on-site training and tutorials on a periodic basis, usually at conferences (including the annual OSG All Hands Meeting) where many researchers and/or research computing staff are gathered. Below are some trainings for which the materials were public. (Apologies if any links/materials aren't accessible anymore, as some of these are external to our own web location. Feel free to let us know via support@osg-htc.org, in case we can fix/remove them.)
 
 ## Workshops/Tutorials
 

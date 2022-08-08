@@ -42,7 +42,7 @@ add you to it, or add you to an existing project when your account is approved.
 ### Join a Project
 
 If you need to join an existing project (you can be a member of more than one), please email the 
-OSG team (support@opensciencegrid.org) with your name and the project 
+OSG team (support@osg-htc.org) with your name and the project 
 you wish to join, with PI in CC to confirm.
 
 ## "Set" your OSG Connect project

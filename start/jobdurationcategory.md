@@ -37,14 +37,14 @@ and then review actual job execution durations in the job log files.
 If the user expects potentially significant variation in job durations within a single batch, a longer JobDurationCategory may be warranted relative to the duration of test jobs. Or, if variations in job duration may be predictable, the user may choose to submit different 
 subsets of jobs with different Job Duration Categories.
     
-**OSG Facilitators have a lot of experience with approaches for achieving shorter jobs (e.g. breaking up work into shorter, more numerous jobs; self-checkpointing; automated sequential job submissions; etc.) Get in touch, and we'll help you work through a solution!! support@opensciencegrid.org**
+**OSG Facilitators have a lot of experience with approaches for achieving shorter jobs (e.g. breaking up work into shorter, more numerous jobs; self-checkpointing; automated sequential job submissions; etc.) Get in touch, and we'll help you work through a solution!! support@osg-htc.org**
 
 ## Maximum Allowed Duration
 Jobs in each category will be placed on hold in the queue if they run longer than their Maximum Allowed Duration 
 (starting Tuesday, Nov 16, 2021). In that case, the user may remove and resubmit the jobs, identifying a longer category. 
 
 **Jobs that test as longer than 20 hours are not a good fit for the OSPool resources, and should not be submitted prior to contacting** 
-[support@opensciencegrid.org](mailto:support@opensciencegrid.org) **to discuss options**. The Maximum Allowed Durations 
+[support@osg-htc.org](mailto:support@osg-htc.org) **to discuss options**. The Maximum Allowed Durations 
 are longer than the Expected Job Durations in order to accommodate CPU speed variations across OSPool computing resources, 
 as well as other contributions to job duration that may not be apparent in smaller test batches. 
 Similarly, **Long** jobs held after running longer 
@@ -56,4 +56,4 @@ Jobs that [self-checkpoint](https://htcondor.readthedocs.io/en/latest/users-manu
 at least every 10 hours are an excellent way for users to run jobs that would otherwise be longer in total execution time
 than the durations listed above. Jobs that complete a checkpoint at least as often as allowed for their JobDurationCategory will not be held.
 
-We are excited to help you think through and implement self-checkpointing. Get in touch via support@opensciencegrid.org if you have questions. :)
+We are excited to help you think through and implement self-checkpointing. Get in touch via support@osg-htc.org if you have questions. :)

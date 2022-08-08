@@ -5,7 +5,7 @@
    
 **Who is eligible to become a user of the OSG Connect service?**
 
-Any researcher affiliated with a research project associated with a United states institution (college, university, national laboratory, or non-profit organizations) is an OSG Connect user. Researchers affiliated outside of the U.S. who are collaborating on such a U.S.-based project may be sponsored by someone responsible for the project. Researchers outside of the U.S. are asked to first [contact us](mailto:support@opensciencegrid.org) directly to discuss membership.
+Any researcher affiliated with a research project associated with a United states institution (college, university, national laboratory, or non-profit organizations) is an OSG Connect user. Researchers affiliated outside of the U.S. who are collaborating on such a U.S.-based project may be sponsored by someone responsible for the project. Researchers outside of the U.S. are asked to first [contact us](mailto:support@osg-htc.org) directly to discuss membership.
 
 **How do I become an user of OSG Connect?**
 
@@ -74,7 +74,7 @@ If you do not want your data to be publicly downloadable, and it’s small enoug
 
 **Can I get a quota increase?**
 
-[Contact us](mailto:support@opensciencegrid.org) if you think you'll need a quota increase for `/home` or `/public` to accommodate a set of concurrently-running jobs. We can suppport very large amounts of data, the default quotas are just a starting point.
+[Contact us](mailto:support@osg-htc.org) if you think you'll need a quota increase for `/home` or `/public` to accommodate a set of concurrently-running jobs. We can suppport very large amounts of data, the default quotas are just a starting point.
 
 **Will I get notified about hitting quota limits?**
 
