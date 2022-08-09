@@ -3,7 +3,7 @@ INHERIT: ./user-documentation/data/configs/osgconnect.yml
 docs_dir: ./user-documentation/data/docs/osgconnect
 
 site_name: OSG Connect Docs
-site_url: "https://osg-htc.org/"
+site_url: "https://osg-htc.org/connectbook/"
 repo_name: osg-htc/connectbook
 theme:
   features:
