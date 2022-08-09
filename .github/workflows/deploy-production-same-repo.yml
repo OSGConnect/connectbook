@@ -1,0 +1,37 @@
+name: Deploy static MkDocs pages
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy-mkdocs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          submodules: 'recursive'
+
+      - name: Initialize GH User
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+
+      - name: Build MkDocs pages
+        if: startsWith(github.repository, 'osg-htc/')
+        uses: docker://squidfunk/mkdocs-material:8.2.8
+        with:
+          args: >-
+            build
+            --verbose
+
+      - name: Deploy to 'static' branch
+        run: |
+          # Commit the build then use 'git subtree' to create a branch with just the site contents
+          git add site -f
+          git commit -m "Build Static HTML"
+          git checkout -b static `git subtree split --prefix site master`
+
+          # Push to Production
+          git push --set-upstream origin static --force
