@@ -1,0 +1,75 @@
+name: Update the documentation website
+
+on:
+  repository_dispatch:
+    types:
+      - dispatch-build
+
+jobs:
+
+  Update-Submodules:
+    runs-on: ubuntu-latest
+    if: startsWith(github.repository, 'osg-htc/')
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        submodules: 'recursive'
+        fetch-depth: 0
+
+    - name: Pull down submodules
+      run: |
+        git checkout -b master
+        git config user.name "GitHub Actions"
+        git config user.email "actions@github.com"
+        git submodule update --remote --merge
+        git add .
+        git commit -m "Update Documentation"
+        git push
+
+  Build-Static-Site:
+    runs-on: ubuntu-latest
+    if: startsWith(github.repository, 'osg-htc/')
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          submodules: 'recursive'
+
+      - name: Initialize GH User
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+
+      - name: Build MkDocs pages
+        if: startsWith(github.repository, 'osg-htc/')
+        uses: docker://squidfunk/mkdocs-material:8.2.8
+        with:
+          args: >-
+            build
+            --verbose
+
+      - name: Deploy to 'static' branch
+        run: |
+          # Commit the build then use 'git subtree' to create a branch with just the site contents
+          git add site -f
+          git commit -m "Build Static HTML"
+          git checkout -b static `git subtree split --prefix site master`
+
+          # Push to Production
+          git push --set-upstream origin static --force
+
+  Trigger-New-Documentation-Release:
+    runs-on: ubuntu-latest
+    if: startsWith(github.repository, 'osg-htc/')
+    env:
+      OWNER: osg-htc
+      REPO: osg-portal
+      WORKFLOW_ID: release-documentation-update.yml
+    steps:
+      - name: Trigger Documentation Release
+        run: |
+          curl \
+            -X POST \
+            -H "Accept: application/vnd.github+json" \ 
+            -H "Authorization: Bearer ${{ secrets.REPO_ACCESS_TOKEN }}" \
+            https://api.github.com/repos/${{secrets.OWNER}}/${{secrets.REPO}}/actions/workflows/${{secrets.WORKFLOW_ID}}/dispatches
