@@ -16,8 +16,8 @@ jobs:
 
     - name: Pull, Merge, Push submodules
       run: |
-        git config user.name "GitHub Actions"
-        git config user.email "actions@github.com"
+        git config --global user.name "GitHub Actions"
+        git config --global user.email "actions@github.com"
         
         git submodule update --remote --merge
         
@@ -73,9 +73,4 @@ jobs:
     steps:
       - name: Trigger Documentation Release
         run: |
-          curl \
-            -X POST \
-            -H "Accept: application/vnd.github+json" \ 
-            -H "Authorization: Bearer ${{ secrets.REPO_ACCESS_TOKEN }}" \
-            https://api.github.com/repos/${{secrets.OWNER}}/${{secrets.REPO}}/actions/workflows/${{secrets.WORKFLOW_ID}}/dispatches \
-            -d '{"ref":"master"}'
+          curl -X POST -H "Accept: application/vnd.github+json" -H "Authorization: Bearer ${{ secrets.REPO_ACCESS_TOKEN }}" https://api.github.com/repos/${{secrets.OWNER}}/${{secrets.REPO}}/actions/workflows/${{secrets.WORKFLOW_ID}}/dispatches -d '{"ref":"master"}'
