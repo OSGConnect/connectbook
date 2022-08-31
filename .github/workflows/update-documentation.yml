@@ -1,9 +1,7 @@
 name: Update the documentation website
 
 on:
-  repository_dispatch:
-    types:
-      - dispatch-build
+  workflow_dispatch:
 
 jobs:
 
@@ -16,19 +14,25 @@ jobs:
         submodules: 'recursive'
         fetch-depth: 0
 
-    - name: Pull down submodules
+    - name: Pull, Merge, Push submodules
       run: |
-        git checkout -b master
         git config user.name "GitHub Actions"
         git config user.email "actions@github.com"
+        
         git submodule update --remote --merge
-        git add .
-        git commit -m "Update Documentation"
-        git push
+        
+        if [ -n "$(git status --porcelain)" ]; then 
+          git add .
+          git commit -m "Update Documentation"
+          git push
+        else
+          echo "no changes";
+        fi
 
   Build-Static-Site:
     runs-on: ubuntu-latest
     if: startsWith(github.repository, 'osg-htc/')
+    needs: Update-Submodules
     steps:
       - uses: actions/checkout@v2
         with:
@@ -62,9 +66,9 @@ jobs:
     runs-on: ubuntu-latest
     if: startsWith(github.repository, 'osg-htc/')
     env:
-      OWNER: osg-htc
-      REPO: osg-portal
-      WORKFLOW_ID: release-documentation-update.yml
+      OWNER: "osg-htc"
+      REPO: "osg-portal"
+      WORKFLOW_ID: "release-documentation-update.yml"
     steps:
       - name: Trigger Documentation Release
         run: |
@@ -72,4 +76,5 @@ jobs:
             -X POST \
             -H "Accept: application/vnd.github+json" \ 
             -H "Authorization: Bearer ${{ secrets.REPO_ACCESS_TOKEN }}" \
-            https://api.github.com/repos/${{secrets.OWNER}}/${{secrets.REPO}}/actions/workflows/${{secrets.WORKFLOW_ID}}/dispatches
+            https://api.github.com/repos/${{secrets.OWNER}}/${{secrets.REPO}}/actions/workflows/${{secrets.WORKFLOW_ID}}/dispatches \
+            -d '{"ref":"master"}'
