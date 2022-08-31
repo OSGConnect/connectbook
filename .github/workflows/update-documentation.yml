@@ -65,6 +65,7 @@ jobs:
   Trigger-New-Documentation-Release:
     runs-on: ubuntu-latest
     if: startsWith(github.repository, 'osg-htc/')
+    needs: [Build-Static-Site, Update-Submodules]
     env:
       OWNER: "osg-htc"
       REPO: "osg-portal"
