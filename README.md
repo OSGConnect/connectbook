@@ -7,3 +7,8 @@ If you are here to edit something you are likely in the wrong place.
 To edit the OSG Portal look here -> https://github.com/osg-htc/osg-portal
 
 To edit User Documentation look here -> https://github.com/osg-htc/user-documentation
+
+## For the Minority
+
+This repository hosts the code for building the static Mkdocs website that is hosted at portal.osg-htc.org/documentation. 
+
