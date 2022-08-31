@@ -73,4 +73,4 @@ jobs:
     steps:
       - name: Trigger Documentation Release
         run: |
-          curl -X POST -H "Accept: application/vnd.github+json" -H "Authorization: Bearer ${{ secrets.REPO_ACCESS_TOKEN }}" https://api.github.com/repos/${{secrets.OWNER}}/${{secrets.REPO}}/actions/workflows/${{secrets.WORKFLOW_ID}}/dispatches -d '{"ref":"master"}'
+          curl -X POST -H "Accept: application/vnd.github+json" -H "Authorization: Bearer ${{ secrets.REPO_ACCESS_TOKEN }}" https://api.github.com/repos/${{env.OWNER}}/${{env.REPO}}/actions/workflows/${{env.WORKFLOW_ID}}/dispatches -d '{"ref":"master"}'
