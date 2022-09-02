@@ -1,4 +1,4 @@
-[title]: Running OSG jobs on XSEDE
+[title]: Using the OSPool via XSEDE Allocations
 [TOC]
 
 ## Overview

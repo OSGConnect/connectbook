@@ -2,6 +2,8 @@
 
 [TOC]
 
+*As of June 2022, users are no longer recommended to transfer large output files using `stashcp` and instead should use HTCondor's `transfer_output_remaps` feature. More information on this transition can be found below. Please direct any questions about this change to support@osg-htc.org*
+
 # Overview
 
 For input files >100MB and output files >1GB in size, the default HTCondor file transfer mechanisms
@@ -24,7 +26,7 @@ the `/public` location **must** be used for:
 	- Any **input data or software larger than 100MB** for 
 	transfer to jobs using OSG caching tools
 	- Any per-job **output >1GB and <10GB**, which 
-	should ONLY be transferred back to the origin using a `stashcp` command within the job executable. 
+	should ONLY be transferred back to the origin by setting `transfer_output_remaps` in the job's submit file. 
 
 2. **User must never submit jobs from the `/public` location,** and should continue to 
 ONLY submit jobs from within their `/home` directory. All `log`, `error`, `output` 
@@ -32,9 +34,7 @@ files and any other files smaller than the above values should ONLY ever
 exist within the user's /home directory, unless otherwise directed by an OSG staff member. 
 
 	Thus, **files within the `/public` location should only be referenced within 
-	the submit file by using the methods described further below**, and should 
-	never be listed for direct HTCondor transfer via `transfer_input_files`, 
-	`transfer_output_files`, or `transfer_output_remaps`.
+	the submit file by using the methods described further below**.
 	
 	The `/public` location is a mount of the OSG Connect origin filesystem. It is mounted to the 
 	OSG Connect login nodes only so that users can appropriately stage large job inputs or retrieve outputs via 
@@ -97,19 +97,26 @@ have access to the Open Science Data Federation.
 
 		stash:///osgconnect/public/<username>/samples/sample01.dat
 
-# Use `stashcp` to Transfer Larger Job Outputs to the Data Origin
+# Use `transfer_output_remaps` to Transfer Larger Job Outputs to the Data Origin
 
-For output, users should use the **`stashcp`** command within their job executable, 
+For output, users should use the **`transfer_output_remaps`** option within their job's submit file, 
 which will transfer the user's specified file to the specific location in the data origin. 
 
-[Remember that you should NEVER list a `/public` location
-within the submit file (e.g. in 'transfer_output_remaps`) or submit jobs from within `/public`](https://support.opensciencegrid.org/support/solutions/articles/12000002985).
+By using `transfer_output_remaps`, it is possible to specify what path to save a file to and what name to save it under. Using this approach, it is possible to save files back to specific locations in `/public` (as well as your `/home` directory, if desired).
 
-1. Add the necessary details to your HTCondor submit file to tell 
-HTCondor that your jobs must run on executes nodes that 
-have access to the `stashcp` module (among other 
--supported modules). Note that the output files 
-are NOT listed anywhere in the submit file for transfer purposes.
+The syntax for `transfer_output_remaps` is: 
+
+```
+transfer_output_remaps = "Output.txt = path/to/save/file/under/output.txt; Output.txt = path/to/save/file/under/RenamedOutput.txt"
+```
+
+When saving large output files back to `/public`, the path provided will look like: 
+
+```
+transfer_output_remaps = "Output.txt = stash:///osgconnect/public/<username>/Output.txt"
+```	
+	
+1. Using `transfer_output_remaps`, tell HTCondor which output files need to be transferred back to your `/public` directory and what name you want these files to be saved under. 
 
 		# submit file example for large output
 		
@@ -117,76 +124,49 @@ are NOT listed anywhere in the submit file for transfer purposes.
 		error = my_job.$(Cluster).$(Process).err
 		output = my_job.$(Cluster).$(Process).out
 		
-		requirements = (OSGVO_OS_STRING =?= "RHEL 7") && (HAS_MODULES =?= true)
+		requirements = (OSGVO_OS_STRING =?= "RHEL 7")
+		
+		transfer_output_remaps = "Output.txt = stash:///osgconnect/public/<username>/Output.txt"
 		
 		...other submit file details...
 
-2. Add a `stashcp` command at the end of your executable to transfer the data files back to the OSG Connect data origin (within `/public`). You will 
-need to prepend your `/public` directory path with `stash:///osgconnect` as follows:
+2. If you have several output files being sent to `/public`, you may wish to define a new submit file variable to avoid having to re-write the `stash:///` path repeatedly. For example, 
 
-		#!/bin/bash
-	
-		# other commands to be executed in job: 
+		# submit file example for large output
 		
-		# transfer large output to public
-		stashcp <filename> stash:///osgconnect/public/username/path/<filename>
+		log = my_job.$(Cluster).$(Process).log
+		error = my_job.$(Cluster).$(Process).err
+		output = my_job.$(Cluster).$(Process).out
+		
+		requirements = (OSGVO_OS_STRING =?= "RHEL 7")
+		
+		STASH_LOCATION = stash:///osgconnect/public/<username>
+		transfer_output_remaps = "file1.txt = $(STASH_LOCATION)/file1.txt; file2.txt = $(STASH_LOCATION)/file2.txt; file3.txt = $(STASH_LOCATION)/file3.txt"
+		
+		...other submit file details...
 
-	For example, if you wish to transfer `output.dat` to the directory 
-	`/public/<username>/output/` then the `stash` command would be:
-
-		stashcp output.dat stash:///osgconnect/public/<username>/output/output.dat
-
-	**Note that the output file name must also be included at the end of the 
-	`/public` path where the file will be transferred, which also allows you to rename the file.**
 
 <!--
 As described in [Important Considerations](#important-considerations), 
 once a file is added to `/public` any changes and modifications made 
 to the file will not be propagated due to caching. In the event that your 
 jobs need to be resubmitted or restarted, we strongly recommend that your 
-larger ouptut files be given unique names in `/public`. If your jobs aren't already 
-structured to provide unique output filenames, one option is to include 
-[epoch](https://en.wikipedia.org/wiki/Unix_time) time in the output file name 
-using the following example:
+larger output files be given unique names in `/public`. If your jobs aren't already 
+structured to provide unique output filenames, several options are to include 
+[epoch](https://en.wikipedia.org/wiki/Unix_time) time, cluster and process ID, or other unique variables. For example, renaming a file to contain cluster and process ID information could look like: 
 
-	#!/bin/bash
+	transfer_output_remaps = "file.txt = $(STASH_LOCATION)/$(ClusterId)_$(ProcId)_file.txt"
 	
-	# commands to be executed in job     
-	
-	# transfer large output to public
-	# add epoch time to output file name to make unqiue
-	unique=`date +%s`
-	stashcp file_name stash:///osgconnect/public/username/path/$unique.file_name
-	
-If you would instead like a more detailed date and time stamp added to the 
-file name, you can modify the `date` command. One alternative to consider is 
-``unique=`date +"%Y-%m-%d.%H-%M-%S"` `` which will set `unique` to 
-`year-month-day.hour-minute-seconds`.
+Cluster ID and Process ID are HTCondor pre-defined variables. Additional pre-defined variables can be found in the (HTCondor manual)[https://readthedocs.org/projects/htcondor/downloads/pdf/latest/].
+
 --->
 
-# Stachcp Command Manual
+# Phase out of Stashcp command
 
-More usage options are described in the stashcp help message:
-
-	$ stashcp -h
-	Usage: stashcp [options] source destination
-
-	Options:
-	  -h, --help            show this help message and exit
-	  -d, --debug           debug
-	  -r                    recursively copy
-	  --closest             Return the closest cache and exit
-	  -c CACHE, --cache=CACHE
-							Cache to use
-	  -j CACHES_JSON, --caches-json=CACHES_JSON
-							The JSON file containing the list of caches
-	  --methods=METHODS     Comma separated list of methods to try, in order.
-							Default: cvmfs,xrootd,http
-	  -t TOKEN, --token=TOKEN
-							Token file to use for reading and/or writing
+Historically, output files could be transferred from a job to a `/public` location using the `stashcp` command within the job's executable, however, this mechanism is no longer encouraged for OSPool users. Instead, jobs should use `transfer_output_remaps` (an HTCondor feature) to transfer output files to `/public`. By using `transfer_output_remaps`, HTCondor will manage the output data transfer for your jobs. Data transferred via HTCondor is more likely to be transferred successfully and errors with transfer are more likely to be reported to the user. 
 
 # Get Help
 
 For assistance or questions, please email the OSG Research Facilitation team 
-at [support@opensciencegrid.org](mailto:support@opensciencegrid.org) or visit 
+at [support@osg-htc.org](mailto:support@osg-htc.org) or visit 
 the [help desk and community forums](http://support.opensciencegrid.org).

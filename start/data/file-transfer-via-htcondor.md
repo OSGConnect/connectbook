@@ -50,7 +50,7 @@ of good practice, for example:
 
 	transfer_input_files = /home/username/path/to/my_software.tar.gz
 
-Where `username` refers to your OSG Connect username.
+Where `username` refers to your username on our OSG Connect login node.
 
 # Get Help
 

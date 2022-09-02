@@ -10,10 +10,10 @@ you can have such files transferred by HTCondor using the appropriate HTTP addre
 # Important Considerations
 
 While our [Overview of Data Mangement on OSG Connect](https://support.opensciencegrid.org/support/solutions/articles/12000002985) 
-describes how you can stage data, files, or even software in OSG Connect locations, 
-any web-accessible file can be transferred directly to your jobs **IF**:
+describes how you can stage data, files, or even software in OSG Connect data locations, 
+any web-accessible file in a non-OSG Connect location can be transferred directly to your jobs **IF**:
 
-- the file is accessible via an HTTP address
+- the file is accessible via an HTTP/HTTPS address
 - the file is less than 1GB in size (if larger, you'll need to pre-stage them for [stash-based transfer](12000002775)
 - the server or website they're on can handle large numbers of your jobs accessing them simultaneously
 
@@ -38,9 +38,8 @@ For example:
 	
 	...other submit file details...
 
-Multiple URLs can 
-be specified using a comma-separated list, and a combination of URLs and 
-files from `/home` directory can be provided in a comma separated list. For example,
+Multiple URLs may be specified in any order, using a comma-separated list, and a combination of URLs and 
+files from other locations (e.g. within `/home`) can be provided in the list. For example,
 
 	# transfer software tarball from public via http
 	# transfer input data from home via htcondor file transfer
@@ -48,5 +47,5 @@ files from `/home` directory can be provided in a comma separated list. For exam
 
 # Get Help
 
-For assistance or questions, please email the OSG Research Facilitation team  at [support@opensciencegrid.org](mailto:support@opensciencegrid.org) or visit the [help desk and community forums](http://support.opensciencegrid.org).
+For assistance or questions, please email the OSG Research Facilitation team  at [support@opensciencegrid.org](mailto:support@osg-htc.org) or visit the [help desk and community forums](http://support.osg-htc.org).
 

@@ -51,16 +51,16 @@ using its resources include:
 
 ## Resources to Quickly Learn More
 
-**Introduction to OSG the Distributed High Throughput Computing framework** from the annual [OSG User School](https://opensciencegrid.org/outreach/):
-
-[<img src="https://raw.githubusercontent.com/OSGConnect/connectbook/master/images/Intro_OSG_Video_Thumbnail.png" width="500">](https://www.youtube.com/embed/vpJPPjoQ3QU)
+**[Bi-Monthly User Training materials](https://support.opensciencegrid.org/support/solutions/articles/12000084444-osg-user-training)** . Live training sessions are advertised/open to those with active accounts on OSG Connect.
 
 **[Full OSG User Documentation](https://support.opensciencegrid.org/support/home)** including our [Roadmap to HTC Workload Submission](12000081596-roadmap-to-htc-workload-submission-via-osg-connect)
 
-**[OSG User Training materials](https://support.opensciencegrid.org/support/solutions/articles/12000084444-osg-user-training)** . Live training sessions are advertised/open to those with active accounts on OSG Connect.
+**Introduction to HTC and OSG** from the annual [OSG User School](https://opensciencegrid.org/outreach/):
 
+[<img src="https://raw.githubusercontent.com/OSGConnect/connectbook/master/images/Intro_OSG_Video_Thumbnail.png" width="500">](https://www.youtube.com/embed/vpJPPjoQ3QU)
 
-**Learn more and chat with a Research Computing Facilitator by [signing up for OSG Connect][account-request]**
+**Learn more and chat with a Research Computing Facilitator by [signing up for OSG Connect][account-request].**
+You can otherwise contact us via support@osg-htc.org
 
-[osg]: https://opensciencegrid.org/
+[osg]: https://osg-htc.org/
 [account-request]: https://osgconnect.net/signup
