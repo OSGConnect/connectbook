@@ -47,6 +47,10 @@ jobs:
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
 
+      - name: Update the Submodule pulled
+        run: |
+          git submodule update --recursive --remote
+
       - name: Build MkDocs pages
         if: startsWith(github.repository, 'osg-htc/')
         uses: docker://squidfunk/mkdocs-material:8.2.8
