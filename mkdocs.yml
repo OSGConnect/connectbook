@@ -1,6 +1,7 @@
 INHERIT: ./user-documentation/data/configs/osgconnect.yml
 
 docs_dir: ./user-documentation/data/docs/osgconnect
+site_dir: documentation/documentation
 
 site_name: OSPool Documentation
 site_url: "https://portal.osg-htc.org/documentation/"

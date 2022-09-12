@@ -43,7 +43,7 @@ docker run --rm -v  ${PWD}:/docs ghcr.io/afritzler/mkdocs-material build
 
 # Test the links
 docker run --rm -it \
-  -v $(pwd)/site:/src \
+  -v $(pwd)/documentation:/src \
   klakegg/html-proofer:3.19.2 \
-  --allow-hash-href --check-html --empty-alt-ignore --root-dir http://localhost:8000/connectbook/ --disable-external
+  --allow-hash-href --check-html --empty-alt-ignore --disable-external
 ```
