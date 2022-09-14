@@ -41,6 +41,25 @@ Then the `requirements` would be:
 
 	requirements = HAS_oasis_opensciencegrid_org == True
 
+## AVX (segfault / illegal instruction) and Other Hardware Attributes
+
+A common problem in distributed computing infrastructures is a mismatch between
+the executable and the hardware. On OSG, this can happen if you compile a code
+which automatically detects hardware features such as AVX or AVX2. When you then
+run the resulting executable in a job, and that job lands on a maybe slightly
+older execution endpoint, which does not have those hardware features, the
+execution will fail with an error like `segmentation fault` or
+`illegal instruction`. Sometimes it is difficult to determine exactly what
+hardward feature is the cause, but a very common one is AVX and AVX2, both of
+which are advertised and can be matched against. If you are experiencing these
+problems, try:
+
+    requirements = HAS_AVX == True
+
+or
+
+    requirements = HAS_AVX2 == True
+
 ## Additional Feature-Specific Attributes
 
 There are many attributes that you can use with `requirements`. To see what values
