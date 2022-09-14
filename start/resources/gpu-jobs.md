@@ -28,22 +28,22 @@ speed up.
 HTCondor records different GPU attributes that can be used to select 
 specific types of GPU devices. A few attributes that may be useful: 
 
-* `CUDACapability`: this is NOT the CUDA library, but rather a measure of the GPU's "Compute Capability"
-* `CUDADriverVersion`: maximum version of the CUDA libraries that can be supported on the GPU
-* `CUDAGlobalMemoryMb`: amount of GPU memory available on the GPU device
+* `GPUs_Capability`: this is NOT the GPU library, but rather a measure of the GPU's "Compute Capability"
+* `GPUs_DriverVersion`: maximum version of the GPU libraries that can be supported
+* `GPUs_GlobalMemoryMb`: amount of GPU memory available on the GPU device
 
 Any of the attributes above can be used in the submit file's `requirements` line to 
 select a specific kind of GPU. For 
 example, to request a GPU with more than 8GB of GPU memory, one could use: 
 
-    requirements = (CUDAGlobalMemoryMb >= 8192)
+    requirements = (GPUs_GlobalMemoryMb >= 8192)
     
 If you want a certain type or family of GPUs, we usually recommend using the GPU's 
-'Compute Capability', known as the `CUDACapability` by HTCondor. An A100 GPU has a 
+'Compute Capability', known as the `GPUs_Capability` by HTCondor. An A100 GPU has a 
 Compute Capability of 8.0, so if you wanted to run on an A100 GPU specifically, 
 the submit file requirement would be: 
 
-    requirements = (CUDACapability == 8.0)
+    requirements = (GPUs_Capability == 8.0)
 
 **Note that the more requirements you include, the fewer resources will be available 
 to you! It's always better to set the minimal possible requirements (ideally, none!) 
@@ -56,13 +56,11 @@ resource is idle. Therefore, we do not know exactly what resources are
 available at what time. When requesting a GPU job, you might land on one
 of the following types of GPUs:
 
-* Tesla K20m, K40m (CUDACapability: 3.5)
-* Quadro M5000 (CUDACapability: 5.2)
-* GeForce GTX 1080 Ti (CUDACapability: 6.1)
-* V100 (CUDACapability: 7.0)
-* Quadro RTX 6000 (CUDACapability: 7.5)
-* A100 (CUDACapability: 8.0)
-* A40 (CUDACapability: 8.6)
+* GeForce GTX 1080 Ti (GPUs\_Capability: 6.1)
+* V100 (GPUs\_Capability: 7.0)
+* Quadro RTX 6000 (GPUs\_Capability: 7.5)
+* A100 (GPUs\_Capability: 8.0)
+* A40 (GPUs\_Capability: 8.6)
 
 # Software and Data Considerations
 
