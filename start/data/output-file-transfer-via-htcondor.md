@@ -31,7 +31,7 @@ where your job executes, meaning HTCondor will ignore any files
 created in subdirectories of the job's top-level directory.** Several 
 options exist for modifying this default output file transfer behavior, including 
 those described in this guide. To learn more, please contact us 
-at [support@opensciencegrid.org](mailto:support@opensciencegrid.org).
+at [support@osg-htc.org](mailto:support@osg-htc.org).
 
 *What is the top-level directory of a job?*
 
@@ -94,10 +94,10 @@ executable script of your job -  only the output files that remain in the top-le
 directory will be transferred back to your `/home` directory.
 
 In cases where a bash script is not used as the excutable of your job and you wish to have only specific 
-output files transferred back, please contact us at [support@opensciencegrid.org](mailto:support@opensciencegrid.org).
+output files transferred back, please contact us at [support@osg-htc.org](mailto:support@osg-htc.org).
 
 # Get Additional Options For Managing Job Output
 
 Several options exist for managing output file transfers back to your `/home` directory and we 
-encourage you to get in touch with us at [support@opensciencegrid.org](mailto:support@opensciencegrid.org) to 
+encourage you to get in touch with us at [support@osg-htc.org](mailto:support@osg-htc.org) to 
 help identify the best solution for your needs.

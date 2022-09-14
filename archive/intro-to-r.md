@@ -251,4 +251,4 @@ Once the job finished running, check the output files as before. They should now
 	[1] "Hello World!"
 
 ## Getting Help
-For assistance or questions, please email the OSG Research Facilitation team  at <mailto:support@opensciencegrid.org> or visit the [help desk and community forums](http://support.opensciencegrid.org).
+For assistance or questions, please email the OSG Research Facilitation team  at <mailto:support@osg-htc.org> or visit the [help desk and community forums](http://support.opensciencegrid.org).

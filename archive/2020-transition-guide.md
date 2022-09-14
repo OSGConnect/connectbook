@@ -36,7 +36,7 @@ information can be seen on your profile here:
 	and it asks you to sign up for OSG / create a profile, do NOT create a new profile. Instead, do the following: 
 	> * close the OSG Connect page and go to http://globus.org. 
 	> * Log in with your Globus ID and go to "Account" on the left-hand menu.
-	> * If your institutional identity is already listed on that Account page, [email the OSG Connect support team](mailto:support@opensciencegrid.org)
+	> * If your institutional identity is already listed on that Account page, [email the OSG Connect support team](mailto:support@osg-htc.org)
 	> * If your institutional identity is NOT listed on the account page, select "Link Another Identity" on the 
 	> right and add your institutional identity. Then go back to the OSG Connect website and try to 
 	> log in again. 

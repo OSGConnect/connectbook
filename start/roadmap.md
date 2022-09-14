@@ -14,7 +14,7 @@ started with your first workload, with helpful links to our documentation pages.
 This guide assumes that you have applied for an account on the OSG Connect service and 
 have been approved after meeting with an OSG Research Computing Facilitator. 
 If you don't yet have an account, you can apply for one at <osgconnect.net>
-or [contact us](mailto:support@opensciencegrid.org) with any questions you have. 
+or [contact us](mailto:support@osg-htc.org) with any questions you have. 
 
 Learning how to get started on the OSG does not need to end with this document or 
 our guides! Learn about our training opportunities and personal facilitation support 
@@ -114,7 +114,7 @@ multiple jobs with the same submit file.
 # 6. Special Use Cases
 
 If you think any of the below applies to you, 
-please [get in touch](mailto:support@opensciencegrid.org)
+please [get in touch](mailto:support@osg-htc.org)
 and our facilitation team will be happy to discuss your individual case. 
 
 - Run sequential workflows of jobs: [Workflows with HTCondor's DAGMan](12000079038)

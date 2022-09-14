@@ -19,7 +19,7 @@ efficient for users and will help ensure reliable operation of the the login nod
 Many options exist for streamlining your submission of multiple jobs, 
 and this guide only covers a few examples of what is truly possible with 
 HTCondor. If you are interested in a particular approach that isn't described here, 
-please contact [OSG Connect support](mailto:support@opensciencegrid.org) and we will 
+please contact [OSG Connect support](mailto:support@osg-htc.org) and we will 
 work with you to identify options to meet the needs of your work.
 
 # Submit Multiple Jobs Using `queue`
@@ -284,4 +284,4 @@ location.
 
 # Get Help
 
-For assistance or questions, please email the OSG Research Facilitation team  at [support@opensciencegrid.org](mailto:support@opensciencegrid.org) or visit the [help desk and community forums](http://support.opensciencegrid.org).
+For assistance or questions, please email the OSG Research Facilitation team  at [support@osg-htc.org](mailto:support@osg-htc.org) or visit the [help desk and community forums](http://support.opensciencegrid.org).

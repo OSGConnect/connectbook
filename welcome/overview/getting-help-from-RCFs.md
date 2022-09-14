@@ -42,7 +42,7 @@ Cancellations will be announced via email to those with accounts via the OSG Con
 
 
 ## Make an Appointment
-We are happy to arrange meetings outside of designated Office Hours, per your preference. Simply email us at support@opensciencegrid.org, and we will set up a time to meet!
+We are happy to arrange meetings outside of designated Office Hours, per your preference. Simply email us at support@osg-htc.org, and we will set up a time to meet!
 
 
 ## Training Opportunities

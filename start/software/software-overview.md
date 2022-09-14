@@ -65,7 +65,7 @@ More details about using modules can be found
 ## Ask for Helpk
 
 If you are not sure which of the above options might be best for your software, we're happy to help! Just contact us at 
-[support@opensciencegrid.org](mailto:support@opensciencegrid.org).
+[support@osg-htc.org](mailto:support@osg-htc.org).
 
 **Watch this video from the 2021 OSG Virtual School** for more information about using software on OSG:
 
