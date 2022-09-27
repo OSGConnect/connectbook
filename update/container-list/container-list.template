@@ -4,8 +4,7 @@
 
 This is list of commonly used containers in the Open Science Pool. These can be used
 directly in your jobs or as base images if you want to define your own. Please
-see the pages on [container overview][container-intro] and [defining containers][container-howto]
-for detailed instructions.
+see the pages on [container overview][container-intro] for detailed instructions.
 
 Also note that this list is not complete. There are many images under
 `/cvmfs/singularity.opensciencegrid.org/` which are either project specific
@@ -14,5 +13,4 @@ or not described well enough to make this list.
 $table
 
 [container-intro]: 12000024676
-[container-howto]: 12000058245
 
