@@ -55,7 +55,7 @@ Following the meeting, the Facilitator will approve your account, add your profi
 
 To launch a JupyterLab instance, go to [https://notebook.ospool.osg-htc.org](https://notebook.ospool.osg-htc.org) using an internet browser. 
 
-You will be prompted to "Sign in" using your institution CILogin credentials.
+You will be prompted to "Sign in" using your institution credentials.
 
 Once logged in, you will be automatically redirected to the "Server Options" page. Several server options are listed, supporting a variety of programming environment and scientific workflows. To request a specific server configuration, [contact a Research Computing Facilitator](support@osgconnect.net). 
 
