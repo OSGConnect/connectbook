@@ -37,7 +37,7 @@ To request access to JupyterLab, submit an application using the following steps
 
 (1) Go to the [registration website](https://registry.cilogon.org/registry/co_petitions/start/coef:261). You will be redirected to the CILogon sign in page. Select your institution and use your institutional credentials to login. 
 
-If you have issues signing in using your institutional credentials, contact us at support@opensciencegrid.org.
+If you have issues signing in using your institutional credentials, contact us at support@osg-htc.org.
 
 (2) Once you sign in, you will be redirected to the "JupyterLab User Enrollment for New Users" page. Click "Begin" and enter your name and email address on the following page. In many cases, this information will be automatically populated. If desired, it is possible to manually edit any information automatically filled in. Once you have entered your information, click "SUBMIT". 
 
