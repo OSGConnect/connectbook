@@ -57,7 +57,7 @@ To launch a JupyterLab instance, go to [https://notebook.ospool.osg-htc.org](htt
 
 You will be prompted to "Sign in" using your institution credentials.
 
-Once logged in, you will be automatically redirected to the "Server Options" page. Several server options are listed, supporting a variety of programming environment and scientific workflows. To request a specific server configuration, [contact a Research Computing Facilitator](support@osgconnect.net). 
+Once logged in, you will be automatically redirected to the "Server Options" page. Several server options are listed, supporting a variety of programming environment and scientific workflows. To request a specific server configuration, [contact a Research Computing Facilitator](support@osg-htc.org). 
 
 Select your desired server option and click "Start" to launch your instance. This process usually takes several minutes to complete. You will be redirected automatically to JupyterLab when your instance is ready.
 
