@@ -68,6 +68,7 @@ Working in JupyterLab, you will be able to interact with files in your `/home` d
 
 Each user has a *total* of 8 CPUs and 16 GB memory available to their JupyterLab instance and HTCondor jobs submitted from the notebook. 
 
+Notebooks will time out after an hour an inactivity and may run for a maximum of four hours.
 
 # Sending jobs to HTCondor from JupyterLab
 
