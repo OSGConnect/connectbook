@@ -1,4 +1,4 @@
-[title]: - "Launching a JupyterLab Instance"
+[title]: - "Launch a JupyterLab Instance"
 
 [TOC]
 
