@@ -48,7 +48,7 @@ If you have issues signing in using your institutional credentials, contact us a
 
 Once OSG staff receive your email verification, a Research Computing Facilitator will contact you within one business day to arrange a short consultation and introduction to the JupterLab resources. During this meeting, our staff will provide personalized start-up guidance per your specific computational research goals and activate your account.
 
-Following the meeting, the Facilitator will approve your account, add your profile to any relevant JupyterLab ‘project’ names, and ensure that you have access to the JupyterLab. (You will receive automated emails for some of these actions, which you can otherwise ignore.)
+Following the meeting, the Facilitator will approve your account, add your profile to any relevant JupyterLab ‘project’ names, and ensure that you have access to the JupyterLab. A Facilitator will follow up with your account details once your account has been activated. 
 
 
 # How to launch a JupyterLab Instance
