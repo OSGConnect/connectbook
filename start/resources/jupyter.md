@@ -3,7 +3,7 @@
 [TOC]
 
 
-*Note: Using JupyterLab is a new feature available only to users of accesspoint7.ospool.osg-htc.org. We appreciate any feedback sent to support@opensciencegrid.org.*
+*Note: Using JupyterLab is a new feature available only to users who request access to it. We appreciate any feedback sent to support@osg-htc.org.*
 
 
 # Objective
