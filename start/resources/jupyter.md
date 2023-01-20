@@ -117,4 +117,4 @@ To log out of your session, go to the top left corner of the JupyterLab interfac
 
 # Get Help
 
-For questions or to receive help with launching JupyterLab, [contact a Research Computing Facilitator](support@osgconnect.net).
+For questions or to receive help with launching JupyterLab, [contact a Research Computing Facilitator](support@osg-htc.org).
